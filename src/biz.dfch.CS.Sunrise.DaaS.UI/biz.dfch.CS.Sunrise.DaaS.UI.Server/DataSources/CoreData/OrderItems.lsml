@@ -8,7 +8,6 @@
     Name="OrderItem">
     <EntityType.Attributes>
       <NotSearchable />
-      <NotPageable />
     </EntityType.Attributes>
     <EntityType.Methods>
       <EntityMethod
@@ -21,15 +20,12 @@
     <EntityType.Properties>
       <EntityProperty
         Name="OrderId"
-        PropertyType=":Int32">
+        PropertyType=":Int64">
         <EntityProperty.Attributes>
           <Required />
           <NotSearchable />
         </EntityProperty.Attributes>
       </EntityProperty>
-      <EntityProperty
-        Name="Status"
-        PropertyType=":String?" />
       <EntityProperty
         Name="Quantity"
         PropertyType=":Int32">
@@ -61,7 +57,7 @@
       </EntityProperty>
       <KeyProperty
         Name="Id"
-        PropertyType=":Int32">
+        PropertyType=":Int64">
         <KeyProperty.Attributes>
           <Required />
           <NotSearchable />
@@ -114,6 +110,13 @@
           <NotSearchable />
         </EntityProperty.Attributes>
       </EntityProperty>
+      <EntityProperty
+        Name="RowVersion"
+        PropertyType=":Binary?">
+        <EntityProperty.Attributes>
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
     </EntityType.Properties>
   </EntityType>
   <EntityContainer
@@ -160,7 +163,7 @@
       </QueryOperation.Source>
       <QueryOperationParameter
         Name="Id"
-        ParameterType="Microsoft.LightSwitch:Int32?">
+        ParameterType=":Int64?">
         <QueryOperationParameter.Attributes>
           <Description
             Value="The value of the 'Id' key property of the entity to retrieve." />
@@ -200,7 +203,7 @@
       </QueryOperation.Source>
       <QueryOperationParameter
         Name="Id"
-        ParameterType="Microsoft.LightSwitch:Int32?">
+        ParameterType=":Int64?">
         <QueryOperationParameter.Attributes>
           <Description
             Value="The value of the 'Id' key property of the entity to retrieve." />
@@ -224,9 +227,6 @@
         <CsdlProperty
           Name="OrderId"
           Property="OrderItem/Properties[OrderId]" />
-        <CsdlProperty
-          Name="Status"
-          Property="OrderItem/Properties[Status]" />
         <CsdlProperty
           Name="Quantity"
           Property="OrderItem/Properties[Quantity]" />
@@ -263,6 +263,9 @@
         <CsdlProperty
           Name="Modified"
           Property="OrderItem/Properties[Modified]" />
+        <CsdlProperty
+          Name="RowVersion"
+          Property="OrderItem/Properties[RowVersion]" />
       </EntitySetMapping.Attributes>
     </EntitySetMapping>
   </DataService>

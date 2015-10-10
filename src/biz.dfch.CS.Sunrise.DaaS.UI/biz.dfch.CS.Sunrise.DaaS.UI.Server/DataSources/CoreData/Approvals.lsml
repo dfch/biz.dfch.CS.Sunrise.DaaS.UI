@@ -8,7 +8,6 @@
     Name="Approval">
     <EntityType.Attributes>
       <NotSearchable />
-      <NotPageable />
     </EntityType.Attributes>
     <EntityType.Methods>
       <EntityMethod
@@ -21,7 +20,7 @@
     <EntityType.Properties>
       <KeyProperty
         Name="Id"
-        PropertyType=":Int32">
+        PropertyType=":Int64">
         <KeyProperty.Attributes>
           <Required />
           <NotSearchable />
@@ -77,6 +76,13 @@
       <EntityProperty
         Name="Status"
         PropertyType=":String?" />
+      <EntityProperty
+        Name="RowVersion"
+        PropertyType=":Binary?">
+        <EntityProperty.Attributes>
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
     </EntityType.Properties>
   </EntityType>
   <EntityContainer
@@ -123,7 +129,7 @@
       </QueryOperation.Source>
       <QueryOperationParameter
         Name="Id"
-        ParameterType="Microsoft.LightSwitch:Int32?">
+        ParameterType=":Int64?">
         <QueryOperationParameter.Attributes>
           <Description
             Value="The value of the 'Id' key property of the entity to retrieve." />
@@ -163,7 +169,7 @@
       </QueryOperation.Source>
       <QueryOperationParameter
         Name="Id"
-        ParameterType="Microsoft.LightSwitch:Int32?">
+        ParameterType=":Int64?">
         <QueryOperationParameter.Attributes>
           <Description
             Value="The value of the 'Id' key property of the entity to retrieve." />
@@ -211,6 +217,9 @@
         <CsdlProperty
           Name="Modified"
           Property="Approval/Properties[Modified]" />
+        <CsdlProperty
+          Name="RowVersion"
+          Property="Approval/Properties[RowVersion]" />
       </EntitySetMapping.Attributes>
     </EntitySetMapping>
   </DataService>

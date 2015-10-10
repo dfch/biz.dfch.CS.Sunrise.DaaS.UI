@@ -504,6 +504,7 @@
 
         Home: $defineScreen(Home, [
         ], [
+            { name: "somethingToProve" }
         ]),
 
         JobsList: $defineScreen(JobsList, [

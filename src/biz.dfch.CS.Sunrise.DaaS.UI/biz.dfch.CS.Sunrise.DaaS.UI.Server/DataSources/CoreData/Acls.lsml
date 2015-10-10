@@ -5,7 +5,7 @@
     <Partial />
   </ServiceApplication.Attributes>
   <EntityType
-    Name="Endpoint">
+    Name="Acl">
     <EntityType.Attributes>
       <NotSearchable />
     </EntityType.Attributes>
@@ -41,61 +41,12 @@
         </EntityProperty.Attributes>
       </EntityProperty>
       <EntityProperty
-        Name="Version"
-        PropertyType=":String">
-        <EntityProperty.Attributes>
-          <Required />
-        </EntityProperty.Attributes>
-      </EntityProperty>
-      <EntityProperty
-        Name="RouteTemplate"
-        PropertyType=":String">
-        <EntityProperty.Attributes>
-          <Required />
-        </EntityProperty.Attributes>
-      </EntityProperty>
-      <EntityProperty
-        Name="RoutePrefix"
-        PropertyType=":String">
-        <EntityProperty.Attributes>
-          <Required />
-        </EntityProperty.Attributes>
-      </EntityProperty>
-      <EntityProperty
-        Name="ServerRole"
-        PropertyType=":String">
-        <EntityProperty.Attributes>
-          <Required />
-        </EntityProperty.Attributes>
-      </EntityProperty>
-      <EntityProperty
-        Name="Priority"
-        PropertyType=":Int32">
-        <EntityProperty.Attributes>
-          <Required />
-          <NotSearchable />
-        </EntityProperty.Attributes>
-      </EntityProperty>
-      <EntityProperty
-        Name="Created"
-        PropertyType=":DateTimeOffset">
-        <EntityProperty.Attributes>
-          <NotSearchable />
-          <Required />
-        </EntityProperty.Attributes>
-      </EntityProperty>
+        Name="Description"
+        PropertyType=":String?" />
       <EntityProperty
         Name="CreatedBy"
         PropertyType=":String">
         <EntityProperty.Attributes>
-          <Required />
-        </EntityProperty.Attributes>
-      </EntityProperty>
-      <EntityProperty
-        Name="Modified"
-        PropertyType=":DateTimeOffset">
-        <EntityProperty.Attributes>
-          <NotSearchable />
           <Required />
         </EntityProperty.Attributes>
       </EntityProperty>
@@ -107,15 +58,21 @@
         </EntityProperty.Attributes>
       </EntityProperty>
       <EntityProperty
-        Name="Address"
-        PropertyType=":String">
+        Name="Created"
+        PropertyType=":DateTimeOffset">
         <EntityProperty.Attributes>
           <Required />
+          <NotSearchable />
         </EntityProperty.Attributes>
       </EntityProperty>
       <EntityProperty
-        Name="Description"
-        PropertyType=":String?" />
+        Name="Modified"
+        PropertyType=":DateTimeOffset">
+        <EntityProperty.Attributes>
+          <Required />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
       <EntityProperty
         Name="RowVersion"
         PropertyType=":Binary?">
@@ -123,22 +80,75 @@
           <NotSearchable />
         </EntityProperty.Attributes>
       </EntityProperty>
+      <NavigationProperty
+        Name="Aces"
+        Association="biz_dfch_CS_Appclusive_Core_OdataServices_Core_Acl_Aces_biz_dfch"
+        FromEnd="AcesPartner"
+        ToEnd="Aces" />
     </EntityType.Properties>
   </EntityType>
+  <Association
+    Name="biz_dfch_CS_Appclusive_Core_OdataServices_Core_Acl_Aces_biz_dfch">
+    <AssociationEnd
+      Name="AcesPartner"
+      EntityType="Acl">
+      <AssociationEnd.Attributes>
+        <DeleteRule />
+      </AssociationEnd.Attributes>
+    </AssociationEnd>
+    <AssociationEnd
+      Name="Aces"
+      Multiplicity="Many"
+      EntityType="Ace" />
+  </Association>
+  <Association
+    Name="biz_dfch_CS_Appclusive_Core_OdataServices_Core_Ace_Acl_biz_dfch_">
+    <AssociationEnd
+      Name="AclPartner"
+      EntityType="Ace" />
+    <AssociationEnd
+      Name="Acl"
+      Multiplicity="One"
+      EntityType="Acl">
+      <AssociationEnd.Attributes>
+        <DeleteRule />
+      </AssociationEnd.Attributes>
+    </AssociationEnd>
+  </Association>
   <EntityContainer
-    Name="DiagnosticsData">
+    Name="CoreData">
     <EntityContainer.Attributes>
       <Partial />
     </EntityContainer.Attributes>
     <EntitySet
-      Name="Endpoints"
+      Name="Acls"
       CanDelete="True"
       CanInsert="True"
       CanUpdate="True"
-      EntityType="Endpoint" />
+      EntityType="Acl" />
+    <AssociationSet
+      Name="biz_dfch_CS_Appclusive_Core_OdataServices_Core_Acl_Aces_biz_dfch"
+      Association="biz_dfch_CS_Appclusive_Core_OdataServices_Core_Acl_Aces_biz_dfch">
+      <AssociationSetEnd
+        Name="AcesPartner"
+        EntitySet="Acls" />
+      <AssociationSetEnd
+        Name="Aces"
+        EntitySet="Aces" />
+    </AssociationSet>
+    <AssociationSet
+      Name="biz_dfch_CS_Appclusive_Core_OdataServices_Core_Ace_Acl_biz_dfch_"
+      Association="biz_dfch_CS_Appclusive_Core_OdataServices_Core_Ace_Acl_biz_dfch_">
+      <AssociationSetEnd
+        Name="AclPartner"
+        EntitySet="Aces" />
+      <AssociationSetEnd
+        Name="Acl"
+        EntitySet="Acls" />
+    </AssociationSet>
     <QueryOperation
-      Name="Endpoints_Single"
-      ReturnType="Endpoint">
+      Name="Acls_Single"
+      ReturnType="Acl">
       <QueryOperation.Attributes>
         <Generated />
         <Description
@@ -164,12 +174,12 @@
       <QueryOperation.Source>
         <QuerySourceExpressionTree>
           <MemberExpression
-            Member="Endpoints" />
+            Member="Acls" />
         </QuerySourceExpressionTree>
       </QueryOperation.Source>
       <QueryOperationParameter
         Name="Id"
-        ParameterType=":Int64?">
+        ParameterType="Microsoft.LightSwitch:Int64?">
         <QueryOperationParameter.Attributes>
           <Description
             Value="The value of the 'Id' key property of the entity to retrieve." />
@@ -177,8 +187,8 @@
       </QueryOperationParameter>
     </QueryOperation>
     <QueryOperation
-      Name="Endpoints_SingleOrDefault"
-      ReturnType="Endpoint">
+      Name="Acls_SingleOrDefault"
+      ReturnType="Acl">
       <QueryOperation.Attributes>
         <Generated />
         <Description
@@ -204,12 +214,12 @@
       <QueryOperation.Source>
         <QuerySourceExpressionTree>
           <MemberExpression
-            Member="Endpoints" />
+            Member="Acls" />
         </QuerySourceExpressionTree>
       </QueryOperation.Source>
       <QueryOperationParameter
         Name="Id"
-        ParameterType=":Int64?">
+        ParameterType="Microsoft.LightSwitch:Int64?">
         <QueryOperationParameter.Attributes>
           <Description
             Value="The value of the 'Id' key property of the entity to retrieve." />
@@ -218,64 +228,73 @@
     </QueryOperation>
   </EntityContainer>
   <DataService
-    Name="DiagnosticsDataDataService">
+    Name="CoreDataDataService">
     <DataService.Attributes>
       <Partial />
     </DataService.Attributes>
     <EntitySetMapping
-      EntitySet="Endpoints">
+      EntitySet="Acls">
       <EntitySetMapping.Attributes>
         <CsdlEntitySet
-          EntityTypeName="Endpoint"
-          EntityTypeNamespace="biz.dfch.CS.Appclusive.Core.OdataServices.Diagnostics"
-          Name="Endpoints"
-          EntityType="Endpoint" />
-        <CsdlProperty
-          Name="Version"
-          Property="Endpoint/Properties[Version]" />
-        <CsdlProperty
-          Name="Address"
-          Property="Endpoint/Properties[Address]" />
-        <CsdlProperty
-          Name="RouteTemplate"
-          Property="Endpoint/Properties[RouteTemplate]" />
-        <CsdlProperty
-          Name="RoutePrefix"
-          Property="Endpoint/Properties[RoutePrefix]" />
-        <CsdlProperty
-          Name="ServerRole"
-          Property="Endpoint/Properties[ServerRole]" />
-        <CsdlProperty
-          Name="Priority"
-          Property="Endpoint/Properties[Priority]" />
+          EntityTypeName="Acl"
+          EntityTypeNamespace="biz.dfch.CS.Appclusive.Core.OdataServices.Core"
+          Name="Acls"
+          EntityType="Acl" />
         <CsdlProperty
           Name="Id"
-          Property="Endpoint/Properties[Id]" />
+          Property="Acl/Properties[Id]" />
         <CsdlProperty
           Name="Tid"
-          Property="Endpoint/Properties[Tid]" />
+          Property="Acl/Properties[Tid]" />
         <CsdlProperty
           Name="Name"
-          Property="Endpoint/Properties[Name]" />
+          Property="Acl/Properties[Name]" />
         <CsdlProperty
           Name="Description"
-          Property="Endpoint/Properties[Description]" />
+          Property="Acl/Properties[Description]" />
         <CsdlProperty
           Name="CreatedBy"
-          Property="Endpoint/Properties[CreatedBy]" />
+          Property="Acl/Properties[CreatedBy]" />
         <CsdlProperty
           Name="ModifiedBy"
-          Property="Endpoint/Properties[ModifiedBy]" />
+          Property="Acl/Properties[ModifiedBy]" />
         <CsdlProperty
           Name="Created"
-          Property="Endpoint/Properties[Created]" />
+          Property="Acl/Properties[Created]" />
         <CsdlProperty
           Name="Modified"
-          Property="Endpoint/Properties[Modified]" />
+          Property="Acl/Properties[Modified]" />
         <CsdlProperty
           Name="RowVersion"
-          Property="Endpoint/Properties[RowVersion]" />
+          Property="Acl/Properties[RowVersion]" />
+        <CsdlProperty
+          Name="Aces"
+          Property="Acl/Properties[Aces]" />
       </EntitySetMapping.Attributes>
     </EntitySetMapping>
+    <AssociationSetMapping
+      AssociationSet="biz_dfch_CS_Appclusive_Core_OdataServices_Core_Acl_Aces_biz_dfch">
+      <AssociationSetMapping.Attributes>
+        <CsdlAssociation
+          Name="biz_dfch_CS_Appclusive_Core_OdataServices_Core_Acl_Aces_biz_dfch_CS_Appclusive_Core_OdataServices_Core_Ace_AcesPartnerSet"
+          Association="biz_dfch_CS_Appclusive_Core_OdataServices_Core_Acl_Aces_biz_dfch" />
+        <CsdlAssociationSetEnd
+          End="CoreData/Members[biz_dfch_CS_Appclusive_Core_OdataServices_Core_Acl_Aces_biz_dfch]/Members[AcesPartner]" />
+        <CsdlAssociationSetEnd
+          End="CoreData/Members[biz_dfch_CS_Appclusive_Core_OdataServices_Core_Acl_Aces_biz_dfch]/Members[Aces]" />
+      </AssociationSetMapping.Attributes>
+    </AssociationSetMapping>
+    <AssociationSetMapping
+      AssociationSet="biz_dfch_CS_Appclusive_Core_OdataServices_Core_Ace_Acl_biz_dfch_">
+      <AssociationSetMapping.Attributes>
+        <CsdlAssociation
+          Name="biz_dfch_CS_Appclusive_Core_OdataServices_Core_Ace_Acl_biz_dfch_CS_Appclusive_Core_OdataServices_Core_Acl_AclPartnerSet"
+          Association="biz_dfch_CS_Appclusive_Core_OdataServices_Core_Ace_Acl_biz_dfch_" />
+        <CsdlAssociationSetEnd
+          End="CoreData/Members[biz_dfch_CS_Appclusive_Core_OdataServices_Core_Ace_Acl_biz_dfch_]/Members[Acl]" />
+        <CsdlAssociationSetEnd
+          End="CoreData/Members[biz_dfch_CS_Appclusive_Core_OdataServices_Core_Ace_Acl_biz_dfch_]/Members[AclPartner]" />
+      </AssociationSetMapping.Attributes>
+    </AssociationSetMapping>
   </DataService>
 </ServiceApplication>

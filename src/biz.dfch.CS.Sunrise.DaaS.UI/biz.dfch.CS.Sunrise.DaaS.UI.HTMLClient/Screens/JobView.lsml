@@ -113,19 +113,6 @@
                 Name="right"
                 Kind="Group">
                 <ContentItem
-                  Name="Type"
-                  Kind="Value"
-                  DataType=":String">
-                  <ContentItem.DataSource>
-                    <ScreenExpressionTree>
-                      <ChainExpression>
-                        <MemberExpression
-                          Member="Job/Properties[Type]" />
-                      </ChainExpression>
-                    </ScreenExpressionTree>
-                  </ContentItem.DataSource>
-                </ContentItem>
-                <ContentItem
                   Name="RefId"
                   Kind="Value"
                   DataType=":String?">
@@ -158,7 +145,7 @@
                 <ContentItem
                   Name="ParentId"
                   Kind="Value"
-                  DataType=":Int32">
+                  DataType=":Int64?">
                   <ContentItem.DataSource>
                     <ScreenExpressionTree>
                       <ChainExpression>
@@ -296,7 +283,7 @@
               <ContentItem
                 Name="Id"
                 Kind="Value"
-                DataType=":Int32">
+                DataType=":Int64">
                 <ContentItem.DataSource>
                   <ScreenExpressionTree>
                     <ChainExpression>

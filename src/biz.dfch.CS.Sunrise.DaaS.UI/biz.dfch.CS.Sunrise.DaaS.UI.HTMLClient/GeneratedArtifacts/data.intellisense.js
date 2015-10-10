@@ -10,6 +10,14 @@
         created: [lightSwitchApplication.Endpoint]
     });
 
+    msls._addEntryPoints(lightSwitchApplication.AuditTrail, {
+        /// <field>
+        /// Called when a new auditTrail is created.
+        /// <br/>created(msls.application.AuditTrail entity)
+        /// </field>
+        created: [lightSwitchApplication.AuditTrail]
+    });
+
     msls._addEntryPoints(lightSwitchApplication.KeyNameValue, {
         /// <field>
         /// Called when a new keyNameValue is created.
@@ -80,6 +88,78 @@
         /// <br/>created(msls.application.ManagementCredential entity)
         /// </field>
         created: [lightSwitchApplication.ManagementCredential]
+    });
+
+    msls._addEntryPoints(lightSwitchApplication.Gate, {
+        /// <field>
+        /// Called when a new gate is created.
+        /// <br/>created(msls.application.Gate entity)
+        /// </field>
+        created: [lightSwitchApplication.Gate]
+    });
+
+    msls._addEntryPoints(lightSwitchApplication.Acl, {
+        /// <field>
+        /// Called when a new acl is created.
+        /// <br/>created(msls.application.Acl entity)
+        /// </field>
+        created: [lightSwitchApplication.Acl]
+    });
+
+    msls._addEntryPoints(lightSwitchApplication.EntityType, {
+        /// <field>
+        /// Called when a new entityType is created.
+        /// <br/>created(msls.application.EntityType entity)
+        /// </field>
+        created: [lightSwitchApplication.EntityType]
+    });
+
+    msls._addEntryPoints(lightSwitchApplication.Node, {
+        /// <field>
+        /// Called when a new node is created.
+        /// <br/>created(msls.application.Node entity)
+        /// </field>
+        created: [lightSwitchApplication.Node]
+    });
+
+    msls._addEntryPoints(lightSwitchApplication.Link, {
+        /// <field>
+        /// Called when a new link is created.
+        /// <br/>created(msls.application.Link entity)
+        /// </field>
+        created: [lightSwitchApplication.Link]
+    });
+
+    msls._addEntryPoints(lightSwitchApplication.ManagementUri, {
+        /// <field>
+        /// Called when a new managementUri is created.
+        /// <br/>created(msls.application.ManagementUri entity)
+        /// </field>
+        created: [lightSwitchApplication.ManagementUri]
+    });
+
+    msls._addEntryPoints(lightSwitchApplication.Catalogue, {
+        /// <field>
+        /// Called when a new catalogue is created.
+        /// <br/>created(msls.application.Catalogue entity)
+        /// </field>
+        created: [lightSwitchApplication.Catalogue]
+    });
+
+    msls._addEntryPoints(lightSwitchApplication.Cart, {
+        /// <field>
+        /// Called when a new cart is created.
+        /// <br/>created(msls.application.Cart entity)
+        /// </field>
+        created: [lightSwitchApplication.Cart]
+    });
+
+    msls._addEntryPoints(lightSwitchApplication.CartItem, {
+        /// <field>
+        /// Called when a new cartItem is created.
+        /// <br/>created(msls.application.CartItem entity)
+        /// </field>
+        created: [lightSwitchApplication.CartItem]
     });
 
 }(msls.application));

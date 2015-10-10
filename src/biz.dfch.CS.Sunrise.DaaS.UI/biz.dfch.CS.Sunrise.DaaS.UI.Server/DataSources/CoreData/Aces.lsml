@@ -8,7 +8,6 @@
     Name="Ace">
     <EntityType.Attributes>
       <NotSearchable />
-      <NotPageable />
     </EntityType.Attributes>
     <EntityType.Methods>
       <EntityMethod
@@ -19,13 +18,6 @@
       </EntityMethod>
     </EntityType.Methods>
     <EntityType.Properties>
-      <EntityProperty
-        Name="Resource"
-        PropertyType=":String">
-        <EntityProperty.Attributes>
-          <Required />
-        </EntityProperty.Attributes>
-      </EntityProperty>
       <EntityProperty
         Name="Trustee"
         PropertyType=":String">
@@ -42,7 +34,7 @@
       </EntityProperty>
       <KeyProperty
         Name="Id"
-        PropertyType=":Int32">
+        PropertyType=":Int64">
         <KeyProperty.Attributes>
           <Required />
           <NotSearchable />
@@ -95,6 +87,30 @@
           <NotSearchable />
         </EntityProperty.Attributes>
       </EntityProperty>
+      <EntityProperty
+        Name="AclId"
+        PropertyType=":Int64">
+        <EntityProperty.Attributes>
+          <Required />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="RowVersion"
+        PropertyType=":Binary?">
+        <EntityProperty.Attributes>
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <NavigationProperty
+        Name="Acl"
+        Association="biz_dfch_CS_Appclusive_Core_OdataServices_Core_Ace_Acl_biz_dfch_"
+        FromEnd="AclPartner"
+        ToEnd="Acl">
+        <NavigationProperty.Attributes>
+          <Hidden />
+        </NavigationProperty.Attributes>
+      </NavigationProperty>
     </EntityType.Properties>
   </EntityType>
   <EntityContainer
@@ -141,7 +157,7 @@
       </QueryOperation.Source>
       <QueryOperationParameter
         Name="Id"
-        ParameterType="Microsoft.LightSwitch:Int32?">
+        ParameterType=":Int64?">
         <QueryOperationParameter.Attributes>
           <Description
             Value="The value of the 'Id' key property of the entity to retrieve." />
@@ -181,7 +197,7 @@
       </QueryOperation.Source>
       <QueryOperationParameter
         Name="Id"
-        ParameterType="Microsoft.LightSwitch:Int32?">
+        ParameterType=":Int64?">
         <QueryOperationParameter.Attributes>
           <Description
             Value="The value of the 'Id' key property of the entity to retrieve." />
@@ -203,14 +219,14 @@
           Name="Aces"
           EntityType="Ace" />
         <CsdlProperty
-          Name="Resource"
-          Property="Ace/Properties[Resource]" />
-        <CsdlProperty
           Name="Trustee"
           Property="Ace/Properties[Trustee]" />
         <CsdlProperty
           Name="Action"
           Property="Ace/Properties[Action]" />
+        <CsdlProperty
+          Name="AclId"
+          Property="Ace/Properties[AclId]" />
         <CsdlProperty
           Name="Id"
           Property="Ace/Properties[Id]" />
@@ -235,6 +251,12 @@
         <CsdlProperty
           Name="Modified"
           Property="Ace/Properties[Modified]" />
+        <CsdlProperty
+          Name="RowVersion"
+          Property="Ace/Properties[RowVersion]" />
+        <CsdlProperty
+          Name="Acl"
+          Property="Ace/Properties[Acl]" />
       </EntitySetMapping.Attributes>
     </EntitySetMapping>
   </DataService>

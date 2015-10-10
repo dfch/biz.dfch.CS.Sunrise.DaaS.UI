@@ -54,19 +54,6 @@
                   </ScreenExpressionTree>
                 </ContentItem.DataSource>
                 <ContentItem
-                  Name="Type"
-                  Kind="Value"
-                  DataType=":String">
-                  <ContentItem.DataSource>
-                    <ScreenExpressionTree>
-                      <ChainExpression>
-                        <MemberExpression
-                          Member="Job/Properties[Type]" />
-                      </ChainExpression>
-                    </ScreenExpressionTree>
-                  </ContentItem.DataSource>
-                </ContentItem>
-                <ContentItem
                   Name="ReferencedItemId"
                   Kind="Value"
                   DataType=":String?">
@@ -225,7 +212,6 @@
     <Screen.Properties>
       <ScreenCollectionProperty
         Name="Jobs"
-        DisablePaging="True"
         DisableSearch="True"
         PageSize="45"
         PropertyType="CollectionView$Job">

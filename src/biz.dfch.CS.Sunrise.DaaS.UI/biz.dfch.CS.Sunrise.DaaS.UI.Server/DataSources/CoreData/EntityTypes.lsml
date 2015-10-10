@@ -5,7 +5,7 @@
     <Partial />
   </ServiceApplication.Attributes>
   <EntityType
-    Name="Endpoint">
+    Name="EntityType">
     <EntityType.Attributes>
       <NotSearchable />
     </EntityType.Attributes>
@@ -18,6 +18,9 @@
       </EntityMethod>
     </EntityType.Methods>
     <EntityType.Properties>
+      <EntityProperty
+        Name="Parameters"
+        PropertyType=":String?" />
       <KeyProperty
         Name="Id"
         PropertyType=":Int64">
@@ -41,61 +44,12 @@
         </EntityProperty.Attributes>
       </EntityProperty>
       <EntityProperty
-        Name="Version"
-        PropertyType=":String">
-        <EntityProperty.Attributes>
-          <Required />
-        </EntityProperty.Attributes>
-      </EntityProperty>
-      <EntityProperty
-        Name="RouteTemplate"
-        PropertyType=":String">
-        <EntityProperty.Attributes>
-          <Required />
-        </EntityProperty.Attributes>
-      </EntityProperty>
-      <EntityProperty
-        Name="RoutePrefix"
-        PropertyType=":String">
-        <EntityProperty.Attributes>
-          <Required />
-        </EntityProperty.Attributes>
-      </EntityProperty>
-      <EntityProperty
-        Name="ServerRole"
-        PropertyType=":String">
-        <EntityProperty.Attributes>
-          <Required />
-        </EntityProperty.Attributes>
-      </EntityProperty>
-      <EntityProperty
-        Name="Priority"
-        PropertyType=":Int32">
-        <EntityProperty.Attributes>
-          <Required />
-          <NotSearchable />
-        </EntityProperty.Attributes>
-      </EntityProperty>
-      <EntityProperty
-        Name="Created"
-        PropertyType=":DateTimeOffset">
-        <EntityProperty.Attributes>
-          <NotSearchable />
-          <Required />
-        </EntityProperty.Attributes>
-      </EntityProperty>
+        Name="Description"
+        PropertyType=":String?" />
       <EntityProperty
         Name="CreatedBy"
         PropertyType=":String">
         <EntityProperty.Attributes>
-          <Required />
-        </EntityProperty.Attributes>
-      </EntityProperty>
-      <EntityProperty
-        Name="Modified"
-        PropertyType=":DateTimeOffset">
-        <EntityProperty.Attributes>
-          <NotSearchable />
           <Required />
         </EntityProperty.Attributes>
       </EntityProperty>
@@ -107,15 +61,21 @@
         </EntityProperty.Attributes>
       </EntityProperty>
       <EntityProperty
-        Name="Address"
-        PropertyType=":String">
+        Name="Created"
+        PropertyType=":DateTimeOffset">
         <EntityProperty.Attributes>
           <Required />
+          <NotSearchable />
         </EntityProperty.Attributes>
       </EntityProperty>
       <EntityProperty
-        Name="Description"
-        PropertyType=":String?" />
+        Name="Modified"
+        PropertyType=":DateTimeOffset">
+        <EntityProperty.Attributes>
+          <Required />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
       <EntityProperty
         Name="RowVersion"
         PropertyType=":Binary?">
@@ -126,19 +86,19 @@
     </EntityType.Properties>
   </EntityType>
   <EntityContainer
-    Name="DiagnosticsData">
+    Name="CoreData">
     <EntityContainer.Attributes>
       <Partial />
     </EntityContainer.Attributes>
     <EntitySet
-      Name="Endpoints"
+      Name="EntityTypes"
       CanDelete="True"
       CanInsert="True"
       CanUpdate="True"
-      EntityType="Endpoint" />
+      EntityType="EntityType" />
     <QueryOperation
-      Name="Endpoints_Single"
-      ReturnType="Endpoint">
+      Name="EntityTypes_Single"
+      ReturnType="EntityType">
       <QueryOperation.Attributes>
         <Generated />
         <Description
@@ -164,12 +124,12 @@
       <QueryOperation.Source>
         <QuerySourceExpressionTree>
           <MemberExpression
-            Member="Endpoints" />
+            Member="EntityTypes" />
         </QuerySourceExpressionTree>
       </QueryOperation.Source>
       <QueryOperationParameter
         Name="Id"
-        ParameterType=":Int64?">
+        ParameterType="Microsoft.LightSwitch:Int64?">
         <QueryOperationParameter.Attributes>
           <Description
             Value="The value of the 'Id' key property of the entity to retrieve." />
@@ -177,8 +137,8 @@
       </QueryOperationParameter>
     </QueryOperation>
     <QueryOperation
-      Name="Endpoints_SingleOrDefault"
-      ReturnType="Endpoint">
+      Name="EntityTypes_SingleOrDefault"
+      ReturnType="EntityType">
       <QueryOperation.Attributes>
         <Generated />
         <Description
@@ -204,12 +164,12 @@
       <QueryOperation.Source>
         <QuerySourceExpressionTree>
           <MemberExpression
-            Member="Endpoints" />
+            Member="EntityTypes" />
         </QuerySourceExpressionTree>
       </QueryOperation.Source>
       <QueryOperationParameter
         Name="Id"
-        ParameterType=":Int64?">
+        ParameterType="Microsoft.LightSwitch:Int64?">
         <QueryOperationParameter.Attributes>
           <Description
             Value="The value of the 'Id' key property of the entity to retrieve." />
@@ -218,63 +178,48 @@
     </QueryOperation>
   </EntityContainer>
   <DataService
-    Name="DiagnosticsDataDataService">
+    Name="CoreDataDataService">
     <DataService.Attributes>
       <Partial />
     </DataService.Attributes>
     <EntitySetMapping
-      EntitySet="Endpoints">
+      EntitySet="EntityTypes">
       <EntitySetMapping.Attributes>
         <CsdlEntitySet
-          EntityTypeName="Endpoint"
-          EntityTypeNamespace="biz.dfch.CS.Appclusive.Core.OdataServices.Diagnostics"
-          Name="Endpoints"
-          EntityType="Endpoint" />
+          EntityTypeName="EntityType"
+          EntityTypeNamespace="biz.dfch.CS.Appclusive.Core.OdataServices.Core"
+          Name="EntityTypes"
+          EntityType="EntityType" />
         <CsdlProperty
-          Name="Version"
-          Property="Endpoint/Properties[Version]" />
-        <CsdlProperty
-          Name="Address"
-          Property="Endpoint/Properties[Address]" />
-        <CsdlProperty
-          Name="RouteTemplate"
-          Property="Endpoint/Properties[RouteTemplate]" />
-        <CsdlProperty
-          Name="RoutePrefix"
-          Property="Endpoint/Properties[RoutePrefix]" />
-        <CsdlProperty
-          Name="ServerRole"
-          Property="Endpoint/Properties[ServerRole]" />
-        <CsdlProperty
-          Name="Priority"
-          Property="Endpoint/Properties[Priority]" />
+          Name="Parameters"
+          Property="EntityType/Properties[Parameters]" />
         <CsdlProperty
           Name="Id"
-          Property="Endpoint/Properties[Id]" />
+          Property="EntityType/Properties[Id]" />
         <CsdlProperty
           Name="Tid"
-          Property="Endpoint/Properties[Tid]" />
+          Property="EntityType/Properties[Tid]" />
         <CsdlProperty
           Name="Name"
-          Property="Endpoint/Properties[Name]" />
+          Property="EntityType/Properties[Name]" />
         <CsdlProperty
           Name="Description"
-          Property="Endpoint/Properties[Description]" />
+          Property="EntityType/Properties[Description]" />
         <CsdlProperty
           Name="CreatedBy"
-          Property="Endpoint/Properties[CreatedBy]" />
+          Property="EntityType/Properties[CreatedBy]" />
         <CsdlProperty
           Name="ModifiedBy"
-          Property="Endpoint/Properties[ModifiedBy]" />
+          Property="EntityType/Properties[ModifiedBy]" />
         <CsdlProperty
           Name="Created"
-          Property="Endpoint/Properties[Created]" />
+          Property="EntityType/Properties[Created]" />
         <CsdlProperty
           Name="Modified"
-          Property="Endpoint/Properties[Modified]" />
+          Property="EntityType/Properties[Modified]" />
         <CsdlProperty
           Name="RowVersion"
-          Property="Endpoint/Properties[RowVersion]" />
+          Property="EntityType/Properties[RowVersion]" />
       </EntitySetMapping.Attributes>
     </EntitySetMapping>
   </DataService>

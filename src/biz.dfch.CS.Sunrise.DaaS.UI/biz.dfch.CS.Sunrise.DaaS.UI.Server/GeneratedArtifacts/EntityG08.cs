@@ -83,7 +83,7 @@ namespace LightSwitchApplication
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.1.0.0")]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        public int OrderId
+        public long OrderId
         {
             get
             {
@@ -101,30 +101,6 @@ namespace LightSwitchApplication
         partial void OrderId_Validate(global::Microsoft.LightSwitch.EntityValidationResultsBuilder results);
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
         partial void OrderId_Changed();
-
-        /// <summary>
-        /// No Modeled Description Available
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.1.0.0")]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        public string Status
-        {
-            get
-            {
-                return global::LightSwitchApplication.OrderItem.DetailsClass.GetValue(this, global::LightSwitchApplication.OrderItem.DetailsClass.PropertySetProperties.Status);
-            }
-            set
-            {
-                global::LightSwitchApplication.OrderItem.DetailsClass.SetValue(this, global::LightSwitchApplication.OrderItem.DetailsClass.PropertySetProperties.Status, value);
-            }
-        }
-        
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void Status_IsReadOnly(ref bool result);
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void Status_Validate(global::Microsoft.LightSwitch.EntityValidationResultsBuilder results);
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void Status_Changed();
 
         /// <summary>
         /// No Modeled Description Available
@@ -227,7 +203,7 @@ namespace LightSwitchApplication
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.1.0.0")]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        public int Id
+        public long Id
         {
             get
             {
@@ -414,6 +390,30 @@ namespace LightSwitchApplication
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
         partial void Modified_Changed();
 
+        /// <summary>
+        /// No Modeled Description Available
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.1.0.0")]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public byte[] RowVersion
+        {
+            get
+            {
+                return global::LightSwitchApplication.OrderItem.DetailsClass.GetValue(this, global::LightSwitchApplication.OrderItem.DetailsClass.PropertySetProperties.RowVersion);
+            }
+            set
+            {
+                global::LightSwitchApplication.OrderItem.DetailsClass.SetValue(this, global::LightSwitchApplication.OrderItem.DetailsClass.PropertySetProperties.RowVersion, value);
+            }
+        }
+        
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void RowVersion_IsReadOnly(ref bool result);
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void RowVersion_Validate(global::Microsoft.LightSwitch.EntityValidationResultsBuilder results);
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void RowVersion_Changed();
+
         #endregion
     
         #region Details Class
@@ -496,19 +496,11 @@ namespace LightSwitchApplication
                 {
                 }
     
-                public global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.OrderItem, global::LightSwitchApplication.OrderItem.DetailsClass, int> OrderId
+                public global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.OrderItem, global::LightSwitchApplication.OrderItem.DetailsClass, long> OrderId
                 {
                     get
                     {
-                        return base.GetItem(global::LightSwitchApplication.OrderItem.DetailsClass.PropertySetProperties.OrderId) as global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.OrderItem, global::LightSwitchApplication.OrderItem.DetailsClass, int>;
-                    }
-                }
-                
-                public global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.OrderItem, global::LightSwitchApplication.OrderItem.DetailsClass, string> Status
-                {
-                    get
-                    {
-                        return base.GetItem(global::LightSwitchApplication.OrderItem.DetailsClass.PropertySetProperties.Status) as global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.OrderItem, global::LightSwitchApplication.OrderItem.DetailsClass, string>;
+                        return base.GetItem(global::LightSwitchApplication.OrderItem.DetailsClass.PropertySetProperties.OrderId) as global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.OrderItem, global::LightSwitchApplication.OrderItem.DetailsClass, long>;
                     }
                 }
                 
@@ -544,11 +536,11 @@ namespace LightSwitchApplication
                     }
                 }
                 
-                public global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.OrderItem, global::LightSwitchApplication.OrderItem.DetailsClass, int> Id
+                public global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.OrderItem, global::LightSwitchApplication.OrderItem.DetailsClass, long> Id
                 {
                     get
                     {
-                        return base.GetItem(global::LightSwitchApplication.OrderItem.DetailsClass.PropertySetProperties.Id) as global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.OrderItem, global::LightSwitchApplication.OrderItem.DetailsClass, int>;
+                        return base.GetItem(global::LightSwitchApplication.OrderItem.DetailsClass.PropertySetProperties.Id) as global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.OrderItem, global::LightSwitchApplication.OrderItem.DetailsClass, long>;
                     }
                 }
                 
@@ -608,19 +600,26 @@ namespace LightSwitchApplication
                     }
                 }
                 
+                public global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.OrderItem, global::LightSwitchApplication.OrderItem.DetailsClass, byte[]> RowVersion
+                {
+                    get
+                    {
+                        return base.GetItem(global::LightSwitchApplication.OrderItem.DetailsClass.PropertySetProperties.RowVersion) as global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.OrderItem, global::LightSwitchApplication.OrderItem.DetailsClass, byte[]>;
+                    }
+                }
+                
             }
     
             #pragma warning disable 109
             [global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1034:NestedTypesShouldNotBeVisible")]
             public interface IImplementation : global::Microsoft.LightSwitch.Internal.IEntityImplementation
             {
-                new int OrderId { get; set; }
-                new string Status { get; set; }
+                new long OrderId { get; set; }
                 new int Quantity { get; set; }
                 new string Version { get; set; }
                 new string Type { get; set; }
                 new string Parameters { get; set; }
-                new int Id { get; set; }
+                new long Id { get; set; }
                 new string Tid { get; set; }
                 new string Name { get; set; }
                 new string Description { get; set; }
@@ -628,6 +627,7 @@ namespace LightSwitchApplication
                 new string ModifiedBy { get; set; }
                 new global::System.DateTimeOffset Created { get; set; }
                 new global::System.DateTimeOffset Modified { get; set; }
+                new byte[] RowVersion { get; set; }
             }
             #pragma warning restore 109
     
@@ -638,8 +638,8 @@ namespace LightSwitchApplication
             {
     
                 [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.OrderItem, global::LightSwitchApplication.OrderItem.DetailsClass, int>.Entry
-                    OrderId = new global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.OrderItem, global::LightSwitchApplication.OrderItem.DetailsClass, int>.Entry(
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.OrderItem, global::LightSwitchApplication.OrderItem.DetailsClass, long>.Entry
+                    OrderId = new global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.OrderItem, global::LightSwitchApplication.OrderItem.DetailsClass, long>.Entry(
                         "OrderId",
                         global::LightSwitchApplication.OrderItem.DetailsClass.PropertySetProperties._OrderId_Stub,
                         global::LightSwitchApplication.OrderItem.DetailsClass.PropertySetProperties._OrderId_ComputeIsReadOnly,
@@ -647,7 +647,7 @@ namespace LightSwitchApplication
                         global::LightSwitchApplication.OrderItem.DetailsClass.PropertySetProperties._OrderId_GetImplementationValue,
                         global::LightSwitchApplication.OrderItem.DetailsClass.PropertySetProperties._OrderId_SetImplementationValue,
                         global::LightSwitchApplication.OrderItem.DetailsClass.PropertySetProperties._OrderId_OnValueChanged);
-                private static void _OrderId_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.OrderItem.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.OrderItem, global::LightSwitchApplication.OrderItem.DetailsClass, int>.Data> c, global::LightSwitchApplication.OrderItem.DetailsClass d, object sf)
+                private static void _OrderId_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.OrderItem.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.OrderItem, global::LightSwitchApplication.OrderItem.DetailsClass, long>.Data> c, global::LightSwitchApplication.OrderItem.DetailsClass d, object sf)
                 {
                     c(d, ref d._OrderId, sf);
                 }
@@ -661,54 +661,17 @@ namespace LightSwitchApplication
                 {
                     e.OrderId_Validate(r);
                 }
-                private static int _OrderId_GetImplementationValue(global::LightSwitchApplication.OrderItem.DetailsClass d)
+                private static long _OrderId_GetImplementationValue(global::LightSwitchApplication.OrderItem.DetailsClass d)
                 {
                     return d.ImplementationEntity.OrderId;
                 }
-                private static void _OrderId_SetImplementationValue(global::LightSwitchApplication.OrderItem.DetailsClass d, int v)
+                private static void _OrderId_SetImplementationValue(global::LightSwitchApplication.OrderItem.DetailsClass d, long v)
                 {
                     d.ImplementationEntity.OrderId = v;
                 }
                 private static void _OrderId_OnValueChanged(global::LightSwitchApplication.OrderItem e)
                 {
                     e.OrderId_Changed();
-                }
-    
-                [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.OrderItem, global::LightSwitchApplication.OrderItem.DetailsClass, string>.Entry
-                    Status = new global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.OrderItem, global::LightSwitchApplication.OrderItem.DetailsClass, string>.Entry(
-                        "Status",
-                        global::LightSwitchApplication.OrderItem.DetailsClass.PropertySetProperties._Status_Stub,
-                        global::LightSwitchApplication.OrderItem.DetailsClass.PropertySetProperties._Status_ComputeIsReadOnly,
-                        global::LightSwitchApplication.OrderItem.DetailsClass.PropertySetProperties._Status_Validate,
-                        global::LightSwitchApplication.OrderItem.DetailsClass.PropertySetProperties._Status_GetImplementationValue,
-                        global::LightSwitchApplication.OrderItem.DetailsClass.PropertySetProperties._Status_SetImplementationValue,
-                        global::LightSwitchApplication.OrderItem.DetailsClass.PropertySetProperties._Status_OnValueChanged);
-                private static void _Status_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.OrderItem.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.OrderItem, global::LightSwitchApplication.OrderItem.DetailsClass, string>.Data> c, global::LightSwitchApplication.OrderItem.DetailsClass d, object sf)
-                {
-                    c(d, ref d._Status, sf);
-                }
-                private static bool _Status_ComputeIsReadOnly(global::LightSwitchApplication.OrderItem e)
-                {
-                    bool result = false;
-                    e.Status_IsReadOnly(ref result);
-                    return result;
-                }
-                private static void _Status_Validate(global::LightSwitchApplication.OrderItem e, global::Microsoft.LightSwitch.EntityValidationResultsBuilder r)
-                {
-                    e.Status_Validate(r);
-                }
-                private static string _Status_GetImplementationValue(global::LightSwitchApplication.OrderItem.DetailsClass d)
-                {
-                    return d.ImplementationEntity.Status;
-                }
-                private static void _Status_SetImplementationValue(global::LightSwitchApplication.OrderItem.DetailsClass d, string v)
-                {
-                    d.ImplementationEntity.Status = v;
-                }
-                private static void _Status_OnValueChanged(global::LightSwitchApplication.OrderItem e)
-                {
-                    e.Status_Changed();
                 }
     
                 [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
@@ -860,8 +823,8 @@ namespace LightSwitchApplication
                 }
     
                 [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.OrderItem, global::LightSwitchApplication.OrderItem.DetailsClass, int>.Entry
-                    Id = new global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.OrderItem, global::LightSwitchApplication.OrderItem.DetailsClass, int>.Entry(
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.OrderItem, global::LightSwitchApplication.OrderItem.DetailsClass, long>.Entry
+                    Id = new global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.OrderItem, global::LightSwitchApplication.OrderItem.DetailsClass, long>.Entry(
                         "Id",
                         global::LightSwitchApplication.OrderItem.DetailsClass.PropertySetProperties._Id_Stub,
                         global::LightSwitchApplication.OrderItem.DetailsClass.PropertySetProperties._Id_ComputeIsReadOnly,
@@ -869,7 +832,7 @@ namespace LightSwitchApplication
                         global::LightSwitchApplication.OrderItem.DetailsClass.PropertySetProperties._Id_GetImplementationValue,
                         global::LightSwitchApplication.OrderItem.DetailsClass.PropertySetProperties._Id_SetImplementationValue,
                         global::LightSwitchApplication.OrderItem.DetailsClass.PropertySetProperties._Id_OnValueChanged);
-                private static void _Id_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.OrderItem.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.OrderItem, global::LightSwitchApplication.OrderItem.DetailsClass, int>.Data> c, global::LightSwitchApplication.OrderItem.DetailsClass d, object sf)
+                private static void _Id_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.OrderItem.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.OrderItem, global::LightSwitchApplication.OrderItem.DetailsClass, long>.Data> c, global::LightSwitchApplication.OrderItem.DetailsClass d, object sf)
                 {
                     c(d, ref d._Id, sf);
                 }
@@ -883,11 +846,11 @@ namespace LightSwitchApplication
                 {
                     e.Id_Validate(r);
                 }
-                private static int _Id_GetImplementationValue(global::LightSwitchApplication.OrderItem.DetailsClass d)
+                private static long _Id_GetImplementationValue(global::LightSwitchApplication.OrderItem.DetailsClass d)
                 {
                     return d.ImplementationEntity.Id;
                 }
-                private static void _Id_SetImplementationValue(global::LightSwitchApplication.OrderItem.DetailsClass d, int v)
+                private static void _Id_SetImplementationValue(global::LightSwitchApplication.OrderItem.DetailsClass d, long v)
                 {
                     d.ImplementationEntity.Id = v;
                 }
@@ -1155,13 +1118,47 @@ namespace LightSwitchApplication
                     e.Modified_Changed();
                 }
     
+                [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.OrderItem, global::LightSwitchApplication.OrderItem.DetailsClass, byte[]>.Entry
+                    RowVersion = new global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.OrderItem, global::LightSwitchApplication.OrderItem.DetailsClass, byte[]>.Entry(
+                        "RowVersion",
+                        global::LightSwitchApplication.OrderItem.DetailsClass.PropertySetProperties._RowVersion_Stub,
+                        global::LightSwitchApplication.OrderItem.DetailsClass.PropertySetProperties._RowVersion_ComputeIsReadOnly,
+                        global::LightSwitchApplication.OrderItem.DetailsClass.PropertySetProperties._RowVersion_Validate,
+                        global::LightSwitchApplication.OrderItem.DetailsClass.PropertySetProperties._RowVersion_GetImplementationValue,
+                        global::LightSwitchApplication.OrderItem.DetailsClass.PropertySetProperties._RowVersion_SetImplementationValue,
+                        global::LightSwitchApplication.OrderItem.DetailsClass.PropertySetProperties._RowVersion_OnValueChanged);
+                private static void _RowVersion_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.OrderItem.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.OrderItem, global::LightSwitchApplication.OrderItem.DetailsClass, byte[]>.Data> c, global::LightSwitchApplication.OrderItem.DetailsClass d, object sf)
+                {
+                    c(d, ref d._RowVersion, sf);
+                }
+                private static bool _RowVersion_ComputeIsReadOnly(global::LightSwitchApplication.OrderItem e)
+                {
+                    bool result = false;
+                    e.RowVersion_IsReadOnly(ref result);
+                    return result;
+                }
+                private static void _RowVersion_Validate(global::LightSwitchApplication.OrderItem e, global::Microsoft.LightSwitch.EntityValidationResultsBuilder r)
+                {
+                    e.RowVersion_Validate(r);
+                }
+                private static byte[] _RowVersion_GetImplementationValue(global::LightSwitchApplication.OrderItem.DetailsClass d)
+                {
+                    return d.ImplementationEntity.RowVersion;
+                }
+                private static void _RowVersion_SetImplementationValue(global::LightSwitchApplication.OrderItem.DetailsClass d, byte[] v)
+                {
+                    d.ImplementationEntity.RowVersion = v;
+                }
+                private static void _RowVersion_OnValueChanged(global::LightSwitchApplication.OrderItem e)
+                {
+                    e.RowVersion_Changed();
+                }
+    
             }
     
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-            private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.OrderItem, global::LightSwitchApplication.OrderItem.DetailsClass, int>.Data _OrderId;
-            
-            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-            private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.OrderItem, global::LightSwitchApplication.OrderItem.DetailsClass, string>.Data _Status;
+            private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.OrderItem, global::LightSwitchApplication.OrderItem.DetailsClass, long>.Data _OrderId;
             
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
             private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.OrderItem, global::LightSwitchApplication.OrderItem.DetailsClass, int>.Data _Quantity;
@@ -1176,7 +1173,7 @@ namespace LightSwitchApplication
             private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.OrderItem, global::LightSwitchApplication.OrderItem.DetailsClass, string>.Data _Parameters;
             
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-            private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.OrderItem, global::LightSwitchApplication.OrderItem.DetailsClass, int>.Data _Id;
+            private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.OrderItem, global::LightSwitchApplication.OrderItem.DetailsClass, long>.Data _Id;
             
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
             private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.OrderItem, global::LightSwitchApplication.OrderItem.DetailsClass, string>.Data _Tid;
@@ -1198,6 +1195,9 @@ namespace LightSwitchApplication
             
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
             private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.OrderItem, global::LightSwitchApplication.OrderItem.DetailsClass, global::System.DateTimeOffset>.Data _Modified;
+            
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.OrderItem, global::LightSwitchApplication.OrderItem.DetailsClass, byte[]>.Data _RowVersion;
             
         }
     

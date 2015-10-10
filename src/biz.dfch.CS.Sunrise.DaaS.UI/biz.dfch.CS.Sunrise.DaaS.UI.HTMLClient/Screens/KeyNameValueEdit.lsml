@@ -140,7 +140,7 @@
             <ContentItem
               Name="KeyNameValue_Id"
               Kind="Value"
-              DataType=":Int32"
+              DataType=":Int64"
               View="Microsoft.LightSwitch.MobileWeb:Text">
               <ContentItem.DataSource>
                 <ScreenExpressionTree>

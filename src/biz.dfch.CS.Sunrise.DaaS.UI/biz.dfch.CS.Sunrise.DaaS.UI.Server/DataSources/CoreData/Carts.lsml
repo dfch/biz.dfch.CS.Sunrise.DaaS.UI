@@ -5,7 +5,7 @@
     <Partial />
   </ServiceApplication.Attributes>
   <EntityType
-    Name="Endpoint">
+    Name="Cart">
     <EntityType.Attributes>
       <NotSearchable />
     </EntityType.Attributes>
@@ -41,61 +41,12 @@
         </EntityProperty.Attributes>
       </EntityProperty>
       <EntityProperty
-        Name="Version"
-        PropertyType=":String">
-        <EntityProperty.Attributes>
-          <Required />
-        </EntityProperty.Attributes>
-      </EntityProperty>
-      <EntityProperty
-        Name="RouteTemplate"
-        PropertyType=":String">
-        <EntityProperty.Attributes>
-          <Required />
-        </EntityProperty.Attributes>
-      </EntityProperty>
-      <EntityProperty
-        Name="RoutePrefix"
-        PropertyType=":String">
-        <EntityProperty.Attributes>
-          <Required />
-        </EntityProperty.Attributes>
-      </EntityProperty>
-      <EntityProperty
-        Name="ServerRole"
-        PropertyType=":String">
-        <EntityProperty.Attributes>
-          <Required />
-        </EntityProperty.Attributes>
-      </EntityProperty>
-      <EntityProperty
-        Name="Priority"
-        PropertyType=":Int32">
-        <EntityProperty.Attributes>
-          <Required />
-          <NotSearchable />
-        </EntityProperty.Attributes>
-      </EntityProperty>
-      <EntityProperty
-        Name="Created"
-        PropertyType=":DateTimeOffset">
-        <EntityProperty.Attributes>
-          <NotSearchable />
-          <Required />
-        </EntityProperty.Attributes>
-      </EntityProperty>
+        Name="Description"
+        PropertyType=":String?" />
       <EntityProperty
         Name="CreatedBy"
         PropertyType=":String">
         <EntityProperty.Attributes>
-          <Required />
-        </EntityProperty.Attributes>
-      </EntityProperty>
-      <EntityProperty
-        Name="Modified"
-        PropertyType=":DateTimeOffset">
-        <EntityProperty.Attributes>
-          <NotSearchable />
           <Required />
         </EntityProperty.Attributes>
       </EntityProperty>
@@ -107,15 +58,21 @@
         </EntityProperty.Attributes>
       </EntityProperty>
       <EntityProperty
-        Name="Address"
-        PropertyType=":String">
+        Name="Created"
+        PropertyType=":DateTimeOffset">
         <EntityProperty.Attributes>
           <Required />
+          <NotSearchable />
         </EntityProperty.Attributes>
       </EntityProperty>
       <EntityProperty
-        Name="Description"
-        PropertyType=":String?" />
+        Name="Modified"
+        PropertyType=":DateTimeOffset">
+        <EntityProperty.Attributes>
+          <Required />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
       <EntityProperty
         Name="RowVersion"
         PropertyType=":Binary?">
@@ -123,22 +80,51 @@
           <NotSearchable />
         </EntityProperty.Attributes>
       </EntityProperty>
+      <NavigationProperty
+        Name="CartItems"
+        Association="biz_dfch_CS_Appclusive_Core_OdataServices_Core_Cart_CartItems_bi"
+        FromEnd="CartItemsPartner"
+        ToEnd="CartItems" />
     </EntityType.Properties>
   </EntityType>
+  <Association
+    Name="biz_dfch_CS_Appclusive_Core_OdataServices_Core_Cart_CartItems_bi">
+    <AssociationEnd
+      Name="CartItemsPartner"
+      EntityType="Cart">
+      <AssociationEnd.Attributes>
+        <DeleteRule />
+      </AssociationEnd.Attributes>
+    </AssociationEnd>
+    <AssociationEnd
+      Name="CartItems"
+      Multiplicity="Many"
+      EntityType="CartItem" />
+  </Association>
   <EntityContainer
-    Name="DiagnosticsData">
+    Name="CoreData">
     <EntityContainer.Attributes>
       <Partial />
     </EntityContainer.Attributes>
     <EntitySet
-      Name="Endpoints"
+      Name="Carts"
       CanDelete="True"
       CanInsert="True"
       CanUpdate="True"
-      EntityType="Endpoint" />
+      EntityType="Cart" />
+    <AssociationSet
+      Name="biz_dfch_CS_Appclusive_Core_OdataServices_Core_Cart_CartItems_bi"
+      Association="biz_dfch_CS_Appclusive_Core_OdataServices_Core_Cart_CartItems_bi">
+      <AssociationSetEnd
+        Name="CartItemsPartner"
+        EntitySet="Carts" />
+      <AssociationSetEnd
+        Name="CartItems"
+        EntitySet="CartItems" />
+    </AssociationSet>
     <QueryOperation
-      Name="Endpoints_Single"
-      ReturnType="Endpoint">
+      Name="Carts_Single"
+      ReturnType="Cart">
       <QueryOperation.Attributes>
         <Generated />
         <Description
@@ -164,12 +150,12 @@
       <QueryOperation.Source>
         <QuerySourceExpressionTree>
           <MemberExpression
-            Member="Endpoints" />
+            Member="Carts" />
         </QuerySourceExpressionTree>
       </QueryOperation.Source>
       <QueryOperationParameter
         Name="Id"
-        ParameterType=":Int64?">
+        ParameterType="Microsoft.LightSwitch:Int64?">
         <QueryOperationParameter.Attributes>
           <Description
             Value="The value of the 'Id' key property of the entity to retrieve." />
@@ -177,8 +163,8 @@
       </QueryOperationParameter>
     </QueryOperation>
     <QueryOperation
-      Name="Endpoints_SingleOrDefault"
-      ReturnType="Endpoint">
+      Name="Carts_SingleOrDefault"
+      ReturnType="Cart">
       <QueryOperation.Attributes>
         <Generated />
         <Description
@@ -204,12 +190,12 @@
       <QueryOperation.Source>
         <QuerySourceExpressionTree>
           <MemberExpression
-            Member="Endpoints" />
+            Member="Carts" />
         </QuerySourceExpressionTree>
       </QueryOperation.Source>
       <QueryOperationParameter
         Name="Id"
-        ParameterType=":Int64?">
+        ParameterType="Microsoft.LightSwitch:Int64?">
         <QueryOperationParameter.Attributes>
           <Description
             Value="The value of the 'Id' key property of the entity to retrieve." />
@@ -218,64 +204,61 @@
     </QueryOperation>
   </EntityContainer>
   <DataService
-    Name="DiagnosticsDataDataService">
+    Name="CoreDataDataService">
     <DataService.Attributes>
       <Partial />
     </DataService.Attributes>
     <EntitySetMapping
-      EntitySet="Endpoints">
+      EntitySet="Carts">
       <EntitySetMapping.Attributes>
         <CsdlEntitySet
-          EntityTypeName="Endpoint"
-          EntityTypeNamespace="biz.dfch.CS.Appclusive.Core.OdataServices.Diagnostics"
-          Name="Endpoints"
-          EntityType="Endpoint" />
-        <CsdlProperty
-          Name="Version"
-          Property="Endpoint/Properties[Version]" />
-        <CsdlProperty
-          Name="Address"
-          Property="Endpoint/Properties[Address]" />
-        <CsdlProperty
-          Name="RouteTemplate"
-          Property="Endpoint/Properties[RouteTemplate]" />
-        <CsdlProperty
-          Name="RoutePrefix"
-          Property="Endpoint/Properties[RoutePrefix]" />
-        <CsdlProperty
-          Name="ServerRole"
-          Property="Endpoint/Properties[ServerRole]" />
-        <CsdlProperty
-          Name="Priority"
-          Property="Endpoint/Properties[Priority]" />
+          EntityTypeName="Cart"
+          EntityTypeNamespace="biz.dfch.CS.Appclusive.Core.OdataServices.Core"
+          Name="Carts"
+          EntityType="Cart" />
         <CsdlProperty
           Name="Id"
-          Property="Endpoint/Properties[Id]" />
+          Property="Cart/Properties[Id]" />
         <CsdlProperty
           Name="Tid"
-          Property="Endpoint/Properties[Tid]" />
+          Property="Cart/Properties[Tid]" />
         <CsdlProperty
           Name="Name"
-          Property="Endpoint/Properties[Name]" />
+          Property="Cart/Properties[Name]" />
         <CsdlProperty
           Name="Description"
-          Property="Endpoint/Properties[Description]" />
+          Property="Cart/Properties[Description]" />
         <CsdlProperty
           Name="CreatedBy"
-          Property="Endpoint/Properties[CreatedBy]" />
+          Property="Cart/Properties[CreatedBy]" />
         <CsdlProperty
           Name="ModifiedBy"
-          Property="Endpoint/Properties[ModifiedBy]" />
+          Property="Cart/Properties[ModifiedBy]" />
         <CsdlProperty
           Name="Created"
-          Property="Endpoint/Properties[Created]" />
+          Property="Cart/Properties[Created]" />
         <CsdlProperty
           Name="Modified"
-          Property="Endpoint/Properties[Modified]" />
+          Property="Cart/Properties[Modified]" />
         <CsdlProperty
           Name="RowVersion"
-          Property="Endpoint/Properties[RowVersion]" />
+          Property="Cart/Properties[RowVersion]" />
+        <CsdlProperty
+          Name="CartItems"
+          Property="Cart/Properties[CartItems]" />
       </EntitySetMapping.Attributes>
     </EntitySetMapping>
+    <AssociationSetMapping
+      AssociationSet="biz_dfch_CS_Appclusive_Core_OdataServices_Core_Cart_CartItems_bi">
+      <AssociationSetMapping.Attributes>
+        <CsdlAssociation
+          Name="biz_dfch_CS_Appclusive_Core_OdataServices_Core_Cart_CartItems_biz_dfch_CS_Appclusive_Core_OdataServices_Core_CartItem_CartItemsPartnerSet"
+          Association="biz_dfch_CS_Appclusive_Core_OdataServices_Core_Cart_CartItems_bi" />
+        <CsdlAssociationSetEnd
+          End="CoreData/Members[biz_dfch_CS_Appclusive_Core_OdataServices_Core_Cart_CartItems_bi]/Members[CartItemsPartner]" />
+        <CsdlAssociationSetEnd
+          End="CoreData/Members[biz_dfch_CS_Appclusive_Core_OdataServices_Core_Cart_CartItems_bi]/Members[CartItems]" />
+      </AssociationSetMapping.Attributes>
+    </AssociationSetMapping>
   </DataService>
 </ServiceApplication>

@@ -8,7 +8,6 @@
     Name="CatalogueItem1">
     <EntityType.Attributes>
       <NotSearchable />
-      <NotPageable />
     </EntityType.Attributes>
     <EntityType.Methods>
       <EntityMethod
@@ -24,10 +23,16 @@
         PropertyType=":String?" />
       <EntityProperty
         Name="Version"
-        PropertyType=":String?" />
+        PropertyType=":String">
+        <EntityProperty.Attributes>
+          <Required />
+          <MaxLength
+            Value="255" />
+        </EntityProperty.Attributes>
+      </EntityProperty>
       <KeyProperty
         Name="Id"
-        PropertyType=":Int32">
+        PropertyType=":Int64">
         <KeyProperty.Attributes>
           <Required />
           <NotSearchable />
@@ -80,6 +85,72 @@
           <NotSearchable />
         </EntityProperty.Attributes>
       </EntityProperty>
+      <EntityProperty
+        Name="CatalogueId"
+        PropertyType=":Int64">
+        <EntityProperty.Attributes>
+          <Required />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Type"
+        PropertyType=":String">
+        <EntityProperty.Attributes>
+          <Required />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="ValidFrom"
+        PropertyType=":DateTimeOffset">
+        <EntityProperty.Attributes>
+          <Required />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="ValidUntil"
+        PropertyType=":DateTimeOffset">
+        <EntityProperty.Attributes>
+          <Required />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="EndOfSale"
+        PropertyType=":DateTimeOffset">
+        <EntityProperty.Attributes>
+          <Required />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="EndOfLife"
+        PropertyType=":DateTimeOffset">
+        <EntityProperty.Attributes>
+          <Required />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Parameters"
+        PropertyType=":String?" />
+      <EntityProperty
+        Name="RowVersion"
+        PropertyType=":Binary?">
+        <EntityProperty.Attributes>
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <NavigationProperty
+        Name="Catalogue"
+        Association="biz_dfch_CS_Appclusive_Core_OdataServices_Core_CatalogueItem_Cat"
+        FromEnd="CataloguePartner"
+        ToEnd="Catalogue">
+        <NavigationProperty.Attributes>
+          <Hidden />
+        </NavigationProperty.Attributes>
+      </NavigationProperty>
     </EntityType.Properties>
   </EntityType>
   <EntityContainer
@@ -126,7 +197,7 @@
       </QueryOperation.Source>
       <QueryOperationParameter
         Name="Id"
-        ParameterType="Microsoft.LightSwitch:Int32?">
+        ParameterType=":Int64?">
         <QueryOperationParameter.Attributes>
           <Description
             Value="The value of the 'Id' key property of the entity to retrieve." />
@@ -166,7 +237,7 @@
       </QueryOperation.Source>
       <QueryOperationParameter
         Name="Id"
-        ParameterType="Microsoft.LightSwitch:Int32?">
+        ParameterType=":Int64?">
         <QueryOperationParameter.Attributes>
           <Description
             Value="The value of the 'Id' key property of the entity to retrieve." />
@@ -188,11 +259,32 @@
           Name="CatalogueItems"
           EntityType="CatalogueItem1" />
         <CsdlProperty
-          Name="Collection"
-          Property="CatalogueItem1/Properties[Collection]" />
+          Name="CatalogueId"
+          Property="CatalogueItem1/Properties[CatalogueId]" />
+        <CsdlProperty
+          Name="Type"
+          Property="CatalogueItem1/Properties[Type]" />
         <CsdlProperty
           Name="Version"
           Property="CatalogueItem1/Properties[Version]" />
+        <CsdlProperty
+          Name="ValidFrom"
+          Property="CatalogueItem1/Properties[ValidFrom]" />
+        <CsdlProperty
+          Name="ValidUntil"
+          Property="CatalogueItem1/Properties[ValidUntil]" />
+        <CsdlProperty
+          Name="EndOfSale"
+          Property="CatalogueItem1/Properties[EndOfSale]" />
+        <CsdlProperty
+          Name="EndOfLife"
+          Property="CatalogueItem1/Properties[EndOfLife]" />
+        <CsdlProperty
+          Name="Parameters"
+          Property="CatalogueItem1/Properties[Parameters]" />
+        <CsdlProperty
+          Name="Collection"
+          Property="CatalogueItem1/Properties[Collection]" />
         <CsdlProperty
           Name="Id"
           Property="CatalogueItem1/Properties[Id]" />
@@ -217,6 +309,12 @@
         <CsdlProperty
           Name="Modified"
           Property="CatalogueItem1/Properties[Modified]" />
+        <CsdlProperty
+          Name="RowVersion"
+          Property="CatalogueItem1/Properties[RowVersion]" />
+        <CsdlProperty
+          Name="Catalogue"
+          Property="CatalogueItem1/Properties[Catalogue]" />
       </EntitySetMapping.Attributes>
     </EntitySetMapping>
   </DataService>

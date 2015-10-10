@@ -54,31 +54,6 @@
                   </ScreenExpressionTree>
                 </ContentItem.DataSource>
                 <ContentItem
-                  Name="Status"
-                  Kind="Value"
-                  DataType=":String?">
-                  <ContentItem.DataSource>
-                    <ScreenExpressionTree>
-                      <ChainExpression>
-                        <MemberExpression
-                          Member="OrderItem/Properties[Status]" />
-                      </ChainExpression>
-                    </ScreenExpressionTree>
-                  </ContentItem.DataSource>
-                  <ContentItem.PropertySources>
-                    <ControlPropertySource
-                      Property="Microsoft.LightSwitch.MobileWeb:RootControl/Properties[FontStyle]">
-                      <ScreenExpressionTree>
-                        <ChainExpression>
-                          <ConstantExpression
-                            Value="Large"
-                            ResultType=":String" />
-                        </ChainExpression>
-                      </ScreenExpressionTree>
-                    </ControlPropertySource>
-                  </ContentItem.PropertySources>
-                </ContentItem>
-                <ContentItem
                   Name="Quantity"
                   Kind="Value"
                   DataType=":Int32">
@@ -106,7 +81,7 @@
                 <ContentItem
                   Name="OrderId"
                   Kind="Value"
-                  DataType=":Int32">
+                  DataType=":Int64">
                   <ContentItem.DataSource>
                     <ScreenExpressionTree>
                       <ChainExpression>
@@ -290,7 +265,6 @@
     <Screen.Properties>
       <ScreenCollectionProperty
         Name="OrderItems"
-        DisablePaging="True"
         DisableSearch="True"
         PageSize="45"
         PropertyType="CollectionView$OrderItem">

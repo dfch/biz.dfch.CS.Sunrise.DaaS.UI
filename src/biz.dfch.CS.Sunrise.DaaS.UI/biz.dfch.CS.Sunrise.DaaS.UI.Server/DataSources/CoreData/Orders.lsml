@@ -8,7 +8,6 @@
     Name="Order">
     <EntityType.Attributes>
       <NotSearchable />
-      <NotPageable />
     </EntityType.Attributes>
     <EntityType.Methods>
       <EntityMethod
@@ -27,7 +26,7 @@
         PropertyType=":String?" />
       <KeyProperty
         Name="Id"
-        PropertyType=":Int32">
+        PropertyType=":Int64">
         <KeyProperty.Attributes>
           <Required />
           <NotSearchable />
@@ -86,8 +85,15 @@
         FromEnd="OrderItemsPartner"
         ToEnd="OrderItems" />
       <EntityProperty
-        Name="OrderOnBehalfOf"
+        Name="Requester"
         PropertyType=":String?" />
+      <EntityProperty
+        Name="RowVersion"
+        PropertyType=":Binary?">
+        <EntityProperty.Attributes>
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
     </EntityType.Properties>
   </EntityType>
   <Association
@@ -158,7 +164,7 @@
       </QueryOperation.Source>
       <QueryOperationParameter
         Name="Id"
-        ParameterType="Microsoft.LightSwitch:Int32?">
+        ParameterType=":Int64?">
         <QueryOperationParameter.Attributes>
           <Description
             Value="The value of the 'Id' key property of the entity to retrieve." />
@@ -198,7 +204,7 @@
       </QueryOperation.Source>
       <QueryOperationParameter
         Name="Id"
-        ParameterType="Microsoft.LightSwitch:Int32?">
+        ParameterType=":Int64?">
         <QueryOperationParameter.Attributes>
           <Description
             Value="The value of the 'Id' key property of the entity to retrieve." />
@@ -220,8 +226,8 @@
           Name="Orders"
           EntityType="Order" />
         <CsdlProperty
-          Name="OrderOnBehalfOf"
-          Property="Order/Properties[OrderOnBehalfOf]" />
+          Name="Requester"
+          Property="Order/Properties[Requester]" />
         <CsdlProperty
           Name="Status"
           Property="Order/Properties[Status]" />
@@ -252,6 +258,9 @@
         <CsdlProperty
           Name="Modified"
           Property="Order/Properties[Modified]" />
+        <CsdlProperty
+          Name="RowVersion"
+          Property="Order/Properties[RowVersion]" />
         <CsdlProperty
           Name="OrderItems"
           Property="Order/Properties[OrderItems]" />

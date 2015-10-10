@@ -5,7 +5,7 @@
     <Partial />
   </ServiceApplication.Attributes>
   <EntityType
-    Name="Endpoint">
+    Name="ManagementUri">
     <EntityType.Attributes>
       <NotSearchable />
     </EntityType.Attributes>
@@ -18,6 +18,19 @@
       </EntityMethod>
     </EntityType.Methods>
     <EntityType.Properties>
+      <EntityProperty
+        Name="Type"
+        PropertyType=":String?" />
+      <EntityProperty
+        Name="Value"
+        PropertyType=":String?" />
+      <EntityProperty
+        Name="ManagementCredentialId"
+        PropertyType=":Int64?">
+        <EntityProperty.Attributes>
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
       <KeyProperty
         Name="Id"
         PropertyType=":Int64">
@@ -41,61 +54,12 @@
         </EntityProperty.Attributes>
       </EntityProperty>
       <EntityProperty
-        Name="Version"
-        PropertyType=":String">
-        <EntityProperty.Attributes>
-          <Required />
-        </EntityProperty.Attributes>
-      </EntityProperty>
-      <EntityProperty
-        Name="RouteTemplate"
-        PropertyType=":String">
-        <EntityProperty.Attributes>
-          <Required />
-        </EntityProperty.Attributes>
-      </EntityProperty>
-      <EntityProperty
-        Name="RoutePrefix"
-        PropertyType=":String">
-        <EntityProperty.Attributes>
-          <Required />
-        </EntityProperty.Attributes>
-      </EntityProperty>
-      <EntityProperty
-        Name="ServerRole"
-        PropertyType=":String">
-        <EntityProperty.Attributes>
-          <Required />
-        </EntityProperty.Attributes>
-      </EntityProperty>
-      <EntityProperty
-        Name="Priority"
-        PropertyType=":Int32">
-        <EntityProperty.Attributes>
-          <Required />
-          <NotSearchable />
-        </EntityProperty.Attributes>
-      </EntityProperty>
-      <EntityProperty
-        Name="Created"
-        PropertyType=":DateTimeOffset">
-        <EntityProperty.Attributes>
-          <NotSearchable />
-          <Required />
-        </EntityProperty.Attributes>
-      </EntityProperty>
+        Name="Description"
+        PropertyType=":String?" />
       <EntityProperty
         Name="CreatedBy"
         PropertyType=":String">
         <EntityProperty.Attributes>
-          <Required />
-        </EntityProperty.Attributes>
-      </EntityProperty>
-      <EntityProperty
-        Name="Modified"
-        PropertyType=":DateTimeOffset">
-        <EntityProperty.Attributes>
-          <NotSearchable />
           <Required />
         </EntityProperty.Attributes>
       </EntityProperty>
@@ -107,15 +71,21 @@
         </EntityProperty.Attributes>
       </EntityProperty>
       <EntityProperty
-        Name="Address"
-        PropertyType=":String">
+        Name="Created"
+        PropertyType=":DateTimeOffset">
         <EntityProperty.Attributes>
           <Required />
+          <NotSearchable />
         </EntityProperty.Attributes>
       </EntityProperty>
       <EntityProperty
-        Name="Description"
-        PropertyType=":String?" />
+        Name="Modified"
+        PropertyType=":DateTimeOffset">
+        <EntityProperty.Attributes>
+          <Required />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
       <EntityProperty
         Name="RowVersion"
         PropertyType=":Binary?">
@@ -126,19 +96,19 @@
     </EntityType.Properties>
   </EntityType>
   <EntityContainer
-    Name="DiagnosticsData">
+    Name="CoreData">
     <EntityContainer.Attributes>
       <Partial />
     </EntityContainer.Attributes>
     <EntitySet
-      Name="Endpoints"
+      Name="ManagementUris"
       CanDelete="True"
       CanInsert="True"
       CanUpdate="True"
-      EntityType="Endpoint" />
+      EntityType="ManagementUri" />
     <QueryOperation
-      Name="Endpoints_Single"
-      ReturnType="Endpoint">
+      Name="ManagementUris_Single"
+      ReturnType="ManagementUri">
       <QueryOperation.Attributes>
         <Generated />
         <Description
@@ -164,12 +134,12 @@
       <QueryOperation.Source>
         <QuerySourceExpressionTree>
           <MemberExpression
-            Member="Endpoints" />
+            Member="ManagementUris" />
         </QuerySourceExpressionTree>
       </QueryOperation.Source>
       <QueryOperationParameter
         Name="Id"
-        ParameterType=":Int64?">
+        ParameterType="Microsoft.LightSwitch:Int64?">
         <QueryOperationParameter.Attributes>
           <Description
             Value="The value of the 'Id' key property of the entity to retrieve." />
@@ -177,8 +147,8 @@
       </QueryOperationParameter>
     </QueryOperation>
     <QueryOperation
-      Name="Endpoints_SingleOrDefault"
-      ReturnType="Endpoint">
+      Name="ManagementUris_SingleOrDefault"
+      ReturnType="ManagementUri">
       <QueryOperation.Attributes>
         <Generated />
         <Description
@@ -204,12 +174,12 @@
       <QueryOperation.Source>
         <QuerySourceExpressionTree>
           <MemberExpression
-            Member="Endpoints" />
+            Member="ManagementUris" />
         </QuerySourceExpressionTree>
       </QueryOperation.Source>
       <QueryOperationParameter
         Name="Id"
-        ParameterType=":Int64?">
+        ParameterType="Microsoft.LightSwitch:Int64?">
         <QueryOperationParameter.Attributes>
           <Description
             Value="The value of the 'Id' key property of the entity to retrieve." />
@@ -218,63 +188,54 @@
     </QueryOperation>
   </EntityContainer>
   <DataService
-    Name="DiagnosticsDataDataService">
+    Name="CoreDataDataService">
     <DataService.Attributes>
       <Partial />
     </DataService.Attributes>
     <EntitySetMapping
-      EntitySet="Endpoints">
+      EntitySet="ManagementUris">
       <EntitySetMapping.Attributes>
         <CsdlEntitySet
-          EntityTypeName="Endpoint"
-          EntityTypeNamespace="biz.dfch.CS.Appclusive.Core.OdataServices.Diagnostics"
-          Name="Endpoints"
-          EntityType="Endpoint" />
+          EntityTypeName="ManagementUri"
+          EntityTypeNamespace="biz.dfch.CS.Appclusive.Core.OdataServices.Core"
+          Name="ManagementUris"
+          EntityType="ManagementUri" />
         <CsdlProperty
-          Name="Version"
-          Property="Endpoint/Properties[Version]" />
+          Name="Type"
+          Property="ManagementUri/Properties[Type]" />
         <CsdlProperty
-          Name="Address"
-          Property="Endpoint/Properties[Address]" />
+          Name="Value"
+          Property="ManagementUri/Properties[Value]" />
         <CsdlProperty
-          Name="RouteTemplate"
-          Property="Endpoint/Properties[RouteTemplate]" />
-        <CsdlProperty
-          Name="RoutePrefix"
-          Property="Endpoint/Properties[RoutePrefix]" />
-        <CsdlProperty
-          Name="ServerRole"
-          Property="Endpoint/Properties[ServerRole]" />
-        <CsdlProperty
-          Name="Priority"
-          Property="Endpoint/Properties[Priority]" />
+          Name="ManagementCredentialId"
+          Property="ManagementUri/Properties[ManagementCredentialId]" />
         <CsdlProperty
           Name="Id"
-          Property="Endpoint/Properties[Id]" />
+          Property="ManagementUri/Properties[Id]" />
         <CsdlProperty
           Name="Tid"
-          Property="Endpoint/Properties[Tid]" />
+          Property="ManagementUri/Properties[Tid]" />
         <CsdlProperty
           Name="Name"
-          Property="Endpoint/Properties[Name]" />
+          Property="ManagementUri/Properties[Name]" />
         <CsdlProperty
           Name="Description"
-          Property="Endpoint/Properties[Description]" />
+          Property="ManagementUri/Properties[Description]" />
         <CsdlProperty
           Name="CreatedBy"
-          Property="Endpoint/Properties[CreatedBy]" />
+          Property="ManagementUri/Properties[CreatedBy]" />
         <CsdlProperty
           Name="ModifiedBy"
-          Property="Endpoint/Properties[ModifiedBy]" />
+          Property="ManagementUri/Properties[ModifiedBy]" />
         <CsdlProperty
           Name="Created"
-          Property="Endpoint/Properties[Created]" />
+          Property="ManagementUri/Properties[Created]" />
         <CsdlProperty
           Name="Modified"
-          Property="Endpoint/Properties[Modified]" />
+          Property="ManagementUri/Properties[Modified]" />
         <CsdlProperty
           Name="RowVersion"
-          Property="Endpoint/Properties[RowVersion]" />
+          Property="ManagementUri/Properties[RowVersion]" />
       </EntitySetMapping.Attributes>
     </EntitySetMapping>
   </DataService>

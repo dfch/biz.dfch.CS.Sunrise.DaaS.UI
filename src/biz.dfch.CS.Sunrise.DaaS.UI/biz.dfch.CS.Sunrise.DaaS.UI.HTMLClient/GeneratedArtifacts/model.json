@@ -43,7 +43,6 @@
           "id": "Approval",
           "name": "Approval",
           ":@NotSearchable": { },
-          ":@NotPageable": { },
           ":@DefaultScreen":
           {
             "value": { "__id": "ApprovalView" },
@@ -73,7 +72,7 @@
               "__isKeyProperty": 1,
               "id": "Approval/Properties[Id]",
               "name": "Id",
-              "propertyType": { "__id": ":Int32" },
+              "propertyType": { "__id": ":Int64" },
               ":@Required": { },
               ":@NotSearchable": { }
             },
@@ -124,6 +123,12 @@
               "id": "Approval/Properties[Status]",
               "name": "Status",
               "propertyType": { "__id": ":String?" }
+            },
+            {
+              "id": "Approval/Properties[RowVersion]",
+              "name": "RowVersion",
+              "propertyType": { "__id": ":Binary?" },
+              ":@NotSearchable": { }
             }
           ]
         },
@@ -133,7 +138,6 @@
           "id": "CatalogueItem1",
           "name": "CatalogueItem1",
           ":@NotSearchable": { },
-          ":@NotPageable": { },
           ":@DefaultScreen":
           {
             "value": { "__id": "CatalogueItemView" },
@@ -167,13 +171,18 @@
             {
               "id": "CatalogueItem1/Properties[Version]",
               "name": "Version",
-              "propertyType": { "__id": ":String?" }
+              "propertyType": { "__id": ":String" },
+              ":@Required": { },
+              ":@MaxLength":
+              {
+                "value": 255
+              }
             },
             {
               "__isKeyProperty": 1,
               "id": "CatalogueItem1/Properties[Id]",
               "name": "Id",
-              "propertyType": { "__id": ":Int32" },
+              "propertyType": { "__id": ":Int64" },
               ":@Required": { },
               ":@NotSearchable": { }
             },
@@ -219,16 +228,77 @@
               "propertyType": { "__id": ":DateTimeOffset" },
               ":@Required": { },
               ":@NotSearchable": { }
+            },
+            {
+              "id": "CatalogueItem1/Properties[CatalogueId]",
+              "name": "CatalogueId",
+              "propertyType": { "__id": ":Int64" },
+              ":@Required": { },
+              ":@NotSearchable": { }
+            },
+            {
+              "id": "CatalogueItem1/Properties[Type]",
+              "name": "Type",
+              "propertyType": { "__id": ":String" },
+              ":@Required": { }
+            },
+            {
+              "id": "CatalogueItem1/Properties[ValidFrom]",
+              "name": "ValidFrom",
+              "propertyType": { "__id": ":DateTimeOffset" },
+              ":@Required": { },
+              ":@NotSearchable": { }
+            },
+            {
+              "id": "CatalogueItem1/Properties[ValidUntil]",
+              "name": "ValidUntil",
+              "propertyType": { "__id": ":DateTimeOffset" },
+              ":@Required": { },
+              ":@NotSearchable": { }
+            },
+            {
+              "id": "CatalogueItem1/Properties[EndOfSale]",
+              "name": "EndOfSale",
+              "propertyType": { "__id": ":DateTimeOffset" },
+              ":@Required": { },
+              ":@NotSearchable": { }
+            },
+            {
+              "id": "CatalogueItem1/Properties[EndOfLife]",
+              "name": "EndOfLife",
+              "propertyType": { "__id": ":DateTimeOffset" },
+              ":@Required": { },
+              ":@NotSearchable": { }
+            },
+            {
+              "id": "CatalogueItem1/Properties[Parameters]",
+              "name": "Parameters",
+              "propertyType": { "__id": ":String?" }
+            },
+            {
+              "id": "CatalogueItem1/Properties[RowVersion]",
+              "name": "RowVersion",
+              "propertyType": { "__id": ":Binary?" },
+              ":@NotSearchable": { }
+            },
+            {
+              "id": "CatalogueItem1/Properties[Catalogue]",
+              "name": "Catalogue",
+              "association": { "__id": "biz_dfch_CS_Appclusive_Core_OdataServices_Core_CatalogueItem_Cat" },
+              "elementType": { "__id": "Catalogue" },
+              "fromEnd": { "__id": "biz_dfch_CS_Appclusive_Core_OdataServices_Core_CatalogueItem_Cat/Ends[CataloguePartner]" },
+              "propertyType": { "__id": "Catalogue" },
+              "toEnd": { "__id": "biz_dfch_CS_Appclusive_Core_OdataServices_Core_CatalogueItem_Cat/Ends[Catalogue]" },
+              ":@Hidden": { }
             }
           ]
         },
         {
           "__isEntityType": 1,
-          ":@SummaryProperty": { "property": { "__id": "Job/Properties[Type]" } },
+          ":@SummaryProperty": { "property": { "__id": "Job/Properties[ReferencedItemId]" } },
           "id": "Job",
           "name": "Job",
           ":@NotSearchable": { },
-          ":@NotPageable": { },
           ":@DefaultScreen":
           {
             "value": { "__id": "JobView" },
@@ -254,12 +324,6 @@
           ],
           "properties":
           [
-            {
-              "id": "Job/Properties[Type]",
-              "name": "Type",
-              "propertyType": { "__id": ":String" },
-              ":@Required": { }
-            },
             {
               "id": "Job/Properties[ReferencedItemId]",
               "name": "ReferencedItemId",
@@ -294,15 +358,14 @@
             {
               "id": "Job/Properties[ParentId]",
               "name": "ParentId",
-              "propertyType": { "__id": ":Int32" },
-              ":@Required": { },
+              "propertyType": { "__id": ":Int64?" },
               ":@NotSearchable": { }
             },
             {
               "__isKeyProperty": 1,
               "id": "Job/Properties[Id]",
               "name": "Id",
-              "propertyType": { "__id": ":Int32" },
+              "propertyType": { "__id": ":Int64" },
               ":@Required": { },
               ":@NotSearchable": { }
             },
@@ -354,6 +417,12 @@
               "name": "Status",
               "propertyType": { "__id": ":String" },
               ":@Required": { }
+            },
+            {
+              "id": "Job/Properties[RowVersion]",
+              "name": "RowVersion",
+              "propertyType": { "__id": ":Binary?" },
+              ":@NotSearchable": { }
             }
           ]
         },
@@ -363,7 +432,6 @@
           "id": "KeyNameValue",
           "name": "KeyNameValue",
           ":@NotSearchable": { },
-          ":@NotPageable": { },
           ":@DefaultScreen":
           {
             "value": { "__id": "KeyNameValueView" },
@@ -393,7 +461,7 @@
               "__isKeyProperty": 1,
               "id": "KeyNameValue/Properties[Id]",
               "name": "Id",
-              "propertyType": { "__id": ":Int32" },
+              "propertyType": { "__id": ":Int64" },
               ":@Required": { },
               ":@NotSearchable": { }
             },
@@ -451,16 +519,21 @@
               "name": "ModifiedBy",
               "propertyType": { "__id": ":String" },
               ":@Required": { }
+            },
+            {
+              "id": "KeyNameValue/Properties[RowVersion]",
+              "name": "RowVersion",
+              "propertyType": { "__id": ":Binary?" },
+              ":@NotSearchable": { }
             }
           ]
         },
         {
           "__isEntityType": 1,
-          ":@SummaryProperty": { "property": { "__id": "OrderItem/Properties[Status]" } },
+          ":@SummaryProperty": { "property": { "__id": "OrderItem/Properties[Version]" } },
           "id": "OrderItem",
           "name": "OrderItem",
           ":@NotSearchable": { },
-          ":@NotPageable": { },
           ":@DefaultScreen":
           {
             "value": { "__id": "OrderItemView" },
@@ -489,14 +562,9 @@
             {
               "id": "OrderItem/Properties[OrderId]",
               "name": "OrderId",
-              "propertyType": { "__id": ":Int32" },
+              "propertyType": { "__id": ":Int64" },
               ":@Required": { },
               ":@NotSearchable": { }
-            },
-            {
-              "id": "OrderItem/Properties[Status]",
-              "name": "Status",
-              "propertyType": { "__id": ":String?" }
             },
             {
               "id": "OrderItem/Properties[Quantity]",
@@ -527,7 +595,7 @@
               "__isKeyProperty": 1,
               "id": "OrderItem/Properties[Id]",
               "name": "Id",
-              "propertyType": { "__id": ":Int32" },
+              "propertyType": { "__id": ":Int64" },
               ":@Required": { },
               ":@NotSearchable": { }
             },
@@ -573,6 +641,12 @@
               "propertyType": { "__id": ":DateTimeOffset" },
               ":@Required": { },
               ":@NotSearchable": { }
+            },
+            {
+              "id": "OrderItem/Properties[RowVersion]",
+              "name": "RowVersion",
+              "propertyType": { "__id": ":Binary?" },
+              ":@NotSearchable": { }
             }
           ]
         },
@@ -582,7 +656,6 @@
           "id": "Order",
           "name": "Order",
           ":@NotSearchable": { },
-          ":@NotPageable": { },
           ":@DefaultScreen":
           {
             "value": { "__id": "OrderView" },
@@ -622,7 +695,7 @@
               "__isKeyProperty": 1,
               "id": "Order/Properties[Id]",
               "name": "Id",
-              "propertyType": { "__id": ":Int32" },
+              "propertyType": { "__id": ":Int64" },
               ":@Required": { },
               ":@NotSearchable": { }
             },
@@ -679,9 +752,15 @@
               "toEnd": { "__id": "biz_dfch_CS_Sunrise_DaaS_Endpoints_OdataServices_Core_Order_Orde/Ends[OrderItems]" }
             },
             {
-              "id": "Order/Properties[OrderOnBehalfOf]",
-              "name": "OrderOnBehalfOf",
+              "id": "Order/Properties[Requester]",
+              "name": "Requester",
               "propertyType": { "__id": ":String?" }
+            },
+            {
+              "id": "Order/Properties[RowVersion]",
+              "name": "RowVersion",
+              "propertyType": { "__id": ":Binary?" },
+              ":@NotSearchable": { }
             }
           ]
         },
@@ -720,7 +799,7 @@
               "__isKeyProperty": 1,
               "id": "Endpoint/Properties[Id]",
               "name": "Id",
-              "propertyType": { "__id": ":Int32" },
+              "propertyType": { "__id": ":Int64" },
               ":@Required": { },
               ":@NotSearchable": { }
             },
@@ -728,11 +807,7 @@
               "id": "Endpoint/Properties[Tid]",
               "name": "Tid",
               "propertyType": { "__id": ":String" },
-              ":@Required": { },
-              ":@MaxLength":
-              {
-                "value": 255
-              }
+              ":@Required": { }
             },
             {
               "id": "Endpoint/Properties[Name]",
@@ -782,11 +857,7 @@
               "id": "Endpoint/Properties[CreatedBy]",
               "name": "CreatedBy",
               "propertyType": { "__id": ":String" },
-              ":@Required": { },
-              ":@MaxLength":
-              {
-                "value": 255
-              }
+              ":@Required": { }
             },
             {
               "id": "Endpoint/Properties[Modified]",
@@ -799,11 +870,7 @@
               "id": "Endpoint/Properties[ModifiedBy]",
               "name": "ModifiedBy",
               "propertyType": { "__id": ":String" },
-              ":@Required": { },
-              ":@MaxLength":
-              {
-                "value": 255
-              }
+              ":@Required": { }
             },
             {
               "id": "Endpoint/Properties[Address]",
@@ -815,6 +882,12 @@
               "id": "Endpoint/Properties[Description]",
               "name": "Description",
               "propertyType": { "__id": ":String?" }
+            },
+            {
+              "id": "Endpoint/Properties[RowVersion]",
+              "name": "RowVersion",
+              "propertyType": { "__id": ":Binary?" },
+              ":@NotSearchable": { }
             }
           ]
         },
@@ -833,6 +906,15 @@
               "canUpdate": true,
               "elementType": { "__id": "Endpoint" },
               "entityType": { "__id": "Endpoint" }
+            },
+            {
+              "id": "DiagnosticsData/Members[AuditTrails]",
+              "name": "AuditTrails",
+              "canDelete": true,
+              "canInsert": true,
+              "canUpdate": true,
+              "elementType": { "__id": "AuditTrail" },
+              "entityType": { "__id": "AuditTrail" }
             }
           ],
           "queryOperations":
@@ -852,7 +934,7 @@
                 {
                   "id": "DiagnosticsData/Members[Endpoints_Single]/Parameters[Id]",
                   "name": "Id",
-                  "parameterType": { "__id": ":Int32?" }
+                  "parameterType": { "__id": ":Int64?" }
                 }
               ]
             },
@@ -871,7 +953,45 @@
                 {
                   "id": "DiagnosticsData/Members[Endpoints_SingleOrDefault]/Parameters[Id]",
                   "name": "Id",
-                  "parameterType": { "__id": ":Int32?" }
+                  "parameterType": { "__id": ":Int64?" }
+                }
+              ]
+            },
+            {
+              "id": "DiagnosticsData/Members[AuditTrails_Single]",
+              "name": "AuditTrails_Single",
+              "elementType": { "__id": "AuditTrail" },
+              "query": { "__id": "DiagnosticsData/Members[AuditTrails_Single]" },
+              "returnType": { "__id": "AuditTrail" },
+              "source":
+              {
+                "member": { "__id": "DiagnosticsData/Members[AuditTrails]" }
+              },
+              "parameters":
+              [
+                {
+                  "id": "DiagnosticsData/Members[AuditTrails_Single]/Parameters[Id]",
+                  "name": "Id",
+                  "parameterType": { "__id": ":Int64?" }
+                }
+              ]
+            },
+            {
+              "id": "DiagnosticsData/Members[AuditTrails_SingleOrDefault]",
+              "name": "AuditTrails_SingleOrDefault",
+              "elementType": { "__id": "AuditTrail" },
+              "query": { "__id": "DiagnosticsData/Members[AuditTrails_SingleOrDefault]" },
+              "returnType": { "__id": "AuditTrail" },
+              "source":
+              {
+                "member": { "__id": "DiagnosticsData/Members[AuditTrails]" }
+              },
+              "parameters":
+              [
+                {
+                  "id": "DiagnosticsData/Members[AuditTrails_SingleOrDefault]/Parameters[Id]",
+                  "name": "Id",
+                  "parameterType": { "__id": ":Int64?" }
                 }
               ]
             }
@@ -899,6 +1019,204 @@
                   "id": "CoreData/Members[biz_dfch_CS_Sunrise_DaaS_Endpoints_OdataServices_Core_Order_Orde]/Members[OrderItems]",
                   "name": "OrderItems",
                   "entitySet": { "__id": "CoreData/Members[OrderItems]" }
+                }
+              ]
+            },
+            {
+              "id": "CoreData/Members[biz_dfch_CS_Appclusive_Core_OdataServices_Core_ManagementCredent]",
+              "name": "biz_dfch_CS_Appclusive_Core_OdataServices_Core_ManagementCredent",
+              "association": { "__id": "biz_dfch_CS_Appclusive_Core_OdataServices_Core_ManagementCredent" },
+              "ends":
+              [
+                {
+                  "id": "CoreData/Members[biz_dfch_CS_Appclusive_Core_OdataServices_Core_ManagementCredent]/Members[ManagementUrisPartner]",
+                  "name": "ManagementUrisPartner",
+                  "entitySet": { "__id": "CoreData/Members[ManagementCredentials]" }
+                },
+                {
+                  "id": "CoreData/Members[biz_dfch_CS_Appclusive_Core_OdataServices_Core_ManagementCredent]/Members[ManagementUris]",
+                  "name": "ManagementUris",
+                  "entitySet": { "__id": "CoreData/Members[ManagementUris]" }
+                }
+              ]
+            },
+            {
+              "id": "CoreData/Members[biz_dfch_CS_Appclusive_Core_OdataServices_Core_Acl_Aces_biz_dfch]",
+              "name": "biz_dfch_CS_Appclusive_Core_OdataServices_Core_Acl_Aces_biz_dfch",
+              "association": { "__id": "biz_dfch_CS_Appclusive_Core_OdataServices_Core_Acl_Aces_biz_dfch" },
+              "ends":
+              [
+                {
+                  "id": "CoreData/Members[biz_dfch_CS_Appclusive_Core_OdataServices_Core_Acl_Aces_biz_dfch]/Members[AcesPartner]",
+                  "name": "AcesPartner",
+                  "entitySet": { "__id": "CoreData/Members[Acls]" }
+                },
+                {
+                  "id": "CoreData/Members[biz_dfch_CS_Appclusive_Core_OdataServices_Core_Acl_Aces_biz_dfch]/Members[Aces]",
+                  "name": "Aces",
+                  "entitySet": { "__id": "CoreData/Members[Aces]" }
+                }
+              ]
+            },
+            {
+              "id": "CoreData/Members[biz_dfch_CS_Appclusive_Core_OdataServices_Core_Ace_Acl_biz_dfch_]",
+              "name": "biz_dfch_CS_Appclusive_Core_OdataServices_Core_Ace_Acl_biz_dfch_",
+              "association": { "__id": "biz_dfch_CS_Appclusive_Core_OdataServices_Core_Ace_Acl_biz_dfch_" },
+              "ends":
+              [
+                {
+                  "id": "CoreData/Members[biz_dfch_CS_Appclusive_Core_OdataServices_Core_Ace_Acl_biz_dfch_]/Members[AclPartner]",
+                  "name": "AclPartner",
+                  "entitySet": { "__id": "CoreData/Members[Aces]" }
+                },
+                {
+                  "id": "CoreData/Members[biz_dfch_CS_Appclusive_Core_OdataServices_Core_Ace_Acl_biz_dfch_]/Members[Acl]",
+                  "name": "Acl",
+                  "entitySet": { "__id": "CoreData/Members[Acls]" }
+                }
+              ]
+            },
+            {
+              "id": "CoreData/Members[biz_dfch_CS_Appclusive_Core_OdataServices_Core_Node_Children_biz]",
+              "name": "biz_dfch_CS_Appclusive_Core_OdataServices_Core_Node_Children_biz",
+              "association": { "__id": "biz_dfch_CS_Appclusive_Core_OdataServices_Core_Node_Children_biz" },
+              "ends":
+              [
+                {
+                  "id": "CoreData/Members[biz_dfch_CS_Appclusive_Core_OdataServices_Core_Node_Children_biz]/Members[ChildrenPartner]",
+                  "name": "ChildrenPartner",
+                  "entitySet": { "__id": "CoreData/Members[Nodes]" }
+                },
+                {
+                  "id": "CoreData/Members[biz_dfch_CS_Appclusive_Core_OdataServices_Core_Node_Children_biz]/Members[Children]",
+                  "name": "Children",
+                  "entitySet": { "__id": "CoreData/Members[Nodes]" }
+                }
+              ]
+            },
+            {
+              "id": "CoreData/Members[biz_dfch_CS_Appclusive_Core_OdataServices_Core_Node_IncomingLink]",
+              "name": "biz_dfch_CS_Appclusive_Core_OdataServices_Core_Node_IncomingLink",
+              "association": { "__id": "biz_dfch_CS_Appclusive_Core_OdataServices_Core_Node_IncomingLink" },
+              "ends":
+              [
+                {
+                  "id": "CoreData/Members[biz_dfch_CS_Appclusive_Core_OdataServices_Core_Node_IncomingLink]/Members[IncomingLinksPartner]",
+                  "name": "IncomingLinksPartner",
+                  "entitySet": { "__id": "CoreData/Members[Nodes]" }
+                },
+                {
+                  "id": "CoreData/Members[biz_dfch_CS_Appclusive_Core_OdataServices_Core_Node_IncomingLink]/Members[IncomingLinks]",
+                  "name": "IncomingLinks",
+                  "entitySet": { "__id": "CoreData/Members[Links]" }
+                }
+              ]
+            },
+            {
+              "id": "CoreData/Members[biz_dfch_CS_Appclusive_Core_OdataServices_Core_Node_OutgoingLink]",
+              "name": "biz_dfch_CS_Appclusive_Core_OdataServices_Core_Node_OutgoingLink",
+              "association": { "__id": "biz_dfch_CS_Appclusive_Core_OdataServices_Core_Node_OutgoingLink" },
+              "ends":
+              [
+                {
+                  "id": "CoreData/Members[biz_dfch_CS_Appclusive_Core_OdataServices_Core_Node_OutgoingLink]/Members[OutgoingLinksPartner]",
+                  "name": "OutgoingLinksPartner",
+                  "entitySet": { "__id": "CoreData/Members[Nodes]" }
+                },
+                {
+                  "id": "CoreData/Members[biz_dfch_CS_Appclusive_Core_OdataServices_Core_Node_OutgoingLink]/Members[OutgoingLinks]",
+                  "name": "OutgoingLinks",
+                  "entitySet": { "__id": "CoreData/Members[Links]" }
+                }
+              ]
+            },
+            {
+              "id": "CoreData/Members[biz_dfch_CS_Appclusive_Core_OdataServices_Core_Link_Source_biz_d]",
+              "name": "biz_dfch_CS_Appclusive_Core_OdataServices_Core_Link_Source_biz_d",
+              "association": { "__id": "biz_dfch_CS_Appclusive_Core_OdataServices_Core_Link_Source_biz_d" },
+              "ends":
+              [
+                {
+                  "id": "CoreData/Members[biz_dfch_CS_Appclusive_Core_OdataServices_Core_Link_Source_biz_d]/Members[SourcePartner]",
+                  "name": "SourcePartner",
+                  "entitySet": { "__id": "CoreData/Members[Links]" }
+                },
+                {
+                  "id": "CoreData/Members[biz_dfch_CS_Appclusive_Core_OdataServices_Core_Link_Source_biz_d]/Members[Source]",
+                  "name": "Source",
+                  "entitySet": { "__id": "CoreData/Members[Nodes]" }
+                }
+              ]
+            },
+            {
+              "id": "CoreData/Members[biz_dfch_CS_Appclusive_Core_OdataServices_Core_Link_Destination_]",
+              "name": "biz_dfch_CS_Appclusive_Core_OdataServices_Core_Link_Destination_",
+              "association": { "__id": "biz_dfch_CS_Appclusive_Core_OdataServices_Core_Link_Destination_" },
+              "ends":
+              [
+                {
+                  "id": "CoreData/Members[biz_dfch_CS_Appclusive_Core_OdataServices_Core_Link_Destination_]/Members[DestinationPartner]",
+                  "name": "DestinationPartner",
+                  "entitySet": { "__id": "CoreData/Members[Links]" }
+                },
+                {
+                  "id": "CoreData/Members[biz_dfch_CS_Appclusive_Core_OdataServices_Core_Link_Destination_]/Members[Destination]",
+                  "name": "Destination",
+                  "entitySet": { "__id": "CoreData/Members[Nodes]" }
+                }
+              ]
+            },
+            {
+              "id": "CoreData/Members[biz_dfch_CS_Appclusive_Core_OdataServices_Core_Catalogue_Catalog]",
+              "name": "biz_dfch_CS_Appclusive_Core_OdataServices_Core_Catalogue_Catalog",
+              "association": { "__id": "biz_dfch_CS_Appclusive_Core_OdataServices_Core_Catalogue_Catalog" },
+              "ends":
+              [
+                {
+                  "id": "CoreData/Members[biz_dfch_CS_Appclusive_Core_OdataServices_Core_Catalogue_Catalog]/Members[CatalogueItemsPartner]",
+                  "name": "CatalogueItemsPartner",
+                  "entitySet": { "__id": "CoreData/Members[Catalogues]" }
+                },
+                {
+                  "id": "CoreData/Members[biz_dfch_CS_Appclusive_Core_OdataServices_Core_Catalogue_Catalog]/Members[CatalogueItems]",
+                  "name": "CatalogueItems",
+                  "entitySet": { "__id": "CoreData/Members[CatalogueItems]" }
+                }
+              ]
+            },
+            {
+              "id": "CoreData/Members[biz_dfch_CS_Appclusive_Core_OdataServices_Core_CatalogueItem_Cat]",
+              "name": "biz_dfch_CS_Appclusive_Core_OdataServices_Core_CatalogueItem_Cat",
+              "association": { "__id": "biz_dfch_CS_Appclusive_Core_OdataServices_Core_CatalogueItem_Cat" },
+              "ends":
+              [
+                {
+                  "id": "CoreData/Members[biz_dfch_CS_Appclusive_Core_OdataServices_Core_CatalogueItem_Cat]/Members[CataloguePartner]",
+                  "name": "CataloguePartner",
+                  "entitySet": { "__id": "CoreData/Members[CatalogueItems]" }
+                },
+                {
+                  "id": "CoreData/Members[biz_dfch_CS_Appclusive_Core_OdataServices_Core_CatalogueItem_Cat]/Members[Catalogue]",
+                  "name": "Catalogue",
+                  "entitySet": { "__id": "CoreData/Members[Catalogues]" }
+                }
+              ]
+            },
+            {
+              "id": "CoreData/Members[biz_dfch_CS_Appclusive_Core_OdataServices_Core_Cart_CartItems_bi]",
+              "name": "biz_dfch_CS_Appclusive_Core_OdataServices_Core_Cart_CartItems_bi",
+              "association": { "__id": "biz_dfch_CS_Appclusive_Core_OdataServices_Core_Cart_CartItems_bi" },
+              "ends":
+              [
+                {
+                  "id": "CoreData/Members[biz_dfch_CS_Appclusive_Core_OdataServices_Core_Cart_CartItems_bi]/Members[CartItemsPartner]",
+                  "name": "CartItemsPartner",
+                  "entitySet": { "__id": "CoreData/Members[Carts]" }
+                },
+                {
+                  "id": "CoreData/Members[biz_dfch_CS_Appclusive_Core_OdataServices_Core_Cart_CartItems_bi]/Members[CartItems]",
+                  "name": "CartItems",
+                  "entitySet": { "__id": "CoreData/Members[CartItems]" }
                 }
               ]
             }
@@ -985,6 +1303,87 @@
               "canUpdate": true,
               "elementType": { "__id": "ManagementCredential" },
               "entityType": { "__id": "ManagementCredential" }
+            },
+            {
+              "id": "CoreData/Members[Gates]",
+              "name": "Gates",
+              "canDelete": true,
+              "canInsert": true,
+              "canUpdate": true,
+              "elementType": { "__id": "Gate" },
+              "entityType": { "__id": "Gate" }
+            },
+            {
+              "id": "CoreData/Members[Acls]",
+              "name": "Acls",
+              "canDelete": true,
+              "canInsert": true,
+              "canUpdate": true,
+              "elementType": { "__id": "Acl" },
+              "entityType": { "__id": "Acl" }
+            },
+            {
+              "id": "CoreData/Members[EntityTypes]",
+              "name": "EntityTypes",
+              "canDelete": true,
+              "canInsert": true,
+              "canUpdate": true,
+              "elementType": { "__id": "EntityType" },
+              "entityType": { "__id": "EntityType" }
+            },
+            {
+              "id": "CoreData/Members[Nodes]",
+              "name": "Nodes",
+              "canDelete": true,
+              "canInsert": true,
+              "canUpdate": true,
+              "elementType": { "__id": "Node" },
+              "entityType": { "__id": "Node" }
+            },
+            {
+              "id": "CoreData/Members[Links]",
+              "name": "Links",
+              "canDelete": true,
+              "canInsert": true,
+              "canUpdate": true,
+              "elementType": { "__id": "Link" },
+              "entityType": { "__id": "Link" }
+            },
+            {
+              "id": "CoreData/Members[ManagementUris]",
+              "name": "ManagementUris",
+              "canDelete": true,
+              "canInsert": true,
+              "canUpdate": true,
+              "elementType": { "__id": "ManagementUri" },
+              "entityType": { "__id": "ManagementUri" }
+            },
+            {
+              "id": "CoreData/Members[Catalogues]",
+              "name": "Catalogues",
+              "canDelete": true,
+              "canInsert": true,
+              "canUpdate": true,
+              "elementType": { "__id": "Catalogue" },
+              "entityType": { "__id": "Catalogue" }
+            },
+            {
+              "id": "CoreData/Members[Carts]",
+              "name": "Carts",
+              "canDelete": true,
+              "canInsert": true,
+              "canUpdate": true,
+              "elementType": { "__id": "Cart" },
+              "entityType": { "__id": "Cart" }
+            },
+            {
+              "id": "CoreData/Members[CartItems]",
+              "name": "CartItems",
+              "canDelete": true,
+              "canInsert": true,
+              "canUpdate": true,
+              "elementType": { "__id": "CartItem" },
+              "entityType": { "__id": "CartItem" }
             }
           ],
           "queryOperations":
@@ -1004,7 +1403,7 @@
                 {
                   "id": "CoreData/Members[KeyNameValues_Single]/Parameters[Id]",
                   "name": "Id",
-                  "parameterType": { "__id": ":Int32?" }
+                  "parameterType": { "__id": ":Int64?" }
                 }
               ]
             },
@@ -1023,7 +1422,7 @@
                 {
                   "id": "CoreData/Members[KeyNameValues_SingleOrDefault]/Parameters[Id]",
                   "name": "Id",
-                  "parameterType": { "__id": ":Int32?" }
+                  "parameterType": { "__id": ":Int64?" }
                 }
               ]
             },
@@ -1042,7 +1441,7 @@
                 {
                   "id": "CoreData/Members[Jobs_Single]/Parameters[Id]",
                   "name": "Id",
-                  "parameterType": { "__id": ":Int32?" }
+                  "parameterType": { "__id": ":Int64?" }
                 }
               ]
             },
@@ -1061,7 +1460,7 @@
                 {
                   "id": "CoreData/Members[Jobs_SingleOrDefault]/Parameters[Id]",
                   "name": "Id",
-                  "parameterType": { "__id": ":Int32?" }
+                  "parameterType": { "__id": ":Int64?" }
                 }
               ]
             },
@@ -1080,7 +1479,7 @@
                 {
                   "id": "CoreData/Members[CatalogueItems_Single]/Parameters[Id]",
                   "name": "Id",
-                  "parameterType": { "__id": ":Int32?" }
+                  "parameterType": { "__id": ":Int64?" }
                 }
               ]
             },
@@ -1099,7 +1498,7 @@
                 {
                   "id": "CoreData/Members[CatalogueItems_SingleOrDefault]/Parameters[Id]",
                   "name": "Id",
-                  "parameterType": { "__id": ":Int32?" }
+                  "parameterType": { "__id": ":Int64?" }
                 }
               ]
             },
@@ -1118,7 +1517,7 @@
                 {
                   "id": "CoreData/Members[Orders_Single]/Parameters[Id]",
                   "name": "Id",
-                  "parameterType": { "__id": ":Int32?" }
+                  "parameterType": { "__id": ":Int64?" }
                 }
               ]
             },
@@ -1137,7 +1536,7 @@
                 {
                   "id": "CoreData/Members[Orders_SingleOrDefault]/Parameters[Id]",
                   "name": "Id",
-                  "parameterType": { "__id": ":Int32?" }
+                  "parameterType": { "__id": ":Int64?" }
                 }
               ]
             },
@@ -1156,7 +1555,7 @@
                 {
                   "id": "CoreData/Members[OrderItems_Single]/Parameters[Id]",
                   "name": "Id",
-                  "parameterType": { "__id": ":Int32?" }
+                  "parameterType": { "__id": ":Int64?" }
                 }
               ]
             },
@@ -1175,7 +1574,7 @@
                 {
                   "id": "CoreData/Members[OrderItems_SingleOrDefault]/Parameters[Id]",
                   "name": "Id",
-                  "parameterType": { "__id": ":Int32?" }
+                  "parameterType": { "__id": ":Int64?" }
                 }
               ]
             },
@@ -1194,7 +1593,7 @@
                 {
                   "id": "CoreData/Members[Aces_Single]/Parameters[Id]",
                   "name": "Id",
-                  "parameterType": { "__id": ":Int32?" }
+                  "parameterType": { "__id": ":Int64?" }
                 }
               ]
             },
@@ -1213,7 +1612,7 @@
                 {
                   "id": "CoreData/Members[Aces_SingleOrDefault]/Parameters[Id]",
                   "name": "Id",
-                  "parameterType": { "__id": ":Int32?" }
+                  "parameterType": { "__id": ":Int64?" }
                 }
               ]
             },
@@ -1232,7 +1631,7 @@
                 {
                   "id": "CoreData/Members[Approvals_Single]/Parameters[Id]",
                   "name": "Id",
-                  "parameterType": { "__id": ":Int32?" }
+                  "parameterType": { "__id": ":Int64?" }
                 }
               ]
             },
@@ -1251,7 +1650,7 @@
                 {
                   "id": "CoreData/Members[Approvals_SingleOrDefault]/Parameters[Id]",
                   "name": "Id",
-                  "parameterType": { "__id": ":Int32?" }
+                  "parameterType": { "__id": ":Int64?" }
                 }
               ]
             },
@@ -1308,7 +1707,7 @@
                 {
                   "id": "CoreData/Members[ManagementCredentials_Single]/Parameters[Id]",
                   "name": "Id",
-                  "parameterType": { "__id": ":Int32?" }
+                  "parameterType": { "__id": ":Int64?" }
                 }
               ]
             },
@@ -1327,7 +1726,349 @@
                 {
                   "id": "CoreData/Members[ManagementCredentials_SingleOrDefault]/Parameters[Id]",
                   "name": "Id",
-                  "parameterType": { "__id": ":Int32?" }
+                  "parameterType": { "__id": ":Int64?" }
+                }
+              ]
+            },
+            {
+              "id": "CoreData/Members[Gates_Single]",
+              "name": "Gates_Single",
+              "elementType": { "__id": "Gate" },
+              "query": { "__id": "CoreData/Members[Gates_Single]" },
+              "returnType": { "__id": "Gate" },
+              "source":
+              {
+                "member": { "__id": "CoreData/Members[Gates]" }
+              },
+              "parameters":
+              [
+                {
+                  "id": "CoreData/Members[Gates_Single]/Parameters[Id]",
+                  "name": "Id",
+                  "parameterType": { "__id": ":Int64?" }
+                }
+              ]
+            },
+            {
+              "id": "CoreData/Members[Gates_SingleOrDefault]",
+              "name": "Gates_SingleOrDefault",
+              "elementType": { "__id": "Gate" },
+              "query": { "__id": "CoreData/Members[Gates_SingleOrDefault]" },
+              "returnType": { "__id": "Gate" },
+              "source":
+              {
+                "member": { "__id": "CoreData/Members[Gates]" }
+              },
+              "parameters":
+              [
+                {
+                  "id": "CoreData/Members[Gates_SingleOrDefault]/Parameters[Id]",
+                  "name": "Id",
+                  "parameterType": { "__id": ":Int64?" }
+                }
+              ]
+            },
+            {
+              "id": "CoreData/Members[Acls_Single]",
+              "name": "Acls_Single",
+              "elementType": { "__id": "Acl" },
+              "query": { "__id": "CoreData/Members[Acls_Single]" },
+              "returnType": { "__id": "Acl" },
+              "source":
+              {
+                "member": { "__id": "CoreData/Members[Acls]" }
+              },
+              "parameters":
+              [
+                {
+                  "id": "CoreData/Members[Acls_Single]/Parameters[Id]",
+                  "name": "Id",
+                  "parameterType": { "__id": ":Int64?" }
+                }
+              ]
+            },
+            {
+              "id": "CoreData/Members[Acls_SingleOrDefault]",
+              "name": "Acls_SingleOrDefault",
+              "elementType": { "__id": "Acl" },
+              "query": { "__id": "CoreData/Members[Acls_SingleOrDefault]" },
+              "returnType": { "__id": "Acl" },
+              "source":
+              {
+                "member": { "__id": "CoreData/Members[Acls]" }
+              },
+              "parameters":
+              [
+                {
+                  "id": "CoreData/Members[Acls_SingleOrDefault]/Parameters[Id]",
+                  "name": "Id",
+                  "parameterType": { "__id": ":Int64?" }
+                }
+              ]
+            },
+            {
+              "id": "CoreData/Members[EntityTypes_Single]",
+              "name": "EntityTypes_Single",
+              "elementType": { "__id": "EntityType" },
+              "query": { "__id": "CoreData/Members[EntityTypes_Single]" },
+              "returnType": { "__id": "EntityType" },
+              "source":
+              {
+                "member": { "__id": "CoreData/Members[EntityTypes]" }
+              },
+              "parameters":
+              [
+                {
+                  "id": "CoreData/Members[EntityTypes_Single]/Parameters[Id]",
+                  "name": "Id",
+                  "parameterType": { "__id": ":Int64?" }
+                }
+              ]
+            },
+            {
+              "id": "CoreData/Members[EntityTypes_SingleOrDefault]",
+              "name": "EntityTypes_SingleOrDefault",
+              "elementType": { "__id": "EntityType" },
+              "query": { "__id": "CoreData/Members[EntityTypes_SingleOrDefault]" },
+              "returnType": { "__id": "EntityType" },
+              "source":
+              {
+                "member": { "__id": "CoreData/Members[EntityTypes]" }
+              },
+              "parameters":
+              [
+                {
+                  "id": "CoreData/Members[EntityTypes_SingleOrDefault]/Parameters[Id]",
+                  "name": "Id",
+                  "parameterType": { "__id": ":Int64?" }
+                }
+              ]
+            },
+            {
+              "id": "CoreData/Members[Nodes_Single]",
+              "name": "Nodes_Single",
+              "elementType": { "__id": "Node" },
+              "query": { "__id": "CoreData/Members[Nodes_Single]" },
+              "returnType": { "__id": "Node" },
+              "source":
+              {
+                "member": { "__id": "CoreData/Members[Nodes]" }
+              },
+              "parameters":
+              [
+                {
+                  "id": "CoreData/Members[Nodes_Single]/Parameters[Id]",
+                  "name": "Id",
+                  "parameterType": { "__id": ":Int64?" }
+                }
+              ]
+            },
+            {
+              "id": "CoreData/Members[Nodes_SingleOrDefault]",
+              "name": "Nodes_SingleOrDefault",
+              "elementType": { "__id": "Node" },
+              "query": { "__id": "CoreData/Members[Nodes_SingleOrDefault]" },
+              "returnType": { "__id": "Node" },
+              "source":
+              {
+                "member": { "__id": "CoreData/Members[Nodes]" }
+              },
+              "parameters":
+              [
+                {
+                  "id": "CoreData/Members[Nodes_SingleOrDefault]/Parameters[Id]",
+                  "name": "Id",
+                  "parameterType": { "__id": ":Int64?" }
+                }
+              ]
+            },
+            {
+              "id": "CoreData/Members[Links_Single]",
+              "name": "Links_Single",
+              "elementType": { "__id": "Link" },
+              "query": { "__id": "CoreData/Members[Links_Single]" },
+              "returnType": { "__id": "Link" },
+              "source":
+              {
+                "member": { "__id": "CoreData/Members[Links]" }
+              },
+              "parameters":
+              [
+                {
+                  "id": "CoreData/Members[Links_Single]/Parameters[Id]",
+                  "name": "Id",
+                  "parameterType": { "__id": ":Int64?" }
+                }
+              ]
+            },
+            {
+              "id": "CoreData/Members[Links_SingleOrDefault]",
+              "name": "Links_SingleOrDefault",
+              "elementType": { "__id": "Link" },
+              "query": { "__id": "CoreData/Members[Links_SingleOrDefault]" },
+              "returnType": { "__id": "Link" },
+              "source":
+              {
+                "member": { "__id": "CoreData/Members[Links]" }
+              },
+              "parameters":
+              [
+                {
+                  "id": "CoreData/Members[Links_SingleOrDefault]/Parameters[Id]",
+                  "name": "Id",
+                  "parameterType": { "__id": ":Int64?" }
+                }
+              ]
+            },
+            {
+              "id": "CoreData/Members[ManagementUris_Single]",
+              "name": "ManagementUris_Single",
+              "elementType": { "__id": "ManagementUri" },
+              "query": { "__id": "CoreData/Members[ManagementUris_Single]" },
+              "returnType": { "__id": "ManagementUri" },
+              "source":
+              {
+                "member": { "__id": "CoreData/Members[ManagementUris]" }
+              },
+              "parameters":
+              [
+                {
+                  "id": "CoreData/Members[ManagementUris_Single]/Parameters[Id]",
+                  "name": "Id",
+                  "parameterType": { "__id": ":Int64?" }
+                }
+              ]
+            },
+            {
+              "id": "CoreData/Members[ManagementUris_SingleOrDefault]",
+              "name": "ManagementUris_SingleOrDefault",
+              "elementType": { "__id": "ManagementUri" },
+              "query": { "__id": "CoreData/Members[ManagementUris_SingleOrDefault]" },
+              "returnType": { "__id": "ManagementUri" },
+              "source":
+              {
+                "member": { "__id": "CoreData/Members[ManagementUris]" }
+              },
+              "parameters":
+              [
+                {
+                  "id": "CoreData/Members[ManagementUris_SingleOrDefault]/Parameters[Id]",
+                  "name": "Id",
+                  "parameterType": { "__id": ":Int64?" }
+                }
+              ]
+            },
+            {
+              "id": "CoreData/Members[Catalogues_Single]",
+              "name": "Catalogues_Single",
+              "elementType": { "__id": "Catalogue" },
+              "query": { "__id": "CoreData/Members[Catalogues_Single]" },
+              "returnType": { "__id": "Catalogue" },
+              "source":
+              {
+                "member": { "__id": "CoreData/Members[Catalogues]" }
+              },
+              "parameters":
+              [
+                {
+                  "id": "CoreData/Members[Catalogues_Single]/Parameters[Id]",
+                  "name": "Id",
+                  "parameterType": { "__id": ":Int64?" }
+                }
+              ]
+            },
+            {
+              "id": "CoreData/Members[Catalogues_SingleOrDefault]",
+              "name": "Catalogues_SingleOrDefault",
+              "elementType": { "__id": "Catalogue" },
+              "query": { "__id": "CoreData/Members[Catalogues_SingleOrDefault]" },
+              "returnType": { "__id": "Catalogue" },
+              "source":
+              {
+                "member": { "__id": "CoreData/Members[Catalogues]" }
+              },
+              "parameters":
+              [
+                {
+                  "id": "CoreData/Members[Catalogues_SingleOrDefault]/Parameters[Id]",
+                  "name": "Id",
+                  "parameterType": { "__id": ":Int64?" }
+                }
+              ]
+            },
+            {
+              "id": "CoreData/Members[Carts_Single]",
+              "name": "Carts_Single",
+              "elementType": { "__id": "Cart" },
+              "query": { "__id": "CoreData/Members[Carts_Single]" },
+              "returnType": { "__id": "Cart" },
+              "source":
+              {
+                "member": { "__id": "CoreData/Members[Carts]" }
+              },
+              "parameters":
+              [
+                {
+                  "id": "CoreData/Members[Carts_Single]/Parameters[Id]",
+                  "name": "Id",
+                  "parameterType": { "__id": ":Int64?" }
+                }
+              ]
+            },
+            {
+              "id": "CoreData/Members[Carts_SingleOrDefault]",
+              "name": "Carts_SingleOrDefault",
+              "elementType": { "__id": "Cart" },
+              "query": { "__id": "CoreData/Members[Carts_SingleOrDefault]" },
+              "returnType": { "__id": "Cart" },
+              "source":
+              {
+                "member": { "__id": "CoreData/Members[Carts]" }
+              },
+              "parameters":
+              [
+                {
+                  "id": "CoreData/Members[Carts_SingleOrDefault]/Parameters[Id]",
+                  "name": "Id",
+                  "parameterType": { "__id": ":Int64?" }
+                }
+              ]
+            },
+            {
+              "id": "CoreData/Members[CartItems_Single]",
+              "name": "CartItems_Single",
+              "elementType": { "__id": "CartItem" },
+              "query": { "__id": "CoreData/Members[CartItems_Single]" },
+              "returnType": { "__id": "CartItem" },
+              "source":
+              {
+                "member": { "__id": "CoreData/Members[CartItems]" }
+              },
+              "parameters":
+              [
+                {
+                  "id": "CoreData/Members[CartItems_Single]/Parameters[Id]",
+                  "name": "Id",
+                  "parameterType": { "__id": ":Int64?" }
+                }
+              ]
+            },
+            {
+              "id": "CoreData/Members[CartItems_SingleOrDefault]",
+              "name": "CartItems_SingleOrDefault",
+              "elementType": { "__id": "CartItem" },
+              "query": { "__id": "CoreData/Members[CartItems_SingleOrDefault]" },
+              "returnType": { "__id": "CartItem" },
+              "source":
+              {
+                "member": { "__id": "CoreData/Members[CartItems]" }
+              },
+              "parameters":
+              [
+                {
+                  "id": "CoreData/Members[CartItems_SingleOrDefault]/Parameters[Id]",
+                  "name": "Id",
+                  "parameterType": { "__id": ":Int64?" }
                 }
               ]
             }
@@ -1335,11 +2076,10 @@
         },
         {
           "__isEntityType": 1,
-          ":@SummaryProperty": { "property": { "__id": "Ace/Properties[Resource]" } },
+          ":@SummaryProperty": { "property": { "__id": "Ace/Properties[Trustee]" } },
           "id": "Ace",
           "name": "Ace",
           ":@NotSearchable": { },
-          ":@NotPageable": { },
           "methods":
           [
             {
@@ -1358,12 +2098,6 @@
           "properties":
           [
             {
-              "id": "Ace/Properties[Resource]",
-              "name": "Resource",
-              "propertyType": { "__id": ":String" },
-              ":@Required": { }
-            },
-            {
               "id": "Ace/Properties[Trustee]",
               "name": "Trustee",
               "propertyType": { "__id": ":String" },
@@ -1379,7 +2113,7 @@
               "__isKeyProperty": 1,
               "id": "Ace/Properties[Id]",
               "name": "Id",
-              "propertyType": { "__id": ":Int32" },
+              "propertyType": { "__id": ":Int64" },
               ":@Required": { },
               ":@NotSearchable": { }
             },
@@ -1425,6 +2159,29 @@
               "propertyType": { "__id": ":DateTimeOffset" },
               ":@Required": { },
               ":@NotSearchable": { }
+            },
+            {
+              "id": "Ace/Properties[AclId]",
+              "name": "AclId",
+              "propertyType": { "__id": ":Int64" },
+              ":@Required": { },
+              ":@NotSearchable": { }
+            },
+            {
+              "id": "Ace/Properties[RowVersion]",
+              "name": "RowVersion",
+              "propertyType": { "__id": ":Binary?" },
+              ":@NotSearchable": { }
+            },
+            {
+              "id": "Ace/Properties[Acl]",
+              "name": "Acl",
+              "association": { "__id": "biz_dfch_CS_Appclusive_Core_OdataServices_Core_Ace_Acl_biz_dfch_" },
+              "elementType": { "__id": "Acl" },
+              "fromEnd": { "__id": "biz_dfch_CS_Appclusive_Core_OdataServices_Core_Ace_Acl_biz_dfch_/Ends[AclPartner]" },
+              "propertyType": { "__id": "Acl" },
+              "toEnd": { "__id": "biz_dfch_CS_Appclusive_Core_OdataServices_Core_Ace_Acl_biz_dfch_/Ends[Acl]" },
+              ":@Hidden": { }
             }
           ]
         },
@@ -1434,7 +2191,6 @@
           "id": "ActiveDirectoryUser",
           "name": "ActiveDirectoryUser",
           ":@NotSearchable": { },
-          ":@NotPageable": { },
           "methods":
           [
             {
@@ -1599,7 +2355,6 @@
           "id": "ManagementCredential",
           "name": "ManagementCredential",
           ":@NotSearchable": { },
-          ":@NotPageable": { },
           "methods":
           [
             {
@@ -1633,7 +2388,7 @@
               "__isKeyProperty": 1,
               "id": "ManagementCredential/Properties[Id]",
               "name": "Id",
-              "propertyType": { "__id": ":Int32" },
+              "propertyType": { "__id": ":Int64" },
               ":@Required": { },
               ":@NotSearchable": { }
             },
@@ -1679,6 +2434,1279 @@
               "propertyType": { "__id": ":DateTimeOffset" },
               ":@Required": { },
               ":@NotSearchable": { }
+            },
+            {
+              "id": "ManagementCredential/Properties[Password]",
+              "name": "Password",
+              "propertyType": { "__id": ":String" },
+              ":@Required": { }
+            },
+            {
+              "id": "ManagementCredential/Properties[RowVersion]",
+              "name": "RowVersion",
+              "propertyType": { "__id": ":Binary?" },
+              ":@NotSearchable": { }
+            },
+            {
+              "id": "ManagementCredential/Properties[ManagementUris]",
+              "name": "ManagementUris",
+              "association": { "__id": "biz_dfch_CS_Appclusive_Core_OdataServices_Core_ManagementCredent" },
+              "elementType": { "__id": "ManagementUri" },
+              "fromEnd": { "__id": "biz_dfch_CS_Appclusive_Core_OdataServices_Core_ManagementCredent/Ends[ManagementUrisPartner]" },
+              "propertyType": { "__id": "ManagementUri*" },
+              "toEnd": { "__id": "biz_dfch_CS_Appclusive_Core_OdataServices_Core_ManagementCredent/Ends[ManagementUris]" }
+            }
+          ]
+        },
+        {
+          "__isEntityType": 1,
+          ":@SummaryProperty": { "property": { "__id": "AuditTrail/Properties[EntityId]" } },
+          "id": "AuditTrail",
+          "name": "AuditTrail",
+          ":@NotSearchable": { },
+          "methods":
+          [
+            {
+              "id": "AuditTrail/Methods[deleteEntity]",
+              "name": "deleteEntity"
+            },
+            {
+              "id": "AuditTrail/Methods[edit]",
+              "name": "edit"
+            },
+            {
+              "id": "AuditTrail/Methods[view]",
+              "name": "view"
+            }
+          ],
+          "properties":
+          [
+            {
+              "id": "AuditTrail/Properties[EntityId]",
+              "name": "EntityId",
+              "propertyType": { "__id": ":String" },
+              ":@Required": { }
+            },
+            {
+              "id": "AuditTrail/Properties[EntityType]",
+              "name": "EntityType",
+              "propertyType": { "__id": ":String" },
+              ":@Required": { }
+            },
+            {
+              "id": "AuditTrail/Properties[EntityState]",
+              "name": "EntityState",
+              "propertyType": { "__id": ":String" },
+              ":@Required": { }
+            },
+            {
+              "id": "AuditTrail/Properties[Original]",
+              "name": "Original",
+              "propertyType": { "__id": ":String" },
+              ":@Required": { }
+            },
+            {
+              "id": "AuditTrail/Properties[Current]",
+              "name": "Current",
+              "propertyType": { "__id": ":String" },
+              ":@Required": { }
+            },
+            {
+              "__isKeyProperty": 1,
+              "id": "AuditTrail/Properties[Id]",
+              "name": "Id",
+              "propertyType": { "__id": ":Int64" },
+              ":@Required": { },
+              ":@NotSearchable": { }
+            },
+            {
+              "id": "AuditTrail/Properties[Tid]",
+              "name": "Tid",
+              "propertyType": { "__id": ":String" },
+              ":@Required": { }
+            },
+            {
+              "id": "AuditTrail/Properties[Name]",
+              "name": "Name",
+              "propertyType": { "__id": ":String" },
+              ":@Required": { }
+            },
+            {
+              "id": "AuditTrail/Properties[Description]",
+              "name": "Description",
+              "propertyType": { "__id": ":String?" }
+            },
+            {
+              "id": "AuditTrail/Properties[CreatedBy]",
+              "name": "CreatedBy",
+              "propertyType": { "__id": ":String" },
+              ":@Required": { }
+            },
+            {
+              "id": "AuditTrail/Properties[ModifiedBy]",
+              "name": "ModifiedBy",
+              "propertyType": { "__id": ":String" },
+              ":@Required": { }
+            },
+            {
+              "id": "AuditTrail/Properties[Created]",
+              "name": "Created",
+              "propertyType": { "__id": ":DateTimeOffset" },
+              ":@Required": { },
+              ":@NotSearchable": { }
+            },
+            {
+              "id": "AuditTrail/Properties[Modified]",
+              "name": "Modified",
+              "propertyType": { "__id": ":DateTimeOffset" },
+              ":@Required": { },
+              ":@NotSearchable": { }
+            },
+            {
+              "id": "AuditTrail/Properties[RowVersion]",
+              "name": "RowVersion",
+              "propertyType": { "__id": ":Binary?" },
+              ":@NotSearchable": { }
+            }
+          ]
+        },
+        {
+          "__isEntityType": 1,
+          ":@SummaryProperty": { "property": { "__id": "Gate/Properties[Name]" } },
+          "id": "Gate",
+          "name": "Gate",
+          ":@NotSearchable": { },
+          "methods":
+          [
+            {
+              "id": "Gate/Methods[deleteEntity]",
+              "name": "deleteEntity"
+            },
+            {
+              "id": "Gate/Methods[edit]",
+              "name": "edit"
+            },
+            {
+              "id": "Gate/Methods[view]",
+              "name": "view"
+            }
+          ],
+          "properties":
+          [
+            {
+              "id": "Gate/Properties[Name]",
+              "name": "Name",
+              "propertyType": { "__id": ":String?" }
+            },
+            {
+              "id": "Gate/Properties[Parameters]",
+              "name": "Parameters",
+              "propertyType": { "__id": ":String?" }
+            },
+            {
+              "id": "Gate/Properties[Type]",
+              "name": "Type",
+              "propertyType": { "__id": ":String" },
+              ":@Required": { }
+            },
+            {
+              "id": "Gate/Properties[Status]",
+              "name": "Status",
+              "propertyType": { "__id": ":String" },
+              ":@Required": { }
+            },
+            {
+              "__isKeyProperty": 1,
+              "id": "Gate/Properties[Id]",
+              "name": "Id",
+              "propertyType": { "__id": ":Int64" },
+              ":@Required": { },
+              ":@NotSearchable": { }
+            },
+            {
+              "id": "Gate/Properties[Tid]",
+              "name": "Tid",
+              "propertyType": { "__id": ":String" },
+              ":@Required": { }
+            },
+            {
+              "id": "Gate/Properties[Description]",
+              "name": "Description",
+              "propertyType": { "__id": ":String?" }
+            },
+            {
+              "id": "Gate/Properties[CreatedBy]",
+              "name": "CreatedBy",
+              "propertyType": { "__id": ":String" },
+              ":@Required": { }
+            },
+            {
+              "id": "Gate/Properties[ModifiedBy]",
+              "name": "ModifiedBy",
+              "propertyType": { "__id": ":String" },
+              ":@Required": { }
+            },
+            {
+              "id": "Gate/Properties[Created]",
+              "name": "Created",
+              "propertyType": { "__id": ":DateTimeOffset" },
+              ":@Required": { },
+              ":@NotSearchable": { }
+            },
+            {
+              "id": "Gate/Properties[Modified]",
+              "name": "Modified",
+              "propertyType": { "__id": ":DateTimeOffset" },
+              ":@Required": { },
+              ":@NotSearchable": { }
+            },
+            {
+              "id": "Gate/Properties[RowVersion]",
+              "name": "RowVersion",
+              "propertyType": { "__id": ":Binary?" },
+              ":@NotSearchable": { }
+            }
+          ]
+        },
+        {
+          "__isEntityType": 1,
+          ":@SummaryProperty": { "property": { "__id": "Acl/Properties[Tid]" } },
+          "id": "Acl",
+          "name": "Acl",
+          ":@NotSearchable": { },
+          "methods":
+          [
+            {
+              "id": "Acl/Methods[deleteEntity]",
+              "name": "deleteEntity"
+            },
+            {
+              "id": "Acl/Methods[edit]",
+              "name": "edit"
+            },
+            {
+              "id": "Acl/Methods[view]",
+              "name": "view"
+            }
+          ],
+          "properties":
+          [
+            {
+              "__isKeyProperty": 1,
+              "id": "Acl/Properties[Id]",
+              "name": "Id",
+              "propertyType": { "__id": ":Int64" },
+              ":@Required": { },
+              ":@NotSearchable": { }
+            },
+            {
+              "id": "Acl/Properties[Tid]",
+              "name": "Tid",
+              "propertyType": { "__id": ":String" },
+              ":@Required": { }
+            },
+            {
+              "id": "Acl/Properties[Name]",
+              "name": "Name",
+              "propertyType": { "__id": ":String" },
+              ":@Required": { }
+            },
+            {
+              "id": "Acl/Properties[Description]",
+              "name": "Description",
+              "propertyType": { "__id": ":String?" }
+            },
+            {
+              "id": "Acl/Properties[CreatedBy]",
+              "name": "CreatedBy",
+              "propertyType": { "__id": ":String" },
+              ":@Required": { }
+            },
+            {
+              "id": "Acl/Properties[ModifiedBy]",
+              "name": "ModifiedBy",
+              "propertyType": { "__id": ":String" },
+              ":@Required": { }
+            },
+            {
+              "id": "Acl/Properties[Created]",
+              "name": "Created",
+              "propertyType": { "__id": ":DateTimeOffset" },
+              ":@Required": { },
+              ":@NotSearchable": { }
+            },
+            {
+              "id": "Acl/Properties[Modified]",
+              "name": "Modified",
+              "propertyType": { "__id": ":DateTimeOffset" },
+              ":@Required": { },
+              ":@NotSearchable": { }
+            },
+            {
+              "id": "Acl/Properties[RowVersion]",
+              "name": "RowVersion",
+              "propertyType": { "__id": ":Binary?" },
+              ":@NotSearchable": { }
+            },
+            {
+              "id": "Acl/Properties[Aces]",
+              "name": "Aces",
+              "association": { "__id": "biz_dfch_CS_Appclusive_Core_OdataServices_Core_Acl_Aces_biz_dfch" },
+              "elementType": { "__id": "Ace" },
+              "fromEnd": { "__id": "biz_dfch_CS_Appclusive_Core_OdataServices_Core_Acl_Aces_biz_dfch/Ends[AcesPartner]" },
+              "propertyType": { "__id": "Ace*" },
+              "toEnd": { "__id": "biz_dfch_CS_Appclusive_Core_OdataServices_Core_Acl_Aces_biz_dfch/Ends[Aces]" }
+            }
+          ]
+        },
+        {
+          "__isEntityType": 1,
+          ":@SummaryProperty": { "property": { "__id": "EntityType/Properties[Parameters]" } },
+          "id": "EntityType",
+          "name": "EntityType",
+          ":@NotSearchable": { },
+          "methods":
+          [
+            {
+              "id": "EntityType/Methods[deleteEntity]",
+              "name": "deleteEntity"
+            },
+            {
+              "id": "EntityType/Methods[edit]",
+              "name": "edit"
+            },
+            {
+              "id": "EntityType/Methods[view]",
+              "name": "view"
+            }
+          ],
+          "properties":
+          [
+            {
+              "id": "EntityType/Properties[Parameters]",
+              "name": "Parameters",
+              "propertyType": { "__id": ":String?" }
+            },
+            {
+              "__isKeyProperty": 1,
+              "id": "EntityType/Properties[Id]",
+              "name": "Id",
+              "propertyType": { "__id": ":Int64" },
+              ":@Required": { },
+              ":@NotSearchable": { }
+            },
+            {
+              "id": "EntityType/Properties[Tid]",
+              "name": "Tid",
+              "propertyType": { "__id": ":String" },
+              ":@Required": { }
+            },
+            {
+              "id": "EntityType/Properties[Name]",
+              "name": "Name",
+              "propertyType": { "__id": ":String" },
+              ":@Required": { }
+            },
+            {
+              "id": "EntityType/Properties[Description]",
+              "name": "Description",
+              "propertyType": { "__id": ":String?" }
+            },
+            {
+              "id": "EntityType/Properties[CreatedBy]",
+              "name": "CreatedBy",
+              "propertyType": { "__id": ":String" },
+              ":@Required": { }
+            },
+            {
+              "id": "EntityType/Properties[ModifiedBy]",
+              "name": "ModifiedBy",
+              "propertyType": { "__id": ":String" },
+              ":@Required": { }
+            },
+            {
+              "id": "EntityType/Properties[Created]",
+              "name": "Created",
+              "propertyType": { "__id": ":DateTimeOffset" },
+              ":@Required": { },
+              ":@NotSearchable": { }
+            },
+            {
+              "id": "EntityType/Properties[Modified]",
+              "name": "Modified",
+              "propertyType": { "__id": ":DateTimeOffset" },
+              ":@Required": { },
+              ":@NotSearchable": { }
+            },
+            {
+              "id": "EntityType/Properties[RowVersion]",
+              "name": "RowVersion",
+              "propertyType": { "__id": ":Binary?" },
+              ":@NotSearchable": { }
+            }
+          ]
+        },
+        {
+          "__isEntityType": 1,
+          ":@SummaryProperty": { "property": { "__id": "Node/Properties[Type]" } },
+          "id": "Node",
+          "name": "Node",
+          ":@NotSearchable": { },
+          "methods":
+          [
+            {
+              "id": "Node/Methods[deleteEntity]",
+              "name": "deleteEntity"
+            },
+            {
+              "id": "Node/Methods[edit]",
+              "name": "edit"
+            },
+            {
+              "id": "Node/Methods[view]",
+              "name": "view"
+            }
+          ],
+          "properties":
+          [
+            {
+              "id": "Node/Properties[Type]",
+              "name": "Type",
+              "propertyType": { "__id": ":String" },
+              ":@Required": { }
+            },
+            {
+              "id": "Node/Properties[Parameters]",
+              "name": "Parameters",
+              "propertyType": { "__id": ":String" },
+              ":@Required": { }
+            },
+            {
+              "id": "Node/Properties[ParentId]",
+              "name": "ParentId",
+              "propertyType": { "__id": ":Int64?" },
+              ":@NotSearchable": { }
+            },
+            {
+              "__isKeyProperty": 1,
+              "id": "Node/Properties[Id]",
+              "name": "Id",
+              "propertyType": { "__id": ":Int64" },
+              ":@Required": { },
+              ":@NotSearchable": { }
+            },
+            {
+              "id": "Node/Properties[Tid]",
+              "name": "Tid",
+              "propertyType": { "__id": ":String" },
+              ":@Required": { }
+            },
+            {
+              "id": "Node/Properties[Name]",
+              "name": "Name",
+              "propertyType": { "__id": ":String" },
+              ":@Required": { }
+            },
+            {
+              "id": "Node/Properties[Description]",
+              "name": "Description",
+              "propertyType": { "__id": ":String?" }
+            },
+            {
+              "id": "Node/Properties[CreatedBy]",
+              "name": "CreatedBy",
+              "propertyType": { "__id": ":String" },
+              ":@Required": { }
+            },
+            {
+              "id": "Node/Properties[ModifiedBy]",
+              "name": "ModifiedBy",
+              "propertyType": { "__id": ":String" },
+              ":@Required": { }
+            },
+            {
+              "id": "Node/Properties[Created]",
+              "name": "Created",
+              "propertyType": { "__id": ":DateTimeOffset" },
+              ":@Required": { },
+              ":@NotSearchable": { }
+            },
+            {
+              "id": "Node/Properties[Modified]",
+              "name": "Modified",
+              "propertyType": { "__id": ":DateTimeOffset" },
+              ":@Required": { },
+              ":@NotSearchable": { }
+            },
+            {
+              "id": "Node/Properties[RowVersion]",
+              "name": "RowVersion",
+              "propertyType": { "__id": ":Binary?" },
+              ":@NotSearchable": { }
+            },
+            {
+              "id": "Node/Properties[Children]",
+              "name": "Children",
+              "association": { "__id": "biz_dfch_CS_Appclusive_Core_OdataServices_Core_Node_Children_biz" },
+              "elementType": { "__id": "Node" },
+              "fromEnd": { "__id": "biz_dfch_CS_Appclusive_Core_OdataServices_Core_Node_Children_biz/Ends[ChildrenPartner]" },
+              "propertyType": { "__id": "Node*" },
+              "toEnd": { "__id": "biz_dfch_CS_Appclusive_Core_OdataServices_Core_Node_Children_biz/Ends[Children]" }
+            },
+            {
+              "id": "Node/Properties[IncomingLinks]",
+              "name": "IncomingLinks",
+              "association": { "__id": "biz_dfch_CS_Appclusive_Core_OdataServices_Core_Node_IncomingLink" },
+              "elementType": { "__id": "Link" },
+              "fromEnd": { "__id": "biz_dfch_CS_Appclusive_Core_OdataServices_Core_Node_IncomingLink/Ends[IncomingLinksPartner]" },
+              "propertyType": { "__id": "Link*" },
+              "toEnd": { "__id": "biz_dfch_CS_Appclusive_Core_OdataServices_Core_Node_IncomingLink/Ends[IncomingLinks]" }
+            },
+            {
+              "id": "Node/Properties[OutgoingLinks]",
+              "name": "OutgoingLinks",
+              "association": { "__id": "biz_dfch_CS_Appclusive_Core_OdataServices_Core_Node_OutgoingLink" },
+              "elementType": { "__id": "Link" },
+              "fromEnd": { "__id": "biz_dfch_CS_Appclusive_Core_OdataServices_Core_Node_OutgoingLink/Ends[OutgoingLinksPartner]" },
+              "propertyType": { "__id": "Link*" },
+              "toEnd": { "__id": "biz_dfch_CS_Appclusive_Core_OdataServices_Core_Node_OutgoingLink/Ends[OutgoingLinks]" }
+            }
+          ]
+        },
+        {
+          "__isEntityType": 1,
+          ":@SummaryProperty": { "property": { "__id": "Link/Properties[Tid]" } },
+          "id": "Link",
+          "name": "Link",
+          ":@NotSearchable": { },
+          "methods":
+          [
+            {
+              "id": "Link/Methods[deleteEntity]",
+              "name": "deleteEntity"
+            },
+            {
+              "id": "Link/Methods[edit]",
+              "name": "edit"
+            },
+            {
+              "id": "Link/Methods[view]",
+              "name": "view"
+            }
+          ],
+          "properties":
+          [
+            {
+              "id": "Link/Properties[Order]",
+              "name": "Order",
+              "propertyType": { "__id": ":Int64" },
+              ":@Required": { },
+              ":@NotSearchable": { }
+            },
+            {
+              "id": "Link/Properties[SourceId]",
+              "name": "SourceId",
+              "propertyType": { "__id": ":Int64" },
+              ":@Required": { },
+              ":@NotSearchable": { }
+            },
+            {
+              "id": "Link/Properties[DestinationId]",
+              "name": "DestinationId",
+              "propertyType": { "__id": ":Int64" },
+              ":@Required": { },
+              ":@NotSearchable": { }
+            },
+            {
+              "__isKeyProperty": 1,
+              "id": "Link/Properties[Id]",
+              "name": "Id",
+              "propertyType": { "__id": ":Int64" },
+              ":@Required": { },
+              ":@NotSearchable": { }
+            },
+            {
+              "id": "Link/Properties[Tid]",
+              "name": "Tid",
+              "propertyType": { "__id": ":String" },
+              ":@Required": { }
+            },
+            {
+              "id": "Link/Properties[Name]",
+              "name": "Name",
+              "propertyType": { "__id": ":String" },
+              ":@Required": { }
+            },
+            {
+              "id": "Link/Properties[Description]",
+              "name": "Description",
+              "propertyType": { "__id": ":String?" }
+            },
+            {
+              "id": "Link/Properties[CreatedBy]",
+              "name": "CreatedBy",
+              "propertyType": { "__id": ":String" },
+              ":@Required": { }
+            },
+            {
+              "id": "Link/Properties[ModifiedBy]",
+              "name": "ModifiedBy",
+              "propertyType": { "__id": ":String" },
+              ":@Required": { }
+            },
+            {
+              "id": "Link/Properties[Created]",
+              "name": "Created",
+              "propertyType": { "__id": ":DateTimeOffset" },
+              ":@Required": { },
+              ":@NotSearchable": { }
+            },
+            {
+              "id": "Link/Properties[Modified]",
+              "name": "Modified",
+              "propertyType": { "__id": ":DateTimeOffset" },
+              ":@Required": { },
+              ":@NotSearchable": { }
+            },
+            {
+              "id": "Link/Properties[RowVersion]",
+              "name": "RowVersion",
+              "propertyType": { "__id": ":Binary?" },
+              ":@NotSearchable": { }
+            },
+            {
+              "id": "Link/Properties[Source]",
+              "name": "Source",
+              "association": { "__id": "biz_dfch_CS_Appclusive_Core_OdataServices_Core_Link_Source_biz_d" },
+              "elementType": { "__id": "Node" },
+              "fromEnd": { "__id": "biz_dfch_CS_Appclusive_Core_OdataServices_Core_Link_Source_biz_d/Ends[SourcePartner]" },
+              "propertyType": { "__id": "Node" },
+              "toEnd": { "__id": "biz_dfch_CS_Appclusive_Core_OdataServices_Core_Link_Source_biz_d/Ends[Source]" },
+              ":@Hidden": { }
+            },
+            {
+              "id": "Link/Properties[Destination]",
+              "name": "Destination",
+              "association": { "__id": "biz_dfch_CS_Appclusive_Core_OdataServices_Core_Link_Destination_" },
+              "elementType": { "__id": "Node" },
+              "fromEnd": { "__id": "biz_dfch_CS_Appclusive_Core_OdataServices_Core_Link_Destination_/Ends[DestinationPartner]" },
+              "propertyType": { "__id": "Node" },
+              "toEnd": { "__id": "biz_dfch_CS_Appclusive_Core_OdataServices_Core_Link_Destination_/Ends[Destination]" },
+              ":@Hidden": { }
+            }
+          ]
+        },
+        {
+          "__isEntityType": 1,
+          ":@SummaryProperty": { "property": { "__id": "ManagementUri/Properties[Type]" } },
+          "id": "ManagementUri",
+          "name": "ManagementUri",
+          ":@NotSearchable": { },
+          "methods":
+          [
+            {
+              "id": "ManagementUri/Methods[deleteEntity]",
+              "name": "deleteEntity"
+            },
+            {
+              "id": "ManagementUri/Methods[edit]",
+              "name": "edit"
+            },
+            {
+              "id": "ManagementUri/Methods[view]",
+              "name": "view"
+            }
+          ],
+          "properties":
+          [
+            {
+              "id": "ManagementUri/Properties[Type]",
+              "name": "Type",
+              "propertyType": { "__id": ":String?" }
+            },
+            {
+              "id": "ManagementUri/Properties[Value]",
+              "name": "Value",
+              "propertyType": { "__id": ":String?" }
+            },
+            {
+              "id": "ManagementUri/Properties[ManagementCredentialId]",
+              "name": "ManagementCredentialId",
+              "propertyType": { "__id": ":Int64?" },
+              ":@NotSearchable": { }
+            },
+            {
+              "__isKeyProperty": 1,
+              "id": "ManagementUri/Properties[Id]",
+              "name": "Id",
+              "propertyType": { "__id": ":Int64" },
+              ":@Required": { },
+              ":@NotSearchable": { }
+            },
+            {
+              "id": "ManagementUri/Properties[Tid]",
+              "name": "Tid",
+              "propertyType": { "__id": ":String" },
+              ":@Required": { }
+            },
+            {
+              "id": "ManagementUri/Properties[Name]",
+              "name": "Name",
+              "propertyType": { "__id": ":String" },
+              ":@Required": { }
+            },
+            {
+              "id": "ManagementUri/Properties[Description]",
+              "name": "Description",
+              "propertyType": { "__id": ":String?" }
+            },
+            {
+              "id": "ManagementUri/Properties[CreatedBy]",
+              "name": "CreatedBy",
+              "propertyType": { "__id": ":String" },
+              ":@Required": { }
+            },
+            {
+              "id": "ManagementUri/Properties[ModifiedBy]",
+              "name": "ModifiedBy",
+              "propertyType": { "__id": ":String" },
+              ":@Required": { }
+            },
+            {
+              "id": "ManagementUri/Properties[Created]",
+              "name": "Created",
+              "propertyType": { "__id": ":DateTimeOffset" },
+              ":@Required": { },
+              ":@NotSearchable": { }
+            },
+            {
+              "id": "ManagementUri/Properties[Modified]",
+              "name": "Modified",
+              "propertyType": { "__id": ":DateTimeOffset" },
+              ":@Required": { },
+              ":@NotSearchable": { }
+            },
+            {
+              "id": "ManagementUri/Properties[RowVersion]",
+              "name": "RowVersion",
+              "propertyType": { "__id": ":Binary?" },
+              ":@NotSearchable": { }
+            }
+          ]
+        },
+        {
+          "__isEntityType": 1,
+          ":@SummaryProperty": { "property": { "__id": "Catalogue/Properties[Status]" } },
+          "id": "Catalogue",
+          "name": "Catalogue",
+          ":@NotSearchable": { },
+          "methods":
+          [
+            {
+              "id": "Catalogue/Methods[deleteEntity]",
+              "name": "deleteEntity"
+            },
+            {
+              "id": "Catalogue/Methods[edit]",
+              "name": "edit"
+            },
+            {
+              "id": "Catalogue/Methods[view]",
+              "name": "view"
+            }
+          ],
+          "properties":
+          [
+            {
+              "id": "Catalogue/Properties[Status]",
+              "name": "Status",
+              "propertyType": { "__id": ":String?" }
+            },
+            {
+              "id": "Catalogue/Properties[Version]",
+              "name": "Version",
+              "propertyType": { "__id": ":String" },
+              ":@Required": { }
+            },
+            {
+              "__isKeyProperty": 1,
+              "id": "Catalogue/Properties[Id]",
+              "name": "Id",
+              "propertyType": { "__id": ":Int64" },
+              ":@Required": { },
+              ":@NotSearchable": { }
+            },
+            {
+              "id": "Catalogue/Properties[Tid]",
+              "name": "Tid",
+              "propertyType": { "__id": ":String" },
+              ":@Required": { }
+            },
+            {
+              "id": "Catalogue/Properties[Name]",
+              "name": "Name",
+              "propertyType": { "__id": ":String" },
+              ":@Required": { }
+            },
+            {
+              "id": "Catalogue/Properties[Description]",
+              "name": "Description",
+              "propertyType": { "__id": ":String?" }
+            },
+            {
+              "id": "Catalogue/Properties[CreatedBy]",
+              "name": "CreatedBy",
+              "propertyType": { "__id": ":String" },
+              ":@Required": { }
+            },
+            {
+              "id": "Catalogue/Properties[ModifiedBy]",
+              "name": "ModifiedBy",
+              "propertyType": { "__id": ":String" },
+              ":@Required": { }
+            },
+            {
+              "id": "Catalogue/Properties[Created]",
+              "name": "Created",
+              "propertyType": { "__id": ":DateTimeOffset" },
+              ":@Required": { },
+              ":@NotSearchable": { }
+            },
+            {
+              "id": "Catalogue/Properties[Modified]",
+              "name": "Modified",
+              "propertyType": { "__id": ":DateTimeOffset" },
+              ":@Required": { },
+              ":@NotSearchable": { }
+            },
+            {
+              "id": "Catalogue/Properties[RowVersion]",
+              "name": "RowVersion",
+              "propertyType": { "__id": ":Binary?" },
+              ":@NotSearchable": { }
+            },
+            {
+              "id": "Catalogue/Properties[CatalogueItems]",
+              "name": "CatalogueItems",
+              "association": { "__id": "biz_dfch_CS_Appclusive_Core_OdataServices_Core_Catalogue_Catalog" },
+              "elementType": { "__id": "CatalogueItem1" },
+              "fromEnd": { "__id": "biz_dfch_CS_Appclusive_Core_OdataServices_Core_Catalogue_Catalog/Ends[CatalogueItemsPartner]" },
+              "propertyType": { "__id": "CatalogueItem1*" },
+              "toEnd": { "__id": "biz_dfch_CS_Appclusive_Core_OdataServices_Core_Catalogue_Catalog/Ends[CatalogueItems]" }
+            }
+          ]
+        },
+        {
+          "__isEntityType": 1,
+          ":@SummaryProperty": { "property": { "__id": "Cart/Properties[Tid]" } },
+          "id": "Cart",
+          "name": "Cart",
+          ":@NotSearchable": { },
+          "methods":
+          [
+            {
+              "id": "Cart/Methods[deleteEntity]",
+              "name": "deleteEntity"
+            },
+            {
+              "id": "Cart/Methods[edit]",
+              "name": "edit"
+            },
+            {
+              "id": "Cart/Methods[view]",
+              "name": "view"
+            }
+          ],
+          "properties":
+          [
+            {
+              "__isKeyProperty": 1,
+              "id": "Cart/Properties[Id]",
+              "name": "Id",
+              "propertyType": { "__id": ":Int64" },
+              ":@Required": { },
+              ":@NotSearchable": { }
+            },
+            {
+              "id": "Cart/Properties[Tid]",
+              "name": "Tid",
+              "propertyType": { "__id": ":String" },
+              ":@Required": { }
+            },
+            {
+              "id": "Cart/Properties[Name]",
+              "name": "Name",
+              "propertyType": { "__id": ":String" },
+              ":@Required": { }
+            },
+            {
+              "id": "Cart/Properties[Description]",
+              "name": "Description",
+              "propertyType": { "__id": ":String?" }
+            },
+            {
+              "id": "Cart/Properties[CreatedBy]",
+              "name": "CreatedBy",
+              "propertyType": { "__id": ":String" },
+              ":@Required": { }
+            },
+            {
+              "id": "Cart/Properties[ModifiedBy]",
+              "name": "ModifiedBy",
+              "propertyType": { "__id": ":String" },
+              ":@Required": { }
+            },
+            {
+              "id": "Cart/Properties[Created]",
+              "name": "Created",
+              "propertyType": { "__id": ":DateTimeOffset" },
+              ":@Required": { },
+              ":@NotSearchable": { }
+            },
+            {
+              "id": "Cart/Properties[Modified]",
+              "name": "Modified",
+              "propertyType": { "__id": ":DateTimeOffset" },
+              ":@Required": { },
+              ":@NotSearchable": { }
+            },
+            {
+              "id": "Cart/Properties[RowVersion]",
+              "name": "RowVersion",
+              "propertyType": { "__id": ":Binary?" },
+              ":@NotSearchable": { }
+            },
+            {
+              "id": "Cart/Properties[CartItems]",
+              "name": "CartItems",
+              "association": { "__id": "biz_dfch_CS_Appclusive_Core_OdataServices_Core_Cart_CartItems_bi" },
+              "elementType": { "__id": "CartItem" },
+              "fromEnd": { "__id": "biz_dfch_CS_Appclusive_Core_OdataServices_Core_Cart_CartItems_bi/Ends[CartItemsPartner]" },
+              "propertyType": { "__id": "CartItem*" },
+              "toEnd": { "__id": "biz_dfch_CS_Appclusive_Core_OdataServices_Core_Cart_CartItems_bi/Ends[CartItems]" }
+            }
+          ]
+        },
+        {
+          "__isEntityType": 1,
+          ":@SummaryProperty": { "property": { "__id": "CartItem/Properties[Tid]" } },
+          "id": "CartItem",
+          "name": "CartItem",
+          ":@NotSearchable": { },
+          "methods":
+          [
+            {
+              "id": "CartItem/Methods[deleteEntity]",
+              "name": "deleteEntity"
+            },
+            {
+              "id": "CartItem/Methods[edit]",
+              "name": "edit"
+            },
+            {
+              "id": "CartItem/Methods[view]",
+              "name": "view"
+            }
+          ],
+          "properties":
+          [
+            {
+              "id": "CartItem/Properties[CartId]",
+              "name": "CartId",
+              "propertyType": { "__id": ":Int64" },
+              ":@Required": { },
+              ":@NotSearchable": { }
+            },
+            {
+              "id": "CartItem/Properties[Quantity]",
+              "name": "Quantity",
+              "propertyType": { "__id": ":Int32" },
+              ":@Required": { },
+              ":@NotSearchable": { }
+            },
+            {
+              "id": "CartItem/Properties[CatalogueItemId]",
+              "name": "CatalogueItemId",
+              "propertyType": { "__id": ":Int64" },
+              ":@Required": { },
+              ":@NotSearchable": { }
+            },
+            {
+              "__isKeyProperty": 1,
+              "id": "CartItem/Properties[Id]",
+              "name": "Id",
+              "propertyType": { "__id": ":Int64" },
+              ":@Required": { },
+              ":@NotSearchable": { }
+            },
+            {
+              "id": "CartItem/Properties[Tid]",
+              "name": "Tid",
+              "propertyType": { "__id": ":String" },
+              ":@Required": { }
+            },
+            {
+              "id": "CartItem/Properties[Name]",
+              "name": "Name",
+              "propertyType": { "__id": ":String" },
+              ":@Required": { }
+            },
+            {
+              "id": "CartItem/Properties[Description]",
+              "name": "Description",
+              "propertyType": { "__id": ":String?" }
+            },
+            {
+              "id": "CartItem/Properties[CreatedBy]",
+              "name": "CreatedBy",
+              "propertyType": { "__id": ":String" },
+              ":@Required": { }
+            },
+            {
+              "id": "CartItem/Properties[ModifiedBy]",
+              "name": "ModifiedBy",
+              "propertyType": { "__id": ":String" },
+              ":@Required": { }
+            },
+            {
+              "id": "CartItem/Properties[Created]",
+              "name": "Created",
+              "propertyType": { "__id": ":DateTimeOffset" },
+              ":@Required": { },
+              ":@NotSearchable": { }
+            },
+            {
+              "id": "CartItem/Properties[Modified]",
+              "name": "Modified",
+              "propertyType": { "__id": ":DateTimeOffset" },
+              ":@Required": { },
+              ":@NotSearchable": { }
+            },
+            {
+              "id": "CartItem/Properties[RowVersion]",
+              "name": "RowVersion",
+              "propertyType": { "__id": ":Binary?" },
+              ":@NotSearchable": { }
+            }
+          ]
+        },
+        {
+          "id": "biz_dfch_CS_Appclusive_Core_OdataServices_Core_Acl_Aces_biz_dfch",
+          "name": "biz_dfch_CS_Appclusive_Core_OdataServices_Core_Acl_Aces_biz_dfch",
+          "ends":
+          [
+            {
+              "id": "biz_dfch_CS_Appclusive_Core_OdataServices_Core_Acl_Aces_biz_dfch/Ends[AcesPartner]",
+              "name": "AcesPartner",
+              "multiplicity": "ZeroOrOne",
+              "entityType": { "__id": "Acl" },
+              ":@DeleteRule": { "action": "Unset" }
+            },
+            {
+              "id": "biz_dfch_CS_Appclusive_Core_OdataServices_Core_Acl_Aces_biz_dfch/Ends[Aces]",
+              "name": "Aces",
+              "multiplicity": "Many",
+              "entityType": { "__id": "Ace" }
+            }
+          ]
+        },
+        {
+          "id": "biz_dfch_CS_Appclusive_Core_OdataServices_Core_Ace_Acl_biz_dfch_",
+          "name": "biz_dfch_CS_Appclusive_Core_OdataServices_Core_Ace_Acl_biz_dfch_",
+          "ends":
+          [
+            {
+              "id": "biz_dfch_CS_Appclusive_Core_OdataServices_Core_Ace_Acl_biz_dfch_/Ends[AclPartner]",
+              "name": "AclPartner",
+              "multiplicity": "ZeroOrOne",
+              "entityType": { "__id": "Ace" }
+            },
+            {
+              "id": "biz_dfch_CS_Appclusive_Core_OdataServices_Core_Ace_Acl_biz_dfch_/Ends[Acl]",
+              "name": "Acl",
+              "multiplicity": "One",
+              "entityType": { "__id": "Acl" },
+              ":@DeleteRule": { "action": "Unset" }
+            }
+          ]
+        },
+        {
+          "id": "biz_dfch_CS_Appclusive_Core_OdataServices_Core_Node_Children_biz",
+          "name": "biz_dfch_CS_Appclusive_Core_OdataServices_Core_Node_Children_biz",
+          "ends":
+          [
+            {
+              "id": "biz_dfch_CS_Appclusive_Core_OdataServices_Core_Node_Children_biz/Ends[ChildrenPartner]",
+              "name": "ChildrenPartner",
+              "multiplicity": "ZeroOrOne",
+              "entityType": { "__id": "Node" },
+              ":@DeleteRule": { "action": "Restrict" }
+            },
+            {
+              "id": "biz_dfch_CS_Appclusive_Core_OdataServices_Core_Node_Children_biz/Ends[Children]",
+              "name": "Children",
+              "multiplicity": "Many",
+              "entityType": { "__id": "Node" }
+            }
+          ]
+        },
+        {
+          "id": "biz_dfch_CS_Appclusive_Core_OdataServices_Core_Node_IncomingLink",
+          "name": "biz_dfch_CS_Appclusive_Core_OdataServices_Core_Node_IncomingLink",
+          "ends":
+          [
+            {
+              "id": "biz_dfch_CS_Appclusive_Core_OdataServices_Core_Node_IncomingLink/Ends[IncomingLinksPartner]",
+              "name": "IncomingLinksPartner",
+              "multiplicity": "ZeroOrOne",
+              "entityType": { "__id": "Node" },
+              ":@DeleteRule": { "action": "Unset" }
+            },
+            {
+              "id": "biz_dfch_CS_Appclusive_Core_OdataServices_Core_Node_IncomingLink/Ends[IncomingLinks]",
+              "name": "IncomingLinks",
+              "multiplicity": "Many",
+              "entityType": { "__id": "Link" }
+            }
+          ]
+        },
+        {
+          "id": "biz_dfch_CS_Appclusive_Core_OdataServices_Core_Node_OutgoingLink",
+          "name": "biz_dfch_CS_Appclusive_Core_OdataServices_Core_Node_OutgoingLink",
+          "ends":
+          [
+            {
+              "id": "biz_dfch_CS_Appclusive_Core_OdataServices_Core_Node_OutgoingLink/Ends[OutgoingLinksPartner]",
+              "name": "OutgoingLinksPartner",
+              "multiplicity": "ZeroOrOne",
+              "entityType": { "__id": "Node" },
+              ":@DeleteRule": { "action": "Unset" }
+            },
+            {
+              "id": "biz_dfch_CS_Appclusive_Core_OdataServices_Core_Node_OutgoingLink/Ends[OutgoingLinks]",
+              "name": "OutgoingLinks",
+              "multiplicity": "Many",
+              "entityType": { "__id": "Link" }
+            }
+          ]
+        },
+        {
+          "id": "biz_dfch_CS_Appclusive_Core_OdataServices_Core_Link_Source_biz_d",
+          "name": "biz_dfch_CS_Appclusive_Core_OdataServices_Core_Link_Source_biz_d",
+          "ends":
+          [
+            {
+              "id": "biz_dfch_CS_Appclusive_Core_OdataServices_Core_Link_Source_biz_d/Ends[SourcePartner]",
+              "name": "SourcePartner",
+              "multiplicity": "ZeroOrOne",
+              "entityType": { "__id": "Link" }
+            },
+            {
+              "id": "biz_dfch_CS_Appclusive_Core_OdataServices_Core_Link_Source_biz_d/Ends[Source]",
+              "name": "Source",
+              "multiplicity": "One",
+              "entityType": { "__id": "Node" },
+              ":@DeleteRule": { "action": "Unset" }
+            }
+          ]
+        },
+        {
+          "id": "biz_dfch_CS_Appclusive_Core_OdataServices_Core_Link_Destination_",
+          "name": "biz_dfch_CS_Appclusive_Core_OdataServices_Core_Link_Destination_",
+          "ends":
+          [
+            {
+              "id": "biz_dfch_CS_Appclusive_Core_OdataServices_Core_Link_Destination_/Ends[DestinationPartner]",
+              "name": "DestinationPartner",
+              "multiplicity": "ZeroOrOne",
+              "entityType": { "__id": "Link" }
+            },
+            {
+              "id": "biz_dfch_CS_Appclusive_Core_OdataServices_Core_Link_Destination_/Ends[Destination]",
+              "name": "Destination",
+              "multiplicity": "One",
+              "entityType": { "__id": "Node" },
+              ":@DeleteRule": { "action": "Unset" }
+            }
+          ]
+        },
+        {
+          "id": "biz_dfch_CS_Appclusive_Core_OdataServices_Core_ManagementCredent",
+          "name": "biz_dfch_CS_Appclusive_Core_OdataServices_Core_ManagementCredent",
+          "ends":
+          [
+            {
+              "id": "biz_dfch_CS_Appclusive_Core_OdataServices_Core_ManagementCredent/Ends[ManagementUrisPartner]",
+              "name": "ManagementUrisPartner",
+              "multiplicity": "ZeroOrOne",
+              "entityType": { "__id": "ManagementCredential" },
+              ":@DeleteRule": { "action": "Unset" }
+            },
+            {
+              "id": "biz_dfch_CS_Appclusive_Core_OdataServices_Core_ManagementCredent/Ends[ManagementUris]",
+              "name": "ManagementUris",
+              "multiplicity": "Many",
+              "entityType": { "__id": "ManagementUri" }
+            }
+          ]
+        },
+        {
+          "id": "biz_dfch_CS_Appclusive_Core_OdataServices_Core_Catalogue_Catalog",
+          "name": "biz_dfch_CS_Appclusive_Core_OdataServices_Core_Catalogue_Catalog",
+          "ends":
+          [
+            {
+              "id": "biz_dfch_CS_Appclusive_Core_OdataServices_Core_Catalogue_Catalog/Ends[CatalogueItemsPartner]",
+              "name": "CatalogueItemsPartner",
+              "multiplicity": "ZeroOrOne",
+              "entityType": { "__id": "Catalogue" },
+              ":@DeleteRule": { "action": "Unset" }
+            },
+            {
+              "id": "biz_dfch_CS_Appclusive_Core_OdataServices_Core_Catalogue_Catalog/Ends[CatalogueItems]",
+              "name": "CatalogueItems",
+              "multiplicity": "Many",
+              "entityType": { "__id": "CatalogueItem1" }
+            }
+          ]
+        },
+        {
+          "id": "biz_dfch_CS_Appclusive_Core_OdataServices_Core_CatalogueItem_Cat",
+          "name": "biz_dfch_CS_Appclusive_Core_OdataServices_Core_CatalogueItem_Cat",
+          "ends":
+          [
+            {
+              "id": "biz_dfch_CS_Appclusive_Core_OdataServices_Core_CatalogueItem_Cat/Ends[CataloguePartner]",
+              "name": "CataloguePartner",
+              "multiplicity": "ZeroOrOne",
+              "entityType": { "__id": "CatalogueItem1" }
+            },
+            {
+              "id": "biz_dfch_CS_Appclusive_Core_OdataServices_Core_CatalogueItem_Cat/Ends[Catalogue]",
+              "name": "Catalogue",
+              "multiplicity": "One",
+              "entityType": { "__id": "Catalogue" },
+              ":@DeleteRule": { "action": "Unset" }
+            }
+          ]
+        },
+        {
+          "id": "biz_dfch_CS_Appclusive_Core_OdataServices_Core_Cart_CartItems_bi",
+          "name": "biz_dfch_CS_Appclusive_Core_OdataServices_Core_Cart_CartItems_bi",
+          "ends":
+          [
+            {
+              "id": "biz_dfch_CS_Appclusive_Core_OdataServices_Core_Cart_CartItems_bi/Ends[CartItemsPartner]",
+              "name": "CartItemsPartner",
+              "multiplicity": "ZeroOrOne",
+              "entityType": { "__id": "Cart" },
+              ":@DeleteRule": { "action": "Unset" }
+            },
+            {
+              "id": "biz_dfch_CS_Appclusive_Core_OdataServices_Core_Cart_CartItems_bi/Ends[CartItems]",
+              "name": "CartItems",
+              "multiplicity": "Many",
+              "entityType": { "__id": "CartItem" }
             }
           ]
         },
@@ -1917,7 +3945,6 @@
             {
               "id": "ApprovalsList/Properties[Approvals]",
               "name": "Approvals",
-              "disablePaging": true,
               "disableSearch": true,
               "pageSize": 45,
               "elementType": { "__id": "Approval" },
@@ -2554,7 +4581,6 @@
             {
               "id": "CatalogueItemsList/Properties[CatalogueItems]",
               "name": "CatalogueItems",
-              "disablePaging": true,
               "disableSearch": true,
               "pageSize": 45,
               "elementType": { "__id": "CatalogueItem1" },
@@ -3556,6 +5582,7 @@
                         [
                           {
                             "displayName": "Orders",
+                            "description": "View a list of your orders",
                             "name": "Orders",
                             "kind": "Command",
                             "view": { "__id": ":Button" },
@@ -3572,6 +5599,7 @@
                           },
                           {
                             "displayName": "Approvals",
+                            "description": "Approve pending orders",
                             "name": "Approvals",
                             "kind": "Command",
                             "view": { "__id": ":Button" },
@@ -3588,6 +5616,7 @@
                           },
                           {
                             "displayName": "Catalogue",
+                            "description": "Browse catalogue",
                             "name": "Catalogue",
                             "kind": "Command",
                             "view": { "__id": ":Button" },
@@ -3604,6 +5633,7 @@
                           },
                           {
                             "displayName": "New Order",
+                            "description": "Place a new order",
                             "name": "NewOrder",
                             "kind": "Command",
                             "view": { "__id": ":Button" },
@@ -3622,6 +5652,23 @@
                                 }
                               }
                             ]
+                          },
+                          {
+                            "displayName": "something To Prove",
+                            "description": "the birds",
+                            "name": "somethingToProve",
+                            "kind": "Command",
+                            "view": { "__id": ":Button" },
+                            "propertySources":
+                            [
+                              {
+                                "property": { "__id": ":RootControl/Properties[Tap]" },
+                                "source":
+                                {
+                                  "target": { "__id": "Home/Methods[somethingToProve]" }
+                                }
+                              }
+                            ]
                           }
                         ]
                       },
@@ -3634,6 +5681,7 @@
                         [
                           {
                             "displayName": "Endpoints",
+                            "description": "Manage endpoints",
                             "name": "Endpoints",
                             "kind": "Command",
                             "view": { "__id": ":Button" },
@@ -3650,6 +5698,7 @@
                           },
                           {
                             "displayName": "Configuration",
+                            "description": "Manage configuration items",
                             "name": "Configuration",
                             "kind": "Command",
                             "view": { "__id": ":Button" },
@@ -3666,6 +5715,7 @@
                           },
                           {
                             "displayName": "Jobs",
+                            "description": "View a list of jobs",
                             "name": "Jobs",
                             "kind": "Command",
                             "view": { "__id": ":Button" },
@@ -3682,6 +5732,7 @@
                           },
                           {
                             "displayName": "Order Items",
+                            "description": "View order items",
                             "name": "OrderItems",
                             "kind": "Command",
                             "view": { "__id": ":Button" },
@@ -3742,6 +5793,10 @@
                   "parameterType": { "__id": ":String" }
                 }
               ]
+            },
+            {
+              "id": "Home/Methods[somethingToProve]",
+              "name": "somethingToProve"
             }
           ]
         },
@@ -3800,16 +5855,6 @@
                             },
                             "childContentItems":
                             [
-                              {
-                                "displayName": "Type",
-                                "name": "Type",
-                                "kind": "Value",
-                                "view": { "__id": ":Text" },
-                                "dataSource":
-                                {
-                                  "member": { "__id": "Job/Properties[Type]" }
-                                }
-                              },
                               {
                                 "displayName": "Referenced Item Id",
                                 "name": "ReferencedItemId",
@@ -3970,7 +6015,6 @@
             {
               "id": "JobsList/Properties[Jobs]",
               "name": "Jobs",
-              "disablePaging": true,
               "disableSearch": true,
               "pageSize": 45,
               "elementType": { "__id": "Job" },
@@ -4092,16 +6136,6 @@
                             "view": { "__id": ":RowsLayout" },
                             "childContentItems":
                             [
-                              {
-                                "displayName": "Type",
-                                "name": "Type",
-                                "kind": "Value",
-                                "view": { "__id": ":Text" },
-                                "dataSource":
-                                {
-                                  "member": { "__id": "Job/Properties[Type]" }
-                                }
-                              },
                               {
                                 "displayName": "RefId",
                                 "name": "RefId",
@@ -5179,7 +7213,6 @@
             {
               "id": "KeyNameValuesList/Properties[KeyNameValues]",
               "name": "KeyNameValues",
-              "disablePaging": true,
               "disableSearch": true,
               "pageSize": 45,
               "elementType": { "__id": "KeyNameValue" },
@@ -6226,23 +8259,6 @@
                             "childContentItems":
                             [
                               {
-                                "displayName": "Status",
-                                "name": "Status",
-                                "kind": "Value",
-                                "view": { "__id": ":Text" },
-                                "dataSource":
-                                {
-                                  "member": { "__id": "OrderItem/Properties[Status]" }
-                                },
-                                "propertySources":
-                                [
-                                  {
-                                    "property": { "__id": ":RootControl/Properties[FontStyle]" },
-                                    "value": "Large"
-                                  }
-                                ]
-                              },
-                              {
                                 "displayName": "Quantity",
                                 "name": "Quantity",
                                 "kind": "Value",
@@ -6442,7 +8458,6 @@
             {
               "id": "OrderItemsList/Properties[OrderItems]",
               "name": "OrderItems",
-              "disablePaging": true,
               "disableSearch": true,
               "pageSize": 45,
               "elementType": { "__id": "OrderItem" },
@@ -6514,16 +8529,6 @@
                             "view": { "__id": ":RowsLayout" },
                             "childContentItems":
                             [
-                              {
-                                "displayName": "Status",
-                                "name": "Status",
-                                "kind": "Value",
-                                "view": { "__id": ":Text" },
-                                "dataSource":
-                                {
-                                  "member": { "__id": "OrderItem/Properties[Status]" }
-                                }
-                              },
                               {
                                 "displayName": "Name",
                                 "name": "Name",
@@ -7203,7 +9208,6 @@
             {
               "id": "OrdersList/Properties[Orders]",
               "name": "Orders",
-              "disablePaging": true,
               "disableSearch": true,
               "pageSize": 45,
               "elementType": { "__id": "Order" },
@@ -7778,23 +9782,6 @@
                             "childContentItems":
                             [
                               {
-                                "displayName": "Status",
-                                "name": "Status1",
-                                "kind": "Value",
-                                "view": { "__id": ":Text" },
-                                "dataSource":
-                                {
-                                  "member": { "__id": "OrderItem/Properties[Status]" }
-                                },
-                                "propertySources":
-                                [
-                                  {
-                                    "property": { "__id": ":RootControl/Properties[FontStyle]" },
-                                    "value": "Large"
-                                  }
-                                ]
-                              },
-                              {
                                 "displayName": "Order Id",
                                 "name": "OrderId",
                                 "kind": "Value",
@@ -8045,7 +10032,6 @@
             {
               "id": "OrderViewDetails/Properties[OrderItems]",
               "name": "OrderItems",
-              "disablePaging": true,
               "disableSearch": true,
               "pageSize": 15,
               "elementType": { "__id": "OrderItem" },
@@ -8653,6 +10639,586 @@
               "id": "CollectionView$ManagementCredential/Properties[selectedItem]",
               "name": "selectedItem",
               "propertyType": { "__id": "ManagementCredential" }
+            }
+          ]
+        },
+        {
+          "id": "AuditTrail*",
+          "name": "AuditTrail*",
+          "kind": "Enumerable",
+          "elementType": { "__id": "AuditTrail" }
+        },
+        {
+          "id": "CollectionView$AuditTrail",
+          "name": "CollectionView$AuditTrail",
+          "kind": "CollectionView",
+          "elementType": { "__id": "AuditTrail" },
+          "methods":
+          [
+            {
+              "id": "CollectionView$AuditTrail/Methods[addNew]",
+              "name": "addNew",
+              "returnType": { "__id": "AuditTrail" }
+            },
+            {
+              "id": "CollectionView$AuditTrail/Methods[addAndEditNew]",
+              "name": "addAndEditNew",
+              "returnType": { "__id": "AuditTrail" }
+            },
+            {
+              "id": "CollectionView$AuditTrail/Methods[showSearch]",
+              "name": "showSearch",
+              "returnType": { "__id": "AuditTrail" }
+            },
+            {
+              "id": "CollectionView$AuditTrail/Methods[editSelected]",
+              "name": "editSelected"
+            },
+            {
+              "id": "CollectionView$AuditTrail/Methods[deleteSelected]",
+              "name": "deleteSelected"
+            },
+            {
+              "id": "CollectionView$AuditTrail/Methods[removeSelected]",
+              "name": "removeSelected"
+            },
+            {
+              "id": "CollectionView$AuditTrail/Methods[refresh]",
+              "name": "refresh"
+            },
+            {
+              "id": "CollectionView$AuditTrail/Methods[viewSelected]",
+              "name": "viewSelected"
+            }
+          ],
+          "properties":
+          [
+            {
+              "id": "CollectionView$AuditTrail/Properties[selectedItem]",
+              "name": "selectedItem",
+              "propertyType": { "__id": "AuditTrail" }
+            }
+          ]
+        },
+        {
+          "id": "Gate*",
+          "name": "Gate*",
+          "kind": "Enumerable",
+          "elementType": { "__id": "Gate" }
+        },
+        {
+          "id": "CollectionView$Gate",
+          "name": "CollectionView$Gate",
+          "kind": "CollectionView",
+          "elementType": { "__id": "Gate" },
+          "methods":
+          [
+            {
+              "id": "CollectionView$Gate/Methods[addNew]",
+              "name": "addNew",
+              "returnType": { "__id": "Gate" }
+            },
+            {
+              "id": "CollectionView$Gate/Methods[addAndEditNew]",
+              "name": "addAndEditNew",
+              "returnType": { "__id": "Gate" }
+            },
+            {
+              "id": "CollectionView$Gate/Methods[showSearch]",
+              "name": "showSearch",
+              "returnType": { "__id": "Gate" }
+            },
+            {
+              "id": "CollectionView$Gate/Methods[editSelected]",
+              "name": "editSelected"
+            },
+            {
+              "id": "CollectionView$Gate/Methods[deleteSelected]",
+              "name": "deleteSelected"
+            },
+            {
+              "id": "CollectionView$Gate/Methods[removeSelected]",
+              "name": "removeSelected"
+            },
+            {
+              "id": "CollectionView$Gate/Methods[refresh]",
+              "name": "refresh"
+            },
+            {
+              "id": "CollectionView$Gate/Methods[viewSelected]",
+              "name": "viewSelected"
+            }
+          ],
+          "properties":
+          [
+            {
+              "id": "CollectionView$Gate/Properties[selectedItem]",
+              "name": "selectedItem",
+              "propertyType": { "__id": "Gate" }
+            }
+          ]
+        },
+        {
+          "id": "Acl*",
+          "name": "Acl*",
+          "kind": "Enumerable",
+          "elementType": { "__id": "Acl" }
+        },
+        {
+          "id": "CollectionView$Acl",
+          "name": "CollectionView$Acl",
+          "kind": "CollectionView",
+          "elementType": { "__id": "Acl" },
+          "methods":
+          [
+            {
+              "id": "CollectionView$Acl/Methods[addNew]",
+              "name": "addNew",
+              "returnType": { "__id": "Acl" }
+            },
+            {
+              "id": "CollectionView$Acl/Methods[addAndEditNew]",
+              "name": "addAndEditNew",
+              "returnType": { "__id": "Acl" }
+            },
+            {
+              "id": "CollectionView$Acl/Methods[showSearch]",
+              "name": "showSearch",
+              "returnType": { "__id": "Acl" }
+            },
+            {
+              "id": "CollectionView$Acl/Methods[editSelected]",
+              "name": "editSelected"
+            },
+            {
+              "id": "CollectionView$Acl/Methods[deleteSelected]",
+              "name": "deleteSelected"
+            },
+            {
+              "id": "CollectionView$Acl/Methods[removeSelected]",
+              "name": "removeSelected"
+            },
+            {
+              "id": "CollectionView$Acl/Methods[refresh]",
+              "name": "refresh"
+            },
+            {
+              "id": "CollectionView$Acl/Methods[viewSelected]",
+              "name": "viewSelected"
+            }
+          ],
+          "properties":
+          [
+            {
+              "id": "CollectionView$Acl/Properties[selectedItem]",
+              "name": "selectedItem",
+              "propertyType": { "__id": "Acl" }
+            }
+          ]
+        },
+        {
+          "id": "EntityType*",
+          "name": "EntityType*",
+          "kind": "Enumerable",
+          "elementType": { "__id": "EntityType" }
+        },
+        {
+          "id": "CollectionView$EntityType",
+          "name": "CollectionView$EntityType",
+          "kind": "CollectionView",
+          "elementType": { "__id": "EntityType" },
+          "methods":
+          [
+            {
+              "id": "CollectionView$EntityType/Methods[addNew]",
+              "name": "addNew",
+              "returnType": { "__id": "EntityType" }
+            },
+            {
+              "id": "CollectionView$EntityType/Methods[addAndEditNew]",
+              "name": "addAndEditNew",
+              "returnType": { "__id": "EntityType" }
+            },
+            {
+              "id": "CollectionView$EntityType/Methods[showSearch]",
+              "name": "showSearch",
+              "returnType": { "__id": "EntityType" }
+            },
+            {
+              "id": "CollectionView$EntityType/Methods[editSelected]",
+              "name": "editSelected"
+            },
+            {
+              "id": "CollectionView$EntityType/Methods[deleteSelected]",
+              "name": "deleteSelected"
+            },
+            {
+              "id": "CollectionView$EntityType/Methods[removeSelected]",
+              "name": "removeSelected"
+            },
+            {
+              "id": "CollectionView$EntityType/Methods[refresh]",
+              "name": "refresh"
+            },
+            {
+              "id": "CollectionView$EntityType/Methods[viewSelected]",
+              "name": "viewSelected"
+            }
+          ],
+          "properties":
+          [
+            {
+              "id": "CollectionView$EntityType/Properties[selectedItem]",
+              "name": "selectedItem",
+              "propertyType": { "__id": "EntityType" }
+            }
+          ]
+        },
+        {
+          "id": "Node*",
+          "name": "Node*",
+          "kind": "Enumerable",
+          "elementType": { "__id": "Node" }
+        },
+        {
+          "id": "CollectionView$Node",
+          "name": "CollectionView$Node",
+          "kind": "CollectionView",
+          "elementType": { "__id": "Node" },
+          "methods":
+          [
+            {
+              "id": "CollectionView$Node/Methods[addNew]",
+              "name": "addNew",
+              "returnType": { "__id": "Node" }
+            },
+            {
+              "id": "CollectionView$Node/Methods[addAndEditNew]",
+              "name": "addAndEditNew",
+              "returnType": { "__id": "Node" }
+            },
+            {
+              "id": "CollectionView$Node/Methods[showSearch]",
+              "name": "showSearch",
+              "returnType": { "__id": "Node" }
+            },
+            {
+              "id": "CollectionView$Node/Methods[editSelected]",
+              "name": "editSelected"
+            },
+            {
+              "id": "CollectionView$Node/Methods[deleteSelected]",
+              "name": "deleteSelected"
+            },
+            {
+              "id": "CollectionView$Node/Methods[removeSelected]",
+              "name": "removeSelected"
+            },
+            {
+              "id": "CollectionView$Node/Methods[refresh]",
+              "name": "refresh"
+            },
+            {
+              "id": "CollectionView$Node/Methods[viewSelected]",
+              "name": "viewSelected"
+            }
+          ],
+          "properties":
+          [
+            {
+              "id": "CollectionView$Node/Properties[selectedItem]",
+              "name": "selectedItem",
+              "propertyType": { "__id": "Node" }
+            }
+          ]
+        },
+        {
+          "id": "Link*",
+          "name": "Link*",
+          "kind": "Enumerable",
+          "elementType": { "__id": "Link" }
+        },
+        {
+          "id": "CollectionView$Link",
+          "name": "CollectionView$Link",
+          "kind": "CollectionView",
+          "elementType": { "__id": "Link" },
+          "methods":
+          [
+            {
+              "id": "CollectionView$Link/Methods[addNew]",
+              "name": "addNew",
+              "returnType": { "__id": "Link" }
+            },
+            {
+              "id": "CollectionView$Link/Methods[addAndEditNew]",
+              "name": "addAndEditNew",
+              "returnType": { "__id": "Link" }
+            },
+            {
+              "id": "CollectionView$Link/Methods[showSearch]",
+              "name": "showSearch",
+              "returnType": { "__id": "Link" }
+            },
+            {
+              "id": "CollectionView$Link/Methods[editSelected]",
+              "name": "editSelected"
+            },
+            {
+              "id": "CollectionView$Link/Methods[deleteSelected]",
+              "name": "deleteSelected"
+            },
+            {
+              "id": "CollectionView$Link/Methods[removeSelected]",
+              "name": "removeSelected"
+            },
+            {
+              "id": "CollectionView$Link/Methods[refresh]",
+              "name": "refresh"
+            },
+            {
+              "id": "CollectionView$Link/Methods[viewSelected]",
+              "name": "viewSelected"
+            }
+          ],
+          "properties":
+          [
+            {
+              "id": "CollectionView$Link/Properties[selectedItem]",
+              "name": "selectedItem",
+              "propertyType": { "__id": "Link" }
+            }
+          ]
+        },
+        {
+          "id": "ManagementUri*",
+          "name": "ManagementUri*",
+          "kind": "Enumerable",
+          "elementType": { "__id": "ManagementUri" }
+        },
+        {
+          "id": "CollectionView$ManagementUri",
+          "name": "CollectionView$ManagementUri",
+          "kind": "CollectionView",
+          "elementType": { "__id": "ManagementUri" },
+          "methods":
+          [
+            {
+              "id": "CollectionView$ManagementUri/Methods[addNew]",
+              "name": "addNew",
+              "returnType": { "__id": "ManagementUri" }
+            },
+            {
+              "id": "CollectionView$ManagementUri/Methods[addAndEditNew]",
+              "name": "addAndEditNew",
+              "returnType": { "__id": "ManagementUri" }
+            },
+            {
+              "id": "CollectionView$ManagementUri/Methods[showSearch]",
+              "name": "showSearch",
+              "returnType": { "__id": "ManagementUri" }
+            },
+            {
+              "id": "CollectionView$ManagementUri/Methods[editSelected]",
+              "name": "editSelected"
+            },
+            {
+              "id": "CollectionView$ManagementUri/Methods[deleteSelected]",
+              "name": "deleteSelected"
+            },
+            {
+              "id": "CollectionView$ManagementUri/Methods[removeSelected]",
+              "name": "removeSelected"
+            },
+            {
+              "id": "CollectionView$ManagementUri/Methods[refresh]",
+              "name": "refresh"
+            },
+            {
+              "id": "CollectionView$ManagementUri/Methods[viewSelected]",
+              "name": "viewSelected"
+            }
+          ],
+          "properties":
+          [
+            {
+              "id": "CollectionView$ManagementUri/Properties[selectedItem]",
+              "name": "selectedItem",
+              "propertyType": { "__id": "ManagementUri" }
+            }
+          ]
+        },
+        {
+          "id": "Catalogue*",
+          "name": "Catalogue*",
+          "kind": "Enumerable",
+          "elementType": { "__id": "Catalogue" }
+        },
+        {
+          "id": "CollectionView$Catalogue",
+          "name": "CollectionView$Catalogue",
+          "kind": "CollectionView",
+          "elementType": { "__id": "Catalogue" },
+          "methods":
+          [
+            {
+              "id": "CollectionView$Catalogue/Methods[addNew]",
+              "name": "addNew",
+              "returnType": { "__id": "Catalogue" }
+            },
+            {
+              "id": "CollectionView$Catalogue/Methods[addAndEditNew]",
+              "name": "addAndEditNew",
+              "returnType": { "__id": "Catalogue" }
+            },
+            {
+              "id": "CollectionView$Catalogue/Methods[showSearch]",
+              "name": "showSearch",
+              "returnType": { "__id": "Catalogue" }
+            },
+            {
+              "id": "CollectionView$Catalogue/Methods[editSelected]",
+              "name": "editSelected"
+            },
+            {
+              "id": "CollectionView$Catalogue/Methods[deleteSelected]",
+              "name": "deleteSelected"
+            },
+            {
+              "id": "CollectionView$Catalogue/Methods[removeSelected]",
+              "name": "removeSelected"
+            },
+            {
+              "id": "CollectionView$Catalogue/Methods[refresh]",
+              "name": "refresh"
+            },
+            {
+              "id": "CollectionView$Catalogue/Methods[viewSelected]",
+              "name": "viewSelected"
+            }
+          ],
+          "properties":
+          [
+            {
+              "id": "CollectionView$Catalogue/Properties[selectedItem]",
+              "name": "selectedItem",
+              "propertyType": { "__id": "Catalogue" }
+            }
+          ]
+        },
+        {
+          "id": "Cart*",
+          "name": "Cart*",
+          "kind": "Enumerable",
+          "elementType": { "__id": "Cart" }
+        },
+        {
+          "id": "CollectionView$Cart",
+          "name": "CollectionView$Cart",
+          "kind": "CollectionView",
+          "elementType": { "__id": "Cart" },
+          "methods":
+          [
+            {
+              "id": "CollectionView$Cart/Methods[addNew]",
+              "name": "addNew",
+              "returnType": { "__id": "Cart" }
+            },
+            {
+              "id": "CollectionView$Cart/Methods[addAndEditNew]",
+              "name": "addAndEditNew",
+              "returnType": { "__id": "Cart" }
+            },
+            {
+              "id": "CollectionView$Cart/Methods[showSearch]",
+              "name": "showSearch",
+              "returnType": { "__id": "Cart" }
+            },
+            {
+              "id": "CollectionView$Cart/Methods[editSelected]",
+              "name": "editSelected"
+            },
+            {
+              "id": "CollectionView$Cart/Methods[deleteSelected]",
+              "name": "deleteSelected"
+            },
+            {
+              "id": "CollectionView$Cart/Methods[removeSelected]",
+              "name": "removeSelected"
+            },
+            {
+              "id": "CollectionView$Cart/Methods[refresh]",
+              "name": "refresh"
+            },
+            {
+              "id": "CollectionView$Cart/Methods[viewSelected]",
+              "name": "viewSelected"
+            }
+          ],
+          "properties":
+          [
+            {
+              "id": "CollectionView$Cart/Properties[selectedItem]",
+              "name": "selectedItem",
+              "propertyType": { "__id": "Cart" }
+            }
+          ]
+        },
+        {
+          "id": "CartItem*",
+          "name": "CartItem*",
+          "kind": "Enumerable",
+          "elementType": { "__id": "CartItem" }
+        },
+        {
+          "id": "CollectionView$CartItem",
+          "name": "CollectionView$CartItem",
+          "kind": "CollectionView",
+          "elementType": { "__id": "CartItem" },
+          "methods":
+          [
+            {
+              "id": "CollectionView$CartItem/Methods[addNew]",
+              "name": "addNew",
+              "returnType": { "__id": "CartItem" }
+            },
+            {
+              "id": "CollectionView$CartItem/Methods[addAndEditNew]",
+              "name": "addAndEditNew",
+              "returnType": { "__id": "CartItem" }
+            },
+            {
+              "id": "CollectionView$CartItem/Methods[showSearch]",
+              "name": "showSearch",
+              "returnType": { "__id": "CartItem" }
+            },
+            {
+              "id": "CollectionView$CartItem/Methods[editSelected]",
+              "name": "editSelected"
+            },
+            {
+              "id": "CollectionView$CartItem/Methods[deleteSelected]",
+              "name": "deleteSelected"
+            },
+            {
+              "id": "CollectionView$CartItem/Methods[removeSelected]",
+              "name": "removeSelected"
+            },
+            {
+              "id": "CollectionView$CartItem/Methods[refresh]",
+              "name": "refresh"
+            },
+            {
+              "id": "CollectionView$CartItem/Methods[viewSelected]",
+              "name": "viewSelected"
+            }
+          ],
+          "properties":
+          [
+            {
+              "id": "CollectionView$CartItem/Properties[selectedItem]",
+              "name": "selectedItem",
+              "propertyType": { "__id": "CartItem" }
             }
           ]
         }

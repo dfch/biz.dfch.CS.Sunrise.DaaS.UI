@@ -48,19 +48,6 @@
                 Name="left"
                 Kind="Group">
                 <ContentItem
-                  Name="Status"
-                  Kind="Value"
-                  DataType=":String?">
-                  <ContentItem.DataSource>
-                    <ScreenExpressionTree>
-                      <ChainExpression>
-                        <MemberExpression
-                          Member="OrderItem/Properties[Status]" />
-                      </ChainExpression>
-                    </ScreenExpressionTree>
-                  </ContentItem.DataSource>
-                </ContentItem>
-                <ContentItem
                   Name="Name"
                   Kind="Value"
                   DataType=":String">
@@ -89,7 +76,7 @@
                 <ContentItem
                   Name="OrderId"
                   Kind="Value"
-                  DataType=":Int32">
+                  DataType=":Int64">
                   <ContentItem.DataSource>
                     <ScreenExpressionTree>
                       <ChainExpression>
@@ -259,7 +246,7 @@
               <ContentItem
                 Name="Id"
                 Kind="Value"
-                DataType=":Int32">
+                DataType=":Int64">
                 <ContentItem.DataSource>
                   <ScreenExpressionTree>
                     <ChainExpression>

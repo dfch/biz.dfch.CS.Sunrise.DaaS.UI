@@ -185,7 +185,7 @@
             _$parentName: "GeneralGroup1",
             screen: lightSwitchApplication.ApprovalView,
             data: lightSwitchApplication.ApprovalView,
-            value: Number
+            value: String
         },
         CreatedBy: {
             _$class: msls.ContentItem,
@@ -555,7 +555,7 @@
             _$parentName: "GeneralGroup1",
             screen: lightSwitchApplication.CatalogueItemView,
             data: lightSwitchApplication.CatalogueItemView,
-            value: Number
+            value: String
         },
         CreatedBy: {
             _$class: msls.ContentItem,
@@ -908,7 +908,7 @@
             _$parentName: "GeneralGroup1",
             screen: lightSwitchApplication.EndpointView,
             data: lightSwitchApplication.EndpointView,
-            value: Number
+            value: String
         },
         CreatedBy: {
             _$class: msls.ContentItem,
@@ -1100,6 +1100,12 @@
             _$parentName: "Group1",
             screen: lightSwitchApplication.Home
         },
+        somethingToProve: {
+            _$class: msls.ContentItem,
+            _$name: "somethingToProve",
+            _$parentName: "Group1",
+            screen: lightSwitchApplication.Home
+        },
         Group2: {
             _$class: msls.ContentItem,
             _$name: "Group2",
@@ -1152,6 +1158,16 @@
         /// </field>
         beforeApplyChanges: [lightSwitchApplication.Home],
         /// <field>
+        /// Called to determine if the somethingToProve method can be executed.
+        /// <br/>canExecute(msls.application.Home screen)
+        /// </field>
+        somethingToProve_canExecute: [lightSwitchApplication.Home],
+        /// <field>
+        /// Called to execute the somethingToProve method.
+        /// <br/>execute(msls.application.Home screen)
+        /// </field>
+        somethingToProve_execute: [lightSwitchApplication.Home],
+        /// <field>
         /// Called after the Group content item has been rendered.
         /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
         /// </field>
@@ -1181,6 +1197,11 @@
         /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
         /// </field>
         NewOrder_postRender: [$element, function () { return new lightSwitchApplication.Home().findContentItem("NewOrder"); }],
+        /// <field>
+        /// Called after the somethingToProve content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        somethingToProve_postRender: [$element, function () { return new lightSwitchApplication.Home().findContentItem("somethingToProve"); }],
         /// <field>
         /// Called after the Group2 content item has been rendered.
         /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
@@ -1245,14 +1266,6 @@
             data: lightSwitchApplication.Job,
             value: lightSwitchApplication.Job
         },
-        Type: {
-            _$class: msls.ContentItem,
-            _$name: "Type",
-            _$parentName: "rows",
-            screen: lightSwitchApplication.JobsList,
-            data: lightSwitchApplication.Job,
-            value: String
-        },
         ReferencedItemId: {
             _$class: msls.ContentItem,
             _$name: "ReferencedItemId",
@@ -1295,11 +1308,6 @@
         /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
         /// </field>
         rows_postRender: [$element, function () { return new lightSwitchApplication.JobsList().findContentItem("rows"); }],
-        /// <field>
-        /// Called after the Type content item has been rendered.
-        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
-        /// </field>
-        Type_postRender: [$element, function () { return new lightSwitchApplication.JobsList().findContentItem("Type"); }],
         /// <field>
         /// Called after the ReferencedItemId content item has been rendered.
         /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
@@ -1370,14 +1378,6 @@
             data: lightSwitchApplication.Job,
             value: lightSwitchApplication.Job
         },
-        Type: {
-            _$class: msls.ContentItem,
-            _$name: "Type",
-            _$parentName: "right",
-            screen: lightSwitchApplication.JobView,
-            data: lightSwitchApplication.Job,
-            value: String
-        },
         RefId: {
             _$class: msls.ContentItem,
             _$name: "RefId",
@@ -1400,7 +1400,7 @@
             _$parentName: "right",
             screen: lightSwitchApplication.JobView,
             data: lightSwitchApplication.Job,
-            value: Number
+            value: String
         },
         Description1: {
             _$class: msls.ContentItem,
@@ -1456,7 +1456,7 @@
             _$parentName: "GeneralGroup1",
             screen: lightSwitchApplication.JobView,
             data: lightSwitchApplication.JobView,
-            value: Number
+            value: String
         },
         CreatedBy: {
             _$class: msls.ContentItem,
@@ -1554,11 +1554,6 @@
         /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
         /// </field>
         right_postRender: [$element, function () { return new lightSwitchApplication.JobView().findContentItem("right"); }],
-        /// <field>
-        /// Called after the Type content item has been rendered.
-        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
-        /// </field>
-        Type_postRender: [$element, function () { return new lightSwitchApplication.JobView().findContentItem("Type"); }],
         /// <field>
         /// Called after the RefId content item has been rendered.
         /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
@@ -1827,7 +1822,7 @@
             _$parentName: "General",
             screen: lightSwitchApplication.KeyNameValueEdit,
             data: lightSwitchApplication.KeyNameValueEdit,
-            value: Number
+            value: String
         },
         KeyNameValue_Created: {
             _$class: msls.ContentItem,
@@ -2144,7 +2139,7 @@
             _$parentName: "General",
             screen: lightSwitchApplication.KeyNameValueView,
             data: lightSwitchApplication.KeyNameValueView,
-            value: Number
+            value: String
         },
         Created: {
             _$class: msls.ContentItem,
@@ -2356,7 +2351,7 @@
             _$parentName: "GeneralGroup1",
             screen: lightSwitchApplication.OrderAdd,
             data: lightSwitchApplication.OrderAdd,
-            value: Number
+            value: String
         },
         CreatedBy: {
             _$class: msls.ContentItem,
@@ -2590,7 +2585,7 @@
             _$parentName: "GeneralGroup1",
             screen: lightSwitchApplication.OrderAddSpecial,
             data: lightSwitchApplication.OrderAddSpecial,
-            value: Number
+            value: String
         },
         CreatedBy: {
             _$class: msls.ContentItem,
@@ -2775,14 +2770,6 @@
             data: lightSwitchApplication.OrderItem,
             value: lightSwitchApplication.OrderItem
         },
-        Status: {
-            _$class: msls.ContentItem,
-            _$name: "Status",
-            _$parentName: "rows",
-            screen: lightSwitchApplication.OrderItemsList,
-            data: lightSwitchApplication.OrderItem,
-            value: String
-        },
         Quantity: {
             _$class: msls.ContentItem,
             _$name: "Quantity",
@@ -2797,7 +2784,7 @@
             _$parentName: "rows",
             screen: lightSwitchApplication.OrderItemsList,
             data: lightSwitchApplication.OrderItem,
-            value: Number
+            value: String
         },
         Name: {
             _$class: msls.ContentItem,
@@ -2849,11 +2836,6 @@
         /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
         /// </field>
         rows_postRender: [$element, function () { return new lightSwitchApplication.OrderItemsList().findContentItem("rows"); }],
-        /// <field>
-        /// Called after the Status content item has been rendered.
-        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
-        /// </field>
-        Status_postRender: [$element, function () { return new lightSwitchApplication.OrderItemsList().findContentItem("Status"); }],
         /// <field>
         /// Called after the Quantity content item has been rendered.
         /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
@@ -2907,14 +2889,6 @@
             data: lightSwitchApplication.OrderItem,
             value: lightSwitchApplication.OrderItem
         },
-        Status: {
-            _$class: msls.ContentItem,
-            _$name: "Status",
-            _$parentName: "left",
-            screen: lightSwitchApplication.OrderItemView,
-            data: lightSwitchApplication.OrderItem,
-            value: String
-        },
         Name: {
             _$class: msls.ContentItem,
             _$name: "Name",
@@ -2937,7 +2911,7 @@
             _$parentName: "left",
             screen: lightSwitchApplication.OrderItemView,
             data: lightSwitchApplication.OrderItem,
-            value: Number
+            value: String
         },
         Quantity: {
             _$class: msls.ContentItem,
@@ -3009,7 +2983,7 @@
             _$parentName: "GeneralGroup1",
             screen: lightSwitchApplication.OrderItemView,
             data: lightSwitchApplication.OrderItemView,
-            value: Number
+            value: String
         },
         CreatedBy: {
             _$class: msls.ContentItem,
@@ -3087,11 +3061,6 @@
         /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
         /// </field>
         left_postRender: [$element, function () { return new lightSwitchApplication.OrderItemView().findContentItem("left"); }],
-        /// <field>
-        /// Called after the Status content item has been rendered.
-        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
-        /// </field>
-        Status_postRender: [$element, function () { return new lightSwitchApplication.OrderItemView().findContentItem("Status"); }],
         /// <field>
         /// Called after the Name content item has been rendered.
         /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
@@ -3392,7 +3361,7 @@
             _$parentName: "GeneralGroup1",
             screen: lightSwitchApplication.OrderView,
             data: lightSwitchApplication.OrderView,
-            value: Number
+            value: String
         },
         CreatedBy: {
             _$class: msls.ContentItem,
@@ -3625,21 +3594,13 @@
             data: lightSwitchApplication.OrderItem,
             value: lightSwitchApplication.OrderItem
         },
-        Status1: {
-            _$class: msls.ContentItem,
-            _$name: "Status1",
-            _$parentName: "rows",
-            screen: lightSwitchApplication.OrderViewDetails,
-            data: lightSwitchApplication.OrderItem,
-            value: String
-        },
         OrderId: {
             _$class: msls.ContentItem,
             _$name: "OrderId",
             _$parentName: "rows",
             screen: lightSwitchApplication.OrderViewDetails,
             data: lightSwitchApplication.OrderItem,
-            value: Number
+            value: String
         },
         Quantity: {
             _$class: msls.ContentItem,
@@ -3679,7 +3640,7 @@
             _$parentName: "GeneralGroup1",
             screen: lightSwitchApplication.OrderViewDetails,
             data: lightSwitchApplication.OrderViewDetails,
-            value: Number
+            value: String
         },
         CreatedBy: {
             _$class: msls.ContentItem,
@@ -3792,11 +3753,6 @@
         /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
         /// </field>
         rows_postRender: [$element, function () { return new lightSwitchApplication.OrderViewDetails().findContentItem("rows"); }],
-        /// <field>
-        /// Called after the Status1 content item has been rendered.
-        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
-        /// </field>
-        Status1_postRender: [$element, function () { return new lightSwitchApplication.OrderViewDetails().findContentItem("Status1"); }],
         /// <field>
         /// Called after the OrderId content item has been rendered.
         /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
