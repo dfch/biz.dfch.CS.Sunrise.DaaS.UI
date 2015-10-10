@@ -84,7 +84,7 @@
                 Kind="Command">
                 <ContentItem.Attributes>
                   <Description
-                    Value="Plkace a new order" />
+                    Value="Place a new order" />
                 </ContentItem.Attributes>
                 <ContentItem.PropertySources>
                   <ControlPropertySource

@@ -870,7 +870,7 @@ function checkIfUserIsInStorebox(username) {
 
             setTimeout(function () {
                 me.element.find('a').html(
-                '<span class="fa ' + imageUrl + ' fa-inverse fa-5x" style="width:100%;height:100%;position:relative;background-color:#5D1048" >' +
+                '<span class="fa ' + imageUrl + ' fa-inverse fa-4x" style="width:100%;height:100%;position:relative;background-color:#5D1048" >' +
                 '    <span class="spOverlay ui-btn-up-a ui-btn-hover-a ui-btn-down-a" style="display:block;font-size:14px">' +
                 '        <span class="spOverlayBackground"></span>' +
                 '        <span class="spTitle">' + me.displayName + '</span>' +
