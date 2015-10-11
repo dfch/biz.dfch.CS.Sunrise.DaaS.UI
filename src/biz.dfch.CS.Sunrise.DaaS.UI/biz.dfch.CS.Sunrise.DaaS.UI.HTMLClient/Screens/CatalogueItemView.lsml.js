@@ -5,7 +5,6 @@ myapp.CatalogueItemView.deleteEntity_execute = function (screen) {
 };
 myapp.CatalogueItemView.addToCart_execute = function (screen) {
     var title = "Add to cart";
-    var entity = "CatalogueItem";
     var messageAddedToCart = "Item added to cart.";
 
     if (null === screen || undefined === screen || (0 >= screen.length)) {
@@ -13,7 +12,7 @@ myapp.CatalogueItemView.addToCart_execute = function (screen) {
         return;
     }
 
-    var catalogueItem = screen[entity];
+    var catalogueItem = screen.CatalogueItem1;
 
     var cartItem = myapp.activeDataWorkspace.CoreData.CartItems.addNew();
     cartItem.Tid = "00000000-0000-0000-0000-000000000000";
@@ -28,6 +27,8 @@ myapp.CatalogueItemView.addToCart_execute = function (screen) {
     cartItem.CartId = "0";
     cartItem.Quantity = 1;
     cartItem.CatalogueItemId = catalogueItem.Id;
+
+    alert(catalogueItem.Name);
 
     myapp.activeDataWorkspace.CoreData.saveChanges().then(function () {
         msls.showMessageBox(
