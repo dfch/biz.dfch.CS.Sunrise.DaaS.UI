@@ -115,6 +115,9 @@
     <Content Include="Screens\CatalogueItemView.lsml.js">
       <DependentUpon>CatalogueItemView.lsml</DependentUpon>
     </Content>
+    <Content Include="Screens\CatalogueView.lsml.js">
+      <DependentUpon>CatalogueView.lsml</DependentUpon>
+    </Content>
     <Content Include="Screens\EndpointView.lsml.js">
       <DependentUpon>EndpointView.lsml</DependentUpon>
     </Content>

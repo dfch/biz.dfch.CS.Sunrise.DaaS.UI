@@ -2084,6 +2084,16 @@
         /// </field>
         beforeApplyChanges: [lightSwitchApplication.CatalogueView],
         /// <field>
+        /// Called to determine if the addToCart method can be executed.
+        /// <br/>canExecute(msls.application.CatalogueView screen)
+        /// </field>
+        addToCart_canExecute: [lightSwitchApplication.CatalogueView],
+        /// <field>
+        /// Called to execute the addToCart method.
+        /// <br/>execute(msls.application.CatalogueView screen)
+        /// </field>
+        addToCart_execute: [lightSwitchApplication.CatalogueView],
+        /// <field>
         /// Called after the Details content item has been rendered.
         /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
         /// </field>

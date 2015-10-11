@@ -10756,24 +10756,6 @@
                               }
                             ]
                           }
-                        ],
-                        "propertySources":
-                        [
-                          {
-                            "property": { "__id": ":RootCollectionControl/Properties[ItemTap]" },
-                            "source":
-                            {
-                              "links":
-                              [
-                                {
-                                  "member": { "__id": "CatalogueView/Properties[CatalogueItems]" }
-                                },
-                                {
-                                  "target": { "__id": "CollectionView$CatalogueItem1/Methods[viewSelected]" }
-                                }
-                              ]
-                            }
-                          }
                         ]
                       }
                     ],
@@ -10811,6 +10793,26 @@
                                 }
                               ]
                             }
+                          }
+                        ]
+                      },
+                      {
+                        "displayName": "Add to cart",
+                        "name": "addToCart",
+                        "kind": "Command",
+                        "view": { "__id": ":CommandBarButton" },
+                        "propertySources":
+                        [
+                          {
+                            "property": { "__id": ":RootControl/Properties[Tap]" },
+                            "source":
+                            {
+                              "target": { "__id": "CatalogueView/Methods[addToCart]" }
+                            }
+                          },
+                          {
+                            "property": { "__id": ":RootCommand/Properties[Icon]" },
+                            "value": "msls-add"
                           }
                         ]
                       }
@@ -10975,6 +10977,10 @@
                   "parameterType": { "__id": ":String" }
                 }
               ]
+            },
+            {
+              "id": "CatalogueView/Methods[addToCart]",
+              "name": "addToCart"
             }
           ],
           "properties":

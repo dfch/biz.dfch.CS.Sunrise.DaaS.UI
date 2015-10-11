@@ -915,6 +915,7 @@
                 }
             }
         ], [
+            { name: "addToCart" }
         ]),
 
         EndpointsList: $defineScreen(EndpointsList, [
