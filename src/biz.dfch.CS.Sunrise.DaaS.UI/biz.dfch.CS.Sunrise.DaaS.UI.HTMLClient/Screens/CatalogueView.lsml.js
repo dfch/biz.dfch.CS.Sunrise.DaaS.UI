@@ -4,6 +4,7 @@ myapp.CatalogueView.addToCart_execute = function (screen) {
 
     var title = "Add to cart";
     var messageNotSelected = "No entity selected. Cannot delete entity.";
+    var messageAddedToCart = "Item added to cart.";
 
     if (null === screen || undefined === screen || (0 >= screen.length)) {
         console.log("addToCart: 'screen': Parameter validation FAILED.");
@@ -23,7 +24,7 @@ myapp.CatalogueView.addToCart_execute = function (screen) {
         return;
     }
 
-    var cartItem = myapp.activeDataWorkspace.CartItems.addNew();
+    var cartItem = myapp.activeDataWorkspace.CoreData.CartItems.addNew();
     cartItem.Tid = "00000000-0000-0000-0000-000000000000";
     cartItem.Id = 0;
     cartItem.CreatedBy = "USER";
@@ -36,12 +37,19 @@ myapp.CatalogueView.addToCart_execute = function (screen) {
     cartItem.CartId = "0";
     cartItem.Quantity = 1;
     cartItem.CatalogueItemId = selectedCatalogueItem.Id;
-    cartItem.Status = "Free";
 
-    //screen.CartItems.Applc
-    //myapp.activeDataWorkspace.CoreData.CartItems.add(cartItem);
-    // DFTODO - add code for POST cartItem here
+    myapp.activeDataWorkspace.CoreData.saveChanges().then(function ()
+    {
+        msls.showMessageBox(
+            messageAddedToCart,
+            {
+                title: title,
+                buttons: msls.MessageBoxButtons.ok
+            }
+        );
+    });
 };
+
 myapp.CatalogueView.addToCart_canExecute = function (screen) {
     return null !== screen.CatalogueItems.selectedItem;
 };
