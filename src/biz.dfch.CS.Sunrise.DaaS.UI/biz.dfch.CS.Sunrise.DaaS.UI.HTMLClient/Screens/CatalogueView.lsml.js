@@ -49,7 +49,6 @@ myapp.CatalogueView.addToCart_execute = function (screen) {
         );
     });
 };
-
 myapp.CatalogueView.addToCart_canExecute = function (screen) {
     return null !== screen.CatalogueItems.selectedItem;
 };

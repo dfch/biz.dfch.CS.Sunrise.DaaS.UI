@@ -887,7 +887,8 @@
         CatalogueItemView: $defineScreen(CatalogueItemView, [
             { name: "CatalogueItem1", kind: "local", type: lightSwitchApplication.CatalogueItem1 }
         ], [
-            { name: "deleteEntity" }
+            { name: "deleteEntity" },
+            { name: "addToCart" }
         ]),
 
         CataloguesList: $defineScreen(CataloguesList, [

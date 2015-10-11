@@ -10093,6 +10093,26 @@
                     "commandItems":
                     [
                       {
+                        "displayName": "Add to cart",
+                        "name": "addToCart",
+                        "kind": "Command",
+                        "view": { "__id": ":CommandBarButton" },
+                        "propertySources":
+                        [
+                          {
+                            "property": { "__id": ":RootControl/Properties[Tap]" },
+                            "source":
+                            {
+                              "target": { "__id": "CatalogueItemView/Methods[addToCart]" }
+                            }
+                          },
+                          {
+                            "property": { "__id": ":RootCommand/Properties[Icon]" },
+                            "value": "msls-add"
+                          }
+                        ]
+                      },
+                      {
                         "displayName": "Delete",
                         "name": "Delete",
                         "kind": "Command",
@@ -10277,6 +10297,10 @@
             {
               "id": "CatalogueItemView/Methods[deleteEntity]",
               "name": "deleteEntity"
+            },
+            {
+              "id": "CatalogueItemView/Methods[addToCart]",
+              "name": "addToCart"
             }
           ],
           "properties":
