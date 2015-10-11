@@ -35,37 +35,47 @@ function deleteEntity(screen, entity, title, message, messageNotSelected) {
     if (null === message || undefined === message || (0 >= message.length)) { message = "Sure, you want to delete?"; }
     if (null === messageNotSelected || undefined === messageNotSelected || (0 >= messageNotSelected.length)) { messageNotSelected = "No entity selected. Cannot delete entity."; }
     if (!screen[entity]) {
-        msls.showMessageBox(messageNotSelected,
+        msls.showMessageBox(
+            messageNotSelected,
             {
-                title: title
-                ,
+                title: title,
                 buttons: msls.MessageBoxButtons.ok
             }
-        )
-    } else {
-        msls.showMessageBox(message,
+        );
+        return;
+    }
+
+    msls.showMessageBox(
+        message
+        ,
+        {
+            title: title
+            ,
+            buttons: msls.MessageBoxButtons.yesNo
+        }
+    ).then(function (result) {
+        if (result == msls.MessageBoxResult.yes)
+        {
+            screen[entity].deleteEntity();
+            return myapp.commitChanges().then(null, function fail(e)
             {
-                title: title
-                ,
-                buttons: msls.MessageBoxButtons.yesNo
-            }
-        ).then(function (result) {
-            if (result == msls.MessageBoxResult.yes) {
-                screen[entity].deleteEntity();
-                return myapp.commitChanges().then(null, function fail(e) {
-                    msls.showMessageBox(e.message,
-                        {
-                            title: e.title
-                            ,
-                            buttons: msls.MessageBoxButtons.ok
-                        }).then(function (result) {
-                            myapp.cancelChanges();
-                            throw e;
-                        });
-                }
+                msls.showMessageBox(
+                    e.message
+                    ,
+                    {
+                        title: e.title
+                        ,
+                        buttons: msls.MessageBoxButtons.ok
+                    }
+                ).then(function (result)
+                    {
+                        myapp.cancelChanges();
+                        throw e;
+                    }
                 );
             }
+            );
         }
-        );
     }
+    );
 }

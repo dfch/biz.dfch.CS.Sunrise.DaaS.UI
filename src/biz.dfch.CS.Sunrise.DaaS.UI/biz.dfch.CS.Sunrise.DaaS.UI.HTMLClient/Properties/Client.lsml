@@ -61,5 +61,20 @@
     <ApplicationNavigationMethodLink
       Name="link6"
       Method="!module/Methods[showOrderItemsList]" />
+    <ApplicationNavigationMethodLink
+      Name="link7"
+      Method="!module/Methods[showGatesList]" />
+    <ApplicationNavigationMethodLink
+      Name="link8"
+      Method="!module/Methods[showAuditTrailsList]" />
+    <ApplicationNavigationMethodLink
+      Name="link9"
+      Method="!module/Methods[showCartsList]" />
+    <ApplicationNavigationMethodLink
+      Name="link10"
+      Method="!module/Methods[showCataloguesList]" />
+    <ApplicationNavigationMethodLink
+      Name="link11"
+      Method="!module/Methods[showNodesList]" />
   </Application.NavigationItems>
 </Application>

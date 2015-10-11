@@ -1,5 +1,24 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Schema xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata" Namespace="LightSwitchApplication" Alias="Self" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+  <EntityType Name="AuditTrail">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="EntityId" Type="Edm.String" Nullable="false" MaxLength="Max" />
+    <Property Name="EntityType" Type="Edm.String" Nullable="false" MaxLength="Max" />
+    <Property Name="EntityState" Type="Edm.String" Nullable="false" MaxLength="Max" />
+    <Property Name="Original" Type="Edm.String" Nullable="false" MaxLength="Max" />
+    <Property Name="Current" Type="Edm.String" Nullable="false" MaxLength="Max" />
+    <Property Name="Id" Type="Edm.Int64" Nullable="false" />
+    <Property Name="Tid" Type="Edm.String" Nullable="false" MaxLength="Max" />
+    <Property Name="Name" Type="Edm.String" Nullable="false" MaxLength="Max" />
+    <Property Name="Description" Type="Edm.String" MaxLength="Max" />
+    <Property Name="CreatedBy" Type="Edm.String" Nullable="false" MaxLength="Max" />
+    <Property Name="ModifiedBy" Type="Edm.String" Nullable="false" MaxLength="Max" />
+    <Property Name="Created" Type="Edm.DateTimeOffset" Nullable="false" />
+    <Property Name="Modified" Type="Edm.DateTimeOffset" Nullable="false" />
+    <Property Name="RowVersion" Type="Edm.Binary" MaxLength="Max" />
+  </EntityType>
   <EntityType Name="Endpoint">
     <Key>
       <PropertyRef Name="Id" />
@@ -20,27 +39,8 @@
     <Property Name="Description" Type="Edm.String" MaxLength="Max" />
     <Property Name="RowVersion" Type="Edm.Binary" MaxLength="Max" />
   </EntityType>
-  <EntityType Name="AuditTrail">
-    <Key>
-      <PropertyRef Name="Id" />
-    </Key>
-    <Property Name="EntityId" Type="Edm.String" Nullable="false" MaxLength="Max" />
-    <Property Name="EntityType" Type="Edm.String" Nullable="false" MaxLength="Max" />
-    <Property Name="EntityState" Type="Edm.String" Nullable="false" MaxLength="Max" />
-    <Property Name="Original" Type="Edm.String" Nullable="false" MaxLength="Max" />
-    <Property Name="Current" Type="Edm.String" Nullable="false" MaxLength="Max" />
-    <Property Name="Id" Type="Edm.Int64" Nullable="false" />
-    <Property Name="Tid" Type="Edm.String" Nullable="false" MaxLength="Max" />
-    <Property Name="Name" Type="Edm.String" Nullable="false" MaxLength="Max" />
-    <Property Name="Description" Type="Edm.String" MaxLength="Max" />
-    <Property Name="CreatedBy" Type="Edm.String" Nullable="false" MaxLength="Max" />
-    <Property Name="ModifiedBy" Type="Edm.String" Nullable="false" MaxLength="Max" />
-    <Property Name="Created" Type="Edm.DateTimeOffset" Nullable="false" />
-    <Property Name="Modified" Type="Edm.DateTimeOffset" Nullable="false" />
-    <Property Name="RowVersion" Type="Edm.Binary" MaxLength="Max" />
-  </EntityType>
   <EntityContainer Name="DiagnosticsData" m:IsDefaultEntityContainer="true">
-    <EntitySet Name="Endpoints" EntityType="LightSwitchApplication.Endpoint" />
     <EntitySet Name="AuditTrails" EntityType="LightSwitchApplication.AuditTrail" />
+    <EntitySet Name="Endpoints" EntityType="LightSwitchApplication.Endpoint" />
   </EntityContainer>
 </Schema>

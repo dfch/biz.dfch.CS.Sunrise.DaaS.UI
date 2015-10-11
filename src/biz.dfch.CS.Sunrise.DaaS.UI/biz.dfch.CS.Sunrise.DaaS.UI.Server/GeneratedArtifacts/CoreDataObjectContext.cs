@@ -19,18 +19,18 @@ using System.Xml.Serialization;
 [assembly: EdmSchemaAttribute()]
 #region EDM Relationship Metadata
 
-[assembly: EdmRelationshipAttribute("LightSwitchApplication", "biz_dfch_CS_Sunrise_DaaS_Endpoints_OdataServices_Core_Order_Orde", "OrderItemsPartner", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(LightSwitchApplication.Implementation.Order), "OrderItems", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(LightSwitchApplication.Implementation.OrderItem))]
 [assembly: EdmRelationshipAttribute("LightSwitchApplication", "biz_dfch_CS_Appclusive_Core_OdataServices_Core_Acl_Aces_biz_dfch", "AcesPartner", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(LightSwitchApplication.Implementation.Acl), "Aces", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(LightSwitchApplication.Implementation.Ace))]
 [assembly: EdmRelationshipAttribute("LightSwitchApplication", "biz_dfch_CS_Appclusive_Core_OdataServices_Core_Ace_Acl_biz_dfch_", "Acl", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(LightSwitchApplication.Implementation.Acl), "AclPartner", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(LightSwitchApplication.Implementation.Ace))]
+[assembly: EdmRelationshipAttribute("LightSwitchApplication", "biz_dfch_CS_Appclusive_Core_OdataServices_Core_Cart_CartItems_bi", "CartItemsPartner", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(LightSwitchApplication.Implementation.Cart), "CartItems", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(LightSwitchApplication.Implementation.CartItem))]
+[assembly: EdmRelationshipAttribute("LightSwitchApplication", "biz_dfch_CS_Appclusive_Core_OdataServices_Core_Catalogue_Catalog", "CatalogueItemsPartner", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(LightSwitchApplication.Implementation.Catalogue), "CatalogueItems", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(LightSwitchApplication.Implementation.CatalogueItem1))]
+[assembly: EdmRelationshipAttribute("LightSwitchApplication", "biz_dfch_CS_Appclusive_Core_OdataServices_Core_CatalogueItem_Cat", "Catalogue", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(LightSwitchApplication.Implementation.Catalogue), "CataloguePartner", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(LightSwitchApplication.Implementation.CatalogueItem1))]
+[assembly: EdmRelationshipAttribute("LightSwitchApplication", "biz_dfch_CS_Appclusive_Core_OdataServices_Core_ManagementCredent", "ManagementUrisPartner", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(LightSwitchApplication.Implementation.ManagementCredential), "ManagementUris", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(LightSwitchApplication.Implementation.ManagementUri))]
 [assembly: EdmRelationshipAttribute("LightSwitchApplication", "biz_dfch_CS_Appclusive_Core_OdataServices_Core_Node_Children_biz", "ChildrenPartner", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(LightSwitchApplication.Implementation.Node), "Children", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(LightSwitchApplication.Implementation.Node))]
 [assembly: EdmRelationshipAttribute("LightSwitchApplication", "biz_dfch_CS_Appclusive_Core_OdataServices_Core_Node_IncomingLink", "IncomingLinksPartner", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(LightSwitchApplication.Implementation.Node), "IncomingLinks", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(LightSwitchApplication.Implementation.Link))]
 [assembly: EdmRelationshipAttribute("LightSwitchApplication", "biz_dfch_CS_Appclusive_Core_OdataServices_Core_Node_OutgoingLink", "OutgoingLinksPartner", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(LightSwitchApplication.Implementation.Node), "OutgoingLinks", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(LightSwitchApplication.Implementation.Link))]
 [assembly: EdmRelationshipAttribute("LightSwitchApplication", "biz_dfch_CS_Appclusive_Core_OdataServices_Core_Link_Source_biz_d", "Source", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(LightSwitchApplication.Implementation.Node), "SourcePartner", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(LightSwitchApplication.Implementation.Link))]
 [assembly: EdmRelationshipAttribute("LightSwitchApplication", "biz_dfch_CS_Appclusive_Core_OdataServices_Core_Link_Destination_", "Destination", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(LightSwitchApplication.Implementation.Node), "DestinationPartner", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(LightSwitchApplication.Implementation.Link))]
-[assembly: EdmRelationshipAttribute("LightSwitchApplication", "biz_dfch_CS_Appclusive_Core_OdataServices_Core_ManagementCredent", "ManagementUrisPartner", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(LightSwitchApplication.Implementation.ManagementCredential), "ManagementUris", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(LightSwitchApplication.Implementation.ManagementUri))]
-[assembly: EdmRelationshipAttribute("LightSwitchApplication", "biz_dfch_CS_Appclusive_Core_OdataServices_Core_Catalogue_Catalog", "CatalogueItemsPartner", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(LightSwitchApplication.Implementation.Catalogue), "CatalogueItems", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(LightSwitchApplication.Implementation.CatalogueItem1))]
-[assembly: EdmRelationshipAttribute("LightSwitchApplication", "biz_dfch_CS_Appclusive_Core_OdataServices_Core_CatalogueItem_Cat", "Catalogue", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(LightSwitchApplication.Implementation.Catalogue), "CataloguePartner", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(LightSwitchApplication.Implementation.CatalogueItem1))]
-[assembly: EdmRelationshipAttribute("LightSwitchApplication", "biz_dfch_CS_Appclusive_Core_OdataServices_Core_Cart_CartItems_bi", "CartItemsPartner", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(LightSwitchApplication.Implementation.Cart), "CartItems", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(LightSwitchApplication.Implementation.CartItem))]
+[assembly: EdmRelationshipAttribute("LightSwitchApplication", "biz_dfch_CS_Sunrise_DaaS_Endpoints_OdataServices_Core_Order_Orde", "OrderItemsPartner", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(LightSwitchApplication.Implementation.Order), "OrderItems", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(LightSwitchApplication.Implementation.OrderItem))]
 
 #endregion
 
@@ -98,6 +98,22 @@ namespace LightSwitchApplication.Implementation
         /// <summary>
         /// No Metadata Documentation available.
         /// </summary>
+        public ObjectSet<Acl> Acls
+        {
+            get
+            {
+                if ((_Acls == null))
+                {
+                    _Acls = base.CreateObjectSet<Acl>("Acls");
+                }
+                return _Acls;
+            }
+        }
+        private ObjectSet<Acl> _Acls;
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
         public ObjectSet<ActiveDirectoryUser> ActiveDirectoryUsers
         {
             get
@@ -130,6 +146,38 @@ namespace LightSwitchApplication.Implementation
         /// <summary>
         /// No Metadata Documentation available.
         /// </summary>
+        public ObjectSet<CartItem> CartItems
+        {
+            get
+            {
+                if ((_CartItems == null))
+                {
+                    _CartItems = base.CreateObjectSet<CartItem>("CartItems");
+                }
+                return _CartItems;
+            }
+        }
+        private ObjectSet<CartItem> _CartItems;
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        public ObjectSet<Cart> Carts
+        {
+            get
+            {
+                if ((_Carts == null))
+                {
+                    _Carts = base.CreateObjectSet<Cart>("Carts");
+                }
+                return _Carts;
+            }
+        }
+        private ObjectSet<Cart> _Carts;
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
         public ObjectSet<CatalogueItem1> CatalogueItems
         {
             get
@@ -142,6 +190,54 @@ namespace LightSwitchApplication.Implementation
             }
         }
         private ObjectSet<CatalogueItem1> _CatalogueItems;
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        public ObjectSet<Catalogue> Catalogues
+        {
+            get
+            {
+                if ((_Catalogues == null))
+                {
+                    _Catalogues = base.CreateObjectSet<Catalogue>("Catalogues");
+                }
+                return _Catalogues;
+            }
+        }
+        private ObjectSet<Catalogue> _Catalogues;
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        public ObjectSet<EntityType> EntityTypes
+        {
+            get
+            {
+                if ((_EntityTypes == null))
+                {
+                    _EntityTypes = base.CreateObjectSet<EntityType>("EntityTypes");
+                }
+                return _EntityTypes;
+            }
+        }
+        private ObjectSet<EntityType> _EntityTypes;
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        public ObjectSet<Gate> Gates
+        {
+            get
+            {
+                if ((_Gates == null))
+                {
+                    _Gates = base.CreateObjectSet<Gate>("Gates");
+                }
+                return _Gates;
+            }
+        }
+        private ObjectSet<Gate> _Gates;
     
         /// <summary>
         /// No Metadata Documentation available.
@@ -178,6 +274,22 @@ namespace LightSwitchApplication.Implementation
         /// <summary>
         /// No Metadata Documentation available.
         /// </summary>
+        public ObjectSet<Link> Links
+        {
+            get
+            {
+                if ((_Links == null))
+                {
+                    _Links = base.CreateObjectSet<Link>("Links");
+                }
+                return _Links;
+            }
+        }
+        private ObjectSet<Link> _Links;
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
         public ObjectSet<ManagementCredential> ManagementCredentials
         {
             get
@@ -190,6 +302,38 @@ namespace LightSwitchApplication.Implementation
             }
         }
         private ObjectSet<ManagementCredential> _ManagementCredentials;
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        public ObjectSet<ManagementUri> ManagementUris
+        {
+            get
+            {
+                if ((_ManagementUris == null))
+                {
+                    _ManagementUris = base.CreateObjectSet<ManagementUri>("ManagementUris");
+                }
+                return _ManagementUris;
+            }
+        }
+        private ObjectSet<ManagementUri> _ManagementUris;
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        public ObjectSet<Node> Nodes
+        {
+            get
+            {
+                if ((_Nodes == null))
+                {
+                    _Nodes = base.CreateObjectSet<Node>("Nodes");
+                }
+                return _Nodes;
+            }
+        }
+        private ObjectSet<Node> _Nodes;
     
         /// <summary>
         /// No Metadata Documentation available.
@@ -222,150 +366,6 @@ namespace LightSwitchApplication.Implementation
             }
         }
         private ObjectSet<Order> _Orders;
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        public ObjectSet<Gate> Gates
-        {
-            get
-            {
-                if ((_Gates == null))
-                {
-                    _Gates = base.CreateObjectSet<Gate>("Gates");
-                }
-                return _Gates;
-            }
-        }
-        private ObjectSet<Gate> _Gates;
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        public ObjectSet<Acl> Acls
-        {
-            get
-            {
-                if ((_Acls == null))
-                {
-                    _Acls = base.CreateObjectSet<Acl>("Acls");
-                }
-                return _Acls;
-            }
-        }
-        private ObjectSet<Acl> _Acls;
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        public ObjectSet<EntityType> EntityTypes
-        {
-            get
-            {
-                if ((_EntityTypes == null))
-                {
-                    _EntityTypes = base.CreateObjectSet<EntityType>("EntityTypes");
-                }
-                return _EntityTypes;
-            }
-        }
-        private ObjectSet<EntityType> _EntityTypes;
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        public ObjectSet<Node> Nodes
-        {
-            get
-            {
-                if ((_Nodes == null))
-                {
-                    _Nodes = base.CreateObjectSet<Node>("Nodes");
-                }
-                return _Nodes;
-            }
-        }
-        private ObjectSet<Node> _Nodes;
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        public ObjectSet<Link> Links
-        {
-            get
-            {
-                if ((_Links == null))
-                {
-                    _Links = base.CreateObjectSet<Link>("Links");
-                }
-                return _Links;
-            }
-        }
-        private ObjectSet<Link> _Links;
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        public ObjectSet<ManagementUri> ManagementUris
-        {
-            get
-            {
-                if ((_ManagementUris == null))
-                {
-                    _ManagementUris = base.CreateObjectSet<ManagementUri>("ManagementUris");
-                }
-                return _ManagementUris;
-            }
-        }
-        private ObjectSet<ManagementUri> _ManagementUris;
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        public ObjectSet<Catalogue> Catalogues
-        {
-            get
-            {
-                if ((_Catalogues == null))
-                {
-                    _Catalogues = base.CreateObjectSet<Catalogue>("Catalogues");
-                }
-                return _Catalogues;
-            }
-        }
-        private ObjectSet<Catalogue> _Catalogues;
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        public ObjectSet<Cart> Carts
-        {
-            get
-            {
-                if ((_Carts == null))
-                {
-                    _Carts = base.CreateObjectSet<Cart>("Carts");
-                }
-                return _Carts;
-            }
-        }
-        private ObjectSet<Cart> _Carts;
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        public ObjectSet<CartItem> CartItems
-        {
-            get
-            {
-                if ((_CartItems == null))
-                {
-                    _CartItems = base.CreateObjectSet<CartItem>("CartItems");
-                }
-                return _CartItems;
-            }
-        }
-        private ObjectSet<CartItem> _CartItems;
 
         #endregion
 
@@ -377,6 +377,14 @@ namespace LightSwitchApplication.Implementation
         public void AddToAces(Ace ace)
         {
             base.AddObject("Aces", ace);
+        }
+    
+        /// <summary>
+        /// Deprecated Method for adding a new object to the Acls EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
+        /// </summary>
+        public void AddToAcls(Acl acl)
+        {
+            base.AddObject("Acls", acl);
         }
     
         /// <summary>
@@ -396,11 +404,51 @@ namespace LightSwitchApplication.Implementation
         }
     
         /// <summary>
+        /// Deprecated Method for adding a new object to the CartItems EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
+        /// </summary>
+        public void AddToCartItems(CartItem cartItem)
+        {
+            base.AddObject("CartItems", cartItem);
+        }
+    
+        /// <summary>
+        /// Deprecated Method for adding a new object to the Carts EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
+        /// </summary>
+        public void AddToCarts(Cart cart)
+        {
+            base.AddObject("Carts", cart);
+        }
+    
+        /// <summary>
         /// Deprecated Method for adding a new object to the CatalogueItems EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
         /// </summary>
         public void AddToCatalogueItems(CatalogueItem1 catalogueItem1)
         {
             base.AddObject("CatalogueItems", catalogueItem1);
+        }
+    
+        /// <summary>
+        /// Deprecated Method for adding a new object to the Catalogues EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
+        /// </summary>
+        public void AddToCatalogues(Catalogue catalogue)
+        {
+            base.AddObject("Catalogues", catalogue);
+        }
+    
+        /// <summary>
+        /// Deprecated Method for adding a new object to the EntityTypes EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
+        /// </summary>
+        public void AddToEntityTypes(EntityType entityType)
+        {
+            base.AddObject("EntityTypes", entityType);
+        }
+    
+        /// <summary>
+        /// Deprecated Method for adding a new object to the Gates EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
+        /// </summary>
+        public void AddToGates(Gate gate)
+        {
+            base.AddObject("Gates", gate);
         }
     
         /// <summary>
@@ -420,11 +468,35 @@ namespace LightSwitchApplication.Implementation
         }
     
         /// <summary>
+        /// Deprecated Method for adding a new object to the Links EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
+        /// </summary>
+        public void AddToLinks(Link link)
+        {
+            base.AddObject("Links", link);
+        }
+    
+        /// <summary>
         /// Deprecated Method for adding a new object to the ManagementCredentials EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
         /// </summary>
         public void AddToManagementCredentials(ManagementCredential managementCredential)
         {
             base.AddObject("ManagementCredentials", managementCredential);
+        }
+    
+        /// <summary>
+        /// Deprecated Method for adding a new object to the ManagementUris EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
+        /// </summary>
+        public void AddToManagementUris(ManagementUri managementUri)
+        {
+            base.AddObject("ManagementUris", managementUri);
+        }
+    
+        /// <summary>
+        /// Deprecated Method for adding a new object to the Nodes EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
+        /// </summary>
+        public void AddToNodes(Node node)
+        {
+            base.AddObject("Nodes", node);
         }
     
         /// <summary>
@@ -441,78 +513,6 @@ namespace LightSwitchApplication.Implementation
         public void AddToOrders(Order order)
         {
             base.AddObject("Orders", order);
-        }
-    
-        /// <summary>
-        /// Deprecated Method for adding a new object to the Gates EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
-        /// </summary>
-        public void AddToGates(Gate gate)
-        {
-            base.AddObject("Gates", gate);
-        }
-    
-        /// <summary>
-        /// Deprecated Method for adding a new object to the Acls EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
-        /// </summary>
-        public void AddToAcls(Acl acl)
-        {
-            base.AddObject("Acls", acl);
-        }
-    
-        /// <summary>
-        /// Deprecated Method for adding a new object to the EntityTypes EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
-        /// </summary>
-        public void AddToEntityTypes(EntityType entityType)
-        {
-            base.AddObject("EntityTypes", entityType);
-        }
-    
-        /// <summary>
-        /// Deprecated Method for adding a new object to the Nodes EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
-        /// </summary>
-        public void AddToNodes(Node node)
-        {
-            base.AddObject("Nodes", node);
-        }
-    
-        /// <summary>
-        /// Deprecated Method for adding a new object to the Links EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
-        /// </summary>
-        public void AddToLinks(Link link)
-        {
-            base.AddObject("Links", link);
-        }
-    
-        /// <summary>
-        /// Deprecated Method for adding a new object to the ManagementUris EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
-        /// </summary>
-        public void AddToManagementUris(ManagementUri managementUri)
-        {
-            base.AddObject("ManagementUris", managementUri);
-        }
-    
-        /// <summary>
-        /// Deprecated Method for adding a new object to the Catalogues EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
-        /// </summary>
-        public void AddToCatalogues(Catalogue catalogue)
-        {
-            base.AddObject("Catalogues", catalogue);
-        }
-    
-        /// <summary>
-        /// Deprecated Method for adding a new object to the Carts EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
-        /// </summary>
-        public void AddToCarts(Cart cart)
-        {
-            base.AddObject("Carts", cart);
-        }
-    
-        /// <summary>
-        /// Deprecated Method for adding a new object to the CartItems EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
-        /// </summary>
-        public void AddToCartItems(CartItem cartItem)
-        {
-            base.AddObject("CartItems", cartItem);
         }
 
         #endregion

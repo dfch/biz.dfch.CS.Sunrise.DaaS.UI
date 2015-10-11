@@ -1,9 +1,28 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" Namespace="DiagnosticsDataStore" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2008" xmlns="http://schemas.microsoft.com/ado/2009/02/edm/ssdl">
   <EntityContainer Name="DiagnosticsDataStore">
-    <EntitySet Name="Endpoints" EntityType="DiagnosticsDataStore.Endpoint" store:Type="Tables" Schema="dbo" Table="Endpoint" />
     <EntitySet Name="AuditTrails" EntityType="DiagnosticsDataStore.AuditTrail" store:Type="Tables" Schema="dbo" Table="AuditTrail" />
+    <EntitySet Name="Endpoints" EntityType="DiagnosticsDataStore.Endpoint" store:Type="Tables" Schema="dbo" Table="Endpoint" />
   </EntityContainer>
+  <EntityType Name="AuditTrail">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="EntityId" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="EntityType" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="EntityState" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Original" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Current" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Id" Type="bigint" Nullable="false" />
+    <Property Name="Tid" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Name" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Description" Type="nvarchar(max)" />
+    <Property Name="CreatedBy" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="ModifiedBy" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Created" Type="datetimeoffset" Nullable="false" />
+    <Property Name="Modified" Type="datetimeoffset" Nullable="false" />
+    <Property Name="RowVersion" Type="varbinary(max)" />
+  </EntityType>
   <EntityType Name="Endpoint">
     <Key>
       <PropertyRef Name="Id" />
@@ -22,25 +41,6 @@
     <Property Name="ModifiedBy" Type="nvarchar(max)" Nullable="false" />
     <Property Name="Address" Type="nvarchar(max)" Nullable="false" />
     <Property Name="Description" Type="nvarchar(max)" />
-    <Property Name="RowVersion" Type="varbinary(max)" />
-  </EntityType>
-  <EntityType Name="AuditTrail">
-    <Key>
-      <PropertyRef Name="Id" />
-    </Key>
-    <Property Name="EntityId" Type="nvarchar(max)" Nullable="false" />
-    <Property Name="EntityType" Type="nvarchar(max)" Nullable="false" />
-    <Property Name="EntityState" Type="nvarchar(max)" Nullable="false" />
-    <Property Name="Original" Type="nvarchar(max)" Nullable="false" />
-    <Property Name="Current" Type="nvarchar(max)" Nullable="false" />
-    <Property Name="Id" Type="bigint" Nullable="false" />
-    <Property Name="Tid" Type="nvarchar(max)" Nullable="false" />
-    <Property Name="Name" Type="nvarchar(max)" Nullable="false" />
-    <Property Name="Description" Type="nvarchar(max)" />
-    <Property Name="CreatedBy" Type="nvarchar(max)" Nullable="false" />
-    <Property Name="ModifiedBy" Type="nvarchar(max)" Nullable="false" />
-    <Property Name="Created" Type="datetimeoffset" Nullable="false" />
-    <Property Name="Modified" Type="datetimeoffset" Nullable="false" />
     <Property Name="RowVersion" Type="varbinary(max)" />
   </EntityType>
 </Schema>

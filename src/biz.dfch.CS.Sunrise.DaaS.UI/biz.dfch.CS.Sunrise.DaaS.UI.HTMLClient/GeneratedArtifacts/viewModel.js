@@ -52,6 +52,163 @@
         $Screen.call(this, dataWorkspace, "ApprovalView", parameters);
     }
 
+    function AuditTrailsList(parameters, dataWorkspace) {
+        /// <summary>
+        /// Represents the AuditTrailsList screen.
+        /// </summary>
+        /// <param name="parameters" type="Array">
+        /// An array of screen parameter values.
+        /// </param>
+        /// <param name="dataWorkspace" type="msls.application.DataWorkspace" optional="true">
+        /// An existing data workspace for this screen to use. By default, a new data workspace is created.
+        /// </param>
+        /// <field name="AuditTrails" type="msls.VisualCollection" elementType="msls.application.AuditTrail">
+        /// Gets the auditTrails for this screen.
+        /// </field>
+        /// <field name="details" type="msls.application.AuditTrailsList.Details">
+        /// Gets the details for this screen.
+        /// </field>
+        if (!dataWorkspace) {
+            dataWorkspace = new lightSwitchApplication.DataWorkspace();
+        }
+        $Screen.call(this, dataWorkspace, "AuditTrailsList", parameters);
+    }
+
+    function AuditTrailsView(parameters, dataWorkspace) {
+        /// <summary>
+        /// Represents the AuditTrailsView screen.
+        /// </summary>
+        /// <param name="parameters" type="Array">
+        /// An array of screen parameter values.
+        /// </param>
+        /// <param name="dataWorkspace" type="msls.application.DataWorkspace" optional="true">
+        /// An existing data workspace for this screen to use. By default, a new data workspace is created.
+        /// </param>
+        /// <field name="AuditTrail" type="msls.application.AuditTrail">
+        /// Gets or sets the auditTrail for this screen.
+        /// </field>
+        /// <field name="details" type="msls.application.AuditTrailsView.Details">
+        /// Gets the details for this screen.
+        /// </field>
+        if (!dataWorkspace) {
+            dataWorkspace = new lightSwitchApplication.DataWorkspace();
+        }
+        $Screen.call(this, dataWorkspace, "AuditTrailsView", parameters);
+    }
+
+    function CartEdit(parameters, dataWorkspace) {
+        /// <summary>
+        /// Represents the CartEdit screen.
+        /// </summary>
+        /// <param name="parameters" type="Array">
+        /// An array of screen parameter values.
+        /// </param>
+        /// <param name="dataWorkspace" type="msls.application.DataWorkspace" optional="true">
+        /// An existing data workspace for this screen to use. By default, a new data workspace is created.
+        /// </param>
+        /// <field name="Cart" type="msls.application.Cart">
+        /// Gets or sets the cart for this screen.
+        /// </field>
+        /// <field name="details" type="msls.application.CartEdit.Details">
+        /// Gets the details for this screen.
+        /// </field>
+        if (!dataWorkspace) {
+            dataWorkspace = new lightSwitchApplication.DataWorkspace();
+        }
+        $Screen.call(this, dataWorkspace, "CartEdit", parameters);
+    }
+
+    function CartItemEdit(parameters, dataWorkspace) {
+        /// <summary>
+        /// Represents the CartItemEdit screen.
+        /// </summary>
+        /// <param name="parameters" type="Array">
+        /// An array of screen parameter values.
+        /// </param>
+        /// <param name="dataWorkspace" type="msls.application.DataWorkspace" optional="true">
+        /// An existing data workspace for this screen to use. By default, a new data workspace is created.
+        /// </param>
+        /// <field name="CartItem" type="msls.application.CartItem">
+        /// Gets or sets the cartItem for this screen.
+        /// </field>
+        /// <field name="details" type="msls.application.CartItemEdit.Details">
+        /// Gets the details for this screen.
+        /// </field>
+        if (!dataWorkspace) {
+            dataWorkspace = new lightSwitchApplication.DataWorkspace();
+        }
+        $Screen.call(this, dataWorkspace, "CartItemEdit", parameters);
+    }
+
+    function CartItemView(parameters, dataWorkspace) {
+        /// <summary>
+        /// Represents the CartItemView screen.
+        /// </summary>
+        /// <param name="parameters" type="Array">
+        /// An array of screen parameter values.
+        /// </param>
+        /// <param name="dataWorkspace" type="msls.application.DataWorkspace" optional="true">
+        /// An existing data workspace for this screen to use. By default, a new data workspace is created.
+        /// </param>
+        /// <field name="CartItem" type="msls.application.CartItem">
+        /// Gets or sets the cartItem for this screen.
+        /// </field>
+        /// <field name="details" type="msls.application.CartItemView.Details">
+        /// Gets the details for this screen.
+        /// </field>
+        if (!dataWorkspace) {
+            dataWorkspace = new lightSwitchApplication.DataWorkspace();
+        }
+        $Screen.call(this, dataWorkspace, "CartItemView", parameters);
+    }
+
+    function CartsList(parameters, dataWorkspace) {
+        /// <summary>
+        /// Represents the CartsList screen.
+        /// </summary>
+        /// <param name="parameters" type="Array">
+        /// An array of screen parameter values.
+        /// </param>
+        /// <param name="dataWorkspace" type="msls.application.DataWorkspace" optional="true">
+        /// An existing data workspace for this screen to use. By default, a new data workspace is created.
+        /// </param>
+        /// <field name="Carts" type="msls.VisualCollection" elementType="msls.application.Cart">
+        /// Gets the carts for this screen.
+        /// </field>
+        /// <field name="details" type="msls.application.CartsList.Details">
+        /// Gets the details for this screen.
+        /// </field>
+        if (!dataWorkspace) {
+            dataWorkspace = new lightSwitchApplication.DataWorkspace();
+        }
+        $Screen.call(this, dataWorkspace, "CartsList", parameters);
+    }
+
+    function CartView(parameters, dataWorkspace) {
+        /// <summary>
+        /// Represents the CartView screen.
+        /// </summary>
+        /// <param name="parameters" type="Array">
+        /// An array of screen parameter values.
+        /// </param>
+        /// <param name="dataWorkspace" type="msls.application.DataWorkspace" optional="true">
+        /// An existing data workspace for this screen to use. By default, a new data workspace is created.
+        /// </param>
+        /// <field name="Cart" type="msls.application.Cart">
+        /// Gets or sets the cart for this screen.
+        /// </field>
+        /// <field name="CartItems" type="msls.VisualCollection" elementType="msls.application.CartItem">
+        /// Gets the cartItems for this screen.
+        /// </field>
+        /// <field name="details" type="msls.application.CartView.Details">
+        /// Gets the details for this screen.
+        /// </field>
+        if (!dataWorkspace) {
+            dataWorkspace = new lightSwitchApplication.DataWorkspace();
+        }
+        $Screen.call(this, dataWorkspace, "CartView", parameters);
+    }
+
     function CatalogueItemsList(parameters, dataWorkspace) {
         /// <summary>
         /// Represents the CatalogueItemsList screen.
@@ -96,6 +253,53 @@
         $Screen.call(this, dataWorkspace, "CatalogueItemView", parameters);
     }
 
+    function CataloguesList(parameters, dataWorkspace) {
+        /// <summary>
+        /// Represents the CataloguesList screen.
+        /// </summary>
+        /// <param name="parameters" type="Array">
+        /// An array of screen parameter values.
+        /// </param>
+        /// <param name="dataWorkspace" type="msls.application.DataWorkspace" optional="true">
+        /// An existing data workspace for this screen to use. By default, a new data workspace is created.
+        /// </param>
+        /// <field name="Catalogues" type="msls.VisualCollection" elementType="msls.application.Catalogue">
+        /// Gets the catalogues for this screen.
+        /// </field>
+        /// <field name="details" type="msls.application.CataloguesList.Details">
+        /// Gets the details for this screen.
+        /// </field>
+        if (!dataWorkspace) {
+            dataWorkspace = new lightSwitchApplication.DataWorkspace();
+        }
+        $Screen.call(this, dataWorkspace, "CataloguesList", parameters);
+    }
+
+    function CatalogueView(parameters, dataWorkspace) {
+        /// <summary>
+        /// Represents the CatalogueView screen.
+        /// </summary>
+        /// <param name="parameters" type="Array">
+        /// An array of screen parameter values.
+        /// </param>
+        /// <param name="dataWorkspace" type="msls.application.DataWorkspace" optional="true">
+        /// An existing data workspace for this screen to use. By default, a new data workspace is created.
+        /// </param>
+        /// <field name="Catalogue" type="msls.application.Catalogue">
+        /// Gets or sets the catalogue for this screen.
+        /// </field>
+        /// <field name="CatalogueItems" type="msls.VisualCollection" elementType="msls.application.CatalogueItem1">
+        /// Gets the catalogueItems for this screen.
+        /// </field>
+        /// <field name="details" type="msls.application.CatalogueView.Details">
+        /// Gets the details for this screen.
+        /// </field>
+        if (!dataWorkspace) {
+            dataWorkspace = new lightSwitchApplication.DataWorkspace();
+        }
+        $Screen.call(this, dataWorkspace, "CatalogueView", parameters);
+    }
+
     function EndpointsList(parameters, dataWorkspace) {
         /// <summary>
         /// Represents the EndpointsList screen.
@@ -138,6 +342,94 @@
             dataWorkspace = new lightSwitchApplication.DataWorkspace();
         }
         $Screen.call(this, dataWorkspace, "EndpointView", parameters);
+    }
+
+    function GateAdd(parameters, dataWorkspace) {
+        /// <summary>
+        /// Represents the GateAdd screen.
+        /// </summary>
+        /// <param name="parameters" type="Array">
+        /// An array of screen parameter values.
+        /// </param>
+        /// <param name="dataWorkspace" type="msls.application.DataWorkspace" optional="true">
+        /// An existing data workspace for this screen to use. By default, a new data workspace is created.
+        /// </param>
+        /// <field name="Gate" type="msls.application.Gate">
+        /// Gets or sets the gate for this screen.
+        /// </field>
+        /// <field name="details" type="msls.application.GateAdd.Details">
+        /// Gets the details for this screen.
+        /// </field>
+        if (!dataWorkspace) {
+            dataWorkspace = new lightSwitchApplication.DataWorkspace();
+        }
+        $Screen.call(this, dataWorkspace, "GateAdd", parameters);
+    }
+
+    function GateEdit(parameters, dataWorkspace) {
+        /// <summary>
+        /// Represents the GateEdit screen.
+        /// </summary>
+        /// <param name="parameters" type="Array">
+        /// An array of screen parameter values.
+        /// </param>
+        /// <param name="dataWorkspace" type="msls.application.DataWorkspace" optional="true">
+        /// An existing data workspace for this screen to use. By default, a new data workspace is created.
+        /// </param>
+        /// <field name="Gate" type="msls.application.Gate">
+        /// Gets or sets the gate for this screen.
+        /// </field>
+        /// <field name="details" type="msls.application.GateEdit.Details">
+        /// Gets the details for this screen.
+        /// </field>
+        if (!dataWorkspace) {
+            dataWorkspace = new lightSwitchApplication.DataWorkspace();
+        }
+        $Screen.call(this, dataWorkspace, "GateEdit", parameters);
+    }
+
+    function GatesList(parameters, dataWorkspace) {
+        /// <summary>
+        /// Represents the GatesList screen.
+        /// </summary>
+        /// <param name="parameters" type="Array">
+        /// An array of screen parameter values.
+        /// </param>
+        /// <param name="dataWorkspace" type="msls.application.DataWorkspace" optional="true">
+        /// An existing data workspace for this screen to use. By default, a new data workspace is created.
+        /// </param>
+        /// <field name="Gates" type="msls.VisualCollection" elementType="msls.application.Gate">
+        /// Gets the gates for this screen.
+        /// </field>
+        /// <field name="details" type="msls.application.GatesList.Details">
+        /// Gets the details for this screen.
+        /// </field>
+        if (!dataWorkspace) {
+            dataWorkspace = new lightSwitchApplication.DataWorkspace();
+        }
+        $Screen.call(this, dataWorkspace, "GatesList", parameters);
+    }
+
+    function GateView(parameters, dataWorkspace) {
+        /// <summary>
+        /// Represents the GateView screen.
+        /// </summary>
+        /// <param name="parameters" type="Array">
+        /// An array of screen parameter values.
+        /// </param>
+        /// <param name="dataWorkspace" type="msls.application.DataWorkspace" optional="true">
+        /// An existing data workspace for this screen to use. By default, a new data workspace is created.
+        /// </param>
+        /// <field name="Gate" type="msls.application.Gate">
+        /// Gets or sets the gate for this screen.
+        /// </field>
+        /// <field name="details" type="msls.application.GateView.Details">
+        /// Gets the details for this screen.
+        /// </field>
+        if (!dataWorkspace) {
+            dataWorkspace = new lightSwitchApplication.DataWorkspace();
+        }
+        $Screen.call(this, dataWorkspace, "GateView", parameters);
     }
 
     function Home(parameters, dataWorkspace) {
@@ -289,6 +581,59 @@
             dataWorkspace = new lightSwitchApplication.DataWorkspace();
         }
         $Screen.call(this, dataWorkspace, "KeyNameValueView", parameters);
+    }
+
+    function NodesList(parameters, dataWorkspace) {
+        /// <summary>
+        /// Represents the NodesList screen.
+        /// </summary>
+        /// <param name="parameters" type="Array">
+        /// An array of screen parameter values.
+        /// </param>
+        /// <param name="dataWorkspace" type="msls.application.DataWorkspace" optional="true">
+        /// An existing data workspace for this screen to use. By default, a new data workspace is created.
+        /// </param>
+        /// <field name="Nodes" type="msls.VisualCollection" elementType="msls.application.Node">
+        /// Gets the nodes for this screen.
+        /// </field>
+        /// <field name="details" type="msls.application.NodesList.Details">
+        /// Gets the details for this screen.
+        /// </field>
+        if (!dataWorkspace) {
+            dataWorkspace = new lightSwitchApplication.DataWorkspace();
+        }
+        $Screen.call(this, dataWorkspace, "NodesList", parameters);
+    }
+
+    function NodeView(parameters, dataWorkspace) {
+        /// <summary>
+        /// Represents the NodeView screen.
+        /// </summary>
+        /// <param name="parameters" type="Array">
+        /// An array of screen parameter values.
+        /// </param>
+        /// <param name="dataWorkspace" type="msls.application.DataWorkspace" optional="true">
+        /// An existing data workspace for this screen to use. By default, a new data workspace is created.
+        /// </param>
+        /// <field name="Node" type="msls.application.Node">
+        /// Gets or sets the node for this screen.
+        /// </field>
+        /// <field name="Children" type="msls.VisualCollection" elementType="msls.application.Node">
+        /// Gets the children for this screen.
+        /// </field>
+        /// <field name="IncomingLinks" type="msls.VisualCollection" elementType="msls.application.Link">
+        /// Gets the incomingLinks for this screen.
+        /// </field>
+        /// <field name="OutgoingLinks" type="msls.VisualCollection" elementType="msls.application.Link">
+        /// Gets the outgoingLinks for this screen.
+        /// </field>
+        /// <field name="details" type="msls.application.NodeView.Details">
+        /// Gets the details for this screen.
+        /// </field>
+        if (!dataWorkspace) {
+            dataWorkspace = new lightSwitchApplication.DataWorkspace();
+        }
+        $Screen.call(this, dataWorkspace, "NodeView", parameters);
     }
 
     function OrderAdd(parameters, dataWorkspace) {
@@ -470,6 +815,65 @@
             { name: "deleteEntity" }
         ]),
 
+        AuditTrailsList: $defineScreen(AuditTrailsList, [
+            {
+                name: "AuditTrails", kind: "collection", elementType: lightSwitchApplication.AuditTrail,
+                createQuery: function () {
+                    return this.dataWorkspace.DiagnosticsData.AuditTrails;
+                }
+            }
+        ], [
+        ]),
+
+        AuditTrailsView: $defineScreen(AuditTrailsView, [
+            { name: "AuditTrail", kind: "local", type: lightSwitchApplication.AuditTrail }
+        ], [
+        ]),
+
+        CartEdit: $defineScreen(CartEdit, [
+            { name: "Cart", kind: "local", type: lightSwitchApplication.Cart }
+        ], [
+        ]),
+
+        CartItemEdit: $defineScreen(CartItemEdit, [
+            { name: "CartItem", kind: "local", type: lightSwitchApplication.CartItem }
+        ], [
+        ]),
+
+        CartItemView: $defineScreen(CartItemView, [
+            { name: "CartItem", kind: "local", type: lightSwitchApplication.CartItem }
+        ], [
+            { name: "deleteEntity" }
+        ]),
+
+        CartsList: $defineScreen(CartsList, [
+            {
+                name: "Carts", kind: "collection", elementType: lightSwitchApplication.Cart,
+                createQuery: function () {
+                    return this.dataWorkspace.CoreData.Carts;
+                }
+            }
+        ], [
+        ]),
+
+        CartView: $defineScreen(CartView, [
+            { name: "Cart", kind: "local", type: lightSwitchApplication.Cart },
+            {
+                name: "CartItems", kind: "collection", elementType: lightSwitchApplication.CartItem,
+                getNavigationProperty: function () {
+                    if (this.owner.Cart) {
+                        return this.owner.Cart.details.properties.CartItems;
+                    }
+                    return null;
+                },
+                appendQuery: function () {
+                    return this;
+                }
+            }
+        ], [
+            { name: "deleteEntity" }
+        ]),
+
         CatalogueItemsList: $defineScreen(CatalogueItemsList, [
             {
                 name: "CatalogueItems", kind: "collection", elementType: lightSwitchApplication.CatalogueItem1,
@@ -486,6 +890,33 @@
             { name: "deleteEntity" }
         ]),
 
+        CataloguesList: $defineScreen(CataloguesList, [
+            {
+                name: "Catalogues", kind: "collection", elementType: lightSwitchApplication.Catalogue,
+                createQuery: function () {
+                    return this.dataWorkspace.CoreData.Catalogues;
+                }
+            }
+        ], [
+        ]),
+
+        CatalogueView: $defineScreen(CatalogueView, [
+            { name: "Catalogue", kind: "local", type: lightSwitchApplication.Catalogue },
+            {
+                name: "CatalogueItems", kind: "collection", elementType: lightSwitchApplication.CatalogueItem1,
+                getNavigationProperty: function () {
+                    if (this.owner.Catalogue) {
+                        return this.owner.Catalogue.details.properties.CatalogueItems;
+                    }
+                    return null;
+                },
+                appendQuery: function () {
+                    return this;
+                }
+            }
+        ], [
+        ]),
+
         EndpointsList: $defineScreen(EndpointsList, [
             {
                 name: "Endpoints", kind: "collection", elementType: lightSwitchApplication.Endpoint,
@@ -498,6 +929,32 @@
 
         EndpointView: $defineScreen(EndpointView, [
             { name: "Endpoint", kind: "local", type: lightSwitchApplication.Endpoint }
+        ], [
+            { name: "deleteEntity" }
+        ]),
+
+        GateAdd: $defineScreen(GateAdd, [
+            { name: "Gate", kind: "local", type: lightSwitchApplication.Gate }
+        ], [
+        ]),
+
+        GateEdit: $defineScreen(GateEdit, [
+            { name: "Gate", kind: "local", type: lightSwitchApplication.Gate }
+        ], [
+        ]),
+
+        GatesList: $defineScreen(GatesList, [
+            {
+                name: "Gates", kind: "collection", elementType: lightSwitchApplication.Gate,
+                createQuery: function () {
+                    return this.dataWorkspace.CoreData.Gates;
+                }
+            }
+        ], [
+        ]),
+
+        GateView: $defineScreen(GateView, [
+            { name: "Gate", kind: "local", type: lightSwitchApplication.Gate }
         ], [
             { name: "deleteEntity" }
         ]),
@@ -547,6 +1004,57 @@
             { name: "KeyNameValue", kind: "local", type: lightSwitchApplication.KeyNameValue }
         ], [
             { name: "deleteEntity" }
+        ]),
+
+        NodesList: $defineScreen(NodesList, [
+            {
+                name: "Nodes", kind: "collection", elementType: lightSwitchApplication.Node,
+                createQuery: function () {
+                    return this.dataWorkspace.CoreData.Nodes;
+                }
+            }
+        ], [
+        ]),
+
+        NodeView: $defineScreen(NodeView, [
+            { name: "Node", kind: "local", type: lightSwitchApplication.Node },
+            {
+                name: "Children", kind: "collection", elementType: lightSwitchApplication.Node,
+                getNavigationProperty: function () {
+                    if (this.owner.Node) {
+                        return this.owner.Node.details.properties.Children;
+                    }
+                    return null;
+                },
+                appendQuery: function () {
+                    return this;
+                }
+            },
+            {
+                name: "IncomingLinks", kind: "collection", elementType: lightSwitchApplication.Link,
+                getNavigationProperty: function () {
+                    if (this.owner.Node) {
+                        return this.owner.Node.details.properties.IncomingLinks;
+                    }
+                    return null;
+                },
+                appendQuery: function () {
+                    return this;
+                }
+            },
+            {
+                name: "OutgoingLinks", kind: "collection", elementType: lightSwitchApplication.Link,
+                getNavigationProperty: function () {
+                    if (this.owner.Node) {
+                        return this.owner.Node.details.properties.OutgoingLinks;
+                    }
+                    return null;
+                },
+                appendQuery: function () {
+                    return this;
+                }
+            }
+        ], [
         ]),
 
         OrderAdd: $defineScreen(OrderAdd, [
@@ -633,6 +1141,90 @@
             return lightSwitchApplication.showScreen("ApprovalView", parameters, options);
         }),
 
+        showAuditTrailsList: $defineShowScreen(function showAuditTrailsList(options) {
+            /// <summary>
+            /// Asynchronously navigates forward to the AuditTrailsList screen.
+            /// </summary>
+            /// <param name="options" optional="true">
+            /// An object that provides one or more of the following options:<br/>- beforeShown: a function that is called after boundary behavior has been applied but before the screen is shown.<br/>+ Signature: beforeShown(screen)<br/>- afterClosed: a function that is called after boundary behavior has been applied and the screen has been closed.<br/>+ Signature: afterClosed(screen, action : msls.NavigateBackAction)
+            /// </param>
+            /// <returns type="WinJS.Promise" />
+            var parameters = Array.prototype.slice.call(arguments, 0, 0);
+            return lightSwitchApplication.showScreen("AuditTrailsList", parameters, options);
+        }),
+
+        showAuditTrailsView: $defineShowScreen(function showAuditTrailsView(AuditTrail, options) {
+            /// <summary>
+            /// Asynchronously navigates forward to the AuditTrailsView screen.
+            /// </summary>
+            /// <param name="options" optional="true">
+            /// An object that provides one or more of the following options:<br/>- beforeShown: a function that is called after boundary behavior has been applied but before the screen is shown.<br/>+ Signature: beforeShown(screen)<br/>- afterClosed: a function that is called after boundary behavior has been applied and the screen has been closed.<br/>+ Signature: afterClosed(screen, action : msls.NavigateBackAction)
+            /// </param>
+            /// <returns type="WinJS.Promise" />
+            var parameters = Array.prototype.slice.call(arguments, 0, 1);
+            return lightSwitchApplication.showScreen("AuditTrailsView", parameters, options);
+        }),
+
+        showCartEdit: $defineShowScreen(function showCartEdit(Cart, options) {
+            /// <summary>
+            /// Asynchronously navigates forward to the CartEdit screen.
+            /// </summary>
+            /// <param name="options" optional="true">
+            /// An object that provides one or more of the following options:<br/>- beforeShown: a function that is called after boundary behavior has been applied but before the screen is shown.<br/>+ Signature: beforeShown(screen)<br/>- afterClosed: a function that is called after boundary behavior has been applied and the screen has been closed.<br/>+ Signature: afterClosed(screen, action : msls.NavigateBackAction)
+            /// </param>
+            /// <returns type="WinJS.Promise" />
+            var parameters = Array.prototype.slice.call(arguments, 0, 1);
+            return lightSwitchApplication.showScreen("CartEdit", parameters, options);
+        }),
+
+        showCartItemEdit: $defineShowScreen(function showCartItemEdit(CartItem, options) {
+            /// <summary>
+            /// Asynchronously navigates forward to the CartItemEdit screen.
+            /// </summary>
+            /// <param name="options" optional="true">
+            /// An object that provides one or more of the following options:<br/>- beforeShown: a function that is called after boundary behavior has been applied but before the screen is shown.<br/>+ Signature: beforeShown(screen)<br/>- afterClosed: a function that is called after boundary behavior has been applied and the screen has been closed.<br/>+ Signature: afterClosed(screen, action : msls.NavigateBackAction)
+            /// </param>
+            /// <returns type="WinJS.Promise" />
+            var parameters = Array.prototype.slice.call(arguments, 0, 1);
+            return lightSwitchApplication.showScreen("CartItemEdit", parameters, options);
+        }),
+
+        showCartItemView: $defineShowScreen(function showCartItemView(CartItem, options) {
+            /// <summary>
+            /// Asynchronously navigates forward to the CartItemView screen.
+            /// </summary>
+            /// <param name="options" optional="true">
+            /// An object that provides one or more of the following options:<br/>- beforeShown: a function that is called after boundary behavior has been applied but before the screen is shown.<br/>+ Signature: beforeShown(screen)<br/>- afterClosed: a function that is called after boundary behavior has been applied and the screen has been closed.<br/>+ Signature: afterClosed(screen, action : msls.NavigateBackAction)
+            /// </param>
+            /// <returns type="WinJS.Promise" />
+            var parameters = Array.prototype.slice.call(arguments, 0, 1);
+            return lightSwitchApplication.showScreen("CartItemView", parameters, options);
+        }),
+
+        showCartsList: $defineShowScreen(function showCartsList(options) {
+            /// <summary>
+            /// Asynchronously navigates forward to the CartsList screen.
+            /// </summary>
+            /// <param name="options" optional="true">
+            /// An object that provides one or more of the following options:<br/>- beforeShown: a function that is called after boundary behavior has been applied but before the screen is shown.<br/>+ Signature: beforeShown(screen)<br/>- afterClosed: a function that is called after boundary behavior has been applied and the screen has been closed.<br/>+ Signature: afterClosed(screen, action : msls.NavigateBackAction)
+            /// </param>
+            /// <returns type="WinJS.Promise" />
+            var parameters = Array.prototype.slice.call(arguments, 0, 0);
+            return lightSwitchApplication.showScreen("CartsList", parameters, options);
+        }),
+
+        showCartView: $defineShowScreen(function showCartView(Cart, options) {
+            /// <summary>
+            /// Asynchronously navigates forward to the CartView screen.
+            /// </summary>
+            /// <param name="options" optional="true">
+            /// An object that provides one or more of the following options:<br/>- beforeShown: a function that is called after boundary behavior has been applied but before the screen is shown.<br/>+ Signature: beforeShown(screen)<br/>- afterClosed: a function that is called after boundary behavior has been applied and the screen has been closed.<br/>+ Signature: afterClosed(screen, action : msls.NavigateBackAction)
+            /// </param>
+            /// <returns type="WinJS.Promise" />
+            var parameters = Array.prototype.slice.call(arguments, 0, 1);
+            return lightSwitchApplication.showScreen("CartView", parameters, options);
+        }),
+
         showCatalogueItemsList: $defineShowScreen(function showCatalogueItemsList(options) {
             /// <summary>
             /// Asynchronously navigates forward to the CatalogueItemsList screen.
@@ -657,6 +1249,30 @@
             return lightSwitchApplication.showScreen("CatalogueItemView", parameters, options);
         }),
 
+        showCataloguesList: $defineShowScreen(function showCataloguesList(options) {
+            /// <summary>
+            /// Asynchronously navigates forward to the CataloguesList screen.
+            /// </summary>
+            /// <param name="options" optional="true">
+            /// An object that provides one or more of the following options:<br/>- beforeShown: a function that is called after boundary behavior has been applied but before the screen is shown.<br/>+ Signature: beforeShown(screen)<br/>- afterClosed: a function that is called after boundary behavior has been applied and the screen has been closed.<br/>+ Signature: afterClosed(screen, action : msls.NavigateBackAction)
+            /// </param>
+            /// <returns type="WinJS.Promise" />
+            var parameters = Array.prototype.slice.call(arguments, 0, 0);
+            return lightSwitchApplication.showScreen("CataloguesList", parameters, options);
+        }),
+
+        showCatalogueView: $defineShowScreen(function showCatalogueView(Catalogue, options) {
+            /// <summary>
+            /// Asynchronously navigates forward to the CatalogueView screen.
+            /// </summary>
+            /// <param name="options" optional="true">
+            /// An object that provides one or more of the following options:<br/>- beforeShown: a function that is called after boundary behavior has been applied but before the screen is shown.<br/>+ Signature: beforeShown(screen)<br/>- afterClosed: a function that is called after boundary behavior has been applied and the screen has been closed.<br/>+ Signature: afterClosed(screen, action : msls.NavigateBackAction)
+            /// </param>
+            /// <returns type="WinJS.Promise" />
+            var parameters = Array.prototype.slice.call(arguments, 0, 1);
+            return lightSwitchApplication.showScreen("CatalogueView", parameters, options);
+        }),
+
         showEndpointsList: $defineShowScreen(function showEndpointsList(options) {
             /// <summary>
             /// Asynchronously navigates forward to the EndpointsList screen.
@@ -679,6 +1295,54 @@
             /// <returns type="WinJS.Promise" />
             var parameters = Array.prototype.slice.call(arguments, 0, 1);
             return lightSwitchApplication.showScreen("EndpointView", parameters, options);
+        }),
+
+        showGateAdd: $defineShowScreen(function showGateAdd(Gate, options) {
+            /// <summary>
+            /// Asynchronously navigates forward to the GateAdd screen.
+            /// </summary>
+            /// <param name="options" optional="true">
+            /// An object that provides one or more of the following options:<br/>- beforeShown: a function that is called after boundary behavior has been applied but before the screen is shown.<br/>+ Signature: beforeShown(screen)<br/>- afterClosed: a function that is called after boundary behavior has been applied and the screen has been closed.<br/>+ Signature: afterClosed(screen, action : msls.NavigateBackAction)
+            /// </param>
+            /// <returns type="WinJS.Promise" />
+            var parameters = Array.prototype.slice.call(arguments, 0, 1);
+            return lightSwitchApplication.showScreen("GateAdd", parameters, options);
+        }),
+
+        showGateEdit: $defineShowScreen(function showGateEdit(Gate, options) {
+            /// <summary>
+            /// Asynchronously navigates forward to the GateEdit screen.
+            /// </summary>
+            /// <param name="options" optional="true">
+            /// An object that provides one or more of the following options:<br/>- beforeShown: a function that is called after boundary behavior has been applied but before the screen is shown.<br/>+ Signature: beforeShown(screen)<br/>- afterClosed: a function that is called after boundary behavior has been applied and the screen has been closed.<br/>+ Signature: afterClosed(screen, action : msls.NavigateBackAction)
+            /// </param>
+            /// <returns type="WinJS.Promise" />
+            var parameters = Array.prototype.slice.call(arguments, 0, 1);
+            return lightSwitchApplication.showScreen("GateEdit", parameters, options);
+        }),
+
+        showGatesList: $defineShowScreen(function showGatesList(options) {
+            /// <summary>
+            /// Asynchronously navigates forward to the GatesList screen.
+            /// </summary>
+            /// <param name="options" optional="true">
+            /// An object that provides one or more of the following options:<br/>- beforeShown: a function that is called after boundary behavior has been applied but before the screen is shown.<br/>+ Signature: beforeShown(screen)<br/>- afterClosed: a function that is called after boundary behavior has been applied and the screen has been closed.<br/>+ Signature: afterClosed(screen, action : msls.NavigateBackAction)
+            /// </param>
+            /// <returns type="WinJS.Promise" />
+            var parameters = Array.prototype.slice.call(arguments, 0, 0);
+            return lightSwitchApplication.showScreen("GatesList", parameters, options);
+        }),
+
+        showGateView: $defineShowScreen(function showGateView(Gate, options) {
+            /// <summary>
+            /// Asynchronously navigates forward to the GateView screen.
+            /// </summary>
+            /// <param name="options" optional="true">
+            /// An object that provides one or more of the following options:<br/>- beforeShown: a function that is called after boundary behavior has been applied but before the screen is shown.<br/>+ Signature: beforeShown(screen)<br/>- afterClosed: a function that is called after boundary behavior has been applied and the screen has been closed.<br/>+ Signature: afterClosed(screen, action : msls.NavigateBackAction)
+            /// </param>
+            /// <returns type="WinJS.Promise" />
+            var parameters = Array.prototype.slice.call(arguments, 0, 1);
+            return lightSwitchApplication.showScreen("GateView", parameters, options);
         }),
 
         showHome: $defineShowScreen(function showHome(options) {
@@ -763,6 +1427,30 @@
             /// <returns type="WinJS.Promise" />
             var parameters = Array.prototype.slice.call(arguments, 0, 1);
             return lightSwitchApplication.showScreen("KeyNameValueView", parameters, options);
+        }),
+
+        showNodesList: $defineShowScreen(function showNodesList(options) {
+            /// <summary>
+            /// Asynchronously navigates forward to the NodesList screen.
+            /// </summary>
+            /// <param name="options" optional="true">
+            /// An object that provides one or more of the following options:<br/>- beforeShown: a function that is called after boundary behavior has been applied but before the screen is shown.<br/>+ Signature: beforeShown(screen)<br/>- afterClosed: a function that is called after boundary behavior has been applied and the screen has been closed.<br/>+ Signature: afterClosed(screen, action : msls.NavigateBackAction)
+            /// </param>
+            /// <returns type="WinJS.Promise" />
+            var parameters = Array.prototype.slice.call(arguments, 0, 0);
+            return lightSwitchApplication.showScreen("NodesList", parameters, options);
+        }),
+
+        showNodeView: $defineShowScreen(function showNodeView(Node, options) {
+            /// <summary>
+            /// Asynchronously navigates forward to the NodeView screen.
+            /// </summary>
+            /// <param name="options" optional="true">
+            /// An object that provides one or more of the following options:<br/>- beforeShown: a function that is called after boundary behavior has been applied but before the screen is shown.<br/>+ Signature: beforeShown(screen)<br/>- afterClosed: a function that is called after boundary behavior has been applied and the screen has been closed.<br/>+ Signature: afterClosed(screen, action : msls.NavigateBackAction)
+            /// </param>
+            /// <returns type="WinJS.Promise" />
+            var parameters = Array.prototype.slice.call(arguments, 0, 1);
+            return lightSwitchApplication.showScreen("NodeView", parameters, options);
         }),
 
         showOrderAdd: $defineShowScreen(function showOrderAdd(Order, options) {

@@ -18,6 +18,21 @@
     <Property Name="RowVersion" Type="Edm.Binary" MaxLength="Max" />
     <NavigationProperty Name="Acl" Relationship="LightSwitchApplication.biz_dfch_CS_Appclusive_Core_OdataServices_Core_Ace_Acl_biz_dfch_" ToRole="Acl" FromRole="AclPartner" />
   </EntityType>
+  <EntityType Name="Acl">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Edm.Int64" Nullable="false" />
+    <Property Name="Tid" Type="Edm.String" Nullable="false" MaxLength="Max" />
+    <Property Name="Name" Type="Edm.String" Nullable="false" MaxLength="Max" />
+    <Property Name="Description" Type="Edm.String" MaxLength="Max" />
+    <Property Name="CreatedBy" Type="Edm.String" Nullable="false" MaxLength="Max" />
+    <Property Name="ModifiedBy" Type="Edm.String" Nullable="false" MaxLength="Max" />
+    <Property Name="Created" Type="Edm.DateTimeOffset" Nullable="false" />
+    <Property Name="Modified" Type="Edm.DateTimeOffset" Nullable="false" />
+    <Property Name="RowVersion" Type="Edm.Binary" MaxLength="Max" />
+    <NavigationProperty Name="Aces" Relationship="LightSwitchApplication.biz_dfch_CS_Appclusive_Core_OdataServices_Core_Acl_Aces_biz_dfch" ToRole="Aces" FromRole="AcesPartner" />
+  </EntityType>
   <EntityType Name="ActiveDirectoryUser">
     <Key>
       <PropertyRef Name="cn" />
@@ -59,6 +74,38 @@
     <Property Name="Status" Type="Edm.String" MaxLength="Max" />
     <Property Name="RowVersion" Type="Edm.Binary" MaxLength="Max" />
   </EntityType>
+  <EntityType Name="CartItem">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="CartId" Type="Edm.Int64" Nullable="false" />
+    <Property Name="Quantity" Type="Edm.Int32" Nullable="false" />
+    <Property Name="CatalogueItemId" Type="Edm.Int64" Nullable="false" />
+    <Property Name="Id" Type="Edm.Int64" Nullable="false" />
+    <Property Name="Tid" Type="Edm.String" Nullable="false" MaxLength="Max" />
+    <Property Name="Name" Type="Edm.String" Nullable="false" MaxLength="Max" />
+    <Property Name="Description" Type="Edm.String" MaxLength="Max" />
+    <Property Name="CreatedBy" Type="Edm.String" Nullable="false" MaxLength="Max" />
+    <Property Name="ModifiedBy" Type="Edm.String" Nullable="false" MaxLength="Max" />
+    <Property Name="Created" Type="Edm.DateTimeOffset" Nullable="false" />
+    <Property Name="Modified" Type="Edm.DateTimeOffset" Nullable="false" />
+    <Property Name="RowVersion" Type="Edm.Binary" MaxLength="Max" />
+  </EntityType>
+  <EntityType Name="Cart">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Edm.Int64" Nullable="false" />
+    <Property Name="Tid" Type="Edm.String" Nullable="false" MaxLength="Max" />
+    <Property Name="Name" Type="Edm.String" Nullable="false" MaxLength="Max" />
+    <Property Name="Description" Type="Edm.String" MaxLength="Max" />
+    <Property Name="CreatedBy" Type="Edm.String" Nullable="false" MaxLength="Max" />
+    <Property Name="ModifiedBy" Type="Edm.String" Nullable="false" MaxLength="Max" />
+    <Property Name="Created" Type="Edm.DateTimeOffset" Nullable="false" />
+    <Property Name="Modified" Type="Edm.DateTimeOffset" Nullable="false" />
+    <Property Name="RowVersion" Type="Edm.Binary" MaxLength="Max" />
+    <NavigationProperty Name="CartItems" Relationship="LightSwitchApplication.biz_dfch_CS_Appclusive_Core_OdataServices_Core_Cart_CartItems_bi" ToRole="CartItems" FromRole="CartItemsPartner" />
+  </EntityType>
   <EntityType Name="CatalogueItem1">
     <Key>
       <PropertyRef Name="Id" />
@@ -82,6 +129,55 @@
     <Property Name="Parameters" Type="Edm.String" MaxLength="Max" />
     <Property Name="RowVersion" Type="Edm.Binary" MaxLength="Max" />
     <NavigationProperty Name="Catalogue" Relationship="LightSwitchApplication.biz_dfch_CS_Appclusive_Core_OdataServices_Core_CatalogueItem_Cat" ToRole="Catalogue" FromRole="CataloguePartner" />
+  </EntityType>
+  <EntityType Name="Catalogue">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Status" Type="Edm.String" MaxLength="Max" />
+    <Property Name="Version" Type="Edm.String" Nullable="false" MaxLength="Max" />
+    <Property Name="Id" Type="Edm.Int64" Nullable="false" />
+    <Property Name="Tid" Type="Edm.String" Nullable="false" MaxLength="Max" />
+    <Property Name="Name" Type="Edm.String" Nullable="false" MaxLength="Max" />
+    <Property Name="Description" Type="Edm.String" MaxLength="Max" />
+    <Property Name="CreatedBy" Type="Edm.String" Nullable="false" MaxLength="Max" />
+    <Property Name="ModifiedBy" Type="Edm.String" Nullable="false" MaxLength="Max" />
+    <Property Name="Created" Type="Edm.DateTimeOffset" Nullable="false" />
+    <Property Name="Modified" Type="Edm.DateTimeOffset" Nullable="false" />
+    <Property Name="RowVersion" Type="Edm.Binary" MaxLength="Max" />
+    <NavigationProperty Name="CatalogueItems" Relationship="LightSwitchApplication.biz_dfch_CS_Appclusive_Core_OdataServices_Core_Catalogue_Catalog" ToRole="CatalogueItems" FromRole="CatalogueItemsPartner" />
+  </EntityType>
+  <EntityType Name="EntityType">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Parameters" Type="Edm.String" MaxLength="Max" />
+    <Property Name="Id" Type="Edm.Int64" Nullable="false" />
+    <Property Name="Tid" Type="Edm.String" Nullable="false" MaxLength="Max" />
+    <Property Name="Name" Type="Edm.String" Nullable="false" MaxLength="Max" />
+    <Property Name="Description" Type="Edm.String" MaxLength="Max" />
+    <Property Name="CreatedBy" Type="Edm.String" Nullable="false" MaxLength="Max" />
+    <Property Name="ModifiedBy" Type="Edm.String" Nullable="false" MaxLength="Max" />
+    <Property Name="Created" Type="Edm.DateTimeOffset" Nullable="false" />
+    <Property Name="Modified" Type="Edm.DateTimeOffset" Nullable="false" />
+    <Property Name="RowVersion" Type="Edm.Binary" MaxLength="Max" />
+  </EntityType>
+  <EntityType Name="Gate">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Name" Type="Edm.String" MaxLength="Max" />
+    <Property Name="Parameters" Type="Edm.String" MaxLength="Max" />
+    <Property Name="Type" Type="Edm.String" Nullable="false" MaxLength="Max" />
+    <Property Name="Status" Type="Edm.String" Nullable="false" MaxLength="Max" />
+    <Property Name="Id" Type="Edm.Int64" Nullable="false" />
+    <Property Name="Tid" Type="Edm.String" Nullable="false" MaxLength="Max" />
+    <Property Name="Description" Type="Edm.String" MaxLength="Max" />
+    <Property Name="CreatedBy" Type="Edm.String" Nullable="false" MaxLength="Max" />
+    <Property Name="ModifiedBy" Type="Edm.String" Nullable="false" MaxLength="Max" />
+    <Property Name="Created" Type="Edm.DateTimeOffset" Nullable="false" />
+    <Property Name="Modified" Type="Edm.DateTimeOffset" Nullable="false" />
+    <Property Name="RowVersion" Type="Edm.Binary" MaxLength="Max" />
   </EntityType>
   <EntityType Name="Job">
     <Key>
@@ -121,6 +217,25 @@
     <Property Name="ModifiedBy" Type="Edm.String" Nullable="false" MaxLength="Max" />
     <Property Name="RowVersion" Type="Edm.Binary" MaxLength="Max" />
   </EntityType>
+  <EntityType Name="Link">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Order" Type="Edm.Int64" Nullable="false" />
+    <Property Name="SourceId" Type="Edm.Int64" Nullable="false" />
+    <Property Name="DestinationId" Type="Edm.Int64" Nullable="false" />
+    <Property Name="Id" Type="Edm.Int64" Nullable="false" />
+    <Property Name="Tid" Type="Edm.String" Nullable="false" MaxLength="Max" />
+    <Property Name="Name" Type="Edm.String" Nullable="false" MaxLength="Max" />
+    <Property Name="Description" Type="Edm.String" MaxLength="Max" />
+    <Property Name="CreatedBy" Type="Edm.String" Nullable="false" MaxLength="Max" />
+    <Property Name="ModifiedBy" Type="Edm.String" Nullable="false" MaxLength="Max" />
+    <Property Name="Created" Type="Edm.DateTimeOffset" Nullable="false" />
+    <Property Name="Modified" Type="Edm.DateTimeOffset" Nullable="false" />
+    <Property Name="RowVersion" Type="Edm.Binary" MaxLength="Max" />
+    <NavigationProperty Name="Source" Relationship="LightSwitchApplication.biz_dfch_CS_Appclusive_Core_OdataServices_Core_Link_Source_biz_d" ToRole="Source" FromRole="SourcePartner" />
+    <NavigationProperty Name="Destination" Relationship="LightSwitchApplication.biz_dfch_CS_Appclusive_Core_OdataServices_Core_Link_Destination_" ToRole="Destination" FromRole="DestinationPartner" />
+  </EntityType>
   <EntityType Name="ManagementCredential">
     <Key>
       <PropertyRef Name="Id" />
@@ -138,6 +253,43 @@
     <Property Name="Password" Type="Edm.String" Nullable="false" MaxLength="Max" />
     <Property Name="RowVersion" Type="Edm.Binary" MaxLength="Max" />
     <NavigationProperty Name="ManagementUris" Relationship="LightSwitchApplication.biz_dfch_CS_Appclusive_Core_OdataServices_Core_ManagementCredent" ToRole="ManagementUris" FromRole="ManagementUrisPartner" />
+  </EntityType>
+  <EntityType Name="ManagementUri">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Type" Type="Edm.String" MaxLength="Max" />
+    <Property Name="Value" Type="Edm.String" MaxLength="Max" />
+    <Property Name="ManagementCredentialId" Type="Edm.Int64" />
+    <Property Name="Id" Type="Edm.Int64" Nullable="false" />
+    <Property Name="Tid" Type="Edm.String" Nullable="false" MaxLength="Max" />
+    <Property Name="Name" Type="Edm.String" Nullable="false" MaxLength="Max" />
+    <Property Name="Description" Type="Edm.String" MaxLength="Max" />
+    <Property Name="CreatedBy" Type="Edm.String" Nullable="false" MaxLength="Max" />
+    <Property Name="ModifiedBy" Type="Edm.String" Nullable="false" MaxLength="Max" />
+    <Property Name="Created" Type="Edm.DateTimeOffset" Nullable="false" />
+    <Property Name="Modified" Type="Edm.DateTimeOffset" Nullable="false" />
+    <Property Name="RowVersion" Type="Edm.Binary" MaxLength="Max" />
+  </EntityType>
+  <EntityType Name="Node">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Type" Type="Edm.String" Nullable="false" MaxLength="Max" />
+    <Property Name="Parameters" Type="Edm.String" Nullable="false" MaxLength="Max" />
+    <Property Name="ParentId" Type="Edm.Int64" />
+    <Property Name="Id" Type="Edm.Int64" Nullable="false" />
+    <Property Name="Tid" Type="Edm.String" Nullable="false" MaxLength="Max" />
+    <Property Name="Name" Type="Edm.String" Nullable="false" MaxLength="Max" />
+    <Property Name="Description" Type="Edm.String" MaxLength="Max" />
+    <Property Name="CreatedBy" Type="Edm.String" Nullable="false" MaxLength="Max" />
+    <Property Name="ModifiedBy" Type="Edm.String" Nullable="false" MaxLength="Max" />
+    <Property Name="Created" Type="Edm.DateTimeOffset" Nullable="false" />
+    <Property Name="Modified" Type="Edm.DateTimeOffset" Nullable="false" />
+    <Property Name="RowVersion" Type="Edm.Binary" MaxLength="Max" />
+    <NavigationProperty Name="Children" Relationship="LightSwitchApplication.biz_dfch_CS_Appclusive_Core_OdataServices_Core_Node_Children_biz" ToRole="Children" FromRole="ChildrenPartner" />
+    <NavigationProperty Name="IncomingLinks" Relationship="LightSwitchApplication.biz_dfch_CS_Appclusive_Core_OdataServices_Core_Node_IncomingLink" ToRole="IncomingLinks" FromRole="IncomingLinksPartner" />
+    <NavigationProperty Name="OutgoingLinks" Relationship="LightSwitchApplication.biz_dfch_CS_Appclusive_Core_OdataServices_Core_Node_OutgoingLink" ToRole="OutgoingLinks" FromRole="OutgoingLinksPartner" />
   </EntityType>
   <EntityType Name="OrderItem">
     <Key>
@@ -176,162 +328,6 @@
     <Property Name="RowVersion" Type="Edm.Binary" MaxLength="Max" />
     <NavigationProperty Name="OrderItems" Relationship="LightSwitchApplication.biz_dfch_CS_Sunrise_DaaS_Endpoints_OdataServices_Core_Order_Orde" ToRole="OrderItems" FromRole="OrderItemsPartner" />
   </EntityType>
-  <EntityType Name="Gate">
-    <Key>
-      <PropertyRef Name="Id" />
-    </Key>
-    <Property Name="Name" Type="Edm.String" MaxLength="Max" />
-    <Property Name="Parameters" Type="Edm.String" MaxLength="Max" />
-    <Property Name="Type" Type="Edm.String" Nullable="false" MaxLength="Max" />
-    <Property Name="Status" Type="Edm.String" Nullable="false" MaxLength="Max" />
-    <Property Name="Id" Type="Edm.Int64" Nullable="false" />
-    <Property Name="Tid" Type="Edm.String" Nullable="false" MaxLength="Max" />
-    <Property Name="Description" Type="Edm.String" MaxLength="Max" />
-    <Property Name="CreatedBy" Type="Edm.String" Nullable="false" MaxLength="Max" />
-    <Property Name="ModifiedBy" Type="Edm.String" Nullable="false" MaxLength="Max" />
-    <Property Name="Created" Type="Edm.DateTimeOffset" Nullable="false" />
-    <Property Name="Modified" Type="Edm.DateTimeOffset" Nullable="false" />
-    <Property Name="RowVersion" Type="Edm.Binary" MaxLength="Max" />
-  </EntityType>
-  <EntityType Name="Acl">
-    <Key>
-      <PropertyRef Name="Id" />
-    </Key>
-    <Property Name="Id" Type="Edm.Int64" Nullable="false" />
-    <Property Name="Tid" Type="Edm.String" Nullable="false" MaxLength="Max" />
-    <Property Name="Name" Type="Edm.String" Nullable="false" MaxLength="Max" />
-    <Property Name="Description" Type="Edm.String" MaxLength="Max" />
-    <Property Name="CreatedBy" Type="Edm.String" Nullable="false" MaxLength="Max" />
-    <Property Name="ModifiedBy" Type="Edm.String" Nullable="false" MaxLength="Max" />
-    <Property Name="Created" Type="Edm.DateTimeOffset" Nullable="false" />
-    <Property Name="Modified" Type="Edm.DateTimeOffset" Nullable="false" />
-    <Property Name="RowVersion" Type="Edm.Binary" MaxLength="Max" />
-    <NavigationProperty Name="Aces" Relationship="LightSwitchApplication.biz_dfch_CS_Appclusive_Core_OdataServices_Core_Acl_Aces_biz_dfch" ToRole="Aces" FromRole="AcesPartner" />
-  </EntityType>
-  <EntityType Name="EntityType">
-    <Key>
-      <PropertyRef Name="Id" />
-    </Key>
-    <Property Name="Parameters" Type="Edm.String" MaxLength="Max" />
-    <Property Name="Id" Type="Edm.Int64" Nullable="false" />
-    <Property Name="Tid" Type="Edm.String" Nullable="false" MaxLength="Max" />
-    <Property Name="Name" Type="Edm.String" Nullable="false" MaxLength="Max" />
-    <Property Name="Description" Type="Edm.String" MaxLength="Max" />
-    <Property Name="CreatedBy" Type="Edm.String" Nullable="false" MaxLength="Max" />
-    <Property Name="ModifiedBy" Type="Edm.String" Nullable="false" MaxLength="Max" />
-    <Property Name="Created" Type="Edm.DateTimeOffset" Nullable="false" />
-    <Property Name="Modified" Type="Edm.DateTimeOffset" Nullable="false" />
-    <Property Name="RowVersion" Type="Edm.Binary" MaxLength="Max" />
-  </EntityType>
-  <EntityType Name="Node">
-    <Key>
-      <PropertyRef Name="Id" />
-    </Key>
-    <Property Name="Type" Type="Edm.String" Nullable="false" MaxLength="Max" />
-    <Property Name="Parameters" Type="Edm.String" Nullable="false" MaxLength="Max" />
-    <Property Name="ParentId" Type="Edm.Int64" />
-    <Property Name="Id" Type="Edm.Int64" Nullable="false" />
-    <Property Name="Tid" Type="Edm.String" Nullable="false" MaxLength="Max" />
-    <Property Name="Name" Type="Edm.String" Nullable="false" MaxLength="Max" />
-    <Property Name="Description" Type="Edm.String" MaxLength="Max" />
-    <Property Name="CreatedBy" Type="Edm.String" Nullable="false" MaxLength="Max" />
-    <Property Name="ModifiedBy" Type="Edm.String" Nullable="false" MaxLength="Max" />
-    <Property Name="Created" Type="Edm.DateTimeOffset" Nullable="false" />
-    <Property Name="Modified" Type="Edm.DateTimeOffset" Nullable="false" />
-    <Property Name="RowVersion" Type="Edm.Binary" MaxLength="Max" />
-    <NavigationProperty Name="Children" Relationship="LightSwitchApplication.biz_dfch_CS_Appclusive_Core_OdataServices_Core_Node_Children_biz" ToRole="Children" FromRole="ChildrenPartner" />
-    <NavigationProperty Name="IncomingLinks" Relationship="LightSwitchApplication.biz_dfch_CS_Appclusive_Core_OdataServices_Core_Node_IncomingLink" ToRole="IncomingLinks" FromRole="IncomingLinksPartner" />
-    <NavigationProperty Name="OutgoingLinks" Relationship="LightSwitchApplication.biz_dfch_CS_Appclusive_Core_OdataServices_Core_Node_OutgoingLink" ToRole="OutgoingLinks" FromRole="OutgoingLinksPartner" />
-  </EntityType>
-  <EntityType Name="Link">
-    <Key>
-      <PropertyRef Name="Id" />
-    </Key>
-    <Property Name="Order" Type="Edm.Int64" Nullable="false" />
-    <Property Name="SourceId" Type="Edm.Int64" Nullable="false" />
-    <Property Name="DestinationId" Type="Edm.Int64" Nullable="false" />
-    <Property Name="Id" Type="Edm.Int64" Nullable="false" />
-    <Property Name="Tid" Type="Edm.String" Nullable="false" MaxLength="Max" />
-    <Property Name="Name" Type="Edm.String" Nullable="false" MaxLength="Max" />
-    <Property Name="Description" Type="Edm.String" MaxLength="Max" />
-    <Property Name="CreatedBy" Type="Edm.String" Nullable="false" MaxLength="Max" />
-    <Property Name="ModifiedBy" Type="Edm.String" Nullable="false" MaxLength="Max" />
-    <Property Name="Created" Type="Edm.DateTimeOffset" Nullable="false" />
-    <Property Name="Modified" Type="Edm.DateTimeOffset" Nullable="false" />
-    <Property Name="RowVersion" Type="Edm.Binary" MaxLength="Max" />
-    <NavigationProperty Name="Source" Relationship="LightSwitchApplication.biz_dfch_CS_Appclusive_Core_OdataServices_Core_Link_Source_biz_d" ToRole="Source" FromRole="SourcePartner" />
-    <NavigationProperty Name="Destination" Relationship="LightSwitchApplication.biz_dfch_CS_Appclusive_Core_OdataServices_Core_Link_Destination_" ToRole="Destination" FromRole="DestinationPartner" />
-  </EntityType>
-  <EntityType Name="ManagementUri">
-    <Key>
-      <PropertyRef Name="Id" />
-    </Key>
-    <Property Name="Type" Type="Edm.String" MaxLength="Max" />
-    <Property Name="Value" Type="Edm.String" MaxLength="Max" />
-    <Property Name="ManagementCredentialId" Type="Edm.Int64" />
-    <Property Name="Id" Type="Edm.Int64" Nullable="false" />
-    <Property Name="Tid" Type="Edm.String" Nullable="false" MaxLength="Max" />
-    <Property Name="Name" Type="Edm.String" Nullable="false" MaxLength="Max" />
-    <Property Name="Description" Type="Edm.String" MaxLength="Max" />
-    <Property Name="CreatedBy" Type="Edm.String" Nullable="false" MaxLength="Max" />
-    <Property Name="ModifiedBy" Type="Edm.String" Nullable="false" MaxLength="Max" />
-    <Property Name="Created" Type="Edm.DateTimeOffset" Nullable="false" />
-    <Property Name="Modified" Type="Edm.DateTimeOffset" Nullable="false" />
-    <Property Name="RowVersion" Type="Edm.Binary" MaxLength="Max" />
-  </EntityType>
-  <EntityType Name="Catalogue">
-    <Key>
-      <PropertyRef Name="Id" />
-    </Key>
-    <Property Name="Status" Type="Edm.String" MaxLength="Max" />
-    <Property Name="Version" Type="Edm.String" Nullable="false" MaxLength="Max" />
-    <Property Name="Id" Type="Edm.Int64" Nullable="false" />
-    <Property Name="Tid" Type="Edm.String" Nullable="false" MaxLength="Max" />
-    <Property Name="Name" Type="Edm.String" Nullable="false" MaxLength="Max" />
-    <Property Name="Description" Type="Edm.String" MaxLength="Max" />
-    <Property Name="CreatedBy" Type="Edm.String" Nullable="false" MaxLength="Max" />
-    <Property Name="ModifiedBy" Type="Edm.String" Nullable="false" MaxLength="Max" />
-    <Property Name="Created" Type="Edm.DateTimeOffset" Nullable="false" />
-    <Property Name="Modified" Type="Edm.DateTimeOffset" Nullable="false" />
-    <Property Name="RowVersion" Type="Edm.Binary" MaxLength="Max" />
-    <NavigationProperty Name="CatalogueItems" Relationship="LightSwitchApplication.biz_dfch_CS_Appclusive_Core_OdataServices_Core_Catalogue_Catalog" ToRole="CatalogueItems" FromRole="CatalogueItemsPartner" />
-  </EntityType>
-  <EntityType Name="Cart">
-    <Key>
-      <PropertyRef Name="Id" />
-    </Key>
-    <Property Name="Id" Type="Edm.Int64" Nullable="false" />
-    <Property Name="Tid" Type="Edm.String" Nullable="false" MaxLength="Max" />
-    <Property Name="Name" Type="Edm.String" Nullable="false" MaxLength="Max" />
-    <Property Name="Description" Type="Edm.String" MaxLength="Max" />
-    <Property Name="CreatedBy" Type="Edm.String" Nullable="false" MaxLength="Max" />
-    <Property Name="ModifiedBy" Type="Edm.String" Nullable="false" MaxLength="Max" />
-    <Property Name="Created" Type="Edm.DateTimeOffset" Nullable="false" />
-    <Property Name="Modified" Type="Edm.DateTimeOffset" Nullable="false" />
-    <Property Name="RowVersion" Type="Edm.Binary" MaxLength="Max" />
-    <NavigationProperty Name="CartItems" Relationship="LightSwitchApplication.biz_dfch_CS_Appclusive_Core_OdataServices_Core_Cart_CartItems_bi" ToRole="CartItems" FromRole="CartItemsPartner" />
-  </EntityType>
-  <EntityType Name="CartItem">
-    <Key>
-      <PropertyRef Name="Id" />
-    </Key>
-    <Property Name="CartId" Type="Edm.Int64" Nullable="false" />
-    <Property Name="Quantity" Type="Edm.Int32" Nullable="false" />
-    <Property Name="CatalogueItemId" Type="Edm.Int64" Nullable="false" />
-    <Property Name="Id" Type="Edm.Int64" Nullable="false" />
-    <Property Name="Tid" Type="Edm.String" Nullable="false" MaxLength="Max" />
-    <Property Name="Name" Type="Edm.String" Nullable="false" MaxLength="Max" />
-    <Property Name="Description" Type="Edm.String" MaxLength="Max" />
-    <Property Name="CreatedBy" Type="Edm.String" Nullable="false" MaxLength="Max" />
-    <Property Name="ModifiedBy" Type="Edm.String" Nullable="false" MaxLength="Max" />
-    <Property Name="Created" Type="Edm.DateTimeOffset" Nullable="false" />
-    <Property Name="Modified" Type="Edm.DateTimeOffset" Nullable="false" />
-    <Property Name="RowVersion" Type="Edm.Binary" MaxLength="Max" />
-  </EntityType>
-  <Association Name="biz_dfch_CS_Sunrise_DaaS_Endpoints_OdataServices_Core_Order_Orde">
-    <End Role="OrderItemsPartner" Type="LightSwitchApplication.Order" Multiplicity="0..1" />
-    <End Role="OrderItems" Type="LightSwitchApplication.OrderItem" Multiplicity="*" />
-  </Association>
   <Association Name="biz_dfch_CS_Appclusive_Core_OdataServices_Core_Acl_Aces_biz_dfch">
     <End Role="AcesPartner" Type="LightSwitchApplication.Acl" Multiplicity="0..1" />
     <End Role="Aces" Type="LightSwitchApplication.Ace" Multiplicity="*" />
@@ -339,6 +335,22 @@
   <Association Name="biz_dfch_CS_Appclusive_Core_OdataServices_Core_Ace_Acl_biz_dfch_">
     <End Role="Acl" Type="LightSwitchApplication.Acl" Multiplicity="1" />
     <End Role="AclPartner" Type="LightSwitchApplication.Ace" Multiplicity="0..1" />
+  </Association>
+  <Association Name="biz_dfch_CS_Appclusive_Core_OdataServices_Core_Cart_CartItems_bi">
+    <End Role="CartItemsPartner" Type="LightSwitchApplication.Cart" Multiplicity="0..1" />
+    <End Role="CartItems" Type="LightSwitchApplication.CartItem" Multiplicity="*" />
+  </Association>
+  <Association Name="biz_dfch_CS_Appclusive_Core_OdataServices_Core_Catalogue_Catalog">
+    <End Role="CatalogueItemsPartner" Type="LightSwitchApplication.Catalogue" Multiplicity="0..1" />
+    <End Role="CatalogueItems" Type="LightSwitchApplication.CatalogueItem1" Multiplicity="*" />
+  </Association>
+  <Association Name="biz_dfch_CS_Appclusive_Core_OdataServices_Core_CatalogueItem_Cat">
+    <End Role="Catalogue" Type="LightSwitchApplication.Catalogue" Multiplicity="1" />
+    <End Role="CataloguePartner" Type="LightSwitchApplication.CatalogueItem1" Multiplicity="0..1" />
+  </Association>
+  <Association Name="biz_dfch_CS_Appclusive_Core_OdataServices_Core_ManagementCredent">
+    <End Role="ManagementUrisPartner" Type="LightSwitchApplication.ManagementCredential" Multiplicity="0..1" />
+    <End Role="ManagementUris" Type="LightSwitchApplication.ManagementUri" Multiplicity="*" />
   </Association>
   <Association Name="biz_dfch_CS_Appclusive_Core_OdataServices_Core_Node_Children_biz">
     <End Role="ChildrenPartner" Type="LightSwitchApplication.Node" Multiplicity="0..1" />
@@ -360,45 +372,29 @@
     <End Role="Destination" Type="LightSwitchApplication.Node" Multiplicity="1" />
     <End Role="DestinationPartner" Type="LightSwitchApplication.Link" Multiplicity="0..1" />
   </Association>
-  <Association Name="biz_dfch_CS_Appclusive_Core_OdataServices_Core_ManagementCredent">
-    <End Role="ManagementUrisPartner" Type="LightSwitchApplication.ManagementCredential" Multiplicity="0..1" />
-    <End Role="ManagementUris" Type="LightSwitchApplication.ManagementUri" Multiplicity="*" />
-  </Association>
-  <Association Name="biz_dfch_CS_Appclusive_Core_OdataServices_Core_Catalogue_Catalog">
-    <End Role="CatalogueItemsPartner" Type="LightSwitchApplication.Catalogue" Multiplicity="0..1" />
-    <End Role="CatalogueItems" Type="LightSwitchApplication.CatalogueItem1" Multiplicity="*" />
-  </Association>
-  <Association Name="biz_dfch_CS_Appclusive_Core_OdataServices_Core_CatalogueItem_Cat">
-    <End Role="Catalogue" Type="LightSwitchApplication.Catalogue" Multiplicity="1" />
-    <End Role="CataloguePartner" Type="LightSwitchApplication.CatalogueItem1" Multiplicity="0..1" />
-  </Association>
-  <Association Name="biz_dfch_CS_Appclusive_Core_OdataServices_Core_Cart_CartItems_bi">
-    <End Role="CartItemsPartner" Type="LightSwitchApplication.Cart" Multiplicity="0..1" />
-    <End Role="CartItems" Type="LightSwitchApplication.CartItem" Multiplicity="*" />
+  <Association Name="biz_dfch_CS_Sunrise_DaaS_Endpoints_OdataServices_Core_Order_Orde">
+    <End Role="OrderItemsPartner" Type="LightSwitchApplication.Order" Multiplicity="0..1" />
+    <End Role="OrderItems" Type="LightSwitchApplication.OrderItem" Multiplicity="*" />
   </Association>
   <EntityContainer Name="CoreData" m:IsDefaultEntityContainer="true">
     <EntitySet Name="Aces" EntityType="LightSwitchApplication.Ace" />
+    <EntitySet Name="Acls" EntityType="LightSwitchApplication.Acl" />
     <EntitySet Name="ActiveDirectoryUsers" EntityType="LightSwitchApplication.ActiveDirectoryUser" />
     <EntitySet Name="Approvals" EntityType="LightSwitchApplication.Approval" />
+    <EntitySet Name="CartItems" EntityType="LightSwitchApplication.CartItem" />
+    <EntitySet Name="Carts" EntityType="LightSwitchApplication.Cart" />
     <EntitySet Name="CatalogueItems" EntityType="LightSwitchApplication.CatalogueItem1" />
+    <EntitySet Name="Catalogues" EntityType="LightSwitchApplication.Catalogue" />
+    <EntitySet Name="EntityTypes" EntityType="LightSwitchApplication.EntityType" />
+    <EntitySet Name="Gates" EntityType="LightSwitchApplication.Gate" />
     <EntitySet Name="Jobs" EntityType="LightSwitchApplication.Job" />
     <EntitySet Name="KeyNameValues" EntityType="LightSwitchApplication.KeyNameValue" />
+    <EntitySet Name="Links" EntityType="LightSwitchApplication.Link" />
     <EntitySet Name="ManagementCredentials" EntityType="LightSwitchApplication.ManagementCredential" />
+    <EntitySet Name="ManagementUris" EntityType="LightSwitchApplication.ManagementUri" />
+    <EntitySet Name="Nodes" EntityType="LightSwitchApplication.Node" />
     <EntitySet Name="OrderItems" EntityType="LightSwitchApplication.OrderItem" />
     <EntitySet Name="Orders" EntityType="LightSwitchApplication.Order" />
-    <EntitySet Name="Gates" EntityType="LightSwitchApplication.Gate" />
-    <EntitySet Name="Acls" EntityType="LightSwitchApplication.Acl" />
-    <EntitySet Name="EntityTypes" EntityType="LightSwitchApplication.EntityType" />
-    <EntitySet Name="Nodes" EntityType="LightSwitchApplication.Node" />
-    <EntitySet Name="Links" EntityType="LightSwitchApplication.Link" />
-    <EntitySet Name="ManagementUris" EntityType="LightSwitchApplication.ManagementUri" />
-    <EntitySet Name="Catalogues" EntityType="LightSwitchApplication.Catalogue" />
-    <EntitySet Name="Carts" EntityType="LightSwitchApplication.Cart" />
-    <EntitySet Name="CartItems" EntityType="LightSwitchApplication.CartItem" />
-    <AssociationSet Name="biz_dfch_CS_Sunrise_DaaS_Endpoints_OdataServices_Core_Order_Orde" Association="LightSwitchApplication.biz_dfch_CS_Sunrise_DaaS_Endpoints_OdataServices_Core_Order_Orde">
-      <End Role="OrderItemsPartner" EntitySet="Orders" />
-      <End Role="OrderItems" EntitySet="OrderItems" />
-    </AssociationSet>
     <AssociationSet Name="biz_dfch_CS_Appclusive_Core_OdataServices_Core_Acl_Aces_biz_dfch" Association="LightSwitchApplication.biz_dfch_CS_Appclusive_Core_OdataServices_Core_Acl_Aces_biz_dfch">
       <End Role="AcesPartner" EntitySet="Acls" />
       <End Role="Aces" EntitySet="Aces" />
@@ -406,6 +402,22 @@
     <AssociationSet Name="biz_dfch_CS_Appclusive_Core_OdataServices_Core_Ace_Acl_biz_dfch_" Association="LightSwitchApplication.biz_dfch_CS_Appclusive_Core_OdataServices_Core_Ace_Acl_biz_dfch_">
       <End Role="Acl" EntitySet="Acls" />
       <End Role="AclPartner" EntitySet="Aces" />
+    </AssociationSet>
+    <AssociationSet Name="biz_dfch_CS_Appclusive_Core_OdataServices_Core_Cart_CartItems_bi" Association="LightSwitchApplication.biz_dfch_CS_Appclusive_Core_OdataServices_Core_Cart_CartItems_bi">
+      <End Role="CartItemsPartner" EntitySet="Carts" />
+      <End Role="CartItems" EntitySet="CartItems" />
+    </AssociationSet>
+    <AssociationSet Name="biz_dfch_CS_Appclusive_Core_OdataServices_Core_Catalogue_Catalog" Association="LightSwitchApplication.biz_dfch_CS_Appclusive_Core_OdataServices_Core_Catalogue_Catalog">
+      <End Role="CatalogueItemsPartner" EntitySet="Catalogues" />
+      <End Role="CatalogueItems" EntitySet="CatalogueItems" />
+    </AssociationSet>
+    <AssociationSet Name="biz_dfch_CS_Appclusive_Core_OdataServices_Core_CatalogueItem_Cat" Association="LightSwitchApplication.biz_dfch_CS_Appclusive_Core_OdataServices_Core_CatalogueItem_Cat">
+      <End Role="Catalogue" EntitySet="Catalogues" />
+      <End Role="CataloguePartner" EntitySet="CatalogueItems" />
+    </AssociationSet>
+    <AssociationSet Name="biz_dfch_CS_Appclusive_Core_OdataServices_Core_ManagementCredent" Association="LightSwitchApplication.biz_dfch_CS_Appclusive_Core_OdataServices_Core_ManagementCredent">
+      <End Role="ManagementUrisPartner" EntitySet="ManagementCredentials" />
+      <End Role="ManagementUris" EntitySet="ManagementUris" />
     </AssociationSet>
     <AssociationSet Name="biz_dfch_CS_Appclusive_Core_OdataServices_Core_Node_Children_biz" Association="LightSwitchApplication.biz_dfch_CS_Appclusive_Core_OdataServices_Core_Node_Children_biz">
       <End Role="ChildrenPartner" EntitySet="Nodes" />
@@ -427,21 +439,9 @@
       <End Role="Destination" EntitySet="Nodes" />
       <End Role="DestinationPartner" EntitySet="Links" />
     </AssociationSet>
-    <AssociationSet Name="biz_dfch_CS_Appclusive_Core_OdataServices_Core_ManagementCredent" Association="LightSwitchApplication.biz_dfch_CS_Appclusive_Core_OdataServices_Core_ManagementCredent">
-      <End Role="ManagementUrisPartner" EntitySet="ManagementCredentials" />
-      <End Role="ManagementUris" EntitySet="ManagementUris" />
-    </AssociationSet>
-    <AssociationSet Name="biz_dfch_CS_Appclusive_Core_OdataServices_Core_Catalogue_Catalog" Association="LightSwitchApplication.biz_dfch_CS_Appclusive_Core_OdataServices_Core_Catalogue_Catalog">
-      <End Role="CatalogueItemsPartner" EntitySet="Catalogues" />
-      <End Role="CatalogueItems" EntitySet="CatalogueItems" />
-    </AssociationSet>
-    <AssociationSet Name="biz_dfch_CS_Appclusive_Core_OdataServices_Core_CatalogueItem_Cat" Association="LightSwitchApplication.biz_dfch_CS_Appclusive_Core_OdataServices_Core_CatalogueItem_Cat">
-      <End Role="Catalogue" EntitySet="Catalogues" />
-      <End Role="CataloguePartner" EntitySet="CatalogueItems" />
-    </AssociationSet>
-    <AssociationSet Name="biz_dfch_CS_Appclusive_Core_OdataServices_Core_Cart_CartItems_bi" Association="LightSwitchApplication.biz_dfch_CS_Appclusive_Core_OdataServices_Core_Cart_CartItems_bi">
-      <End Role="CartItemsPartner" EntitySet="Carts" />
-      <End Role="CartItems" EntitySet="CartItems" />
+    <AssociationSet Name="biz_dfch_CS_Sunrise_DaaS_Endpoints_OdataServices_Core_Order_Orde" Association="LightSwitchApplication.biz_dfch_CS_Sunrise_DaaS_Endpoints_OdataServices_Core_Order_Orde">
+      <End Role="OrderItemsPartner" EntitySet="Orders" />
+      <End Role="OrderItems" EntitySet="OrderItems" />
     </AssociationSet>
   </EntityContainer>
 </Schema>

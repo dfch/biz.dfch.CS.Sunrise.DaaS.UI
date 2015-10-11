@@ -106,11 +106,26 @@
     <Content Include="Screens\ApprovalView.lsml.js">
       <DependentUpon>ApprovalView.lsml</DependentUpon>
     </Content>
+    <Content Include="Screens\CartItemView.lsml.js">
+      <DependentUpon>CartItemView.lsml</DependentUpon>
+    </Content>
+    <Content Include="Screens\CartView.lsml.js">
+      <DependentUpon>CartView.lsml</DependentUpon>
+    </Content>
     <Content Include="Screens\CatalogueItemView.lsml.js">
       <DependentUpon>CatalogueItemView.lsml</DependentUpon>
     </Content>
     <Content Include="Screens\EndpointView.lsml.js">
       <DependentUpon>EndpointView.lsml</DependentUpon>
+    </Content>
+    <Content Include="Screens\GateAdd.lsml.js">
+      <DependentUpon>GateAdd.lsml</DependentUpon>
+    </Content>
+    <Content Include="Screens\GatesList.lsml.js">
+      <DependentUpon>GatesList.lsml</DependentUpon>
+    </Content>
+    <Content Include="Screens\GateView.lsml.js">
+      <DependentUpon>GateView.lsml</DependentUpon>
     </Content>
     <Content Include="Screens\Home.lsml.js">
       <DependentUpon>Home.lsml</DependentUpon>
@@ -170,22 +185,41 @@
   </ItemGroup>
   <ItemGroup>
     <LightSwitchModel Include="Properties\CoreData\Approvals.lsml" />
+    <LightSwitchModel Include="Properties\CoreData\CartItems.lsml" />
+    <LightSwitchModel Include="Properties\CoreData\Carts.lsml" />
     <LightSwitchModel Include="Properties\CoreData\CatalogueItems.lsml" />
+    <LightSwitchModel Include="Properties\CoreData\Catalogues.lsml" />
+    <LightSwitchModel Include="Properties\CoreData\Gates.lsml" />
     <LightSwitchModel Include="Properties\CoreData\Jobs.lsml" />
     <LightSwitchModel Include="Properties\CoreData\KeyNameValues.lsml" />
     <LightSwitchModel Include="Properties\Client.lsml">
       <ProjectCritical>true</ProjectCritical>
     </LightSwitchModel>
+    <LightSwitchModel Include="Properties\CoreData\Nodes.lsml" />
     <LightSwitchModel Include="Properties\CoreData\OrderItems.lsml" />
     <LightSwitchModel Include="Properties\CoreData\Orders.lsml" />
+    <LightSwitchModel Include="Properties\DiagnosticsData\AuditTrails.lsml" />
     <LightSwitchModel Include="Properties\DiagnosticsData\Endpoints.lsml" />
     <LightSwitchModel Include="Properties\Proxies.lsml" />
     <LightSwitchModel Include="Screens\ApprovalsList.lsml" />
     <LightSwitchModel Include="Screens\ApprovalView.lsml" />
+    <LightSwitchModel Include="Screens\AuditTrailsList.lsml" />
+    <LightSwitchModel Include="Screens\AuditTrailsView.lsml" />
+    <LightSwitchModel Include="Screens\CartEdit.lsml" />
+    <LightSwitchModel Include="Screens\CartItemEdit.lsml" />
+    <LightSwitchModel Include="Screens\CartItemView.lsml" />
+    <LightSwitchModel Include="Screens\CartsList.lsml" />
+    <LightSwitchModel Include="Screens\CartView.lsml" />
     <LightSwitchModel Include="Screens\CatalogueItemsList.lsml" />
     <LightSwitchModel Include="Screens\CatalogueItemView.lsml" />
+    <LightSwitchModel Include="Screens\CataloguesList.lsml" />
+    <LightSwitchModel Include="Screens\CatalogueView.lsml" />
     <LightSwitchModel Include="Screens\EndpointsList.lsml" />
     <LightSwitchModel Include="Screens\EndpointView.lsml" />
+    <LightSwitchModel Include="Screens\GateAdd.lsml" />
+    <LightSwitchModel Include="Screens\GateEdit.lsml" />
+    <LightSwitchModel Include="Screens\GatesList.lsml" />
+    <LightSwitchModel Include="Screens\GateView.lsml" />
     <LightSwitchModel Include="Screens\Home.lsml" />
     <LightSwitchModel Include="Screens\JobsList.lsml" />
     <LightSwitchModel Include="Screens\JobView.lsml" />
@@ -193,6 +227,8 @@
     <LightSwitchModel Include="Screens\KeyNameValueEdit.lsml" />
     <LightSwitchModel Include="Screens\KeyNameValuesList.lsml" />
     <LightSwitchModel Include="Screens\KeyNameValueView.lsml" />
+    <LightSwitchModel Include="Screens\NodesList.lsml" />
+    <LightSwitchModel Include="Screens\NodeView.lsml" />
     <LightSwitchModel Include="Screens\OrderAdd.lsml" />
     <LightSwitchModel Include="Screens\OrderAddSpecial.lsml" />
     <LightSwitchModel Include="Screens\OrderItemsList.lsml" />

@@ -61,11 +61,11 @@
                 </ContentItem.PropertySources>
               </ContentItem>
               <ContentItem
-                Name="Catalogue"
+                Name="Catalogues"
                 Kind="Command">
                 <ContentItem.Attributes>
                   <Description
-                    Value="Browse catalogue" />
+                    Value="Shows all available catalogues" />
                 </ContentItem.Attributes>
                 <ContentItem.PropertySources>
                   <ControlPropertySource
@@ -73,7 +73,7 @@
                     <ScreenExpressionTree>
                       <ChainExpression>
                         <CallExpression
-                          Target="!module/Methods[showCatalogueItemsList]" />
+                          Target="!module/Methods[showCataloguesList]" />
                       </ChainExpression>
                     </ScreenExpressionTree>
                   </ControlPropertySource>
@@ -105,11 +105,11 @@
                 </ContentItem.PropertySources>
               </ContentItem>
               <ContentItem
-                Name="somethingToProve"
+                Name="Carts"
                 Kind="Command">
                 <ContentItem.Attributes>
                   <Description
-                    Value="the birds" />
+                    Value="Browse carts" />
                 </ContentItem.Attributes>
                 <ContentItem.PropertySources>
                   <ControlPropertySource
@@ -117,7 +117,28 @@
                     <ScreenExpressionTree>
                       <ChainExpression>
                         <CallExpression
-                          Target="Home/Methods[somethingToProve]" />
+                          Target="!module/Methods[showCartsList]" />
+                      </ChainExpression>
+                    </ScreenExpressionTree>
+                  </ControlPropertySource>
+                </ContentItem.PropertySources>
+              </ContentItem>
+              <ContentItem
+                Name="Inventory"
+                Kind="Command">
+                <ContentItem.Attributes>
+                  <DisplayName
+                    Value="Inventory" />
+                  <Description
+                    Value="Shows the inventory" />
+                </ContentItem.Attributes>
+                <ContentItem.PropertySources>
+                  <ControlPropertySource
+                    Property="Microsoft.LightSwitch.MobileWeb:RootControl/Properties[Tap]">
+                    <ScreenExpressionTree>
+                      <ChainExpression>
+                        <CallExpression
+                          Target="!module/Methods[showNodesList]" />
                       </ChainExpression>
                     </ScreenExpressionTree>
                   </ControlPropertySource>
@@ -201,6 +222,48 @@
                       <ChainExpression>
                         <CallExpression
                           Target="!module/Methods[showOrderItemsList]" />
+                      </ChainExpression>
+                    </ScreenExpressionTree>
+                  </ControlPropertySource>
+                </ContentItem.PropertySources>
+              </ContentItem>
+              <ContentItem
+                Name="Gates"
+                Kind="Command">
+                <ContentItem.Attributes>
+                  <DisplayName
+                    Value="Gates" />
+                  <Description
+                    Value="Show all currently existing gates" />
+                </ContentItem.Attributes>
+                <ContentItem.PropertySources>
+                  <ControlPropertySource
+                    Property="Microsoft.LightSwitch.MobileWeb:RootControl/Properties[Tap]">
+                    <ScreenExpressionTree>
+                      <ChainExpression>
+                        <CallExpression
+                          Target="!module/Methods[showGatesList]" />
+                      </ChainExpression>
+                    </ScreenExpressionTree>
+                  </ControlPropertySource>
+                </ContentItem.PropertySources>
+              </ContentItem>
+              <ContentItem
+                Name="AuditTrails"
+                Kind="Command">
+                <ContentItem.Attributes>
+                  <DisplayName
+                    Value="Audit Trails" />
+                  <Description
+                    Value="Browse audit trails" />
+                </ContentItem.Attributes>
+                <ContentItem.PropertySources>
+                  <ControlPropertySource
+                    Property="Microsoft.LightSwitch.MobileWeb:RootControl/Properties[Tap]">
+                    <ScreenExpressionTree>
+                      <ChainExpression>
+                        <CallExpression
+                          Target="!module/Methods[showAuditTrailsList]" />
                       </ChainExpression>
                     </ScreenExpressionTree>
                   </ControlPropertySource>
