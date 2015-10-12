@@ -1,7 +1,7 @@
 ﻿/// <reference path="~/GeneratedArtifacts/viewModel.js" />
 
 myapp.ApprovalView.approve_execute = function (screen) {
-    if (screen.Approval.State != "Created") {
+    if (screen.Approval.Status != "Created") {
         msls.showMessageBox("Request has already been processed. Cannot proceed.",
             {
                 title: "Error"
@@ -19,7 +19,7 @@ myapp.ApprovalView.approve_execute = function (screen) {
             }
         ).then(function (result) {
             if (result == msls.MessageBoxResult.yes) {
-                screen.Approval.State = "Approved";
+                screen.Approval.Status = "Approved";
                 return myapp.commitChanges().then(null, function fail(e) {
                     msls.showMessageBox(e.message,
                         {
@@ -38,7 +38,7 @@ myapp.ApprovalView.approve_execute = function (screen) {
     }
 };
 myapp.ApprovalView.decline_execute = function (screen) {
-    if (screen.Approval.State != "Created")
+    if (screen.Approval.Status != "Created")
     {
         msls.showMessageBox("Request has already been processed. Cannot proceed.",
             {
@@ -57,7 +57,7 @@ myapp.ApprovalView.decline_execute = function (screen) {
             }
         ).then(function (result) {
             if (result == msls.MessageBoxResult.yes) {
-                screen.Approval.State = "Declined";
+                screen.Approval.Status = "Declined";
                 return myapp.commitChanges().then(null, function fail(e) {
                     msls.showMessageBox(e.message,
                         {
