@@ -104,6 +104,9 @@
           <NotSearchable />
         </EntityProperty.Attributes>
       </EntityProperty>
+      <EntityProperty
+        Name="Parameters"
+        PropertyType=":String?" />
     </EntityType.Properties>
   </EntityType>
   <EntityContainer
@@ -220,6 +223,9 @@
         <CsdlProperty
           Name="CatalogueItemId"
           Property="CartItem/Properties[CatalogueItemId]" />
+        <CsdlProperty
+          Name="Parameters"
+          Property="CartItem/Properties[Parameters]" />
         <CsdlProperty
           Name="Id"
           Property="CartItem/Properties[Id]" />

@@ -19,7 +19,7 @@ myapp.CatalogueItemView.addToCart_execute = function (screen) {
     cartItem.Id = 0;
     cartItem.CreatedBy = "USER";
     cartItem.ModifiedBy = "USER";
-    cartItem.Parameters = '{}';
+    cartItem.Parameters = "";
     cartItem.Created = new Date();
     cartItem.Modified = new Date();
 

@@ -23,6 +23,58 @@
               Kind="Group"
               View="Microsoft.LightSwitch.MobileWeb:ColumnsLayout">
               <ContentItem
+                Name="AddPersonalVDI"
+                Kind="Command">
+                <ContentItem.Attributes>
+                  <DisplayName
+                    Value="Add Personal VDI" />
+                  <Description
+                    Value="Adds VDI for personal use to the cart" />
+                </ContentItem.Attributes>
+                <ContentItem.PropertySources>
+                  <ControlPropertySource
+                    Property="Microsoft.LightSwitch.MobileWeb:RootControl/Properties[Tap]">
+                    <ScreenExpressionTree>
+                      <ChainExpression>
+                        <CallExpression
+                          Target="!module/Methods[showCartItemPersonalAdd]">
+                          <CallExpression.Attributes>
+                            <CreateNewEntity
+                              EntityType="CartItem"
+                              TargetParameter="!module/Methods[showCartItemPersonalAdd]/Parameters[CartItem]" />
+                          </CallExpression.Attributes>
+                        </CallExpression>
+                      </ChainExpression>
+                    </ScreenExpressionTree>
+                  </ControlPropertySource>
+                </ContentItem.PropertySources>
+              </ContentItem>
+              <ContentItem
+                Name="AddTechnicalVDI"
+                Kind="Command">
+                <ContentItem.Attributes>
+                  <Description
+                    Value="Adds a VDI for another user to the cart" />
+                </ContentItem.Attributes>
+                <ContentItem.PropertySources>
+                  <ControlPropertySource
+                    Property="Microsoft.LightSwitch.MobileWeb:RootControl/Properties[Tap]">
+                    <ScreenExpressionTree>
+                      <ChainExpression>
+                        <CallExpression
+                          Target="!module/Methods[showCartItemTechnicalAdd]">
+                          <CallExpression.Attributes>
+                            <CreateNewEntity
+                              EntityType="CartItem"
+                              TargetParameter="!module/Methods[showCartItemTechnicalAdd]/Parameters[CartItem]" />
+                          </CallExpression.Attributes>
+                        </CallExpression>
+                      </ChainExpression>
+                    </ScreenExpressionTree>
+                  </ControlPropertySource>
+                </ContentItem.PropertySources>
+              </ContentItem>
+              <ContentItem
                 Name="Orders"
                 Kind="Command">
                 <ContentItem.Attributes>
@@ -293,8 +345,6 @@
           Name="dialogName"
           ParameterType=":String" />
       </ScreenMethod>
-      <ScreenMethod
-        Name="somethingToProve" />
     </Screen.Methods>
   </Screen>
   <Application.Methods>

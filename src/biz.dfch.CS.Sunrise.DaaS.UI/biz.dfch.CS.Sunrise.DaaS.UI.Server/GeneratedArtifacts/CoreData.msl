@@ -92,6 +92,7 @@
           <ScalarProperty Name="Created" ColumnName="Created" />
           <ScalarProperty Name="Modified" ColumnName="Modified" />
           <ScalarProperty Name="RowVersion" ColumnName="RowVersion" />
+          <ScalarProperty Name="Parameters" ColumnName="Parameters" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

@@ -140,6 +140,56 @@
         $Screen.call(this, dataWorkspace, "CartItemEdit", parameters);
     }
 
+    function CartItemPersonalAdd(parameters, dataWorkspace) {
+        /// <summary>
+        /// Represents the CartItemPersonalAdd screen.
+        /// </summary>
+        /// <param name="parameters" type="Array">
+        /// An array of screen parameter values.
+        /// </param>
+        /// <param name="dataWorkspace" type="msls.application.DataWorkspace" optional="true">
+        /// An existing data workspace for this screen to use. By default, a new data workspace is created.
+        /// </param>
+        /// <field name="CartItem" type="msls.application.CartItem">
+        /// Gets or sets the cartItem for this screen.
+        /// </field>
+        /// <field name="details" type="msls.application.CartItemPersonalAdd.Details">
+        /// Gets the details for this screen.
+        /// </field>
+        if (!dataWorkspace) {
+            dataWorkspace = new lightSwitchApplication.DataWorkspace();
+        }
+        $Screen.call(this, dataWorkspace, "CartItemPersonalAdd", parameters);
+    }
+
+    function CartItemTechnicalAdd(parameters, dataWorkspace) {
+        /// <summary>
+        /// Represents the CartItemTechnicalAdd screen.
+        /// </summary>
+        /// <param name="parameters" type="Array">
+        /// An array of screen parameter values.
+        /// </param>
+        /// <param name="dataWorkspace" type="msls.application.DataWorkspace" optional="true">
+        /// An existing data workspace for this screen to use. By default, a new data workspace is created.
+        /// </param>
+        /// <field name="CartItem" type="msls.application.CartItem">
+        /// Gets or sets the cartItem for this screen.
+        /// </field>
+        /// <field name="Requester" type="String">
+        /// Gets or sets the requester for this screen.
+        /// </field>
+        /// <field name="HelpText" type="String">
+        /// Gets or sets the helpText for this screen.
+        /// </field>
+        /// <field name="details" type="msls.application.CartItemTechnicalAdd.Details">
+        /// Gets the details for this screen.
+        /// </field>
+        if (!dataWorkspace) {
+            dataWorkspace = new lightSwitchApplication.DataWorkspace();
+        }
+        $Screen.call(this, dataWorkspace, "CartItemTechnicalAdd", parameters);
+    }
+
     function CartItemView(parameters, dataWorkspace) {
         /// <summary>
         /// Represents the CartItemView screen.
@@ -840,6 +890,18 @@
         ], [
         ]),
 
+        CartItemPersonalAdd: $defineScreen(CartItemPersonalAdd, [
+            { name: "CartItem", kind: "local", type: lightSwitchApplication.CartItem }
+        ], [
+        ]),
+
+        CartItemTechnicalAdd: $defineScreen(CartItemTechnicalAdd, [
+            { name: "CartItem", kind: "local", type: lightSwitchApplication.CartItem },
+            { name: "Requester", kind: "local", type: String },
+            { name: "HelpText", kind: "local", type: String }
+        ], [
+        ]),
+
         CartItemView: $defineScreen(CartItemView, [
             { name: "CartItem", kind: "local", type: lightSwitchApplication.CartItem }
         ], [
@@ -964,7 +1026,6 @@
 
         Home: $defineScreen(Home, [
         ], [
-            { name: "somethingToProve" }
         ]),
 
         JobsList: $defineScreen(JobsList, [
@@ -1190,6 +1251,30 @@
             /// <returns type="WinJS.Promise" />
             var parameters = Array.prototype.slice.call(arguments, 0, 1);
             return lightSwitchApplication.showScreen("CartItemEdit", parameters, options);
+        }),
+
+        showCartItemPersonalAdd: $defineShowScreen(function showCartItemPersonalAdd(CartItem, options) {
+            /// <summary>
+            /// Asynchronously navigates forward to the CartItemPersonalAdd screen.
+            /// </summary>
+            /// <param name="options" optional="true">
+            /// An object that provides one or more of the following options:<br/>- beforeShown: a function that is called after boundary behavior has been applied but before the screen is shown.<br/>+ Signature: beforeShown(screen)<br/>- afterClosed: a function that is called after boundary behavior has been applied and the screen has been closed.<br/>+ Signature: afterClosed(screen, action : msls.NavigateBackAction)
+            /// </param>
+            /// <returns type="WinJS.Promise" />
+            var parameters = Array.prototype.slice.call(arguments, 0, 1);
+            return lightSwitchApplication.showScreen("CartItemPersonalAdd", parameters, options);
+        }),
+
+        showCartItemTechnicalAdd: $defineShowScreen(function showCartItemTechnicalAdd(CartItem, options) {
+            /// <summary>
+            /// Asynchronously navigates forward to the CartItemTechnicalAdd screen.
+            /// </summary>
+            /// <param name="options" optional="true">
+            /// An object that provides one or more of the following options:<br/>- beforeShown: a function that is called after boundary behavior has been applied but before the screen is shown.<br/>+ Signature: beforeShown(screen)<br/>- afterClosed: a function that is called after boundary behavior has been applied and the screen has been closed.<br/>+ Signature: afterClosed(screen, action : msls.NavigateBackAction)
+            /// </param>
+            /// <returns type="WinJS.Promise" />
+            var parameters = Array.prototype.slice.call(arguments, 0, 1);
+            return lightSwitchApplication.showScreen("CartItemTechnicalAdd", parameters, options);
         }),
 
         showCartItemView: $defineShowScreen(function showCartItemView(CartItem, options) {

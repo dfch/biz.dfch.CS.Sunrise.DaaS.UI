@@ -1068,6 +1068,9 @@ window.myapp = msls.application;
         /// <field name="RowVersion" type="String">
         /// Gets or sets the rowVersion for this cartItem.
         /// </field>
+        /// <field name="Parameters" type="String">
+        /// Gets or sets the parameters for this cartItem.
+        /// </field>
         /// <field name="details" type="msls.application.CartItem.Details">
         /// Gets the details for this cartItem.
         /// </field>
@@ -1501,7 +1504,8 @@ window.myapp = msls.application;
             { name: "ModifiedBy", type: String },
             { name: "Created", type: Date },
             { name: "Modified", type: Date },
-            { name: "RowVersion", type: String }
+            { name: "RowVersion", type: String },
+            { name: "Parameters", type: String }
         ]),
 
         DiagnosticsData: $defineDataService(DiagnosticsData, lightSwitchApplication.rootUri + "/DiagnosticsData.svc", [

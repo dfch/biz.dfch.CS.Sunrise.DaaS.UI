@@ -106,6 +106,12 @@
     <Content Include="Screens\ApprovalView.lsml.js">
       <DependentUpon>ApprovalView.lsml</DependentUpon>
     </Content>
+    <Content Include="Screens\CartItemPersonalAdd.lsml.js">
+      <DependentUpon>CartItemPersonalAdd.lsml</DependentUpon>
+    </Content>
+    <Content Include="Screens\CartItemTechnicalAdd.lsml.js">
+      <DependentUpon>CartItemTechnicalAdd.lsml</DependentUpon>
+    </Content>
     <Content Include="Screens\CartItemView.lsml.js">
       <DependentUpon>CartItemView.lsml</DependentUpon>
     </Content>
@@ -210,6 +216,8 @@
     <LightSwitchModel Include="Screens\AuditTrailsView.lsml" />
     <LightSwitchModel Include="Screens\CartEdit.lsml" />
     <LightSwitchModel Include="Screens\CartItemEdit.lsml" />
+    <LightSwitchModel Include="Screens\CartItemPersonalAdd.lsml" />
+    <LightSwitchModel Include="Screens\CartItemTechnicalAdd.lsml" />
     <LightSwitchModel Include="Screens\CartItemView.lsml" />
     <LightSwitchModel Include="Screens\CartsList.lsml" />
     <LightSwitchModel Include="Screens\CartView.lsml" />

@@ -240,6 +240,11 @@
               "name": "RowVersion",
               "propertyType": { "__id": ":Binary?" },
               ":@NotSearchable": { }
+            },
+            {
+              "id": "CartItem/Properties[Parameters]",
+              "name": "Parameters",
+              "propertyType": { "__id": ":String?" }
             }
           ]
         },
@@ -382,11 +387,7 @@
               "id": "CatalogueItem1/Properties[Version]",
               "name": "Version",
               "propertyType": { "__id": ":String" },
-              ":@Required": { },
-              ":@MaxLength":
-              {
-                "value": 255
-              }
+              ":@Required": { }
             },
             {
               "__isKeyProperty": 1,
@@ -5239,6 +5240,296 @@
           ]
         },
         {
+          "displayName": "Cart Item Personal Add",
+          "id": "CartItemPersonalAdd",
+          "name": "CartItemPersonalAdd",
+          "launchMode": "Single",
+          ":@SaveChangesTo":
+          {
+            "property": { "__id": "DataWorkspace/Members[CoreData]" }
+          },
+          "rootContentItem":
+          {
+            "displayName": "Root Content Item",
+            "name": "RootContentItem",
+            "kind": "Screen",
+            "view": { "__id": ":Screen" },
+            "childContentItems":
+            [
+              {
+                "displayName": "Tabs",
+                "name": "Tabs",
+                "kind": "Group",
+                "view": { "__id": ":TabPages" },
+                "childContentItems":
+                [
+                  {
+                    "displayName": "Details",
+                    "name": "Details",
+                    "kind": "Tab",
+                    "view": { "__id": ":RowsLayout" },
+                    "childContentItems":
+                    [
+                      {
+                        "displayName": "Name",
+                        "name": "Name",
+                        "kind": "Value",
+                        "view": { "__id": ":TextBox" },
+                        "dataSource":
+                        {
+                          "links":
+                          [
+                            {
+                              "member": { "__id": "CartItemPersonalAdd/Properties[CartItem]" }
+                            },
+                            {
+                              "member": { "__id": "CartItem/Properties[Name]" }
+                            }
+                          ]
+                        }
+                      },
+                      {
+                        "displayName": "Description",
+                        "name": "Description",
+                        "kind": "Value",
+                        "view": { "__id": ":TextArea" },
+                        "dataSource":
+                        {
+                          "links":
+                          [
+                            {
+                              "member": { "__id": "CartItemPersonalAdd/Properties[CartItem]" }
+                            },
+                            {
+                              "member": { "__id": "CartItem/Properties[Description]" }
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "displayName": "Popups",
+                "name": "Popups",
+                "kind": "Group",
+                "view": { "__id": ":DialogPages" }
+              }
+            ],
+            "propertySources":
+            [
+              {
+                "property": { "__id": ":Screen/Properties[ScreenType]" },
+                "value": "Edit"
+              },
+              {
+                "property": { "__id": ":Screen/Properties[ShowAsDialog]" },
+                "value": true
+              }
+            ]
+          },
+          "methods":
+          [
+            {
+              "id": "CartItemPersonalAdd/Methods[showTab]",
+              "name": "showTab",
+              "parameters":
+              [
+                {
+                  "id": "CartItemPersonalAdd/Methods[showTab]/Parameters[tabName]",
+                  "name": "tabName",
+                  "parameterType": { "__id": ":String" }
+                }
+              ]
+            },
+            {
+              "id": "CartItemPersonalAdd/Methods[showDialog]",
+              "name": "showDialog",
+              "parameters":
+              [
+                {
+                  "id": "CartItemPersonalAdd/Methods[showDialog]/Parameters[dialogName]",
+                  "name": "dialogName",
+                  "parameterType": { "__id": ":String" }
+                }
+              ]
+            }
+          ],
+          "properties":
+          [
+            {
+              "id": "CartItemPersonalAdd/Properties[CartItem]",
+              "name": "CartItem",
+              "elementType": { "__id": "CartItem" },
+              "propertyType": { "__id": "CartItem" },
+              ":@IsParameter": { }
+            }
+          ]
+        },
+        {
+          "displayName": "Cart Item Technical Add",
+          "id": "CartItemTechnicalAdd",
+          "name": "CartItemTechnicalAdd",
+          "launchMode": "Single",
+          ":@SaveChangesTo":
+          {
+            "property": { "__id": "DataWorkspace/Members[CoreData]" }
+          },
+          "rootContentItem":
+          {
+            "displayName": "Root Content Item",
+            "name": "RootContentItem",
+            "kind": "Screen",
+            "view": { "__id": ":Screen" },
+            "childContentItems":
+            [
+              {
+                "displayName": "Tabs",
+                "name": "Tabs",
+                "kind": "Group",
+                "view": { "__id": ":TabPages" },
+                "childContentItems":
+                [
+                  {
+                    "displayName": "Details",
+                    "name": "Details",
+                    "kind": "Tab",
+                    "view": { "__id": ":RowsLayout" },
+                    "childContentItems":
+                    [
+                      {
+                        "displayName": "Help Text",
+                        "name": "HelpText",
+                        "kind": "Value",
+                        "view": { "__id": ":Paragraph" },
+                        "dataSource":
+                        {
+                          "member": { "__id": "CartItemTechnicalAdd/Properties[HelpText]" }
+                        }
+                      },
+                      {
+                        "displayName": "Requester",
+                        "name": "Requester",
+                        "kind": "Value",
+                        "view": { "__id": ":TextBox" },
+                        "dataSource":
+                        {
+                          "member": { "__id": "CartItemTechnicalAdd/Properties[Requester]" }
+                        }
+                      },
+                      {
+                        "displayName": "Name",
+                        "name": "Name",
+                        "kind": "Value",
+                        "view": { "__id": ":TextBox" },
+                        "dataSource":
+                        {
+                          "links":
+                          [
+                            {
+                              "member": { "__id": "CartItemTechnicalAdd/Properties[CartItem]" }
+                            },
+                            {
+                              "member": { "__id": "CartItem/Properties[Name]" }
+                            }
+                          ]
+                        }
+                      },
+                      {
+                        "displayName": "Description",
+                        "name": "Description",
+                        "kind": "Value",
+                        "view": { "__id": ":TextArea" },
+                        "dataSource":
+                        {
+                          "links":
+                          [
+                            {
+                              "member": { "__id": "CartItemTechnicalAdd/Properties[CartItem]" }
+                            },
+                            {
+                              "member": { "__id": "CartItem/Properties[Description]" }
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "displayName": "Popups",
+                "name": "Popups",
+                "kind": "Group",
+                "view": { "__id": ":DialogPages" }
+              }
+            ],
+            "propertySources":
+            [
+              {
+                "property": { "__id": ":Screen/Properties[ScreenType]" },
+                "value": "Edit"
+              },
+              {
+                "property": { "__id": ":Screen/Properties[ShowAsDialog]" },
+                "value": true
+              }
+            ]
+          },
+          "methods":
+          [
+            {
+              "id": "CartItemTechnicalAdd/Methods[showTab]",
+              "name": "showTab",
+              "parameters":
+              [
+                {
+                  "id": "CartItemTechnicalAdd/Methods[showTab]/Parameters[tabName]",
+                  "name": "tabName",
+                  "parameterType": { "__id": ":String" }
+                }
+              ]
+            },
+            {
+              "id": "CartItemTechnicalAdd/Methods[showDialog]",
+              "name": "showDialog",
+              "parameters":
+              [
+                {
+                  "id": "CartItemTechnicalAdd/Methods[showDialog]/Parameters[dialogName]",
+                  "name": "dialogName",
+                  "parameterType": { "__id": ":String" }
+                }
+              ]
+            }
+          ],
+          "properties":
+          [
+            {
+              "id": "CartItemTechnicalAdd/Properties[CartItem]",
+              "name": "CartItem",
+              "elementType": { "__id": "CartItem" },
+              "propertyType": { "__id": "CartItem" },
+              ":@IsParameter": { }
+            },
+            {
+              "id": "CartItemTechnicalAdd/Properties[Requester]",
+              "name": "Requester",
+              "elementType": { "__id": ":String" },
+              "propertyType": { "__id": ":String" },
+              ":@Required": { }
+            },
+            {
+              "id": "CartItemTechnicalAdd/Properties[HelpText]",
+              "name": "HelpText",
+              "elementType": { "__id": ":String" },
+              "propertyType": { "__id": ":String" },
+              ":@Required": { }
+            }
+          ]
+        },
+        {
           "displayName": "Cart Item View",
           "id": "CartItemView",
           "name": "CartItemView",
@@ -5355,6 +5646,24 @@
                             },
                             {
                               "member": { "__id": "CartItem/Properties[Description]" }
+                            }
+                          ]
+                        }
+                      },
+                      {
+                        "displayName": "Parameters",
+                        "name": "CartItem_Parameters",
+                        "kind": "Value",
+                        "view": { "__id": ":Paragraph" },
+                        "dataSource":
+                        {
+                          "links":
+                          [
+                            {
+                              "member": { "__id": "CartItemView/Properties[CartItem]" }
+                            },
+                            {
+                              "member": { "__id": "CartItem/Properties[Parameters]" }
                             }
                           ]
                         }
@@ -9521,6 +9830,50 @@
                         "childContentItems":
                         [
                           {
+                            "displayName": "Add Personal VDI",
+                            "description": "Adds VDI for personal use to the cart",
+                            "name": "AddPersonalVDI",
+                            "kind": "Command",
+                            "view": { "__id": ":Button" },
+                            "propertySources":
+                            [
+                              {
+                                "property": { "__id": ":RootControl/Properties[Tap]" },
+                                "source":
+                                {
+                                  "target": { "__id": "!module/Methods[showCartItemPersonalAdd]" },
+                                  ":@CreateNewEntity":
+                                  {
+                                    "entityType": { "__id": "CartItem" },
+                                    "targetParameter": { "__id": "!module/Methods[showCartItemPersonalAdd]/Parameters[CartItem]" }
+                                  }
+                                }
+                              }
+                            ]
+                          },
+                          {
+                            "displayName": "Add Technical VDI",
+                            "description": "Adds a VDI for another user to the cart",
+                            "name": "AddTechnicalVDI",
+                            "kind": "Command",
+                            "view": { "__id": ":Button" },
+                            "propertySources":
+                            [
+                              {
+                                "property": { "__id": ":RootControl/Properties[Tap]" },
+                                "source":
+                                {
+                                  "target": { "__id": "!module/Methods[showCartItemTechnicalAdd]" },
+                                  ":@CreateNewEntity":
+                                  {
+                                    "entityType": { "__id": "CartItem" },
+                                    "targetParameter": { "__id": "!module/Methods[showCartItemTechnicalAdd]/Parameters[CartItem]" }
+                                  }
+                                }
+                              }
+                            ]
+                          },
+                          {
                             "displayName": "Orders",
                             "description": "View a list of your orders",
                             "name": "Orders",
@@ -9771,10 +10124,6 @@
                   "parameterType": { "__id": ":String" }
                 }
               ]
-            },
-            {
-              "id": "Home/Methods[somethingToProve]",
-              "name": "somethingToProve"
             }
           ]
         },
@@ -14285,6 +14634,16 @@
                                 }
                               },
                               {
+                                "displayName": "Requester",
+                                "name": "Requester",
+                                "kind": "Value",
+                                "view": { "__id": ":Text" },
+                                "dataSource":
+                                {
+                                  "member": { "__id": "Order/Properties[Requester]" }
+                                }
+                              },
+                              {
                                 "displayName": "Description",
                                 "name": "Description1",
                                 "kind": "Value",
@@ -16267,6 +16626,32 @@
           [
             {
               "id": "!module/Methods[showCartItemEdit]/Parameters[CartItem]",
+              "name": "CartItem",
+              "parameterType": { "__id": "CartItem" }
+            }
+          ]
+        },
+        {
+          "id": "!module/Methods[showCartItemPersonalAdd]",
+          "name": "showCartItemPersonalAdd",
+          ":@ShowScreenMethod": { "targetScreen": { "__id": "CartItemPersonalAdd" } },
+          "parameters":
+          [
+            {
+              "id": "!module/Methods[showCartItemPersonalAdd]/Parameters[CartItem]",
+              "name": "CartItem",
+              "parameterType": { "__id": "CartItem" }
+            }
+          ]
+        },
+        {
+          "id": "!module/Methods[showCartItemTechnicalAdd]",
+          "name": "showCartItemTechnicalAdd",
+          ":@ShowScreenMethod": { "targetScreen": { "__id": "CartItemTechnicalAdd" } },
+          "parameters":
+          [
+            {
+              "id": "!module/Methods[showCartItemTechnicalAdd]/Parameters[CartItem]",
               "name": "CartItem",
               "parameterType": { "__id": "CartItem" }
             }

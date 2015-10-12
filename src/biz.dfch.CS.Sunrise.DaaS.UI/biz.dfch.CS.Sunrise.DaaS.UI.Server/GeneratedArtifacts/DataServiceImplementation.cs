@@ -398,6 +398,7 @@ namespace LightSwitchApplication.Implementation
                 result.Created = cartItem.Created;
                 result.Modified = cartItem.Modified;
                 result.RowVersion = cartItem.RowVersion;
+                result.Parameters = cartItem.Parameters;
                 return result;
             }
             global::LightSwitchApplication.Implementation.Cart cart = outerEntity as global::LightSwitchApplication.Implementation.Cart;
@@ -737,6 +738,7 @@ namespace LightSwitchApplication.Implementation
                 outerCartItem.Created = innerCartItem.Created;
                 outerCartItem.Modified = innerCartItem.Modified;
                 outerCartItem.RowVersion = innerCartItem.RowVersion;
+                outerCartItem.Parameters = innerCartItem.Parameters;
                 return;
             }
             global::LightSwitchApplication.Implementation.Cart outerCart = outerEntity as global::LightSwitchApplication.Implementation.Cart;

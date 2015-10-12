@@ -845,6 +845,166 @@
         Quantity_postRender: [$element, function () { return new lightSwitchApplication.CartItemEdit().findContentItem("Quantity"); }]
     });
 
+    lightSwitchApplication.CartItemPersonalAdd.prototype._$contentItems = {
+        Tabs: {
+            _$class: msls.ContentItem,
+            _$name: "Tabs",
+            _$parentName: "RootContentItem",
+            screen: lightSwitchApplication.CartItemPersonalAdd
+        },
+        Details: {
+            _$class: msls.ContentItem,
+            _$name: "Details",
+            _$parentName: "Tabs",
+            screen: lightSwitchApplication.CartItemPersonalAdd,
+            data: lightSwitchApplication.CartItemPersonalAdd,
+            value: lightSwitchApplication.CartItemPersonalAdd
+        },
+        Name: {
+            _$class: msls.ContentItem,
+            _$name: "Name",
+            _$parentName: "Details",
+            screen: lightSwitchApplication.CartItemPersonalAdd,
+            data: lightSwitchApplication.CartItemPersonalAdd,
+            value: String
+        },
+        Description: {
+            _$class: msls.ContentItem,
+            _$name: "Description",
+            _$parentName: "Details",
+            screen: lightSwitchApplication.CartItemPersonalAdd,
+            data: lightSwitchApplication.CartItemPersonalAdd,
+            value: String
+        },
+        Popups: {
+            _$class: msls.ContentItem,
+            _$name: "Popups",
+            _$parentName: "RootContentItem",
+            screen: lightSwitchApplication.CartItemPersonalAdd
+        }
+    };
+
+    msls._addEntryPoints(lightSwitchApplication.CartItemPersonalAdd, {
+        /// <field>
+        /// Called when a new CartItemPersonalAdd screen is created.
+        /// <br/>created(msls.application.CartItemPersonalAdd screen)
+        /// </field>
+        created: [lightSwitchApplication.CartItemPersonalAdd],
+        /// <field>
+        /// Called before changes on an active CartItemPersonalAdd screen are applied.
+        /// <br/>beforeApplyChanges(msls.application.CartItemPersonalAdd screen)
+        /// </field>
+        beforeApplyChanges: [lightSwitchApplication.CartItemPersonalAdd],
+        /// <field>
+        /// Called after the Details content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        Details_postRender: [$element, function () { return new lightSwitchApplication.CartItemPersonalAdd().findContentItem("Details"); }],
+        /// <field>
+        /// Called after the Name content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        Name_postRender: [$element, function () { return new lightSwitchApplication.CartItemPersonalAdd().findContentItem("Name"); }],
+        /// <field>
+        /// Called after the Description content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        Description_postRender: [$element, function () { return new lightSwitchApplication.CartItemPersonalAdd().findContentItem("Description"); }]
+    });
+
+    lightSwitchApplication.CartItemTechnicalAdd.prototype._$contentItems = {
+        Tabs: {
+            _$class: msls.ContentItem,
+            _$name: "Tabs",
+            _$parentName: "RootContentItem",
+            screen: lightSwitchApplication.CartItemTechnicalAdd
+        },
+        Details: {
+            _$class: msls.ContentItem,
+            _$name: "Details",
+            _$parentName: "Tabs",
+            screen: lightSwitchApplication.CartItemTechnicalAdd,
+            data: lightSwitchApplication.CartItemTechnicalAdd,
+            value: lightSwitchApplication.CartItemTechnicalAdd
+        },
+        HelpText: {
+            _$class: msls.ContentItem,
+            _$name: "HelpText",
+            _$parentName: "Details",
+            screen: lightSwitchApplication.CartItemTechnicalAdd,
+            data: lightSwitchApplication.CartItemTechnicalAdd,
+            value: String
+        },
+        Requester: {
+            _$class: msls.ContentItem,
+            _$name: "Requester",
+            _$parentName: "Details",
+            screen: lightSwitchApplication.CartItemTechnicalAdd,
+            data: lightSwitchApplication.CartItemTechnicalAdd,
+            value: String
+        },
+        Name: {
+            _$class: msls.ContentItem,
+            _$name: "Name",
+            _$parentName: "Details",
+            screen: lightSwitchApplication.CartItemTechnicalAdd,
+            data: lightSwitchApplication.CartItemTechnicalAdd,
+            value: String
+        },
+        Description: {
+            _$class: msls.ContentItem,
+            _$name: "Description",
+            _$parentName: "Details",
+            screen: lightSwitchApplication.CartItemTechnicalAdd,
+            data: lightSwitchApplication.CartItemTechnicalAdd,
+            value: String
+        },
+        Popups: {
+            _$class: msls.ContentItem,
+            _$name: "Popups",
+            _$parentName: "RootContentItem",
+            screen: lightSwitchApplication.CartItemTechnicalAdd
+        }
+    };
+
+    msls._addEntryPoints(lightSwitchApplication.CartItemTechnicalAdd, {
+        /// <field>
+        /// Called when a new CartItemTechnicalAdd screen is created.
+        /// <br/>created(msls.application.CartItemTechnicalAdd screen)
+        /// </field>
+        created: [lightSwitchApplication.CartItemTechnicalAdd],
+        /// <field>
+        /// Called before changes on an active CartItemTechnicalAdd screen are applied.
+        /// <br/>beforeApplyChanges(msls.application.CartItemTechnicalAdd screen)
+        /// </field>
+        beforeApplyChanges: [lightSwitchApplication.CartItemTechnicalAdd],
+        /// <field>
+        /// Called after the Details content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        Details_postRender: [$element, function () { return new lightSwitchApplication.CartItemTechnicalAdd().findContentItem("Details"); }],
+        /// <field>
+        /// Called after the HelpText content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        HelpText_postRender: [$element, function () { return new lightSwitchApplication.CartItemTechnicalAdd().findContentItem("HelpText"); }],
+        /// <field>
+        /// Called after the Requester content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        Requester_postRender: [$element, function () { return new lightSwitchApplication.CartItemTechnicalAdd().findContentItem("Requester"); }],
+        /// <field>
+        /// Called after the Name content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        Name_postRender: [$element, function () { return new lightSwitchApplication.CartItemTechnicalAdd().findContentItem("Name"); }],
+        /// <field>
+        /// Called after the Description content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        Description_postRender: [$element, function () { return new lightSwitchApplication.CartItemTechnicalAdd().findContentItem("Description"); }]
+    });
+
     lightSwitchApplication.CartItemView.prototype._$contentItems = {
         Tabs: {
             _$class: msls.ContentItem,
@@ -895,6 +1055,14 @@
         Description: {
             _$class: msls.ContentItem,
             _$name: "Description",
+            _$parentName: "Details",
+            screen: lightSwitchApplication.CartItemView,
+            data: lightSwitchApplication.CartItemView,
+            value: String
+        },
+        CartItem_Parameters: {
+            _$class: msls.ContentItem,
+            _$name: "CartItem_Parameters",
             _$parentName: "Details",
             screen: lightSwitchApplication.CartItemView,
             data: lightSwitchApplication.CartItemView,
@@ -1015,6 +1183,11 @@
         /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
         /// </field>
         Description_postRender: [$element, function () { return new lightSwitchApplication.CartItemView().findContentItem("Description"); }],
+        /// <field>
+        /// Called after the CartItem_Parameters content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        CartItem_Parameters_postRender: [$element, function () { return new lightSwitchApplication.CartItemView().findContentItem("CartItem_Parameters"); }],
         /// <field>
         /// Called after the General content item has been rendered.
         /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
@@ -3135,6 +3308,18 @@
             data: lightSwitchApplication.Home,
             value: lightSwitchApplication.Home
         },
+        AddPersonalVDI: {
+            _$class: msls.ContentItem,
+            _$name: "AddPersonalVDI",
+            _$parentName: "Group3",
+            screen: lightSwitchApplication.Home
+        },
+        AddTechnicalVDI: {
+            _$class: msls.ContentItem,
+            _$name: "AddTechnicalVDI",
+            _$parentName: "Group3",
+            screen: lightSwitchApplication.Home
+        },
         Orders: {
             _$class: msls.ContentItem,
             _$name: "Orders",
@@ -3237,16 +3422,6 @@
         /// </field>
         beforeApplyChanges: [lightSwitchApplication.Home],
         /// <field>
-        /// Called to determine if the somethingToProve method can be executed.
-        /// <br/>canExecute(msls.application.Home screen)
-        /// </field>
-        somethingToProve_canExecute: [lightSwitchApplication.Home],
-        /// <field>
-        /// Called to execute the somethingToProve method.
-        /// <br/>execute(msls.application.Home screen)
-        /// </field>
-        somethingToProve_execute: [lightSwitchApplication.Home],
-        /// <field>
         /// Called after the Group content item has been rendered.
         /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
         /// </field>
@@ -3256,6 +3431,16 @@
         /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
         /// </field>
         Group3_postRender: [$element, function () { return new lightSwitchApplication.Home().findContentItem("Group3"); }],
+        /// <field>
+        /// Called after the AddPersonalVDI content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        AddPersonalVDI_postRender: [$element, function () { return new lightSwitchApplication.Home().findContentItem("AddPersonalVDI"); }],
+        /// <field>
+        /// Called after the AddTechnicalVDI content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        AddTechnicalVDI_postRender: [$element, function () { return new lightSwitchApplication.Home().findContentItem("AddTechnicalVDI"); }],
         /// <field>
         /// Called after the Orders content item has been rendered.
         /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
@@ -5970,6 +6155,14 @@
             data: lightSwitchApplication.Order,
             value: String
         },
+        Requester: {
+            _$class: msls.ContentItem,
+            _$name: "Requester",
+            _$parentName: "left",
+            screen: lightSwitchApplication.OrderView,
+            data: lightSwitchApplication.Order,
+            value: String
+        },
         Description1: {
             _$class: msls.ContentItem,
             _$name: "Description1",
@@ -6104,6 +6297,11 @@
         /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
         /// </field>
         Status_postRender: [$element, function () { return new lightSwitchApplication.OrderView().findContentItem("Status"); }],
+        /// <field>
+        /// Called after the Requester content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        Requester_postRender: [$element, function () { return new lightSwitchApplication.OrderView().findContentItem("Requester"); }],
         /// <field>
         /// Called after the Description1 content item has been rendered.
         /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)

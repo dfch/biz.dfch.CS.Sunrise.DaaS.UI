@@ -156,6 +156,7 @@
     <Property Name="Created" Type="datetimeoffset" Nullable="false" />
     <Property Name="Modified" Type="datetimeoffset" Nullable="false" />
     <Property Name="RowVersion" Type="varbinary(max)" />
+    <Property Name="Parameters" Type="nvarchar(max)" />
   </EntityType>
   <EntityType Name="Cart">
     <Key>
@@ -176,7 +177,7 @@
       <PropertyRef Name="Id" />
     </Key>
     <Property Name="Collection" Type="nvarchar(max)" />
-    <Property Name="Version" Type="nvarchar" Nullable="false" MaxLength="255" />
+    <Property Name="Version" Type="nvarchar(max)" Nullable="false" />
     <Property Name="Id" Type="bigint" Nullable="false" />
     <Property Name="Tid" Type="nvarchar(max)" Nullable="false" />
     <Property Name="Name" Type="nvarchar(max)" Nullable="false" />

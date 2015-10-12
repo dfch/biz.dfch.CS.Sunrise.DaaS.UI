@@ -38,3 +38,9 @@ myapp.Home.AuditTrails_postRender = function (element, contentItem) {
 myapp.Home.Inventory_postRender = function (element, contentItem) {
     $(element).spOverlay(contentItem, 'fa-folder', { height: height, width: width });
 };
+myapp.Home.AddPersonalVDI_postRender = function (element, contentItem) {
+    $(element).spOverlay(contentItem, 'fa-desktop', { height: height, width: width });
+};
+myapp.Home.AddTechnicalVDI_postRender = function (element, contentItem) {
+    $(element).spOverlay(contentItem, 'fa-group', { height: height, width: width });
+};
