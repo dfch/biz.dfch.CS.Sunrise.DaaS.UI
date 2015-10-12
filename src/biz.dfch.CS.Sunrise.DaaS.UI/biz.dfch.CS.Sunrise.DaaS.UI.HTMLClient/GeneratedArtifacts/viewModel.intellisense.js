@@ -2383,6 +2383,22 @@
             data: lightSwitchApplication.EndpointView,
             value: Number
         },
+        Endpoint_Address: {
+            _$class: msls.ContentItem,
+            _$name: "Endpoint_Address",
+            _$parentName: "left",
+            screen: lightSwitchApplication.EndpointView,
+            data: lightSwitchApplication.EndpointView,
+            value: String
+        },
+        Endpoint_Description: {
+            _$class: msls.ContentItem,
+            _$name: "Endpoint_Description",
+            _$parentName: "left",
+            screen: lightSwitchApplication.EndpointView,
+            data: lightSwitchApplication.EndpointView,
+            value: String
+        },
         General: {
             _$class: msls.ContentItem,
             _$name: "General",
@@ -2516,6 +2532,16 @@
         /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
         /// </field>
         Priority_postRender: [$element, function () { return new lightSwitchApplication.EndpointView().findContentItem("Priority"); }],
+        /// <field>
+        /// Called after the Endpoint_Address content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        Endpoint_Address_postRender: [$element, function () { return new lightSwitchApplication.EndpointView().findContentItem("Endpoint_Address"); }],
+        /// <field>
+        /// Called after the Endpoint_Description content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        Endpoint_Description_postRender: [$element, function () { return new lightSwitchApplication.EndpointView().findContentItem("Endpoint_Description"); }],
         /// <field>
         /// Called after the General content item has been rendered.
         /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
