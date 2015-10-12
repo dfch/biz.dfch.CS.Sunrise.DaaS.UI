@@ -29,7 +29,7 @@
                   <DisplayName
                     Value="Add Personal VDI" />
                   <Description
-                    Value="Adds VDI for personal use to the cart" />
+                    Value="Add VDI for personal use to cart" />
                 </ContentItem.Attributes>
                 <ContentItem.PropertySources>
                   <ControlPropertySource
@@ -54,7 +54,7 @@
                 Kind="Command">
                 <ContentItem.Attributes>
                   <Description
-                    Value="Adds a VDI for another user to the cart" />
+                    Value="Add VDI for another user to cart" />
                 </ContentItem.Attributes>
                 <ContentItem.PropertySources>
                   <ControlPropertySource
@@ -88,27 +88,6 @@
                       <ChainExpression>
                         <CallExpression
                           Target="!module/Methods[showOrdersList]" />
-                      </ChainExpression>
-                    </ScreenExpressionTree>
-                  </ControlPropertySource>
-                </ContentItem.PropertySources>
-              </ContentItem>
-              <ContentItem
-                Name="OrderItems"
-                Kind="Command">
-                <ContentItem.Attributes>
-                  <DisplayName
-                    Value="Order Items" />
-                  <Description
-                    Value="View order items" />
-                </ContentItem.Attributes>
-                <ContentItem.PropertySources>
-                  <ControlPropertySource
-                    Property="Microsoft.LightSwitch.MobileWeb:RootControl/Properties[Tap]">
-                    <ScreenExpressionTree>
-                      <ChainExpression>
-                        <CallExpression
-                          Target="!module/Methods[showOrderItemsList]" />
                       </ChainExpression>
                     </ScreenExpressionTree>
                   </ControlPropertySource>

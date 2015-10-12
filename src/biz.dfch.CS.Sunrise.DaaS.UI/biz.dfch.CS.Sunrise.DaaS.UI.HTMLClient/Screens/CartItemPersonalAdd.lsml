@@ -9,6 +9,8 @@
     <Screen.Attributes>
       <SaveChangesTo
         EntityContainer="CoreData" />
+      <DisplayName
+        Value="Add VDI for Personal Use" />
     </Screen.Attributes>
     <Screen.RootContentItem>
       <ContentItem
