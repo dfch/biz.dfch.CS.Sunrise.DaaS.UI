@@ -5853,76 +5853,8 @@
                 "childContentItems":
                 [
                   {
-                    "displayName": "Details",
-                    "name": "Details",
-                    "kind": "Tab",
-                    "view": { "__id": ":RowsLayout" },
-                    "childContentItems":
-                    [
-                      {
-                        "displayName": "Name",
-                        "name": "Name",
-                        "kind": "Value",
-                        "view": { "__id": ":Text" },
-                        "dataSource":
-                        {
-                          "links":
-                          [
-                            {
-                              "member": { "__id": "CartView/Properties[Cart]" }
-                            },
-                            {
-                              "member": { "__id": "Cart/Properties[Name]" }
-                            }
-                          ]
-                        }
-                      },
-                      {
-                        "displayName": "Description",
-                        "name": "Description",
-                        "kind": "Value",
-                        "view": { "__id": ":Paragraph" },
-                        "dataSource":
-                        {
-                          "links":
-                          [
-                            {
-                              "member": { "__id": "CartView/Properties[Cart]" }
-                            },
-                            {
-                              "member": { "__id": "Cart/Properties[Description]" }
-                            }
-                          ]
-                        }
-                      }
-                    ],
-                    "commandItems":
-                    [
-                      {
-                        "displayName": "Delete",
-                        "name": "deleteEntity",
-                        "kind": "Command",
-                        "view": { "__id": ":CommandBarButton" },
-                        "propertySources":
-                        [
-                          {
-                            "property": { "__id": ":RootControl/Properties[Tap]" },
-                            "source":
-                            {
-                              "target": { "__id": "CartView/Methods[deleteEntity]" }
-                            }
-                          },
-                          {
-                            "property": { "__id": ":RootCommand/Properties[Icon]" },
-                            "value": "msls-remove"
-                          }
-                        ]
-                      }
-                    ]
-                  },
-                  {
-                    "displayName": "Cart Items",
-                    "name": "CartItems",
+                    "displayName": "Contents",
+                    "name": "Contents",
                     "kind": "Tab",
                     "view": { "__id": ":RowsLayout" },
                     "childContentItems":
@@ -6021,6 +5953,26 @@
                     "commandItems":
                     [
                       {
+                        "displayName": "Checkout",
+                        "name": "checkoutFromItems",
+                        "kind": "Command",
+                        "view": { "__id": ":CommandBarButton" },
+                        "propertySources":
+                        [
+                          {
+                            "property": { "__id": ":RootControl/Properties[Tap]" },
+                            "source":
+                            {
+                              "target": { "__id": "CartView/Methods[checkoutCart]" }
+                            }
+                          },
+                          {
+                            "property": { "__id": ":RootCommand/Properties[Icon]" },
+                            "value": "msls-accept"
+                          }
+                        ]
+                      },
+                      {
                         "displayName": "Edit",
                         "name": "Edit",
                         "kind": "Command",
@@ -6091,6 +6043,94 @@
                                 }
                               ]
                             }
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "displayName": "Details",
+                    "name": "Details",
+                    "kind": "Tab",
+                    "view": { "__id": ":RowsLayout" },
+                    "childContentItems":
+                    [
+                      {
+                        "displayName": "Name",
+                        "name": "Name",
+                        "kind": "Value",
+                        "view": { "__id": ":Text" },
+                        "dataSource":
+                        {
+                          "links":
+                          [
+                            {
+                              "member": { "__id": "CartView/Properties[Cart]" }
+                            },
+                            {
+                              "member": { "__id": "Cart/Properties[Name]" }
+                            }
+                          ]
+                        }
+                      },
+                      {
+                        "displayName": "Description",
+                        "name": "Description",
+                        "kind": "Value",
+                        "view": { "__id": ":Paragraph" },
+                        "dataSource":
+                        {
+                          "links":
+                          [
+                            {
+                              "member": { "__id": "CartView/Properties[Cart]" }
+                            },
+                            {
+                              "member": { "__id": "Cart/Properties[Description]" }
+                            }
+                          ]
+                        }
+                      }
+                    ],
+                    "commandItems":
+                    [
+                      {
+                        "displayName": "Checkout",
+                        "name": "CheckoutFromCart",
+                        "kind": "Command",
+                        "view": { "__id": ":CommandBarButton" },
+                        "propertySources":
+                        [
+                          {
+                            "property": { "__id": ":RootControl/Properties[Tap]" },
+                            "source":
+                            {
+                              "target": { "__id": "CartView/Methods[checkoutCart]" }
+                            }
+                          },
+                          {
+                            "property": { "__id": ":RootCommand/Properties[Icon]" },
+                            "value": "msls-accept"
+                          }
+                        ]
+                      },
+                      {
+                        "displayName": "Delete",
+                        "name": "deleteEntity",
+                        "kind": "Command",
+                        "view": { "__id": ":CommandBarButton" },
+                        "propertySources":
+                        [
+                          {
+                            "property": { "__id": ":RootControl/Properties[Tap]" },
+                            "source":
+                            {
+                              "target": { "__id": "CartView/Methods[deleteEntity]" }
+                            }
+                          },
+                          {
+                            "property": { "__id": ":RootCommand/Properties[Icon]" },
+                            "value": "msls-remove"
                           }
                         ]
                       }
@@ -6259,6 +6299,10 @@
             {
               "id": "CartView/Methods[deleteEntity]",
               "name": "deleteEntity"
+            },
+            {
+              "id": "CartView/Methods[checkoutCart]",
+              "name": "checkoutCart"
             }
           ],
           "properties":
@@ -7301,87 +7345,6 @@
                 "childContentItems":
                 [
                   {
-                    "displayName": "Details",
-                    "name": "Details",
-                    "kind": "Tab",
-                    "view": { "__id": ":RowsLayout" },
-                    "childContentItems":
-                    [
-                      {
-                        "displayName": "Name",
-                        "name": "Name",
-                        "kind": "Value",
-                        "view": { "__id": ":Text" },
-                        "dataSource":
-                        {
-                          "links":
-                          [
-                            {
-                              "member": { "__id": "CatalogueView/Properties[Catalogue]" }
-                            },
-                            {
-                              "member": { "__id": "Catalogue/Properties[Name]" }
-                            }
-                          ]
-                        }
-                      },
-                      {
-                        "displayName": "Status",
-                        "name": "Status",
-                        "kind": "Value",
-                        "view": { "__id": ":Text" },
-                        "dataSource":
-                        {
-                          "links":
-                          [
-                            {
-                              "member": { "__id": "CatalogueView/Properties[Catalogue]" }
-                            },
-                            {
-                              "member": { "__id": "Catalogue/Properties[Status]" }
-                            }
-                          ]
-                        }
-                      },
-                      {
-                        "displayName": "Version",
-                        "name": "Version",
-                        "kind": "Value",
-                        "view": { "__id": ":Text" },
-                        "dataSource":
-                        {
-                          "links":
-                          [
-                            {
-                              "member": { "__id": "CatalogueView/Properties[Catalogue]" }
-                            },
-                            {
-                              "member": { "__id": "Catalogue/Properties[Version]" }
-                            }
-                          ]
-                        }
-                      },
-                      {
-                        "displayName": "Description",
-                        "name": "Description",
-                        "kind": "Value",
-                        "view": { "__id": ":Paragraph" },
-                        "dataSource":
-                        {
-                          "links":
-                          [
-                            {
-                              "member": { "__id": "CatalogueView/Properties[Catalogue]" }
-                            },
-                            {
-                              "member": { "__id": "Catalogue/Properties[Description]" }
-                            }
-                          ]
-                        }
-                      }
-                    ]
-                  },
-                  {
                     "displayName": "Catalogue Items",
                     "name": "CatalogueItems",
                     "kind": "Tab",
@@ -7481,8 +7444,8 @@
                     "commandItems":
                     [
                       {
-                        "displayName": "View",
-                        "name": "View",
+                        "displayName": "Product Details",
+                        "name": "ProductDetails",
                         "kind": "Command",
                         "view": { "__id": ":CommandBarButton" },
                         "propertySources":
@@ -7516,7 +7479,7 @@
                         ]
                       },
                       {
-                        "displayName": "Add to cart",
+                        "displayName": "Add to Cart",
                         "name": "addToCart",
                         "kind": "Command",
                         "view": { "__id": ":CommandBarButton" },
@@ -7534,6 +7497,107 @@
                             "value": "msls-add"
                           }
                         ]
+                      },
+                      {
+                        "displayName": "Show Cart",
+                        "name": "ShowCart",
+                        "kind": "Command",
+                        "view": { "__id": ":CommandBarButton" },
+                        "propertySources":
+                        [
+                          {
+                            "property": { "__id": ":RootControl/Properties[Tap]" },
+                            "source":
+                            {
+                              "target": { "__id": "!module/Methods[showCartsList]" }
+                            }
+                          },
+                          {
+                            "property": { "__id": ":RootCommand/Properties[Icon]" },
+                            "value": "msls-list"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "displayName": "Details",
+                    "name": "Details",
+                    "kind": "Tab",
+                    "view": { "__id": ":RowsLayout" },
+                    "childContentItems":
+                    [
+                      {
+                        "displayName": "Name",
+                        "name": "Name",
+                        "kind": "Value",
+                        "view": { "__id": ":Text" },
+                        "dataSource":
+                        {
+                          "links":
+                          [
+                            {
+                              "member": { "__id": "CatalogueView/Properties[Catalogue]" }
+                            },
+                            {
+                              "member": { "__id": "Catalogue/Properties[Name]" }
+                            }
+                          ]
+                        }
+                      },
+                      {
+                        "displayName": "Status",
+                        "name": "Status",
+                        "kind": "Value",
+                        "view": { "__id": ":Text" },
+                        "dataSource":
+                        {
+                          "links":
+                          [
+                            {
+                              "member": { "__id": "CatalogueView/Properties[Catalogue]" }
+                            },
+                            {
+                              "member": { "__id": "Catalogue/Properties[Status]" }
+                            }
+                          ]
+                        }
+                      },
+                      {
+                        "displayName": "Version",
+                        "name": "Version",
+                        "kind": "Value",
+                        "view": { "__id": ":Text" },
+                        "dataSource":
+                        {
+                          "links":
+                          [
+                            {
+                              "member": { "__id": "CatalogueView/Properties[Catalogue]" }
+                            },
+                            {
+                              "member": { "__id": "Catalogue/Properties[Version]" }
+                            }
+                          ]
+                        }
+                      },
+                      {
+                        "displayName": "Description",
+                        "name": "Description",
+                        "kind": "Value",
+                        "view": { "__id": ":Paragraph" },
+                        "dataSource":
+                        {
+                          "links":
+                          [
+                            {
+                              "member": { "__id": "CatalogueView/Properties[Catalogue]" }
+                            },
+                            {
+                              "member": { "__id": "Catalogue/Properties[Description]" }
+                            }
+                          ]
+                        }
                       }
                     ]
                   },
@@ -9563,28 +9627,6 @@
                                 "source":
                                 {
                                   "target": { "__id": "!module/Methods[showApprovalsList]" }
-                                }
-                              }
-                            ]
-                          },
-                          {
-                            "displayName": "New Order",
-                            "description": "Place a new order",
-                            "name": "NewOrder",
-                            "kind": "Command",
-                            "view": { "__id": ":Button" },
-                            "propertySources":
-                            [
-                              {
-                                "property": { "__id": ":RootControl/Properties[Tap]" },
-                                "source":
-                                {
-                                  "target": { "__id": "!module/Methods[showOrderAdd]" },
-                                  ":@CreateNewEntity":
-                                  {
-                                    "entityType": { "__id": "Order" },
-                                    "targetParameter": { "__id": "!module/Methods[showOrderAdd]/Parameters[Order]" }
-                                  }
                                 }
                               }
                             ]

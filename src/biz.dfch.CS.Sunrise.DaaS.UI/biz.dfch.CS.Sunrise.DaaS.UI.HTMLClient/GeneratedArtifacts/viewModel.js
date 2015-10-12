@@ -871,7 +871,8 @@
                 }
             }
         ], [
-            { name: "deleteEntity" }
+            { name: "deleteEntity" },
+            { name: "checkoutCart" }
         ]),
 
         CatalogueItemsList: $defineScreen(CatalogueItemsList, [

@@ -145,31 +145,6 @@
                   </ControlPropertySource>
                 </ContentItem.PropertySources>
               </ContentItem>
-              <ContentItem
-                Name="NewOrder"
-                Kind="Command">
-                <ContentItem.Attributes>
-                  <Description
-                    Value="Place a new order" />
-                </ContentItem.Attributes>
-                <ContentItem.PropertySources>
-                  <ControlPropertySource
-                    Property="Microsoft.LightSwitch.MobileWeb:RootControl/Properties[Tap]">
-                    <ScreenExpressionTree>
-                      <ChainExpression>
-                        <CallExpression
-                          Target="!module/Methods[showOrderAdd]">
-                          <CallExpression.Attributes>
-                            <CreateNewEntity
-                              EntityType="Order"
-                              TargetParameter="!module/Methods[showOrderAdd]/Parameters[Order]" />
-                          </CallExpression.Attributes>
-                        </CallExpression>
-                      </ChainExpression>
-                    </ScreenExpressionTree>
-                  </ControlPropertySource>
-                </ContentItem.PropertySources>
-              </ContentItem>
             </ContentItem>
             <ContentItem
               Name="Group2"
