@@ -9450,8 +9450,8 @@
                     "childContentItems":
                     [
                       {
-                        "displayName": "Group1",
-                        "name": "Group1",
+                        "displayName": "Group3",
+                        "name": "Group3",
                         "kind": "Group",
                         "view": { "__id": ":ColumnsLayout" },
                         "childContentItems":
@@ -9474,9 +9474,9 @@
                             ]
                           },
                           {
-                            "displayName": "Approvals",
-                            "description": "Approve pending orders",
-                            "name": "Approvals",
+                            "displayName": "Order Items",
+                            "description": "View order items",
+                            "name": "OrderItems",
                             "kind": "Command",
                             "view": { "__id": ":Button" },
                             "propertySources":
@@ -9485,11 +9485,37 @@
                                 "property": { "__id": ":RootControl/Properties[Tap]" },
                                 "source":
                                 {
-                                  "target": { "__id": "!module/Methods[showApprovalsList]" }
+                                  "target": { "__id": "!module/Methods[showOrderItemsList]" }
                                 }
                               }
                             ]
                           },
+                          {
+                            "displayName": "Inventory",
+                            "description": "Shows the inventory",
+                            "name": "Inventory",
+                            "kind": "Command",
+                            "view": { "__id": ":Button" },
+                            "propertySources":
+                            [
+                              {
+                                "property": { "__id": ":RootControl/Properties[Tap]" },
+                                "source":
+                                {
+                                  "target": { "__id": "!module/Methods[showNodesList]" }
+                                }
+                              }
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "displayName": "Group1",
+                        "name": "Group1",
+                        "kind": "Group",
+                        "view": { "__id": ":ColumnsLayout" },
+                        "childContentItems":
+                        [
                           {
                             "displayName": "Catalogues",
                             "description": "Shows all available catalogues",
@@ -9503,28 +9529,6 @@
                                 "source":
                                 {
                                   "target": { "__id": "!module/Methods[showCataloguesList]" }
-                                }
-                              }
-                            ]
-                          },
-                          {
-                            "displayName": "New Order",
-                            "description": "Place a new order",
-                            "name": "NewOrder",
-                            "kind": "Command",
-                            "view": { "__id": ":Button" },
-                            "propertySources":
-                            [
-                              {
-                                "property": { "__id": ":RootControl/Properties[Tap]" },
-                                "source":
-                                {
-                                  "target": { "__id": "!module/Methods[showOrderAdd]" },
-                                  ":@CreateNewEntity":
-                                  {
-                                    "entityType": { "__id": "Order" },
-                                    "targetParameter": { "__id": "!module/Methods[showOrderAdd]/Parameters[Order]" }
-                                  }
                                 }
                               }
                             ]
@@ -9547,9 +9551,9 @@
                             ]
                           },
                           {
-                            "displayName": "Inventory",
-                            "description": "Shows the inventory",
-                            "name": "Inventory",
+                            "displayName": "Approvals",
+                            "description": "Approve pending orders",
+                            "name": "Approvals",
                             "kind": "Command",
                             "view": { "__id": ":Button" },
                             "propertySources":
@@ -9558,7 +9562,29 @@
                                 "property": { "__id": ":RootControl/Properties[Tap]" },
                                 "source":
                                 {
-                                  "target": { "__id": "!module/Methods[showNodesList]" }
+                                  "target": { "__id": "!module/Methods[showApprovalsList]" }
+                                }
+                              }
+                            ]
+                          },
+                          {
+                            "displayName": "New Order",
+                            "description": "Place a new order",
+                            "name": "NewOrder",
+                            "kind": "Command",
+                            "view": { "__id": ":Button" },
+                            "propertySources":
+                            [
+                              {
+                                "property": { "__id": ":RootControl/Properties[Tap]" },
+                                "source":
+                                {
+                                  "target": { "__id": "!module/Methods[showOrderAdd]" },
+                                  ":@CreateNewEntity":
+                                  {
+                                    "entityType": { "__id": "Order" },
+                                    "targetParameter": { "__id": "!module/Methods[showOrderAdd]/Parameters[Order]" }
+                                  }
                                 }
                               }
                             ]
@@ -9624,9 +9650,9 @@
                             ]
                           },
                           {
-                            "displayName": "Order Items",
-                            "description": "View order items",
-                            "name": "OrderItems",
+                            "displayName": "Audit Trails",
+                            "description": "Browse audit trails",
+                            "name": "AuditTrails",
                             "kind": "Command",
                             "view": { "__id": ":Button" },
                             "propertySources":
@@ -9635,7 +9661,7 @@
                                 "property": { "__id": ":RootControl/Properties[Tap]" },
                                 "source":
                                 {
-                                  "target": { "__id": "!module/Methods[showOrderItemsList]" }
+                                  "target": { "__id": "!module/Methods[showAuditTrailsList]" }
                                 }
                               }
                             ]
@@ -9653,23 +9679,6 @@
                                 "source":
                                 {
                                   "target": { "__id": "!module/Methods[showGatesList]" }
-                                }
-                              }
-                            ]
-                          },
-                          {
-                            "displayName": "Audit Trails",
-                            "description": "Browse audit trails",
-                            "name": "AuditTrails",
-                            "kind": "Command",
-                            "view": { "__id": ":Button" },
-                            "propertySources":
-                            [
-                              {
-                                "property": { "__id": ":RootControl/Properties[Tap]" },
-                                "source":
-                                {
-                                  "target": { "__id": "!module/Methods[showAuditTrailsList]" }
                                 }
                               }
                             ]

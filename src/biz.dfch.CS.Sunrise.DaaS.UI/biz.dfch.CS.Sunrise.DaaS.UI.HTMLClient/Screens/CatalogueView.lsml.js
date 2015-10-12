@@ -34,6 +34,7 @@ myapp.CatalogueView.addToCart_execute = function (screen) {
     cartItem.Modified = new Date();
 
     cartItem.Name = selectedCatalogueItem.Name;
+    cartItem.Description = selectedCatalogueItem.Description;
     cartItem.CartId = "0";
     cartItem.Quantity = 1;
     cartItem.CatalogueItemId = selectedCatalogueItem.Id;

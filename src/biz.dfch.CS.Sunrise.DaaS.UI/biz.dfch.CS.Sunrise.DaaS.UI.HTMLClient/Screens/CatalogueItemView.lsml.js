@@ -24,11 +24,10 @@ myapp.CatalogueItemView.addToCart_execute = function (screen) {
     cartItem.Modified = new Date();
 
     cartItem.Name = catalogueItem.Name;
+    cartItem.Description = catalogueItem.Description;
     cartItem.CartId = "0";
     cartItem.Quantity = 1;
     cartItem.CatalogueItemId = catalogueItem.Id;
-
-    alert(catalogueItem.Name);
 
     myapp.activeDataWorkspace.CoreData.saveChanges().then(function () {
         msls.showMessageBox(

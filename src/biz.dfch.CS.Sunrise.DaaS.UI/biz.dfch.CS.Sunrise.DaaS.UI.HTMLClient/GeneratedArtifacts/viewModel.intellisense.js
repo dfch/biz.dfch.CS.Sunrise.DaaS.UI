@@ -3117,9 +3117,9 @@
             data: lightSwitchApplication.Home,
             value: lightSwitchApplication.Home
         },
-        Group1: {
+        Group3: {
             _$class: msls.ContentItem,
-            _$name: "Group1",
+            _$name: "Group3",
             _$parentName: "Group",
             screen: lightSwitchApplication.Home,
             data: lightSwitchApplication.Home,
@@ -3128,24 +3128,32 @@
         Orders: {
             _$class: msls.ContentItem,
             _$name: "Orders",
-            _$parentName: "Group1",
+            _$parentName: "Group3",
             screen: lightSwitchApplication.Home
         },
-        Approvals: {
+        OrderItems: {
             _$class: msls.ContentItem,
-            _$name: "Approvals",
-            _$parentName: "Group1",
+            _$name: "OrderItems",
+            _$parentName: "Group3",
             screen: lightSwitchApplication.Home
+        },
+        Inventory: {
+            _$class: msls.ContentItem,
+            _$name: "Inventory",
+            _$parentName: "Group3",
+            screen: lightSwitchApplication.Home
+        },
+        Group1: {
+            _$class: msls.ContentItem,
+            _$name: "Group1",
+            _$parentName: "Group",
+            screen: lightSwitchApplication.Home,
+            data: lightSwitchApplication.Home,
+            value: lightSwitchApplication.Home
         },
         Catalogues: {
             _$class: msls.ContentItem,
             _$name: "Catalogues",
-            _$parentName: "Group1",
-            screen: lightSwitchApplication.Home
-        },
-        NewOrder: {
-            _$class: msls.ContentItem,
-            _$name: "NewOrder",
             _$parentName: "Group1",
             screen: lightSwitchApplication.Home
         },
@@ -3155,9 +3163,15 @@
             _$parentName: "Group1",
             screen: lightSwitchApplication.Home
         },
-        Inventory: {
+        Approvals: {
             _$class: msls.ContentItem,
-            _$name: "Inventory",
+            _$name: "Approvals",
+            _$parentName: "Group1",
+            screen: lightSwitchApplication.Home
+        },
+        NewOrder: {
+            _$class: msls.ContentItem,
+            _$name: "NewOrder",
             _$parentName: "Group1",
             screen: lightSwitchApplication.Home
         },
@@ -3187,21 +3201,15 @@
             _$parentName: "Group2",
             screen: lightSwitchApplication.Home
         },
-        OrderItems: {
+        AuditTrails: {
             _$class: msls.ContentItem,
-            _$name: "OrderItems",
+            _$name: "AuditTrails",
             _$parentName: "Group2",
             screen: lightSwitchApplication.Home
         },
         Gates: {
             _$class: msls.ContentItem,
             _$name: "Gates",
-            _$parentName: "Group2",
-            screen: lightSwitchApplication.Home
-        },
-        AuditTrails: {
-            _$class: msls.ContentItem,
-            _$name: "AuditTrails",
             _$parentName: "Group2",
             screen: lightSwitchApplication.Home
         },
@@ -3240,40 +3248,50 @@
         /// </field>
         Group_postRender: [$element, function () { return new lightSwitchApplication.Home().findContentItem("Group"); }],
         /// <field>
-        /// Called after the Group1 content item has been rendered.
+        /// Called after the Group3 content item has been rendered.
         /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
         /// </field>
-        Group1_postRender: [$element, function () { return new lightSwitchApplication.Home().findContentItem("Group1"); }],
+        Group3_postRender: [$element, function () { return new lightSwitchApplication.Home().findContentItem("Group3"); }],
         /// <field>
         /// Called after the Orders content item has been rendered.
         /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
         /// </field>
         Orders_postRender: [$element, function () { return new lightSwitchApplication.Home().findContentItem("Orders"); }],
         /// <field>
-        /// Called after the Approvals content item has been rendered.
+        /// Called after the OrderItems content item has been rendered.
         /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
         /// </field>
-        Approvals_postRender: [$element, function () { return new lightSwitchApplication.Home().findContentItem("Approvals"); }],
+        OrderItems_postRender: [$element, function () { return new lightSwitchApplication.Home().findContentItem("OrderItems"); }],
+        /// <field>
+        /// Called after the Inventory content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        Inventory_postRender: [$element, function () { return new lightSwitchApplication.Home().findContentItem("Inventory"); }],
+        /// <field>
+        /// Called after the Group1 content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        Group1_postRender: [$element, function () { return new lightSwitchApplication.Home().findContentItem("Group1"); }],
         /// <field>
         /// Called after the Catalogues content item has been rendered.
         /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
         /// </field>
         Catalogues_postRender: [$element, function () { return new lightSwitchApplication.Home().findContentItem("Catalogues"); }],
         /// <field>
-        /// Called after the NewOrder content item has been rendered.
-        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
-        /// </field>
-        NewOrder_postRender: [$element, function () { return new lightSwitchApplication.Home().findContentItem("NewOrder"); }],
-        /// <field>
         /// Called after the Carts content item has been rendered.
         /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
         /// </field>
         Carts_postRender: [$element, function () { return new lightSwitchApplication.Home().findContentItem("Carts"); }],
         /// <field>
-        /// Called after the Inventory content item has been rendered.
+        /// Called after the Approvals content item has been rendered.
         /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
         /// </field>
-        Inventory_postRender: [$element, function () { return new lightSwitchApplication.Home().findContentItem("Inventory"); }],
+        Approvals_postRender: [$element, function () { return new lightSwitchApplication.Home().findContentItem("Approvals"); }],
+        /// <field>
+        /// Called after the NewOrder content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        NewOrder_postRender: [$element, function () { return new lightSwitchApplication.Home().findContentItem("NewOrder"); }],
         /// <field>
         /// Called after the Group2 content item has been rendered.
         /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
@@ -3295,20 +3313,15 @@
         /// </field>
         Jobs_postRender: [$element, function () { return new lightSwitchApplication.Home().findContentItem("Jobs"); }],
         /// <field>
-        /// Called after the OrderItems content item has been rendered.
+        /// Called after the AuditTrails content item has been rendered.
         /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
         /// </field>
-        OrderItems_postRender: [$element, function () { return new lightSwitchApplication.Home().findContentItem("OrderItems"); }],
+        AuditTrails_postRender: [$element, function () { return new lightSwitchApplication.Home().findContentItem("AuditTrails"); }],
         /// <field>
         /// Called after the Gates content item has been rendered.
         /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
         /// </field>
-        Gates_postRender: [$element, function () { return new lightSwitchApplication.Home().findContentItem("Gates"); }],
-        /// <field>
-        /// Called after the AuditTrails content item has been rendered.
-        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
-        /// </field>
-        AuditTrails_postRender: [$element, function () { return new lightSwitchApplication.Home().findContentItem("AuditTrails"); }]
+        Gates_postRender: [$element, function () { return new lightSwitchApplication.Home().findContentItem("Gates"); }]
     });
 
     lightSwitchApplication.JobsList.prototype._$contentItems = {
