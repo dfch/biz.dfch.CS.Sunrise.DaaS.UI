@@ -26,7 +26,7 @@
               Name="AuditTrails"
               Kind="Collection"
               DataType="CollectionView$AuditTrail"
-              View="Microsoft.LightSwitch.MobileWeb:TileList">
+              View="Microsoft.LightSwitch.MobileWeb:List">
               <ContentItem.Attributes>
                 <DisplayName
                   Value="AuditTrails" />
