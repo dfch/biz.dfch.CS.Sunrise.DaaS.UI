@@ -1,41 +1,61 @@
 ﻿/// <reference path="~/GeneratedArtifacts/viewModel.js" />
 
 myapp.ApprovalView.approve_execute = function (screen) {
-    if (screen.Approval.Status != "Created") {
-        msls.showMessageBox("Request has already been processed. Cannot proceed.",
+
+    myapp.showApprovalApprove
+        (
+            screen.Approval
+            ,
             {
-                title: "Error"
-                ,
-                buttons: msls.MessageBoxButtons.ok
-            });
-    }
-    else
-    {
-        msls.showMessageBox("Sure, you want to approve the request?",
-            {
-                title: "Approve?"
-                ,
-                buttons: msls.MessageBoxButtons.yesNo
-            }
-        ).then(function (result) {
-            if (result == msls.MessageBoxResult.yes) {
-                screen.Approval.Status = "Approved";
-                return myapp.commitChanges().then(null, function fail(e) {
-                    msls.showMessageBox(e.message,
-                        {
-                            title: e.title
-                            ,
-                            buttons: msls.MessageBoxButtons.ok
-                        }).then(function (result) {
-                            myapp.cancelChanges();
-                            throw e;
-                        });
+                beforeShown: function(myscreen) 
+                {
+                    alert("tralaal2");
+                    if (screen.Approval.Status != "Created") {
+                        msls.showMessageBox("Request has already been processed. Cannot proceed.",
+                            {
+                                title: "Error"
+                                ,
+                                buttons: msls.MessageBoxButtons.ok
+                            });
+                    }
                 }
-                );
             }
-        }
         );
-    }
+    //if (screen.Approval.Status != "Created") {
+    //    msls.showMessageBox("Request has already been processed. Cannot proceed.",
+    //        {
+    //            title: "Error"
+    //            ,
+    //            buttons: msls.MessageBoxButtons.ok
+    //        });
+    //}
+    //else
+    //{
+    //    msls.showMessageBox("Sure, you want to approve the request?",
+    //        {
+    //            title: "Approve?"
+    //            ,
+    //            buttons: msls.MessageBoxButtons.yesNo
+    //        }
+    //    ).then(function (result) {
+    //        if (result == msls.MessageBoxResult.yes) {
+    //            screen.Approval.Status = "Approved";
+    //            return myapp.commitChanges().then(null, function fail(e) {
+    //                msls.showMessageBox(e.message,
+    //                    {
+    //                        title: e.title
+    //                        ,
+    //                        buttons: msls.MessageBoxButtons.ok
+    //                    }).then(function (result) {
+    //                        myapp.cancelChanges();
+    //                        throw e;
+    //                    });
+    //            }
+    //            );
+    //        }
+    //    }
+    //    );
+    //}
 };
 myapp.ApprovalView.decline_execute = function (screen) {
     if (screen.Approval.Status != "Created")

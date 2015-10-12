@@ -7497,7 +7497,22 @@
                             "property": { "__id": ":RootControl/Properties[Tap]" },
                             "source":
                             {
-                              "target": { "__id": "ApprovalView/Methods[approve]" }
+                              "target": { "__id": "!module/Methods[showApprovalApprove]" },
+                              "arguments":
+                              [
+                                {
+                                  "parameter": { "__id": "!module/Methods[showApprovalApprove]/Parameters[Approval]" },
+                                  "value":
+                                  {
+                                    "links":
+                                    [
+                                      {
+                                        "member": { "__id": "ApprovalView/Properties[Approval]" }
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
                             }
                           },
                           {
@@ -7517,7 +7532,22 @@
                             "property": { "__id": ":RootControl/Properties[Tap]" },
                             "source":
                             {
-                              "target": { "__id": "ApprovalView/Methods[decline]" }
+                              "target": { "__id": "!module/Methods[showApprovalDecline]" },
+                              "arguments":
+                              [
+                                {
+                                  "parameter": { "__id": "!module/Methods[showApprovalDecline]/Parameters[Approval]" },
+                                  "value":
+                                  {
+                                    "links":
+                                    [
+                                      {
+                                        "member": { "__id": "ApprovalView/Properties[Approval]" }
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
                             }
                           },
                           {
@@ -18740,6 +18770,332 @@
               }
             }
           ]
+        },
+        {
+          "displayName": "Approve Request",
+          "id": "ApprovalApprove",
+          "name": "ApprovalApprove",
+          "launchMode": "Single",
+          ":@SaveChangesTo":
+          {
+            "property": { "__id": "DataWorkspace/Members[CoreData]" }
+          },
+          "rootContentItem":
+          {
+            "displayName": "Approve Request",
+            "name": "RootContentItem",
+            "kind": "Screen",
+            "view": { "__id": ":Screen" },
+            "childContentItems":
+            [
+              {
+                "displayName": "Tabs",
+                "name": "Tabs",
+                "kind": "Group",
+                "view": { "__id": ":TabPages" },
+                "childContentItems":
+                [
+                  {
+                    "displayName": "Details",
+                    "name": "Details",
+                    "kind": "Tab",
+                    "view": { "__id": ":RowsLayout" },
+                    "childContentItems":
+                    [
+                      {
+                        "displayName": "Name",
+                        "name": "Name",
+                        "kind": "Value",
+                        "view": { "__id": ":Text" },
+                        "dataSource":
+                        {
+                          "links":
+                          [
+                            {
+                              "member": { "__id": "ApprovalApprove/Properties[Approval]" }
+                            },
+                            {
+                              "member": { "__id": "Approval/Properties[Name]" }
+                            }
+                          ]
+                        }
+                      },
+                      {
+                        "displayName": "Status",
+                        "name": "Approval_Status",
+                        "kind": "Value",
+                        "view": { "__id": ":Text" },
+                        "dataSource":
+                        {
+                          "links":
+                          [
+                            {
+                              "member": { "__id": "ApprovalApprove/Properties[Approval]" }
+                            },
+                            {
+                              "member": { "__id": "Approval/Properties[Status]" }
+                            }
+                          ]
+                        }
+                      },
+                      {
+                        "displayName": "Help Text",
+                        "name": "HelpText",
+                        "kind": "Value",
+                        "view": { "__id": ":Paragraph" },
+                        "dataSource":
+                        {
+                          "member": { "__id": "ApprovalApprove/Properties[HelpText]" }
+                        }
+                      },
+                      {
+                        "displayName": "Description",
+                        "name": "Description",
+                        "kind": "Value",
+                        "view": { "__id": ":TextArea" },
+                        "dataSource":
+                        {
+                          "links":
+                          [
+                            {
+                              "member": { "__id": "ApprovalApprove/Properties[Approval]" }
+                            },
+                            {
+                              "member": { "__id": "Approval/Properties[Description]" }
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "displayName": "Popups",
+                "name": "Popups",
+                "kind": "Group",
+                "view": { "__id": ":DialogPages" }
+              }
+            ],
+            "propertySources":
+            [
+              {
+                "property": { "__id": ":Screen/Properties[ScreenType]" },
+                "value": "Edit"
+              },
+              {
+                "property": { "__id": ":Screen/Properties[ShowAsDialog]" },
+                "value": true
+              }
+            ]
+          },
+          "methods":
+          [
+            {
+              "id": "ApprovalApprove/Methods[showTab]",
+              "name": "showTab",
+              "parameters":
+              [
+                {
+                  "id": "ApprovalApprove/Methods[showTab]/Parameters[tabName]",
+                  "name": "tabName",
+                  "parameterType": { "__id": ":String" }
+                }
+              ]
+            },
+            {
+              "id": "ApprovalApprove/Methods[showDialog]",
+              "name": "showDialog",
+              "parameters":
+              [
+                {
+                  "id": "ApprovalApprove/Methods[showDialog]/Parameters[dialogName]",
+                  "name": "dialogName",
+                  "parameterType": { "__id": ":String" }
+                }
+              ]
+            }
+          ],
+          "properties":
+          [
+            {
+              "id": "ApprovalApprove/Properties[Approval]",
+              "name": "Approval",
+              "elementType": { "__id": "Approval" },
+              "propertyType": { "__id": "Approval" },
+              ":@IsParameter": { }
+            },
+            {
+              "id": "ApprovalApprove/Properties[HelpText]",
+              "name": "HelpText",
+              "elementType": { "__id": ":String" },
+              "propertyType": { "__id": ":String" },
+              ":@Required": { }
+            }
+          ]
+        },
+        {
+          "displayName": "Approval Decline",
+          "id": "ApprovalDecline",
+          "name": "ApprovalDecline",
+          "launchMode": "Single",
+          ":@SaveChangesTo":
+          {
+            "property": { "__id": "DataWorkspace/Members[CoreData]" }
+          },
+          "rootContentItem":
+          {
+            "displayName": "Root Content Item",
+            "name": "RootContentItem",
+            "kind": "Screen",
+            "view": { "__id": ":Screen" },
+            "childContentItems":
+            [
+              {
+                "displayName": "Tabs",
+                "name": "Tabs",
+                "kind": "Group",
+                "view": { "__id": ":TabPages" },
+                "childContentItems":
+                [
+                  {
+                    "displayName": "Details",
+                    "name": "Details",
+                    "kind": "Tab",
+                    "view": { "__id": ":RowsLayout" },
+                    "childContentItems":
+                    [
+                      {
+                        "displayName": "Name",
+                        "name": "Name",
+                        "kind": "Value",
+                        "view": { "__id": ":Text" },
+                        "dataSource":
+                        {
+                          "links":
+                          [
+                            {
+                              "member": { "__id": "ApprovalDecline/Properties[Approval]" }
+                            },
+                            {
+                              "member": { "__id": "Approval/Properties[Name]" }
+                            }
+                          ]
+                        }
+                      },
+                      {
+                        "displayName": "Status",
+                        "name": "Status",
+                        "kind": "Value",
+                        "view": { "__id": ":Text" },
+                        "dataSource":
+                        {
+                          "links":
+                          [
+                            {
+                              "member": { "__id": "ApprovalDecline/Properties[Approval]" }
+                            },
+                            {
+                              "member": { "__id": "Approval/Properties[Status]" }
+                            }
+                          ]
+                        }
+                      },
+                      {
+                        "displayName": "Help Text",
+                        "name": "HelpText",
+                        "kind": "Value",
+                        "view": { "__id": ":Paragraph" },
+                        "dataSource":
+                        {
+                          "member": { "__id": "ApprovalDecline/Properties[HelpText]" }
+                        }
+                      },
+                      {
+                        "displayName": "Description",
+                        "name": "Description",
+                        "kind": "Value",
+                        "view": { "__id": ":TextArea" },
+                        "dataSource":
+                        {
+                          "links":
+                          [
+                            {
+                              "member": { "__id": "ApprovalDecline/Properties[Approval]" }
+                            },
+                            {
+                              "member": { "__id": "Approval/Properties[Description]" }
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "displayName": "Popups",
+                "name": "Popups",
+                "kind": "Group",
+                "view": { "__id": ":DialogPages" }
+              }
+            ],
+            "propertySources":
+            [
+              {
+                "property": { "__id": ":Screen/Properties[ScreenType]" },
+                "value": "Edit"
+              },
+              {
+                "property": { "__id": ":Screen/Properties[ShowAsDialog]" },
+                "value": true
+              }
+            ]
+          },
+          "methods":
+          [
+            {
+              "id": "ApprovalDecline/Methods[showTab]",
+              "name": "showTab",
+              "parameters":
+              [
+                {
+                  "id": "ApprovalDecline/Methods[showTab]/Parameters[tabName]",
+                  "name": "tabName",
+                  "parameterType": { "__id": ":String" }
+                }
+              ]
+            },
+            {
+              "id": "ApprovalDecline/Methods[showDialog]",
+              "name": "showDialog",
+              "parameters":
+              [
+                {
+                  "id": "ApprovalDecline/Methods[showDialog]/Parameters[dialogName]",
+                  "name": "dialogName",
+                  "parameterType": { "__id": ":String" }
+                }
+              ]
+            }
+          ],
+          "properties":
+          [
+            {
+              "id": "ApprovalDecline/Properties[Approval]",
+              "name": "Approval",
+              "elementType": { "__id": "Approval" },
+              "propertyType": { "__id": "Approval" },
+              ":@IsParameter": { }
+            },
+            {
+              "id": "ApprovalDecline/Properties[HelpText]",
+              "name": "HelpText",
+              "elementType": { "__id": ":String" },
+              "propertyType": { "__id": ":String" },
+              ":@Required": { }
+            }
+          ]
         }
       ],
       "methods":
@@ -19118,6 +19474,32 @@
               "id": "!module/Methods[showOrderViewDetails]/Parameters[Order]",
               "name": "Order",
               "parameterType": { "__id": "Order" }
+            }
+          ]
+        },
+        {
+          "id": "!module/Methods[showApprovalApprove]",
+          "name": "showApprovalApprove",
+          ":@ShowScreenMethod": { "targetScreen": { "__id": "ApprovalApprove" } },
+          "parameters":
+          [
+            {
+              "id": "!module/Methods[showApprovalApprove]/Parameters[Approval]",
+              "name": "Approval",
+              "parameterType": { "__id": "Approval" }
+            }
+          ]
+        },
+        {
+          "id": "!module/Methods[showApprovalDecline]",
+          "name": "showApprovalDecline",
+          ":@ShowScreenMethod": { "targetScreen": { "__id": "ApprovalDecline" } },
+          "parameters":
+          [
+            {
+              "id": "!module/Methods[showApprovalDecline]/Parameters[Approval]",
+              "name": "Approval",
+              "parameterType": { "__id": "Approval" }
             }
           ]
         }

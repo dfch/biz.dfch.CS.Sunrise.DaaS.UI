@@ -100,6 +100,12 @@
     <Content Include="fonts\fontawesome-webfont.woff2" />
     <Content Include="fonts\FontAwesome.otf" />
     <Content Include="packages.config" />
+    <Content Include="Screens\ApprovalApprove.lsml.js">
+      <DependentUpon>ApprovalApprove.lsml</DependentUpon>
+    </Content>
+    <Content Include="Screens\ApprovalDecline.lsml.js">
+      <DependentUpon>ApprovalDecline.lsml</DependentUpon>
+    </Content>
     <Content Include="Screens\ApprovalsList.lsml.js">
       <DependentUpon>ApprovalsList.lsml</DependentUpon>
     </Content>
@@ -213,6 +219,8 @@
     <LightSwitchModel Include="Properties\DiagnosticsData\AuditTrails.lsml" />
     <LightSwitchModel Include="Properties\DiagnosticsData\Endpoints.lsml" />
     <LightSwitchModel Include="Properties\Proxies.lsml" />
+    <LightSwitchModel Include="Screens\ApprovalApprove.lsml" />
+    <LightSwitchModel Include="Screens\ApprovalDecline.lsml" />
     <LightSwitchModel Include="Screens\ApprovalsList.lsml" />
     <LightSwitchModel Include="Screens\ApprovalView.lsml" />
     <LightSwitchModel Include="Screens\AuditTrailsList.lsml" />

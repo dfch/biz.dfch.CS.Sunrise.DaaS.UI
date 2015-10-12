@@ -134,7 +134,15 @@
                     <ScreenExpressionTree>
                       <ChainExpression>
                         <CallExpression
-                          Target="ApprovalView/Methods[approve]" />
+                          Target="!module/Methods[showApprovalApprove]">
+                          <ArgumentExpression
+                            Parameter="Approval">
+                            <ChainExpression>
+                              <MemberExpression
+                                Member="ApprovalView/Properties[Approval]" />
+                            </ChainExpression>
+                          </ArgumentExpression>
+                        </CallExpression>
                       </ChainExpression>
                     </ScreenExpressionTree>
                   </ControlPropertySource>
@@ -159,7 +167,15 @@
                     <ScreenExpressionTree>
                       <ChainExpression>
                         <CallExpression
-                          Target="ApprovalView/Methods[decline]" />
+                          Target="!module/Methods[showApprovalDecline]">
+                          <ArgumentExpression
+                            Parameter="Approval">
+                            <ChainExpression>
+                              <MemberExpression
+                                Member="ApprovalView/Properties[Approval]" />
+                            </ChainExpression>
+                          </ArgumentExpression>
+                        </CallExpression>
                       </ChainExpression>
                     </ScreenExpressionTree>
                   </ControlPropertySource>

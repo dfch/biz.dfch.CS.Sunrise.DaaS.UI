@@ -17,7 +17,7 @@
     <Document FullPath="C:\Github\biz.dfch.CS.Sunrise.DaaS.UI\src\biz.dfch.CS.Sunrise.DaaS.UI\biz.dfch.CS.Sunrise.DaaS.UI.HTMLClient\Properties\Client.lsml" Checksum="B76D317E0359BE0DDF837ED8E39CEA9036599B2664613B33666FDCA654AC99C3" />
     <Document FullPath="C:\Github\biz.dfch.CS.Sunrise.DaaS.UI\src\biz.dfch.CS.Sunrise.DaaS.UI\biz.dfch.CS.Sunrise.DaaS.UI.HTMLClient\Properties\Proxies.lsml" Checksum="A78E4E891501D1F4932F3B0EF90FD700B988CF2B6F89AC5F5FC88728CC93EC29" />
     <Document FullPath="C:\Github\biz.dfch.CS.Sunrise.DaaS.UI\src\biz.dfch.CS.Sunrise.DaaS.UI\biz.dfch.CS.Sunrise.DaaS.UI.HTMLClient\Screens\ApprovalsList.lsml" Checksum="AEC6ABE36A01E978E5EA818C53C60718E081F170E620AADC041A4870F1F8A31F" />
-    <Document FullPath="C:\Github\biz.dfch.CS.Sunrise.DaaS.UI\src\biz.dfch.CS.Sunrise.DaaS.UI\biz.dfch.CS.Sunrise.DaaS.UI.HTMLClient\Screens\ApprovalView.lsml" Checksum="A0564B6D733C4114135C87E0BFFDD5D42EFB99A35F4889EBBD276324E93FC295" />
+    <Document FullPath="C:\Github\biz.dfch.CS.Sunrise.DaaS.UI\src\biz.dfch.CS.Sunrise.DaaS.UI\biz.dfch.CS.Sunrise.DaaS.UI.HTMLClient\Screens\ApprovalView.lsml" Checksum="4C56EAC8228A3162785491715FD6BB736FBB9901A99B61E6F4B68DC592C396AC" />
     <Document FullPath="C:\Github\biz.dfch.CS.Sunrise.DaaS.UI\src\biz.dfch.CS.Sunrise.DaaS.UI\biz.dfch.CS.Sunrise.DaaS.UI.HTMLClient\Screens\AuditTrailsList.lsml" Checksum="45E49D300A5B04026BB5C34CB32E4BA29FE63998DBFC82A446B0C6280073E2C0" />
     <Document FullPath="C:\Github\biz.dfch.CS.Sunrise.DaaS.UI\src\biz.dfch.CS.Sunrise.DaaS.UI\biz.dfch.CS.Sunrise.DaaS.UI.HTMLClient\Screens\AuditTrailsView.lsml" Checksum="90E485E1F0F5F93126F1E37BC451EB6E958F6C5E98B7585C74CC1A7C2633C89F" />
     <Document FullPath="C:\Github\biz.dfch.CS.Sunrise.DaaS.UI\src\biz.dfch.CS.Sunrise.DaaS.UI\biz.dfch.CS.Sunrise.DaaS.UI.HTMLClient\Screens\CartEdit.lsml" Checksum="72D256BDBE387FC4BC5193FA096C64C56048BA952641A6751CABFB7C7C758001" />
@@ -53,5 +53,7 @@
     <Document FullPath="C:\Github\biz.dfch.CS.Sunrise.DaaS.UI\src\biz.dfch.CS.Sunrise.DaaS.UI\biz.dfch.CS.Sunrise.DaaS.UI.HTMLClient\Screens\OrdersList.lsml" Checksum="EC4048D30D79936B2C557E9D422AD1BC3861E6C3F486E41206184F6C5D1EF614" />
     <Document FullPath="C:\Github\biz.dfch.CS.Sunrise.DaaS.UI\src\biz.dfch.CS.Sunrise.DaaS.UI\biz.dfch.CS.Sunrise.DaaS.UI.HTMLClient\Screens\OrderView.lsml" Checksum="5D414316F0A207E682AB9E1110FDFE03C5F6960D3A14ED8C089047BF5ABD7608" />
     <Document FullPath="C:\Github\biz.dfch.CS.Sunrise.DaaS.UI\src\biz.dfch.CS.Sunrise.DaaS.UI\biz.dfch.CS.Sunrise.DaaS.UI.HTMLClient\Screens\OrderViewDetails.lsml" Checksum="10F6D8F670165E1AA95DE183E35E3029E7CE4FB2295798FD35FA4BDCEFDCFB75" />
+    <Document FullPath="C:\Github\biz.dfch.CS.Sunrise.DaaS.UI\src\biz.dfch.CS.Sunrise.DaaS.UI\biz.dfch.CS.Sunrise.DaaS.UI.HTMLClient\Screens\ApprovalApprove.lsml" Checksum="9C4F074E2B17D42692E1839DA4641665011F36F95CB5F3BF47C36A7E516F46CC" />
+    <Document FullPath="C:\Github\biz.dfch.CS.Sunrise.DaaS.UI\src\biz.dfch.CS.Sunrise.DaaS.UI\biz.dfch.CS.Sunrise.DaaS.UI.HTMLClient\Screens\ApprovalDecline.lsml" Checksum="09C4C2244E1B140FE41657A5D2476EDE2600E6E9D71D8A4F250A36CDB5AC805A" />
   </Documents>
 </ModelDocumentManifest>

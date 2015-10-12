@@ -6660,4 +6660,190 @@
         Modified_postRender: [$element, function () { return new lightSwitchApplication.OrderViewDetails().findContentItem("Modified"); }]
     });
 
+    lightSwitchApplication.ApprovalApprove.prototype._$contentItems = {
+        Tabs: {
+            _$class: msls.ContentItem,
+            _$name: "Tabs",
+            _$parentName: "RootContentItem",
+            screen: lightSwitchApplication.ApprovalApprove
+        },
+        Details: {
+            _$class: msls.ContentItem,
+            _$name: "Details",
+            _$parentName: "Tabs",
+            screen: lightSwitchApplication.ApprovalApprove,
+            data: lightSwitchApplication.ApprovalApprove,
+            value: lightSwitchApplication.ApprovalApprove
+        },
+        Name: {
+            _$class: msls.ContentItem,
+            _$name: "Name",
+            _$parentName: "Details",
+            screen: lightSwitchApplication.ApprovalApprove,
+            data: lightSwitchApplication.ApprovalApprove,
+            value: String
+        },
+        Approval_Status: {
+            _$class: msls.ContentItem,
+            _$name: "Approval_Status",
+            _$parentName: "Details",
+            screen: lightSwitchApplication.ApprovalApprove,
+            data: lightSwitchApplication.ApprovalApprove,
+            value: String
+        },
+        HelpText: {
+            _$class: msls.ContentItem,
+            _$name: "HelpText",
+            _$parentName: "Details",
+            screen: lightSwitchApplication.ApprovalApprove,
+            data: lightSwitchApplication.ApprovalApprove,
+            value: String
+        },
+        Description: {
+            _$class: msls.ContentItem,
+            _$name: "Description",
+            _$parentName: "Details",
+            screen: lightSwitchApplication.ApprovalApprove,
+            data: lightSwitchApplication.ApprovalApprove,
+            value: String
+        },
+        Popups: {
+            _$class: msls.ContentItem,
+            _$name: "Popups",
+            _$parentName: "RootContentItem",
+            screen: lightSwitchApplication.ApprovalApprove
+        }
+    };
+
+    msls._addEntryPoints(lightSwitchApplication.ApprovalApprove, {
+        /// <field>
+        /// Called when a new ApprovalApprove screen is created.
+        /// <br/>created(msls.application.ApprovalApprove screen)
+        /// </field>
+        created: [lightSwitchApplication.ApprovalApprove],
+        /// <field>
+        /// Called before changes on an active ApprovalApprove screen are applied.
+        /// <br/>beforeApplyChanges(msls.application.ApprovalApprove screen)
+        /// </field>
+        beforeApplyChanges: [lightSwitchApplication.ApprovalApprove],
+        /// <field>
+        /// Called after the Details content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        Details_postRender: [$element, function () { return new lightSwitchApplication.ApprovalApprove().findContentItem("Details"); }],
+        /// <field>
+        /// Called after the Name content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        Name_postRender: [$element, function () { return new lightSwitchApplication.ApprovalApprove().findContentItem("Name"); }],
+        /// <field>
+        /// Called after the Approval_Status content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        Approval_Status_postRender: [$element, function () { return new lightSwitchApplication.ApprovalApprove().findContentItem("Approval_Status"); }],
+        /// <field>
+        /// Called after the HelpText content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        HelpText_postRender: [$element, function () { return new lightSwitchApplication.ApprovalApprove().findContentItem("HelpText"); }],
+        /// <field>
+        /// Called after the Description content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        Description_postRender: [$element, function () { return new lightSwitchApplication.ApprovalApprove().findContentItem("Description"); }]
+    });
+
+    lightSwitchApplication.ApprovalDecline.prototype._$contentItems = {
+        Tabs: {
+            _$class: msls.ContentItem,
+            _$name: "Tabs",
+            _$parentName: "RootContentItem",
+            screen: lightSwitchApplication.ApprovalDecline
+        },
+        Details: {
+            _$class: msls.ContentItem,
+            _$name: "Details",
+            _$parentName: "Tabs",
+            screen: lightSwitchApplication.ApprovalDecline,
+            data: lightSwitchApplication.ApprovalDecline,
+            value: lightSwitchApplication.ApprovalDecline
+        },
+        Name: {
+            _$class: msls.ContentItem,
+            _$name: "Name",
+            _$parentName: "Details",
+            screen: lightSwitchApplication.ApprovalDecline,
+            data: lightSwitchApplication.ApprovalDecline,
+            value: String
+        },
+        Status: {
+            _$class: msls.ContentItem,
+            _$name: "Status",
+            _$parentName: "Details",
+            screen: lightSwitchApplication.ApprovalDecline,
+            data: lightSwitchApplication.ApprovalDecline,
+            value: String
+        },
+        HelpText: {
+            _$class: msls.ContentItem,
+            _$name: "HelpText",
+            _$parentName: "Details",
+            screen: lightSwitchApplication.ApprovalDecline,
+            data: lightSwitchApplication.ApprovalDecline,
+            value: String
+        },
+        Description: {
+            _$class: msls.ContentItem,
+            _$name: "Description",
+            _$parentName: "Details",
+            screen: lightSwitchApplication.ApprovalDecline,
+            data: lightSwitchApplication.ApprovalDecline,
+            value: String
+        },
+        Popups: {
+            _$class: msls.ContentItem,
+            _$name: "Popups",
+            _$parentName: "RootContentItem",
+            screen: lightSwitchApplication.ApprovalDecline
+        }
+    };
+
+    msls._addEntryPoints(lightSwitchApplication.ApprovalDecline, {
+        /// <field>
+        /// Called when a new ApprovalDecline screen is created.
+        /// <br/>created(msls.application.ApprovalDecline screen)
+        /// </field>
+        created: [lightSwitchApplication.ApprovalDecline],
+        /// <field>
+        /// Called before changes on an active ApprovalDecline screen are applied.
+        /// <br/>beforeApplyChanges(msls.application.ApprovalDecline screen)
+        /// </field>
+        beforeApplyChanges: [lightSwitchApplication.ApprovalDecline],
+        /// <field>
+        /// Called after the Details content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        Details_postRender: [$element, function () { return new lightSwitchApplication.ApprovalDecline().findContentItem("Details"); }],
+        /// <field>
+        /// Called after the Name content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        Name_postRender: [$element, function () { return new lightSwitchApplication.ApprovalDecline().findContentItem("Name"); }],
+        /// <field>
+        /// Called after the Status content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        Status_postRender: [$element, function () { return new lightSwitchApplication.ApprovalDecline().findContentItem("Status"); }],
+        /// <field>
+        /// Called after the HelpText content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        HelpText_postRender: [$element, function () { return new lightSwitchApplication.ApprovalDecline().findContentItem("HelpText"); }],
+        /// <field>
+        /// Called after the Description content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        Description_postRender: [$element, function () { return new lightSwitchApplication.ApprovalDecline().findContentItem("Description"); }]
+    });
+
 }(msls.application));
