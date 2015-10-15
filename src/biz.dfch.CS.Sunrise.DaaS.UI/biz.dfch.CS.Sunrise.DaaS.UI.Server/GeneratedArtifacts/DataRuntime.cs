@@ -2050,19 +2050,6 @@ namespace LightSwitchApplication
         #region Public Properties
     
         /// <summary>
-        /// Gets the AuditTrails entity set.  The entity set provides members to access entities of a specific type.
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.1.0.0")]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        public global::Microsoft.LightSwitch.Framework.EntitySet<global::LightSwitchApplication.AuditTrail> AuditTrails
-        {
-            get
-            {
-                return global::LightSwitchApplication.DiagnosticsData.DetailsClass.GetValue(this, global::LightSwitchApplication.DiagnosticsData.DetailsClass.PropertySetProperties.AuditTrails);
-            }
-        }
-        
-        /// <summary>
         /// Gets the Endpoints entity set.  The entity set provides members to access entities of a specific type.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.1.0.0")]
@@ -2079,28 +2066,6 @@ namespace LightSwitchApplication
     
         #region Queries
     
-        /// <summary>
-        /// Returns the entity whose identity is specified by the parameter(s).
-        /// </summary>
-        /// <param name="Id">
-        /// The value of the 'Id' key property of the entity to retrieve.
-        /// </param>
-        public global::LightSwitchApplication.AuditTrail AuditTrails_Single(global::System.Nullable<long> Id)
-        {
-            return this.Details.Methods.AuditTrails_Single.CreateInvocation(Id).Execute();
-        }
-        
-        /// <summary>
-        /// Returns the entity whose identity is specified by the parameter(s) or null if no such entity exists.
-        /// </summary>
-        /// <param name="Id">
-        /// The value of the 'Id' key property of the entity to retrieve.
-        /// </param>
-        public global::LightSwitchApplication.AuditTrail AuditTrails_SingleOrDefault(global::System.Nullable<long> Id)
-        {
-            return this.Details.Methods.AuditTrails_SingleOrDefault.CreateInvocation(Id).Execute();
-        }
-        
         /// <summary>
         /// Returns the entity whose identity is specified by the parameter(s).
         /// </summary>
@@ -2136,8 +2101,8 @@ namespace LightSwitchApplication
     
             static DetailsClass()
             {
-                var initializeMethodEntry = global::LightSwitchApplication.DiagnosticsData.DetailsClass.MethodSetProperties.AuditTrails_Single;
-                var initializePropertyEntry = global::LightSwitchApplication.DiagnosticsData.DetailsClass.PropertySetProperties.AuditTrails;
+                var initializeMethodEntry = global::LightSwitchApplication.DiagnosticsData.DetailsClass.MethodSetProperties.Endpoints_Single;
+                var initializePropertyEntry = global::LightSwitchApplication.DiagnosticsData.DetailsClass.PropertySetProperties.Endpoints;
             }
     
             public DetailsClass() : base()
@@ -2171,22 +2136,6 @@ namespace LightSwitchApplication
                 {
                 }
     
-                public global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.DiagnosticsData, global::LightSwitchApplication.DiagnosticsData.DetailsClass, global::LightSwitchApplication.AuditTrail> AuditTrails_Single
-                {
-                    get
-                    {
-                        return base.GetItem(global::LightSwitchApplication.DiagnosticsData.DetailsClass.MethodSetProperties.AuditTrails_Single) as global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.DiagnosticsData, global::LightSwitchApplication.DiagnosticsData.DetailsClass, global::LightSwitchApplication.AuditTrail>;
-                    }
-                }
-                
-                public global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.DiagnosticsData, global::LightSwitchApplication.DiagnosticsData.DetailsClass, global::LightSwitchApplication.AuditTrail> AuditTrails_SingleOrDefault
-                {
-                    get
-                    {
-                        return base.GetItem(global::LightSwitchApplication.DiagnosticsData.DetailsClass.MethodSetProperties.AuditTrails_SingleOrDefault) as global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.DiagnosticsData, global::LightSwitchApplication.DiagnosticsData.DetailsClass, global::LightSwitchApplication.AuditTrail>;
-                    }
-                }
-                
                 public global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.DiagnosticsData, global::LightSwitchApplication.DiagnosticsData.DetailsClass, global::LightSwitchApplication.Endpoint> Endpoints_Single
                 {
                     get
@@ -2216,14 +2165,6 @@ namespace LightSwitchApplication
                 {
                 }
     
-                public global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.DiagnosticsData, global::LightSwitchApplication.DiagnosticsData.DetailsClass, global::LightSwitchApplication.AuditTrail> AuditTrails
-                {
-                    get
-                    {
-                        return base.GetItem(global::LightSwitchApplication.DiagnosticsData.DetailsClass.PropertySetProperties.AuditTrails) as global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.DiagnosticsData, global::LightSwitchApplication.DiagnosticsData.DetailsClass, global::LightSwitchApplication.AuditTrail>;
-                    }
-                }
-                
                 public global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.DiagnosticsData, global::LightSwitchApplication.DiagnosticsData.DetailsClass, global::LightSwitchApplication.Endpoint> Endpoints
                 {
                     get
@@ -2239,26 +2180,6 @@ namespace LightSwitchApplication
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             internal class MethodSetProperties
             {
-    
-                [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-                public static readonly global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.DiagnosticsData, global::LightSwitchApplication.DiagnosticsData.DetailsClass, global::LightSwitchApplication.AuditTrail>.Entry
-                    AuditTrails_Single = new global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.DiagnosticsData, global::LightSwitchApplication.DiagnosticsData.DetailsClass, global::LightSwitchApplication.AuditTrail>.Entry(
-                        "AuditTrails_Single",
-                        global::LightSwitchApplication.DiagnosticsData.DetailsClass.MethodSetProperties._AuditTrails_Single_Stub);
-                private static void _AuditTrails_Single_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.DiagnosticsData.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.DiagnosticsData, global::LightSwitchApplication.DiagnosticsData.DetailsClass, global::LightSwitchApplication.AuditTrail>.Data> c, global::LightSwitchApplication.DiagnosticsData.DetailsClass d, object sf)
-                {
-                    c(d, ref d._AuditTrails_Single, sf);
-                }
-    
-                [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-                public static readonly global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.DiagnosticsData, global::LightSwitchApplication.DiagnosticsData.DetailsClass, global::LightSwitchApplication.AuditTrail>.Entry
-                    AuditTrails_SingleOrDefault = new global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.DiagnosticsData, global::LightSwitchApplication.DiagnosticsData.DetailsClass, global::LightSwitchApplication.AuditTrail>.Entry(
-                        "AuditTrails_SingleOrDefault",
-                        global::LightSwitchApplication.DiagnosticsData.DetailsClass.MethodSetProperties._AuditTrails_SingleOrDefault_Stub);
-                private static void _AuditTrails_SingleOrDefault_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.DiagnosticsData.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.DiagnosticsData, global::LightSwitchApplication.DiagnosticsData.DetailsClass, global::LightSwitchApplication.AuditTrail>.Data> c, global::LightSwitchApplication.DiagnosticsData.DetailsClass d, object sf)
-                {
-                    c(d, ref d._AuditTrails_SingleOrDefault, sf);
-                }
     
                 [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
                 public static readonly global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.DiagnosticsData, global::LightSwitchApplication.DiagnosticsData.DetailsClass, global::LightSwitchApplication.Endpoint>.Entry
@@ -2289,16 +2210,6 @@ namespace LightSwitchApplication
             {
     
                 [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-                public static readonly global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.DiagnosticsData, global::LightSwitchApplication.DiagnosticsData.DetailsClass, global::LightSwitchApplication.AuditTrail>.Entry
-                    AuditTrails = new global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.DiagnosticsData, global::LightSwitchApplication.DiagnosticsData.DetailsClass, global::LightSwitchApplication.AuditTrail>.Entry(
-                        "AuditTrails",
-                        global::LightSwitchApplication.DiagnosticsData.DetailsClass.PropertySetProperties._AuditTrails_Stub);
-                private static void _AuditTrails_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.DiagnosticsData.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.DiagnosticsData, global::LightSwitchApplication.DiagnosticsData.DetailsClass, global::LightSwitchApplication.AuditTrail>.Data> c, global::LightSwitchApplication.DiagnosticsData.DetailsClass d, object sf)
-                {
-                    c(d, ref d._AuditTrails, sf);
-                }
-     
-                [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
                 public static readonly global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.DiagnosticsData, global::LightSwitchApplication.DiagnosticsData.DetailsClass, global::LightSwitchApplication.Endpoint>.Entry
                     Endpoints = new global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.DiagnosticsData, global::LightSwitchApplication.DiagnosticsData.DetailsClass, global::LightSwitchApplication.Endpoint>.Entry(
                         "Endpoints",
@@ -2311,16 +2222,7 @@ namespace LightSwitchApplication
             }
     
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-            private global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.DiagnosticsData, global::LightSwitchApplication.DiagnosticsData.DetailsClass, global::LightSwitchApplication.AuditTrail>.Data _AuditTrails;
-            
-            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
             private global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.DiagnosticsData, global::LightSwitchApplication.DiagnosticsData.DetailsClass, global::LightSwitchApplication.Endpoint>.Data _Endpoints;
-            
-            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-            private global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.DiagnosticsData, global::LightSwitchApplication.DiagnosticsData.DetailsClass, global::LightSwitchApplication.AuditTrail>.Data _AuditTrails_Single;
-            
-            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-            private global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.DiagnosticsData, global::LightSwitchApplication.DiagnosticsData.DetailsClass, global::LightSwitchApplication.AuditTrail>.Data _AuditTrails_SingleOrDefault;
             
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
             private global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.DiagnosticsData, global::LightSwitchApplication.DiagnosticsData.DetailsClass, global::LightSwitchApplication.Endpoint>.Data _Endpoints_Single;

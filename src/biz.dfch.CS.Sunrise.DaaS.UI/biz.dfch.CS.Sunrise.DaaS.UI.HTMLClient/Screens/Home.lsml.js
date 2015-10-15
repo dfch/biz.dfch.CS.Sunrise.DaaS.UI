@@ -32,9 +32,6 @@ myapp.Home.Carts_postRender = function (element, contentItem) {
 myapp.Home.Catalogues_postRender = function (element, contentItem) {
     $(element).spOverlay(contentItem, 'fa-files-o', { height: height, width: width });
 };
-myapp.Home.AuditTrails_postRender = function (element, contentItem) {
-    $(element).spOverlay(contentItem, 'fa-info-circle', { height: height, width: width });
-};
 myapp.Home.Inventory_postRender = function (element, contentItem) {
     $(element).spOverlay(contentItem, 'fa-folder', { height: height, width: width });
 };

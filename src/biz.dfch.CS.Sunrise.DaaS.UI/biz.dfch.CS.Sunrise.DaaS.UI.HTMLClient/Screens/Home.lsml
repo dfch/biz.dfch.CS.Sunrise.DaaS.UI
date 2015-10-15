@@ -239,27 +239,6 @@
                 </ContentItem.PropertySources>
               </ContentItem>
               <ContentItem
-                Name="AuditTrails"
-                Kind="Command">
-                <ContentItem.Attributes>
-                  <DisplayName
-                    Value="Audit Trails" />
-                  <Description
-                    Value="Browse audit trails" />
-                </ContentItem.Attributes>
-                <ContentItem.PropertySources>
-                  <ControlPropertySource
-                    Property="Microsoft.LightSwitch.MobileWeb:RootControl/Properties[Tap]">
-                    <ScreenExpressionTree>
-                      <ChainExpression>
-                        <CallExpression
-                          Target="!module/Methods[showAuditTrailsList]" />
-                      </ChainExpression>
-                    </ScreenExpressionTree>
-                  </ControlPropertySource>
-                </ContentItem.PropertySources>
-              </ContentItem>
-              <ContentItem
                 Name="Gates"
                 Kind="Command">
                 <ContentItem.Attributes>

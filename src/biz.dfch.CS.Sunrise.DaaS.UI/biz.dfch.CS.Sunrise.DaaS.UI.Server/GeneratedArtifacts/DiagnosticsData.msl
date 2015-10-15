@@ -1,26 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Mapping xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Space="C-S" xmlns="http://schemas.microsoft.com/ado/2008/09/mapping/cs">
   <EntityContainerMapping CdmEntityContainer="DiagnosticsData" StorageEntityContainer="DiagnosticsDataStore">
-    <EntitySetMapping Name="AuditTrails">
-      <EntityTypeMapping TypeName="IsTypeOf(LightSwitchApplication.AuditTrail)">
-        <MappingFragment StoreEntitySet="AuditTrails">
-          <ScalarProperty Name="EntityId" ColumnName="EntityId" />
-          <ScalarProperty Name="EntityType" ColumnName="EntityType" />
-          <ScalarProperty Name="EntityState" ColumnName="EntityState" />
-          <ScalarProperty Name="Original" ColumnName="Original" />
-          <ScalarProperty Name="Current" ColumnName="Current" />
-          <ScalarProperty Name="Id" ColumnName="Id" />
-          <ScalarProperty Name="Tid" ColumnName="Tid" />
-          <ScalarProperty Name="Name" ColumnName="Name" />
-          <ScalarProperty Name="Description" ColumnName="Description" />
-          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
-          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
-          <ScalarProperty Name="Created" ColumnName="Created" />
-          <ScalarProperty Name="Modified" ColumnName="Modified" />
-          <ScalarProperty Name="RowVersion" ColumnName="RowVersion" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
     <EntitySetMapping Name="Endpoints">
       <EntityTypeMapping TypeName="IsTypeOf(LightSwitchApplication.Endpoint)">
         <MappingFragment StoreEntitySet="Endpoints">

@@ -65,9 +65,6 @@
       Name="link7"
       Method="!module/Methods[showGatesList]" />
     <ApplicationNavigationMethodLink
-      Name="link8"
-      Method="!module/Methods[showAuditTrailsList]" />
-    <ApplicationNavigationMethodLink
       Name="link9"
       Method="!module/Methods[showCartsList]" />
     <ApplicationNavigationMethodLink

@@ -1018,10 +1018,6 @@ namespace LightSwitchApplication.Implementation
     #region Protected Methods
         protected override object CreateObject(global::System.Type type)
         {
-            if (type == typeof(global::LightSwitchApplication.Implementation.AuditTrail))
-            {
-                return new global::LightSwitchApplication.Implementation.AuditTrail();
-            }
             if (type == typeof(global::LightSwitchApplication.Implementation.Endpoint))
             {
                 return new global::LightSwitchApplication.Implementation.Endpoint();
@@ -1042,10 +1038,6 @@ namespace LightSwitchApplication.Implementation
     
         protected override global::Microsoft.LightSwitch.Internal.IEntityImplementation CreateEntityImplementation<T>()
         {
-            if (typeof(T) == typeof(global::LightSwitchApplication.AuditTrail))
-            {
-                return new global::LightSwitchApplication.Implementation.AuditTrail();
-            }
             if (typeof(T) == typeof(global::LightSwitchApplication.Endpoint))
             {
                 return new global::LightSwitchApplication.Implementation.Endpoint();
@@ -1063,10 +1055,6 @@ namespace LightSwitchApplication.Implementation
     
         protected override global::System.Type ConvertType(global::System.Type outerType)
         {
-            if (outerType == typeof(global::LightSwitchApplication.Implementation.AuditTrail))
-            {
-                return typeof(global::DiagnosticsData.DiagnosticsDataService.AuditTrail);
-            }
             if (outerType == typeof(global::LightSwitchApplication.Implementation.Endpoint))
             {
                 return typeof(global::DiagnosticsData.DiagnosticsDataService.Endpoint);
@@ -1076,26 +1064,6 @@ namespace LightSwitchApplication.Implementation
     
         protected override object ConvertEntity(object outerEntity)
         {
-            global::LightSwitchApplication.Implementation.AuditTrail auditTrail = outerEntity as global::LightSwitchApplication.Implementation.AuditTrail;
-            if (auditTrail != null)
-            {
-                global::DiagnosticsData.DiagnosticsDataService.AuditTrail result = new global::DiagnosticsData.DiagnosticsDataService.AuditTrail();
-                result.EntityId = auditTrail.EntityId;
-                result.EntityType = auditTrail.EntityType;
-                result.EntityState = auditTrail.EntityState;
-                result.Original = auditTrail.Original;
-                result.Current = auditTrail.Current;
-                result.Id = auditTrail.Id;
-                result.Tid = auditTrail.Tid;
-                result.Name = auditTrail.Name;
-                result.Description = auditTrail.Description;
-                result.CreatedBy = auditTrail.CreatedBy;
-                result.ModifiedBy = auditTrail.ModifiedBy;
-                result.Created = auditTrail.Created;
-                result.Modified = auditTrail.Modified;
-                result.RowVersion = auditTrail.RowVersion;
-                return result;
-            }
             global::LightSwitchApplication.Implementation.Endpoint endpoint = outerEntity as global::LightSwitchApplication.Implementation.Endpoint;
             if (endpoint != null)
             {
@@ -1122,26 +1090,6 @@ namespace LightSwitchApplication.Implementation
     
         protected override void UpdateResult(object outerEntity, object innerResult)
         {
-            global::LightSwitchApplication.Implementation.AuditTrail outerAuditTrail = outerEntity as global::LightSwitchApplication.Implementation.AuditTrail;
-            global::DiagnosticsData.DiagnosticsDataService.AuditTrail innerAuditTrail = innerResult as global::DiagnosticsData.DiagnosticsDataService.AuditTrail;
-            if ((outerAuditTrail != null) && (innerAuditTrail != null))
-            {
-                outerAuditTrail.EntityId = innerAuditTrail.EntityId;
-                outerAuditTrail.EntityType = innerAuditTrail.EntityType;
-                outerAuditTrail.EntityState = innerAuditTrail.EntityState;
-                outerAuditTrail.Original = innerAuditTrail.Original;
-                outerAuditTrail.Current = innerAuditTrail.Current;
-                outerAuditTrail.Id = innerAuditTrail.Id;
-                outerAuditTrail.Tid = innerAuditTrail.Tid;
-                outerAuditTrail.Name = innerAuditTrail.Name;
-                outerAuditTrail.Description = innerAuditTrail.Description;
-                outerAuditTrail.CreatedBy = innerAuditTrail.CreatedBy;
-                outerAuditTrail.ModifiedBy = innerAuditTrail.ModifiedBy;
-                outerAuditTrail.Created = innerAuditTrail.Created;
-                outerAuditTrail.Modified = innerAuditTrail.Modified;
-                outerAuditTrail.RowVersion = innerAuditTrail.RowVersion;
-                return;
-            }
             global::LightSwitchApplication.Implementation.Endpoint outerEndpoint = outerEntity as global::LightSwitchApplication.Implementation.Endpoint;
             global::DiagnosticsData.DiagnosticsDataService.Endpoint innerEndpoint = innerResult as global::DiagnosticsData.DiagnosticsDataService.Endpoint;
             if ((outerEndpoint != null) && (innerEndpoint != null))
@@ -1287,10 +1235,6 @@ namespace LightSwitchApplication.Implementation
             if (typeof(global::LightSwitchApplication.Order) == definitionType)
             {
                 return typeof(global::LightSwitchApplication.Implementation.Order);
-            }
-            if (typeof(global::LightSwitchApplication.AuditTrail) == definitionType)
-            {
-                return typeof(global::LightSwitchApplication.Implementation.AuditTrail);
             }
             if (typeof(global::LightSwitchApplication.Endpoint) == definitionType)
             {
@@ -2246,53 +2190,6 @@ namespace LightSwitchApplication.Implementation
             }
         }
         
-        #region IEntityImplementation Members
-        private global::Microsoft.LightSwitch.Internal.IEntityImplementationHost __host;
-        
-        global::Microsoft.LightSwitch.Internal.IEntityImplementationHost global::Microsoft.LightSwitch.Internal.IEntityImplementation.Host
-        {
-            get
-            {
-                return this.__host;
-            }
-        }
-        
-        void global::Microsoft.LightSwitch.Internal.IEntityImplementation.Initialize(global::Microsoft.LightSwitch.Internal.IEntityImplementationHost host)
-        {
-            this.__host = host;
-        }
-        
-        protected override void OnPropertyChanged(string propertyName)
-        {
-            base.OnPropertyChanged(propertyName);
-            if (this.__host != null)
-            {
-                this.__host.RaisePropertyChanged(propertyName);
-            }
-        }
-        #endregion
-    }
-    
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.1.0.0")]
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-    public partial class AuditTrail :
-        global::LightSwitchApplication.AuditTrail.DetailsClass.IImplementation,
-        global::Microsoft.LightSwitch.Internal.IAstoriaEntityImplementation
-    {
-    
-        [global::System.Runtime.Serialization.DataMember]
-        public string Microsoft_LightSwitch_ETag
-        {
-            get;
-            set;
-        }
-    
-        string global::Microsoft.LightSwitch.Internal.IAstoriaEntityImplementation.ETag
-        {
-            get { return this.Microsoft_LightSwitch_ETag; }
-            set { this.Microsoft_LightSwitch_ETag = value; }
-        }
-    
         #region IEntityImplementation Members
         private global::Microsoft.LightSwitch.Internal.IEntityImplementationHost __host;
         

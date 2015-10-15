@@ -2070,39 +2070,6 @@ namespace LightSwitchApplication
         #region Server Interceptions Points
     
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void AuditTrails_CanInsert(ref bool result);
-    
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void AuditTrails_CanUpdate(ref bool result);
-    
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void AuditTrails_CanDelete(ref bool result);
-    
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void AuditTrails_CanRead(ref bool result);
-    
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void AuditTrails_Inserting(global::LightSwitchApplication.AuditTrail entity);
-    
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void AuditTrails_Inserted(global::LightSwitchApplication.AuditTrail entity);
-    
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void AuditTrails_Updating(global::LightSwitchApplication.AuditTrail entity);
-    
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void AuditTrails_Updated(global::LightSwitchApplication.AuditTrail entity);
-    
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void AuditTrails_Deleting(global::LightSwitchApplication.AuditTrail entity);
-    
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void AuditTrails_Deleted(global::LightSwitchApplication.AuditTrail entity);
-    
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void AuditTrails_Validate(global::LightSwitchApplication.AuditTrail entity, global::Microsoft.LightSwitch.EntitySetValidationResultsBuilder results);
-    
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
         partial void Endpoints_CanInsert(ref bool result);
     
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -2175,76 +2142,6 @@ namespace LightSwitchApplication
             [global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance", "CA1810:InitializeReferenceTypeStaticFieldsInline")]
             static DetailsClass()
             {
-            }
-            
-            [global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
-            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-            private static readonly global::Microsoft.LightSwitch.Details.Framework.Server.EntitySetEntry<global::LightSwitchApplication.DiagnosticsDataService, global::LightSwitchApplication.AuditTrail>
-                __AuditTrailsEntry = new global::Microsoft.LightSwitch.Details.Framework.Server.EntitySetEntry<global::LightSwitchApplication.DiagnosticsDataService, global::LightSwitchApplication.AuditTrail>(
-                    "AuditTrails",
-                    global::LightSwitchApplication.DiagnosticsDataService.DetailsClass.__AuditTrails_CanInsert,
-                    global::LightSwitchApplication.DiagnosticsDataService.DetailsClass.__AuditTrails_CanUpdate,
-                    global::LightSwitchApplication.DiagnosticsDataService.DetailsClass.__AuditTrails_CanDelete,
-                    global::LightSwitchApplication.DiagnosticsDataService.DetailsClass.__AuditTrails_CanRead,
-                    global::LightSwitchApplication.DiagnosticsDataService.DetailsClass.__AuditTrails_Inserting,
-                    global::LightSwitchApplication.DiagnosticsDataService.DetailsClass.__AuditTrails_Inserted,
-                    global::LightSwitchApplication.DiagnosticsDataService.DetailsClass.__AuditTrails_Updating,
-                    global::LightSwitchApplication.DiagnosticsDataService.DetailsClass.__AuditTrails_Updated,
-                    global::LightSwitchApplication.DiagnosticsDataService.DetailsClass.__AuditTrails_Deleting,
-                    global::LightSwitchApplication.DiagnosticsDataService.DetailsClass.__AuditTrails_Deleted,
-                    global::LightSwitchApplication.DiagnosticsDataService.DetailsClass.__AuditTrails_Validate,
-                    null);
-            private static bool __AuditTrails_CanInsert(global::LightSwitchApplication.DiagnosticsDataService d)
-            {
-                bool result = true;
-                d.AuditTrails_CanInsert(ref result);
-                return result;
-            }
-            private static bool __AuditTrails_CanUpdate(global::LightSwitchApplication.DiagnosticsDataService d)
-            {
-                bool result = true;
-                d.AuditTrails_CanUpdate(ref result);
-                return result;
-            }
-            private static bool __AuditTrails_CanDelete(global::LightSwitchApplication.DiagnosticsDataService d)
-            {
-                bool result = true;
-                d.AuditTrails_CanDelete(ref result);
-                return result;
-            }
-            private static bool __AuditTrails_CanRead(global::LightSwitchApplication.DiagnosticsDataService d)
-            {
-                bool result = true;
-                d.AuditTrails_CanRead(ref result);
-                return result;
-            }
-            private static void __AuditTrails_Inserting(global::LightSwitchApplication.DiagnosticsDataService d, global::LightSwitchApplication.AuditTrail e)
-            {
-                d.AuditTrails_Inserting(e);
-            }
-            private static void __AuditTrails_Inserted(global::LightSwitchApplication.DiagnosticsDataService d, global::LightSwitchApplication.AuditTrail e)
-            {
-                d.AuditTrails_Inserted(e);
-            }
-            private static void __AuditTrails_Updating(global::LightSwitchApplication.DiagnosticsDataService d, global::LightSwitchApplication.AuditTrail e)
-            {
-                d.AuditTrails_Updating(e);
-            }
-            private static void __AuditTrails_Updated(global::LightSwitchApplication.DiagnosticsDataService d, global::LightSwitchApplication.AuditTrail e)
-            {
-                d.AuditTrails_Updated(e);
-            }
-            private static void __AuditTrails_Deleting(global::LightSwitchApplication.DiagnosticsDataService d, global::LightSwitchApplication.AuditTrail e)
-            {
-                d.AuditTrails_Deleting(e);
-            }
-            private static void __AuditTrails_Deleted(global::LightSwitchApplication.DiagnosticsDataService d, global::LightSwitchApplication.AuditTrail e)
-            {
-                d.AuditTrails_Deleted(e);
-            }
-            private static void __AuditTrails_Validate(global::LightSwitchApplication.DiagnosticsDataService d, global::LightSwitchApplication.AuditTrail e, global::Microsoft.LightSwitch.EntitySetValidationResultsBuilder r)
-            {
-                d.AuditTrails_Validate(e, r);
             }
             
             [global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]

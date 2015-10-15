@@ -213,15 +213,12 @@
     <LightSwitchModel Include="Properties\CoreData\Nodes.lsml" />
     <LightSwitchModel Include="Properties\CoreData\OrderItems.lsml" />
     <LightSwitchModel Include="Properties\CoreData\Orders.lsml" />
-    <LightSwitchModel Include="Properties\DiagnosticsData\AuditTrails.lsml" />
     <LightSwitchModel Include="Properties\DiagnosticsData\Endpoints.lsml" />
     <LightSwitchModel Include="Properties\Proxies.lsml" />
     <LightSwitchModel Include="Screens\ApprovalApprove.lsml" />
     <LightSwitchModel Include="Screens\ApprovalDecline.lsml" />
     <LightSwitchModel Include="Screens\ApprovalsList.lsml" />
     <LightSwitchModel Include="Screens\ApprovalView.lsml" />
-    <LightSwitchModel Include="Screens\AuditTrailsList.lsml" />
-    <LightSwitchModel Include="Screens\AuditTrailsView.lsml" />
     <LightSwitchModel Include="Screens\CartEdit.lsml" />
     <LightSwitchModel Include="Screens\CartItemEdit.lsml" />
     <LightSwitchModel Include="Screens\CartItemPersonalAdd.lsml" />
