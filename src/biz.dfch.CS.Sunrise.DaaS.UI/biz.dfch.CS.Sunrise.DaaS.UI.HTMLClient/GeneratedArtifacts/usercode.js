@@ -6,7 +6,6 @@ document.writeln("<script type=\"text/javascript\" src=\"Screens/ApprovalView.ls
 document.writeln("<script type=\"text/javascript\" src=\"Screens/CartItemPersonalAdd.lsml.js\"></script>");
 document.writeln("<script type=\"text/javascript\" src=\"Screens/CartItemTechnicalAdd.lsml.js\"></script>");
 document.writeln("<script type=\"text/javascript\" src=\"Screens/CartItemView.lsml.js\"></script>");
-document.writeln("<script type=\"text/javascript\" src=\"Screens/CartsList.lsml.js\"></script>");
 document.writeln("<script type=\"text/javascript\" src=\"Screens/CartView.lsml.js\"></script>");
 document.writeln("<script type=\"text/javascript\" src=\"Screens/CatalogueItemView.lsml.js\"></script>");
 document.writeln("<script type=\"text/javascript\" src=\"Screens/CatalogueView.lsml.js\"></script>");

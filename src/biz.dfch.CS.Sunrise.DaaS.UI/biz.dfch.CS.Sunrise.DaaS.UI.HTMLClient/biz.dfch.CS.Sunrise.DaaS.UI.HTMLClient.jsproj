@@ -121,9 +121,6 @@
     <Content Include="Screens\CartItemView.lsml.js">
       <DependentUpon>CartItemView.lsml</DependentUpon>
     </Content>
-    <Content Include="Screens\CartsList.lsml.js">
-      <DependentUpon>CartsList.lsml</DependentUpon>
-    </Content>
     <Content Include="Screens\CartView.lsml.js">
       <DependentUpon>CartView.lsml</DependentUpon>
     </Content>

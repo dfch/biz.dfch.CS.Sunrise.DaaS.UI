@@ -9,7 +9,7 @@
 //------------------------------------------------------------------------------
 
 // Original file name:
-// Generation date: 12.10.2015 18:05:22
+// Generation date: 15.10.2015 12:27:18
 namespace DiagnosticsData.DiagnosticsDataService
 {
     
