@@ -73,12 +73,6 @@
   <Association>
     <Association.Attributes>
       <Proxy
-        Target="ServiceInterface:biz_dfch_CS_Appclusive_Core_OdataServices_Core_Ace_Acl_biz_dfch_" />
-    </Association.Attributes>
-  </Association>
-  <Association>
-    <Association.Attributes>
-      <Proxy
         Target="ServiceInterface:biz_dfch_CS_Appclusive_Core_OdataServices_Core_Node_Children_biz" />
     </Association.Attributes>
   </Association>
@@ -97,18 +91,6 @@
   <Association>
     <Association.Attributes>
       <Proxy
-        Target="ServiceInterface:biz_dfch_CS_Appclusive_Core_OdataServices_Core_Link_Source_biz_d" />
-    </Association.Attributes>
-  </Association>
-  <Association>
-    <Association.Attributes>
-      <Proxy
-        Target="ServiceInterface:biz_dfch_CS_Appclusive_Core_OdataServices_Core_Link_Destination_" />
-    </Association.Attributes>
-  </Association>
-  <Association>
-    <Association.Attributes>
-      <Proxy
         Target="ServiceInterface:biz_dfch_CS_Appclusive_Core_OdataServices_Core_ManagementCredent" />
     </Association.Attributes>
   </Association>
@@ -116,12 +98,6 @@
     <Association.Attributes>
       <Proxy
         Target="ServiceInterface:biz_dfch_CS_Appclusive_Core_OdataServices_Core_Catalogue_Catalog" />
-    </Association.Attributes>
-  </Association>
-  <Association>
-    <Association.Attributes>
-      <Proxy
-        Target="ServiceInterface:biz_dfch_CS_Appclusive_Core_OdataServices_Core_CatalogueItem_Cat" />
     </Association.Attributes>
   </Association>
   <Association>

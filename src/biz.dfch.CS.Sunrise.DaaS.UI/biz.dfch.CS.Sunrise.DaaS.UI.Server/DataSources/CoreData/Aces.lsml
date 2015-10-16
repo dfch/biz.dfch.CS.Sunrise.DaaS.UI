@@ -102,15 +102,6 @@
           <NotSearchable />
         </EntityProperty.Attributes>
       </EntityProperty>
-      <NavigationProperty
-        Name="Acl"
-        Association="biz_dfch_CS_Appclusive_Core_OdataServices_Core_Ace_Acl_biz_dfch_"
-        FromEnd="AclPartner"
-        ToEnd="Acl">
-        <NavigationProperty.Attributes>
-          <Hidden />
-        </NavigationProperty.Attributes>
-      </NavigationProperty>
     </EntityType.Properties>
   </EntityType>
   <EntityContainer
@@ -254,9 +245,6 @@
         <CsdlProperty
           Name="RowVersion"
           Property="Ace/Properties[RowVersion]" />
-        <CsdlProperty
-          Name="Acl"
-          Property="Ace/Properties[Acl]" />
       </EntitySetMapping.Attributes>
     </EntitySetMapping>
   </DataService>

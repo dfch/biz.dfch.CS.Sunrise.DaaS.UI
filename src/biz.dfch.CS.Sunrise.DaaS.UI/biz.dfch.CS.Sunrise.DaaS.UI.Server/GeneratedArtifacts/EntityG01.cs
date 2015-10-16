@@ -366,30 +366,6 @@ namespace LightSwitchApplication
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
         partial void RowVersion_Changed();
 
-        /// <summary>
-        /// No Modeled Description Available
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.1.0.0")]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        public global::LightSwitchApplication.Acl Acl
-        {
-            get
-            {
-                return global::LightSwitchApplication.Ace.DetailsClass.GetValue(this, global::LightSwitchApplication.Ace.DetailsClass.PropertySetProperties.Acl);
-            }
-            set
-            {
-                global::LightSwitchApplication.Ace.DetailsClass.SetValue(this, global::LightSwitchApplication.Ace.DetailsClass.PropertySetProperties.Acl, value);
-            }
-        }
-        
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void Acl_IsReadOnly(ref bool result);
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void Acl_Validate(global::Microsoft.LightSwitch.EntityValidationResultsBuilder results);
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void Acl_Changed();
-
         #endregion
     
         #region Details Class
@@ -568,14 +544,6 @@ namespace LightSwitchApplication
                     }
                 }
                 
-                public global::Microsoft.LightSwitch.Details.Framework.EntityReferenceProperty<global::LightSwitchApplication.Ace, global::LightSwitchApplication.Ace.DetailsClass, global::LightSwitchApplication.Acl> Acl
-                {
-                    get
-                    {
-                        return base.GetItem(global::LightSwitchApplication.Ace.DetailsClass.PropertySetProperties.Acl) as global::Microsoft.LightSwitch.Details.Framework.EntityReferenceProperty<global::LightSwitchApplication.Ace, global::LightSwitchApplication.Ace.DetailsClass, global::LightSwitchApplication.Acl>;
-                    }
-                }
-                
             }
     
             #pragma warning disable 109
@@ -594,7 +562,6 @@ namespace LightSwitchApplication
                 new global::System.DateTimeOffset Modified { get; set; }
                 new long AclId { get; set; }
                 new byte[] RowVersion { get; set; }
-                new global::Microsoft.LightSwitch.Internal.IEntityImplementation Acl { get; set; }
             }
             #pragma warning restore 109
     
@@ -1048,53 +1015,6 @@ namespace LightSwitchApplication
                     e.RowVersion_Changed();
                 }
     
-                [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityReferenceProperty<global::LightSwitchApplication.Ace, global::LightSwitchApplication.Ace.DetailsClass, global::LightSwitchApplication.Acl>.Entry
-                    Acl = new global::Microsoft.LightSwitch.Details.Framework.EntityReferenceProperty<global::LightSwitchApplication.Ace, global::LightSwitchApplication.Ace.DetailsClass, global::LightSwitchApplication.Acl>.Entry(
-                        "Acl",
-                        global::LightSwitchApplication.Ace.DetailsClass.PropertySetProperties._Acl_Stub,
-                        global::LightSwitchApplication.Ace.DetailsClass.PropertySetProperties._Acl_ComputeIsReadOnly,
-                        global::LightSwitchApplication.Ace.DetailsClass.PropertySetProperties._Acl_Validate,
-                        global::LightSwitchApplication.Ace.DetailsClass.PropertySetProperties._Acl_GetCoreImplementationValue,
-                        global::LightSwitchApplication.Ace.DetailsClass.PropertySetProperties._Acl_GetImplementationValue,
-                        global::LightSwitchApplication.Ace.DetailsClass.PropertySetProperties._Acl_SetImplementationValue,
-                        global::LightSwitchApplication.Ace.DetailsClass.PropertySetProperties._Acl_Refresh,
-                        global::LightSwitchApplication.Ace.DetailsClass.PropertySetProperties._Acl_OnValueChanged);
-                private static void _Acl_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.Ace.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityReferenceProperty<global::LightSwitchApplication.Ace, global::LightSwitchApplication.Ace.DetailsClass, global::LightSwitchApplication.Acl>.Data> c, global::LightSwitchApplication.Ace.DetailsClass d, object sf)
-                {
-                    c(d, ref d._Acl, sf);
-                }
-                private static bool _Acl_ComputeIsReadOnly(global::LightSwitchApplication.Ace e)
-                {
-                    bool result = false;
-                    e.Acl_IsReadOnly(ref result);
-                    return result;
-                }
-                private static void _Acl_Validate(global::LightSwitchApplication.Ace e, global::Microsoft.LightSwitch.EntityValidationResultsBuilder r)
-                {
-                    e.Acl_Validate(r);
-                }
-                private static global::Microsoft.LightSwitch.Internal.IEntityImplementation _Acl_GetCoreImplementationValue(global::LightSwitchApplication.Ace.DetailsClass d)
-                {
-                    return d.ImplementationEntity.Acl;
-                }
-                private static global::LightSwitchApplication.Acl _Acl_GetImplementationValue(global::LightSwitchApplication.Ace.DetailsClass d)
-                {
-                    return d.GetImplementationValue<global::LightSwitchApplication.Acl, global::LightSwitchApplication.Acl.DetailsClass>(global::LightSwitchApplication.Ace.DetailsClass.PropertySetProperties.Acl, ref d._Acl);
-                }
-                private static void _Acl_SetImplementationValue(global::LightSwitchApplication.Ace.DetailsClass d, global::LightSwitchApplication.Acl v)
-                {
-                    d.SetImplementationValue(global::LightSwitchApplication.Ace.DetailsClass.PropertySetProperties.Acl, ref d._Acl, (i, ev) => i.Acl = ev, v);
-                }
-                private static void _Acl_Refresh(global::LightSwitchApplication.Ace.DetailsClass d)
-                {
-                    d.RefreshNavigationProperty(global::LightSwitchApplication.Ace.DetailsClass.PropertySetProperties.Acl, ref d._Acl);
-                }
-                private static void _Acl_OnValueChanged(global::LightSwitchApplication.Ace e)
-                {
-                    e.Acl_Changed();
-                }
-    
             }
     
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
@@ -1132,9 +1052,6 @@ namespace LightSwitchApplication
             
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
             private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Ace, global::LightSwitchApplication.Ace.DetailsClass, byte[]>.Data _RowVersion;
-            
-            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-            private global::Microsoft.LightSwitch.Details.Framework.EntityReferenceProperty<global::LightSwitchApplication.Ace, global::LightSwitchApplication.Ace.DetailsClass, global::LightSwitchApplication.Acl>.Data _Acl;
             
         }
     

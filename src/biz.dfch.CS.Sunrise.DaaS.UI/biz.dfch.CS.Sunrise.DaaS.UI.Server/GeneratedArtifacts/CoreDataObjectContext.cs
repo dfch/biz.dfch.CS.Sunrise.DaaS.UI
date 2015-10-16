@@ -20,16 +20,12 @@ using System.Xml.Serialization;
 #region EDM Relationship Metadata
 
 [assembly: EdmRelationshipAttribute("LightSwitchApplication", "biz_dfch_CS_Appclusive_Core_OdataServices_Core_Acl_Aces_biz_dfch", "AcesPartner", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(LightSwitchApplication.Implementation.Acl), "Aces", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(LightSwitchApplication.Implementation.Ace))]
-[assembly: EdmRelationshipAttribute("LightSwitchApplication", "biz_dfch_CS_Appclusive_Core_OdataServices_Core_Ace_Acl_biz_dfch_", "Acl", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(LightSwitchApplication.Implementation.Acl), "AclPartner", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(LightSwitchApplication.Implementation.Ace))]
 [assembly: EdmRelationshipAttribute("LightSwitchApplication", "biz_dfch_CS_Appclusive_Core_OdataServices_Core_Cart_CartItems_bi", "CartItemsPartner", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(LightSwitchApplication.Implementation.Cart), "CartItems", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(LightSwitchApplication.Implementation.CartItem))]
 [assembly: EdmRelationshipAttribute("LightSwitchApplication", "biz_dfch_CS_Appclusive_Core_OdataServices_Core_Catalogue_Catalog", "CatalogueItemsPartner", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(LightSwitchApplication.Implementation.Catalogue), "CatalogueItems", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(LightSwitchApplication.Implementation.CatalogueItem1))]
-[assembly: EdmRelationshipAttribute("LightSwitchApplication", "biz_dfch_CS_Appclusive_Core_OdataServices_Core_CatalogueItem_Cat", "Catalogue", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(LightSwitchApplication.Implementation.Catalogue), "CataloguePartner", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(LightSwitchApplication.Implementation.CatalogueItem1))]
 [assembly: EdmRelationshipAttribute("LightSwitchApplication", "biz_dfch_CS_Appclusive_Core_OdataServices_Core_ManagementCredent", "ManagementUrisPartner", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(LightSwitchApplication.Implementation.ManagementCredential), "ManagementUris", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(LightSwitchApplication.Implementation.ManagementUri))]
 [assembly: EdmRelationshipAttribute("LightSwitchApplication", "biz_dfch_CS_Appclusive_Core_OdataServices_Core_Node_Children_biz", "ChildrenPartner", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(LightSwitchApplication.Implementation.Node), "Children", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(LightSwitchApplication.Implementation.Node))]
 [assembly: EdmRelationshipAttribute("LightSwitchApplication", "biz_dfch_CS_Appclusive_Core_OdataServices_Core_Node_IncomingLink", "IncomingLinksPartner", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(LightSwitchApplication.Implementation.Node), "IncomingLinks", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(LightSwitchApplication.Implementation.Link))]
 [assembly: EdmRelationshipAttribute("LightSwitchApplication", "biz_dfch_CS_Appclusive_Core_OdataServices_Core_Node_OutgoingLink", "OutgoingLinksPartner", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(LightSwitchApplication.Implementation.Node), "OutgoingLinks", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(LightSwitchApplication.Implementation.Link))]
-[assembly: EdmRelationshipAttribute("LightSwitchApplication", "biz_dfch_CS_Appclusive_Core_OdataServices_Core_Link_Source_biz_d", "Source", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(LightSwitchApplication.Implementation.Node), "SourcePartner", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(LightSwitchApplication.Implementation.Link))]
-[assembly: EdmRelationshipAttribute("LightSwitchApplication", "biz_dfch_CS_Appclusive_Core_OdataServices_Core_Link_Destination_", "Destination", System.Data.Metadata.Edm.RelationshipMultiplicity.One, typeof(LightSwitchApplication.Implementation.Node), "DestinationPartner", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(LightSwitchApplication.Implementation.Link))]
 [assembly: EdmRelationshipAttribute("LightSwitchApplication", "biz_dfch_CS_Sunrise_DaaS_Endpoints_OdataServices_Core_Order_Orde", "OrderItemsPartner", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(LightSwitchApplication.Implementation.Order), "OrderItems", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(LightSwitchApplication.Implementation.OrderItem))]
 
 #endregion
@@ -860,48 +856,6 @@ namespace LightSwitchApplication.Implementation
         #endregion
 
     
-        #region Navigation Properties
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [XmlIgnoreAttribute()]
-        [SoapIgnoreAttribute()]
-        [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("LightSwitchApplication", "biz_dfch_CS_Appclusive_Core_OdataServices_Core_Ace_Acl_biz_dfch_", "Acl")]
-        public Acl Acl
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Acl>("LightSwitchApplication.biz_dfch_CS_Appclusive_Core_OdataServices_Core_Ace_Acl_biz_dfch_", "Acl").Value;
-            }
-            set
-            {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Acl>("LightSwitchApplication.biz_dfch_CS_Appclusive_Core_OdataServices_Core_Ace_Acl_biz_dfch_", "Acl").Value = value;
-            }
-        }
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [BrowsableAttribute(false)]
-        [DataMemberAttribute()]
-        public EntityReference<Acl> AclReference
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Acl>("LightSwitchApplication.biz_dfch_CS_Appclusive_Core_OdataServices_Core_Ace_Acl_biz_dfch_", "Acl");
-            }
-            set
-            {
-                if ((value != null))
-                {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Acl>("LightSwitchApplication.biz_dfch_CS_Appclusive_Core_OdataServices_Core_Ace_Acl_biz_dfch_", "Acl", value);
-                }
-            }
-        }
-
-        #endregion
-
     }
     
     /// <summary>
@@ -3066,30 +3020,6 @@ namespace LightSwitchApplication.Implementation
         /// <summary>
         /// No Metadata Documentation available.
         /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
-        [DataMemberAttribute()]
-        public global::System.String Collection
-        {
-            get
-            {
-                return _Collection;
-            }
-            set
-            {
-                OnCollectionChanging(value);
-                ReportPropertyChanging("Collection");
-                _Collection = value;
-                ReportPropertyChanged("Collection");
-                OnCollectionChanged();
-            }
-        }
-        private global::System.String _Collection;
-        partial void OnCollectionChanging(global::System.String value);
-        partial void OnCollectionChanged();
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
         [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
         [DataMemberAttribute()]
         public global::System.String Version
@@ -3501,48 +3431,6 @@ namespace LightSwitchApplication.Implementation
         #endregion
 
     
-        #region Navigation Properties
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [XmlIgnoreAttribute()]
-        [SoapIgnoreAttribute()]
-        [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("LightSwitchApplication", "biz_dfch_CS_Appclusive_Core_OdataServices_Core_CatalogueItem_Cat", "Catalogue")]
-        public Catalogue Catalogue
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Catalogue>("LightSwitchApplication.biz_dfch_CS_Appclusive_Core_OdataServices_Core_CatalogueItem_Cat", "Catalogue").Value;
-            }
-            set
-            {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Catalogue>("LightSwitchApplication.biz_dfch_CS_Appclusive_Core_OdataServices_Core_CatalogueItem_Cat", "Catalogue").Value = value;
-            }
-        }
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [BrowsableAttribute(false)]
-        [DataMemberAttribute()]
-        public EntityReference<Catalogue> CatalogueReference
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Catalogue>("LightSwitchApplication.biz_dfch_CS_Appclusive_Core_OdataServices_Core_CatalogueItem_Cat", "Catalogue");
-            }
-            set
-            {
-                if ((value != null))
-                {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Catalogue>("LightSwitchApplication.biz_dfch_CS_Appclusive_Core_OdataServices_Core_CatalogueItem_Cat", "Catalogue", value);
-                }
-            }
-        }
-
-        #endregion
-
     }
     
     /// <summary>
@@ -5270,86 +5158,6 @@ namespace LightSwitchApplication.Implementation
         #endregion
 
     
-        #region Navigation Properties
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [XmlIgnoreAttribute()]
-        [SoapIgnoreAttribute()]
-        [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("LightSwitchApplication", "biz_dfch_CS_Appclusive_Core_OdataServices_Core_Link_Source_biz_d", "Source")]
-        public Node Source
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Node>("LightSwitchApplication.biz_dfch_CS_Appclusive_Core_OdataServices_Core_Link_Source_biz_d", "Source").Value;
-            }
-            set
-            {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Node>("LightSwitchApplication.biz_dfch_CS_Appclusive_Core_OdataServices_Core_Link_Source_biz_d", "Source").Value = value;
-            }
-        }
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [BrowsableAttribute(false)]
-        [DataMemberAttribute()]
-        public EntityReference<Node> SourceReference
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Node>("LightSwitchApplication.biz_dfch_CS_Appclusive_Core_OdataServices_Core_Link_Source_biz_d", "Source");
-            }
-            set
-            {
-                if ((value != null))
-                {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Node>("LightSwitchApplication.biz_dfch_CS_Appclusive_Core_OdataServices_Core_Link_Source_biz_d", "Source", value);
-                }
-            }
-        }
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [XmlIgnoreAttribute()]
-        [SoapIgnoreAttribute()]
-        [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("LightSwitchApplication", "biz_dfch_CS_Appclusive_Core_OdataServices_Core_Link_Destination_", "Destination")]
-        public Node Destination
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Node>("LightSwitchApplication.biz_dfch_CS_Appclusive_Core_OdataServices_Core_Link_Destination_", "Destination").Value;
-            }
-            set
-            {
-                ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Node>("LightSwitchApplication.biz_dfch_CS_Appclusive_Core_OdataServices_Core_Link_Destination_", "Destination").Value = value;
-            }
-        }
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [BrowsableAttribute(false)]
-        [DataMemberAttribute()]
-        public EntityReference<Node> DestinationReference
-        {
-            get
-            {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedReference<Node>("LightSwitchApplication.biz_dfch_CS_Appclusive_Core_OdataServices_Core_Link_Destination_", "Destination");
-            }
-            set
-            {
-                if ((value != null))
-                {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedReference<Node>("LightSwitchApplication.biz_dfch_CS_Appclusive_Core_OdataServices_Core_Link_Destination_", "Destination", value);
-                }
-            }
-        }
-
-        #endregion
-
     }
     
     /// <summary>

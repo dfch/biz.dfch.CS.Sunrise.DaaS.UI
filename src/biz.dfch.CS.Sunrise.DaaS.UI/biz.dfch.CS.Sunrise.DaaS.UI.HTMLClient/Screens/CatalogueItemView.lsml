@@ -70,21 +70,6 @@
               </ContentItem.DataSource>
             </ContentItem>
             <ContentItem
-              Name="Collection"
-              Kind="Value"
-              DataType=":String?">
-              <ContentItem.DataSource>
-                <ScreenExpressionTree>
-                  <ChainExpression>
-                    <MemberExpression
-                      Member="CatalogueItemView/Properties[CatalogueItem1]" />
-                    <MemberExpression
-                      Member="Collection" />
-                  </ChainExpression>
-                </ScreenExpressionTree>
-              </ContentItem.DataSource>
-            </ContentItem>
-            <ContentItem
               Name="Version"
               Kind="Value"
               DataType=":String">

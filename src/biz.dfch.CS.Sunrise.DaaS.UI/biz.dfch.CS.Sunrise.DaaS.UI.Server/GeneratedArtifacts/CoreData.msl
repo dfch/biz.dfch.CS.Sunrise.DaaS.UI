@@ -114,7 +114,6 @@
     <EntitySetMapping Name="CatalogueItems">
       <EntityTypeMapping TypeName="IsTypeOf(LightSwitchApplication.CatalogueItem1)">
         <MappingFragment StoreEntitySet="CatalogueItems">
-          <ScalarProperty Name="Collection" ColumnName="Collection" />
           <ScalarProperty Name="Version" ColumnName="Version" />
           <ScalarProperty Name="Id" ColumnName="Id" />
           <ScalarProperty Name="Tid" ColumnName="Tid" />

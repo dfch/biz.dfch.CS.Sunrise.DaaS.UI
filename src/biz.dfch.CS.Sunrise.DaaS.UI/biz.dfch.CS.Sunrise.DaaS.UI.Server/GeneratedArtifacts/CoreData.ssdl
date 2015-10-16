@@ -23,10 +23,6 @@
       <End Role="AcesPartner" EntitySet="Acls" />
       <End Role="Aces" EntitySet="Aces" />
     </AssociationSet>
-    <AssociationSet Name="biz_dfch_CS_Appclusive_Core_OdataServices_Core_Ace_Acl_biz_dfch_" Association="CoreDataStore.biz_dfch_CS_Appclusive_Core_OdataServices_Core_Ace_Acl_biz_dfch_">
-      <End Role="Acl" EntitySet="Acls" />
-      <End Role="AclPartner" EntitySet="Aces" />
-    </AssociationSet>
     <AssociationSet Name="biz_dfch_CS_Appclusive_Core_OdataServices_Core_Cart_CartItems_bi" Association="CoreDataStore.biz_dfch_CS_Appclusive_Core_OdataServices_Core_Cart_CartItems_bi">
       <End Role="CartItemsPartner" EntitySet="Carts" />
       <End Role="CartItems" EntitySet="CartItems" />
@@ -34,10 +30,6 @@
     <AssociationSet Name="biz_dfch_CS_Appclusive_Core_OdataServices_Core_Catalogue_Catalog" Association="CoreDataStore.biz_dfch_CS_Appclusive_Core_OdataServices_Core_Catalogue_Catalog">
       <End Role="CatalogueItemsPartner" EntitySet="Catalogues" />
       <End Role="CatalogueItems" EntitySet="CatalogueItems" />
-    </AssociationSet>
-    <AssociationSet Name="biz_dfch_CS_Appclusive_Core_OdataServices_Core_CatalogueItem_Cat" Association="CoreDataStore.biz_dfch_CS_Appclusive_Core_OdataServices_Core_CatalogueItem_Cat">
-      <End Role="Catalogue" EntitySet="Catalogues" />
-      <End Role="CataloguePartner" EntitySet="CatalogueItems" />
     </AssociationSet>
     <AssociationSet Name="biz_dfch_CS_Appclusive_Core_OdataServices_Core_ManagementCredent" Association="CoreDataStore.biz_dfch_CS_Appclusive_Core_OdataServices_Core_ManagementCredent">
       <End Role="ManagementUrisPartner" EntitySet="ManagementCredentials" />
@@ -54,14 +46,6 @@
     <AssociationSet Name="biz_dfch_CS_Appclusive_Core_OdataServices_Core_Node_OutgoingLink" Association="CoreDataStore.biz_dfch_CS_Appclusive_Core_OdataServices_Core_Node_OutgoingLink">
       <End Role="OutgoingLinksPartner" EntitySet="Nodes" />
       <End Role="OutgoingLinks" EntitySet="Links" />
-    </AssociationSet>
-    <AssociationSet Name="biz_dfch_CS_Appclusive_Core_OdataServices_Core_Link_Source_biz_d" Association="CoreDataStore.biz_dfch_CS_Appclusive_Core_OdataServices_Core_Link_Source_biz_d">
-      <End Role="Source" EntitySet="Nodes" />
-      <End Role="SourcePartner" EntitySet="Links" />
-    </AssociationSet>
-    <AssociationSet Name="biz_dfch_CS_Appclusive_Core_OdataServices_Core_Link_Destination_" Association="CoreDataStore.biz_dfch_CS_Appclusive_Core_OdataServices_Core_Link_Destination_">
-      <End Role="Destination" EntitySet="Nodes" />
-      <End Role="DestinationPartner" EntitySet="Links" />
     </AssociationSet>
     <AssociationSet Name="biz_dfch_CS_Sunrise_DaaS_Endpoints_OdataServices_Core_Order_Orde" Association="CoreDataStore.biz_dfch_CS_Sunrise_DaaS_Endpoints_OdataServices_Core_Order_Orde">
       <End Role="OrderItemsPartner" EntitySet="Orders" />
@@ -176,7 +160,6 @@
     <Key>
       <PropertyRef Name="Id" />
     </Key>
-    <Property Name="Collection" Type="nvarchar(max)" />
     <Property Name="Version" Type="nvarchar(max)" Nullable="false" />
     <Property Name="Id" Type="bigint" Nullable="false" />
     <Property Name="Tid" Type="nvarchar(max)" Nullable="false" />
@@ -391,12 +374,6 @@
     </End>
     <End Role="Aces" Type="CoreDataStore.Ace" Multiplicity="*" />
   </Association>
-  <Association Name="biz_dfch_CS_Appclusive_Core_OdataServices_Core_Ace_Acl_biz_dfch_">
-    <End Role="Acl" Type="CoreDataStore.Acl" Multiplicity="1">
-      <OnDeleteAnnotation Action="Unset" xmlns="http://schemas.microsoft.com/LightSwitch/2013/edm/annotations" />
-    </End>
-    <End Role="AclPartner" Type="CoreDataStore.Ace" Multiplicity="0..1" />
-  </Association>
   <Association Name="biz_dfch_CS_Appclusive_Core_OdataServices_Core_Cart_CartItems_bi">
     <End Role="CartItemsPartner" Type="CoreDataStore.Cart" Multiplicity="0..1">
       <OnDeleteAnnotation Action="Unset" xmlns="http://schemas.microsoft.com/LightSwitch/2013/edm/annotations" />
@@ -408,12 +385,6 @@
       <OnDeleteAnnotation Action="Unset" xmlns="http://schemas.microsoft.com/LightSwitch/2013/edm/annotations" />
     </End>
     <End Role="CatalogueItems" Type="CoreDataStore.CatalogueItem1" Multiplicity="*" />
-  </Association>
-  <Association Name="biz_dfch_CS_Appclusive_Core_OdataServices_Core_CatalogueItem_Cat">
-    <End Role="Catalogue" Type="CoreDataStore.Catalogue" Multiplicity="1">
-      <OnDeleteAnnotation Action="Unset" xmlns="http://schemas.microsoft.com/LightSwitch/2013/edm/annotations" />
-    </End>
-    <End Role="CataloguePartner" Type="CoreDataStore.CatalogueItem1" Multiplicity="0..1" />
   </Association>
   <Association Name="biz_dfch_CS_Appclusive_Core_OdataServices_Core_ManagementCredent">
     <End Role="ManagementUrisPartner" Type="CoreDataStore.ManagementCredential" Multiplicity="0..1">
@@ -438,18 +409,6 @@
       <OnDeleteAnnotation Action="Unset" xmlns="http://schemas.microsoft.com/LightSwitch/2013/edm/annotations" />
     </End>
     <End Role="OutgoingLinks" Type="CoreDataStore.Link" Multiplicity="*" />
-  </Association>
-  <Association Name="biz_dfch_CS_Appclusive_Core_OdataServices_Core_Link_Source_biz_d">
-    <End Role="Source" Type="CoreDataStore.Node" Multiplicity="1">
-      <OnDeleteAnnotation Action="Unset" xmlns="http://schemas.microsoft.com/LightSwitch/2013/edm/annotations" />
-    </End>
-    <End Role="SourcePartner" Type="CoreDataStore.Link" Multiplicity="0..1" />
-  </Association>
-  <Association Name="biz_dfch_CS_Appclusive_Core_OdataServices_Core_Link_Destination_">
-    <End Role="Destination" Type="CoreDataStore.Node" Multiplicity="1">
-      <OnDeleteAnnotation Action="Unset" xmlns="http://schemas.microsoft.com/LightSwitch/2013/edm/annotations" />
-    </End>
-    <End Role="DestinationPartner" Type="CoreDataStore.Link" Multiplicity="0..1" />
   </Association>
   <Association Name="biz_dfch_CS_Sunrise_DaaS_Endpoints_OdataServices_Core_Order_Orde">
     <End Role="OrderItemsPartner" Type="CoreDataStore.Order" Multiplicity="0..1">

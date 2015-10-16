@@ -366,54 +366,6 @@ namespace LightSwitchApplication
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
         partial void RowVersion_Changed();
 
-        /// <summary>
-        /// No Modeled Description Available
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.1.0.0")]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        public global::LightSwitchApplication.Node Source
-        {
-            get
-            {
-                return global::LightSwitchApplication.Link.DetailsClass.GetValue(this, global::LightSwitchApplication.Link.DetailsClass.PropertySetProperties.Source);
-            }
-            set
-            {
-                global::LightSwitchApplication.Link.DetailsClass.SetValue(this, global::LightSwitchApplication.Link.DetailsClass.PropertySetProperties.Source, value);
-            }
-        }
-        
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void Source_IsReadOnly(ref bool result);
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void Source_Validate(global::Microsoft.LightSwitch.EntityValidationResultsBuilder results);
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void Source_Changed();
-
-        /// <summary>
-        /// No Modeled Description Available
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.1.0.0")]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        public global::LightSwitchApplication.Node Destination
-        {
-            get
-            {
-                return global::LightSwitchApplication.Link.DetailsClass.GetValue(this, global::LightSwitchApplication.Link.DetailsClass.PropertySetProperties.Destination);
-            }
-            set
-            {
-                global::LightSwitchApplication.Link.DetailsClass.SetValue(this, global::LightSwitchApplication.Link.DetailsClass.PropertySetProperties.Destination, value);
-            }
-        }
-        
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void Destination_IsReadOnly(ref bool result);
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void Destination_Validate(global::Microsoft.LightSwitch.EntityValidationResultsBuilder results);
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void Destination_Changed();
-
         #endregion
     
         #region Details Class
@@ -592,22 +544,6 @@ namespace LightSwitchApplication
                     }
                 }
                 
-                public global::Microsoft.LightSwitch.Details.Framework.EntityReferenceProperty<global::LightSwitchApplication.Link, global::LightSwitchApplication.Link.DetailsClass, global::LightSwitchApplication.Node> Source
-                {
-                    get
-                    {
-                        return base.GetItem(global::LightSwitchApplication.Link.DetailsClass.PropertySetProperties.Source) as global::Microsoft.LightSwitch.Details.Framework.EntityReferenceProperty<global::LightSwitchApplication.Link, global::LightSwitchApplication.Link.DetailsClass, global::LightSwitchApplication.Node>;
-                    }
-                }
-                
-                public global::Microsoft.LightSwitch.Details.Framework.EntityReferenceProperty<global::LightSwitchApplication.Link, global::LightSwitchApplication.Link.DetailsClass, global::LightSwitchApplication.Node> Destination
-                {
-                    get
-                    {
-                        return base.GetItem(global::LightSwitchApplication.Link.DetailsClass.PropertySetProperties.Destination) as global::Microsoft.LightSwitch.Details.Framework.EntityReferenceProperty<global::LightSwitchApplication.Link, global::LightSwitchApplication.Link.DetailsClass, global::LightSwitchApplication.Node>;
-                    }
-                }
-                
             }
     
             #pragma warning disable 109
@@ -626,8 +562,6 @@ namespace LightSwitchApplication
                 new global::System.DateTimeOffset Created { get; set; }
                 new global::System.DateTimeOffset Modified { get; set; }
                 new byte[] RowVersion { get; set; }
-                new global::Microsoft.LightSwitch.Internal.IEntityImplementation Source { get; set; }
-                new global::Microsoft.LightSwitch.Internal.IEntityImplementation Destination { get; set; }
             }
             #pragma warning restore 109
     
@@ -1081,100 +1015,6 @@ namespace LightSwitchApplication
                     e.RowVersion_Changed();
                 }
     
-                [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityReferenceProperty<global::LightSwitchApplication.Link, global::LightSwitchApplication.Link.DetailsClass, global::LightSwitchApplication.Node>.Entry
-                    Source = new global::Microsoft.LightSwitch.Details.Framework.EntityReferenceProperty<global::LightSwitchApplication.Link, global::LightSwitchApplication.Link.DetailsClass, global::LightSwitchApplication.Node>.Entry(
-                        "Source",
-                        global::LightSwitchApplication.Link.DetailsClass.PropertySetProperties._Source_Stub,
-                        global::LightSwitchApplication.Link.DetailsClass.PropertySetProperties._Source_ComputeIsReadOnly,
-                        global::LightSwitchApplication.Link.DetailsClass.PropertySetProperties._Source_Validate,
-                        global::LightSwitchApplication.Link.DetailsClass.PropertySetProperties._Source_GetCoreImplementationValue,
-                        global::LightSwitchApplication.Link.DetailsClass.PropertySetProperties._Source_GetImplementationValue,
-                        global::LightSwitchApplication.Link.DetailsClass.PropertySetProperties._Source_SetImplementationValue,
-                        global::LightSwitchApplication.Link.DetailsClass.PropertySetProperties._Source_Refresh,
-                        global::LightSwitchApplication.Link.DetailsClass.PropertySetProperties._Source_OnValueChanged);
-                private static void _Source_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.Link.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityReferenceProperty<global::LightSwitchApplication.Link, global::LightSwitchApplication.Link.DetailsClass, global::LightSwitchApplication.Node>.Data> c, global::LightSwitchApplication.Link.DetailsClass d, object sf)
-                {
-                    c(d, ref d._Source, sf);
-                }
-                private static bool _Source_ComputeIsReadOnly(global::LightSwitchApplication.Link e)
-                {
-                    bool result = false;
-                    e.Source_IsReadOnly(ref result);
-                    return result;
-                }
-                private static void _Source_Validate(global::LightSwitchApplication.Link e, global::Microsoft.LightSwitch.EntityValidationResultsBuilder r)
-                {
-                    e.Source_Validate(r);
-                }
-                private static global::Microsoft.LightSwitch.Internal.IEntityImplementation _Source_GetCoreImplementationValue(global::LightSwitchApplication.Link.DetailsClass d)
-                {
-                    return d.ImplementationEntity.Source;
-                }
-                private static global::LightSwitchApplication.Node _Source_GetImplementationValue(global::LightSwitchApplication.Link.DetailsClass d)
-                {
-                    return d.GetImplementationValue<global::LightSwitchApplication.Node, global::LightSwitchApplication.Node.DetailsClass>(global::LightSwitchApplication.Link.DetailsClass.PropertySetProperties.Source, ref d._Source);
-                }
-                private static void _Source_SetImplementationValue(global::LightSwitchApplication.Link.DetailsClass d, global::LightSwitchApplication.Node v)
-                {
-                    d.SetImplementationValue(global::LightSwitchApplication.Link.DetailsClass.PropertySetProperties.Source, ref d._Source, (i, ev) => i.Source = ev, v);
-                }
-                private static void _Source_Refresh(global::LightSwitchApplication.Link.DetailsClass d)
-                {
-                    d.RefreshNavigationProperty(global::LightSwitchApplication.Link.DetailsClass.PropertySetProperties.Source, ref d._Source);
-                }
-                private static void _Source_OnValueChanged(global::LightSwitchApplication.Link e)
-                {
-                    e.Source_Changed();
-                }
-    
-                [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityReferenceProperty<global::LightSwitchApplication.Link, global::LightSwitchApplication.Link.DetailsClass, global::LightSwitchApplication.Node>.Entry
-                    Destination = new global::Microsoft.LightSwitch.Details.Framework.EntityReferenceProperty<global::LightSwitchApplication.Link, global::LightSwitchApplication.Link.DetailsClass, global::LightSwitchApplication.Node>.Entry(
-                        "Destination",
-                        global::LightSwitchApplication.Link.DetailsClass.PropertySetProperties._Destination_Stub,
-                        global::LightSwitchApplication.Link.DetailsClass.PropertySetProperties._Destination_ComputeIsReadOnly,
-                        global::LightSwitchApplication.Link.DetailsClass.PropertySetProperties._Destination_Validate,
-                        global::LightSwitchApplication.Link.DetailsClass.PropertySetProperties._Destination_GetCoreImplementationValue,
-                        global::LightSwitchApplication.Link.DetailsClass.PropertySetProperties._Destination_GetImplementationValue,
-                        global::LightSwitchApplication.Link.DetailsClass.PropertySetProperties._Destination_SetImplementationValue,
-                        global::LightSwitchApplication.Link.DetailsClass.PropertySetProperties._Destination_Refresh,
-                        global::LightSwitchApplication.Link.DetailsClass.PropertySetProperties._Destination_OnValueChanged);
-                private static void _Destination_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.Link.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityReferenceProperty<global::LightSwitchApplication.Link, global::LightSwitchApplication.Link.DetailsClass, global::LightSwitchApplication.Node>.Data> c, global::LightSwitchApplication.Link.DetailsClass d, object sf)
-                {
-                    c(d, ref d._Destination, sf);
-                }
-                private static bool _Destination_ComputeIsReadOnly(global::LightSwitchApplication.Link e)
-                {
-                    bool result = false;
-                    e.Destination_IsReadOnly(ref result);
-                    return result;
-                }
-                private static void _Destination_Validate(global::LightSwitchApplication.Link e, global::Microsoft.LightSwitch.EntityValidationResultsBuilder r)
-                {
-                    e.Destination_Validate(r);
-                }
-                private static global::Microsoft.LightSwitch.Internal.IEntityImplementation _Destination_GetCoreImplementationValue(global::LightSwitchApplication.Link.DetailsClass d)
-                {
-                    return d.ImplementationEntity.Destination;
-                }
-                private static global::LightSwitchApplication.Node _Destination_GetImplementationValue(global::LightSwitchApplication.Link.DetailsClass d)
-                {
-                    return d.GetImplementationValue<global::LightSwitchApplication.Node, global::LightSwitchApplication.Node.DetailsClass>(global::LightSwitchApplication.Link.DetailsClass.PropertySetProperties.Destination, ref d._Destination);
-                }
-                private static void _Destination_SetImplementationValue(global::LightSwitchApplication.Link.DetailsClass d, global::LightSwitchApplication.Node v)
-                {
-                    d.SetImplementationValue(global::LightSwitchApplication.Link.DetailsClass.PropertySetProperties.Destination, ref d._Destination, (i, ev) => i.Destination = ev, v);
-                }
-                private static void _Destination_Refresh(global::LightSwitchApplication.Link.DetailsClass d)
-                {
-                    d.RefreshNavigationProperty(global::LightSwitchApplication.Link.DetailsClass.PropertySetProperties.Destination, ref d._Destination);
-                }
-                private static void _Destination_OnValueChanged(global::LightSwitchApplication.Link e)
-                {
-                    e.Destination_Changed();
-                }
-    
             }
     
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
@@ -1212,12 +1052,6 @@ namespace LightSwitchApplication
             
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
             private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Link, global::LightSwitchApplication.Link.DetailsClass, byte[]>.Data _RowVersion;
-            
-            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-            private global::Microsoft.LightSwitch.Details.Framework.EntityReferenceProperty<global::LightSwitchApplication.Link, global::LightSwitchApplication.Link.DetailsClass, global::LightSwitchApplication.Node>.Data _Source;
-            
-            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-            private global::Microsoft.LightSwitch.Details.Framework.EntityReferenceProperty<global::LightSwitchApplication.Link, global::LightSwitchApplication.Link.DetailsClass, global::LightSwitchApplication.Node>.Data _Destination;
             
         }
     

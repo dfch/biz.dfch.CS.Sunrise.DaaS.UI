@@ -692,50 +692,6 @@
         $Screen.call(this, dataWorkspace, "NodeView", parameters);
     }
 
-    function OrderAdd(parameters, dataWorkspace) {
-        /// <summary>
-        /// Represents the OrderAdd screen.
-        /// </summary>
-        /// <param name="parameters" type="Array">
-        /// An array of screen parameter values.
-        /// </param>
-        /// <param name="dataWorkspace" type="msls.application.DataWorkspace" optional="true">
-        /// An existing data workspace for this screen to use. By default, a new data workspace is created.
-        /// </param>
-        /// <field name="Order" type="msls.application.Order">
-        /// Gets or sets the order for this screen.
-        /// </field>
-        /// <field name="details" type="msls.application.OrderAdd.Details">
-        /// Gets the details for this screen.
-        /// </field>
-        if (!dataWorkspace) {
-            dataWorkspace = new lightSwitchApplication.DataWorkspace();
-        }
-        $Screen.call(this, dataWorkspace, "OrderAdd", parameters);
-    }
-
-    function OrderAddSpecial(parameters, dataWorkspace) {
-        /// <summary>
-        /// Represents the OrderAddSpecial screen.
-        /// </summary>
-        /// <param name="parameters" type="Array">
-        /// An array of screen parameter values.
-        /// </param>
-        /// <param name="dataWorkspace" type="msls.application.DataWorkspace" optional="true">
-        /// An existing data workspace for this screen to use. By default, a new data workspace is created.
-        /// </param>
-        /// <field name="Order" type="msls.application.Order">
-        /// Gets or sets the order for this screen.
-        /// </field>
-        /// <field name="details" type="msls.application.OrderAddSpecial.Details">
-        /// Gets the details for this screen.
-        /// </field>
-        if (!dataWorkspace) {
-            dataWorkspace = new lightSwitchApplication.DataWorkspace();
-        }
-        $Screen.call(this, dataWorkspace, "OrderAddSpecial", parameters);
-    }
-
     function OrderItemsList(parameters, dataWorkspace) {
         /// <summary>
         /// Represents the OrderItemsList screen.
@@ -1121,16 +1077,6 @@
                     return this;
                 }
             }
-        ], [
-        ]),
-
-        OrderAdd: $defineScreen(OrderAdd, [
-            { name: "Order", kind: "local", type: lightSwitchApplication.Order }
-        ], [
-        ]),
-
-        OrderAddSpecial: $defineScreen(OrderAddSpecial, [
-            { name: "Order", kind: "local", type: lightSwitchApplication.Order }
         ], [
         ]),
 
@@ -1542,30 +1488,6 @@
             /// <returns type="WinJS.Promise" />
             var parameters = Array.prototype.slice.call(arguments, 0, 1);
             return lightSwitchApplication.showScreen("NodeView", parameters, options);
-        }),
-
-        showOrderAdd: $defineShowScreen(function showOrderAdd(Order, options) {
-            /// <summary>
-            /// Asynchronously navigates forward to the OrderAdd screen.
-            /// </summary>
-            /// <param name="options" optional="true">
-            /// An object that provides one or more of the following options:<br/>- beforeShown: a function that is called after boundary behavior has been applied but before the screen is shown.<br/>+ Signature: beforeShown(screen)<br/>- afterClosed: a function that is called after boundary behavior has been applied and the screen has been closed.<br/>+ Signature: afterClosed(screen, action : msls.NavigateBackAction)
-            /// </param>
-            /// <returns type="WinJS.Promise" />
-            var parameters = Array.prototype.slice.call(arguments, 0, 1);
-            return lightSwitchApplication.showScreen("OrderAdd", parameters, options);
-        }),
-
-        showOrderAddSpecial: $defineShowScreen(function showOrderAddSpecial(Order, options) {
-            /// <summary>
-            /// Asynchronously navigates forward to the OrderAddSpecial screen.
-            /// </summary>
-            /// <param name="options" optional="true">
-            /// An object that provides one or more of the following options:<br/>- beforeShown: a function that is called after boundary behavior has been applied but before the screen is shown.<br/>+ Signature: beforeShown(screen)<br/>- afterClosed: a function that is called after boundary behavior has been applied and the screen has been closed.<br/>+ Signature: afterClosed(screen, action : msls.NavigateBackAction)
-            /// </param>
-            /// <returns type="WinJS.Promise" />
-            var parameters = Array.prototype.slice.call(arguments, 0, 1);
-            return lightSwitchApplication.showScreen("OrderAddSpecial", parameters, options);
         }),
 
         showOrderItemsList: $defineShowScreen(function showOrderItemsList(options) {

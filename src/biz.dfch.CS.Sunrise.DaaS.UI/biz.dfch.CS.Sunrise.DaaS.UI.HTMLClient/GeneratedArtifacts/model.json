@@ -349,7 +349,7 @@
         },
         {
           "__isEntityType": 1,
-          ":@SummaryProperty": { "property": { "__id": "CatalogueItem1/Properties[Collection]" } },
+          ":@SummaryProperty": { "property": { "__id": "CatalogueItem1/Properties[Version]" } },
           "id": "CatalogueItem1",
           "name": "CatalogueItem1",
           ":@NotSearchable": { },
@@ -378,11 +378,6 @@
           ],
           "properties":
           [
-            {
-              "id": "CatalogueItem1/Properties[Collection]",
-              "name": "Collection",
-              "propertyType": { "__id": ":String?" }
-            },
             {
               "id": "CatalogueItem1/Properties[Version]",
               "name": "Version",
@@ -491,16 +486,6 @@
               "name": "RowVersion",
               "propertyType": { "__id": ":Binary?" },
               ":@NotSearchable": { }
-            },
-            {
-              "id": "CatalogueItem1/Properties[Catalogue]",
-              "name": "Catalogue",
-              "association": { "__id": "biz_dfch_CS_Appclusive_Core_OdataServices_Core_CatalogueItem_Cat" },
-              "elementType": { "__id": "Catalogue" },
-              "fromEnd": { "__id": "biz_dfch_CS_Appclusive_Core_OdataServices_Core_CatalogueItem_Cat/Ends[CataloguePartner]" },
-              "propertyType": { "__id": "Catalogue" },
-              "toEnd": { "__id": "biz_dfch_CS_Appclusive_Core_OdataServices_Core_CatalogueItem_Cat/Ends[Catalogue]" },
-              ":@Hidden": { }
             }
           ]
         },
@@ -1574,24 +1559,6 @@
               ]
             },
             {
-              "id": "CoreData/Members[biz_dfch_CS_Appclusive_Core_OdataServices_Core_Ace_Acl_biz_dfch_]",
-              "name": "biz_dfch_CS_Appclusive_Core_OdataServices_Core_Ace_Acl_biz_dfch_",
-              "association": { "__id": "biz_dfch_CS_Appclusive_Core_OdataServices_Core_Ace_Acl_biz_dfch_" },
-              "ends":
-              [
-                {
-                  "id": "CoreData/Members[biz_dfch_CS_Appclusive_Core_OdataServices_Core_Ace_Acl_biz_dfch_]/Members[AclPartner]",
-                  "name": "AclPartner",
-                  "entitySet": { "__id": "CoreData/Members[Aces]" }
-                },
-                {
-                  "id": "CoreData/Members[biz_dfch_CS_Appclusive_Core_OdataServices_Core_Ace_Acl_biz_dfch_]/Members[Acl]",
-                  "name": "Acl",
-                  "entitySet": { "__id": "CoreData/Members[Acls]" }
-                }
-              ]
-            },
-            {
               "id": "CoreData/Members[biz_dfch_CS_Appclusive_Core_OdataServices_Core_Node_Children_biz]",
               "name": "biz_dfch_CS_Appclusive_Core_OdataServices_Core_Node_Children_biz",
               "association": { "__id": "biz_dfch_CS_Appclusive_Core_OdataServices_Core_Node_Children_biz" },
@@ -1646,42 +1613,6 @@
               ]
             },
             {
-              "id": "CoreData/Members[biz_dfch_CS_Appclusive_Core_OdataServices_Core_Link_Source_biz_d]",
-              "name": "biz_dfch_CS_Appclusive_Core_OdataServices_Core_Link_Source_biz_d",
-              "association": { "__id": "biz_dfch_CS_Appclusive_Core_OdataServices_Core_Link_Source_biz_d" },
-              "ends":
-              [
-                {
-                  "id": "CoreData/Members[biz_dfch_CS_Appclusive_Core_OdataServices_Core_Link_Source_biz_d]/Members[SourcePartner]",
-                  "name": "SourcePartner",
-                  "entitySet": { "__id": "CoreData/Members[Links]" }
-                },
-                {
-                  "id": "CoreData/Members[biz_dfch_CS_Appclusive_Core_OdataServices_Core_Link_Source_biz_d]/Members[Source]",
-                  "name": "Source",
-                  "entitySet": { "__id": "CoreData/Members[Nodes]" }
-                }
-              ]
-            },
-            {
-              "id": "CoreData/Members[biz_dfch_CS_Appclusive_Core_OdataServices_Core_Link_Destination_]",
-              "name": "biz_dfch_CS_Appclusive_Core_OdataServices_Core_Link_Destination_",
-              "association": { "__id": "biz_dfch_CS_Appclusive_Core_OdataServices_Core_Link_Destination_" },
-              "ends":
-              [
-                {
-                  "id": "CoreData/Members[biz_dfch_CS_Appclusive_Core_OdataServices_Core_Link_Destination_]/Members[DestinationPartner]",
-                  "name": "DestinationPartner",
-                  "entitySet": { "__id": "CoreData/Members[Links]" }
-                },
-                {
-                  "id": "CoreData/Members[biz_dfch_CS_Appclusive_Core_OdataServices_Core_Link_Destination_]/Members[Destination]",
-                  "name": "Destination",
-                  "entitySet": { "__id": "CoreData/Members[Nodes]" }
-                }
-              ]
-            },
-            {
               "id": "CoreData/Members[biz_dfch_CS_Appclusive_Core_OdataServices_Core_Catalogue_Catalog]",
               "name": "biz_dfch_CS_Appclusive_Core_OdataServices_Core_Catalogue_Catalog",
               "association": { "__id": "biz_dfch_CS_Appclusive_Core_OdataServices_Core_Catalogue_Catalog" },
@@ -1696,24 +1627,6 @@
                   "id": "CoreData/Members[biz_dfch_CS_Appclusive_Core_OdataServices_Core_Catalogue_Catalog]/Members[CatalogueItems]",
                   "name": "CatalogueItems",
                   "entitySet": { "__id": "CoreData/Members[CatalogueItems]" }
-                }
-              ]
-            },
-            {
-              "id": "CoreData/Members[biz_dfch_CS_Appclusive_Core_OdataServices_Core_CatalogueItem_Cat]",
-              "name": "biz_dfch_CS_Appclusive_Core_OdataServices_Core_CatalogueItem_Cat",
-              "association": { "__id": "biz_dfch_CS_Appclusive_Core_OdataServices_Core_CatalogueItem_Cat" },
-              "ends":
-              [
-                {
-                  "id": "CoreData/Members[biz_dfch_CS_Appclusive_Core_OdataServices_Core_CatalogueItem_Cat]/Members[CataloguePartner]",
-                  "name": "CataloguePartner",
-                  "entitySet": { "__id": "CoreData/Members[CatalogueItems]" }
-                },
-                {
-                  "id": "CoreData/Members[biz_dfch_CS_Appclusive_Core_OdataServices_Core_CatalogueItem_Cat]/Members[Catalogue]",
-                  "name": "Catalogue",
-                  "entitySet": { "__id": "CoreData/Members[Catalogues]" }
                 }
               ]
             },
@@ -2687,16 +2600,6 @@
               "name": "RowVersion",
               "propertyType": { "__id": ":Binary?" },
               ":@NotSearchable": { }
-            },
-            {
-              "id": "Ace/Properties[Acl]",
-              "name": "Acl",
-              "association": { "__id": "biz_dfch_CS_Appclusive_Core_OdataServices_Core_Ace_Acl_biz_dfch_" },
-              "elementType": { "__id": "Acl" },
-              "fromEnd": { "__id": "biz_dfch_CS_Appclusive_Core_OdataServices_Core_Ace_Acl_biz_dfch_/Ends[AclPartner]" },
-              "propertyType": { "__id": "Acl" },
-              "toEnd": { "__id": "biz_dfch_CS_Appclusive_Core_OdataServices_Core_Ace_Acl_biz_dfch_/Ends[Acl]" },
-              ":@Hidden": { }
             }
           ]
         },
@@ -3251,26 +3154,6 @@
               "name": "RowVersion",
               "propertyType": { "__id": ":Binary?" },
               ":@NotSearchable": { }
-            },
-            {
-              "id": "Link/Properties[Source]",
-              "name": "Source",
-              "association": { "__id": "biz_dfch_CS_Appclusive_Core_OdataServices_Core_Link_Source_biz_d" },
-              "elementType": { "__id": "Node" },
-              "fromEnd": { "__id": "biz_dfch_CS_Appclusive_Core_OdataServices_Core_Link_Source_biz_d/Ends[SourcePartner]" },
-              "propertyType": { "__id": "Node" },
-              "toEnd": { "__id": "biz_dfch_CS_Appclusive_Core_OdataServices_Core_Link_Source_biz_d/Ends[Source]" },
-              ":@Hidden": { }
-            },
-            {
-              "id": "Link/Properties[Destination]",
-              "name": "Destination",
-              "association": { "__id": "biz_dfch_CS_Appclusive_Core_OdataServices_Core_Link_Destination_" },
-              "elementType": { "__id": "Node" },
-              "fromEnd": { "__id": "biz_dfch_CS_Appclusive_Core_OdataServices_Core_Link_Destination_/Ends[DestinationPartner]" },
-              "propertyType": { "__id": "Node" },
-              "toEnd": { "__id": "biz_dfch_CS_Appclusive_Core_OdataServices_Core_Link_Destination_/Ends[Destination]" },
-              ":@Hidden": { }
             }
           ]
         },
@@ -3393,26 +3276,6 @@
           ]
         },
         {
-          "id": "biz_dfch_CS_Appclusive_Core_OdataServices_Core_Ace_Acl_biz_dfch_",
-          "name": "biz_dfch_CS_Appclusive_Core_OdataServices_Core_Ace_Acl_biz_dfch_",
-          "ends":
-          [
-            {
-              "id": "biz_dfch_CS_Appclusive_Core_OdataServices_Core_Ace_Acl_biz_dfch_/Ends[AclPartner]",
-              "name": "AclPartner",
-              "multiplicity": "ZeroOrOne",
-              "entityType": { "__id": "Ace" }
-            },
-            {
-              "id": "biz_dfch_CS_Appclusive_Core_OdataServices_Core_Ace_Acl_biz_dfch_/Ends[Acl]",
-              "name": "Acl",
-              "multiplicity": "One",
-              "entityType": { "__id": "Acl" },
-              ":@DeleteRule": { "action": "Unset" }
-            }
-          ]
-        },
-        {
           "id": "biz_dfch_CS_Appclusive_Core_OdataServices_Core_Node_Children_biz",
           "name": "biz_dfch_CS_Appclusive_Core_OdataServices_Core_Node_Children_biz",
           "ends":
@@ -3473,46 +3336,6 @@
           ]
         },
         {
-          "id": "biz_dfch_CS_Appclusive_Core_OdataServices_Core_Link_Source_biz_d",
-          "name": "biz_dfch_CS_Appclusive_Core_OdataServices_Core_Link_Source_biz_d",
-          "ends":
-          [
-            {
-              "id": "biz_dfch_CS_Appclusive_Core_OdataServices_Core_Link_Source_biz_d/Ends[SourcePartner]",
-              "name": "SourcePartner",
-              "multiplicity": "ZeroOrOne",
-              "entityType": { "__id": "Link" }
-            },
-            {
-              "id": "biz_dfch_CS_Appclusive_Core_OdataServices_Core_Link_Source_biz_d/Ends[Source]",
-              "name": "Source",
-              "multiplicity": "One",
-              "entityType": { "__id": "Node" },
-              ":@DeleteRule": { "action": "Unset" }
-            }
-          ]
-        },
-        {
-          "id": "biz_dfch_CS_Appclusive_Core_OdataServices_Core_Link_Destination_",
-          "name": "biz_dfch_CS_Appclusive_Core_OdataServices_Core_Link_Destination_",
-          "ends":
-          [
-            {
-              "id": "biz_dfch_CS_Appclusive_Core_OdataServices_Core_Link_Destination_/Ends[DestinationPartner]",
-              "name": "DestinationPartner",
-              "multiplicity": "ZeroOrOne",
-              "entityType": { "__id": "Link" }
-            },
-            {
-              "id": "biz_dfch_CS_Appclusive_Core_OdataServices_Core_Link_Destination_/Ends[Destination]",
-              "name": "Destination",
-              "multiplicity": "One",
-              "entityType": { "__id": "Node" },
-              ":@DeleteRule": { "action": "Unset" }
-            }
-          ]
-        },
-        {
           "id": "biz_dfch_CS_Appclusive_Core_OdataServices_Core_ManagementCredent",
           "name": "biz_dfch_CS_Appclusive_Core_OdataServices_Core_ManagementCredent",
           "ends":
@@ -3549,26 +3372,6 @@
               "name": "CatalogueItems",
               "multiplicity": "Many",
               "entityType": { "__id": "CatalogueItem1" }
-            }
-          ]
-        },
-        {
-          "id": "biz_dfch_CS_Appclusive_Core_OdataServices_Core_CatalogueItem_Cat",
-          "name": "biz_dfch_CS_Appclusive_Core_OdataServices_Core_CatalogueItem_Cat",
-          "ends":
-          [
-            {
-              "id": "biz_dfch_CS_Appclusive_Core_OdataServices_Core_CatalogueItem_Cat/Ends[CataloguePartner]",
-              "name": "CataloguePartner",
-              "multiplicity": "ZeroOrOne",
-              "entityType": { "__id": "CatalogueItem1" }
-            },
-            {
-              "id": "biz_dfch_CS_Appclusive_Core_OdataServices_Core_CatalogueItem_Cat/Ends[Catalogue]",
-              "name": "Catalogue",
-              "multiplicity": "One",
-              "entityType": { "__id": "Catalogue" },
-              ":@DeleteRule": { "action": "Unset" }
             }
           ]
         },
@@ -6336,16 +6139,6 @@
                                 }
                               },
                               {
-                                "displayName": "Collection",
-                                "name": "Collection",
-                                "kind": "Value",
-                                "view": { "__id": ":Text" },
-                                "dataSource":
-                                {
-                                  "member": { "__id": "CatalogueItem1/Properties[Collection]" }
-                                }
-                              },
-                              {
                                 "displayName": "Version",
                                 "name": "Version",
                                 "kind": "Value",
@@ -6593,24 +6386,6 @@
                             },
                             {
                               "member": { "__id": "CatalogueItem1/Properties[Type]" }
-                            }
-                          ]
-                        }
-                      },
-                      {
-                        "displayName": "Collection",
-                        "name": "Collection",
-                        "kind": "Value",
-                        "view": { "__id": ":Text" },
-                        "dataSource":
-                        {
-                          "links":
-                          [
-                            {
-                              "member": { "__id": "CatalogueItemView/Properties[CatalogueItem1]" }
-                            },
-                            {
-                              "member": { "__id": "CatalogueItem1/Properties[Collection]" }
                             }
                           ]
                         }
@@ -12414,607 +12189,6 @@
           ]
         },
         {
-          "displayName": "Order Add",
-          "id": "OrderAdd",
-          "name": "OrderAdd",
-          "launchMode": "Single",
-          ":@SaveChangesTo":
-          {
-            "property": { "__id": "DataWorkspace/Members[CoreData]" }
-          },
-          "rootContentItem":
-          {
-            "displayName": "Root Content Item",
-            "name": "RootContentItem",
-            "kind": "Screen",
-            "view": { "__id": ":Screen" },
-            "childContentItems":
-            [
-              {
-                "displayName": "Tabs",
-                "name": "Tabs",
-                "kind": "Group",
-                "view": { "__id": ":TabPages" },
-                "childContentItems":
-                [
-                  {
-                    "displayName": "Details",
-                    "name": "Details",
-                    "kind": "Tab",
-                    "view": { "__id": ":RowsLayout" },
-                    "childContentItems":
-                    [
-                      {
-                        "displayName": "Name",
-                        "name": "Name",
-                        "kind": "Value",
-                        "view": { "__id": ":TextBox" },
-                        "dataSource":
-                        {
-                          "links":
-                          [
-                            {
-                              "member": { "__id": "OrderAdd/Properties[Order]" }
-                            },
-                            {
-                              "member": { "__id": "Order/Properties[Name]" }
-                            }
-                          ]
-                        }
-                      },
-                      {
-                        "displayName": "Description",
-                        "name": "Description",
-                        "kind": "Value",
-                        "view": { "__id": ":TextArea" },
-                        "dataSource":
-                        {
-                          "links":
-                          [
-                            {
-                              "member": { "__id": "OrderAdd/Properties[Order]" }
-                            },
-                            {
-                              "member": { "__id": "Order/Properties[Description]" }
-                            }
-                          ]
-                        }
-                      },
-                      {
-                        "displayName": "Parameters",
-                        "name": "Parameters1",
-                        "kind": "Value",
-                        "view": { "__id": ":TextArea" },
-                        "dataSource":
-                        {
-                          "links":
-                          [
-                            {
-                              "member": { "__id": "OrderAdd/Properties[Order]" }
-                            },
-                            {
-                              "member": { "__id": "Order/Properties[Parameters]" }
-                            }
-                          ]
-                        }
-                      }
-                    ]
-                  },
-                  {
-                    "displayName": "General",
-                    "name": "General",
-                    "kind": "Tab",
-                    "view": { "__id": ":RowsLayout" },
-                    "childContentItems":
-                    [
-                      {
-                        "displayName": "Tid",
-                        "name": "Tid",
-                        "kind": "Value",
-                        "view": { "__id": ":TextBox" },
-                        "dataSource":
-                        {
-                          "links":
-                          [
-                            {
-                              "member": { "__id": "OrderAdd/Properties[Order]" }
-                            },
-                            {
-                              "member": { "__id": "Order/Properties[Tid]" }
-                            }
-                          ]
-                        }
-                      },
-                      {
-                        "displayName": "Id",
-                        "name": "Id",
-                        "kind": "Value",
-                        "view": { "__id": ":TextBox" },
-                        "dataSource":
-                        {
-                          "links":
-                          [
-                            {
-                              "member": { "__id": "OrderAdd/Properties[Order]" }
-                            },
-                            {
-                              "member": { "__id": "Order/Properties[Id]" }
-                            }
-                          ]
-                        }
-                      },
-                      {
-                        "displayName": "Created By",
-                        "name": "CreatedBy",
-                        "kind": "Value",
-                        "view": { "__id": ":TextBox" },
-                        "dataSource":
-                        {
-                          "links":
-                          [
-                            {
-                              "member": { "__id": "OrderAdd/Properties[Order]" }
-                            },
-                            {
-                              "member": { "__id": "Order/Properties[CreatedBy]" }
-                            }
-                          ]
-                        }
-                      },
-                      {
-                        "displayName": "Created",
-                        "name": "Created",
-                        "kind": "Value",
-                        "view": { "__id": ":DateTimePicker" },
-                        "dataSource":
-                        {
-                          "links":
-                          [
-                            {
-                              "member": { "__id": "OrderAdd/Properties[Order]" }
-                            },
-                            {
-                              "member": { "__id": "Order/Properties[Created]" }
-                            }
-                          ]
-                        }
-                      },
-                      {
-                        "displayName": "Modified By",
-                        "name": "ModifiedBy",
-                        "kind": "Value",
-                        "view": { "__id": ":TextBox" },
-                        "dataSource":
-                        {
-                          "links":
-                          [
-                            {
-                              "member": { "__id": "OrderAdd/Properties[Order]" }
-                            },
-                            {
-                              "member": { "__id": "Order/Properties[ModifiedBy]" }
-                            }
-                          ]
-                        }
-                      },
-                      {
-                        "displayName": "Modified",
-                        "name": "Modified",
-                        "kind": "Value",
-                        "view": { "__id": ":DateTimePicker" },
-                        "dataSource":
-                        {
-                          "links":
-                          [
-                            {
-                              "member": { "__id": "OrderAdd/Properties[Order]" }
-                            },
-                            {
-                              "member": { "__id": "Order/Properties[Modified]" }
-                            }
-                          ]
-                        }
-                      },
-                      {
-                        "displayName": "Status",
-                        "name": "Status",
-                        "kind": "Value",
-                        "view": { "__id": ":TextBox" },
-                        "dataSource":
-                        {
-                          "links":
-                          [
-                            {
-                              "member": { "__id": "OrderAdd/Properties[Order]" }
-                            },
-                            {
-                              "member": { "__id": "Order/Properties[Status]" }
-                            }
-                          ]
-                        }
-                      }
-                    ]
-                  }
-                ]
-              },
-              {
-                "displayName": "Popups",
-                "name": "Popups",
-                "kind": "Group",
-                "view": { "__id": ":DialogPages" }
-              }
-            ],
-            "propertySources":
-            [
-              {
-                "property": { "__id": ":Screen/Properties[ScreenType]" },
-                "value": "Edit"
-              },
-              {
-                "property": { "__id": ":Screen/Properties[ShowAsDialog]" },
-                "value": true
-              }
-            ]
-          },
-          "methods":
-          [
-            {
-              "id": "OrderAdd/Methods[showTab]",
-              "name": "showTab",
-              "parameters":
-              [
-                {
-                  "id": "OrderAdd/Methods[showTab]/Parameters[tabName]",
-                  "name": "tabName",
-                  "parameterType": { "__id": ":String" }
-                }
-              ]
-            },
-            {
-              "id": "OrderAdd/Methods[showDialog]",
-              "name": "showDialog",
-              "parameters":
-              [
-                {
-                  "id": "OrderAdd/Methods[showDialog]/Parameters[dialogName]",
-                  "name": "dialogName",
-                  "parameterType": { "__id": ":String" }
-                }
-              ]
-            }
-          ],
-          "properties":
-          [
-            {
-              "id": "OrderAdd/Properties[Order]",
-              "name": "Order",
-              "elementType": { "__id": "Order" },
-              "propertyType": { "__id": "Order" },
-              ":@IsParameter": { }
-            }
-          ]
-        },
-        {
-          "displayName": "Order Add Special",
-          "id": "OrderAddSpecial",
-          "name": "OrderAddSpecial",
-          "launchMode": "Single",
-          ":@SaveChangesTo":
-          {
-            "property": { "__id": "DataWorkspace/Members[CoreData]" }
-          },
-          "rootContentItem":
-          {
-            "displayName": "Root Content Item",
-            "name": "RootContentItem",
-            "kind": "Screen",
-            "view": { "__id": ":Screen" },
-            "childContentItems":
-            [
-              {
-                "displayName": "Tabs",
-                "name": "Tabs",
-                "kind": "Group",
-                "view": { "__id": ":TabPages" },
-                "childContentItems":
-                [
-                  {
-                    "displayName": "Details",
-                    "name": "Details",
-                    "kind": "Tab",
-                    "view": { "__id": ":RowsLayout" },
-                    "childContentItems":
-                    [
-                      {
-                        "displayName": "columns",
-                        "name": "columns",
-                        "kind": "Details",
-                        "view": { "__id": ":ColumnsLayout" },
-                        "dataSource":
-                        {
-                          "member": { "__id": "OrderAddSpecial/Properties[Order]" }
-                        },
-                        "childContentItems":
-                        [
-                          {
-                            "displayName": "left",
-                            "name": "left",
-                            "kind": "Group",
-                            "view": { "__id": ":RowsLayout" },
-                            "childContentItems":
-                            [
-                              {
-                                "displayName": "Status",
-                                "name": "Status",
-                                "kind": "Value",
-                                "view": { "__id": ":TextBox" },
-                                "dataSource":
-                                {
-                                  "member": { "__id": "Order/Properties[Status]" }
-                                }
-                              },
-                              {
-                                "displayName": "Parameters",
-                                "name": "Parameters",
-                                "kind": "Value",
-                                "view": { "__id": ":TextBox" },
-                                "dataSource":
-                                {
-                                  "member": { "__id": "Order/Properties[Parameters]" }
-                                }
-                              },
-                              {
-                                "displayName": "Name",
-                                "name": "Name",
-                                "kind": "Value",
-                                "view": { "__id": ":TextBox" },
-                                "dataSource":
-                                {
-                                  "member": { "__id": "Order/Properties[Name]" }
-                                }
-                              }
-                            ],
-                            "propertySources":
-                            [
-                              {
-                                "property": { "__id": ":RootControl/Properties[MinWidth]" },
-                                "value": 200
-                              },
-                              {
-                                "property": { "__id": ":RootControl/Properties[MaxWidth]" },
-                                "value": 400
-                              }
-                            ]
-                          },
-                          {
-                            "displayName": "right",
-                            "name": "right",
-                            "kind": "Group",
-                            "view": { "__id": ":RowsLayout" },
-                            "childContentItems":
-                            [
-                              {
-                                "displayName": "Description",
-                                "name": "Description",
-                                "kind": "Value",
-                                "view": { "__id": ":TextBox" },
-                                "dataSource":
-                                {
-                                  "member": { "__id": "Order/Properties[Description]" }
-                                }
-                              }
-                            ],
-                            "propertySources":
-                            [
-                              {
-                                "property": { "__id": ":RootControl/Properties[MinWidth]" },
-                                "value": 200
-                              },
-                              {
-                                "property": { "__id": ":RootControl/Properties[MaxWidth]" },
-                                "value": 400
-                              }
-                            ]
-                          }
-                        ]
-                      }
-                    ]
-                  },
-                  {
-                    "displayName": "General",
-                    "name": "General",
-                    "kind": "Tab",
-                    "view": { "__id": ":RowsLayout" },
-                    "childContentItems":
-                    [
-                      {
-                        "displayName": "Tid",
-                        "name": "Tid",
-                        "kind": "Value",
-                        "view": { "__id": ":Text" },
-                        "dataSource":
-                        {
-                          "links":
-                          [
-                            {
-                              "member": { "__id": "OrderAddSpecial/Properties[Order]" }
-                            },
-                            {
-                              "member": { "__id": "Order/Properties[Tid]" }
-                            }
-                          ]
-                        }
-                      },
-                      {
-                        "displayName": "Id",
-                        "name": "Id",
-                        "kind": "Value",
-                        "view": { "__id": ":Text" },
-                        "dataSource":
-                        {
-                          "links":
-                          [
-                            {
-                              "member": { "__id": "OrderAddSpecial/Properties[Order]" }
-                            },
-                            {
-                              "member": { "__id": "Order/Properties[Id]" }
-                            }
-                          ]
-                        }
-                      },
-                      {
-                        "displayName": "Created By",
-                        "name": "CreatedBy",
-                        "kind": "Value",
-                        "view": { "__id": ":Text" },
-                        "dataSource":
-                        {
-                          "links":
-                          [
-                            {
-                              "member": { "__id": "OrderAddSpecial/Properties[Order]" }
-                            },
-                            {
-                              "member": { "__id": "Order/Properties[CreatedBy]" }
-                            }
-                          ]
-                        }
-                      },
-                      {
-                        "displayName": "Created",
-                        "name": "Created",
-                        "kind": "Value",
-                        "view": { "__id": ":Text" },
-                        "dataSource":
-                        {
-                          "links":
-                          [
-                            {
-                              "member": { "__id": "OrderAddSpecial/Properties[Order]" }
-                            },
-                            {
-                              "member": { "__id": "Order/Properties[Created]" }
-                            }
-                          ]
-                        }
-                      },
-                      {
-                        "displayName": "Modified By",
-                        "name": "ModifiedBy",
-                        "kind": "Value",
-                        "view": { "__id": ":Text" },
-                        "dataSource":
-                        {
-                          "links":
-                          [
-                            {
-                              "member": { "__id": "OrderAddSpecial/Properties[Order]" }
-                            },
-                            {
-                              "member": { "__id": "Order/Properties[ModifiedBy]" }
-                            }
-                          ]
-                        }
-                      },
-                      {
-                        "displayName": "Modified",
-                        "name": "Modified",
-                        "kind": "Value",
-                        "view": { "__id": ":Text" },
-                        "dataSource":
-                        {
-                          "links":
-                          [
-                            {
-                              "member": { "__id": "OrderAddSpecial/Properties[Order]" }
-                            },
-                            {
-                              "member": { "__id": "Order/Properties[Modified]" }
-                            }
-                          ]
-                        }
-                      },
-                      {
-                        "displayName": "Status",
-                        "name": "Order_Status",
-                        "kind": "Value",
-                        "view": { "__id": ":Text" },
-                        "dataSource":
-                        {
-                          "links":
-                          [
-                            {
-                              "member": { "__id": "OrderAddSpecial/Properties[Order]" }
-                            },
-                            {
-                              "member": { "__id": "Order/Properties[Status]" }
-                            }
-                          ]
-                        }
-                      }
-                    ]
-                  }
-                ]
-              },
-              {
-                "displayName": "Popups",
-                "name": "Popups",
-                "kind": "Group",
-                "view": { "__id": ":DialogPages" }
-              }
-            ],
-            "propertySources":
-            [
-              {
-                "property": { "__id": ":Screen/Properties[ScreenType]" },
-                "value": "Edit"
-              },
-              {
-                "property": { "__id": ":Screen/Properties[ShowAsDialog]" },
-                "value": true
-              }
-            ]
-          },
-          "methods":
-          [
-            {
-              "id": "OrderAddSpecial/Methods[showTab]",
-              "name": "showTab",
-              "parameters":
-              [
-                {
-                  "id": "OrderAddSpecial/Methods[showTab]/Parameters[tabName]",
-                  "name": "tabName",
-                  "parameterType": { "__id": ":String" }
-                }
-              ]
-            },
-            {
-              "id": "OrderAddSpecial/Methods[showDialog]",
-              "name": "showDialog",
-              "parameters":
-              [
-                {
-                  "id": "OrderAddSpecial/Methods[showDialog]/Parameters[dialogName]",
-                  "name": "dialogName",
-                  "parameterType": { "__id": ":String" }
-                }
-              ]
-            }
-          ],
-          "properties":
-          [
-            {
-              "id": "OrderAddSpecial/Properties[Order]",
-              "name": "Order",
-              "elementType": { "__id": "Order" },
-              "propertyType": { "__id": "Order" },
-              ":@IsParameter": { }
-            }
-          ]
-        },
-        {
           "displayName": "Order Items List",
           "id": "OrderItemsList",
           "name": "OrderItemsList",
@@ -13908,56 +13082,6 @@
                             "value": "msls-document"
                           }
                         ]
-                      },
-                      {
-                        "displayName": "Add Order",
-                        "name": "AddOrder",
-                        "kind": "Command",
-                        "view": { "__id": ":CommandBarButton" },
-                        "propertySources":
-                        [
-                          {
-                            "property": { "__id": ":RootControl/Properties[Tap]" },
-                            "source":
-                            {
-                              "target": { "__id": "!module/Methods[showOrderAdd]" },
-                              ":@AssociatedCollection": { "collection": { "__id": "OrdersList/Properties[Orders]" } },
-                              ":@CreateNewEntity":
-                              {
-                                "targetParameter": { "__id": "!module/Methods[showOrderAdd]/Parameters[Order]" }
-                              }
-                            }
-                          },
-                          {
-                            "property": { "__id": ":RootCommand/Properties[Icon]" },
-                            "value": "msls-add"
-                          }
-                        ]
-                      },
-                      {
-                        "displayName": "Order (Admin only)",
-                        "name": "OrderAdmin",
-                        "kind": "Command",
-                        "view": { "__id": ":CommandBarButton" },
-                        "propertySources":
-                        [
-                          {
-                            "property": { "__id": ":RootControl/Properties[Tap]" },
-                            "source":
-                            {
-                              "target": { "__id": "!module/Methods[showOrderAddSpecial]" },
-                              ":@AssociatedCollection": { "collection": { "__id": "OrdersList/Properties[Orders]" } },
-                              ":@CreateNewEntity":
-                              {
-                                "targetParameter": { "__id": "!module/Methods[showOrderAddSpecial]/Parameters[Order]" }
-                              }
-                            }
-                          },
-                          {
-                            "property": { "__id": ":RootCommand/Properties[Icon]" },
-                            "value": "msls-warning"
-                          }
-                        ]
                       }
                     ]
                   }
@@ -14191,31 +13315,10 @@
                                 }
                               ]
                             }
-                          }
-                        ]
-                      },
-                      {
-                        "displayName": "New Order",
-                        "name": "NewOrder",
-                        "kind": "Command",
-                        "view": { "__id": ":CommandBarButton" },
-                        "propertySources":
-                        [
-                          {
-                            "property": { "__id": ":RootControl/Properties[Tap]" },
-                            "source":
-                            {
-                              "target": { "__id": "!module/Methods[showOrderAdd]" },
-                              ":@CreateNewEntity":
-                              {
-                                "entityType": { "__id": "Order" },
-                                "targetParameter": { "__id": "!module/Methods[showOrderAdd]/Parameters[Order]" }
-                              }
-                            }
                           },
                           {
                             "property": { "__id": ":RootCommand/Properties[Icon]" },
-                            "value": "msls-add"
+                            "value": "msls-document"
                           }
                         ]
                       },
@@ -16274,32 +15377,6 @@
               "id": "!module/Methods[showNodeView]/Parameters[Node]",
               "name": "Node",
               "parameterType": { "__id": "Node" }
-            }
-          ]
-        },
-        {
-          "id": "!module/Methods[showOrderAdd]",
-          "name": "showOrderAdd",
-          ":@ShowScreenMethod": { "targetScreen": { "__id": "OrderAdd" } },
-          "parameters":
-          [
-            {
-              "id": "!module/Methods[showOrderAdd]/Parameters[Order]",
-              "name": "Order",
-              "parameterType": { "__id": "Order" }
-            }
-          ]
-        },
-        {
-          "id": "!module/Methods[showOrderAddSpecial]",
-          "name": "showOrderAddSpecial",
-          ":@ShowScreenMethod": { "targetScreen": { "__id": "OrderAddSpecial" } },
-          "parameters":
-          [
-            {
-              "id": "!module/Methods[showOrderAddSpecial]/Parameters[Order]",
-              "name": "Order",
-              "parameterType": { "__id": "Order" }
             }
           ]
         },

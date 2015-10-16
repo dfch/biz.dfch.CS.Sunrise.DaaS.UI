@@ -104,24 +104,6 @@
           <NotSearchable />
         </EntityProperty.Attributes>
       </EntityProperty>
-      <NavigationProperty
-        Name="Source"
-        Association="biz_dfch_CS_Appclusive_Core_OdataServices_Core_Link_Source_biz_d"
-        FromEnd="SourcePartner"
-        ToEnd="Source">
-        <NavigationProperty.Attributes>
-          <Hidden />
-        </NavigationProperty.Attributes>
-      </NavigationProperty>
-      <NavigationProperty
-        Name="Destination"
-        Association="biz_dfch_CS_Appclusive_Core_OdataServices_Core_Link_Destination_"
-        FromEnd="DestinationPartner"
-        ToEnd="Destination">
-        <NavigationProperty.Attributes>
-          <Hidden />
-        </NavigationProperty.Attributes>
-      </NavigationProperty>
     </EntityType.Properties>
   </EntityType>
   <EntityContainer
@@ -265,12 +247,6 @@
         <CsdlProperty
           Name="RowVersion"
           Property="Link/Properties[RowVersion]" />
-        <CsdlProperty
-          Name="Source"
-          Property="Link/Properties[Source]" />
-        <CsdlProperty
-          Name="Destination"
-          Property="Link/Properties[Destination]" />
       </EntitySetMapping.Attributes>
     </EntitySetMapping>
   </DataService>

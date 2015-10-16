@@ -154,9 +154,6 @@
     <Content Include="Screens\KeyNameValueView.lsml.js">
       <DependentUpon>KeyNameValueView.lsml</DependentUpon>
     </Content>
-    <Content Include="Screens\OrderAdd.lsml.js">
-      <DependentUpon>OrderAdd.lsml</DependentUpon>
-    </Content>
     <Content Include="Screens\OrderItemView.lsml.js">
       <DependentUpon>OrderItemView.lsml</DependentUpon>
     </Content>
@@ -245,8 +242,6 @@
     <LightSwitchModel Include="Screens\KeyNameValueView.lsml" />
     <LightSwitchModel Include="Screens\NodesList.lsml" />
     <LightSwitchModel Include="Screens\NodeView.lsml" />
-    <LightSwitchModel Include="Screens\OrderAdd.lsml" />
-    <LightSwitchModel Include="Screens\OrderAddSpecial.lsml" />
     <LightSwitchModel Include="Screens\OrderItemsList.lsml" />
     <LightSwitchModel Include="Screens\OrderItemView.lsml" />
     <LightSwitchModel Include="Screens\OrdersList.lsml" />

@@ -111,20 +111,6 @@
       Multiplicity="Many"
       EntityType="CatalogueItem1" />
   </Association>
-  <Association
-    Name="biz_dfch_CS_Appclusive_Core_OdataServices_Core_CatalogueItem_Cat">
-    <AssociationEnd
-      Name="CataloguePartner"
-      EntityType="CatalogueItem1" />
-    <AssociationEnd
-      Name="Catalogue"
-      Multiplicity="One"
-      EntityType="Catalogue">
-      <AssociationEnd.Attributes>
-        <DeleteRule />
-      </AssociationEnd.Attributes>
-    </AssociationEnd>
-  </Association>
   <EntityContainer
     Name="CoreData">
     <EntityContainer.Attributes>
@@ -145,16 +131,6 @@
       <AssociationSetEnd
         Name="CatalogueItems"
         EntitySet="CatalogueItems" />
-    </AssociationSet>
-    <AssociationSet
-      Name="biz_dfch_CS_Appclusive_Core_OdataServices_Core_CatalogueItem_Cat"
-      Association="biz_dfch_CS_Appclusive_Core_OdataServices_Core_CatalogueItem_Cat">
-      <AssociationSetEnd
-        Name="CataloguePartner"
-        EntitySet="CatalogueItems" />
-      <AssociationSetEnd
-        Name="Catalogue"
-        EntitySet="Catalogues" />
     </AssociationSet>
     <QueryOperation
       Name="Catalogues_Single"
@@ -298,18 +274,6 @@
           End="CoreData/Members[biz_dfch_CS_Appclusive_Core_OdataServices_Core_Catalogue_Catalog]/Members[CatalogueItemsPartner]" />
         <CsdlAssociationSetEnd
           End="CoreData/Members[biz_dfch_CS_Appclusive_Core_OdataServices_Core_Catalogue_Catalog]/Members[CatalogueItems]" />
-      </AssociationSetMapping.Attributes>
-    </AssociationSetMapping>
-    <AssociationSetMapping
-      AssociationSet="biz_dfch_CS_Appclusive_Core_OdataServices_Core_CatalogueItem_Cat">
-      <AssociationSetMapping.Attributes>
-        <CsdlAssociation
-          Name="biz_dfch_CS_Appclusive_Core_OdataServices_Core_CatalogueItem_Catalogue_biz_dfch_CS_Appclusive_Core_OdataServices_Core_Catalogue_CataloguePartnerSet"
-          Association="biz_dfch_CS_Appclusive_Core_OdataServices_Core_CatalogueItem_Cat" />
-        <CsdlAssociationSetEnd
-          End="CoreData/Members[biz_dfch_CS_Appclusive_Core_OdataServices_Core_CatalogueItem_Cat]/Members[Catalogue]" />
-        <CsdlAssociationSetEnd
-          End="CoreData/Members[biz_dfch_CS_Appclusive_Core_OdataServices_Core_CatalogueItem_Cat]/Members[CataloguePartner]" />
       </AssociationSetMapping.Attributes>
     </AssociationSetMapping>
   </DataService>

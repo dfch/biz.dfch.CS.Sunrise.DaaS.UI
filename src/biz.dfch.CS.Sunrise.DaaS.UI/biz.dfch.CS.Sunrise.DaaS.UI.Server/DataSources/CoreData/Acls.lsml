@@ -101,20 +101,6 @@
       Multiplicity="Many"
       EntityType="Ace" />
   </Association>
-  <Association
-    Name="biz_dfch_CS_Appclusive_Core_OdataServices_Core_Ace_Acl_biz_dfch_">
-    <AssociationEnd
-      Name="AclPartner"
-      EntityType="Ace" />
-    <AssociationEnd
-      Name="Acl"
-      Multiplicity="One"
-      EntityType="Acl">
-      <AssociationEnd.Attributes>
-        <DeleteRule />
-      </AssociationEnd.Attributes>
-    </AssociationEnd>
-  </Association>
   <EntityContainer
     Name="CoreData">
     <EntityContainer.Attributes>
@@ -135,16 +121,6 @@
       <AssociationSetEnd
         Name="Aces"
         EntitySet="Aces" />
-    </AssociationSet>
-    <AssociationSet
-      Name="biz_dfch_CS_Appclusive_Core_OdataServices_Core_Ace_Acl_biz_dfch_"
-      Association="biz_dfch_CS_Appclusive_Core_OdataServices_Core_Ace_Acl_biz_dfch_">
-      <AssociationSetEnd
-        Name="AclPartner"
-        EntitySet="Aces" />
-      <AssociationSetEnd
-        Name="Acl"
-        EntitySet="Acls" />
     </AssociationSet>
     <QueryOperation
       Name="Acls_Single"
@@ -282,18 +258,6 @@
           End="CoreData/Members[biz_dfch_CS_Appclusive_Core_OdataServices_Core_Acl_Aces_biz_dfch]/Members[AcesPartner]" />
         <CsdlAssociationSetEnd
           End="CoreData/Members[biz_dfch_CS_Appclusive_Core_OdataServices_Core_Acl_Aces_biz_dfch]/Members[Aces]" />
-      </AssociationSetMapping.Attributes>
-    </AssociationSetMapping>
-    <AssociationSetMapping
-      AssociationSet="biz_dfch_CS_Appclusive_Core_OdataServices_Core_Ace_Acl_biz_dfch_">
-      <AssociationSetMapping.Attributes>
-        <CsdlAssociation
-          Name="biz_dfch_CS_Appclusive_Core_OdataServices_Core_Ace_Acl_biz_dfch_CS_Appclusive_Core_OdataServices_Core_Acl_AclPartnerSet"
-          Association="biz_dfch_CS_Appclusive_Core_OdataServices_Core_Ace_Acl_biz_dfch_" />
-        <CsdlAssociationSetEnd
-          End="CoreData/Members[biz_dfch_CS_Appclusive_Core_OdataServices_Core_Ace_Acl_biz_dfch_]/Members[Acl]" />
-        <CsdlAssociationSetEnd
-          End="CoreData/Members[biz_dfch_CS_Appclusive_Core_OdataServices_Core_Ace_Acl_biz_dfch_]/Members[AclPartner]" />
       </AssociationSetMapping.Attributes>
     </AssociationSetMapping>
   </DataService>
