@@ -5561,16 +5561,6 @@
                             "childContentItems":
                             [
                               {
-                                "displayName": "Description",
-                                "name": "Description",
-                                "kind": "Value",
-                                "view": { "__id": ":Text" },
-                                "dataSource":
-                                {
-                                  "member": { "__id": "Cart/Properties[Description]" }
-                                }
-                              },
-                              {
                                 "displayName": "Name",
                                 "name": "Name1",
                                 "kind": "Value",
@@ -5578,6 +5568,16 @@
                                 "dataSource":
                                 {
                                   "member": { "__id": "Cart/Properties[Name]" }
+                                }
+                              },
+                              {
+                                "displayName": "Description",
+                                "name": "Description",
+                                "kind": "Value",
+                                "view": { "__id": ":Text" },
+                                "dataSource":
+                                {
+                                  "member": { "__id": "Cart/Properties[Description]" }
                                 }
                               },
                               {

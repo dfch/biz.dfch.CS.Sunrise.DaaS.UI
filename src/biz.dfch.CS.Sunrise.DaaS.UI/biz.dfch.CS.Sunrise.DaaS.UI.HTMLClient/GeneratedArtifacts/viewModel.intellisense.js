@@ -1061,17 +1061,17 @@
             data: lightSwitchApplication.Cart,
             value: lightSwitchApplication.Cart
         },
-        Description: {
+        Name1: {
             _$class: msls.ContentItem,
-            _$name: "Description",
+            _$name: "Name1",
             _$parentName: "rows",
             screen: lightSwitchApplication.CartsList,
             data: lightSwitchApplication.Cart,
             value: String
         },
-        Name1: {
+        Description: {
             _$class: msls.ContentItem,
-            _$name: "Name1",
+            _$name: "Description",
             _$parentName: "rows",
             screen: lightSwitchApplication.CartsList,
             data: lightSwitchApplication.Cart,
@@ -1120,15 +1120,15 @@
         /// </field>
         rows_postRender: [$element, function () { return new lightSwitchApplication.CartsList().findContentItem("rows"); }],
         /// <field>
-        /// Called after the Description content item has been rendered.
-        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
-        /// </field>
-        Description_postRender: [$element, function () { return new lightSwitchApplication.CartsList().findContentItem("Description"); }],
-        /// <field>
         /// Called after the Name1 content item has been rendered.
         /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
         /// </field>
         Name1_postRender: [$element, function () { return new lightSwitchApplication.CartsList().findContentItem("Name1"); }],
+        /// <field>
+        /// Called after the Description content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        Description_postRender: [$element, function () { return new lightSwitchApplication.CartsList().findContentItem("Description"); }],
         /// <field>
         /// Called after the Created content item has been rendered.
         /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
