@@ -79,7 +79,7 @@
                 Kind="Command">
                 <ContentItem.Attributes>
                   <Description
-                    Value="View a list of your orders" />
+                    Value="Shows all your orders" />
                 </ContentItem.Attributes>
                 <ContentItem.PropertySources>
                   <ControlPropertySource
@@ -143,7 +143,7 @@
                 Kind="Command">
                 <ContentItem.Attributes>
                   <Description
-                    Value="Browse carts" />
+                    Value="Shwos your carts" />
                 </ContentItem.Attributes>
                 <ContentItem.PropertySources>
                   <ControlPropertySource
@@ -224,7 +224,7 @@
                 Kind="Command">
                 <ContentItem.Attributes>
                   <Description
-                    Value="View a list of jobs" />
+                    Value="Browse jobs" />
                 </ContentItem.Attributes>
                 <ContentItem.PropertySources>
                   <ControlPropertySource
@@ -245,7 +245,7 @@
                   <DisplayName
                     Value="Gates" />
                   <Description
-                    Value="Show all currently existing gates" />
+                    Value="Shows all currently existing gates" />
                 </ContentItem.Attributes>
                 <ContentItem.PropertySources>
                   <ControlPropertySource
@@ -254,6 +254,27 @@
                       <ChainExpression>
                         <CallExpression
                           Target="!module/Methods[showGatesList]" />
+                      </ChainExpression>
+                    </ScreenExpressionTree>
+                  </ControlPropertySource>
+                </ContentItem.PropertySources>
+              </ContentItem>
+              <ContentItem
+                Name="EntityTypes"
+                Kind="Command">
+                <ContentItem.Attributes>
+                  <DisplayName
+                    Value="Entity Types" />
+                  <Description
+                    Value="Manage entity types" />
+                </ContentItem.Attributes>
+                <ContentItem.PropertySources>
+                  <ControlPropertySource
+                    Property="Microsoft.LightSwitch.MobileWeb:RootControl/Properties[Tap]">
+                    <ScreenExpressionTree>
+                      <ChainExpression>
+                        <CallExpression
+                          Target="!module/Methods[showEntityTypesList]" />
                       </ChainExpression>
                     </ScreenExpressionTree>
                   </ControlPropertySource>

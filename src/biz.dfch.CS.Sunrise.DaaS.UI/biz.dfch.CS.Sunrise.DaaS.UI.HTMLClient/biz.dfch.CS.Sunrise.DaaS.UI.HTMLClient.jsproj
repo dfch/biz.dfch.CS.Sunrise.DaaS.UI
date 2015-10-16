@@ -133,6 +133,9 @@
     <Content Include="Screens\EndpointView.lsml.js">
       <DependentUpon>EndpointView.lsml</DependentUpon>
     </Content>
+    <Content Include="Screens\EntityTypeView.lsml.js">
+      <DependentUpon>EntityTypeView.lsml</DependentUpon>
+    </Content>
     <Content Include="Screens\GateAdd.lsml.js">
       <DependentUpon>GateAdd.lsml</DependentUpon>
     </Content>
@@ -201,6 +204,7 @@
     <LightSwitchModel Include="Properties\CoreData\Carts.lsml" />
     <LightSwitchModel Include="Properties\CoreData\CatalogueItems.lsml" />
     <LightSwitchModel Include="Properties\CoreData\Catalogues.lsml" />
+    <LightSwitchModel Include="Properties\CoreData\EntityTypes.lsml" />
     <LightSwitchModel Include="Properties\CoreData\Gates.lsml" />
     <LightSwitchModel Include="Properties\CoreData\Jobs.lsml" />
     <LightSwitchModel Include="Properties\CoreData\KeyNameValues.lsml" />
@@ -229,6 +233,9 @@
     <LightSwitchModel Include="Screens\CatalogueView.lsml" />
     <LightSwitchModel Include="Screens\EndpointsList.lsml" />
     <LightSwitchModel Include="Screens\EndpointView.lsml" />
+    <LightSwitchModel Include="Screens\EntityTypeEdit.lsml" />
+    <LightSwitchModel Include="Screens\EntityTypesList.lsml" />
+    <LightSwitchModel Include="Screens\EntityTypeView.lsml" />
     <LightSwitchModel Include="Screens\GateAdd.lsml" />
     <LightSwitchModel Include="Screens\GateEdit.lsml" />
     <LightSwitchModel Include="Screens\GatesList.lsml" />

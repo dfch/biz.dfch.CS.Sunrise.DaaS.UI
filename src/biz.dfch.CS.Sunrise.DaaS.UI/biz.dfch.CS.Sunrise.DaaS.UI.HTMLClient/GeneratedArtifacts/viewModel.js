@@ -400,6 +400,72 @@
         $Screen.call(this, dataWorkspace, "EndpointView", parameters);
     }
 
+    function EntityTypeEdit(parameters, dataWorkspace) {
+        /// <summary>
+        /// Represents the EntityTypeEdit screen.
+        /// </summary>
+        /// <param name="parameters" type="Array">
+        /// An array of screen parameter values.
+        /// </param>
+        /// <param name="dataWorkspace" type="msls.application.DataWorkspace" optional="true">
+        /// An existing data workspace for this screen to use. By default, a new data workspace is created.
+        /// </param>
+        /// <field name="EntityType" type="msls.application.EntityType">
+        /// Gets or sets the entityType for this screen.
+        /// </field>
+        /// <field name="details" type="msls.application.EntityTypeEdit.Details">
+        /// Gets the details for this screen.
+        /// </field>
+        if (!dataWorkspace) {
+            dataWorkspace = new lightSwitchApplication.DataWorkspace();
+        }
+        $Screen.call(this, dataWorkspace, "EntityTypeEdit", parameters);
+    }
+
+    function EntityTypesList(parameters, dataWorkspace) {
+        /// <summary>
+        /// Represents the EntityTypesList screen.
+        /// </summary>
+        /// <param name="parameters" type="Array">
+        /// An array of screen parameter values.
+        /// </param>
+        /// <param name="dataWorkspace" type="msls.application.DataWorkspace" optional="true">
+        /// An existing data workspace for this screen to use. By default, a new data workspace is created.
+        /// </param>
+        /// <field name="EntityTypes" type="msls.VisualCollection" elementType="msls.application.EntityType">
+        /// Gets the entityTypes for this screen.
+        /// </field>
+        /// <field name="details" type="msls.application.EntityTypesList.Details">
+        /// Gets the details for this screen.
+        /// </field>
+        if (!dataWorkspace) {
+            dataWorkspace = new lightSwitchApplication.DataWorkspace();
+        }
+        $Screen.call(this, dataWorkspace, "EntityTypesList", parameters);
+    }
+
+    function EntityTypeView(parameters, dataWorkspace) {
+        /// <summary>
+        /// Represents the EntityTypeView screen.
+        /// </summary>
+        /// <param name="parameters" type="Array">
+        /// An array of screen parameter values.
+        /// </param>
+        /// <param name="dataWorkspace" type="msls.application.DataWorkspace" optional="true">
+        /// An existing data workspace for this screen to use. By default, a new data workspace is created.
+        /// </param>
+        /// <field name="EntityType" type="msls.application.EntityType">
+        /// Gets or sets the entityType for this screen.
+        /// </field>
+        /// <field name="details" type="msls.application.EntityTypeView.Details">
+        /// Gets the details for this screen.
+        /// </field>
+        if (!dataWorkspace) {
+            dataWorkspace = new lightSwitchApplication.DataWorkspace();
+        }
+        $Screen.call(this, dataWorkspace, "EntityTypeView", parameters);
+    }
+
     function GateAdd(parameters, dataWorkspace) {
         /// <summary>
         /// Represents the GateAdd screen.
@@ -957,6 +1023,27 @@
             { name: "deleteEntity" }
         ]),
 
+        EntityTypeEdit: $defineScreen(EntityTypeEdit, [
+            { name: "EntityType", kind: "local", type: lightSwitchApplication.EntityType }
+        ], [
+        ]),
+
+        EntityTypesList: $defineScreen(EntityTypesList, [
+            {
+                name: "EntityTypes", kind: "collection", elementType: lightSwitchApplication.EntityType,
+                createQuery: function () {
+                    return this.dataWorkspace.CoreData.EntityTypes;
+                }
+            }
+        ], [
+        ]),
+
+        EntityTypeView: $defineScreen(EntityTypeView, [
+            { name: "EntityType", kind: "local", type: lightSwitchApplication.EntityType }
+        ], [
+            { name: "deleteEntity" }
+        ]),
+
         GateAdd: $defineScreen(GateAdd, [
             { name: "Gate", kind: "local", type: lightSwitchApplication.Gate }
         ], [
@@ -1332,6 +1419,42 @@
             /// <returns type="WinJS.Promise" />
             var parameters = Array.prototype.slice.call(arguments, 0, 1);
             return lightSwitchApplication.showScreen("EndpointView", parameters, options);
+        }),
+
+        showEntityTypeEdit: $defineShowScreen(function showEntityTypeEdit(EntityType, options) {
+            /// <summary>
+            /// Asynchronously navigates forward to the EntityTypeEdit screen.
+            /// </summary>
+            /// <param name="options" optional="true">
+            /// An object that provides one or more of the following options:<br/>- beforeShown: a function that is called after boundary behavior has been applied but before the screen is shown.<br/>+ Signature: beforeShown(screen)<br/>- afterClosed: a function that is called after boundary behavior has been applied and the screen has been closed.<br/>+ Signature: afterClosed(screen, action : msls.NavigateBackAction)
+            /// </param>
+            /// <returns type="WinJS.Promise" />
+            var parameters = Array.prototype.slice.call(arguments, 0, 1);
+            return lightSwitchApplication.showScreen("EntityTypeEdit", parameters, options);
+        }),
+
+        showEntityTypesList: $defineShowScreen(function showEntityTypesList(options) {
+            /// <summary>
+            /// Asynchronously navigates forward to the EntityTypesList screen.
+            /// </summary>
+            /// <param name="options" optional="true">
+            /// An object that provides one or more of the following options:<br/>- beforeShown: a function that is called after boundary behavior has been applied but before the screen is shown.<br/>+ Signature: beforeShown(screen)<br/>- afterClosed: a function that is called after boundary behavior has been applied and the screen has been closed.<br/>+ Signature: afterClosed(screen, action : msls.NavigateBackAction)
+            /// </param>
+            /// <returns type="WinJS.Promise" />
+            var parameters = Array.prototype.slice.call(arguments, 0, 0);
+            return lightSwitchApplication.showScreen("EntityTypesList", parameters, options);
+        }),
+
+        showEntityTypeView: $defineShowScreen(function showEntityTypeView(EntityType, options) {
+            /// <summary>
+            /// Asynchronously navigates forward to the EntityTypeView screen.
+            /// </summary>
+            /// <param name="options" optional="true">
+            /// An object that provides one or more of the following options:<br/>- beforeShown: a function that is called after boundary behavior has been applied but before the screen is shown.<br/>+ Signature: beforeShown(screen)<br/>- afterClosed: a function that is called after boundary behavior has been applied and the screen has been closed.<br/>+ Signature: afterClosed(screen, action : msls.NavigateBackAction)
+            /// </param>
+            /// <returns type="WinJS.Promise" />
+            var parameters = Array.prototype.slice.call(arguments, 0, 1);
+            return lightSwitchApplication.showScreen("EntityTypeView", parameters, options);
         }),
 
         showGateAdd: $defineShowScreen(function showGateAdd(Gate, options) {

@@ -17,12 +17,6 @@ myapp.Home.Approvals_postRender = function (element, contentItem) {
 myapp.Home.Jobs_postRender = function (element, contentItem) {
     $(element).spOverlay(contentItem, 'fa-fast-forward', { height: height, width: width });
 };
-myapp.Home.NewOrder_postRender = function (element, contentItem) {
-    $(element).spOverlay(contentItem, 'fa-cart-plus', { height: height, width: width });
-};
-myapp.Home.OrderItems_postRender = function (element, contentItem) {
-    $(element).spOverlay(contentItem, 'fa-database', { height: height, width: width });
-};
 myapp.Home.Gates_postRender = function (element, contentItem) {
     $(element).spOverlay(contentItem, 'fa-lock', { height: height, width: width });
 };
@@ -30,14 +24,17 @@ myapp.Home.Carts_postRender = function (element, contentItem) {
     $(element).spOverlay(contentItem, 'fa-shopping-cart', { height: height, width: width });
 };
 myapp.Home.Catalogues_postRender = function (element, contentItem) {
-    $(element).spOverlay(contentItem, 'fa-files-o', { height: height, width: width });
+    $(element).spOverlay(contentItem, 'fa-book', { height: height, width: width });
 };
 myapp.Home.Inventory_postRender = function (element, contentItem) {
-    $(element).spOverlay(contentItem, 'fa-folder', { height: height, width: width });
+    $(element).spOverlay(contentItem, 'fa-database', { height: height, width: width });
 };
 myapp.Home.AddPersonalVDI_postRender = function (element, contentItem) {
     $(element).spOverlay(contentItem, 'fa-desktop', { height: height, width: width });
 };
 myapp.Home.AddTechnicalVDI_postRender = function (element, contentItem) {
     $(element).spOverlay(contentItem, 'fa-group', { height: height, width: width });
+};
+myapp.Home.EntityTypes_postRender = function (element, contentItem) {
+    $(element).spOverlay(contentItem, 'fa-cubes', { height: height, width: width });
 };

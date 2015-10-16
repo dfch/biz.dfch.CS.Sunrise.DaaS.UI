@@ -2488,6 +2488,444 @@
         Modified_postRender: [$element, function () { return new lightSwitchApplication.EndpointView().findContentItem("Modified"); }]
     });
 
+    lightSwitchApplication.EntityTypeEdit.prototype._$contentItems = {
+        Tabs: {
+            _$class: msls.ContentItem,
+            _$name: "Tabs",
+            _$parentName: "RootContentItem",
+            screen: lightSwitchApplication.EntityTypeEdit
+        },
+        Details: {
+            _$class: msls.ContentItem,
+            _$name: "Details",
+            _$parentName: "Tabs",
+            screen: lightSwitchApplication.EntityTypeEdit,
+            data: lightSwitchApplication.EntityTypeEdit,
+            value: lightSwitchApplication.EntityTypeEdit
+        },
+        Name: {
+            _$class: msls.ContentItem,
+            _$name: "Name",
+            _$parentName: "Details",
+            screen: lightSwitchApplication.EntityTypeEdit,
+            data: lightSwitchApplication.EntityTypeEdit,
+            value: String
+        },
+        Description: {
+            _$class: msls.ContentItem,
+            _$name: "Description",
+            _$parentName: "Details",
+            screen: lightSwitchApplication.EntityTypeEdit,
+            data: lightSwitchApplication.EntityTypeEdit,
+            value: String
+        },
+        Parameters: {
+            _$class: msls.ContentItem,
+            _$name: "Parameters",
+            _$parentName: "Details",
+            screen: lightSwitchApplication.EntityTypeEdit,
+            data: lightSwitchApplication.EntityTypeEdit,
+            value: String
+        },
+        General: {
+            _$class: msls.ContentItem,
+            _$name: "General",
+            _$parentName: "Tabs",
+            screen: lightSwitchApplication.EntityTypeEdit,
+            data: lightSwitchApplication.EntityTypeEdit,
+            value: lightSwitchApplication.EntityTypeEdit
+        },
+        Tid: {
+            _$class: msls.ContentItem,
+            _$name: "Tid",
+            _$parentName: "General",
+            screen: lightSwitchApplication.EntityTypeEdit,
+            data: lightSwitchApplication.EntityTypeEdit,
+            value: String
+        },
+        Id: {
+            _$class: msls.ContentItem,
+            _$name: "Id",
+            _$parentName: "General",
+            screen: lightSwitchApplication.EntityTypeEdit,
+            data: lightSwitchApplication.EntityTypeEdit,
+            value: String
+        },
+        Created: {
+            _$class: msls.ContentItem,
+            _$name: "Created",
+            _$parentName: "General",
+            screen: lightSwitchApplication.EntityTypeEdit,
+            data: lightSwitchApplication.EntityTypeEdit,
+            value: Date
+        },
+        CreatedBy: {
+            _$class: msls.ContentItem,
+            _$name: "CreatedBy",
+            _$parentName: "General",
+            screen: lightSwitchApplication.EntityTypeEdit,
+            data: lightSwitchApplication.EntityTypeEdit,
+            value: String
+        },
+        Modified: {
+            _$class: msls.ContentItem,
+            _$name: "Modified",
+            _$parentName: "General",
+            screen: lightSwitchApplication.EntityTypeEdit,
+            data: lightSwitchApplication.EntityTypeEdit,
+            value: Date
+        },
+        ModifiedBy: {
+            _$class: msls.ContentItem,
+            _$name: "ModifiedBy",
+            _$parentName: "General",
+            screen: lightSwitchApplication.EntityTypeEdit,
+            data: lightSwitchApplication.EntityTypeEdit,
+            value: String
+        },
+        Popups: {
+            _$class: msls.ContentItem,
+            _$name: "Popups",
+            _$parentName: "RootContentItem",
+            screen: lightSwitchApplication.EntityTypeEdit
+        }
+    };
+
+    msls._addEntryPoints(lightSwitchApplication.EntityTypeEdit, {
+        /// <field>
+        /// Called when a new EntityTypeEdit screen is created.
+        /// <br/>created(msls.application.EntityTypeEdit screen)
+        /// </field>
+        created: [lightSwitchApplication.EntityTypeEdit],
+        /// <field>
+        /// Called before changes on an active EntityTypeEdit screen are applied.
+        /// <br/>beforeApplyChanges(msls.application.EntityTypeEdit screen)
+        /// </field>
+        beforeApplyChanges: [lightSwitchApplication.EntityTypeEdit],
+        /// <field>
+        /// Called after the Details content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        Details_postRender: [$element, function () { return new lightSwitchApplication.EntityTypeEdit().findContentItem("Details"); }],
+        /// <field>
+        /// Called after the Name content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        Name_postRender: [$element, function () { return new lightSwitchApplication.EntityTypeEdit().findContentItem("Name"); }],
+        /// <field>
+        /// Called after the Description content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        Description_postRender: [$element, function () { return new lightSwitchApplication.EntityTypeEdit().findContentItem("Description"); }],
+        /// <field>
+        /// Called after the Parameters content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        Parameters_postRender: [$element, function () { return new lightSwitchApplication.EntityTypeEdit().findContentItem("Parameters"); }],
+        /// <field>
+        /// Called after the General content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        General_postRender: [$element, function () { return new lightSwitchApplication.EntityTypeEdit().findContentItem("General"); }],
+        /// <field>
+        /// Called after the Tid content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        Tid_postRender: [$element, function () { return new lightSwitchApplication.EntityTypeEdit().findContentItem("Tid"); }],
+        /// <field>
+        /// Called after the Id content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        Id_postRender: [$element, function () { return new lightSwitchApplication.EntityTypeEdit().findContentItem("Id"); }],
+        /// <field>
+        /// Called after the Created content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        Created_postRender: [$element, function () { return new lightSwitchApplication.EntityTypeEdit().findContentItem("Created"); }],
+        /// <field>
+        /// Called after the CreatedBy content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        CreatedBy_postRender: [$element, function () { return new lightSwitchApplication.EntityTypeEdit().findContentItem("CreatedBy"); }],
+        /// <field>
+        /// Called after the Modified content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        Modified_postRender: [$element, function () { return new lightSwitchApplication.EntityTypeEdit().findContentItem("Modified"); }],
+        /// <field>
+        /// Called after the ModifiedBy content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        ModifiedBy_postRender: [$element, function () { return new lightSwitchApplication.EntityTypeEdit().findContentItem("ModifiedBy"); }]
+    });
+
+    lightSwitchApplication.EntityTypesList.prototype._$contentItems = {
+        Tabs: {
+            _$class: msls.ContentItem,
+            _$name: "Tabs",
+            _$parentName: "RootContentItem",
+            screen: lightSwitchApplication.EntityTypesList
+        },
+        EntityTypeList: {
+            _$class: msls.ContentItem,
+            _$name: "EntityTypeList",
+            _$parentName: "Tabs",
+            screen: lightSwitchApplication.EntityTypesList,
+            data: lightSwitchApplication.EntityTypesList,
+            value: lightSwitchApplication.EntityTypesList
+        },
+        EntityTypes: {
+            _$class: msls.ContentItem,
+            _$name: "EntityTypes",
+            _$parentName: "EntityTypeList",
+            screen: lightSwitchApplication.EntityTypesList,
+            data: lightSwitchApplication.EntityTypesList,
+            value: {
+                _$class: msls.VisualCollection,
+                screen: lightSwitchApplication.EntityTypesList,
+                _$entry: {
+                    elementType: lightSwitchApplication.EntityType
+                }
+            }
+        },
+        rows: {
+            _$class: msls.ContentItem,
+            _$name: "rows",
+            _$parentName: "EntityTypes",
+            screen: lightSwitchApplication.EntityTypesList,
+            data: lightSwitchApplication.EntityType,
+            value: lightSwitchApplication.EntityType
+        },
+        Name: {
+            _$class: msls.ContentItem,
+            _$name: "Name",
+            _$parentName: "rows",
+            screen: lightSwitchApplication.EntityTypesList,
+            data: lightSwitchApplication.EntityType,
+            value: String
+        },
+        Popups: {
+            _$class: msls.ContentItem,
+            _$name: "Popups",
+            _$parentName: "RootContentItem",
+            screen: lightSwitchApplication.EntityTypesList
+        }
+    };
+
+    msls._addEntryPoints(lightSwitchApplication.EntityTypesList, {
+        /// <field>
+        /// Called when a new EntityTypesList screen is created.
+        /// <br/>created(msls.application.EntityTypesList screen)
+        /// </field>
+        created: [lightSwitchApplication.EntityTypesList],
+        /// <field>
+        /// Called before changes on an active EntityTypesList screen are applied.
+        /// <br/>beforeApplyChanges(msls.application.EntityTypesList screen)
+        /// </field>
+        beforeApplyChanges: [lightSwitchApplication.EntityTypesList],
+        /// <field>
+        /// Called after the EntityTypeList content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        EntityTypeList_postRender: [$element, function () { return new lightSwitchApplication.EntityTypesList().findContentItem("EntityTypeList"); }],
+        /// <field>
+        /// Called after the EntityTypes content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        EntityTypes_postRender: [$element, function () { return new lightSwitchApplication.EntityTypesList().findContentItem("EntityTypes"); }],
+        /// <field>
+        /// Called after the rows content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        rows_postRender: [$element, function () { return new lightSwitchApplication.EntityTypesList().findContentItem("rows"); }],
+        /// <field>
+        /// Called after the Name content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        Name_postRender: [$element, function () { return new lightSwitchApplication.EntityTypesList().findContentItem("Name"); }]
+    });
+
+    lightSwitchApplication.EntityTypeView.prototype._$contentItems = {
+        Tabs: {
+            _$class: msls.ContentItem,
+            _$name: "Tabs",
+            _$parentName: "RootContentItem",
+            screen: lightSwitchApplication.EntityTypeView
+        },
+        Details: {
+            _$class: msls.ContentItem,
+            _$name: "Details",
+            _$parentName: "Tabs",
+            screen: lightSwitchApplication.EntityTypeView,
+            data: lightSwitchApplication.EntityTypeView,
+            value: lightSwitchApplication.EntityTypeView
+        },
+        Name: {
+            _$class: msls.ContentItem,
+            _$name: "Name",
+            _$parentName: "Details",
+            screen: lightSwitchApplication.EntityTypeView,
+            data: lightSwitchApplication.EntityTypeView,
+            value: String
+        },
+        Parameters: {
+            _$class: msls.ContentItem,
+            _$name: "Parameters",
+            _$parentName: "Details",
+            screen: lightSwitchApplication.EntityTypeView,
+            data: lightSwitchApplication.EntityTypeView,
+            value: String
+        },
+        Description: {
+            _$class: msls.ContentItem,
+            _$name: "Description",
+            _$parentName: "Details",
+            screen: lightSwitchApplication.EntityTypeView,
+            data: lightSwitchApplication.EntityTypeView,
+            value: String
+        },
+        General: {
+            _$class: msls.ContentItem,
+            _$name: "General",
+            _$parentName: "Tabs",
+            screen: lightSwitchApplication.EntityTypeView,
+            data: lightSwitchApplication.EntityTypeView,
+            value: lightSwitchApplication.EntityTypeView
+        },
+        Tid: {
+            _$class: msls.ContentItem,
+            _$name: "Tid",
+            _$parentName: "General",
+            screen: lightSwitchApplication.EntityTypeView,
+            data: lightSwitchApplication.EntityTypeView,
+            value: String
+        },
+        Id: {
+            _$class: msls.ContentItem,
+            _$name: "Id",
+            _$parentName: "General",
+            screen: lightSwitchApplication.EntityTypeView,
+            data: lightSwitchApplication.EntityTypeView,
+            value: String
+        },
+        Created: {
+            _$class: msls.ContentItem,
+            _$name: "Created",
+            _$parentName: "General",
+            screen: lightSwitchApplication.EntityTypeView,
+            data: lightSwitchApplication.EntityTypeView,
+            value: Date
+        },
+        CreatedBy: {
+            _$class: msls.ContentItem,
+            _$name: "CreatedBy",
+            _$parentName: "General",
+            screen: lightSwitchApplication.EntityTypeView,
+            data: lightSwitchApplication.EntityTypeView,
+            value: String
+        },
+        Modified: {
+            _$class: msls.ContentItem,
+            _$name: "Modified",
+            _$parentName: "General",
+            screen: lightSwitchApplication.EntityTypeView,
+            data: lightSwitchApplication.EntityTypeView,
+            value: Date
+        },
+        ModifiedBy: {
+            _$class: msls.ContentItem,
+            _$name: "ModifiedBy",
+            _$parentName: "General",
+            screen: lightSwitchApplication.EntityTypeView,
+            data: lightSwitchApplication.EntityTypeView,
+            value: String
+        },
+        Popups: {
+            _$class: msls.ContentItem,
+            _$name: "Popups",
+            _$parentName: "RootContentItem",
+            screen: lightSwitchApplication.EntityTypeView
+        }
+    };
+
+    msls._addEntryPoints(lightSwitchApplication.EntityTypeView, {
+        /// <field>
+        /// Called when a new EntityTypeView screen is created.
+        /// <br/>created(msls.application.EntityTypeView screen)
+        /// </field>
+        created: [lightSwitchApplication.EntityTypeView],
+        /// <field>
+        /// Called before changes on an active EntityTypeView screen are applied.
+        /// <br/>beforeApplyChanges(msls.application.EntityTypeView screen)
+        /// </field>
+        beforeApplyChanges: [lightSwitchApplication.EntityTypeView],
+        /// <field>
+        /// Called to determine if the deleteEntity method can be executed.
+        /// <br/>canExecute(msls.application.EntityTypeView screen)
+        /// </field>
+        deleteEntity_canExecute: [lightSwitchApplication.EntityTypeView],
+        /// <field>
+        /// Called to execute the deleteEntity method.
+        /// <br/>execute(msls.application.EntityTypeView screen)
+        /// </field>
+        deleteEntity_execute: [lightSwitchApplication.EntityTypeView],
+        /// <field>
+        /// Called after the Details content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        Details_postRender: [$element, function () { return new lightSwitchApplication.EntityTypeView().findContentItem("Details"); }],
+        /// <field>
+        /// Called after the Name content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        Name_postRender: [$element, function () { return new lightSwitchApplication.EntityTypeView().findContentItem("Name"); }],
+        /// <field>
+        /// Called after the Parameters content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        Parameters_postRender: [$element, function () { return new lightSwitchApplication.EntityTypeView().findContentItem("Parameters"); }],
+        /// <field>
+        /// Called after the Description content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        Description_postRender: [$element, function () { return new lightSwitchApplication.EntityTypeView().findContentItem("Description"); }],
+        /// <field>
+        /// Called after the General content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        General_postRender: [$element, function () { return new lightSwitchApplication.EntityTypeView().findContentItem("General"); }],
+        /// <field>
+        /// Called after the Tid content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        Tid_postRender: [$element, function () { return new lightSwitchApplication.EntityTypeView().findContentItem("Tid"); }],
+        /// <field>
+        /// Called after the Id content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        Id_postRender: [$element, function () { return new lightSwitchApplication.EntityTypeView().findContentItem("Id"); }],
+        /// <field>
+        /// Called after the Created content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        Created_postRender: [$element, function () { return new lightSwitchApplication.EntityTypeView().findContentItem("Created"); }],
+        /// <field>
+        /// Called after the CreatedBy content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        CreatedBy_postRender: [$element, function () { return new lightSwitchApplication.EntityTypeView().findContentItem("CreatedBy"); }],
+        /// <field>
+        /// Called after the Modified content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        Modified_postRender: [$element, function () { return new lightSwitchApplication.EntityTypeView().findContentItem("Modified"); }],
+        /// <field>
+        /// Called after the ModifiedBy content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        ModifiedBy_postRender: [$element, function () { return new lightSwitchApplication.EntityTypeView().findContentItem("ModifiedBy"); }]
+    });
+
     lightSwitchApplication.GateAdd.prototype._$contentItems = {
         Tabs: {
             _$class: msls.ContentItem,
@@ -3111,6 +3549,12 @@
             _$parentName: "Group2",
             screen: lightSwitchApplication.Home
         },
+        EntityTypes: {
+            _$class: msls.ContentItem,
+            _$name: "EntityTypes",
+            _$parentName: "Group2",
+            screen: lightSwitchApplication.Home
+        },
         Popups: {
             _$class: msls.ContentItem,
             _$name: "Popups",
@@ -3204,7 +3648,12 @@
         /// Called after the Gates content item has been rendered.
         /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
         /// </field>
-        Gates_postRender: [$element, function () { return new lightSwitchApplication.Home().findContentItem("Gates"); }]
+        Gates_postRender: [$element, function () { return new lightSwitchApplication.Home().findContentItem("Gates"); }],
+        /// <field>
+        /// Called after the EntityTypes content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        EntityTypes_postRender: [$element, function () { return new lightSwitchApplication.Home().findContentItem("EntityTypes"); }]
     });
 
     lightSwitchApplication.JobsList.prototype._$contentItems = {

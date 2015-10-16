@@ -10,6 +10,7 @@ document.writeln("<script type=\"text/javascript\" src=\"Screens/CartView.lsml.j
 document.writeln("<script type=\"text/javascript\" src=\"Screens/CatalogueItemView.lsml.js\"></script>");
 document.writeln("<script type=\"text/javascript\" src=\"Screens/CatalogueView.lsml.js\"></script>");
 document.writeln("<script type=\"text/javascript\" src=\"Screens/EndpointView.lsml.js\"></script>");
+document.writeln("<script type=\"text/javascript\" src=\"Screens/EntityTypeView.lsml.js\"></script>");
 document.writeln("<script type=\"text/javascript\" src=\"Screens/GateAdd.lsml.js\"></script>");
 document.writeln("<script type=\"text/javascript\" src=\"Screens/GatesList.lsml.js\"></script>");
 document.writeln("<script type=\"text/javascript\" src=\"Screens/GateView.lsml.js\"></script>");

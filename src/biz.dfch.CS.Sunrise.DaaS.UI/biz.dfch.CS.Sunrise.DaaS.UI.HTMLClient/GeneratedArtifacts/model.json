@@ -601,6 +601,101 @@
         },
         {
           "__isEntityType": 1,
+          ":@SummaryProperty": { "property": { "__id": "EntityType/Properties[Parameters]" } },
+          "id": "EntityType",
+          "name": "EntityType",
+          ":@NotSearchable": { },
+          ":@DefaultScreen":
+          {
+            "value": { "__id": "EntityTypeView" },
+            ":@ScreenParameterMapping":
+            {
+              "screenParameter": { "__id": "EntityTypeView/Properties[EntityType]" }
+            }
+          },
+          "methods":
+          [
+            {
+              "id": "EntityType/Methods[deleteEntity]",
+              "name": "deleteEntity"
+            },
+            {
+              "id": "EntityType/Methods[edit]",
+              "name": "edit"
+            },
+            {
+              "id": "EntityType/Methods[view]",
+              "name": "view"
+            }
+          ],
+          "properties":
+          [
+            {
+              "id": "EntityType/Properties[Parameters]",
+              "name": "Parameters",
+              "propertyType": { "__id": ":String?" }
+            },
+            {
+              "__isKeyProperty": 1,
+              "id": "EntityType/Properties[Id]",
+              "name": "Id",
+              "propertyType": { "__id": ":Int64" },
+              ":@Required": { },
+              ":@NotSearchable": { }
+            },
+            {
+              "id": "EntityType/Properties[Tid]",
+              "name": "Tid",
+              "propertyType": { "__id": ":String" },
+              ":@Required": { }
+            },
+            {
+              "id": "EntityType/Properties[Name]",
+              "name": "Name",
+              "propertyType": { "__id": ":String" },
+              ":@Required": { }
+            },
+            {
+              "id": "EntityType/Properties[Description]",
+              "name": "Description",
+              "propertyType": { "__id": ":String?" }
+            },
+            {
+              "id": "EntityType/Properties[CreatedBy]",
+              "name": "CreatedBy",
+              "propertyType": { "__id": ":String" },
+              ":@Required": { }
+            },
+            {
+              "id": "EntityType/Properties[ModifiedBy]",
+              "name": "ModifiedBy",
+              "propertyType": { "__id": ":String" },
+              ":@Required": { }
+            },
+            {
+              "id": "EntityType/Properties[Created]",
+              "name": "Created",
+              "propertyType": { "__id": ":DateTimeOffset" },
+              ":@Required": { },
+              ":@NotSearchable": { }
+            },
+            {
+              "id": "EntityType/Properties[Modified]",
+              "name": "Modified",
+              "propertyType": { "__id": ":DateTimeOffset" },
+              ":@Required": { },
+              ":@NotSearchable": { }
+            },
+            {
+              "id": "EntityType/Properties[RowVersion]",
+              "name": "RowVersion",
+              "propertyType": { "__id": ":Binary?" },
+              ":@NotSearchable": { }
+            }
+          ]
+        },
+        {
+          "__isEntityType": 1,
           ":@SummaryProperty": { "property": { "__id": "Gate/Properties[Name]" } },
           "id": "Gate",
           "name": "Gate",
@@ -2964,93 +3059,6 @@
               "fromEnd": { "__id": "biz_dfch_CS_Appclusive_Core_OdataServices_Core_Acl_Aces_biz_dfch/Ends[AcesPartner]" },
               "propertyType": { "__id": "Ace*" },
               "toEnd": { "__id": "biz_dfch_CS_Appclusive_Core_OdataServices_Core_Acl_Aces_biz_dfch/Ends[Aces]" }
-            }
-          ]
-        },
-        {
-          "__isEntityType": 1,
-          ":@SummaryProperty": { "property": { "__id": "EntityType/Properties[Parameters]" } },
-          "id": "EntityType",
-          "name": "EntityType",
-          ":@NotSearchable": { },
-          "methods":
-          [
-            {
-              "id": "EntityType/Methods[deleteEntity]",
-              "name": "deleteEntity"
-            },
-            {
-              "id": "EntityType/Methods[edit]",
-              "name": "edit"
-            },
-            {
-              "id": "EntityType/Methods[view]",
-              "name": "view"
-            }
-          ],
-          "properties":
-          [
-            {
-              "id": "EntityType/Properties[Parameters]",
-              "name": "Parameters",
-              "propertyType": { "__id": ":String?" }
-            },
-            {
-              "__isKeyProperty": 1,
-              "id": "EntityType/Properties[Id]",
-              "name": "Id",
-              "propertyType": { "__id": ":Int64" },
-              ":@Required": { },
-              ":@NotSearchable": { }
-            },
-            {
-              "id": "EntityType/Properties[Tid]",
-              "name": "Tid",
-              "propertyType": { "__id": ":String" },
-              ":@Required": { }
-            },
-            {
-              "id": "EntityType/Properties[Name]",
-              "name": "Name",
-              "propertyType": { "__id": ":String" },
-              ":@Required": { }
-            },
-            {
-              "id": "EntityType/Properties[Description]",
-              "name": "Description",
-              "propertyType": { "__id": ":String?" }
-            },
-            {
-              "id": "EntityType/Properties[CreatedBy]",
-              "name": "CreatedBy",
-              "propertyType": { "__id": ":String" },
-              ":@Required": { }
-            },
-            {
-              "id": "EntityType/Properties[ModifiedBy]",
-              "name": "ModifiedBy",
-              "propertyType": { "__id": ":String" },
-              ":@Required": { }
-            },
-            {
-              "id": "EntityType/Properties[Created]",
-              "name": "Created",
-              "propertyType": { "__id": ":DateTimeOffset" },
-              ":@Required": { },
-              ":@NotSearchable": { }
-            },
-            {
-              "id": "EntityType/Properties[Modified]",
-              "name": "Modified",
-              "propertyType": { "__id": ":DateTimeOffset" },
-              ":@Required": { },
-              ":@NotSearchable": { }
-            },
-            {
-              "id": "EntityType/Properties[RowVersion]",
-              "name": "RowVersion",
-              "propertyType": { "__id": ":Binary?" },
-              ":@NotSearchable": { }
             }
           ]
         },
@@ -8089,6 +8097,862 @@
           ]
         },
         {
+          "displayName": "Entity Type Edit",
+          "id": "EntityTypeEdit",
+          "name": "EntityTypeEdit",
+          "launchMode": "Single",
+          ":@SaveChangesTo":
+          {
+            "property": { "__id": "DataWorkspace/Members[CoreData]" }
+          },
+          "rootContentItem":
+          {
+            "displayName": "Root Content Item",
+            "name": "RootContentItem",
+            "kind": "Screen",
+            "view": { "__id": ":Screen" },
+            "childContentItems":
+            [
+              {
+                "displayName": "Tabs",
+                "name": "Tabs",
+                "kind": "Group",
+                "view": { "__id": ":TabPages" },
+                "childContentItems":
+                [
+                  {
+                    "displayName": "Details",
+                    "name": "Details",
+                    "kind": "Tab",
+                    "view": { "__id": ":RowsLayout" },
+                    "childContentItems":
+                    [
+                      {
+                        "displayName": "Name",
+                        "name": "Name",
+                        "kind": "Value",
+                        "view": { "__id": ":TextBox" },
+                        "dataSource":
+                        {
+                          "links":
+                          [
+                            {
+                              "member": { "__id": "EntityTypeEdit/Properties[EntityType]" }
+                            },
+                            {
+                              "member": { "__id": "EntityType/Properties[Name]" }
+                            }
+                          ]
+                        }
+                      },
+                      {
+                        "displayName": "Description",
+                        "name": "Description",
+                        "kind": "Value",
+                        "view": { "__id": ":TextArea" },
+                        "dataSource":
+                        {
+                          "links":
+                          [
+                            {
+                              "member": { "__id": "EntityTypeEdit/Properties[EntityType]" }
+                            },
+                            {
+                              "member": { "__id": "EntityType/Properties[Description]" }
+                            }
+                          ]
+                        }
+                      },
+                      {
+                        "displayName": "Parameters",
+                        "name": "Parameters",
+                        "kind": "Value",
+                        "view": { "__id": ":TextArea" },
+                        "dataSource":
+                        {
+                          "links":
+                          [
+                            {
+                              "member": { "__id": "EntityTypeEdit/Properties[EntityType]" }
+                            },
+                            {
+                              "member": { "__id": "EntityType/Properties[Parameters]" }
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "displayName": "General",
+                    "name": "General",
+                    "kind": "Tab",
+                    "view": { "__id": ":RowsLayout" },
+                    "childContentItems":
+                    [
+                      {
+                        "displayName": "Tid",
+                        "name": "Tid",
+                        "kind": "Value",
+                        "view": { "__id": ":Text" },
+                        "dataSource":
+                        {
+                          "links":
+                          [
+                            {
+                              "member": { "__id": "EntityTypeEdit/Properties[EntityType]" }
+                            },
+                            {
+                              "member": { "__id": "EntityType/Properties[Tid]" }
+                            }
+                          ]
+                        }
+                      },
+                      {
+                        "displayName": "Id",
+                        "name": "Id",
+                        "kind": "Value",
+                        "view": { "__id": ":Text" },
+                        "dataSource":
+                        {
+                          "links":
+                          [
+                            {
+                              "member": { "__id": "EntityTypeEdit/Properties[EntityType]" }
+                            },
+                            {
+                              "member": { "__id": "EntityType/Properties[Id]" }
+                            }
+                          ]
+                        }
+                      },
+                      {
+                        "displayName": "Created",
+                        "name": "Created",
+                        "kind": "Value",
+                        "view": { "__id": ":Text" },
+                        "dataSource":
+                        {
+                          "links":
+                          [
+                            {
+                              "member": { "__id": "EntityTypeEdit/Properties[EntityType]" }
+                            },
+                            {
+                              "member": { "__id": "EntityType/Properties[Created]" }
+                            }
+                          ]
+                        }
+                      },
+                      {
+                        "displayName": "Created By",
+                        "name": "CreatedBy",
+                        "kind": "Value",
+                        "view": { "__id": ":Text" },
+                        "dataSource":
+                        {
+                          "links":
+                          [
+                            {
+                              "member": { "__id": "EntityTypeEdit/Properties[EntityType]" }
+                            },
+                            {
+                              "member": { "__id": "EntityType/Properties[CreatedBy]" }
+                            }
+                          ]
+                        }
+                      },
+                      {
+                        "displayName": "Modified",
+                        "name": "Modified",
+                        "kind": "Value",
+                        "view": { "__id": ":Text" },
+                        "dataSource":
+                        {
+                          "links":
+                          [
+                            {
+                              "member": { "__id": "EntityTypeEdit/Properties[EntityType]" }
+                            },
+                            {
+                              "member": { "__id": "EntityType/Properties[Modified]" }
+                            }
+                          ]
+                        }
+                      },
+                      {
+                        "displayName": "Modified By",
+                        "name": "ModifiedBy",
+                        "kind": "Value",
+                        "view": { "__id": ":Text" },
+                        "dataSource":
+                        {
+                          "links":
+                          [
+                            {
+                              "member": { "__id": "EntityTypeEdit/Properties[EntityType]" }
+                            },
+                            {
+                              "member": { "__id": "EntityType/Properties[ModifiedBy]" }
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "displayName": "Popups",
+                "name": "Popups",
+                "kind": "Group",
+                "view": { "__id": ":DialogPages" }
+              }
+            ],
+            "propertySources":
+            [
+              {
+                "property": { "__id": ":Screen/Properties[ScreenType]" },
+                "value": "Edit"
+              },
+              {
+                "property": { "__id": ":Screen/Properties[ShowAsDialog]" },
+                "value": true
+              }
+            ]
+          },
+          "methods":
+          [
+            {
+              "id": "EntityTypeEdit/Methods[showTab]",
+              "name": "showTab",
+              "parameters":
+              [
+                {
+                  "id": "EntityTypeEdit/Methods[showTab]/Parameters[tabName]",
+                  "name": "tabName",
+                  "parameterType": { "__id": ":String" }
+                }
+              ]
+            },
+            {
+              "id": "EntityTypeEdit/Methods[showDialog]",
+              "name": "showDialog",
+              "parameters":
+              [
+                {
+                  "id": "EntityTypeEdit/Methods[showDialog]/Parameters[dialogName]",
+                  "name": "dialogName",
+                  "parameterType": { "__id": ":String" }
+                }
+              ]
+            }
+          ],
+          "properties":
+          [
+            {
+              "id": "EntityTypeEdit/Properties[EntityType]",
+              "name": "EntityType",
+              "elementType": { "__id": "EntityType" },
+              "propertyType": { "__id": "EntityType" },
+              ":@IsParameter": { }
+            }
+          ]
+        },
+        {
+          "displayName": "Entity Types List",
+          "id": "EntityTypesList",
+          "name": "EntityTypesList",
+          "launchMode": "Single",
+          ":@SaveChangesTo":
+          {
+            "property": { "__id": "DataWorkspace/Members[CoreData]" }
+          },
+          "rootContentItem":
+          {
+            "displayName": "Root Content Item",
+            "name": "RootContentItem",
+            "kind": "Screen",
+            "view": { "__id": ":Screen" },
+            "childContentItems":
+            [
+              {
+                "displayName": "Tabs",
+                "name": "Tabs",
+                "kind": "Group",
+                "view": { "__id": ":TabPages" },
+                "childContentItems":
+                [
+                  {
+                    "displayName": "Entity Type List",
+                    "name": "EntityTypeList",
+                    "kind": "Tab",
+                    "view": { "__id": ":RowsLayout" },
+                    "childContentItems":
+                    [
+                      {
+                        "displayName": "EntityTypes",
+                        "name": "EntityTypes",
+                        "kind": "Collection",
+                        "view": { "__id": ":TileList" },
+                        "dataSource":
+                        {
+                          "member": { "__id": "EntityTypesList/Properties[EntityTypes]" }
+                        },
+                        "childContentItems":
+                        [
+                          {
+                            "displayName": "rows",
+                            "name": "rows",
+                            "kind": "Details",
+                            "view": { "__id": ":RowsLayout" },
+                            "dataSource":
+                            {
+                              "links":
+                              [
+                              ]
+                            },
+                            "childContentItems":
+                            [
+                              {
+                                "displayName": "Name",
+                                "name": "Name",
+                                "kind": "Value",
+                                "view": { "__id": ":Text" },
+                                "dataSource":
+                                {
+                                  "member": { "__id": "EntityType/Properties[Name]" }
+                                }
+                              }
+                            ],
+                            "propertySources":
+                            [
+                              {
+                                "property": { "__id": ":RootControl/Properties[WidthSizingMode]" },
+                                "value": "FitToContent"
+                              }
+                            ]
+                          }
+                        ],
+                        "propertySources":
+                        [
+                          {
+                            "property": { "__id": ":RootCollectionControl/Properties[ItemTap]" },
+                            "source":
+                            {
+                              "links":
+                              [
+                                {
+                                  "member": { "__id": "EntityTypesList/Properties[EntityTypes]" }
+                                },
+                                {
+                                  "target": { "__id": "CollectionView$EntityType/Methods[viewSelected]" }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    ],
+                    "commandItems":
+                    [
+                      {
+                        "displayName": "Search",
+                        "name": "SearchEntityTypes",
+                        "kind": "Command",
+                        "view": { "__id": ":CommandBarButton" },
+                        "propertySources":
+                        [
+                          {
+                            "property": { "__id": ":RootControl/Properties[Tap]" },
+                            "source":
+                            {
+                              "links":
+                              [
+                                {
+                                  "member": { "__id": "EntityTypesList/Properties[EntityTypes]" }
+                                },
+                                {
+                                  "target": { "__id": "CollectionView$EntityType/Methods[showSearch]" }
+                                }
+                              ]
+                            }
+                          },
+                          {
+                            "property": { "__id": ":RootCommand/Properties[Icon]" },
+                            "value": "msls-search"
+                          }
+                        ]
+                      },
+                      {
+                        "displayName": "Edit",
+                        "name": "Edit",
+                        "kind": "Command",
+                        "view": { "__id": ":CommandBarButton" },
+                        "propertySources":
+                        [
+                          {
+                            "property": { "__id": ":RootControl/Properties[Tap]" },
+                            "source":
+                            {
+                              "target": { "__id": "!module/Methods[showEntityTypeEdit]" },
+                              ":@AssociatedCollection": { "collection": { "__id": "EntityTypesList/Properties[EntityTypes]" } },
+                              "arguments":
+                              [
+                                {
+                                  "parameter": { "__id": "!module/Methods[showEntityTypeEdit]/Parameters[EntityType]" },
+                                  "value":
+                                  {
+                                    "links":
+                                    [
+                                      {
+                                        "member": { "__id": "EntityTypesList/Properties[EntityTypes]" }
+                                      },
+                                      {
+                                        "member": { "__id": "CollectionView$EntityType/Properties[selectedItem]" }
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            }
+                          },
+                          {
+                            "property": { "__id": ":RootCommand/Properties[Icon]" },
+                            "value": "msls-edit"
+                          }
+                        ]
+                      },
+                      {
+                        "displayName": "View",
+                        "name": "View",
+                        "kind": "Command",
+                        "view": { "__id": ":CommandBarButton" },
+                        "propertySources":
+                        [
+                          {
+                            "property": { "__id": ":RootControl/Properties[Tap]" },
+                            "source":
+                            {
+                              "target": { "__id": "!module/Methods[showEntityTypeView]" },
+                              ":@AssociatedCollection": { "collection": { "__id": "EntityTypesList/Properties[EntityTypes]" } },
+                              "arguments":
+                              [
+                                {
+                                  "parameter": { "__id": "!module/Methods[showEntityTypeView]/Parameters[EntityType]" },
+                                  "value":
+                                  {
+                                    "links":
+                                    [
+                                      {
+                                        "member": { "__id": "EntityTypesList/Properties[EntityTypes]" }
+                                      },
+                                      {
+                                        "member": { "__id": "CollectionView$EntityType/Properties[selectedItem]" }
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "propertySources":
+                [
+                  {
+                    "property": { "__id": ":RootControl/Properties[BrowseOnly]" },
+                    "value": true
+                  }
+                ]
+              },
+              {
+                "displayName": "Popups",
+                "name": "Popups",
+                "kind": "Group",
+                "view": { "__id": ":DialogPages" }
+              }
+            ]
+          },
+          "methods":
+          [
+            {
+              "id": "EntityTypesList/Methods[showTab]",
+              "name": "showTab",
+              "parameters":
+              [
+                {
+                  "id": "EntityTypesList/Methods[showTab]/Parameters[tabName]",
+                  "name": "tabName",
+                  "parameterType": { "__id": ":String" }
+                }
+              ]
+            },
+            {
+              "id": "EntityTypesList/Methods[showDialog]",
+              "name": "showDialog",
+              "parameters":
+              [
+                {
+                  "id": "EntityTypesList/Methods[showDialog]/Parameters[dialogName]",
+                  "name": "dialogName",
+                  "parameterType": { "__id": ":String" }
+                }
+              ]
+            }
+          ],
+          "properties":
+          [
+            {
+              "id": "EntityTypesList/Properties[EntityTypes]",
+              "name": "EntityTypes",
+              "disableSearch": true,
+              "pageSize": 45,
+              "elementType": { "__id": "EntityType" },
+              "propertyType": { "__id": "CollectionView$EntityType" },
+              "query":
+              {
+                "id": "EntityTypesList/Properties[EntityTypes]/Query",
+                "name": "EntityTypesQuery",
+                "elementType": { "__id": "EntityType" },
+                "returnType": { "__id": "EntityType*" },
+                "source":
+                {
+                  "member": { "__id": "CoreData/Members[EntityTypes]" }
+                }
+              },
+              "source":
+              {
+                "target": { "__id": "EntityTypesList/Properties[EntityTypes]/Query" }
+              }
+            }
+          ]
+        },
+        {
+          "displayName": "Entity Type View",
+          "id": "EntityTypeView",
+          "name": "EntityTypeView",
+          "launchMode": "Single",
+          ":@SaveChangesTo":
+          {
+            "property": { "__id": "DataWorkspace/Members[CoreData]" }
+          },
+          "rootContentItem":
+          {
+            "displayName": "Root Content Item",
+            "name": "RootContentItem",
+            "kind": "Screen",
+            "view": { "__id": ":Screen" },
+            "childContentItems":
+            [
+              {
+                "displayName": "Tabs",
+                "name": "Tabs",
+                "kind": "Group",
+                "view": { "__id": ":TabPages" },
+                "childContentItems":
+                [
+                  {
+                    "displayName": "Details",
+                    "name": "Details",
+                    "kind": "Tab",
+                    "view": { "__id": ":RowsLayout" },
+                    "childContentItems":
+                    [
+                      {
+                        "displayName": "Name",
+                        "name": "Name",
+                        "kind": "Value",
+                        "view": { "__id": ":Text" },
+                        "dataSource":
+                        {
+                          "links":
+                          [
+                            {
+                              "member": { "__id": "EntityTypeView/Properties[EntityType]" }
+                            },
+                            {
+                              "member": { "__id": "EntityType/Properties[Name]" }
+                            }
+                          ]
+                        }
+                      },
+                      {
+                        "displayName": "Parameters",
+                        "name": "Parameters",
+                        "kind": "Value",
+                        "view": { "__id": ":Paragraph" },
+                        "dataSource":
+                        {
+                          "links":
+                          [
+                            {
+                              "member": { "__id": "EntityTypeView/Properties[EntityType]" }
+                            },
+                            {
+                              "member": { "__id": "EntityType/Properties[Parameters]" }
+                            }
+                          ]
+                        }
+                      },
+                      {
+                        "displayName": "Description",
+                        "name": "Description",
+                        "kind": "Value",
+                        "view": { "__id": ":Paragraph" },
+                        "dataSource":
+                        {
+                          "links":
+                          [
+                            {
+                              "member": { "__id": "EntityTypeView/Properties[EntityType]" }
+                            },
+                            {
+                              "member": { "__id": "EntityType/Properties[Description]" }
+                            }
+                          ]
+                        }
+                      }
+                    ],
+                    "commandItems":
+                    [
+                      {
+                        "displayName": "Edit",
+                        "name": "Edit",
+                        "kind": "Command",
+                        "view": { "__id": ":CommandBarButton" },
+                        "propertySources":
+                        [
+                          {
+                            "property": { "__id": ":RootControl/Properties[Tap]" },
+                            "source":
+                            {
+                              "target": { "__id": "!module/Methods[showEntityTypeEdit]" },
+                              "arguments":
+                              [
+                                {
+                                  "parameter": { "__id": "!module/Methods[showEntityTypeEdit]/Parameters[EntityType]" },
+                                  "value":
+                                  {
+                                    "links":
+                                    [
+                                      {
+                                        "member": { "__id": "EntityTypeView/Properties[EntityType]" }
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            }
+                          },
+                          {
+                            "property": { "__id": ":RootCommand/Properties[Icon]" },
+                            "value": "msls-edit"
+                          }
+                        ]
+                      },
+                      {
+                        "displayName": "Delete",
+                        "name": "Delete",
+                        "kind": "Command",
+                        "view": { "__id": ":CommandBarButton" },
+                        "propertySources":
+                        [
+                          {
+                            "property": { "__id": ":RootControl/Properties[Tap]" },
+                            "source":
+                            {
+                              "target": { "__id": "EntityTypeView/Methods[deleteEntity]" }
+                            }
+                          },
+                          {
+                            "property": { "__id": ":RootCommand/Properties[Icon]" },
+                            "value": "msls-remove"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "displayName": "General",
+                    "name": "General",
+                    "kind": "Tab",
+                    "view": { "__id": ":RowsLayout" },
+                    "childContentItems":
+                    [
+                      {
+                        "displayName": "Tid",
+                        "name": "Tid",
+                        "kind": "Value",
+                        "view": { "__id": ":Text" },
+                        "dataSource":
+                        {
+                          "links":
+                          [
+                            {
+                              "member": { "__id": "EntityTypeView/Properties[EntityType]" }
+                            },
+                            {
+                              "member": { "__id": "EntityType/Properties[Tid]" }
+                            }
+                          ]
+                        }
+                      },
+                      {
+                        "displayName": "Id",
+                        "name": "Id",
+                        "kind": "Value",
+                        "view": { "__id": ":Text" },
+                        "dataSource":
+                        {
+                          "links":
+                          [
+                            {
+                              "member": { "__id": "EntityTypeView/Properties[EntityType]" }
+                            },
+                            {
+                              "member": { "__id": "EntityType/Properties[Id]" }
+                            }
+                          ]
+                        }
+                      },
+                      {
+                        "displayName": "Created",
+                        "name": "Created",
+                        "kind": "Value",
+                        "view": { "__id": ":Text" },
+                        "dataSource":
+                        {
+                          "links":
+                          [
+                            {
+                              "member": { "__id": "EntityTypeView/Properties[EntityType]" }
+                            },
+                            {
+                              "member": { "__id": "EntityType/Properties[Created]" }
+                            }
+                          ]
+                        }
+                      },
+                      {
+                        "displayName": "Created By",
+                        "name": "CreatedBy",
+                        "kind": "Value",
+                        "view": { "__id": ":Text" },
+                        "dataSource":
+                        {
+                          "links":
+                          [
+                            {
+                              "member": { "__id": "EntityTypeView/Properties[EntityType]" }
+                            },
+                            {
+                              "member": { "__id": "EntityType/Properties[CreatedBy]" }
+                            }
+                          ]
+                        }
+                      },
+                      {
+                        "displayName": "Modified",
+                        "name": "Modified",
+                        "kind": "Value",
+                        "view": { "__id": ":Text" },
+                        "dataSource":
+                        {
+                          "links":
+                          [
+                            {
+                              "member": { "__id": "EntityTypeView/Properties[EntityType]" }
+                            },
+                            {
+                              "member": { "__id": "EntityType/Properties[Modified]" }
+                            }
+                          ]
+                        }
+                      },
+                      {
+                        "displayName": "Modified By",
+                        "name": "ModifiedBy",
+                        "kind": "Value",
+                        "view": { "__id": ":Text" },
+                        "dataSource":
+                        {
+                          "links":
+                          [
+                            {
+                              "member": { "__id": "EntityTypeView/Properties[EntityType]" }
+                            },
+                            {
+                              "member": { "__id": "EntityType/Properties[ModifiedBy]" }
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                ],
+                "propertySources":
+                [
+                  {
+                    "property": { "__id": ":RootControl/Properties[BrowseOnly]" },
+                    "value": true
+                  }
+                ]
+              },
+              {
+                "displayName": "Popups",
+                "name": "Popups",
+                "kind": "Group",
+                "view": { "__id": ":DialogPages" }
+              }
+            ]
+          },
+          "methods":
+          [
+            {
+              "id": "EntityTypeView/Methods[showTab]",
+              "name": "showTab",
+              "parameters":
+              [
+                {
+                  "id": "EntityTypeView/Methods[showTab]/Parameters[tabName]",
+                  "name": "tabName",
+                  "parameterType": { "__id": ":String" }
+                }
+              ]
+            },
+            {
+              "id": "EntityTypeView/Methods[showDialog]",
+              "name": "showDialog",
+              "parameters":
+              [
+                {
+                  "id": "EntityTypeView/Methods[showDialog]/Parameters[dialogName]",
+                  "name": "dialogName",
+                  "parameterType": { "__id": ":String" }
+                }
+              ]
+            },
+            {
+              "id": "EntityTypeView/Methods[deleteEntity]",
+              "name": "deleteEntity"
+            }
+          ],
+          "properties":
+          [
+            {
+              "id": "EntityTypeView/Properties[EntityType]",
+              "name": "EntityType",
+              "elementType": { "__id": "EntityType" },
+              "propertyType": { "__id": "EntityType" },
+              ":@IsParameter": { }
+            }
+          ]
+        },
+        {
           "displayName": "Gate Add",
           "id": "GateAdd",
           "name": "GateAdd",
@@ -9188,7 +10052,7 @@
                           },
                           {
                             "displayName": "Orders",
-                            "description": "View a list of your orders",
+                            "description": "Shows all your orders",
                             "name": "Orders",
                             "kind": "Command",
                             "view": { "__id": ":Button" },
@@ -9248,7 +10112,7 @@
                           },
                           {
                             "displayName": "Carts",
-                            "description": "Browse carts",
+                            "description": "Shwos your carts",
                             "name": "Carts",
                             "kind": "Command",
                             "view": { "__id": ":Button" },
@@ -9325,7 +10189,7 @@
                           },
                           {
                             "displayName": "Jobs",
-                            "description": "View a list of jobs",
+                            "description": "Browse jobs",
                             "name": "Jobs",
                             "kind": "Command",
                             "view": { "__id": ":Button" },
@@ -9342,7 +10206,7 @@
                           },
                           {
                             "displayName": "Gates",
-                            "description": "Show all currently existing gates",
+                            "description": "Shows all currently existing gates",
                             "name": "Gates",
                             "kind": "Command",
                             "view": { "__id": ":Button" },
@@ -9353,6 +10217,23 @@
                                 "source":
                                 {
                                   "target": { "__id": "!module/Methods[showGatesList]" }
+                                }
+                              }
+                            ]
+                          },
+                          {
+                            "displayName": "Entity Types",
+                            "description": "Manage entity types",
+                            "name": "EntityTypes",
+                            "kind": "Command",
+                            "view": { "__id": ":Button" },
+                            "propertySources":
+                            [
+                              {
+                                "property": { "__id": ":RootControl/Properties[Tap]" },
+                                "source":
+                                {
+                                  "target": { "__id": "!module/Methods[showEntityTypesList]" }
                                 }
                               }
                             ]
@@ -14256,6 +15137,64 @@
           ]
         },
         {
+          "id": "EntityType*",
+          "name": "EntityType*",
+          "kind": "Enumerable",
+          "elementType": { "__id": "EntityType" }
+        },
+        {
+          "id": "CollectionView$EntityType",
+          "name": "CollectionView$EntityType",
+          "kind": "CollectionView",
+          "elementType": { "__id": "EntityType" },
+          "methods":
+          [
+            {
+              "id": "CollectionView$EntityType/Methods[addNew]",
+              "name": "addNew",
+              "returnType": { "__id": "EntityType" }
+            },
+            {
+              "id": "CollectionView$EntityType/Methods[addAndEditNew]",
+              "name": "addAndEditNew",
+              "returnType": { "__id": "EntityType" }
+            },
+            {
+              "id": "CollectionView$EntityType/Methods[showSearch]",
+              "name": "showSearch",
+              "returnType": { "__id": "EntityType" }
+            },
+            {
+              "id": "CollectionView$EntityType/Methods[editSelected]",
+              "name": "editSelected"
+            },
+            {
+              "id": "CollectionView$EntityType/Methods[deleteSelected]",
+              "name": "deleteSelected"
+            },
+            {
+              "id": "CollectionView$EntityType/Methods[removeSelected]",
+              "name": "removeSelected"
+            },
+            {
+              "id": "CollectionView$EntityType/Methods[refresh]",
+              "name": "refresh"
+            },
+            {
+              "id": "CollectionView$EntityType/Methods[viewSelected]",
+              "name": "viewSelected"
+            }
+          ],
+          "properties":
+          [
+            {
+              "id": "CollectionView$EntityType/Properties[selectedItem]",
+              "name": "selectedItem",
+              "propertyType": { "__id": "EntityType" }
+            }
+          ]
+        },
+        {
           "id": "Gate*",
           "name": "Gate*",
           "kind": "Enumerable",
@@ -14894,64 +15833,6 @@
           ]
         },
         {
-          "id": "EntityType*",
-          "name": "EntityType*",
-          "kind": "Enumerable",
-          "elementType": { "__id": "EntityType" }
-        },
-        {
-          "id": "CollectionView$EntityType",
-          "name": "CollectionView$EntityType",
-          "kind": "CollectionView",
-          "elementType": { "__id": "EntityType" },
-          "methods":
-          [
-            {
-              "id": "CollectionView$EntityType/Methods[addNew]",
-              "name": "addNew",
-              "returnType": { "__id": "EntityType" }
-            },
-            {
-              "id": "CollectionView$EntityType/Methods[addAndEditNew]",
-              "name": "addAndEditNew",
-              "returnType": { "__id": "EntityType" }
-            },
-            {
-              "id": "CollectionView$EntityType/Methods[showSearch]",
-              "name": "showSearch",
-              "returnType": { "__id": "EntityType" }
-            },
-            {
-              "id": "CollectionView$EntityType/Methods[editSelected]",
-              "name": "editSelected"
-            },
-            {
-              "id": "CollectionView$EntityType/Methods[deleteSelected]",
-              "name": "deleteSelected"
-            },
-            {
-              "id": "CollectionView$EntityType/Methods[removeSelected]",
-              "name": "removeSelected"
-            },
-            {
-              "id": "CollectionView$EntityType/Methods[refresh]",
-              "name": "refresh"
-            },
-            {
-              "id": "CollectionView$EntityType/Methods[viewSelected]",
-              "name": "viewSelected"
-            }
-          ],
-          "properties":
-          [
-            {
-              "id": "CollectionView$EntityType/Properties[selectedItem]",
-              "name": "selectedItem",
-              "propertyType": { "__id": "EntityType" }
-            }
-          ]
-        },
-        {
           "id": "Link*",
           "name": "Link*",
           "kind": "Enumerable",
@@ -15252,6 +16133,37 @@
           ]
         },
         {
+          "id": "!module/Methods[showEntityTypeEdit]",
+          "name": "showEntityTypeEdit",
+          ":@ShowScreenMethod": { "targetScreen": { "__id": "EntityTypeEdit" } },
+          "parameters":
+          [
+            {
+              "id": "!module/Methods[showEntityTypeEdit]/Parameters[EntityType]",
+              "name": "EntityType",
+              "parameterType": { "__id": "EntityType" }
+            }
+          ]
+        },
+        {
+          "id": "!module/Methods[showEntityTypesList]",
+          "name": "showEntityTypesList",
+          ":@ShowScreenMethod": { "targetScreen": { "__id": "EntityTypesList" } }
+        },
+        {
+          "id": "!module/Methods[showEntityTypeView]",
+          "name": "showEntityTypeView",
+          ":@ShowScreenMethod": { "targetScreen": { "__id": "EntityTypeView" } },
+          "parameters":
+          [
+            {
+              "id": "!module/Methods[showEntityTypeView]/Parameters[EntityType]",
+              "name": "EntityType",
+              "parameterType": { "__id": "EntityType" }
+            }
+          ]
+        },
+        {
           "id": "!module/Methods[showGateAdd]",
           "name": "showGateAdd",
           ":@ShowScreenMethod": { "targetScreen": { "__id": "GateAdd" } },
@@ -15486,6 +16398,11 @@
           "id": "!module/NavigationItems[link11]",
           "name": "link11",
           "method": { "__id": "!module/Methods[showNodesList]" }
+        },
+        {
+          "id": "!module/NavigationItems[link8]",
+          "name": "link8",
+          "method": { "__id": "!module/Methods[showEntityTypesList]" }
         }
       ]
     },
