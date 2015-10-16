@@ -97,33 +97,6 @@
                 </ScreenExpressionTree>
               </ContentItem.DataSource>
             </ContentItem>
-            <ContentItem
-              Name="Approval_Modified"
-              Kind="Value"
-              DataType=":DateTimeOffset">
-              <ContentItem.DataSource>
-                <ScreenExpressionTree>
-                  <ChainExpression>
-                    <MemberExpression
-                      Member="ApprovalView/Properties[Approval]" />
-                    <MemberExpression
-                      Member="Modified" />
-                  </ChainExpression>
-                </ScreenExpressionTree>
-              </ContentItem.DataSource>
-              <ContentItem.PropertySources>
-                <ControlPropertySource
-                  Property="Microsoft.LightSwitch.MobileWeb:RootControl/Properties[FontStyle]">
-                  <ScreenExpressionTree>
-                    <ChainExpression>
-                      <ConstantExpression
-                        Value="Small"
-                        ResultType=":String" />
-                    </ChainExpression>
-                  </ScreenExpressionTree>
-                </ControlPropertySource>
-              </ContentItem.PropertySources>
-            </ContentItem>
             <ContentItem.CommandItems>
               <ContentItem
                 Name="Approve"

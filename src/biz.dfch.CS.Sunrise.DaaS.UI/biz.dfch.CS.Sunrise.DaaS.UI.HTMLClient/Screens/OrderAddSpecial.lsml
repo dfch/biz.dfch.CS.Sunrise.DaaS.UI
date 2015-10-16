@@ -154,120 +154,116 @@
             Name="General"
             Kind="Group">
             <ContentItem
-              Name="GeneralGroup1"
-              Kind="Group">
-              <ContentItem
-                Name="Tid"
-                Kind="Value"
-                DataType=":String"
-                View="Microsoft.LightSwitch.MobileWeb:Text">
-                <ContentItem.DataSource>
-                  <ScreenExpressionTree>
-                    <ChainExpression>
-                      <MemberExpression
-                        Member="OrderAddSpecial/Properties[Order]" />
-                      <MemberExpression
-                        Member="Tid" />
-                    </ChainExpression>
-                  </ScreenExpressionTree>
-                </ContentItem.DataSource>
-              </ContentItem>
-              <ContentItem
-                Name="Id"
-                Kind="Value"
-                DataType=":Int64"
-                View="Microsoft.LightSwitch.MobileWeb:Text">
-                <ContentItem.DataSource>
-                  <ScreenExpressionTree>
-                    <ChainExpression>
-                      <MemberExpression
-                        Member="OrderAddSpecial/Properties[Order]" />
-                      <MemberExpression
-                        Member="Id" />
-                    </ChainExpression>
-                  </ScreenExpressionTree>
-                </ContentItem.DataSource>
-              </ContentItem>
-              <ContentItem
-                Name="CreatedBy"
-                Kind="Value"
-                DataType=":String"
-                View="Microsoft.LightSwitch.MobileWeb:Text">
-                <ContentItem.DataSource>
-                  <ScreenExpressionTree>
-                    <ChainExpression>
-                      <MemberExpression
-                        Member="OrderAddSpecial/Properties[Order]" />
-                      <MemberExpression
-                        Member="CreatedBy" />
-                    </ChainExpression>
-                  </ScreenExpressionTree>
-                </ContentItem.DataSource>
-              </ContentItem>
-              <ContentItem
-                Name="Created"
-                Kind="Value"
-                DataType=":DateTimeOffset"
-                View="Microsoft.LightSwitch.MobileWeb:Text">
-                <ContentItem.DataSource>
-                  <ScreenExpressionTree>
-                    <ChainExpression>
-                      <MemberExpression
-                        Member="OrderAddSpecial/Properties[Order]" />
-                      <MemberExpression
-                        Member="Created" />
-                    </ChainExpression>
-                  </ScreenExpressionTree>
-                </ContentItem.DataSource>
-              </ContentItem>
-              <ContentItem
-                Name="ModifiedBy"
-                Kind="Value"
-                DataType=":String"
-                View="Microsoft.LightSwitch.MobileWeb:Text">
-                <ContentItem.DataSource>
-                  <ScreenExpressionTree>
-                    <ChainExpression>
-                      <MemberExpression
-                        Member="OrderAddSpecial/Properties[Order]" />
-                      <MemberExpression
-                        Member="ModifiedBy" />
-                    </ChainExpression>
-                  </ScreenExpressionTree>
-                </ContentItem.DataSource>
-              </ContentItem>
-              <ContentItem
-                Name="Modified"
-                Kind="Value"
-                DataType=":DateTimeOffset"
-                View="Microsoft.LightSwitch.MobileWeb:Text">
-                <ContentItem.DataSource>
-                  <ScreenExpressionTree>
-                    <ChainExpression>
-                      <MemberExpression
-                        Member="OrderAddSpecial/Properties[Order]" />
-                      <MemberExpression
-                        Member="Modified" />
-                    </ChainExpression>
-                  </ScreenExpressionTree>
-                </ContentItem.DataSource>
-              </ContentItem>
-              <ContentItem
-                Name="Order_Status"
-                Kind="Value"
-                DataType=":String?"
-                View="Microsoft.LightSwitch.MobileWeb:Text">
-                <ContentItem.DataSource>
-                  <ScreenExpressionTree>
-                    <ChainExpression>
-                      <MemberExpression
-                        Member="OrderAddSpecial/Properties[Order]" />
-                      <MemberExpression
-                        Member="Status" />
-                    </ChainExpression>
-                  </ScreenExpressionTree>
-                </ContentItem.DataSource>
-              </ContentItem>
+              Name="Tid"
+              Kind="Value"
+              DataType=":String"
+              View="Microsoft.LightSwitch.MobileWeb:Text">
+              <ContentItem.DataSource>
+                <ScreenExpressionTree>
+                  <ChainExpression>
+                    <MemberExpression
+                      Member="OrderAddSpecial/Properties[Order]" />
+                    <MemberExpression
+                      Member="Tid" />
+                  </ChainExpression>
+                </ScreenExpressionTree>
+              </ContentItem.DataSource>
+            </ContentItem>
+            <ContentItem
+              Name="Id"
+              Kind="Value"
+              DataType=":Int64"
+              View="Microsoft.LightSwitch.MobileWeb:Text">
+              <ContentItem.DataSource>
+                <ScreenExpressionTree>
+                  <ChainExpression>
+                    <MemberExpression
+                      Member="OrderAddSpecial/Properties[Order]" />
+                    <MemberExpression
+                      Member="Id" />
+                  </ChainExpression>
+                </ScreenExpressionTree>
+              </ContentItem.DataSource>
+            </ContentItem>
+            <ContentItem
+              Name="CreatedBy"
+              Kind="Value"
+              DataType=":String"
+              View="Microsoft.LightSwitch.MobileWeb:Text">
+              <ContentItem.DataSource>
+                <ScreenExpressionTree>
+                  <ChainExpression>
+                    <MemberExpression
+                      Member="OrderAddSpecial/Properties[Order]" />
+                    <MemberExpression
+                      Member="CreatedBy" />
+                  </ChainExpression>
+                </ScreenExpressionTree>
+              </ContentItem.DataSource>
+            </ContentItem>
+            <ContentItem
+              Name="Created"
+              Kind="Value"
+              DataType=":DateTimeOffset"
+              View="Microsoft.LightSwitch.MobileWeb:Text">
+              <ContentItem.DataSource>
+                <ScreenExpressionTree>
+                  <ChainExpression>
+                    <MemberExpression
+                      Member="OrderAddSpecial/Properties[Order]" />
+                    <MemberExpression
+                      Member="Created" />
+                  </ChainExpression>
+                </ScreenExpressionTree>
+              </ContentItem.DataSource>
+            </ContentItem>
+            <ContentItem
+              Name="ModifiedBy"
+              Kind="Value"
+              DataType=":String"
+              View="Microsoft.LightSwitch.MobileWeb:Text">
+              <ContentItem.DataSource>
+                <ScreenExpressionTree>
+                  <ChainExpression>
+                    <MemberExpression
+                      Member="OrderAddSpecial/Properties[Order]" />
+                    <MemberExpression
+                      Member="ModifiedBy" />
+                  </ChainExpression>
+                </ScreenExpressionTree>
+              </ContentItem.DataSource>
+            </ContentItem>
+            <ContentItem
+              Name="Modified"
+              Kind="Value"
+              DataType=":DateTimeOffset"
+              View="Microsoft.LightSwitch.MobileWeb:Text">
+              <ContentItem.DataSource>
+                <ScreenExpressionTree>
+                  <ChainExpression>
+                    <MemberExpression
+                      Member="OrderAddSpecial/Properties[Order]" />
+                    <MemberExpression
+                      Member="Modified" />
+                  </ChainExpression>
+                </ScreenExpressionTree>
+              </ContentItem.DataSource>
+            </ContentItem>
+            <ContentItem
+              Name="Order_Status"
+              Kind="Value"
+              DataType=":String?"
+              View="Microsoft.LightSwitch.MobileWeb:Text">
+              <ContentItem.DataSource>
+                <ScreenExpressionTree>
+                  <ChainExpression>
+                    <MemberExpression
+                      Member="OrderAddSpecial/Properties[Order]" />
+                    <MemberExpression
+                      Member="Status" />
+                  </ChainExpression>
+                </ScreenExpressionTree>
+              </ContentItem.DataSource>
             </ContentItem>
           </ContentItem>
         </ContentItem>

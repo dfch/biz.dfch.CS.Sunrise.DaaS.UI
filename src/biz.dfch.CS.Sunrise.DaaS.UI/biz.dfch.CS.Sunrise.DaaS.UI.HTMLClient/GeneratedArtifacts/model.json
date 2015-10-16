@@ -7558,31 +7558,6 @@
                             }
                           ]
                         }
-                      },
-                      {
-                        "displayName": "Modified",
-                        "name": "Approval_Modified",
-                        "kind": "Value",
-                        "view": { "__id": ":Text" },
-                        "dataSource":
-                        {
-                          "links":
-                          [
-                            {
-                              "member": { "__id": "ApprovalView/Properties[Approval]" }
-                            },
-                            {
-                              "member": { "__id": "Approval/Properties[Modified]" }
-                            }
-                          ]
-                        },
-                        "propertySources":
-                        [
-                          {
-                            "property": { "__id": ":RootControl/Properties[FontStyle]" },
-                            "value": "Small"
-                          }
-                        ]
                       }
                     ],
                     "commandItems":
@@ -11245,168 +11220,148 @@
                     "childContentItems":
                     [
                       {
-                        "displayName": "left",
-                        "name": "left",
-                        "kind": "Group",
-                        "view": { "__id": ":RowsLayout" },
-                        "childContentItems":
-                        [
-                          {
-                            "displayName": "Name",
-                            "name": "Name",
-                            "kind": "Value",
-                            "view": { "__id": ":Text" },
-                            "dataSource":
+                        "displayName": "Name",
+                        "name": "Name",
+                        "kind": "Value",
+                        "view": { "__id": ":Text" },
+                        "dataSource":
+                        {
+                          "links":
+                          [
                             {
-                              "links":
-                              [
-                                {
-                                  "member": { "__id": "EndpointView/Properties[Endpoint]" }
-                                },
-                                {
-                                  "member": { "__id": "Endpoint/Properties[Name]" }
-                                }
-                              ]
-                            }
-                          },
-                          {
-                            "displayName": "Version",
-                            "name": "Version",
-                            "kind": "Value",
-                            "view": { "__id": ":Text" },
-                            "dataSource":
+                              "member": { "__id": "EndpointView/Properties[Endpoint]" }
+                            },
                             {
-                              "links":
-                              [
-                                {
-                                  "member": { "__id": "EndpointView/Properties[Endpoint]" }
-                                },
-                                {
-                                  "member": { "__id": "Endpoint/Properties[Version]" }
-                                }
-                              ]
+                              "member": { "__id": "Endpoint/Properties[Name]" }
                             }
-                          },
-                          {
-                            "displayName": "Route Prefix",
-                            "name": "RoutePrefix",
-                            "kind": "Value",
-                            "view": { "__id": ":Text" },
-                            "dataSource":
+                          ]
+                        }
+                      },
+                      {
+                        "displayName": "Version",
+                        "name": "Version",
+                        "kind": "Value",
+                        "view": { "__id": ":Text" },
+                        "dataSource":
+                        {
+                          "links":
+                          [
                             {
-                              "links":
-                              [
-                                {
-                                  "member": { "__id": "EndpointView/Properties[Endpoint]" }
-                                },
-                                {
-                                  "member": { "__id": "Endpoint/Properties[RoutePrefix]" }
-                                }
-                              ]
-                            }
-                          },
-                          {
-                            "displayName": "Route Template",
-                            "name": "RouteTemplate",
-                            "kind": "Value",
-                            "view": { "__id": ":Text" },
-                            "dataSource":
+                              "member": { "__id": "EndpointView/Properties[Endpoint]" }
+                            },
                             {
-                              "links":
-                              [
-                                {
-                                  "member": { "__id": "EndpointView/Properties[Endpoint]" }
-                                },
-                                {
-                                  "member": { "__id": "Endpoint/Properties[RouteTemplate]" }
-                                }
-                              ]
+                              "member": { "__id": "Endpoint/Properties[Version]" }
                             }
-                          },
-                          {
-                            "displayName": "Server Role",
-                            "name": "ServerRole",
-                            "kind": "Value",
-                            "view": { "__id": ":Text" },
-                            "dataSource":
+                          ]
+                        }
+                      },
+                      {
+                        "displayName": "Route Prefix",
+                        "name": "RoutePrefix",
+                        "kind": "Value",
+                        "view": { "__id": ":Text" },
+                        "dataSource":
+                        {
+                          "links":
+                          [
                             {
-                              "links":
-                              [
-                                {
-                                  "member": { "__id": "EndpointView/Properties[Endpoint]" }
-                                },
-                                {
-                                  "member": { "__id": "Endpoint/Properties[ServerRole]" }
-                                }
-                              ]
-                            }
-                          },
-                          {
-                            "displayName": "Priority",
-                            "name": "Priority",
-                            "kind": "Value",
-                            "view": { "__id": ":Text" },
-                            "dataSource":
+                              "member": { "__id": "EndpointView/Properties[Endpoint]" }
+                            },
                             {
-                              "links":
-                              [
-                                {
-                                  "member": { "__id": "EndpointView/Properties[Endpoint]" }
-                                },
-                                {
-                                  "member": { "__id": "Endpoint/Properties[Priority]" }
-                                }
-                              ]
+                              "member": { "__id": "Endpoint/Properties[RoutePrefix]" }
                             }
-                          },
-                          {
-                            "displayName": "Address",
-                            "name": "Endpoint_Address",
-                            "kind": "Value",
-                            "view": { "__id": ":Text" },
-                            "dataSource":
+                          ]
+                        }
+                      },
+                      {
+                        "displayName": "Route Template",
+                        "name": "RouteTemplate",
+                        "kind": "Value",
+                        "view": { "__id": ":Text" },
+                        "dataSource":
+                        {
+                          "links":
+                          [
                             {
-                              "links":
-                              [
-                                {
-                                  "member": { "__id": "EndpointView/Properties[Endpoint]" }
-                                },
-                                {
-                                  "member": { "__id": "Endpoint/Properties[Address]" }
-                                }
-                              ]
-                            }
-                          },
-                          {
-                            "displayName": "Description",
-                            "name": "Endpoint_Description",
-                            "kind": "Value",
-                            "view": { "__id": ":Paragraph" },
-                            "dataSource":
+                              "member": { "__id": "EndpointView/Properties[Endpoint]" }
+                            },
                             {
-                              "links":
-                              [
-                                {
-                                  "member": { "__id": "EndpointView/Properties[Endpoint]" }
-                                },
-                                {
-                                  "member": { "__id": "Endpoint/Properties[Description]" }
-                                }
-                              ]
+                              "member": { "__id": "Endpoint/Properties[RouteTemplate]" }
                             }
-                          }
-                        ],
-                        "propertySources":
-                        [
-                          {
-                            "property": { "__id": ":RootControl/Properties[MinWidth]" },
-                            "value": 200
-                          },
-                          {
-                            "property": { "__id": ":RootControl/Properties[MaxWidth]" },
-                            "value": 400
-                          }
-                        ]
+                          ]
+                        }
+                      },
+                      {
+                        "displayName": "Server Role",
+                        "name": "ServerRole",
+                        "kind": "Value",
+                        "view": { "__id": ":Text" },
+                        "dataSource":
+                        {
+                          "links":
+                          [
+                            {
+                              "member": { "__id": "EndpointView/Properties[Endpoint]" }
+                            },
+                            {
+                              "member": { "__id": "Endpoint/Properties[ServerRole]" }
+                            }
+                          ]
+                        }
+                      },
+                      {
+                        "displayName": "Priority",
+                        "name": "Priority",
+                        "kind": "Value",
+                        "view": { "__id": ":Text" },
+                        "dataSource":
+                        {
+                          "links":
+                          [
+                            {
+                              "member": { "__id": "EndpointView/Properties[Endpoint]" }
+                            },
+                            {
+                              "member": { "__id": "Endpoint/Properties[Priority]" }
+                            }
+                          ]
+                        }
+                      },
+                      {
+                        "displayName": "Address",
+                        "name": "Endpoint_Address",
+                        "kind": "Value",
+                        "view": { "__id": ":Text" },
+                        "dataSource":
+                        {
+                          "links":
+                          [
+                            {
+                              "member": { "__id": "EndpointView/Properties[Endpoint]" }
+                            },
+                            {
+                              "member": { "__id": "Endpoint/Properties[Address]" }
+                            }
+                          ]
+                        }
+                      },
+                      {
+                        "displayName": "Description",
+                        "name": "Endpoint_Description",
+                        "kind": "Value",
+                        "view": { "__id": ":Paragraph" },
+                        "dataSource":
+                        {
+                          "links":
+                          [
+                            {
+                              "member": { "__id": "EndpointView/Properties[Endpoint]" }
+                            },
+                            {
+                              "member": { "__id": "Endpoint/Properties[Description]" }
+                            }
+                          ]
+                        }
                       }
                     ],
                     "commandItems":
@@ -11441,121 +11396,112 @@
                     "childContentItems":
                     [
                       {
-                        "displayName": "General Group1",
-                        "name": "GeneralGroup1",
-                        "kind": "Group",
-                        "view": { "__id": ":RowsLayout" },
-                        "childContentItems":
-                        [
-                          {
-                            "displayName": "Tid",
-                            "name": "Tid",
-                            "kind": "Value",
-                            "view": { "__id": ":Text" },
-                            "dataSource":
+                        "displayName": "Tid",
+                        "name": "Tid",
+                        "kind": "Value",
+                        "view": { "__id": ":Text" },
+                        "dataSource":
+                        {
+                          "links":
+                          [
                             {
-                              "links":
-                              [
-                                {
-                                  "member": { "__id": "EndpointView/Properties[Endpoint]" }
-                                },
-                                {
-                                  "member": { "__id": "Endpoint/Properties[Tid]" }
-                                }
-                              ]
-                            }
-                          },
-                          {
-                            "displayName": "Id",
-                            "name": "Id",
-                            "kind": "Value",
-                            "view": { "__id": ":Text" },
-                            "dataSource":
+                              "member": { "__id": "EndpointView/Properties[Endpoint]" }
+                            },
                             {
-                              "links":
-                              [
-                                {
-                                  "member": { "__id": "EndpointView/Properties[Endpoint]" }
-                                },
-                                {
-                                  "member": { "__id": "Endpoint/Properties[Id]" }
-                                }
-                              ]
+                              "member": { "__id": "Endpoint/Properties[Tid]" }
                             }
-                          },
-                          {
-                            "displayName": "Created By",
-                            "name": "CreatedBy",
-                            "kind": "Value",
-                            "view": { "__id": ":Text" },
-                            "dataSource":
+                          ]
+                        }
+                      },
+                      {
+                        "displayName": "Id",
+                        "name": "Id",
+                        "kind": "Value",
+                        "view": { "__id": ":Text" },
+                        "dataSource":
+                        {
+                          "links":
+                          [
                             {
-                              "links":
-                              [
-                                {
-                                  "member": { "__id": "EndpointView/Properties[Endpoint]" }
-                                },
-                                {
-                                  "member": { "__id": "Endpoint/Properties[CreatedBy]" }
-                                }
-                              ]
-                            }
-                          },
-                          {
-                            "displayName": "Created",
-                            "name": "Created",
-                            "kind": "Value",
-                            "view": { "__id": ":Text" },
-                            "dataSource":
+                              "member": { "__id": "EndpointView/Properties[Endpoint]" }
+                            },
                             {
-                              "links":
-                              [
-                                {
-                                  "member": { "__id": "EndpointView/Properties[Endpoint]" }
-                                },
-                                {
-                                  "member": { "__id": "Endpoint/Properties[Created]" }
-                                }
-                              ]
+                              "member": { "__id": "Endpoint/Properties[Id]" }
                             }
-                          },
-                          {
-                            "displayName": "Modified By",
-                            "name": "ModifiedBy",
-                            "kind": "Value",
-                            "view": { "__id": ":Text" },
-                            "dataSource":
+                          ]
+                        }
+                      },
+                      {
+                        "displayName": "Created By",
+                        "name": "CreatedBy",
+                        "kind": "Value",
+                        "view": { "__id": ":Text" },
+                        "dataSource":
+                        {
+                          "links":
+                          [
                             {
-                              "links":
-                              [
-                                {
-                                  "member": { "__id": "EndpointView/Properties[Endpoint]" }
-                                },
-                                {
-                                  "member": { "__id": "Endpoint/Properties[ModifiedBy]" }
-                                }
-                              ]
-                            }
-                          },
-                          {
-                            "displayName": "Modified",
-                            "name": "Modified",
-                            "kind": "Value",
-                            "view": { "__id": ":Text" },
-                            "dataSource":
+                              "member": { "__id": "EndpointView/Properties[Endpoint]" }
+                            },
                             {
-                              "links":
-                              [
-                                {
-                                  "member": { "__id": "EndpointView/Properties[Endpoint]" }
-                                },
-                                {
-                                  "member": { "__id": "Endpoint/Properties[Modified]" }
-                                }
-                              ]
+                              "member": { "__id": "Endpoint/Properties[CreatedBy]" }
                             }
-                          }
-                        ]
+                          ]
+                        }
+                      },
+                      {
+                        "displayName": "Created",
+                        "name": "Created",
+                        "kind": "Value",
+                        "view": { "__id": ":Text" },
+                        "dataSource":
+                        {
+                          "links":
+                          [
+                            {
+                              "member": { "__id": "EndpointView/Properties[Endpoint]" }
+                            },
+                            {
+                              "member": { "__id": "Endpoint/Properties[Created]" }
+                            }
+                          ]
+                        }
+                      },
+                      {
+                        "displayName": "Modified By",
+                        "name": "ModifiedBy",
+                        "kind": "Value",
+                        "view": { "__id": ":Text" },
+                        "dataSource":
+                        {
+                          "links":
+                          [
+                            {
+                              "member": { "__id": "EndpointView/Properties[Endpoint]" }
+                            },
+                            {
+                              "member": { "__id": "Endpoint/Properties[ModifiedBy]" }
+                            }
+                          ]
+                        }
+                      },
+                      {
+                        "displayName": "Modified",
+                        "name": "Modified",
+                        "kind": "Value",
+                        "view": { "__id": ":Text" },
+                        "dataSource":
+                        {
+                          "links":
+                          [
+                            {
+                              "member": { "__id": "EndpointView/Properties[Endpoint]" }
+                            },
+                            {
+                              "member": { "__id": "Endpoint/Properties[Modified]" }
+                            }
+                          ]
+                        }
                       }
                     ]
                   }
@@ -13434,121 +13380,112 @@
                     "childContentItems":
                     [
                       {
-                        "displayName": "General Group1",
-                        "name": "GeneralGroup1",
-                        "kind": "Group",
-                        "view": { "__id": ":RowsLayout" },
-                        "childContentItems":
-                        [
-                          {
-                            "displayName": "Tid",
-                            "name": "Tid",
-                            "kind": "Value",
-                            "view": { "__id": ":Text" },
-                            "dataSource":
+                        "displayName": "Tid",
+                        "name": "Tid",
+                        "kind": "Value",
+                        "view": { "__id": ":Text" },
+                        "dataSource":
+                        {
+                          "links":
+                          [
                             {
-                              "links":
-                              [
-                                {
-                                  "member": { "__id": "JobView/Properties[Job]" }
-                                },
-                                {
-                                  "member": { "__id": "Job/Properties[Tid]" }
-                                }
-                              ]
-                            }
-                          },
-                          {
-                            "displayName": "Id",
-                            "name": "Id",
-                            "kind": "Value",
-                            "view": { "__id": ":Text" },
-                            "dataSource":
+                              "member": { "__id": "JobView/Properties[Job]" }
+                            },
                             {
-                              "links":
-                              [
-                                {
-                                  "member": { "__id": "JobView/Properties[Job]" }
-                                },
-                                {
-                                  "member": { "__id": "Job/Properties[Id]" }
-                                }
-                              ]
+                              "member": { "__id": "Job/Properties[Tid]" }
                             }
-                          },
-                          {
-                            "displayName": "Created By",
-                            "name": "CreatedBy",
-                            "kind": "Value",
-                            "view": { "__id": ":Text" },
-                            "dataSource":
+                          ]
+                        }
+                      },
+                      {
+                        "displayName": "Id",
+                        "name": "Id",
+                        "kind": "Value",
+                        "view": { "__id": ":Text" },
+                        "dataSource":
+                        {
+                          "links":
+                          [
                             {
-                              "links":
-                              [
-                                {
-                                  "member": { "__id": "JobView/Properties[Job]" }
-                                },
-                                {
-                                  "member": { "__id": "Job/Properties[CreatedBy]" }
-                                }
-                              ]
-                            }
-                          },
-                          {
-                            "displayName": "Created",
-                            "name": "Created",
-                            "kind": "Value",
-                            "view": { "__id": ":Text" },
-                            "dataSource":
+                              "member": { "__id": "JobView/Properties[Job]" }
+                            },
                             {
-                              "links":
-                              [
-                                {
-                                  "member": { "__id": "JobView/Properties[Job]" }
-                                },
-                                {
-                                  "member": { "__id": "Job/Properties[Created]" }
-                                }
-                              ]
+                              "member": { "__id": "Job/Properties[Id]" }
                             }
-                          },
-                          {
-                            "displayName": "Modified By",
-                            "name": "ModifiedBy",
-                            "kind": "Value",
-                            "view": { "__id": ":Text" },
-                            "dataSource":
+                          ]
+                        }
+                      },
+                      {
+                        "displayName": "Created By",
+                        "name": "CreatedBy",
+                        "kind": "Value",
+                        "view": { "__id": ":Text" },
+                        "dataSource":
+                        {
+                          "links":
+                          [
                             {
-                              "links":
-                              [
-                                {
-                                  "member": { "__id": "JobView/Properties[Job]" }
-                                },
-                                {
-                                  "member": { "__id": "Job/Properties[ModifiedBy]" }
-                                }
-                              ]
-                            }
-                          },
-                          {
-                            "displayName": "Modified",
-                            "name": "Modified",
-                            "kind": "Value",
-                            "view": { "__id": ":Text" },
-                            "dataSource":
+                              "member": { "__id": "JobView/Properties[Job]" }
+                            },
                             {
-                              "links":
-                              [
-                                {
-                                  "member": { "__id": "JobView/Properties[Job]" }
-                                },
-                                {
-                                  "member": { "__id": "Job/Properties[Modified]" }
-                                }
-                              ]
+                              "member": { "__id": "Job/Properties[CreatedBy]" }
                             }
-                          }
-                        ]
+                          ]
+                        }
+                      },
+                      {
+                        "displayName": "Created",
+                        "name": "Created",
+                        "kind": "Value",
+                        "view": { "__id": ":Text" },
+                        "dataSource":
+                        {
+                          "links":
+                          [
+                            {
+                              "member": { "__id": "JobView/Properties[Job]" }
+                            },
+                            {
+                              "member": { "__id": "Job/Properties[Created]" }
+                            }
+                          ]
+                        }
+                      },
+                      {
+                        "displayName": "Modified By",
+                        "name": "ModifiedBy",
+                        "kind": "Value",
+                        "view": { "__id": ":Text" },
+                        "dataSource":
+                        {
+                          "links":
+                          [
+                            {
+                              "member": { "__id": "JobView/Properties[Job]" }
+                            },
+                            {
+                              "member": { "__id": "Job/Properties[ModifiedBy]" }
+                            }
+                          ]
+                        }
+                      },
+                      {
+                        "displayName": "Modified",
+                        "name": "Modified",
+                        "kind": "Value",
+                        "view": { "__id": ":Text" },
+                        "dataSource":
+                        {
+                          "links":
+                          [
+                            {
+                              "member": { "__id": "JobView/Properties[Job]" }
+                            },
+                            {
+                              "member": { "__id": "Job/Properties[Modified]" }
+                            }
+                          ]
+                        }
                       }
                     ]
                   }
@@ -13808,96 +13745,76 @@
                     "childContentItems":
                     [
                       {
-                        "displayName": "left",
-                        "name": "left",
-                        "kind": "Group",
-                        "view": { "__id": ":RowsLayout" },
-                        "childContentItems":
-                        [
-                          {
-                            "displayName": "Key",
-                            "name": "Key",
-                            "kind": "Value",
-                            "view": { "__id": ":TextArea" },
-                            "dataSource":
+                        "displayName": "Key",
+                        "name": "Key",
+                        "kind": "Value",
+                        "view": { "__id": ":TextArea" },
+                        "dataSource":
+                        {
+                          "links":
+                          [
                             {
-                              "links":
-                              [
-                                {
-                                  "member": { "__id": "KeyNameValueEdit/Properties[KeyNameValue]" }
-                                },
-                                {
-                                  "member": { "__id": "KeyNameValue/Properties[Key]" }
-                                }
-                              ]
-                            }
-                          },
-                          {
-                            "displayName": "Name",
-                            "name": "Name",
-                            "kind": "Value",
-                            "view": { "__id": ":TextArea" },
-                            "dataSource":
+                              "member": { "__id": "KeyNameValueEdit/Properties[KeyNameValue]" }
+                            },
                             {
-                              "links":
-                              [
-                                {
-                                  "member": { "__id": "KeyNameValueEdit/Properties[KeyNameValue]" }
-                                },
-                                {
-                                  "member": { "__id": "KeyNameValue/Properties[Name]" }
-                                }
-                              ]
+                              "member": { "__id": "KeyNameValue/Properties[Key]" }
                             }
-                          },
-                          {
-                            "displayName": "Value",
-                            "name": "Value",
-                            "kind": "Value",
-                            "view": { "__id": ":TextArea" },
-                            "dataSource":
+                          ]
+                        }
+                      },
+                      {
+                        "displayName": "Name",
+                        "name": "Name",
+                        "kind": "Value",
+                        "view": { "__id": ":TextArea" },
+                        "dataSource":
+                        {
+                          "links":
+                          [
                             {
-                              "links":
-                              [
-                                {
-                                  "member": { "__id": "KeyNameValueEdit/Properties[KeyNameValue]" }
-                                },
-                                {
-                                  "member": { "__id": "KeyNameValue/Properties[Value]" }
-                                }
-                              ]
-                            }
-                          },
-                          {
-                            "displayName": "Description",
-                            "name": "Description",
-                            "kind": "Value",
-                            "view": { "__id": ":TextArea" },
-                            "dataSource":
+                              "member": { "__id": "KeyNameValueEdit/Properties[KeyNameValue]" }
+                            },
                             {
-                              "links":
-                              [
-                                {
-                                  "member": { "__id": "KeyNameValueEdit/Properties[KeyNameValue]" }
-                                },
-                                {
-                                  "member": { "__id": "KeyNameValue/Properties[Description]" }
-                                }
-                              ]
+                              "member": { "__id": "KeyNameValue/Properties[Name]" }
                             }
-                          }
-                        ],
-                        "propertySources":
-                        [
-                          {
-                            "property": { "__id": ":RootControl/Properties[MinWidth]" },
-                            "value": 200
-                          },
-                          {
-                            "property": { "__id": ":RootControl/Properties[MaxWidth]" },
-                            "value": 400
-                          }
-                        ]
+                          ]
+                        }
+                      },
+                      {
+                        "displayName": "Value",
+                        "name": "Value",
+                        "kind": "Value",
+                        "view": { "__id": ":TextArea" },
+                        "dataSource":
+                        {
+                          "links":
+                          [
+                            {
+                              "member": { "__id": "KeyNameValueEdit/Properties[KeyNameValue]" }
+                            },
+                            {
+                              "member": { "__id": "KeyNameValue/Properties[Value]" }
+                            }
+                          ]
+                        }
+                      },
+                      {
+                        "displayName": "Description",
+                        "name": "Description",
+                        "kind": "Value",
+                        "view": { "__id": ":TextArea" },
+                        "dataSource":
+                        {
+                          "links":
+                          [
+                            {
+                              "member": { "__id": "KeyNameValueEdit/Properties[KeyNameValue]" }
+                            },
+                            {
+                              "member": { "__id": "KeyNameValue/Properties[Description]" }
+                            }
+                          ]
+                        }
                       }
                     ]
                   },
@@ -14433,77 +14350,76 @@
                     "childContentItems":
                     [
                       {
-                        "displayName": "columns",
-                        "name": "columns",
-                        "kind": "Details",
-                        "view": { "__id": ":ColumnsLayout" },
+                        "displayName": "Key",
+                        "name": "Key",
+                        "kind": "Value",
+                        "view": { "__id": ":Text" },
                         "dataSource":
                         {
-                          "member": { "__id": "KeyNameValueView/Properties[KeyNameValue]" }
-                        },
-                        "childContentItems":
-                        [
-                          {
-                            "displayName": "left",
-                            "name": "left",
-                            "kind": "Group",
-                            "view": { "__id": ":RowsLayout" },
-                            "childContentItems":
-                            [
-                              {
-                                "displayName": "Key",
-                                "name": "Key",
-                                "kind": "Value",
-                                "view": { "__id": ":Text" },
-                                "dataSource":
-                                {
-                                  "member": { "__id": "KeyNameValue/Properties[Key]" }
-                                }
-                              },
-                              {
-                                "displayName": "Name",
-                                "name": "Name",
-                                "kind": "Value",
-                                "view": { "__id": ":Text" },
-                                "dataSource":
-                                {
-                                  "member": { "__id": "KeyNameValue/Properties[Name]" }
-                                }
-                              },
-                              {
-                                "displayName": "Value",
-                                "name": "Value",
-                                "kind": "Value",
-                                "view": { "__id": ":Paragraph" },
-                                "dataSource":
-                                {
-                                  "member": { "__id": "KeyNameValue/Properties[Value]" }
-                                }
-                              },
-                              {
-                                "displayName": "Description",
-                                "name": "Description",
-                                "kind": "Value",
-                                "view": { "__id": ":Paragraph" },
-                                "dataSource":
-                                {
-                                  "member": { "__id": "KeyNameValue/Properties[Description]" }
-                                }
-                              }
-                            ],
-                            "propertySources":
-                            [
-                              {
-                                "property": { "__id": ":RootControl/Properties[MinWidth]" },
-                                "value": 200
-                              },
-                              {
-                                "property": { "__id": ":RootControl/Properties[MaxWidth]" },
-                                "value": 400
-                              }
-                            ]
-                          }
-                        ]
+                          "links":
+                          [
+                            {
+                              "member": { "__id": "KeyNameValueView/Properties[KeyNameValue]" }
+                            },
+                            {
+                              "member": { "__id": "KeyNameValue/Properties[Key]" }
+                            }
+                          ]
+                        }
+                      },
+                      {
+                        "displayName": "Name",
+                        "name": "Name",
+                        "kind": "Value",
+                        "view": { "__id": ":Text" },
+                        "dataSource":
+                        {
+                          "links":
+                          [
+                            {
+                              "member": { "__id": "KeyNameValueView/Properties[KeyNameValue]" }
+                            },
+                            {
+                              "member": { "__id": "KeyNameValue/Properties[Name]" }
+                            }
+                          ]
+                        }
+                      },
+                      {
+                        "displayName": "Value",
+                        "name": "Value",
+                        "kind": "Value",
+                        "view": { "__id": ":Paragraph" },
+                        "dataSource":
+                        {
+                          "links":
+                          [
+                            {
+                              "member": { "__id": "KeyNameValueView/Properties[KeyNameValue]" }
+                            },
+                            {
+                              "member": { "__id": "KeyNameValue/Properties[Value]" }
+                            }
+                          ]
+                        }
+                      },
+                      {
+                        "displayName": "Description",
+                        "name": "Description",
+                        "kind": "Value",
+                        "view": { "__id": ":Paragraph" },
+                        "dataSource":
+                        {
+                          "links":
+                          [
+                            {
+                              "member": { "__id": "KeyNameValueView/Properties[KeyNameValue]" }
+                            },
+                            {
+                              "member": { "__id": "KeyNameValue/Properties[Description]" }
+                            }
+                          ]
+                        }
                       }
                     ],
                     "commandItems":
@@ -15780,67 +15696,58 @@
                     "childContentItems":
                     [
                       {
-                        "displayName": "Group",
-                        "name": "Group",
-                        "kind": "Group",
-                        "view": { "__id": ":RowsLayout" },
-                        "childContentItems":
-                        [
-                          {
-                            "displayName": "Name",
-                            "name": "Name",
-                            "kind": "Value",
-                            "view": { "__id": ":TextBox" },
-                            "dataSource":
+                        "displayName": "Name",
+                        "name": "Name",
+                        "kind": "Value",
+                        "view": { "__id": ":TextBox" },
+                        "dataSource":
+                        {
+                          "links":
+                          [
                             {
-                              "links":
-                              [
-                                {
-                                  "member": { "__id": "OrderAdd/Properties[Order]" }
-                                },
-                                {
-                                  "member": { "__id": "Order/Properties[Name]" }
-                                }
-                              ]
-                            }
-                          },
-                          {
-                            "displayName": "Description",
-                            "name": "Description",
-                            "kind": "Value",
-                            "view": { "__id": ":TextArea" },
-                            "dataSource":
+                              "member": { "__id": "OrderAdd/Properties[Order]" }
+                            },
                             {
-                              "links":
-                              [
-                                {
-                                  "member": { "__id": "OrderAdd/Properties[Order]" }
-                                },
-                                {
-                                  "member": { "__id": "Order/Properties[Description]" }
-                                }
-                              ]
+                              "member": { "__id": "Order/Properties[Name]" }
                             }
-                          },
-                          {
-                            "displayName": "Parameters",
-                            "name": "Parameters1",
-                            "kind": "Value",
-                            "view": { "__id": ":TextArea" },
-                            "dataSource":
+                          ]
+                        }
+                      },
+                      {
+                        "displayName": "Description",
+                        "name": "Description",
+                        "kind": "Value",
+                        "view": { "__id": ":TextArea" },
+                        "dataSource":
+                        {
+                          "links":
+                          [
                             {
-                              "links":
-                              [
-                                {
-                                  "member": { "__id": "OrderAdd/Properties[Order]" }
-                                },
-                                {
-                                  "member": { "__id": "Order/Properties[Parameters]" }
-                                }
-                              ]
+                              "member": { "__id": "OrderAdd/Properties[Order]" }
+                            },
+                            {
+                              "member": { "__id": "Order/Properties[Description]" }
                             }
-                          }
-                        ]
+                          ]
+                        }
+                      },
+                      {
+                        "displayName": "Parameters",
+                        "name": "Parameters1",
+                        "kind": "Value",
+                        "view": { "__id": ":TextArea" },
+                        "dataSource":
+                        {
+                          "links":
+                          [
+                            {
+                              "member": { "__id": "OrderAdd/Properties[Order]" }
+                            },
+                            {
+                              "member": { "__id": "Order/Properties[Parameters]" }
+                            }
+                          ]
+                        }
                       }
                     ]
                   },
@@ -15852,139 +15759,130 @@
                     "childContentItems":
                     [
                       {
-                        "displayName": "General Group1",
-                        "name": "GeneralGroup1",
-                        "kind": "Group",
-                        "view": { "__id": ":RowsLayout" },
-                        "childContentItems":
-                        [
-                          {
-                            "displayName": "Tid",
-                            "name": "Tid",
-                            "kind": "Value",
-                            "view": { "__id": ":TextBox" },
-                            "dataSource":
+                        "displayName": "Tid",
+                        "name": "Tid",
+                        "kind": "Value",
+                        "view": { "__id": ":TextBox" },
+                        "dataSource":
+                        {
+                          "links":
+                          [
                             {
-                              "links":
-                              [
-                                {
-                                  "member": { "__id": "OrderAdd/Properties[Order]" }
-                                },
-                                {
-                                  "member": { "__id": "Order/Properties[Tid]" }
-                                }
-                              ]
-                            }
-                          },
-                          {
-                            "displayName": "Id",
-                            "name": "Id",
-                            "kind": "Value",
-                            "view": { "__id": ":TextBox" },
-                            "dataSource":
+                              "member": { "__id": "OrderAdd/Properties[Order]" }
+                            },
                             {
-                              "links":
-                              [
-                                {
-                                  "member": { "__id": "OrderAdd/Properties[Order]" }
-                                },
-                                {
-                                  "member": { "__id": "Order/Properties[Id]" }
-                                }
-                              ]
+                              "member": { "__id": "Order/Properties[Tid]" }
                             }
-                          },
-                          {
-                            "displayName": "Created By",
-                            "name": "CreatedBy",
-                            "kind": "Value",
-                            "view": { "__id": ":TextBox" },
-                            "dataSource":
+                          ]
+                        }
+                      },
+                      {
+                        "displayName": "Id",
+                        "name": "Id",
+                        "kind": "Value",
+                        "view": { "__id": ":TextBox" },
+                        "dataSource":
+                        {
+                          "links":
+                          [
                             {
-                              "links":
-                              [
-                                {
-                                  "member": { "__id": "OrderAdd/Properties[Order]" }
-                                },
-                                {
-                                  "member": { "__id": "Order/Properties[CreatedBy]" }
-                                }
-                              ]
-                            }
-                          },
-                          {
-                            "displayName": "Created",
-                            "name": "Created",
-                            "kind": "Value",
-                            "view": { "__id": ":DateTimePicker" },
-                            "dataSource":
+                              "member": { "__id": "OrderAdd/Properties[Order]" }
+                            },
                             {
-                              "links":
-                              [
-                                {
-                                  "member": { "__id": "OrderAdd/Properties[Order]" }
-                                },
-                                {
-                                  "member": { "__id": "Order/Properties[Created]" }
-                                }
-                              ]
+                              "member": { "__id": "Order/Properties[Id]" }
                             }
-                          },
-                          {
-                            "displayName": "Modified By",
-                            "name": "ModifiedBy",
-                            "kind": "Value",
-                            "view": { "__id": ":TextBox" },
-                            "dataSource":
+                          ]
+                        }
+                      },
+                      {
+                        "displayName": "Created By",
+                        "name": "CreatedBy",
+                        "kind": "Value",
+                        "view": { "__id": ":TextBox" },
+                        "dataSource":
+                        {
+                          "links":
+                          [
                             {
-                              "links":
-                              [
-                                {
-                                  "member": { "__id": "OrderAdd/Properties[Order]" }
-                                },
-                                {
-                                  "member": { "__id": "Order/Properties[ModifiedBy]" }
-                                }
-                              ]
-                            }
-                          },
-                          {
-                            "displayName": "Modified",
-                            "name": "Modified",
-                            "kind": "Value",
-                            "view": { "__id": ":DateTimePicker" },
-                            "dataSource":
+                              "member": { "__id": "OrderAdd/Properties[Order]" }
+                            },
                             {
-                              "links":
-                              [
-                                {
-                                  "member": { "__id": "OrderAdd/Properties[Order]" }
-                                },
-                                {
-                                  "member": { "__id": "Order/Properties[Modified]" }
-                                }
-                              ]
+                              "member": { "__id": "Order/Properties[CreatedBy]" }
                             }
-                          },
-                          {
-                            "displayName": "Status",
-                            "name": "Status",
-                            "kind": "Value",
-                            "view": { "__id": ":TextBox" },
-                            "dataSource":
+                          ]
+                        }
+                      },
+                      {
+                        "displayName": "Created",
+                        "name": "Created",
+                        "kind": "Value",
+                        "view": { "__id": ":DateTimePicker" },
+                        "dataSource":
+                        {
+                          "links":
+                          [
                             {
-                              "links":
-                              [
-                                {
-                                  "member": { "__id": "OrderAdd/Properties[Order]" }
-                                },
-                                {
-                                  "member": { "__id": "Order/Properties[Status]" }
-                                }
-                              ]
+                              "member": { "__id": "OrderAdd/Properties[Order]" }
+                            },
+                            {
+                              "member": { "__id": "Order/Properties[Created]" }
                             }
-                          }
-                        ]
+                          ]
+                        }
+                      },
+                      {
+                        "displayName": "Modified By",
+                        "name": "ModifiedBy",
+                        "kind": "Value",
+                        "view": { "__id": ":TextBox" },
+                        "dataSource":
+                        {
+                          "links":
+                          [
+                            {
+                              "member": { "__id": "OrderAdd/Properties[Order]" }
+                            },
+                            {
+                              "member": { "__id": "Order/Properties[ModifiedBy]" }
+                            }
+                          ]
+                        }
+                      },
+                      {
+                        "displayName": "Modified",
+                        "name": "Modified",
+                        "kind": "Value",
+                        "view": { "__id": ":DateTimePicker" },
+                        "dataSource":
+                        {
+                          "links":
+                          [
+                            {
+                              "member": { "__id": "OrderAdd/Properties[Order]" }
+                            },
+                            {
+                              "member": { "__id": "Order/Properties[Modified]" }
+                            }
+                          ]
+                        }
+                      },
+                      {
+                        "displayName": "Status",
+                        "name": "Status",
+                        "kind": "Value",
+                        "view": { "__id": ":TextBox" },
+                        "dataSource":
+                        {
+                          "links":
+                          [
+                            {
+                              "member": { "__id": "OrderAdd/Properties[Order]" }
+                            },
+                            {
+                              "member": { "__id": "Order/Properties[Status]" }
+                            }
+                          ]
+                        }
                       }
                     ]
                   }
@@ -16181,139 +16079,130 @@
                     "childContentItems":
                     [
                       {
-                        "displayName": "General Group1",
-                        "name": "GeneralGroup1",
-                        "kind": "Group",
-                        "view": { "__id": ":RowsLayout" },
-                        "childContentItems":
-                        [
-                          {
-                            "displayName": "Tid",
-                            "name": "Tid",
-                            "kind": "Value",
-                            "view": { "__id": ":Text" },
-                            "dataSource":
+                        "displayName": "Tid",
+                        "name": "Tid",
+                        "kind": "Value",
+                        "view": { "__id": ":Text" },
+                        "dataSource":
+                        {
+                          "links":
+                          [
                             {
-                              "links":
-                              [
-                                {
-                                  "member": { "__id": "OrderAddSpecial/Properties[Order]" }
-                                },
-                                {
-                                  "member": { "__id": "Order/Properties[Tid]" }
-                                }
-                              ]
-                            }
-                          },
-                          {
-                            "displayName": "Id",
-                            "name": "Id",
-                            "kind": "Value",
-                            "view": { "__id": ":Text" },
-                            "dataSource":
+                              "member": { "__id": "OrderAddSpecial/Properties[Order]" }
+                            },
                             {
-                              "links":
-                              [
-                                {
-                                  "member": { "__id": "OrderAddSpecial/Properties[Order]" }
-                                },
-                                {
-                                  "member": { "__id": "Order/Properties[Id]" }
-                                }
-                              ]
+                              "member": { "__id": "Order/Properties[Tid]" }
                             }
-                          },
-                          {
-                            "displayName": "Created By",
-                            "name": "CreatedBy",
-                            "kind": "Value",
-                            "view": { "__id": ":Text" },
-                            "dataSource":
+                          ]
+                        }
+                      },
+                      {
+                        "displayName": "Id",
+                        "name": "Id",
+                        "kind": "Value",
+                        "view": { "__id": ":Text" },
+                        "dataSource":
+                        {
+                          "links":
+                          [
                             {
-                              "links":
-                              [
-                                {
-                                  "member": { "__id": "OrderAddSpecial/Properties[Order]" }
-                                },
-                                {
-                                  "member": { "__id": "Order/Properties[CreatedBy]" }
-                                }
-                              ]
-                            }
-                          },
-                          {
-                            "displayName": "Created",
-                            "name": "Created",
-                            "kind": "Value",
-                            "view": { "__id": ":Text" },
-                            "dataSource":
+                              "member": { "__id": "OrderAddSpecial/Properties[Order]" }
+                            },
                             {
-                              "links":
-                              [
-                                {
-                                  "member": { "__id": "OrderAddSpecial/Properties[Order]" }
-                                },
-                                {
-                                  "member": { "__id": "Order/Properties[Created]" }
-                                }
-                              ]
+                              "member": { "__id": "Order/Properties[Id]" }
                             }
-                          },
-                          {
-                            "displayName": "Modified By",
-                            "name": "ModifiedBy",
-                            "kind": "Value",
-                            "view": { "__id": ":Text" },
-                            "dataSource":
+                          ]
+                        }
+                      },
+                      {
+                        "displayName": "Created By",
+                        "name": "CreatedBy",
+                        "kind": "Value",
+                        "view": { "__id": ":Text" },
+                        "dataSource":
+                        {
+                          "links":
+                          [
                             {
-                              "links":
-                              [
-                                {
-                                  "member": { "__id": "OrderAddSpecial/Properties[Order]" }
-                                },
-                                {
-                                  "member": { "__id": "Order/Properties[ModifiedBy]" }
-                                }
-                              ]
-                            }
-                          },
-                          {
-                            "displayName": "Modified",
-                            "name": "Modified",
-                            "kind": "Value",
-                            "view": { "__id": ":Text" },
-                            "dataSource":
+                              "member": { "__id": "OrderAddSpecial/Properties[Order]" }
+                            },
                             {
-                              "links":
-                              [
-                                {
-                                  "member": { "__id": "OrderAddSpecial/Properties[Order]" }
-                                },
-                                {
-                                  "member": { "__id": "Order/Properties[Modified]" }
-                                }
-                              ]
+                              "member": { "__id": "Order/Properties[CreatedBy]" }
                             }
-                          },
-                          {
-                            "displayName": "Status",
-                            "name": "Order_Status",
-                            "kind": "Value",
-                            "view": { "__id": ":Text" },
-                            "dataSource":
+                          ]
+                        }
+                      },
+                      {
+                        "displayName": "Created",
+                        "name": "Created",
+                        "kind": "Value",
+                        "view": { "__id": ":Text" },
+                        "dataSource":
+                        {
+                          "links":
+                          [
                             {
-                              "links":
-                              [
-                                {
-                                  "member": { "__id": "OrderAddSpecial/Properties[Order]" }
-                                },
-                                {
-                                  "member": { "__id": "Order/Properties[Status]" }
-                                }
-                              ]
+                              "member": { "__id": "OrderAddSpecial/Properties[Order]" }
+                            },
+                            {
+                              "member": { "__id": "Order/Properties[Created]" }
                             }
-                          }
-                        ]
+                          ]
+                        }
+                      },
+                      {
+                        "displayName": "Modified By",
+                        "name": "ModifiedBy",
+                        "kind": "Value",
+                        "view": { "__id": ":Text" },
+                        "dataSource":
+                        {
+                          "links":
+                          [
+                            {
+                              "member": { "__id": "OrderAddSpecial/Properties[Order]" }
+                            },
+                            {
+                              "member": { "__id": "Order/Properties[ModifiedBy]" }
+                            }
+                          ]
+                        }
+                      },
+                      {
+                        "displayName": "Modified",
+                        "name": "Modified",
+                        "kind": "Value",
+                        "view": { "__id": ":Text" },
+                        "dataSource":
+                        {
+                          "links":
+                          [
+                            {
+                              "member": { "__id": "OrderAddSpecial/Properties[Order]" }
+                            },
+                            {
+                              "member": { "__id": "Order/Properties[Modified]" }
+                            }
+                          ]
+                        }
+                      },
+                      {
+                        "displayName": "Status",
+                        "name": "Order_Status",
+                        "kind": "Value",
+                        "view": { "__id": ":Text" },
+                        "dataSource":
+                        {
+                          "links":
+                          [
+                            {
+                              "member": { "__id": "OrderAddSpecial/Properties[Order]" }
+                            },
+                            {
+                              "member": { "__id": "Order/Properties[Status]" }
+                            }
+                          ]
+                        }
                       }
                     ]
                   }
@@ -16853,121 +16742,112 @@
                     "childContentItems":
                     [
                       {
-                        "displayName": "General Group1",
-                        "name": "GeneralGroup1",
-                        "kind": "Group",
-                        "view": { "__id": ":RowsLayout" },
-                        "childContentItems":
-                        [
-                          {
-                            "displayName": "Tid",
-                            "name": "Tid",
-                            "kind": "Value",
-                            "view": { "__id": ":Text" },
-                            "dataSource":
+                        "displayName": "Tid",
+                        "name": "Tid",
+                        "kind": "Value",
+                        "view": { "__id": ":Text" },
+                        "dataSource":
+                        {
+                          "links":
+                          [
                             {
-                              "links":
-                              [
-                                {
-                                  "member": { "__id": "OrderItemView/Properties[OrderItem]" }
-                                },
-                                {
-                                  "member": { "__id": "OrderItem/Properties[Tid]" }
-                                }
-                              ]
-                            }
-                          },
-                          {
-                            "displayName": "Id",
-                            "name": "Id",
-                            "kind": "Value",
-                            "view": { "__id": ":Text" },
-                            "dataSource":
+                              "member": { "__id": "OrderItemView/Properties[OrderItem]" }
+                            },
                             {
-                              "links":
-                              [
-                                {
-                                  "member": { "__id": "OrderItemView/Properties[OrderItem]" }
-                                },
-                                {
-                                  "member": { "__id": "OrderItem/Properties[Id]" }
-                                }
-                              ]
+                              "member": { "__id": "OrderItem/Properties[Tid]" }
                             }
-                          },
-                          {
-                            "displayName": "Created By",
-                            "name": "CreatedBy",
-                            "kind": "Value",
-                            "view": { "__id": ":Text" },
-                            "dataSource":
+                          ]
+                        }
+                      },
+                      {
+                        "displayName": "Id",
+                        "name": "Id",
+                        "kind": "Value",
+                        "view": { "__id": ":Text" },
+                        "dataSource":
+                        {
+                          "links":
+                          [
                             {
-                              "links":
-                              [
-                                {
-                                  "member": { "__id": "OrderItemView/Properties[OrderItem]" }
-                                },
-                                {
-                                  "member": { "__id": "OrderItem/Properties[CreatedBy]" }
-                                }
-                              ]
-                            }
-                          },
-                          {
-                            "displayName": "Created",
-                            "name": "Created",
-                            "kind": "Value",
-                            "view": { "__id": ":Text" },
-                            "dataSource":
+                              "member": { "__id": "OrderItemView/Properties[OrderItem]" }
+                            },
                             {
-                              "links":
-                              [
-                                {
-                                  "member": { "__id": "OrderItemView/Properties[OrderItem]" }
-                                },
-                                {
-                                  "member": { "__id": "OrderItem/Properties[Created]" }
-                                }
-                              ]
+                              "member": { "__id": "OrderItem/Properties[Id]" }
                             }
-                          },
-                          {
-                            "displayName": "Modified By",
-                            "name": "ModifiedBy",
-                            "kind": "Value",
-                            "view": { "__id": ":Text" },
-                            "dataSource":
+                          ]
+                        }
+                      },
+                      {
+                        "displayName": "Created By",
+                        "name": "CreatedBy",
+                        "kind": "Value",
+                        "view": { "__id": ":Text" },
+                        "dataSource":
+                        {
+                          "links":
+                          [
                             {
-                              "links":
-                              [
-                                {
-                                  "member": { "__id": "OrderItemView/Properties[OrderItem]" }
-                                },
-                                {
-                                  "member": { "__id": "OrderItem/Properties[ModifiedBy]" }
-                                }
-                              ]
-                            }
-                          },
-                          {
-                            "displayName": "Modified",
-                            "name": "Modified",
-                            "kind": "Value",
-                            "view": { "__id": ":Text" },
-                            "dataSource":
+                              "member": { "__id": "OrderItemView/Properties[OrderItem]" }
+                            },
                             {
-                              "links":
-                              [
-                                {
-                                  "member": { "__id": "OrderItemView/Properties[OrderItem]" }
-                                },
-                                {
-                                  "member": { "__id": "OrderItem/Properties[Modified]" }
-                                }
-                              ]
+                              "member": { "__id": "OrderItem/Properties[CreatedBy]" }
                             }
-                          }
-                        ]
+                          ]
+                        }
+                      },
+                      {
+                        "displayName": "Created",
+                        "name": "Created",
+                        "kind": "Value",
+                        "view": { "__id": ":Text" },
+                        "dataSource":
+                        {
+                          "links":
+                          [
+                            {
+                              "member": { "__id": "OrderItemView/Properties[OrderItem]" }
+                            },
+                            {
+                              "member": { "__id": "OrderItem/Properties[Created]" }
+                            }
+                          ]
+                        }
+                      },
+                      {
+                        "displayName": "Modified By",
+                        "name": "ModifiedBy",
+                        "kind": "Value",
+                        "view": { "__id": ":Text" },
+                        "dataSource":
+                        {
+                          "links":
+                          [
+                            {
+                              "member": { "__id": "OrderItemView/Properties[OrderItem]" }
+                            },
+                            {
+                              "member": { "__id": "OrderItem/Properties[ModifiedBy]" }
+                            }
+                          ]
+                        }
+                      },
+                      {
+                        "displayName": "Modified",
+                        "name": "Modified",
+                        "kind": "Value",
+                        "view": { "__id": ":Text" },
+                        "dataSource":
+                        {
+                          "links":
+                          [
+                            {
+                              "member": { "__id": "OrderItemView/Properties[OrderItem]" }
+                            },
+                            {
+                              "member": { "__id": "OrderItem/Properties[Modified]" }
+                            }
+                          ]
+                        }
                       }
                     ]
                   }
@@ -17435,92 +17315,99 @@
                     "childContentItems":
                     [
                       {
-                        "displayName": "columns",
-                        "name": "columns",
-                        "kind": "Details",
-                        "view": { "__id": ":ColumnsLayout" },
+                        "displayName": "Name",
+                        "name": "Name",
+                        "kind": "Value",
+                        "view": { "__id": ":Text" },
                         "dataSource":
                         {
-                          "member": { "__id": "OrderView/Properties[Order]" }
+                          "links":
+                          [
+                            {
+                              "member": { "__id": "OrderView/Properties[Order]" }
+                            },
+                            {
+                              "member": { "__id": "Order/Properties[Name]" }
+                            }
+                          ]
+                        }
+                      },
+                      {
+                        "displayName": "Status",
+                        "name": "Status",
+                        "kind": "Value",
+                        "view": { "__id": ":Text" },
+                        "dataSource":
+                        {
+                          "links":
+                          [
+                            {
+                              "member": { "__id": "OrderView/Properties[Order]" }
+                            },
+                            {
+                              "member": { "__id": "Order/Properties[Status]" }
+                            }
+                          ]
+                        }
+                      },
+                      {
+                        "displayName": "Requester",
+                        "name": "Requester",
+                        "kind": "Value",
+                        "view": { "__id": ":Text" },
+                        "dataSource":
+                        {
+                          "links":
+                          [
+                            {
+                              "member": { "__id": "OrderView/Properties[Order]" }
+                            },
+                            {
+                              "member": { "__id": "Order/Properties[Requester]" }
+                            }
+                          ]
+                        }
+                      },
+                      {
+                        "displayName": "Description",
+                        "name": "Description1",
+                        "kind": "Value",
+                        "view": { "__id": ":Paragraph" },
+                        "dataSource":
+                        {
+                          "links":
+                          [
+                            {
+                              "member": { "__id": "OrderView/Properties[Order]" }
+                            },
+                            {
+                              "member": { "__id": "Order/Properties[Description]" }
+                            }
+                          ]
+                        }
+                      },
+                      {
+                        "displayName": "Parameters",
+                        "name": "Parameters",
+                        "kind": "Value",
+                        "view": { "__id": ":Paragraph" },
+                        "dataSource":
+                        {
+                          "links":
+                          [
+                            {
+                              "member": { "__id": "OrderView/Properties[Order]" }
+                            },
+                            {
+                              "member": { "__id": "Order/Properties[Parameters]" }
+                            }
+                          ]
                         },
-                        "childContentItems":
+                        "propertySources":
                         [
                           {
-                            "displayName": "left",
-                            "name": "left",
-                            "kind": "Group",
-                            "view": { "__id": ":RowsLayout" },
-                            "childContentItems":
-                            [
-                              {
-                                "displayName": "Name",
-                                "name": "Name",
-                                "kind": "Value",
-                                "view": { "__id": ":Text" },
-                                "dataSource":
-                                {
-                                  "member": { "__id": "Order/Properties[Name]" }
-                                }
-                              },
-                              {
-                                "displayName": "Status",
-                                "name": "Status",
-                                "kind": "Value",
-                                "view": { "__id": ":Text" },
-                                "dataSource":
-                                {
-                                  "member": { "__id": "Order/Properties[Status]" }
-                                }
-                              },
-                              {
-                                "displayName": "Requester",
-                                "name": "Requester",
-                                "kind": "Value",
-                                "view": { "__id": ":Text" },
-                                "dataSource":
-                                {
-                                  "member": { "__id": "Order/Properties[Requester]" }
-                                }
-                              },
-                              {
-                                "displayName": "Description",
-                                "name": "Description1",
-                                "kind": "Value",
-                                "view": { "__id": ":Paragraph" },
-                                "dataSource":
-                                {
-                                  "member": { "__id": "Order/Properties[Description]" }
-                                }
-                              },
-                              {
-                                "displayName": "Parameters",
-                                "name": "Parameters",
-                                "kind": "Value",
-                                "view": { "__id": ":Paragraph" },
-                                "dataSource":
-                                {
-                                  "member": { "__id": "Order/Properties[Parameters]" }
-                                },
-                                "propertySources":
-                                [
-                                  {
-                                    "property": { "__id": ":RootControl/Properties[FontStyle]" },
-                                    "value": "Small"
-                                  }
-                                ]
-                              }
-                            ],
-                            "propertySources":
-                            [
-                              {
-                                "property": { "__id": ":RootControl/Properties[MinWidth]" },
-                                "value": 200
-                              },
-                              {
-                                "property": { "__id": ":RootControl/Properties[MaxWidth]" },
-                                "value": 400
-                              }
-                            ]
+                            "property": { "__id": ":RootControl/Properties[FontStyle]" },
+                            "value": "Small"
                           }
                         ]
                       }
@@ -17613,121 +17500,112 @@
                     "childContentItems":
                     [
                       {
-                        "displayName": "General Group1",
-                        "name": "GeneralGroup1",
-                        "kind": "Group",
-                        "view": { "__id": ":RowsLayout" },
-                        "childContentItems":
-                        [
-                          {
-                            "displayName": "Tid",
-                            "name": "Tid",
-                            "kind": "Value",
-                            "view": { "__id": ":Text" },
-                            "dataSource":
+                        "displayName": "Tid",
+                        "name": "Tid",
+                        "kind": "Value",
+                        "view": { "__id": ":Text" },
+                        "dataSource":
+                        {
+                          "links":
+                          [
                             {
-                              "links":
-                              [
-                                {
-                                  "member": { "__id": "OrderView/Properties[Order]" }
-                                },
-                                {
-                                  "member": { "__id": "Order/Properties[Tid]" }
-                                }
-                              ]
-                            }
-                          },
-                          {
-                            "displayName": "Id",
-                            "name": "Id",
-                            "kind": "Value",
-                            "view": { "__id": ":Text" },
-                            "dataSource":
+                              "member": { "__id": "OrderView/Properties[Order]" }
+                            },
                             {
-                              "links":
-                              [
-                                {
-                                  "member": { "__id": "OrderView/Properties[Order]" }
-                                },
-                                {
-                                  "member": { "__id": "Order/Properties[Id]" }
-                                }
-                              ]
+                              "member": { "__id": "Order/Properties[Tid]" }
                             }
-                          },
-                          {
-                            "displayName": "Created By",
-                            "name": "CreatedBy",
-                            "kind": "Value",
-                            "view": { "__id": ":Text" },
-                            "dataSource":
+                          ]
+                        }
+                      },
+                      {
+                        "displayName": "Id",
+                        "name": "Id",
+                        "kind": "Value",
+                        "view": { "__id": ":Text" },
+                        "dataSource":
+                        {
+                          "links":
+                          [
                             {
-                              "links":
-                              [
-                                {
-                                  "member": { "__id": "OrderView/Properties[Order]" }
-                                },
-                                {
-                                  "member": { "__id": "Order/Properties[CreatedBy]" }
-                                }
-                              ]
-                            }
-                          },
-                          {
-                            "displayName": "Created",
-                            "name": "Created",
-                            "kind": "Value",
-                            "view": { "__id": ":Text" },
-                            "dataSource":
+                              "member": { "__id": "OrderView/Properties[Order]" }
+                            },
                             {
-                              "links":
-                              [
-                                {
-                                  "member": { "__id": "OrderView/Properties[Order]" }
-                                },
-                                {
-                                  "member": { "__id": "Order/Properties[Created]" }
-                                }
-                              ]
+                              "member": { "__id": "Order/Properties[Id]" }
                             }
-                          },
-                          {
-                            "displayName": "Modified By",
-                            "name": "ModifiedBy",
-                            "kind": "Value",
-                            "view": { "__id": ":Text" },
-                            "dataSource":
+                          ]
+                        }
+                      },
+                      {
+                        "displayName": "Created By",
+                        "name": "CreatedBy",
+                        "kind": "Value",
+                        "view": { "__id": ":Text" },
+                        "dataSource":
+                        {
+                          "links":
+                          [
                             {
-                              "links":
-                              [
-                                {
-                                  "member": { "__id": "OrderView/Properties[Order]" }
-                                },
-                                {
-                                  "member": { "__id": "Order/Properties[ModifiedBy]" }
-                                }
-                              ]
-                            }
-                          },
-                          {
-                            "displayName": "Modified",
-                            "name": "Modified",
-                            "kind": "Value",
-                            "view": { "__id": ":Text" },
-                            "dataSource":
+                              "member": { "__id": "OrderView/Properties[Order]" }
+                            },
                             {
-                              "links":
-                              [
-                                {
-                                  "member": { "__id": "OrderView/Properties[Order]" }
-                                },
-                                {
-                                  "member": { "__id": "Order/Properties[Modified]" }
-                                }
-                              ]
+                              "member": { "__id": "Order/Properties[CreatedBy]" }
                             }
-                          }
-                        ]
+                          ]
+                        }
+                      },
+                      {
+                        "displayName": "Created",
+                        "name": "Created",
+                        "kind": "Value",
+                        "view": { "__id": ":Text" },
+                        "dataSource":
+                        {
+                          "links":
+                          [
+                            {
+                              "member": { "__id": "OrderView/Properties[Order]" }
+                            },
+                            {
+                              "member": { "__id": "Order/Properties[Created]" }
+                            }
+                          ]
+                        }
+                      },
+                      {
+                        "displayName": "Modified By",
+                        "name": "ModifiedBy",
+                        "kind": "Value",
+                        "view": { "__id": ":Text" },
+                        "dataSource":
+                        {
+                          "links":
+                          [
+                            {
+                              "member": { "__id": "OrderView/Properties[Order]" }
+                            },
+                            {
+                              "member": { "__id": "Order/Properties[ModifiedBy]" }
+                            }
+                          ]
+                        }
+                      },
+                      {
+                        "displayName": "Modified",
+                        "name": "Modified",
+                        "kind": "Value",
+                        "view": { "__id": ":Text" },
+                        "dataSource":
+                        {
+                          "links":
+                          [
+                            {
+                              "member": { "__id": "OrderView/Properties[Order]" }
+                            },
+                            {
+                              "member": { "__id": "Order/Properties[Modified]" }
+                            }
+                          ]
+                        }
                       }
                     ]
                   }
@@ -17822,89 +17700,88 @@
                     "childContentItems":
                     [
                       {
-                        "displayName": "columns",
-                        "name": "columns",
-                        "kind": "Details",
-                        "view": { "__id": ":ColumnsLayout" },
+                        "displayName": "Name",
+                        "name": "Name",
+                        "kind": "Value",
+                        "view": { "__id": ":Text" },
                         "dataSource":
                         {
-                          "member": { "__id": "OrderViewDetails/Properties[Order]" }
+                          "links":
+                          [
+                            {
+                              "member": { "__id": "OrderViewDetails/Properties[Order]" }
+                            },
+                            {
+                              "member": { "__id": "Order/Properties[Name]" }
+                            }
+                          ]
+                        }
+                      },
+                      {
+                        "displayName": "Status",
+                        "name": "Status",
+                        "kind": "Value",
+                        "view": { "__id": ":Text" },
+                        "dataSource":
+                        {
+                          "links":
+                          [
+                            {
+                              "member": { "__id": "OrderViewDetails/Properties[Order]" }
+                            },
+                            {
+                              "member": { "__id": "Order/Properties[Status]" }
+                            }
+                          ]
+                        }
+                      },
+                      {
+                        "displayName": "Parameters",
+                        "name": "Parameters",
+                        "kind": "Value",
+                        "view": { "__id": ":Paragraph" },
+                        "dataSource":
+                        {
+                          "links":
+                          [
+                            {
+                              "member": { "__id": "OrderViewDetails/Properties[Order]" }
+                            },
+                            {
+                              "member": { "__id": "Order/Properties[Parameters]" }
+                            }
+                          ]
                         },
-                        "childContentItems":
+                        "propertySources":
                         [
                           {
-                            "displayName": "left",
-                            "name": "left",
-                            "kind": "Group",
-                            "view": { "__id": ":RowsLayout" },
-                            "childContentItems":
-                            [
-                              {
-                                "displayName": "Name",
-                                "name": "Name",
-                                "kind": "Value",
-                                "view": { "__id": ":Text" },
-                                "dataSource":
-                                {
-                                  "member": { "__id": "Order/Properties[Name]" }
-                                }
-                              },
-                              {
-                                "displayName": "Status",
-                                "name": "Status",
-                                "kind": "Value",
-                                "view": { "__id": ":Text" },
-                                "dataSource":
-                                {
-                                  "member": { "__id": "Order/Properties[Status]" }
-                                }
-                              },
-                              {
-                                "displayName": "Parameters",
-                                "name": "Parameters",
-                                "kind": "Value",
-                                "view": { "__id": ":Paragraph" },
-                                "dataSource":
-                                {
-                                  "member": { "__id": "Order/Properties[Parameters]" }
-                                },
-                                "propertySources":
-                                [
-                                  {
-                                    "property": { "__id": ":RootControl/Properties[FontStyle]" },
-                                    "value": "Small"
-                                  }
-                                ]
-                              },
-                              {
-                                "displayName": "Description",
-                                "name": "Description",
-                                "kind": "Value",
-                                "view": { "__id": ":Paragraph" },
-                                "dataSource":
-                                {
-                                  "member": { "__id": "Order/Properties[Description]" }
-                                },
-                                "propertySources":
-                                [
-                                  {
-                                    "property": { "__id": ":RootControl/Properties[FontStyle]" },
-                                    "value": "Small"
-                                  }
-                                ]
-                              }
-                            ],
-                            "propertySources":
-                            [
-                              {
-                                "property": { "__id": ":RootControl/Properties[MinWidth]" },
-                                "value": 200
-                              },
-                              {
-                                "property": { "__id": ":RootControl/Properties[MaxWidth]" },
-                                "value": 400
-                              }
-                            ]
+                            "property": { "__id": ":RootControl/Properties[FontStyle]" },
+                            "value": "Small"
+                          }
+                        ]
+                      },
+                      {
+                        "displayName": "Description",
+                        "name": "Description",
+                        "kind": "Value",
+                        "view": { "__id": ":Paragraph" },
+                        "dataSource":
+                        {
+                          "links":
+                          [
+                            {
+                              "member": { "__id": "OrderViewDetails/Properties[Order]" }
+                            },
+                            {
+                              "member": { "__id": "Order/Properties[Description]" }
+                            }
+                          ]
+                        },
+                        "propertySources":
+                        [
+                          {
+                            "property": { "__id": ":RootControl/Properties[FontStyle]" },
+                            "value": "Small"
                           }
                         ]
                       }
@@ -18037,121 +17914,112 @@
                     "childContentItems":
                     [
                       {
-                        "displayName": "General Group1",
-                        "name": "GeneralGroup1",
-                        "kind": "Group",
-                        "view": { "__id": ":RowsLayout" },
-                        "childContentItems":
-                        [
-                          {
-                            "displayName": "Tid",
-                            "name": "Tid",
-                            "kind": "Value",
-                            "view": { "__id": ":Text" },
-                            "dataSource":
+                        "displayName": "Tid",
+                        "name": "Tid",
+                        "kind": "Value",
+                        "view": { "__id": ":Text" },
+                        "dataSource":
+                        {
+                          "links":
+                          [
                             {
-                              "links":
-                              [
-                                {
-                                  "member": { "__id": "OrderViewDetails/Properties[Order]" }
-                                },
-                                {
-                                  "member": { "__id": "Order/Properties[Tid]" }
-                                }
-                              ]
-                            }
-                          },
-                          {
-                            "displayName": "Id",
-                            "name": "Id",
-                            "kind": "Value",
-                            "view": { "__id": ":Text" },
-                            "dataSource":
+                              "member": { "__id": "OrderViewDetails/Properties[Order]" }
+                            },
                             {
-                              "links":
-                              [
-                                {
-                                  "member": { "__id": "OrderViewDetails/Properties[Order]" }
-                                },
-                                {
-                                  "member": { "__id": "Order/Properties[Id]" }
-                                }
-                              ]
+                              "member": { "__id": "Order/Properties[Tid]" }
                             }
-                          },
-                          {
-                            "displayName": "Created By",
-                            "name": "CreatedBy",
-                            "kind": "Value",
-                            "view": { "__id": ":Text" },
-                            "dataSource":
+                          ]
+                        }
+                      },
+                      {
+                        "displayName": "Id",
+                        "name": "Id",
+                        "kind": "Value",
+                        "view": { "__id": ":Text" },
+                        "dataSource":
+                        {
+                          "links":
+                          [
                             {
-                              "links":
-                              [
-                                {
-                                  "member": { "__id": "OrderViewDetails/Properties[Order]" }
-                                },
-                                {
-                                  "member": { "__id": "Order/Properties[CreatedBy]" }
-                                }
-                              ]
-                            }
-                          },
-                          {
-                            "displayName": "Created",
-                            "name": "Created",
-                            "kind": "Value",
-                            "view": { "__id": ":Text" },
-                            "dataSource":
+                              "member": { "__id": "OrderViewDetails/Properties[Order]" }
+                            },
                             {
-                              "links":
-                              [
-                                {
-                                  "member": { "__id": "OrderViewDetails/Properties[Order]" }
-                                },
-                                {
-                                  "member": { "__id": "Order/Properties[Created]" }
-                                }
-                              ]
+                              "member": { "__id": "Order/Properties[Id]" }
                             }
-                          },
-                          {
-                            "displayName": "Modified By",
-                            "name": "ModifiedBy",
-                            "kind": "Value",
-                            "view": { "__id": ":Text" },
-                            "dataSource":
+                          ]
+                        }
+                      },
+                      {
+                        "displayName": "Created By",
+                        "name": "CreatedBy",
+                        "kind": "Value",
+                        "view": { "__id": ":Text" },
+                        "dataSource":
+                        {
+                          "links":
+                          [
                             {
-                              "links":
-                              [
-                                {
-                                  "member": { "__id": "OrderViewDetails/Properties[Order]" }
-                                },
-                                {
-                                  "member": { "__id": "Order/Properties[ModifiedBy]" }
-                                }
-                              ]
-                            }
-                          },
-                          {
-                            "displayName": "Modified",
-                            "name": "Modified",
-                            "kind": "Value",
-                            "view": { "__id": ":Text" },
-                            "dataSource":
+                              "member": { "__id": "OrderViewDetails/Properties[Order]" }
+                            },
                             {
-                              "links":
-                              [
-                                {
-                                  "member": { "__id": "OrderViewDetails/Properties[Order]" }
-                                },
-                                {
-                                  "member": { "__id": "Order/Properties[Modified]" }
-                                }
-                              ]
+                              "member": { "__id": "Order/Properties[CreatedBy]" }
                             }
-                          }
-                        ]
+                          ]
+                        }
+                      },
+                      {
+                        "displayName": "Created",
+                        "name": "Created",
+                        "kind": "Value",
+                        "view": { "__id": ":Text" },
+                        "dataSource":
+                        {
+                          "links":
+                          [
+                            {
+                              "member": { "__id": "OrderViewDetails/Properties[Order]" }
+                            },
+                            {
+                              "member": { "__id": "Order/Properties[Created]" }
+                            }
+                          ]
+                        }
+                      },
+                      {
+                        "displayName": "Modified By",
+                        "name": "ModifiedBy",
+                        "kind": "Value",
+                        "view": { "__id": ":Text" },
+                        "dataSource":
+                        {
+                          "links":
+                          [
+                            {
+                              "member": { "__id": "OrderViewDetails/Properties[Order]" }
+                            },
+                            {
+                              "member": { "__id": "Order/Properties[ModifiedBy]" }
+                            }
+                          ]
+                        }
+                      },
+                      {
+                        "displayName": "Modified",
+                        "name": "Modified",
+                        "kind": "Value",
+                        "view": { "__id": ":Text" },
+                        "dataSource":
+                        {
+                          "links":
+                          [
+                            {
+                              "member": { "__id": "OrderViewDetails/Properties[Order]" }
+                            },
+                            {
+                              "member": { "__id": "Order/Properties[Modified]" }
+                            }
+                          ]
+                        }
                       }
                     ]
                   }

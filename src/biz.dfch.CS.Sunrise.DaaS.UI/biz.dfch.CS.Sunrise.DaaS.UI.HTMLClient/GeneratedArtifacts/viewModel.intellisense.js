@@ -351,14 +351,6 @@
             data: lightSwitchApplication.ApprovalView,
             value: String
         },
-        Approval_Modified: {
-            _$class: msls.ContentItem,
-            _$name: "Approval_Modified",
-            _$parentName: "Details",
-            screen: lightSwitchApplication.ApprovalView,
-            data: lightSwitchApplication.ApprovalView,
-            value: Date
-        },
         General: {
             _$class: msls.ContentItem,
             _$name: "General",
@@ -502,11 +494,6 @@
         /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
         /// </field>
         Description_postRender: [$element, function () { return new lightSwitchApplication.ApprovalView().findContentItem("Description"); }],
-        /// <field>
-        /// Called after the Approval_Modified content item has been rendered.
-        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
-        /// </field>
-        Approval_Modified_postRender: [$element, function () { return new lightSwitchApplication.ApprovalView().findContentItem("Approval_Modified"); }],
         /// <field>
         /// Called after the General content item has been rendered.
         /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
@@ -2296,18 +2283,10 @@
             data: lightSwitchApplication.EndpointView,
             value: lightSwitchApplication.EndpointView
         },
-        left: {
-            _$class: msls.ContentItem,
-            _$name: "left",
-            _$parentName: "Details",
-            screen: lightSwitchApplication.EndpointView,
-            data: lightSwitchApplication.EndpointView,
-            value: lightSwitchApplication.EndpointView
-        },
         Name: {
             _$class: msls.ContentItem,
             _$name: "Name",
-            _$parentName: "left",
+            _$parentName: "Details",
             screen: lightSwitchApplication.EndpointView,
             data: lightSwitchApplication.EndpointView,
             value: String
@@ -2315,7 +2294,7 @@
         Version: {
             _$class: msls.ContentItem,
             _$name: "Version",
-            _$parentName: "left",
+            _$parentName: "Details",
             screen: lightSwitchApplication.EndpointView,
             data: lightSwitchApplication.EndpointView,
             value: String
@@ -2323,7 +2302,7 @@
         RoutePrefix: {
             _$class: msls.ContentItem,
             _$name: "RoutePrefix",
-            _$parentName: "left",
+            _$parentName: "Details",
             screen: lightSwitchApplication.EndpointView,
             data: lightSwitchApplication.EndpointView,
             value: String
@@ -2331,7 +2310,7 @@
         RouteTemplate: {
             _$class: msls.ContentItem,
             _$name: "RouteTemplate",
-            _$parentName: "left",
+            _$parentName: "Details",
             screen: lightSwitchApplication.EndpointView,
             data: lightSwitchApplication.EndpointView,
             value: String
@@ -2339,7 +2318,7 @@
         ServerRole: {
             _$class: msls.ContentItem,
             _$name: "ServerRole",
-            _$parentName: "left",
+            _$parentName: "Details",
             screen: lightSwitchApplication.EndpointView,
             data: lightSwitchApplication.EndpointView,
             value: String
@@ -2347,7 +2326,7 @@
         Priority: {
             _$class: msls.ContentItem,
             _$name: "Priority",
-            _$parentName: "left",
+            _$parentName: "Details",
             screen: lightSwitchApplication.EndpointView,
             data: lightSwitchApplication.EndpointView,
             value: Number
@@ -2355,7 +2334,7 @@
         Endpoint_Address: {
             _$class: msls.ContentItem,
             _$name: "Endpoint_Address",
-            _$parentName: "left",
+            _$parentName: "Details",
             screen: lightSwitchApplication.EndpointView,
             data: lightSwitchApplication.EndpointView,
             value: String
@@ -2363,7 +2342,7 @@
         Endpoint_Description: {
             _$class: msls.ContentItem,
             _$name: "Endpoint_Description",
-            _$parentName: "left",
+            _$parentName: "Details",
             screen: lightSwitchApplication.EndpointView,
             data: lightSwitchApplication.EndpointView,
             value: String
@@ -2376,18 +2355,10 @@
             data: lightSwitchApplication.EndpointView,
             value: lightSwitchApplication.EndpointView
         },
-        GeneralGroup1: {
-            _$class: msls.ContentItem,
-            _$name: "GeneralGroup1",
-            _$parentName: "General",
-            screen: lightSwitchApplication.EndpointView,
-            data: lightSwitchApplication.EndpointView,
-            value: lightSwitchApplication.EndpointView
-        },
         Tid: {
             _$class: msls.ContentItem,
             _$name: "Tid",
-            _$parentName: "GeneralGroup1",
+            _$parentName: "General",
             screen: lightSwitchApplication.EndpointView,
             data: lightSwitchApplication.EndpointView,
             value: String
@@ -2395,7 +2366,7 @@
         Id: {
             _$class: msls.ContentItem,
             _$name: "Id",
-            _$parentName: "GeneralGroup1",
+            _$parentName: "General",
             screen: lightSwitchApplication.EndpointView,
             data: lightSwitchApplication.EndpointView,
             value: String
@@ -2403,7 +2374,7 @@
         CreatedBy: {
             _$class: msls.ContentItem,
             _$name: "CreatedBy",
-            _$parentName: "GeneralGroup1",
+            _$parentName: "General",
             screen: lightSwitchApplication.EndpointView,
             data: lightSwitchApplication.EndpointView,
             value: String
@@ -2411,7 +2382,7 @@
         Created: {
             _$class: msls.ContentItem,
             _$name: "Created",
-            _$parentName: "GeneralGroup1",
+            _$parentName: "General",
             screen: lightSwitchApplication.EndpointView,
             data: lightSwitchApplication.EndpointView,
             value: Date
@@ -2419,7 +2390,7 @@
         ModifiedBy: {
             _$class: msls.ContentItem,
             _$name: "ModifiedBy",
-            _$parentName: "GeneralGroup1",
+            _$parentName: "General",
             screen: lightSwitchApplication.EndpointView,
             data: lightSwitchApplication.EndpointView,
             value: String
@@ -2427,7 +2398,7 @@
         Modified: {
             _$class: msls.ContentItem,
             _$name: "Modified",
-            _$parentName: "GeneralGroup1",
+            _$parentName: "General",
             screen: lightSwitchApplication.EndpointView,
             data: lightSwitchApplication.EndpointView,
             value: Date
@@ -2466,11 +2437,6 @@
         /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
         /// </field>
         Details_postRender: [$element, function () { return new lightSwitchApplication.EndpointView().findContentItem("Details"); }],
-        /// <field>
-        /// Called after the left content item has been rendered.
-        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
-        /// </field>
-        left_postRender: [$element, function () { return new lightSwitchApplication.EndpointView().findContentItem("left"); }],
         /// <field>
         /// Called after the Name content item has been rendered.
         /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
@@ -2516,11 +2482,6 @@
         /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
         /// </field>
         General_postRender: [$element, function () { return new lightSwitchApplication.EndpointView().findContentItem("General"); }],
-        /// <field>
-        /// Called after the GeneralGroup1 content item has been rendered.
-        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
-        /// </field>
-        GeneralGroup1_postRender: [$element, function () { return new lightSwitchApplication.EndpointView().findContentItem("GeneralGroup1"); }],
         /// <field>
         /// Called after the Tid content item has been rendered.
         /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
@@ -3516,18 +3477,10 @@
             data: lightSwitchApplication.JobView,
             value: lightSwitchApplication.JobView
         },
-        GeneralGroup1: {
-            _$class: msls.ContentItem,
-            _$name: "GeneralGroup1",
-            _$parentName: "General",
-            screen: lightSwitchApplication.JobView,
-            data: lightSwitchApplication.JobView,
-            value: lightSwitchApplication.JobView
-        },
         Tid: {
             _$class: msls.ContentItem,
             _$name: "Tid",
-            _$parentName: "GeneralGroup1",
+            _$parentName: "General",
             screen: lightSwitchApplication.JobView,
             data: lightSwitchApplication.JobView,
             value: String
@@ -3535,7 +3488,7 @@
         Id: {
             _$class: msls.ContentItem,
             _$name: "Id",
-            _$parentName: "GeneralGroup1",
+            _$parentName: "General",
             screen: lightSwitchApplication.JobView,
             data: lightSwitchApplication.JobView,
             value: String
@@ -3543,7 +3496,7 @@
         CreatedBy: {
             _$class: msls.ContentItem,
             _$name: "CreatedBy",
-            _$parentName: "GeneralGroup1",
+            _$parentName: "General",
             screen: lightSwitchApplication.JobView,
             data: lightSwitchApplication.JobView,
             value: String
@@ -3551,7 +3504,7 @@
         Created: {
             _$class: msls.ContentItem,
             _$name: "Created",
-            _$parentName: "GeneralGroup1",
+            _$parentName: "General",
             screen: lightSwitchApplication.JobView,
             data: lightSwitchApplication.JobView,
             value: Date
@@ -3559,7 +3512,7 @@
         ModifiedBy: {
             _$class: msls.ContentItem,
             _$name: "ModifiedBy",
-            _$parentName: "GeneralGroup1",
+            _$parentName: "General",
             screen: lightSwitchApplication.JobView,
             data: lightSwitchApplication.JobView,
             value: String
@@ -3567,7 +3520,7 @@
         Modified: {
             _$class: msls.ContentItem,
             _$name: "Modified",
-            _$parentName: "GeneralGroup1",
+            _$parentName: "General",
             screen: lightSwitchApplication.JobView,
             data: lightSwitchApplication.JobView,
             value: Date
@@ -3671,11 +3624,6 @@
         /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
         /// </field>
         General_postRender: [$element, function () { return new lightSwitchApplication.JobView().findContentItem("General"); }],
-        /// <field>
-        /// Called after the GeneralGroup1 content item has been rendered.
-        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
-        /// </field>
-        GeneralGroup1_postRender: [$element, function () { return new lightSwitchApplication.JobView().findContentItem("GeneralGroup1"); }],
         /// <field>
         /// Called after the Tid content item has been rendered.
         /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
@@ -3842,18 +3790,10 @@
             data: lightSwitchApplication.KeyNameValueEdit,
             value: lightSwitchApplication.KeyNameValueEdit
         },
-        left: {
-            _$class: msls.ContentItem,
-            _$name: "left",
-            _$parentName: "Details",
-            screen: lightSwitchApplication.KeyNameValueEdit,
-            data: lightSwitchApplication.KeyNameValueEdit,
-            value: lightSwitchApplication.KeyNameValueEdit
-        },
         Key: {
             _$class: msls.ContentItem,
             _$name: "Key",
-            _$parentName: "left",
+            _$parentName: "Details",
             screen: lightSwitchApplication.KeyNameValueEdit,
             data: lightSwitchApplication.KeyNameValueEdit,
             value: String
@@ -3861,7 +3801,7 @@
         Name: {
             _$class: msls.ContentItem,
             _$name: "Name",
-            _$parentName: "left",
+            _$parentName: "Details",
             screen: lightSwitchApplication.KeyNameValueEdit,
             data: lightSwitchApplication.KeyNameValueEdit,
             value: String
@@ -3869,7 +3809,7 @@
         Value: {
             _$class: msls.ContentItem,
             _$name: "Value",
-            _$parentName: "left",
+            _$parentName: "Details",
             screen: lightSwitchApplication.KeyNameValueEdit,
             data: lightSwitchApplication.KeyNameValueEdit,
             value: String
@@ -3877,7 +3817,7 @@
         Description: {
             _$class: msls.ContentItem,
             _$name: "Description",
-            _$parentName: "left",
+            _$parentName: "Details",
             screen: lightSwitchApplication.KeyNameValueEdit,
             data: lightSwitchApplication.KeyNameValueEdit,
             value: String
@@ -3962,11 +3902,6 @@
         /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
         /// </field>
         Details_postRender: [$element, function () { return new lightSwitchApplication.KeyNameValueEdit().findContentItem("Details"); }],
-        /// <field>
-        /// Called after the left content item has been rendered.
-        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
-        /// </field>
-        left_postRender: [$element, function () { return new lightSwitchApplication.KeyNameValueEdit().findContentItem("left"); }],
         /// <field>
         /// Called after the Key content item has been rendered.
         /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
@@ -4151,52 +4086,36 @@
             data: lightSwitchApplication.KeyNameValueView,
             value: lightSwitchApplication.KeyNameValueView
         },
-        columns: {
-            _$class: msls.ContentItem,
-            _$name: "columns",
-            _$parentName: "Details",
-            screen: lightSwitchApplication.KeyNameValueView,
-            data: lightSwitchApplication.KeyNameValueView,
-            value: lightSwitchApplication.KeyNameValue
-        },
-        left: {
-            _$class: msls.ContentItem,
-            _$name: "left",
-            _$parentName: "columns",
-            screen: lightSwitchApplication.KeyNameValueView,
-            data: lightSwitchApplication.KeyNameValue,
-            value: lightSwitchApplication.KeyNameValue
-        },
         Key: {
             _$class: msls.ContentItem,
             _$name: "Key",
-            _$parentName: "left",
+            _$parentName: "Details",
             screen: lightSwitchApplication.KeyNameValueView,
-            data: lightSwitchApplication.KeyNameValue,
+            data: lightSwitchApplication.KeyNameValueView,
             value: String
         },
         Name: {
             _$class: msls.ContentItem,
             _$name: "Name",
-            _$parentName: "left",
+            _$parentName: "Details",
             screen: lightSwitchApplication.KeyNameValueView,
-            data: lightSwitchApplication.KeyNameValue,
+            data: lightSwitchApplication.KeyNameValueView,
             value: String
         },
         Value: {
             _$class: msls.ContentItem,
             _$name: "Value",
-            _$parentName: "left",
+            _$parentName: "Details",
             screen: lightSwitchApplication.KeyNameValueView,
-            data: lightSwitchApplication.KeyNameValue,
+            data: lightSwitchApplication.KeyNameValueView,
             value: String
         },
         Description: {
             _$class: msls.ContentItem,
             _$name: "Description",
-            _$parentName: "left",
+            _$parentName: "Details",
             screen: lightSwitchApplication.KeyNameValueView,
-            data: lightSwitchApplication.KeyNameValue,
+            data: lightSwitchApplication.KeyNameValueView,
             value: String
         },
         General: {
@@ -4289,16 +4208,6 @@
         /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
         /// </field>
         Details_postRender: [$element, function () { return new lightSwitchApplication.KeyNameValueView().findContentItem("Details"); }],
-        /// <field>
-        /// Called after the columns content item has been rendered.
-        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
-        /// </field>
-        columns_postRender: [$element, function () { return new lightSwitchApplication.KeyNameValueView().findContentItem("columns"); }],
-        /// <field>
-        /// Called after the left content item has been rendered.
-        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
-        /// </field>
-        left_postRender: [$element, function () { return new lightSwitchApplication.KeyNameValueView().findContentItem("left"); }],
         /// <field>
         /// Called after the Key content item has been rendered.
         /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
@@ -4932,18 +4841,10 @@
             data: lightSwitchApplication.OrderAdd,
             value: lightSwitchApplication.OrderAdd
         },
-        Group: {
-            _$class: msls.ContentItem,
-            _$name: "Group",
-            _$parentName: "Details",
-            screen: lightSwitchApplication.OrderAdd,
-            data: lightSwitchApplication.OrderAdd,
-            value: lightSwitchApplication.OrderAdd
-        },
         Name: {
             _$class: msls.ContentItem,
             _$name: "Name",
-            _$parentName: "Group",
+            _$parentName: "Details",
             screen: lightSwitchApplication.OrderAdd,
             data: lightSwitchApplication.OrderAdd,
             value: String
@@ -4951,7 +4852,7 @@
         Description: {
             _$class: msls.ContentItem,
             _$name: "Description",
-            _$parentName: "Group",
+            _$parentName: "Details",
             screen: lightSwitchApplication.OrderAdd,
             data: lightSwitchApplication.OrderAdd,
             value: String
@@ -4959,7 +4860,7 @@
         Parameters1: {
             _$class: msls.ContentItem,
             _$name: "Parameters1",
-            _$parentName: "Group",
+            _$parentName: "Details",
             screen: lightSwitchApplication.OrderAdd,
             data: lightSwitchApplication.OrderAdd,
             value: String
@@ -4972,18 +4873,10 @@
             data: lightSwitchApplication.OrderAdd,
             value: lightSwitchApplication.OrderAdd
         },
-        GeneralGroup1: {
-            _$class: msls.ContentItem,
-            _$name: "GeneralGroup1",
-            _$parentName: "General",
-            screen: lightSwitchApplication.OrderAdd,
-            data: lightSwitchApplication.OrderAdd,
-            value: lightSwitchApplication.OrderAdd
-        },
         Tid: {
             _$class: msls.ContentItem,
             _$name: "Tid",
-            _$parentName: "GeneralGroup1",
+            _$parentName: "General",
             screen: lightSwitchApplication.OrderAdd,
             data: lightSwitchApplication.OrderAdd,
             value: String
@@ -4991,7 +4884,7 @@
         Id: {
             _$class: msls.ContentItem,
             _$name: "Id",
-            _$parentName: "GeneralGroup1",
+            _$parentName: "General",
             screen: lightSwitchApplication.OrderAdd,
             data: lightSwitchApplication.OrderAdd,
             value: String
@@ -4999,7 +4892,7 @@
         CreatedBy: {
             _$class: msls.ContentItem,
             _$name: "CreatedBy",
-            _$parentName: "GeneralGroup1",
+            _$parentName: "General",
             screen: lightSwitchApplication.OrderAdd,
             data: lightSwitchApplication.OrderAdd,
             value: String
@@ -5007,7 +4900,7 @@
         Created: {
             _$class: msls.ContentItem,
             _$name: "Created",
-            _$parentName: "GeneralGroup1",
+            _$parentName: "General",
             screen: lightSwitchApplication.OrderAdd,
             data: lightSwitchApplication.OrderAdd,
             value: Date
@@ -5015,7 +4908,7 @@
         ModifiedBy: {
             _$class: msls.ContentItem,
             _$name: "ModifiedBy",
-            _$parentName: "GeneralGroup1",
+            _$parentName: "General",
             screen: lightSwitchApplication.OrderAdd,
             data: lightSwitchApplication.OrderAdd,
             value: String
@@ -5023,7 +4916,7 @@
         Modified: {
             _$class: msls.ContentItem,
             _$name: "Modified",
-            _$parentName: "GeneralGroup1",
+            _$parentName: "General",
             screen: lightSwitchApplication.OrderAdd,
             data: lightSwitchApplication.OrderAdd,
             value: Date
@@ -5031,7 +4924,7 @@
         Status: {
             _$class: msls.ContentItem,
             _$name: "Status",
-            _$parentName: "GeneralGroup1",
+            _$parentName: "General",
             screen: lightSwitchApplication.OrderAdd,
             data: lightSwitchApplication.OrderAdd,
             value: String
@@ -5061,11 +4954,6 @@
         /// </field>
         Details_postRender: [$element, function () { return new lightSwitchApplication.OrderAdd().findContentItem("Details"); }],
         /// <field>
-        /// Called after the Group content item has been rendered.
-        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
-        /// </field>
-        Group_postRender: [$element, function () { return new lightSwitchApplication.OrderAdd().findContentItem("Group"); }],
-        /// <field>
         /// Called after the Name content item has been rendered.
         /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
         /// </field>
@@ -5085,11 +4973,6 @@
         /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
         /// </field>
         General_postRender: [$element, function () { return new lightSwitchApplication.OrderAdd().findContentItem("General"); }],
-        /// <field>
-        /// Called after the GeneralGroup1 content item has been rendered.
-        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
-        /// </field>
-        GeneralGroup1_postRender: [$element, function () { return new lightSwitchApplication.OrderAdd().findContentItem("GeneralGroup1"); }],
         /// <field>
         /// Called after the Tid content item has been rendered.
         /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
@@ -5206,18 +5089,10 @@
             data: lightSwitchApplication.OrderAddSpecial,
             value: lightSwitchApplication.OrderAddSpecial
         },
-        GeneralGroup1: {
-            _$class: msls.ContentItem,
-            _$name: "GeneralGroup1",
-            _$parentName: "General",
-            screen: lightSwitchApplication.OrderAddSpecial,
-            data: lightSwitchApplication.OrderAddSpecial,
-            value: lightSwitchApplication.OrderAddSpecial
-        },
         Tid: {
             _$class: msls.ContentItem,
             _$name: "Tid",
-            _$parentName: "GeneralGroup1",
+            _$parentName: "General",
             screen: lightSwitchApplication.OrderAddSpecial,
             data: lightSwitchApplication.OrderAddSpecial,
             value: String
@@ -5225,7 +5100,7 @@
         Id: {
             _$class: msls.ContentItem,
             _$name: "Id",
-            _$parentName: "GeneralGroup1",
+            _$parentName: "General",
             screen: lightSwitchApplication.OrderAddSpecial,
             data: lightSwitchApplication.OrderAddSpecial,
             value: String
@@ -5233,7 +5108,7 @@
         CreatedBy: {
             _$class: msls.ContentItem,
             _$name: "CreatedBy",
-            _$parentName: "GeneralGroup1",
+            _$parentName: "General",
             screen: lightSwitchApplication.OrderAddSpecial,
             data: lightSwitchApplication.OrderAddSpecial,
             value: String
@@ -5241,7 +5116,7 @@
         Created: {
             _$class: msls.ContentItem,
             _$name: "Created",
-            _$parentName: "GeneralGroup1",
+            _$parentName: "General",
             screen: lightSwitchApplication.OrderAddSpecial,
             data: lightSwitchApplication.OrderAddSpecial,
             value: Date
@@ -5249,7 +5124,7 @@
         ModifiedBy: {
             _$class: msls.ContentItem,
             _$name: "ModifiedBy",
-            _$parentName: "GeneralGroup1",
+            _$parentName: "General",
             screen: lightSwitchApplication.OrderAddSpecial,
             data: lightSwitchApplication.OrderAddSpecial,
             value: String
@@ -5257,7 +5132,7 @@
         Modified: {
             _$class: msls.ContentItem,
             _$name: "Modified",
-            _$parentName: "GeneralGroup1",
+            _$parentName: "General",
             screen: lightSwitchApplication.OrderAddSpecial,
             data: lightSwitchApplication.OrderAddSpecial,
             value: Date
@@ -5265,7 +5140,7 @@
         Order_Status: {
             _$class: msls.ContentItem,
             _$name: "Order_Status",
-            _$parentName: "GeneralGroup1",
+            _$parentName: "General",
             screen: lightSwitchApplication.OrderAddSpecial,
             data: lightSwitchApplication.OrderAddSpecial,
             value: String
@@ -5334,11 +5209,6 @@
         /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
         /// </field>
         General_postRender: [$element, function () { return new lightSwitchApplication.OrderAddSpecial().findContentItem("General"); }],
-        /// <field>
-        /// Called after the GeneralGroup1 content item has been rendered.
-        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
-        /// </field>
-        GeneralGroup1_postRender: [$element, function () { return new lightSwitchApplication.OrderAddSpecial().findContentItem("GeneralGroup1"); }],
         /// <field>
         /// Called after the Tid content item has been rendered.
         /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
@@ -5604,18 +5474,10 @@
             data: lightSwitchApplication.OrderItemView,
             value: lightSwitchApplication.OrderItemView
         },
-        GeneralGroup1: {
-            _$class: msls.ContentItem,
-            _$name: "GeneralGroup1",
-            _$parentName: "General",
-            screen: lightSwitchApplication.OrderItemView,
-            data: lightSwitchApplication.OrderItemView,
-            value: lightSwitchApplication.OrderItemView
-        },
         Tid: {
             _$class: msls.ContentItem,
             _$name: "Tid",
-            _$parentName: "GeneralGroup1",
+            _$parentName: "General",
             screen: lightSwitchApplication.OrderItemView,
             data: lightSwitchApplication.OrderItemView,
             value: String
@@ -5623,7 +5485,7 @@
         Id: {
             _$class: msls.ContentItem,
             _$name: "Id",
-            _$parentName: "GeneralGroup1",
+            _$parentName: "General",
             screen: lightSwitchApplication.OrderItemView,
             data: lightSwitchApplication.OrderItemView,
             value: String
@@ -5631,7 +5493,7 @@
         CreatedBy: {
             _$class: msls.ContentItem,
             _$name: "CreatedBy",
-            _$parentName: "GeneralGroup1",
+            _$parentName: "General",
             screen: lightSwitchApplication.OrderItemView,
             data: lightSwitchApplication.OrderItemView,
             value: String
@@ -5639,7 +5501,7 @@
         Created: {
             _$class: msls.ContentItem,
             _$name: "Created",
-            _$parentName: "GeneralGroup1",
+            _$parentName: "General",
             screen: lightSwitchApplication.OrderItemView,
             data: lightSwitchApplication.OrderItemView,
             value: Date
@@ -5647,7 +5509,7 @@
         ModifiedBy: {
             _$class: msls.ContentItem,
             _$name: "ModifiedBy",
-            _$parentName: "GeneralGroup1",
+            _$parentName: "General",
             screen: lightSwitchApplication.OrderItemView,
             data: lightSwitchApplication.OrderItemView,
             value: String
@@ -5655,7 +5517,7 @@
         Modified: {
             _$class: msls.ContentItem,
             _$name: "Modified",
-            _$parentName: "GeneralGroup1",
+            _$parentName: "General",
             screen: lightSwitchApplication.OrderItemView,
             data: lightSwitchApplication.OrderItemView,
             value: Date
@@ -5749,11 +5611,6 @@
         /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
         /// </field>
         General_postRender: [$element, function () { return new lightSwitchApplication.OrderItemView().findContentItem("General"); }],
-        /// <field>
-        /// Called after the GeneralGroup1 content item has been rendered.
-        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
-        /// </field>
-        GeneralGroup1_postRender: [$element, function () { return new lightSwitchApplication.OrderItemView().findContentItem("GeneralGroup1"); }],
         /// <field>
         /// Called after the Tid content item has been rendered.
         /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
@@ -5926,60 +5783,44 @@
             data: lightSwitchApplication.OrderView,
             value: lightSwitchApplication.OrderView
         },
-        columns: {
-            _$class: msls.ContentItem,
-            _$name: "columns",
-            _$parentName: "Details",
-            screen: lightSwitchApplication.OrderView,
-            data: lightSwitchApplication.OrderView,
-            value: lightSwitchApplication.Order
-        },
-        left: {
-            _$class: msls.ContentItem,
-            _$name: "left",
-            _$parentName: "columns",
-            screen: lightSwitchApplication.OrderView,
-            data: lightSwitchApplication.Order,
-            value: lightSwitchApplication.Order
-        },
         Name: {
             _$class: msls.ContentItem,
             _$name: "Name",
-            _$parentName: "left",
+            _$parentName: "Details",
             screen: lightSwitchApplication.OrderView,
-            data: lightSwitchApplication.Order,
+            data: lightSwitchApplication.OrderView,
             value: String
         },
         Status: {
             _$class: msls.ContentItem,
             _$name: "Status",
-            _$parentName: "left",
+            _$parentName: "Details",
             screen: lightSwitchApplication.OrderView,
-            data: lightSwitchApplication.Order,
+            data: lightSwitchApplication.OrderView,
             value: String
         },
         Requester: {
             _$class: msls.ContentItem,
             _$name: "Requester",
-            _$parentName: "left",
+            _$parentName: "Details",
             screen: lightSwitchApplication.OrderView,
-            data: lightSwitchApplication.Order,
+            data: lightSwitchApplication.OrderView,
             value: String
         },
         Description1: {
             _$class: msls.ContentItem,
             _$name: "Description1",
-            _$parentName: "left",
+            _$parentName: "Details",
             screen: lightSwitchApplication.OrderView,
-            data: lightSwitchApplication.Order,
+            data: lightSwitchApplication.OrderView,
             value: String
         },
         Parameters: {
             _$class: msls.ContentItem,
             _$name: "Parameters",
-            _$parentName: "left",
+            _$parentName: "Details",
             screen: lightSwitchApplication.OrderView,
-            data: lightSwitchApplication.Order,
+            data: lightSwitchApplication.OrderView,
             value: String
         },
         General: {
@@ -5990,18 +5831,10 @@
             data: lightSwitchApplication.OrderView,
             value: lightSwitchApplication.OrderView
         },
-        GeneralGroup1: {
-            _$class: msls.ContentItem,
-            _$name: "GeneralGroup1",
-            _$parentName: "General",
-            screen: lightSwitchApplication.OrderView,
-            data: lightSwitchApplication.OrderView,
-            value: lightSwitchApplication.OrderView
-        },
         Tid: {
             _$class: msls.ContentItem,
             _$name: "Tid",
-            _$parentName: "GeneralGroup1",
+            _$parentName: "General",
             screen: lightSwitchApplication.OrderView,
             data: lightSwitchApplication.OrderView,
             value: String
@@ -6009,7 +5842,7 @@
         Id: {
             _$class: msls.ContentItem,
             _$name: "Id",
-            _$parentName: "GeneralGroup1",
+            _$parentName: "General",
             screen: lightSwitchApplication.OrderView,
             data: lightSwitchApplication.OrderView,
             value: String
@@ -6017,7 +5850,7 @@
         CreatedBy: {
             _$class: msls.ContentItem,
             _$name: "CreatedBy",
-            _$parentName: "GeneralGroup1",
+            _$parentName: "General",
             screen: lightSwitchApplication.OrderView,
             data: lightSwitchApplication.OrderView,
             value: String
@@ -6025,7 +5858,7 @@
         Created: {
             _$class: msls.ContentItem,
             _$name: "Created",
-            _$parentName: "GeneralGroup1",
+            _$parentName: "General",
             screen: lightSwitchApplication.OrderView,
             data: lightSwitchApplication.OrderView,
             value: Date
@@ -6033,7 +5866,7 @@
         ModifiedBy: {
             _$class: msls.ContentItem,
             _$name: "ModifiedBy",
-            _$parentName: "GeneralGroup1",
+            _$parentName: "General",
             screen: lightSwitchApplication.OrderView,
             data: lightSwitchApplication.OrderView,
             value: String
@@ -6041,7 +5874,7 @@
         Modified: {
             _$class: msls.ContentItem,
             _$name: "Modified",
-            _$parentName: "GeneralGroup1",
+            _$parentName: "General",
             screen: lightSwitchApplication.OrderView,
             data: lightSwitchApplication.OrderView,
             value: Date
@@ -6081,16 +5914,6 @@
         /// </field>
         Details_postRender: [$element, function () { return new lightSwitchApplication.OrderView().findContentItem("Details"); }],
         /// <field>
-        /// Called after the columns content item has been rendered.
-        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
-        /// </field>
-        columns_postRender: [$element, function () { return new lightSwitchApplication.OrderView().findContentItem("columns"); }],
-        /// <field>
-        /// Called after the left content item has been rendered.
-        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
-        /// </field>
-        left_postRender: [$element, function () { return new lightSwitchApplication.OrderView().findContentItem("left"); }],
-        /// <field>
         /// Called after the Name content item has been rendered.
         /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
         /// </field>
@@ -6120,11 +5943,6 @@
         /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
         /// </field>
         General_postRender: [$element, function () { return new lightSwitchApplication.OrderView().findContentItem("General"); }],
-        /// <field>
-        /// Called after the GeneralGroup1 content item has been rendered.
-        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
-        /// </field>
-        GeneralGroup1_postRender: [$element, function () { return new lightSwitchApplication.OrderView().findContentItem("GeneralGroup1"); }],
         /// <field>
         /// Called after the Tid content item has been rendered.
         /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
@@ -6172,52 +5990,36 @@
             data: lightSwitchApplication.OrderViewDetails,
             value: lightSwitchApplication.OrderViewDetails
         },
-        columns: {
-            _$class: msls.ContentItem,
-            _$name: "columns",
-            _$parentName: "Details",
-            screen: lightSwitchApplication.OrderViewDetails,
-            data: lightSwitchApplication.OrderViewDetails,
-            value: lightSwitchApplication.Order
-        },
-        left: {
-            _$class: msls.ContentItem,
-            _$name: "left",
-            _$parentName: "columns",
-            screen: lightSwitchApplication.OrderViewDetails,
-            data: lightSwitchApplication.Order,
-            value: lightSwitchApplication.Order
-        },
         Name: {
             _$class: msls.ContentItem,
             _$name: "Name",
-            _$parentName: "left",
+            _$parentName: "Details",
             screen: lightSwitchApplication.OrderViewDetails,
-            data: lightSwitchApplication.Order,
+            data: lightSwitchApplication.OrderViewDetails,
             value: String
         },
         Status: {
             _$class: msls.ContentItem,
             _$name: "Status",
-            _$parentName: "left",
+            _$parentName: "Details",
             screen: lightSwitchApplication.OrderViewDetails,
-            data: lightSwitchApplication.Order,
+            data: lightSwitchApplication.OrderViewDetails,
             value: String
         },
         Parameters: {
             _$class: msls.ContentItem,
             _$name: "Parameters",
-            _$parentName: "left",
+            _$parentName: "Details",
             screen: lightSwitchApplication.OrderViewDetails,
-            data: lightSwitchApplication.Order,
+            data: lightSwitchApplication.OrderViewDetails,
             value: String
         },
         Description: {
             _$class: msls.ContentItem,
             _$name: "Description",
-            _$parentName: "left",
+            _$parentName: "Details",
             screen: lightSwitchApplication.OrderViewDetails,
-            data: lightSwitchApplication.Order,
+            data: lightSwitchApplication.OrderViewDetails,
             value: String
         },
         OrderItems: {
@@ -6274,18 +6076,10 @@
             data: lightSwitchApplication.OrderViewDetails,
             value: lightSwitchApplication.OrderViewDetails
         },
-        GeneralGroup1: {
-            _$class: msls.ContentItem,
-            _$name: "GeneralGroup1",
-            _$parentName: "General",
-            screen: lightSwitchApplication.OrderViewDetails,
-            data: lightSwitchApplication.OrderViewDetails,
-            value: lightSwitchApplication.OrderViewDetails
-        },
         Tid: {
             _$class: msls.ContentItem,
             _$name: "Tid",
-            _$parentName: "GeneralGroup1",
+            _$parentName: "General",
             screen: lightSwitchApplication.OrderViewDetails,
             data: lightSwitchApplication.OrderViewDetails,
             value: String
@@ -6293,7 +6087,7 @@
         Id: {
             _$class: msls.ContentItem,
             _$name: "Id",
-            _$parentName: "GeneralGroup1",
+            _$parentName: "General",
             screen: lightSwitchApplication.OrderViewDetails,
             data: lightSwitchApplication.OrderViewDetails,
             value: String
@@ -6301,7 +6095,7 @@
         CreatedBy: {
             _$class: msls.ContentItem,
             _$name: "CreatedBy",
-            _$parentName: "GeneralGroup1",
+            _$parentName: "General",
             screen: lightSwitchApplication.OrderViewDetails,
             data: lightSwitchApplication.OrderViewDetails,
             value: String
@@ -6309,7 +6103,7 @@
         Created: {
             _$class: msls.ContentItem,
             _$name: "Created",
-            _$parentName: "GeneralGroup1",
+            _$parentName: "General",
             screen: lightSwitchApplication.OrderViewDetails,
             data: lightSwitchApplication.OrderViewDetails,
             value: Date
@@ -6317,7 +6111,7 @@
         ModifiedBy: {
             _$class: msls.ContentItem,
             _$name: "ModifiedBy",
-            _$parentName: "GeneralGroup1",
+            _$parentName: "General",
             screen: lightSwitchApplication.OrderViewDetails,
             data: lightSwitchApplication.OrderViewDetails,
             value: String
@@ -6325,7 +6119,7 @@
         Modified: {
             _$class: msls.ContentItem,
             _$name: "Modified",
-            _$parentName: "GeneralGroup1",
+            _$parentName: "General",
             screen: lightSwitchApplication.OrderViewDetails,
             data: lightSwitchApplication.OrderViewDetails,
             value: Date
@@ -6364,16 +6158,6 @@
         /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
         /// </field>
         Details_postRender: [$element, function () { return new lightSwitchApplication.OrderViewDetails().findContentItem("Details"); }],
-        /// <field>
-        /// Called after the columns content item has been rendered.
-        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
-        /// </field>
-        columns_postRender: [$element, function () { return new lightSwitchApplication.OrderViewDetails().findContentItem("columns"); }],
-        /// <field>
-        /// Called after the left content item has been rendered.
-        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
-        /// </field>
-        left_postRender: [$element, function () { return new lightSwitchApplication.OrderViewDetails().findContentItem("left"); }],
         /// <field>
         /// Called after the Name content item has been rendered.
         /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
@@ -6424,11 +6208,6 @@
         /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
         /// </field>
         General_postRender: [$element, function () { return new lightSwitchApplication.OrderViewDetails().findContentItem("General"); }],
-        /// <field>
-        /// Called after the GeneralGroup1 content item has been rendered.
-        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
-        /// </field>
-        GeneralGroup1_postRender: [$element, function () { return new lightSwitchApplication.OrderViewDetails().findContentItem("GeneralGroup1"); }],
         /// <field>
         /// Called after the Tid content item has been rendered.
         /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)

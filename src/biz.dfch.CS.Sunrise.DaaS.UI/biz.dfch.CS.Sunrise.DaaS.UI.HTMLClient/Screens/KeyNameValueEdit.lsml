@@ -28,94 +28,68 @@
                 Value="Details" />
             </ContentItem.Attributes>
             <ContentItem
-              Name="left"
-              Kind="Group">
-              <ContentItem
-                Name="Key"
-                Kind="Value"
-                DataType=":String"
-                View="Microsoft.LightSwitch.MobileWeb:TextArea">
-                <ContentItem.DataSource>
-                  <ScreenExpressionTree>
-                    <ChainExpression>
-                      <MemberExpression
-                        Member="KeyNameValueEdit/Properties[KeyNameValue]" />
-                      <MemberExpression
-                        Member="Key" />
-                    </ChainExpression>
-                  </ScreenExpressionTree>
-                </ContentItem.DataSource>
-              </ContentItem>
-              <ContentItem
-                Name="Name"
-                Kind="Value"
-                DataType=":String"
-                View="Microsoft.LightSwitch.MobileWeb:TextArea">
-                <ContentItem.DataSource>
-                  <ScreenExpressionTree>
-                    <ChainExpression>
-                      <MemberExpression
-                        Member="KeyNameValueEdit/Properties[KeyNameValue]" />
-                      <MemberExpression
-                        Member="Name" />
-                    </ChainExpression>
-                  </ScreenExpressionTree>
-                </ContentItem.DataSource>
-              </ContentItem>
-              <ContentItem
-                Name="Value"
-                Kind="Value"
-                DataType=":String"
-                View="Microsoft.LightSwitch.MobileWeb:TextArea">
-                <ContentItem.DataSource>
-                  <ScreenExpressionTree>
-                    <ChainExpression>
-                      <MemberExpression
-                        Member="KeyNameValueEdit/Properties[KeyNameValue]" />
-                      <MemberExpression
-                        Member="Value" />
-                    </ChainExpression>
-                  </ScreenExpressionTree>
-                </ContentItem.DataSource>
-              </ContentItem>
-              <ContentItem
-                Name="Description"
-                Kind="Value"
-                DataType=":String?"
-                View="Microsoft.LightSwitch.MobileWeb:TextArea">
-                <ContentItem.DataSource>
-                  <ScreenExpressionTree>
-                    <ChainExpression>
-                      <MemberExpression
-                        Member="KeyNameValueEdit/Properties[KeyNameValue]" />
-                      <MemberExpression
-                        Member="Description" />
-                    </ChainExpression>
-                  </ScreenExpressionTree>
-                </ContentItem.DataSource>
-              </ContentItem>
-              <ContentItem.PropertySources>
-                <ControlPropertySource
-                  Property="Microsoft.LightSwitch.MobileWeb:RootControl/Properties[MinWidth]">
-                  <ScreenExpressionTree>
-                    <ChainExpression>
-                      <ConstantExpression
-                        Value="200"
-                        ResultType=":Double" />
-                    </ChainExpression>
-                  </ScreenExpressionTree>
-                </ControlPropertySource>
-                <ControlPropertySource
-                  Property="Microsoft.LightSwitch.MobileWeb:RootControl/Properties[MaxWidth]">
-                  <ScreenExpressionTree>
-                    <ChainExpression>
-                      <ConstantExpression
-                        Value="400"
-                        ResultType=":Double" />
-                    </ChainExpression>
-                  </ScreenExpressionTree>
-                </ControlPropertySource>
-              </ContentItem.PropertySources>
+              Name="Key"
+              Kind="Value"
+              DataType=":String"
+              View="Microsoft.LightSwitch.MobileWeb:TextArea">
+              <ContentItem.DataSource>
+                <ScreenExpressionTree>
+                  <ChainExpression>
+                    <MemberExpression
+                      Member="KeyNameValueEdit/Properties[KeyNameValue]" />
+                    <MemberExpression
+                      Member="Key" />
+                  </ChainExpression>
+                </ScreenExpressionTree>
+              </ContentItem.DataSource>
+            </ContentItem>
+            <ContentItem
+              Name="Name"
+              Kind="Value"
+              DataType=":String"
+              View="Microsoft.LightSwitch.MobileWeb:TextArea">
+              <ContentItem.DataSource>
+                <ScreenExpressionTree>
+                  <ChainExpression>
+                    <MemberExpression
+                      Member="KeyNameValueEdit/Properties[KeyNameValue]" />
+                    <MemberExpression
+                      Member="Name" />
+                  </ChainExpression>
+                </ScreenExpressionTree>
+              </ContentItem.DataSource>
+            </ContentItem>
+            <ContentItem
+              Name="Value"
+              Kind="Value"
+              DataType=":String"
+              View="Microsoft.LightSwitch.MobileWeb:TextArea">
+              <ContentItem.DataSource>
+                <ScreenExpressionTree>
+                  <ChainExpression>
+                    <MemberExpression
+                      Member="KeyNameValueEdit/Properties[KeyNameValue]" />
+                    <MemberExpression
+                      Member="Value" />
+                  </ChainExpression>
+                </ScreenExpressionTree>
+              </ContentItem.DataSource>
+            </ContentItem>
+            <ContentItem
+              Name="Description"
+              Kind="Value"
+              DataType=":String?"
+              View="Microsoft.LightSwitch.MobileWeb:TextArea">
+              <ContentItem.DataSource>
+                <ScreenExpressionTree>
+                  <ChainExpression>
+                    <MemberExpression
+                      Member="KeyNameValueEdit/Properties[KeyNameValue]" />
+                    <MemberExpression
+                      Member="Description" />
+                  </ChainExpression>
+                </ScreenExpressionTree>
+              </ContentItem.DataSource>
             </ContentItem>
           </ContentItem>
           <ContentItem
