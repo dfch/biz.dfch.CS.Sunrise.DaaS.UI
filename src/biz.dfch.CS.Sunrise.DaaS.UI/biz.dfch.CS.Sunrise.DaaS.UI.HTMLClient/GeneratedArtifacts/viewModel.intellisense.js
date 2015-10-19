@@ -475,6 +475,16 @@
         /// </field>
         deleteEntity_execute: [lightSwitchApplication.ApprovalView],
         /// <field>
+        /// Called to determine if the goToReferencedObject method can be executed.
+        /// <br/>canExecute(msls.application.ApprovalView screen)
+        /// </field>
+        goToReferencedObject_canExecute: [lightSwitchApplication.ApprovalView],
+        /// <field>
+        /// Called to execute the goToReferencedObject method.
+        /// <br/>execute(msls.application.ApprovalView screen)
+        /// </field>
+        goToReferencedObject_execute: [lightSwitchApplication.ApprovalView],
+        /// <field>
         /// Called after the Details content item has been rendered.
         /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
         /// </field>

@@ -99,6 +99,25 @@
             </ContentItem>
             <ContentItem.CommandItems>
               <ContentItem
+                Name="goToReferencedObject"
+                Kind="Command">
+                <ContentItem.Attributes>
+                  <DisplayName
+                    Value="Details" />
+                </ContentItem.Attributes>
+                <ContentItem.PropertySources>
+                  <ControlPropertySource
+                    Property="Microsoft.LightSwitch.MobileWeb:RootControl/Properties[Tap]">
+                    <ScreenExpressionTree>
+                      <ChainExpression>
+                        <CallExpression
+                          Target="ApprovalView/Methods[goToReferencedObject]" />
+                      </ChainExpression>
+                    </ScreenExpressionTree>
+                  </ControlPropertySource>
+                </ContentItem.PropertySources>
+              </ContentItem>
+              <ContentItem
                 Name="Approve"
                 Kind="Command">
                 <ContentItem.PropertySources>
@@ -364,6 +383,8 @@
         Name="refresh" />
       <ScreenMethod
         Name="deleteEntity" />
+      <ScreenMethod
+        Name="goToReferencedObject" />
     </Screen.Methods>
     <Screen.Properties>
       <ScreenProperty

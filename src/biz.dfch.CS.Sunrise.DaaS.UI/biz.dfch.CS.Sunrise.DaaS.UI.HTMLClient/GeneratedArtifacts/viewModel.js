@@ -902,7 +902,8 @@
             { name: "approve" },
             { name: "decline" },
             { name: "refresh" },
-            { name: "deleteEntity" }
+            { name: "deleteEntity" },
+            { name: "goToReferencedObject" }
         ]),
 
         CartEdit: $defineScreen(CartEdit, [
