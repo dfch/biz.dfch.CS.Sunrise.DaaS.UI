@@ -5104,6 +5104,22 @@
                     "commandItems":
                     [
                       {
+                        "displayName": "Catalogue Item",
+                        "name": "goToCatalogueItem",
+                        "kind": "Command",
+                        "view": { "__id": ":CommandBarButton" },
+                        "propertySources":
+                        [
+                          {
+                            "property": { "__id": ":RootControl/Properties[Tap]" },
+                            "source":
+                            {
+                              "target": { "__id": "CartItemView/Methods[goToCatalogueItem]" }
+                            }
+                          }
+                        ]
+                      },
+                      {
                         "displayName": "Edit",
                         "name": "Edit",
                         "kind": "Command",
@@ -5323,6 +5339,10 @@
             {
               "id": "CartItemView/Methods[deleteEntity]",
               "name": "deleteEntity"
+            },
+            {
+              "id": "CartItemView/Methods[goToCatalogueItem]",
+              "name": "goToCatalogueItem"
             }
           ],
           "properties":

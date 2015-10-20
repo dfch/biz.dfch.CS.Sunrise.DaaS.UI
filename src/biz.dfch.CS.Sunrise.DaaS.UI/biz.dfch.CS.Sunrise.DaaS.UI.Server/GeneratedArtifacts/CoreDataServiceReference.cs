@@ -9,7 +9,7 @@
 //------------------------------------------------------------------------------
 
 // Original file name:
-// Generation date: 20.10.2015 08:14:04
+// Generation date: 20.10.2015 16:40:28
 namespace CoreData.CoreDataService
 {
     

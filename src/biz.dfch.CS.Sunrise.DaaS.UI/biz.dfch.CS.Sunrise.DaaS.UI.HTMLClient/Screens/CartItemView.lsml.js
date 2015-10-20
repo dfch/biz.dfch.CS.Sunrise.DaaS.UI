@@ -4,6 +4,36 @@ myapp.CartItemView.deleteEntity_execute = function (screen) {
     deleteEntity(screen, "CartItem");
 };
 
+myapp.CartItemView.goToCatalogueItem_execute = function (screen) {
+    var selectedCartItem = screen.CartItem;
+
+    var filter = "(Id eq " + parseInt(selectedCartItem.CatalogueItemId) + ")";
+
+    myapp.activeDataWorkspace.CoreData.CatalogueItems.filter(filter).execute().then(function (result) {
+        var catalogueItem = result.results[0];
+        myapp["showCatalogueItemView"](catalogueItem);
+    },
+    onCatalogueItemLoadingFailed
+    );
+};
+
+function onCatalogueItemLoadingFailed(e) {
+    var title = "Loading failed";
+    var fetchItemToApproveFailedMessage = "Unable to load catalogue item";
+
+    msls.showMessageBox(
+        fetchItemToApproveFailedMessage
+        ,
+        {
+            title: title
+            ,
+            buttons: msls.MessageBoxButtons.ok
+        }).then(function (result) {
+            myapp.cancelChanges();
+            throw e;
+        });
+}
+
 /**
  * Copyright 2015 d-fens GmbH
  *

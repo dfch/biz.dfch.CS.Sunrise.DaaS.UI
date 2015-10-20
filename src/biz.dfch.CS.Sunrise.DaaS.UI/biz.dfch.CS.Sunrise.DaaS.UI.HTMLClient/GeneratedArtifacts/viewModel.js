@@ -931,7 +931,8 @@
         CartItemView: $defineScreen(CartItemView, [
             { name: "CartItem", kind: "local", type: lightSwitchApplication.CartItem }
         ], [
-            { name: "deleteEntity" }
+            { name: "deleteEntity" },
+            { name: "goToCatalogueItem" }
         ]),
 
         CartsList: $defineScreen(CartsList, [

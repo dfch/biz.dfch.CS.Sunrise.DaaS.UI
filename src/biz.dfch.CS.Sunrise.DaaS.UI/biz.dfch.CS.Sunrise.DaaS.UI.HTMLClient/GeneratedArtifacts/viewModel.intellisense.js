@@ -963,6 +963,16 @@
         /// </field>
         deleteEntity_execute: [lightSwitchApplication.CartItemView],
         /// <field>
+        /// Called to determine if the goToCatalogueItem method can be executed.
+        /// <br/>canExecute(msls.application.CartItemView screen)
+        /// </field>
+        goToCatalogueItem_canExecute: [lightSwitchApplication.CartItemView],
+        /// <field>
+        /// Called to execute the goToCatalogueItem method.
+        /// <br/>execute(msls.application.CartItemView screen)
+        /// </field>
+        goToCatalogueItem_execute: [lightSwitchApplication.CartItemView],
+        /// <field>
         /// Called after the Details content item has been rendered.
         /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
         /// </field>
