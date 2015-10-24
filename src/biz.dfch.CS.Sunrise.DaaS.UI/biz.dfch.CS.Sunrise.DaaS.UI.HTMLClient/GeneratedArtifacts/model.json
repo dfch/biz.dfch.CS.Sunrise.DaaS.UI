@@ -8434,7 +8434,7 @@
                         "displayName": "EntityTypes",
                         "name": "EntityTypes",
                         "kind": "Collection",
-                        "view": { "__id": ":TileList" },
+                        "view": { "__id": ":Table" },
                         "dataSource":
                         {
                           "member": { "__id": "EntityTypesList/Properties[EntityTypes]" }
@@ -8445,7 +8445,7 @@
                             "displayName": "rows",
                             "name": "rows",
                             "kind": "Details",
-                            "view": { "__id": ":RowsLayout" },
+                            "view": { "__id": ":TableRowLayout" },
                             "dataSource":
                             {
                               "links":

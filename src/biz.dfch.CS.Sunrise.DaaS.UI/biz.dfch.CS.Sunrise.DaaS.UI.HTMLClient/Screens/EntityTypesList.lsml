@@ -26,7 +26,7 @@
               Name="EntityTypes"
               Kind="Collection"
               DataType="CollectionView$EntityType"
-              View="Microsoft.LightSwitch.MobileWeb:TileList">
+              View="Microsoft.LightSwitch.MobileWeb:Table">
               <ContentItem.Attributes>
                 <DisplayName
                   Value="EntityTypes" />
