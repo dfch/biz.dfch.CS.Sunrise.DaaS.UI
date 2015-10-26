@@ -4,6 +4,53 @@ myapp.CatalogueItemView.deleteEntity_execute = function (screen) {
     deleteEntity(screen, "CatalogueItem");
 };
 
+myapp.CatalogueItemView.navigateToProduct_execute = function (screen) {
+
+    var selectedCatalogueItem = screen.CatalogueItem1;
+    var noItemSelectedMessage = "No item selected. Select item and retry operation";
+
+    if (!selectedCatalogueItem) {
+        msls.showMessageBox(noItemSelectedMessage, {
+            title: "Refresh",
+            buttons: msls.MessageBoxButtons.ok
+        });
+    }
+    else
+    {
+        navigateToProduct(screen);
+    }
+};
+
+function navigateToProduct(screen) {
+
+    var selectedCatalogueItem = screen.CatalogueItem1;
+
+    // Get product by Id
+    var filter = "(Id eq " + selectedCatalogueItem.ProductId + ")";
+    myapp.activeDataWorkspace.CoreData.Products.filter(filter).execute().then(function (result) {
+        var product = result.results[0];
+        myapp["showProductView"](product);
+    },
+    onProductLoadingFailed);
+};
+
+function onProductLoadingFailed(e) {
+    var title = "Loading failed";
+    var fetchProductFailedMessage = "An error occured while trying to navigate to the product";
+
+    msls.showMessageBox(
+        fetchProductFailedMessage
+        ,
+        {
+            title: title
+            ,
+            buttons: msls.MessageBoxButtons.ok
+        }).then(function (result) {
+            myapp.cancelChanges();
+            throw e;
+        });
+}
+
 myapp.CatalogueItemView.addToCart_execute = function (screen) {
     var title = "Add to cart";
     var messageAddedToCart = "Item added to cart.";

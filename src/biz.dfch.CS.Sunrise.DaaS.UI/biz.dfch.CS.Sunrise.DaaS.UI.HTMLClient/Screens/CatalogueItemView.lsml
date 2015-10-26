@@ -148,6 +148,25 @@
             </ContentItem>
             <ContentItem.CommandItems>
               <ContentItem
+                Name="navigateToProduct"
+                Kind="Command">
+                <ContentItem.Attributes>
+                  <DisplayName
+                    Value="Product" />
+                </ContentItem.Attributes>
+                <ContentItem.PropertySources>
+                  <ControlPropertySource
+                    Property="Microsoft.LightSwitch.MobileWeb:RootControl/Properties[Tap]">
+                    <ScreenExpressionTree>
+                      <ChainExpression>
+                        <CallExpression
+                          Target="CatalogueItemView/Methods[navigateToProduct]" />
+                      </ChainExpression>
+                    </ScreenExpressionTree>
+                  </ControlPropertySource>
+                </ContentItem.PropertySources>
+              </ContentItem>
+              <ContentItem
                 Name="addToCart"
                 Kind="Command">
                 <ContentItem.Attributes>
@@ -343,6 +362,8 @@
         Name="deleteEntity" />
       <ScreenMethod
         Name="addToCart" />
+      <ScreenMethod
+        Name="navigateToProduct" />
     </Screen.Methods>
     <Screen.Properties>
       <ScreenProperty

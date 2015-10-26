@@ -1003,7 +1003,8 @@
             { name: "CatalogueItem1", kind: "local", type: lightSwitchApplication.CatalogueItem1 }
         ], [
             { name: "deleteEntity" },
-            { name: "addToCart" }
+            { name: "addToCart" },
+            { name: "navigateToProduct" }
         ]),
 
         CataloguesList: $defineScreen(CataloguesList, [

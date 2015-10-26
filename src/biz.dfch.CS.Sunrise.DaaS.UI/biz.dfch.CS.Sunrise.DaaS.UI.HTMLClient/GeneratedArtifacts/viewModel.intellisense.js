@@ -1723,6 +1723,16 @@
         /// </field>
         addToCart_execute: [lightSwitchApplication.CatalogueItemView],
         /// <field>
+        /// Called to determine if the navigateToProduct method can be executed.
+        /// <br/>canExecute(msls.application.CatalogueItemView screen)
+        /// </field>
+        navigateToProduct_canExecute: [lightSwitchApplication.CatalogueItemView],
+        /// <field>
+        /// Called to execute the navigateToProduct method.
+        /// <br/>execute(msls.application.CatalogueItemView screen)
+        /// </field>
+        navigateToProduct_execute: [lightSwitchApplication.CatalogueItemView],
+        /// <field>
         /// Called after the Details content item has been rendered.
         /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
         /// </field>

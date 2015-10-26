@@ -6839,6 +6839,22 @@
                     "commandItems":
                     [
                       {
+                        "displayName": "Product",
+                        "name": "navigateToProduct",
+                        "kind": "Command",
+                        "view": { "__id": ":CommandBarButton" },
+                        "propertySources":
+                        [
+                          {
+                            "property": { "__id": ":RootControl/Properties[Tap]" },
+                            "source":
+                            {
+                              "target": { "__id": "CatalogueItemView/Methods[navigateToProduct]" }
+                            }
+                          }
+                        ]
+                      },
+                      {
                         "displayName": "Add to cart",
                         "name": "addToCart",
                         "kind": "Command",
@@ -7047,6 +7063,10 @@
             {
               "id": "CatalogueItemView/Methods[addToCart]",
               "name": "addToCart"
+            },
+            {
+              "id": "CatalogueItemView/Methods[navigateToProduct]",
+              "name": "navigateToProduct"
             }
           ],
           "properties":
