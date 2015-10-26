@@ -92,6 +92,32 @@
                   </ContentItem.DataSource>
                 </ContentItem>
                 <ContentItem
+                  Name="NotBefore"
+                  Kind="Value"
+                  DataType=":DateTimeOffset">
+                  <ContentItem.DataSource>
+                    <ScreenExpressionTree>
+                      <ChainExpression>
+                        <MemberExpression
+                          Member="Approval/Properties[NotBefore]" />
+                      </ChainExpression>
+                    </ScreenExpressionTree>
+                  </ContentItem.DataSource>
+                </ContentItem>
+                <ContentItem
+                  Name="ExpiresAt"
+                  Kind="Value"
+                  DataType=":DateTimeOffset">
+                  <ContentItem.DataSource>
+                    <ScreenExpressionTree>
+                      <ChainExpression>
+                        <MemberExpression
+                          Member="Approval/Properties[ExpiresAt]" />
+                      </ChainExpression>
+                    </ScreenExpressionTree>
+                  </ContentItem.DataSource>
+                </ContentItem>
+                <ContentItem
                   Name="Modified"
                   Kind="Value"
                   DataType=":DateTimeOffset">

@@ -82,6 +82,36 @@
               </ContentItem.PropertySources>
             </ContentItem>
             <ContentItem
+              Name="Approval_NotBefore"
+              Kind="Value"
+              DataType=":DateTimeOffset">
+              <ContentItem.DataSource>
+                <ScreenExpressionTree>
+                  <ChainExpression>
+                    <MemberExpression
+                      Member="ApprovalView/Properties[Approval]" />
+                    <MemberExpression
+                      Member="NotBefore" />
+                  </ChainExpression>
+                </ScreenExpressionTree>
+              </ContentItem.DataSource>
+            </ContentItem>
+            <ContentItem
+              Name="Approval_ExpiresAt"
+              Kind="Value"
+              DataType=":DateTimeOffset">
+              <ContentItem.DataSource>
+                <ScreenExpressionTree>
+                  <ChainExpression>
+                    <MemberExpression
+                      Member="ApprovalView/Properties[Approval]" />
+                    <MemberExpression
+                      Member="ExpiresAt" />
+                  </ChainExpression>
+                </ScreenExpressionTree>
+              </ContentItem.DataSource>
+            </ContentItem>
+            <ContentItem
               Name="Description"
               Kind="Value"
               DataType=":String?"

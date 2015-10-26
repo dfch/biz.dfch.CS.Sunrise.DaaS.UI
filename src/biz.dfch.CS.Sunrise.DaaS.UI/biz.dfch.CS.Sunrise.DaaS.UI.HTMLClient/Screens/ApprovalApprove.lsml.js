@@ -3,6 +3,8 @@
 myapp.ApprovalApprove.created = function (screen)
 {
     screen.details.properties.HelpText.value = "The request will be approved when you click the 'Save' button. You can optionally add a explanation or reason for approval.";
+    screen.Approval.NotBefore = "1970-01-01T01:01:00.6163142+01:00";
+    screen.Approval.ExpiresAt = "2900-01-01T01:01:00.6163142+01:00";
 };
 
 myapp.ApprovalApprove.Description_postRender = function (element, contentItem)

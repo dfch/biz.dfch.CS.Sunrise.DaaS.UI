@@ -27,6 +27,22 @@
             data: lightSwitchApplication.ApprovalApprove,
             value: String
         },
+        Approval_NotBefore: {
+            _$class: msls.ContentItem,
+            _$name: "Approval_NotBefore",
+            _$parentName: "Details",
+            screen: lightSwitchApplication.ApprovalApprove,
+            data: lightSwitchApplication.ApprovalApprove,
+            value: Date
+        },
+        Approval_ExpiresAt: {
+            _$class: msls.ContentItem,
+            _$name: "Approval_ExpiresAt",
+            _$parentName: "Details",
+            screen: lightSwitchApplication.ApprovalApprove,
+            data: lightSwitchApplication.ApprovalApprove,
+            value: Date
+        },
         Approval_Status: {
             _$class: msls.ContentItem,
             _$name: "Approval_Status",
@@ -80,6 +96,16 @@
         /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
         /// </field>
         Name_postRender: [$element, function () { return new lightSwitchApplication.ApprovalApprove().findContentItem("Name"); }],
+        /// <field>
+        /// Called after the Approval_NotBefore content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        Approval_NotBefore_postRender: [$element, function () { return new lightSwitchApplication.ApprovalApprove().findContentItem("Approval_NotBefore"); }],
+        /// <field>
+        /// Called after the Approval_ExpiresAt content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        Approval_ExpiresAt_postRender: [$element, function () { return new lightSwitchApplication.ApprovalApprove().findContentItem("Approval_ExpiresAt"); }],
         /// <field>
         /// Called after the Approval_Status content item has been rendered.
         /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
@@ -243,6 +269,22 @@
             data: lightSwitchApplication.Approval,
             value: String
         },
+        NotBefore: {
+            _$class: msls.ContentItem,
+            _$name: "NotBefore",
+            _$parentName: "rows",
+            screen: lightSwitchApplication.ApprovalsList,
+            data: lightSwitchApplication.Approval,
+            value: Date
+        },
+        ExpiresAt: {
+            _$class: msls.ContentItem,
+            _$name: "ExpiresAt",
+            _$parentName: "rows",
+            screen: lightSwitchApplication.ApprovalsList,
+            data: lightSwitchApplication.Approval,
+            value: Date
+        },
         Modified: {
             _$class: msls.ContentItem,
             _$name: "Modified",
@@ -306,6 +348,16 @@
         /// </field>
         Status_postRender: [$element, function () { return new lightSwitchApplication.ApprovalsList().findContentItem("Status"); }],
         /// <field>
+        /// Called after the NotBefore content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        NotBefore_postRender: [$element, function () { return new lightSwitchApplication.ApprovalsList().findContentItem("NotBefore"); }],
+        /// <field>
+        /// Called after the ExpiresAt content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        ExpiresAt_postRender: [$element, function () { return new lightSwitchApplication.ApprovalsList().findContentItem("ExpiresAt"); }],
+        /// <field>
         /// Called after the Modified content item has been rendered.
         /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
         /// </field>
@@ -342,6 +394,22 @@
             screen: lightSwitchApplication.ApprovalView,
             data: lightSwitchApplication.ApprovalView,
             value: String
+        },
+        Approval_NotBefore: {
+            _$class: msls.ContentItem,
+            _$name: "Approval_NotBefore",
+            _$parentName: "Details",
+            screen: lightSwitchApplication.ApprovalView,
+            data: lightSwitchApplication.ApprovalView,
+            value: Date
+        },
+        Approval_ExpiresAt: {
+            _$class: msls.ContentItem,
+            _$name: "Approval_ExpiresAt",
+            _$parentName: "Details",
+            screen: lightSwitchApplication.ApprovalView,
+            data: lightSwitchApplication.ApprovalView,
+            value: Date
         },
         Description: {
             _$class: msls.ContentItem,
@@ -499,6 +567,16 @@
         /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
         /// </field>
         Approval_Status_postRender: [$element, function () { return new lightSwitchApplication.ApprovalView().findContentItem("Approval_Status"); }],
+        /// <field>
+        /// Called after the Approval_NotBefore content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        Approval_NotBefore_postRender: [$element, function () { return new lightSwitchApplication.ApprovalView().findContentItem("Approval_NotBefore"); }],
+        /// <field>
+        /// Called after the Approval_ExpiresAt content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        Approval_ExpiresAt_postRender: [$element, function () { return new lightSwitchApplication.ApprovalView().findContentItem("Approval_ExpiresAt"); }],
         /// <field>
         /// Called after the Description content item has been rendered.
         /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
