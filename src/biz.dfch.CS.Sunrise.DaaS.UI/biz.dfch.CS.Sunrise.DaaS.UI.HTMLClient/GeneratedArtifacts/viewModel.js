@@ -871,6 +871,31 @@
         $Screen.call(this, dataWorkspace, "OrderViewDetails", parameters);
     }
 
+    function ProductView(parameters, dataWorkspace) {
+        /// <summary>
+        /// Represents the ProductView screen.
+        /// </summary>
+        /// <param name="parameters" type="Array">
+        /// An array of screen parameter values.
+        /// </param>
+        /// <param name="dataWorkspace" type="msls.application.DataWorkspace" optional="true">
+        /// An existing data workspace for this screen to use. By default, a new data workspace is created.
+        /// </param>
+        /// <field name="Product" type="msls.application.Product">
+        /// Gets or sets the product for this screen.
+        /// </field>
+        /// <field name="CatalogueItems" type="msls.VisualCollection" elementType="msls.application.CatalogueItem1">
+        /// Gets the catalogueItems for this screen.
+        /// </field>
+        /// <field name="details" type="msls.application.ProductView.Details">
+        /// Gets the details for this screen.
+        /// </field>
+        if (!dataWorkspace) {
+            dataWorkspace = new lightSwitchApplication.DataWorkspace();
+        }
+        $Screen.call(this, dataWorkspace, "ProductView", parameters);
+    }
+
     msls._addToNamespace("msls.application", {
 
         ApprovalApprove: $defineScreen(ApprovalApprove, [
@@ -1217,6 +1242,23 @@
             }
         ], [
             { name: "deleteEntity" }
+        ]),
+
+        ProductView: $defineScreen(ProductView, [
+            { name: "Product", kind: "local", type: lightSwitchApplication.Product },
+            {
+                name: "CatalogueItems", kind: "collection", elementType: lightSwitchApplication.CatalogueItem1,
+                getNavigationProperty: function () {
+                    if (this.owner.Product) {
+                        return this.owner.Product.details.properties.CatalogueItems;
+                    }
+                    return null;
+                },
+                appendQuery: function () {
+                    return this;
+                }
+            }
+        ], [
         ]),
 
         showApprovalApprove: $defineShowScreen(function showApprovalApprove(Approval, options) {
@@ -1673,6 +1715,18 @@
             /// <returns type="WinJS.Promise" />
             var parameters = Array.prototype.slice.call(arguments, 0, 1);
             return lightSwitchApplication.showScreen("OrderViewDetails", parameters, options);
+        }),
+
+        showProductView: $defineShowScreen(function showProductView(Product, options) {
+            /// <summary>
+            /// Asynchronously navigates forward to the ProductView screen.
+            /// </summary>
+            /// <param name="options" optional="true">
+            /// An object that provides one or more of the following options:<br/>- beforeShown: a function that is called after boundary behavior has been applied but before the screen is shown.<br/>+ Signature: beforeShown(screen)<br/>- afterClosed: a function that is called after boundary behavior has been applied and the screen has been closed.<br/>+ Signature: afterClosed(screen, action : msls.NavigateBackAction)
+            /// </param>
+            /// <returns type="WinJS.Promise" />
+            var parameters = Array.prototype.slice.call(arguments, 0, 1);
+            return lightSwitchApplication.showScreen("ProductView", parameters, options);
         })
 
     });

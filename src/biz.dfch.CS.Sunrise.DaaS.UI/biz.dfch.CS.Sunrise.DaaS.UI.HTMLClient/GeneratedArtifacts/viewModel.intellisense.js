@@ -427,18 +427,10 @@
             data: lightSwitchApplication.ApprovalView,
             value: lightSwitchApplication.ApprovalView
         },
-        GeneralGroup1: {
-            _$class: msls.ContentItem,
-            _$name: "GeneralGroup1",
-            _$parentName: "General",
-            screen: lightSwitchApplication.ApprovalView,
-            data: lightSwitchApplication.ApprovalView,
-            value: lightSwitchApplication.ApprovalView
-        },
         Tid: {
             _$class: msls.ContentItem,
             _$name: "Tid",
-            _$parentName: "GeneralGroup1",
+            _$parentName: "General",
             screen: lightSwitchApplication.ApprovalView,
             data: lightSwitchApplication.ApprovalView,
             value: String
@@ -446,7 +438,7 @@
         Id: {
             _$class: msls.ContentItem,
             _$name: "Id",
-            _$parentName: "GeneralGroup1",
+            _$parentName: "General",
             screen: lightSwitchApplication.ApprovalView,
             data: lightSwitchApplication.ApprovalView,
             value: String
@@ -454,7 +446,7 @@
         CreatedBy: {
             _$class: msls.ContentItem,
             _$name: "CreatedBy",
-            _$parentName: "GeneralGroup1",
+            _$parentName: "General",
             screen: lightSwitchApplication.ApprovalView,
             data: lightSwitchApplication.ApprovalView,
             value: String
@@ -462,7 +454,7 @@
         Created: {
             _$class: msls.ContentItem,
             _$name: "Created",
-            _$parentName: "GeneralGroup1",
+            _$parentName: "General",
             screen: lightSwitchApplication.ApprovalView,
             data: lightSwitchApplication.ApprovalView,
             value: Date
@@ -470,7 +462,7 @@
         ModifiedBy: {
             _$class: msls.ContentItem,
             _$name: "ModifiedBy",
-            _$parentName: "GeneralGroup1",
+            _$parentName: "General",
             screen: lightSwitchApplication.ApprovalView,
             data: lightSwitchApplication.ApprovalView,
             value: String
@@ -478,7 +470,7 @@
         Modified: {
             _$class: msls.ContentItem,
             _$name: "Modified",
-            _$parentName: "GeneralGroup1",
+            _$parentName: "General",
             screen: lightSwitchApplication.ApprovalView,
             data: lightSwitchApplication.ApprovalView,
             value: Date
@@ -587,11 +579,6 @@
         /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
         /// </field>
         General_postRender: [$element, function () { return new lightSwitchApplication.ApprovalView().findContentItem("General"); }],
-        /// <field>
-        /// Called after the GeneralGroup1 content item has been rendered.
-        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
-        /// </field>
-        GeneralGroup1_postRender: [$element, function () { return new lightSwitchApplication.ApprovalView().findContentItem("GeneralGroup1"); }],
         /// <field>
         /// Called after the Tid content item has been rendered.
         /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
@@ -6158,6 +6145,365 @@
         /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
         /// </field>
         Modified_postRender: [$element, function () { return new lightSwitchApplication.OrderViewDetails().findContentItem("Modified"); }]
+    });
+
+    lightSwitchApplication.ProductView.prototype._$contentItems = {
+        Tabs: {
+            _$class: msls.ContentItem,
+            _$name: "Tabs",
+            _$parentName: "RootContentItem",
+            screen: lightSwitchApplication.ProductView
+        },
+        Details: {
+            _$class: msls.ContentItem,
+            _$name: "Details",
+            _$parentName: "Tabs",
+            screen: lightSwitchApplication.ProductView,
+            data: lightSwitchApplication.ProductView,
+            value: lightSwitchApplication.ProductView
+        },
+        Name: {
+            _$class: msls.ContentItem,
+            _$name: "Name",
+            _$parentName: "Details",
+            screen: lightSwitchApplication.ProductView,
+            data: lightSwitchApplication.ProductView,
+            value: String
+        },
+        Type: {
+            _$class: msls.ContentItem,
+            _$name: "Type",
+            _$parentName: "Details",
+            screen: lightSwitchApplication.ProductView,
+            data: lightSwitchApplication.ProductView,
+            value: String
+        },
+        Version: {
+            _$class: msls.ContentItem,
+            _$name: "Version",
+            _$parentName: "Details",
+            screen: lightSwitchApplication.ProductView,
+            data: lightSwitchApplication.ProductView,
+            value: String
+        },
+        Description: {
+            _$class: msls.ContentItem,
+            _$name: "Description",
+            _$parentName: "Details",
+            screen: lightSwitchApplication.ProductView,
+            data: lightSwitchApplication.ProductView,
+            value: String
+        },
+        Parameters: {
+            _$class: msls.ContentItem,
+            _$name: "Parameters",
+            _$parentName: "Details",
+            screen: lightSwitchApplication.ProductView,
+            data: lightSwitchApplication.ProductView,
+            value: String
+        },
+        columns: {
+            _$class: msls.ContentItem,
+            _$name: "columns",
+            _$parentName: "Details",
+            screen: lightSwitchApplication.ProductView,
+            data: lightSwitchApplication.ProductView,
+            value: lightSwitchApplication.Product
+        },
+        left: {
+            _$class: msls.ContentItem,
+            _$name: "left",
+            _$parentName: "columns",
+            screen: lightSwitchApplication.ProductView,
+            data: lightSwitchApplication.Product,
+            value: lightSwitchApplication.Product
+        },
+        ValidFrom: {
+            _$class: msls.ContentItem,
+            _$name: "ValidFrom",
+            _$parentName: "left",
+            screen: lightSwitchApplication.ProductView,
+            data: lightSwitchApplication.Product,
+            value: Date
+        },
+        EndOfSale: {
+            _$class: msls.ContentItem,
+            _$name: "EndOfSale",
+            _$parentName: "left",
+            screen: lightSwitchApplication.ProductView,
+            data: lightSwitchApplication.Product,
+            value: Date
+        },
+        right: {
+            _$class: msls.ContentItem,
+            _$name: "right",
+            _$parentName: "columns",
+            screen: lightSwitchApplication.ProductView,
+            data: lightSwitchApplication.Product,
+            value: lightSwitchApplication.Product
+        },
+        ValidUntil: {
+            _$class: msls.ContentItem,
+            _$name: "ValidUntil",
+            _$parentName: "right",
+            screen: lightSwitchApplication.ProductView,
+            data: lightSwitchApplication.Product,
+            value: Date
+        },
+        EndOfLife: {
+            _$class: msls.ContentItem,
+            _$name: "EndOfLife",
+            _$parentName: "right",
+            screen: lightSwitchApplication.ProductView,
+            data: lightSwitchApplication.Product,
+            value: Date
+        },
+        General: {
+            _$class: msls.ContentItem,
+            _$name: "General",
+            _$parentName: "Tabs",
+            screen: lightSwitchApplication.ProductView,
+            data: lightSwitchApplication.ProductView,
+            value: lightSwitchApplication.ProductView
+        },
+        Tid: {
+            _$class: msls.ContentItem,
+            _$name: "Tid",
+            _$parentName: "General",
+            screen: lightSwitchApplication.ProductView,
+            data: lightSwitchApplication.ProductView,
+            value: String
+        },
+        Id: {
+            _$class: msls.ContentItem,
+            _$name: "Id",
+            _$parentName: "General",
+            screen: lightSwitchApplication.ProductView,
+            data: lightSwitchApplication.ProductView,
+            value: String
+        },
+        CreatedBy: {
+            _$class: msls.ContentItem,
+            _$name: "CreatedBy",
+            _$parentName: "General",
+            screen: lightSwitchApplication.ProductView,
+            data: lightSwitchApplication.ProductView,
+            value: String
+        },
+        Created: {
+            _$class: msls.ContentItem,
+            _$name: "Created",
+            _$parentName: "General",
+            screen: lightSwitchApplication.ProductView,
+            data: lightSwitchApplication.ProductView,
+            value: Date
+        },
+        ModifiedBy: {
+            _$class: msls.ContentItem,
+            _$name: "ModifiedBy",
+            _$parentName: "General",
+            screen: lightSwitchApplication.ProductView,
+            data: lightSwitchApplication.ProductView,
+            value: String
+        },
+        Modified: {
+            _$class: msls.ContentItem,
+            _$name: "Modified",
+            _$parentName: "General",
+            screen: lightSwitchApplication.ProductView,
+            data: lightSwitchApplication.ProductView,
+            value: Date
+        },
+        CatalogueItems: {
+            _$class: msls.ContentItem,
+            _$name: "CatalogueItems",
+            _$parentName: "Tabs",
+            screen: lightSwitchApplication.ProductView,
+            data: lightSwitchApplication.ProductView,
+            value: lightSwitchApplication.ProductView
+        },
+        CatalogueItems1: {
+            _$class: msls.ContentItem,
+            _$name: "CatalogueItems1",
+            _$parentName: "CatalogueItems",
+            screen: lightSwitchApplication.ProductView,
+            data: lightSwitchApplication.ProductView,
+            value: {
+                _$class: msls.VisualCollection,
+                screen: lightSwitchApplication.ProductView,
+                _$entry: {
+                    elementType: lightSwitchApplication.CatalogueItem1
+                }
+            }
+        },
+        rows: {
+            _$class: msls.ContentItem,
+            _$name: "rows",
+            _$parentName: "CatalogueItems1",
+            screen: lightSwitchApplication.ProductView,
+            data: lightSwitchApplication.CatalogueItem1,
+            value: lightSwitchApplication.CatalogueItem1
+        },
+        Id1: {
+            _$class: msls.ContentItem,
+            _$name: "Id1",
+            _$parentName: "rows",
+            screen: lightSwitchApplication.ProductView,
+            data: lightSwitchApplication.CatalogueItem1,
+            value: String
+        },
+        Name1: {
+            _$class: msls.ContentItem,
+            _$name: "Name1",
+            _$parentName: "rows",
+            screen: lightSwitchApplication.ProductView,
+            data: lightSwitchApplication.CatalogueItem1,
+            value: String
+        },
+        Popups: {
+            _$class: msls.ContentItem,
+            _$name: "Popups",
+            _$parentName: "RootContentItem",
+            screen: lightSwitchApplication.ProductView
+        }
+    };
+
+    msls._addEntryPoints(lightSwitchApplication.ProductView, {
+        /// <field>
+        /// Called when a new ProductView screen is created.
+        /// <br/>created(msls.application.ProductView screen)
+        /// </field>
+        created: [lightSwitchApplication.ProductView],
+        /// <field>
+        /// Called before changes on an active ProductView screen are applied.
+        /// <br/>beforeApplyChanges(msls.application.ProductView screen)
+        /// </field>
+        beforeApplyChanges: [lightSwitchApplication.ProductView],
+        /// <field>
+        /// Called after the Details content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        Details_postRender: [$element, function () { return new lightSwitchApplication.ProductView().findContentItem("Details"); }],
+        /// <field>
+        /// Called after the Name content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        Name_postRender: [$element, function () { return new lightSwitchApplication.ProductView().findContentItem("Name"); }],
+        /// <field>
+        /// Called after the Type content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        Type_postRender: [$element, function () { return new lightSwitchApplication.ProductView().findContentItem("Type"); }],
+        /// <field>
+        /// Called after the Version content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        Version_postRender: [$element, function () { return new lightSwitchApplication.ProductView().findContentItem("Version"); }],
+        /// <field>
+        /// Called after the Description content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        Description_postRender: [$element, function () { return new lightSwitchApplication.ProductView().findContentItem("Description"); }],
+        /// <field>
+        /// Called after the Parameters content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        Parameters_postRender: [$element, function () { return new lightSwitchApplication.ProductView().findContentItem("Parameters"); }],
+        /// <field>
+        /// Called after the columns content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        columns_postRender: [$element, function () { return new lightSwitchApplication.ProductView().findContentItem("columns"); }],
+        /// <field>
+        /// Called after the left content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        left_postRender: [$element, function () { return new lightSwitchApplication.ProductView().findContentItem("left"); }],
+        /// <field>
+        /// Called after the ValidFrom content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        ValidFrom_postRender: [$element, function () { return new lightSwitchApplication.ProductView().findContentItem("ValidFrom"); }],
+        /// <field>
+        /// Called after the EndOfSale content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        EndOfSale_postRender: [$element, function () { return new lightSwitchApplication.ProductView().findContentItem("EndOfSale"); }],
+        /// <field>
+        /// Called after the right content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        right_postRender: [$element, function () { return new lightSwitchApplication.ProductView().findContentItem("right"); }],
+        /// <field>
+        /// Called after the ValidUntil content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        ValidUntil_postRender: [$element, function () { return new lightSwitchApplication.ProductView().findContentItem("ValidUntil"); }],
+        /// <field>
+        /// Called after the EndOfLife content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        EndOfLife_postRender: [$element, function () { return new lightSwitchApplication.ProductView().findContentItem("EndOfLife"); }],
+        /// <field>
+        /// Called after the General content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        General_postRender: [$element, function () { return new lightSwitchApplication.ProductView().findContentItem("General"); }],
+        /// <field>
+        /// Called after the Tid content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        Tid_postRender: [$element, function () { return new lightSwitchApplication.ProductView().findContentItem("Tid"); }],
+        /// <field>
+        /// Called after the Id content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        Id_postRender: [$element, function () { return new lightSwitchApplication.ProductView().findContentItem("Id"); }],
+        /// <field>
+        /// Called after the CreatedBy content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        CreatedBy_postRender: [$element, function () { return new lightSwitchApplication.ProductView().findContentItem("CreatedBy"); }],
+        /// <field>
+        /// Called after the Created content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        Created_postRender: [$element, function () { return new lightSwitchApplication.ProductView().findContentItem("Created"); }],
+        /// <field>
+        /// Called after the ModifiedBy content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        ModifiedBy_postRender: [$element, function () { return new lightSwitchApplication.ProductView().findContentItem("ModifiedBy"); }],
+        /// <field>
+        /// Called after the Modified content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        Modified_postRender: [$element, function () { return new lightSwitchApplication.ProductView().findContentItem("Modified"); }],
+        /// <field>
+        /// Called after the CatalogueItems content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        CatalogueItems_postRender: [$element, function () { return new lightSwitchApplication.ProductView().findContentItem("CatalogueItems"); }],
+        /// <field>
+        /// Called after the CatalogueItems1 content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        CatalogueItems1_postRender: [$element, function () { return new lightSwitchApplication.ProductView().findContentItem("CatalogueItems1"); }],
+        /// <field>
+        /// Called after the rows content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        rows_postRender: [$element, function () { return new lightSwitchApplication.ProductView().findContentItem("rows"); }],
+        /// <field>
+        /// Called after the Id1 content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        Id1_postRender: [$element, function () { return new lightSwitchApplication.ProductView().findContentItem("Id1"); }],
+        /// <field>
+        /// Called after the Name1 content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        Name1_postRender: [$element, function () { return new lightSwitchApplication.ProductView().findContentItem("Name1"); }]
     });
 
 }(msls.application));

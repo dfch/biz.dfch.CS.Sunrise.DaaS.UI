@@ -214,6 +214,7 @@
     <LightSwitchModel Include="Properties\CoreData\Nodes.lsml" />
     <LightSwitchModel Include="Properties\CoreData\OrderItems.lsml" />
     <LightSwitchModel Include="Properties\CoreData\Orders.lsml" />
+    <LightSwitchModel Include="Properties\CoreData\Products.lsml" />
     <LightSwitchModel Include="Properties\DiagnosticsData\Endpoints.lsml" />
     <LightSwitchModel Include="Properties\Proxies.lsml" />
     <LightSwitchModel Include="Screens\ApprovalApprove.lsml" />
@@ -254,6 +255,7 @@
     <LightSwitchModel Include="Screens\OrdersList.lsml" />
     <LightSwitchModel Include="Screens\OrderView.lsml" />
     <LightSwitchModel Include="Screens\OrderViewDetails.lsml" />
+    <LightSwitchModel Include="Screens\ProductView.lsml" />
   </ItemGroup>
   <ItemGroup>
     <_ClientBuildFile Include="GeneratedArtifacts\model.json">

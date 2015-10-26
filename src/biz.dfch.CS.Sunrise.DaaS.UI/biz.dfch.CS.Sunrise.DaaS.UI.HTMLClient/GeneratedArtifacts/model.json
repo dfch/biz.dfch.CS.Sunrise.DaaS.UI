@@ -1423,6 +1423,150 @@
         },
         {
           "__isEntityType": 1,
+          ":@SummaryProperty": { "property": { "__id": "Product/Properties[Type]" } },
+          "id": "Product",
+          "name": "Product",
+          ":@NotSearchable": { },
+          ":@DefaultScreen":
+          {
+            "value": { "__id": "ProductView" },
+            ":@ScreenParameterMapping":
+            {
+              "screenParameter": { "__id": "ProductView/Properties[Product]" }
+            }
+          },
+          "methods":
+          [
+            {
+              "id": "Product/Methods[deleteEntity]",
+              "name": "deleteEntity"
+            },
+            {
+              "id": "Product/Methods[edit]",
+              "name": "edit"
+            },
+            {
+              "id": "Product/Methods[view]",
+              "name": "view"
+            }
+          ],
+          "properties":
+          [
+            {
+              "id": "Product/Properties[Type]",
+              "name": "Type",
+              "propertyType": { "__id": ":String" },
+              ":@Required": { }
+            },
+            {
+              "id": "Product/Properties[Version]",
+              "name": "Version",
+              "propertyType": { "__id": ":String" },
+              ":@Required": { }
+            },
+            {
+              "id": "Product/Properties[ValidFrom]",
+              "name": "ValidFrom",
+              "propertyType": { "__id": ":DateTimeOffset" },
+              ":@Required": { },
+              ":@NotSearchable": { }
+            },
+            {
+              "id": "Product/Properties[ValidUntil]",
+              "name": "ValidUntil",
+              "propertyType": { "__id": ":DateTimeOffset" },
+              ":@Required": { },
+              ":@NotSearchable": { }
+            },
+            {
+              "id": "Product/Properties[EndOfSale]",
+              "name": "EndOfSale",
+              "propertyType": { "__id": ":DateTimeOffset" },
+              ":@Required": { },
+              ":@NotSearchable": { }
+            },
+            {
+              "id": "Product/Properties[EndOfLife]",
+              "name": "EndOfLife",
+              "propertyType": { "__id": ":DateTimeOffset" },
+              ":@Required": { },
+              ":@NotSearchable": { }
+            },
+            {
+              "id": "Product/Properties[Parameters]",
+              "name": "Parameters",
+              "propertyType": { "__id": ":String?" }
+            },
+            {
+              "__isKeyProperty": 1,
+              "id": "Product/Properties[Id]",
+              "name": "Id",
+              "propertyType": { "__id": ":Int64" },
+              ":@Required": { },
+              ":@NotSearchable": { }
+            },
+            {
+              "id": "Product/Properties[Tid]",
+              "name": "Tid",
+              "propertyType": { "__id": ":String" },
+              ":@Required": { }
+            },
+            {
+              "id": "Product/Properties[Name]",
+              "name": "Name",
+              "propertyType": { "__id": ":String" },
+              ":@Required": { }
+            },
+            {
+              "id": "Product/Properties[Description]",
+              "name": "Description",
+              "propertyType": { "__id": ":String?" }
+            },
+            {
+              "id": "Product/Properties[CreatedBy]",
+              "name": "CreatedBy",
+              "propertyType": { "__id": ":String" },
+              ":@Required": { }
+            },
+            {
+              "id": "Product/Properties[ModifiedBy]",
+              "name": "ModifiedBy",
+              "propertyType": { "__id": ":String" },
+              ":@Required": { }
+            },
+            {
+              "id": "Product/Properties[Created]",
+              "name": "Created",
+              "propertyType": { "__id": ":DateTimeOffset" },
+              ":@Required": { },
+              ":@NotSearchable": { }
+            },
+            {
+              "id": "Product/Properties[Modified]",
+              "name": "Modified",
+              "propertyType": { "__id": ":DateTimeOffset" },
+              ":@Required": { },
+              ":@NotSearchable": { }
+            },
+            {
+              "id": "Product/Properties[RowVersion]",
+              "name": "RowVersion",
+              "propertyType": { "__id": ":Binary?" },
+              ":@NotSearchable": { }
+            },
+            {
+              "id": "Product/Properties[CatalogueItems]",
+              "name": "CatalogueItems",
+              "association": { "__id": "biz_dfch_CS_Appclusive_Core_OdataServices_Core_Product_Catalogue" },
+              "elementType": { "__id": "CatalogueItem1" },
+              "fromEnd": { "__id": "biz_dfch_CS_Appclusive_Core_OdataServices_Core_Product_Catalogue/Ends[CatalogueItemsPartner]" },
+              "propertyType": { "__id": "CatalogueItem1*" },
+              "toEnd": { "__id": "biz_dfch_CS_Appclusive_Core_OdataServices_Core_Product_Catalogue/Ends[CatalogueItems]" }
+            }
+          ]
+        },
+        {
+          "__isEntityType": 1,
           ":@SummaryProperty": { "property": { "__id": "Endpoint/Properties[Tid]" } },
           "id": "Endpoint",
           "name": "Endpoint",
@@ -3484,142 +3628,6 @@
           ]
         },
         {
-          "__isEntityType": 1,
-          ":@SummaryProperty": { "property": { "__id": "Product/Properties[Type]" } },
-          "id": "Product",
-          "name": "Product",
-          ":@NotSearchable": { },
-          "methods":
-          [
-            {
-              "id": "Product/Methods[deleteEntity]",
-              "name": "deleteEntity"
-            },
-            {
-              "id": "Product/Methods[edit]",
-              "name": "edit"
-            },
-            {
-              "id": "Product/Methods[view]",
-              "name": "view"
-            }
-          ],
-          "properties":
-          [
-            {
-              "id": "Product/Properties[Type]",
-              "name": "Type",
-              "propertyType": { "__id": ":String" },
-              ":@Required": { }
-            },
-            {
-              "id": "Product/Properties[Version]",
-              "name": "Version",
-              "propertyType": { "__id": ":String" },
-              ":@Required": { }
-            },
-            {
-              "id": "Product/Properties[ValidFrom]",
-              "name": "ValidFrom",
-              "propertyType": { "__id": ":DateTimeOffset" },
-              ":@Required": { },
-              ":@NotSearchable": { }
-            },
-            {
-              "id": "Product/Properties[ValidUntil]",
-              "name": "ValidUntil",
-              "propertyType": { "__id": ":DateTimeOffset" },
-              ":@Required": { },
-              ":@NotSearchable": { }
-            },
-            {
-              "id": "Product/Properties[EndOfSale]",
-              "name": "EndOfSale",
-              "propertyType": { "__id": ":DateTimeOffset" },
-              ":@Required": { },
-              ":@NotSearchable": { }
-            },
-            {
-              "id": "Product/Properties[EndOfLife]",
-              "name": "EndOfLife",
-              "propertyType": { "__id": ":DateTimeOffset" },
-              ":@Required": { },
-              ":@NotSearchable": { }
-            },
-            {
-              "id": "Product/Properties[Parameters]",
-              "name": "Parameters",
-              "propertyType": { "__id": ":String?" }
-            },
-            {
-              "__isKeyProperty": 1,
-              "id": "Product/Properties[Id]",
-              "name": "Id",
-              "propertyType": { "__id": ":Int64" },
-              ":@Required": { },
-              ":@NotSearchable": { }
-            },
-            {
-              "id": "Product/Properties[Tid]",
-              "name": "Tid",
-              "propertyType": { "__id": ":String" },
-              ":@Required": { }
-            },
-            {
-              "id": "Product/Properties[Name]",
-              "name": "Name",
-              "propertyType": { "__id": ":String" },
-              ":@Required": { }
-            },
-            {
-              "id": "Product/Properties[Description]",
-              "name": "Description",
-              "propertyType": { "__id": ":String?" }
-            },
-            {
-              "id": "Product/Properties[CreatedBy]",
-              "name": "CreatedBy",
-              "propertyType": { "__id": ":String" },
-              ":@Required": { }
-            },
-            {
-              "id": "Product/Properties[ModifiedBy]",
-              "name": "ModifiedBy",
-              "propertyType": { "__id": ":String" },
-              ":@Required": { }
-            },
-            {
-              "id": "Product/Properties[Created]",
-              "name": "Created",
-              "propertyType": { "__id": ":DateTimeOffset" },
-              ":@Required": { },
-              ":@NotSearchable": { }
-            },
-            {
-              "id": "Product/Properties[Modified]",
-              "name": "Modified",
-              "propertyType": { "__id": ":DateTimeOffset" },
-              ":@Required": { },
-              ":@NotSearchable": { }
-            },
-            {
-              "id": "Product/Properties[RowVersion]",
-              "name": "RowVersion",
-              "propertyType": { "__id": ":Binary?" },
-              ":@NotSearchable": { }
-            },
-            {
-              "id": "Product/Properties[CatalogueItems]",
-              "name": "CatalogueItems",
-              "association": { "__id": "biz_dfch_CS_Appclusive_Core_OdataServices_Core_Product_Catalogue" },
-              "elementType": { "__id": "CatalogueItem1" },
-              "fromEnd": { "__id": "biz_dfch_CS_Appclusive_Core_OdataServices_Core_Product_Catalogue/Ends[CatalogueItemsPartner]" },
-              "propertyType": { "__id": "CatalogueItem1*" },
-              "toEnd": { "__id": "biz_dfch_CS_Appclusive_Core_OdataServices_Core_Product_Catalogue/Ends[CatalogueItems]" }
-            }
-          ]
-        },
-        {
           "id": "biz_dfch_CS_Appclusive_Core_OdataServices_Core_Product_Catalogue",
           "name": "biz_dfch_CS_Appclusive_Core_OdataServices_Core_Product_Catalogue",
           "ends":
@@ -4586,121 +4594,112 @@
                     "childContentItems":
                     [
                       {
-                        "displayName": "General Group1",
-                        "name": "GeneralGroup1",
-                        "kind": "Group",
-                        "view": { "__id": ":RowsLayout" },
-                        "childContentItems":
-                        [
-                          {
-                            "displayName": "Tid",
-                            "name": "Tid",
-                            "kind": "Value",
-                            "view": { "__id": ":Text" },
-                            "dataSource":
+                        "displayName": "Tid",
+                        "name": "Tid",
+                        "kind": "Value",
+                        "view": { "__id": ":Text" },
+                        "dataSource":
+                        {
+                          "links":
+                          [
                             {
-                              "links":
-                              [
-                                {
-                                  "member": { "__id": "ApprovalView/Properties[Approval]" }
-                                },
-                                {
-                                  "member": { "__id": "Approval/Properties[Tid]" }
-                                }
-                              ]
-                            }
-                          },
-                          {
-                            "displayName": "Id",
-                            "name": "Id",
-                            "kind": "Value",
-                            "view": { "__id": ":Text" },
-                            "dataSource":
+                              "member": { "__id": "ApprovalView/Properties[Approval]" }
+                            },
                             {
-                              "links":
-                              [
-                                {
-                                  "member": { "__id": "ApprovalView/Properties[Approval]" }
-                                },
-                                {
-                                  "member": { "__id": "Approval/Properties[Id]" }
-                                }
-                              ]
+                              "member": { "__id": "Approval/Properties[Tid]" }
                             }
-                          },
-                          {
-                            "displayName": "Created By",
-                            "name": "CreatedBy",
-                            "kind": "Value",
-                            "view": { "__id": ":Text" },
-                            "dataSource":
+                          ]
+                        }
+                      },
+                      {
+                        "displayName": "Id",
+                        "name": "Id",
+                        "kind": "Value",
+                        "view": { "__id": ":Text" },
+                        "dataSource":
+                        {
+                          "links":
+                          [
                             {
-                              "links":
-                              [
-                                {
-                                  "member": { "__id": "ApprovalView/Properties[Approval]" }
-                                },
-                                {
-                                  "member": { "__id": "Approval/Properties[CreatedBy]" }
-                                }
-                              ]
-                            }
-                          },
-                          {
-                            "displayName": "Created",
-                            "name": "Created",
-                            "kind": "Value",
-                            "view": { "__id": ":Text" },
-                            "dataSource":
+                              "member": { "__id": "ApprovalView/Properties[Approval]" }
+                            },
                             {
-                              "links":
-                              [
-                                {
-                                  "member": { "__id": "ApprovalView/Properties[Approval]" }
-                                },
-                                {
-                                  "member": { "__id": "Approval/Properties[Created]" }
-                                }
-                              ]
+                              "member": { "__id": "Approval/Properties[Id]" }
                             }
-                          },
-                          {
-                            "displayName": "Modified By",
-                            "name": "ModifiedBy",
-                            "kind": "Value",
-                            "view": { "__id": ":Text" },
-                            "dataSource":
+                          ]
+                        }
+                      },
+                      {
+                        "displayName": "Created By",
+                        "name": "CreatedBy",
+                        "kind": "Value",
+                        "view": { "__id": ":Text" },
+                        "dataSource":
+                        {
+                          "links":
+                          [
                             {
-                              "links":
-                              [
-                                {
-                                  "member": { "__id": "ApprovalView/Properties[Approval]" }
-                                },
-                                {
-                                  "member": { "__id": "Approval/Properties[ModifiedBy]" }
-                                }
-                              ]
-                            }
-                          },
-                          {
-                            "displayName": "Modified",
-                            "name": "Modified",
-                            "kind": "Value",
-                            "view": { "__id": ":Text" },
-                            "dataSource":
+                              "member": { "__id": "ApprovalView/Properties[Approval]" }
+                            },
                             {
-                              "links":
-                              [
-                                {
-                                  "member": { "__id": "ApprovalView/Properties[Approval]" }
-                                },
-                                {
-                                  "member": { "__id": "Approval/Properties[Modified]" }
-                                }
-                              ]
+                              "member": { "__id": "Approval/Properties[CreatedBy]" }
                             }
-                          }
-                        ]
+                          ]
+                        }
+                      },
+                      {
+                        "displayName": "Created",
+                        "name": "Created",
+                        "kind": "Value",
+                        "view": { "__id": ":Text" },
+                        "dataSource":
+                        {
+                          "links":
+                          [
+                            {
+                              "member": { "__id": "ApprovalView/Properties[Approval]" }
+                            },
+                            {
+                              "member": { "__id": "Approval/Properties[Created]" }
+                            }
+                          ]
+                        }
+                      },
+                      {
+                        "displayName": "Modified By",
+                        "name": "ModifiedBy",
+                        "kind": "Value",
+                        "view": { "__id": ":Text" },
+                        "dataSource":
+                        {
+                          "links":
+                          [
+                            {
+                              "member": { "__id": "ApprovalView/Properties[Approval]" }
+                            },
+                            {
+                              "member": { "__id": "Approval/Properties[ModifiedBy]" }
+                            }
+                          ]
+                        }
+                      },
+                      {
+                        "displayName": "Modified",
+                        "name": "Modified",
+                        "kind": "Value",
+                        "view": { "__id": ":Text" },
+                        "dataSource":
+                        {
+                          "links":
+                          [
+                            {
+                              "member": { "__id": "ApprovalView/Properties[Approval]" }
+                            },
+                            {
+                              "member": { "__id": "Approval/Properties[Modified]" }
+                            }
+                          ]
+                        }
                       }
                     ]
                   }
@@ -14993,6 +14992,521 @@
           ]
         },
         {
+          "displayName": "Product View",
+          "id": "ProductView",
+          "name": "ProductView",
+          "launchMode": "Single",
+          ":@SaveChangesTo":
+          {
+            "property": { "__id": "DataWorkspace/Members[CoreData]" }
+          },
+          "rootContentItem":
+          {
+            "displayName": "Root Content Item",
+            "name": "RootContentItem",
+            "kind": "Screen",
+            "view": { "__id": ":Screen" },
+            "childContentItems":
+            [
+              {
+                "displayName": "Tabs",
+                "name": "Tabs",
+                "kind": "Group",
+                "view": { "__id": ":TabPages" },
+                "childContentItems":
+                [
+                  {
+                    "displayName": "Details",
+                    "name": "Details",
+                    "kind": "Tab",
+                    "view": { "__id": ":RowsLayout" },
+                    "childContentItems":
+                    [
+                      {
+                        "displayName": "Name",
+                        "name": "Name",
+                        "kind": "Value",
+                        "view": { "__id": ":Text" },
+                        "dataSource":
+                        {
+                          "links":
+                          [
+                            {
+                              "member": { "__id": "ProductView/Properties[Product]" }
+                            },
+                            {
+                              "member": { "__id": "Product/Properties[Name]" }
+                            }
+                          ]
+                        }
+                      },
+                      {
+                        "displayName": "Type",
+                        "name": "Type",
+                        "kind": "Value",
+                        "view": { "__id": ":Text" },
+                        "dataSource":
+                        {
+                          "links":
+                          [
+                            {
+                              "member": { "__id": "ProductView/Properties[Product]" }
+                            },
+                            {
+                              "member": { "__id": "Product/Properties[Type]" }
+                            }
+                          ]
+                        }
+                      },
+                      {
+                        "displayName": "Version",
+                        "name": "Version",
+                        "kind": "Value",
+                        "view": { "__id": ":Text" },
+                        "dataSource":
+                        {
+                          "links":
+                          [
+                            {
+                              "member": { "__id": "ProductView/Properties[Product]" }
+                            },
+                            {
+                              "member": { "__id": "Product/Properties[Version]" }
+                            }
+                          ]
+                        }
+                      },
+                      {
+                        "displayName": "Description",
+                        "name": "Description",
+                        "kind": "Value",
+                        "view": { "__id": ":Paragraph" },
+                        "dataSource":
+                        {
+                          "links":
+                          [
+                            {
+                              "member": { "__id": "ProductView/Properties[Product]" }
+                            },
+                            {
+                              "member": { "__id": "Product/Properties[Description]" }
+                            }
+                          ]
+                        }
+                      },
+                      {
+                        "displayName": "Parameters",
+                        "name": "Parameters",
+                        "kind": "Value",
+                        "view": { "__id": ":Paragraph" },
+                        "dataSource":
+                        {
+                          "links":
+                          [
+                            {
+                              "member": { "__id": "ProductView/Properties[Product]" }
+                            },
+                            {
+                              "member": { "__id": "Product/Properties[Parameters]" }
+                            }
+                          ]
+                        }
+                      },
+                      {
+                        "displayName": "columns",
+                        "name": "columns",
+                        "kind": "Details",
+                        "view": { "__id": ":ColumnsLayout" },
+                        "dataSource":
+                        {
+                          "member": { "__id": "ProductView/Properties[Product]" }
+                        },
+                        "childContentItems":
+                        [
+                          {
+                            "displayName": "left",
+                            "name": "left",
+                            "kind": "Group",
+                            "view": { "__id": ":RowsLayout" },
+                            "childContentItems":
+                            [
+                              {
+                                "displayName": "Valid From",
+                                "name": "ValidFrom",
+                                "kind": "Value",
+                                "view": { "__id": ":Text" },
+                                "dataSource":
+                                {
+                                  "member": { "__id": "Product/Properties[ValidFrom]" }
+                                }
+                              },
+                              {
+                                "displayName": "End Of Sale",
+                                "name": "EndOfSale",
+                                "kind": "Value",
+                                "view": { "__id": ":Text" },
+                                "dataSource":
+                                {
+                                  "member": { "__id": "Product/Properties[EndOfSale]" }
+                                }
+                              }
+                            ],
+                            "propertySources":
+                            [
+                              {
+                                "property": { "__id": ":RootControl/Properties[MinWidth]" },
+                                "value": 200
+                              },
+                              {
+                                "property": { "__id": ":RootControl/Properties[MaxWidth]" },
+                                "value": 400
+                              }
+                            ]
+                          },
+                          {
+                            "displayName": "right",
+                            "name": "right",
+                            "kind": "Group",
+                            "view": { "__id": ":RowsLayout" },
+                            "childContentItems":
+                            [
+                              {
+                                "displayName": "Valid Until",
+                                "name": "ValidUntil",
+                                "kind": "Value",
+                                "view": { "__id": ":Text" },
+                                "dataSource":
+                                {
+                                  "member": { "__id": "Product/Properties[ValidUntil]" }
+                                }
+                              },
+                              {
+                                "displayName": "End Of Life",
+                                "name": "EndOfLife",
+                                "kind": "Value",
+                                "view": { "__id": ":Text" },
+                                "dataSource":
+                                {
+                                  "member": { "__id": "Product/Properties[EndOfLife]" }
+                                }
+                              }
+                            ],
+                            "propertySources":
+                            [
+                              {
+                                "property": { "__id": ":RootControl/Properties[MinWidth]" },
+                                "value": 200
+                              },
+                              {
+                                "property": { "__id": ":RootControl/Properties[MaxWidth]" },
+                                "value": 400
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  {
+                    "displayName": "General",
+                    "name": "General",
+                    "kind": "Tab",
+                    "view": { "__id": ":RowsLayout" },
+                    "childContentItems":
+                    [
+                      {
+                        "displayName": "Tid",
+                        "name": "Tid",
+                        "kind": "Value",
+                        "view": { "__id": ":Text" },
+                        "dataSource":
+                        {
+                          "links":
+                          [
+                            {
+                              "member": { "__id": "ProductView/Properties[Product]" }
+                            },
+                            {
+                              "member": { "__id": "Product/Properties[Tid]" }
+                            }
+                          ]
+                        }
+                      },
+                      {
+                        "displayName": "Id",
+                        "name": "Id",
+                        "kind": "Value",
+                        "view": { "__id": ":Text" },
+                        "dataSource":
+                        {
+                          "links":
+                          [
+                            {
+                              "member": { "__id": "ProductView/Properties[Product]" }
+                            },
+                            {
+                              "member": { "__id": "Product/Properties[Id]" }
+                            }
+                          ]
+                        }
+                      },
+                      {
+                        "displayName": "Created By",
+                        "name": "CreatedBy",
+                        "kind": "Value",
+                        "view": { "__id": ":Text" },
+                        "dataSource":
+                        {
+                          "links":
+                          [
+                            {
+                              "member": { "__id": "ProductView/Properties[Product]" }
+                            },
+                            {
+                              "member": { "__id": "Product/Properties[CreatedBy]" }
+                            }
+                          ]
+                        }
+                      },
+                      {
+                        "displayName": "Created",
+                        "name": "Created",
+                        "kind": "Value",
+                        "view": { "__id": ":Text" },
+                        "dataSource":
+                        {
+                          "links":
+                          [
+                            {
+                              "member": { "__id": "ProductView/Properties[Product]" }
+                            },
+                            {
+                              "member": { "__id": "Product/Properties[Created]" }
+                            }
+                          ]
+                        }
+                      },
+                      {
+                        "displayName": "Modified By",
+                        "name": "ModifiedBy",
+                        "kind": "Value",
+                        "view": { "__id": ":Text" },
+                        "dataSource":
+                        {
+                          "links":
+                          [
+                            {
+                              "member": { "__id": "ProductView/Properties[Product]" }
+                            },
+                            {
+                              "member": { "__id": "Product/Properties[ModifiedBy]" }
+                            }
+                          ]
+                        }
+                      },
+                      {
+                        "displayName": "Modified",
+                        "name": "Modified",
+                        "kind": "Value",
+                        "view": { "__id": ":Text" },
+                        "dataSource":
+                        {
+                          "links":
+                          [
+                            {
+                              "member": { "__id": "ProductView/Properties[Product]" }
+                            },
+                            {
+                              "member": { "__id": "Product/Properties[Modified]" }
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "displayName": "Catalogue Items",
+                    "name": "CatalogueItems",
+                    "kind": "Tab",
+                    "view": { "__id": ":RowsLayout" },
+                    "childContentItems":
+                    [
+                      {
+                        "displayName": "CatalogueItems",
+                        "name": "CatalogueItems1",
+                        "kind": "Collection",
+                        "view": { "__id": ":TileList" },
+                        "dataSource":
+                        {
+                          "member": { "__id": "ProductView/Properties[CatalogueItems]" }
+                        },
+                        "childContentItems":
+                        [
+                          {
+                            "displayName": "rows",
+                            "name": "rows",
+                            "kind": "Details",
+                            "view": { "__id": ":RowsLayout" },
+                            "dataSource":
+                            {
+                              "links":
+                              [
+                              ]
+                            },
+                            "childContentItems":
+                            [
+                              {
+                                "displayName": "Id",
+                                "name": "Id1",
+                                "kind": "Value",
+                                "view": { "__id": ":Text" },
+                                "dataSource":
+                                {
+                                  "member": { "__id": "CatalogueItem1/Properties[Id]" }
+                                },
+                                "propertySources":
+                                [
+                                  {
+                                    "property": { "__id": ":RootControl/Properties[FontStyle]" },
+                                    "value": "Small"
+                                  }
+                                ]
+                              },
+                              {
+                                "displayName": "Name",
+                                "name": "Name1",
+                                "kind": "Value",
+                                "view": { "__id": ":Text" },
+                                "dataSource":
+                                {
+                                  "member": { "__id": "CatalogueItem1/Properties[Name]" }
+                                },
+                                "propertySources":
+                                [
+                                  {
+                                    "property": { "__id": ":RootControl/Properties[FontStyle]" },
+                                    "value": "Small"
+                                  }
+                                ]
+                              }
+                            ],
+                            "propertySources":
+                            [
+                              {
+                                "property": { "__id": ":RootControl/Properties[WidthSizingMode]" },
+                                "value": "FitToContent"
+                              }
+                            ]
+                          }
+                        ],
+                        "propertySources":
+                        [
+                          {
+                            "property": { "__id": ":RootCollectionControl/Properties[ItemTap]" },
+                            "source":
+                            {
+                              "links":
+                              [
+                                {
+                                  "member": { "__id": "ProductView/Properties[CatalogueItems]" }
+                                },
+                                {
+                                  "target": { "__id": "CollectionView$CatalogueItem1/Methods[viewSelected]" }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "propertySources":
+                [
+                  {
+                    "property": { "__id": ":RootControl/Properties[BrowseOnly]" },
+                    "value": true
+                  }
+                ]
+              },
+              {
+                "displayName": "Popups",
+                "name": "Popups",
+                "kind": "Group",
+                "view": { "__id": ":DialogPages" }
+              }
+            ]
+          },
+          "methods":
+          [
+            {
+              "id": "ProductView/Methods[showTab]",
+              "name": "showTab",
+              "parameters":
+              [
+                {
+                  "id": "ProductView/Methods[showTab]/Parameters[tabName]",
+                  "name": "tabName",
+                  "parameterType": { "__id": ":String" }
+                }
+              ]
+            },
+            {
+              "id": "ProductView/Methods[showDialog]",
+              "name": "showDialog",
+              "parameters":
+              [
+                {
+                  "id": "ProductView/Methods[showDialog]/Parameters[dialogName]",
+                  "name": "dialogName",
+                  "parameterType": { "__id": ":String" }
+                }
+              ]
+            }
+          ],
+          "properties":
+          [
+            {
+              "id": "ProductView/Properties[Product]",
+              "name": "Product",
+              "elementType": { "__id": "Product" },
+              "propertyType": { "__id": "Product" },
+              ":@IsParameter": { }
+            },
+            {
+              "id": "ProductView/Properties[CatalogueItems]",
+              "name": "CatalogueItems",
+              "disableSearch": true,
+              "pageSize": 15,
+              "elementType": { "__id": "CatalogueItem1" },
+              "propertyType": { "__id": "CollectionView$CatalogueItem1" },
+              "query":
+              {
+                "id": "ProductView/Properties[CatalogueItems]/Query",
+                "name": "CatalogueItemsQuery",
+                "elementType": { "__id": "CatalogueItem1" },
+                "returnType": { "__id": "CatalogueItem1*" },
+                "source":
+                {
+                  "links":
+                  [
+                    {
+                      "member": { "__id": "ProductView/Properties[Product]" }
+                    },
+                    {
+                      "member": { "__id": "Product/Properties[CatalogueItems]" }
+                    }
+                  ]
+                }
+              },
+              "source":
+              {
+                "target": { "__id": "ProductView/Properties[CatalogueItems]/Query" }
+              }
+            }
+          ]
+        },
+        {
           "id": "Approval*",
           "name": "Approval*",
           "kind": "Enumerable",
@@ -15689,6 +16203,64 @@
           ]
         },
         {
+          "id": "Product*",
+          "name": "Product*",
+          "kind": "Enumerable",
+          "elementType": { "__id": "Product" }
+        },
+        {
+          "id": "CollectionView$Product",
+          "name": "CollectionView$Product",
+          "kind": "CollectionView",
+          "elementType": { "__id": "Product" },
+          "methods":
+          [
+            {
+              "id": "CollectionView$Product/Methods[addNew]",
+              "name": "addNew",
+              "returnType": { "__id": "Product" }
+            },
+            {
+              "id": "CollectionView$Product/Methods[addAndEditNew]",
+              "name": "addAndEditNew",
+              "returnType": { "__id": "Product" }
+            },
+            {
+              "id": "CollectionView$Product/Methods[showSearch]",
+              "name": "showSearch",
+              "returnType": { "__id": "Product" }
+            },
+            {
+              "id": "CollectionView$Product/Methods[editSelected]",
+              "name": "editSelected"
+            },
+            {
+              "id": "CollectionView$Product/Methods[deleteSelected]",
+              "name": "deleteSelected"
+            },
+            {
+              "id": "CollectionView$Product/Methods[removeSelected]",
+              "name": "removeSelected"
+            },
+            {
+              "id": "CollectionView$Product/Methods[refresh]",
+              "name": "refresh"
+            },
+            {
+              "id": "CollectionView$Product/Methods[viewSelected]",
+              "name": "viewSelected"
+            }
+          ],
+          "properties":
+          [
+            {
+              "id": "CollectionView$Product/Properties[selectedItem]",
+              "name": "selectedItem",
+              "propertyType": { "__id": "Product" }
+            }
+          ]
+        },
+        {
           "id": "Endpoint*",
           "name": "Endpoint*",
           "kind": "Enumerable",
@@ -16093,64 +16665,6 @@
               "propertyType": { "__id": "ManagementUri" }
             }
           ]
-        },
-        {
-          "id": "Product*",
-          "name": "Product*",
-          "kind": "Enumerable",
-          "elementType": { "__id": "Product" }
-        },
-        {
-          "id": "CollectionView$Product",
-          "name": "CollectionView$Product",
-          "kind": "CollectionView",
-          "elementType": { "__id": "Product" },
-          "methods":
-          [
-            {
-              "id": "CollectionView$Product/Methods[addNew]",
-              "name": "addNew",
-              "returnType": { "__id": "Product" }
-            },
-            {
-              "id": "CollectionView$Product/Methods[addAndEditNew]",
-              "name": "addAndEditNew",
-              "returnType": { "__id": "Product" }
-            },
-            {
-              "id": "CollectionView$Product/Methods[showSearch]",
-              "name": "showSearch",
-              "returnType": { "__id": "Product" }
-            },
-            {
-              "id": "CollectionView$Product/Methods[editSelected]",
-              "name": "editSelected"
-            },
-            {
-              "id": "CollectionView$Product/Methods[deleteSelected]",
-              "name": "deleteSelected"
-            },
-            {
-              "id": "CollectionView$Product/Methods[removeSelected]",
-              "name": "removeSelected"
-            },
-            {
-              "id": "CollectionView$Product/Methods[refresh]",
-              "name": "refresh"
-            },
-            {
-              "id": "CollectionView$Product/Methods[viewSelected]",
-              "name": "viewSelected"
-            }
-          ],
-          "properties":
-          [
-            {
-              "id": "CollectionView$Product/Properties[selectedItem]",
-              "name": "selectedItem",
-              "propertyType": { "__id": "Product" }
-            }
-          ]
         }
       ],
       "methods":
@@ -16542,6 +17056,19 @@
               "id": "!module/Methods[showOrderViewDetails]/Parameters[Order]",
               "name": "Order",
               "parameterType": { "__id": "Order" }
+            }
+          ]
+        },
+        {
+          "id": "!module/Methods[showProductView]",
+          "name": "showProductView",
+          ":@ShowScreenMethod": { "targetScreen": { "__id": "ProductView" } },
+          "parameters":
+          [
+            {
+              "id": "!module/Methods[showProductView]/Parameters[Product]",
+              "name": "Product",
+              "parameterType": { "__id": "Product" }
             }
           ]
         }

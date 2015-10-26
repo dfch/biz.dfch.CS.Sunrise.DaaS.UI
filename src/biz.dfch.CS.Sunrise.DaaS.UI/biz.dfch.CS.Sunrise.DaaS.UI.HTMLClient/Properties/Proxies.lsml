@@ -100,12 +100,6 @@
         Target="ServiceInterface:biz_dfch_CS_Appclusive_Core_OdataServices_Core_Cart_CartItems_bi" />
     </Association.Attributes>
   </Association>
-  <EntityType>
-    <EntityType.Attributes>
-      <Proxy
-        Target="ServiceInterface:Product" />
-    </EntityType.Attributes>
-  </EntityType>
   <Association>
     <Association.Attributes>
       <Proxy
