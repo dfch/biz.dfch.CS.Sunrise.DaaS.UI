@@ -28,16 +28,7 @@
     <DataService.ConnectionProperties>
       <ConnectionProperty
         Name="ConnectionStringGuid"
-        Value="e81eeaf5-a13f-4bd9-b948-dfd8caaeaa31" />
-      <ConnectionProperty
-        Name="ProjectMetadata"
-        Value="BaseData" />
-      <ConnectionProperty
-        Name="ProjectMetadata"
-        Value="BaseData" />
-      <ConnectionProperty
-        Name="ProjectMetadata"
-        Value="BaseData" />
+        Value="0d96875e-4ee0-413c-b98e-0ab5da706d7e" />
       <ConnectionProperty
         Name="ProjectMetadata"
         Value="BaseData" />

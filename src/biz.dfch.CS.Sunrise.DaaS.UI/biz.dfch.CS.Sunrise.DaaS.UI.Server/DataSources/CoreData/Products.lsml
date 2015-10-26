@@ -5,7 +5,7 @@
     <Partial />
   </ServiceApplication.Attributes>
   <EntityType
-    Name="Approval">
+    Name="Product">
     <EntityType.Attributes>
       <NotSearchable />
     </EntityType.Attributes>
@@ -18,6 +18,55 @@
       </EntityMethod>
     </EntityType.Methods>
     <EntityType.Properties>
+      <EntityProperty
+        Name="Type"
+        PropertyType=":String">
+        <EntityProperty.Attributes>
+          <Required />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Version"
+        PropertyType=":String">
+        <EntityProperty.Attributes>
+          <Required />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="ValidFrom"
+        PropertyType=":DateTimeOffset">
+        <EntityProperty.Attributes>
+          <Required />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="ValidUntil"
+        PropertyType=":DateTimeOffset">
+        <EntityProperty.Attributes>
+          <Required />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="EndOfSale"
+        PropertyType=":DateTimeOffset">
+        <EntityProperty.Attributes>
+          <Required />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="EndOfLife"
+        PropertyType=":DateTimeOffset">
+        <EntityProperty.Attributes>
+          <Required />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Parameters"
+        PropertyType=":String?" />
       <KeyProperty
         Name="Id"
         PropertyType=":Int64">
@@ -74,47 +123,57 @@
         </EntityProperty.Attributes>
       </EntityProperty>
       <EntityProperty
-        Name="Status"
-        PropertyType=":String?" />
-      <EntityProperty
         Name="RowVersion"
         PropertyType=":Binary?">
         <EntityProperty.Attributes>
           <NotSearchable />
         </EntityProperty.Attributes>
       </EntityProperty>
-      <EntityProperty
-        Name="NotBefore"
-        PropertyType=":DateTimeOffset">
-        <EntityProperty.Attributes>
-          <Required />
-          <NotSearchable />
-        </EntityProperty.Attributes>
-      </EntityProperty>
-      <EntityProperty
-        Name="ExpiresAt"
-        PropertyType=":DateTimeOffset">
-        <EntityProperty.Attributes>
-          <Required />
-          <NotSearchable />
-        </EntityProperty.Attributes>
-      </EntityProperty>
+      <NavigationProperty
+        Name="CatalogueItems"
+        Association="biz_dfch_CS_Appclusive_Core_OdataServices_Core_Product_Catalogue"
+        FromEnd="CatalogueItemsPartner"
+        ToEnd="CatalogueItems" />
     </EntityType.Properties>
   </EntityType>
+  <Association
+    Name="biz_dfch_CS_Appclusive_Core_OdataServices_Core_Product_Catalogue">
+    <AssociationEnd
+      Name="CatalogueItemsPartner"
+      EntityType="Product">
+      <AssociationEnd.Attributes>
+        <DeleteRule />
+      </AssociationEnd.Attributes>
+    </AssociationEnd>
+    <AssociationEnd
+      Name="CatalogueItems"
+      Multiplicity="Many"
+      EntityType="CatalogueItem1" />
+  </Association>
   <EntityContainer
     Name="CoreData">
     <EntityContainer.Attributes>
       <Partial />
     </EntityContainer.Attributes>
     <EntitySet
-      Name="Approvals"
+      Name="Products"
       CanDelete="True"
       CanInsert="True"
       CanUpdate="True"
-      EntityType="Approval" />
+      EntityType="Product" />
+    <AssociationSet
+      Name="biz_dfch_CS_Appclusive_Core_OdataServices_Core_Product_Catalogue"
+      Association="biz_dfch_CS_Appclusive_Core_OdataServices_Core_Product_Catalogue">
+      <AssociationSetEnd
+        Name="CatalogueItemsPartner"
+        EntitySet="Products" />
+      <AssociationSetEnd
+        Name="CatalogueItems"
+        EntitySet="CatalogueItems" />
+    </AssociationSet>
     <QueryOperation
-      Name="Approvals_Single"
-      ReturnType="Approval">
+      Name="Products_Single"
+      ReturnType="Product">
       <QueryOperation.Attributes>
         <Generated />
         <Description
@@ -140,12 +199,12 @@
       <QueryOperation.Source>
         <QuerySourceExpressionTree>
           <MemberExpression
-            Member="Approvals" />
+            Member="Products" />
         </QuerySourceExpressionTree>
       </QueryOperation.Source>
       <QueryOperationParameter
         Name="Id"
-        ParameterType=":Int64?">
+        ParameterType="Microsoft.LightSwitch:Int64?">
         <QueryOperationParameter.Attributes>
           <Description
             Value="The value of the 'Id' key property of the entity to retrieve." />
@@ -153,8 +212,8 @@
       </QueryOperationParameter>
     </QueryOperation>
     <QueryOperation
-      Name="Approvals_SingleOrDefault"
-      ReturnType="Approval">
+      Name="Products_SingleOrDefault"
+      ReturnType="Product">
       <QueryOperation.Attributes>
         <Generated />
         <Description
@@ -180,12 +239,12 @@
       <QueryOperation.Source>
         <QuerySourceExpressionTree>
           <MemberExpression
-            Member="Approvals" />
+            Member="Products" />
         </QuerySourceExpressionTree>
       </QueryOperation.Source>
       <QueryOperationParameter
         Name="Id"
-        ParameterType=":Int64?">
+        ParameterType="Microsoft.LightSwitch:Int64?">
         <QueryOperationParameter.Attributes>
           <Description
             Value="The value of the 'Id' key property of the entity to retrieve." />
@@ -199,50 +258,77 @@
       <Partial />
     </DataService.Attributes>
     <EntitySetMapping
-      EntitySet="Approvals">
+      EntitySet="Products">
       <EntitySetMapping.Attributes>
         <CsdlEntitySet
-          EntityTypeName="Approval"
+          EntityTypeName="Product"
           EntityTypeNamespace="biz.dfch.CS.Appclusive.Core.OdataServices.Core"
-          Name="Approvals"
-          EntityType="Approval" />
+          Name="Products"
+          EntityType="Product" />
         <CsdlProperty
-          Name="Status"
-          Property="Approval/Properties[Status]" />
+          Name="Type"
+          Property="Product/Properties[Type]" />
         <CsdlProperty
-          Name="NotBefore"
-          Property="Approval/Properties[NotBefore]" />
+          Name="Version"
+          Property="Product/Properties[Version]" />
         <CsdlProperty
-          Name="ExpiresAt"
-          Property="Approval/Properties[ExpiresAt]" />
+          Name="ValidFrom"
+          Property="Product/Properties[ValidFrom]" />
+        <CsdlProperty
+          Name="ValidUntil"
+          Property="Product/Properties[ValidUntil]" />
+        <CsdlProperty
+          Name="EndOfSale"
+          Property="Product/Properties[EndOfSale]" />
+        <CsdlProperty
+          Name="EndOfLife"
+          Property="Product/Properties[EndOfLife]" />
+        <CsdlProperty
+          Name="Parameters"
+          Property="Product/Properties[Parameters]" />
         <CsdlProperty
           Name="Id"
-          Property="Approval/Properties[Id]" />
+          Property="Product/Properties[Id]" />
         <CsdlProperty
           Name="Tid"
-          Property="Approval/Properties[Tid]" />
+          Property="Product/Properties[Tid]" />
         <CsdlProperty
           Name="Name"
-          Property="Approval/Properties[Name]" />
+          Property="Product/Properties[Name]" />
         <CsdlProperty
           Name="Description"
-          Property="Approval/Properties[Description]" />
+          Property="Product/Properties[Description]" />
         <CsdlProperty
           Name="CreatedBy"
-          Property="Approval/Properties[CreatedBy]" />
+          Property="Product/Properties[CreatedBy]" />
         <CsdlProperty
           Name="ModifiedBy"
-          Property="Approval/Properties[ModifiedBy]" />
+          Property="Product/Properties[ModifiedBy]" />
         <CsdlProperty
           Name="Created"
-          Property="Approval/Properties[Created]" />
+          Property="Product/Properties[Created]" />
         <CsdlProperty
           Name="Modified"
-          Property="Approval/Properties[Modified]" />
+          Property="Product/Properties[Modified]" />
         <CsdlProperty
           Name="RowVersion"
-          Property="Approval/Properties[RowVersion]" />
+          Property="Product/Properties[RowVersion]" />
+        <CsdlProperty
+          Name="CatalogueItems"
+          Property="Product/Properties[CatalogueItems]" />
       </EntitySetMapping.Attributes>
     </EntitySetMapping>
+    <AssociationSetMapping
+      AssociationSet="biz_dfch_CS_Appclusive_Core_OdataServices_Core_Product_Catalogue">
+      <AssociationSetMapping.Attributes>
+        <CsdlAssociation
+          Name="biz_dfch_CS_Appclusive_Core_OdataServices_Core_Product_CatalogueItems_biz_dfch_CS_Appclusive_Core_OdataServices_Core_CatalogueItem_CatalogueItemsPartnerSet"
+          Association="biz_dfch_CS_Appclusive_Core_OdataServices_Core_Product_Catalogue" />
+        <CsdlAssociationSetEnd
+          End="CoreData/Members[biz_dfch_CS_Appclusive_Core_OdataServices_Core_Product_Catalogue]/Members[CatalogueItemsPartner]" />
+        <CsdlAssociationSetEnd
+          End="CoreData/Members[biz_dfch_CS_Appclusive_Core_OdataServices_Core_Product_Catalogue]/Members[CatalogueItems]" />
+      </AssociationSetMapping.Attributes>
+    </AssociationSetMapping>
   </DataService>
 </ServiceApplication>

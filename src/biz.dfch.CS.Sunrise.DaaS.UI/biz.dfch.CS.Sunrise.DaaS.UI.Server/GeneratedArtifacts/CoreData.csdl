@@ -72,6 +72,8 @@
     <Property Name="Modified" Type="Edm.DateTimeOffset" Nullable="false" />
     <Property Name="Status" Type="Edm.String" MaxLength="Max" />
     <Property Name="RowVersion" Type="Edm.Binary" MaxLength="Max" />
+    <Property Name="NotBefore" Type="Edm.DateTimeOffset" Nullable="false" />
+    <Property Name="ExpiresAt" Type="Edm.DateTimeOffset" Nullable="false" />
   </EntityType>
   <EntityType Name="CartItem">
     <Key>
@@ -110,7 +112,6 @@
     <Key>
       <PropertyRef Name="Id" />
     </Key>
-    <Property Name="Version" Type="Edm.String" Nullable="false" MaxLength="Max" />
     <Property Name="Id" Type="Edm.Int64" Nullable="false" />
     <Property Name="Tid" Type="Edm.String" Nullable="false" MaxLength="Max" />
     <Property Name="Name" Type="Edm.String" Nullable="false" MaxLength="Max" />
@@ -120,13 +121,13 @@
     <Property Name="Created" Type="Edm.DateTimeOffset" Nullable="false" />
     <Property Name="Modified" Type="Edm.DateTimeOffset" Nullable="false" />
     <Property Name="CatalogueId" Type="Edm.Int64" Nullable="false" />
-    <Property Name="Type" Type="Edm.String" Nullable="false" MaxLength="Max" />
     <Property Name="ValidFrom" Type="Edm.DateTimeOffset" Nullable="false" />
     <Property Name="ValidUntil" Type="Edm.DateTimeOffset" Nullable="false" />
     <Property Name="EndOfSale" Type="Edm.DateTimeOffset" Nullable="false" />
     <Property Name="EndOfLife" Type="Edm.DateTimeOffset" Nullable="false" />
     <Property Name="Parameters" Type="Edm.String" MaxLength="Max" />
     <Property Name="RowVersion" Type="Edm.Binary" MaxLength="Max" />
+    <Property Name="ProductId" Type="Edm.Int64" Nullable="false" />
   </EntityType>
   <EntityType Name="Catalogue">
     <Key>
@@ -159,6 +160,7 @@
     <Property Name="Created" Type="Edm.DateTimeOffset" Nullable="false" />
     <Property Name="Modified" Type="Edm.DateTimeOffset" Nullable="false" />
     <Property Name="RowVersion" Type="Edm.Binary" MaxLength="Max" />
+    <Property Name="Version" Type="Edm.String" Nullable="false" MaxLength="Max" />
   </EntityType>
   <EntityType Name="Gate">
     <Key>
@@ -324,6 +326,28 @@
     <Property Name="RowVersion" Type="Edm.Binary" MaxLength="Max" />
     <NavigationProperty Name="OrderItems" Relationship="LightSwitchApplication.biz_dfch_CS_Sunrise_DaaS_Endpoints_OdataServices_Core_Order_Orde" ToRole="OrderItems" FromRole="OrderItemsPartner" />
   </EntityType>
+  <EntityType Name="Product">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Type" Type="Edm.String" Nullable="false" MaxLength="Max" />
+    <Property Name="Version" Type="Edm.String" Nullable="false" MaxLength="Max" />
+    <Property Name="ValidFrom" Type="Edm.DateTimeOffset" Nullable="false" />
+    <Property Name="ValidUntil" Type="Edm.DateTimeOffset" Nullable="false" />
+    <Property Name="EndOfSale" Type="Edm.DateTimeOffset" Nullable="false" />
+    <Property Name="EndOfLife" Type="Edm.DateTimeOffset" Nullable="false" />
+    <Property Name="Parameters" Type="Edm.String" MaxLength="Max" />
+    <Property Name="Id" Type="Edm.Int64" Nullable="false" />
+    <Property Name="Tid" Type="Edm.String" Nullable="false" MaxLength="Max" />
+    <Property Name="Name" Type="Edm.String" Nullable="false" MaxLength="Max" />
+    <Property Name="Description" Type="Edm.String" MaxLength="Max" />
+    <Property Name="CreatedBy" Type="Edm.String" Nullable="false" MaxLength="Max" />
+    <Property Name="ModifiedBy" Type="Edm.String" Nullable="false" MaxLength="Max" />
+    <Property Name="Created" Type="Edm.DateTimeOffset" Nullable="false" />
+    <Property Name="Modified" Type="Edm.DateTimeOffset" Nullable="false" />
+    <Property Name="RowVersion" Type="Edm.Binary" MaxLength="Max" />
+    <NavigationProperty Name="CatalogueItems" Relationship="LightSwitchApplication.biz_dfch_CS_Appclusive_Core_OdataServices_Core_Product_Catalogue" ToRole="CatalogueItems" FromRole="CatalogueItemsPartner" />
+  </EntityType>
   <Association Name="biz_dfch_CS_Appclusive_Core_OdataServices_Core_Acl_Aces_biz_dfch">
     <End Role="AcesPartner" Type="LightSwitchApplication.Acl" Multiplicity="0..1" />
     <End Role="Aces" Type="LightSwitchApplication.Ace" Multiplicity="*" />
@@ -356,6 +380,10 @@
     <End Role="OrderItemsPartner" Type="LightSwitchApplication.Order" Multiplicity="0..1" />
     <End Role="OrderItems" Type="LightSwitchApplication.OrderItem" Multiplicity="*" />
   </Association>
+  <Association Name="biz_dfch_CS_Appclusive_Core_OdataServices_Core_Product_Catalogue">
+    <End Role="CatalogueItemsPartner" Type="LightSwitchApplication.Product" Multiplicity="0..1" />
+    <End Role="CatalogueItems" Type="LightSwitchApplication.CatalogueItem1" Multiplicity="*" />
+  </Association>
   <EntityContainer Name="CoreData" m:IsDefaultEntityContainer="true">
     <EntitySet Name="Aces" EntityType="LightSwitchApplication.Ace" />
     <EntitySet Name="Acls" EntityType="LightSwitchApplication.Acl" />
@@ -375,6 +403,7 @@
     <EntitySet Name="Nodes" EntityType="LightSwitchApplication.Node" />
     <EntitySet Name="OrderItems" EntityType="LightSwitchApplication.OrderItem" />
     <EntitySet Name="Orders" EntityType="LightSwitchApplication.Order" />
+    <EntitySet Name="Products" EntityType="LightSwitchApplication.Product" />
     <AssociationSet Name="biz_dfch_CS_Appclusive_Core_OdataServices_Core_Acl_Aces_biz_dfch" Association="LightSwitchApplication.biz_dfch_CS_Appclusive_Core_OdataServices_Core_Acl_Aces_biz_dfch">
       <End Role="AcesPartner" EntitySet="Acls" />
       <End Role="Aces" EntitySet="Aces" />
@@ -406,6 +435,10 @@
     <AssociationSet Name="biz_dfch_CS_Sunrise_DaaS_Endpoints_OdataServices_Core_Order_Orde" Association="LightSwitchApplication.biz_dfch_CS_Sunrise_DaaS_Endpoints_OdataServices_Core_Order_Orde">
       <End Role="OrderItemsPartner" EntitySet="Orders" />
       <End Role="OrderItems" EntitySet="OrderItems" />
+    </AssociationSet>
+    <AssociationSet Name="biz_dfch_CS_Appclusive_Core_OdataServices_Core_Product_Catalogue" Association="LightSwitchApplication.biz_dfch_CS_Appclusive_Core_OdataServices_Core_Product_Catalogue">
+      <End Role="CatalogueItemsPartner" EntitySet="Products" />
+      <End Role="CatalogueItems" EntitySet="CatalogueItems" />
     </AssociationSet>
   </EntityContainer>
 </Schema>

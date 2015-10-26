@@ -19,6 +19,7 @@
     <EntitySet Name="Nodes" EntityType="CoreDataStore.Node" store:Type="Tables" Schema="dbo" Table="Node" />
     <EntitySet Name="OrderItems" EntityType="CoreDataStore.OrderItem" store:Type="Tables" Schema="dbo" Table="OrderItem" />
     <EntitySet Name="Orders" EntityType="CoreDataStore.Order" store:Type="Tables" Schema="dbo" Table="Order" />
+    <EntitySet Name="Products" EntityType="CoreDataStore.Product" store:Type="Tables" Schema="dbo" Table="Product" />
     <AssociationSet Name="biz_dfch_CS_Appclusive_Core_OdataServices_Core_Acl_Aces_biz_dfch" Association="CoreDataStore.biz_dfch_CS_Appclusive_Core_OdataServices_Core_Acl_Aces_biz_dfch">
       <End Role="AcesPartner" EntitySet="Acls" />
       <End Role="Aces" EntitySet="Aces" />
@@ -50,6 +51,10 @@
     <AssociationSet Name="biz_dfch_CS_Sunrise_DaaS_Endpoints_OdataServices_Core_Order_Orde" Association="CoreDataStore.biz_dfch_CS_Sunrise_DaaS_Endpoints_OdataServices_Core_Order_Orde">
       <End Role="OrderItemsPartner" EntitySet="Orders" />
       <End Role="OrderItems" EntitySet="OrderItems" />
+    </AssociationSet>
+    <AssociationSet Name="biz_dfch_CS_Appclusive_Core_OdataServices_Core_Product_Catalogue" Association="CoreDataStore.biz_dfch_CS_Appclusive_Core_OdataServices_Core_Product_Catalogue">
+      <End Role="CatalogueItemsPartner" EntitySet="Products" />
+      <End Role="CatalogueItems" EntitySet="CatalogueItems" />
     </AssociationSet>
   </EntityContainer>
   <EntityType Name="Ace">
@@ -123,6 +128,8 @@
     <Property Name="Modified" Type="datetimeoffset" Nullable="false" />
     <Property Name="Status" Type="nvarchar(max)" />
     <Property Name="RowVersion" Type="varbinary(max)" />
+    <Property Name="NotBefore" Type="datetimeoffset" Nullable="false" />
+    <Property Name="ExpiresAt" Type="datetimeoffset" Nullable="false" />
   </EntityType>
   <EntityType Name="CartItem">
     <Key>
@@ -160,7 +167,6 @@
     <Key>
       <PropertyRef Name="Id" />
     </Key>
-    <Property Name="Version" Type="nvarchar(max)" Nullable="false" />
     <Property Name="Id" Type="bigint" Nullable="false" />
     <Property Name="Tid" Type="nvarchar(max)" Nullable="false" />
     <Property Name="Name" Type="nvarchar(max)" Nullable="false" />
@@ -170,13 +176,13 @@
     <Property Name="Created" Type="datetimeoffset" Nullable="false" />
     <Property Name="Modified" Type="datetimeoffset" Nullable="false" />
     <Property Name="CatalogueId" Type="bigint" Nullable="false" />
-    <Property Name="Type" Type="nvarchar(max)" Nullable="false" />
     <Property Name="ValidFrom" Type="datetimeoffset" Nullable="false" />
     <Property Name="ValidUntil" Type="datetimeoffset" Nullable="false" />
     <Property Name="EndOfSale" Type="datetimeoffset" Nullable="false" />
     <Property Name="EndOfLife" Type="datetimeoffset" Nullable="false" />
     <Property Name="Parameters" Type="nvarchar(max)" />
     <Property Name="RowVersion" Type="varbinary(max)" />
+    <Property Name="ProductId" Type="bigint" Nullable="false" />
   </EntityType>
   <EntityType Name="Catalogue">
     <Key>
@@ -208,6 +214,7 @@
     <Property Name="Created" Type="datetimeoffset" Nullable="false" />
     <Property Name="Modified" Type="datetimeoffset" Nullable="false" />
     <Property Name="RowVersion" Type="varbinary(max)" />
+    <Property Name="Version" Type="nvarchar(max)" Nullable="false" />
   </EntityType>
   <EntityType Name="Gate">
     <Key>
@@ -368,6 +375,27 @@
     <Property Name="Requester" Type="nvarchar(max)" />
     <Property Name="RowVersion" Type="varbinary(max)" />
   </EntityType>
+  <EntityType Name="Product">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Type" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Version" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="ValidFrom" Type="datetimeoffset" Nullable="false" />
+    <Property Name="ValidUntil" Type="datetimeoffset" Nullable="false" />
+    <Property Name="EndOfSale" Type="datetimeoffset" Nullable="false" />
+    <Property Name="EndOfLife" Type="datetimeoffset" Nullable="false" />
+    <Property Name="Parameters" Type="nvarchar(max)" />
+    <Property Name="Id" Type="bigint" Nullable="false" />
+    <Property Name="Tid" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Name" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Description" Type="nvarchar(max)" />
+    <Property Name="CreatedBy" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="ModifiedBy" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Created" Type="datetimeoffset" Nullable="false" />
+    <Property Name="Modified" Type="datetimeoffset" Nullable="false" />
+    <Property Name="RowVersion" Type="varbinary(max)" />
+  </EntityType>
   <Association Name="biz_dfch_CS_Appclusive_Core_OdataServices_Core_Acl_Aces_biz_dfch">
     <End Role="AcesPartner" Type="CoreDataStore.Acl" Multiplicity="0..1">
       <OnDeleteAnnotation Action="Unset" xmlns="http://schemas.microsoft.com/LightSwitch/2013/edm/annotations" />
@@ -415,5 +443,11 @@
       <OnDeleteAnnotation Action="Unset" xmlns="http://schemas.microsoft.com/LightSwitch/2013/edm/annotations" />
     </End>
     <End Role="OrderItems" Type="CoreDataStore.OrderItem" Multiplicity="*" />
+  </Association>
+  <Association Name="biz_dfch_CS_Appclusive_Core_OdataServices_Core_Product_Catalogue">
+    <End Role="CatalogueItemsPartner" Type="CoreDataStore.Product" Multiplicity="0..1">
+      <OnDeleteAnnotation Action="Unset" xmlns="http://schemas.microsoft.com/LightSwitch/2013/edm/annotations" />
+    </End>
+    <End Role="CatalogueItems" Type="CoreDataStore.CatalogueItem1" Multiplicity="*" />
   </Association>
 </Schema>

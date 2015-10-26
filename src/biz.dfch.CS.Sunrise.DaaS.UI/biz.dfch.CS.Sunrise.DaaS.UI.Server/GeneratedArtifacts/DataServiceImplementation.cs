@@ -114,6 +114,10 @@ namespace LightSwitchApplication.Implementation
             {
                 return new global::LightSwitchApplication.Implementation.Order();
             }
+            if (type == typeof(global::LightSwitchApplication.Implementation.Product))
+            {
+                return new global::LightSwitchApplication.Implementation.Product();
+            }
     
             return base.CreateObject(type);
         }
@@ -202,6 +206,10 @@ namespace LightSwitchApplication.Implementation
             {
                 return new global::LightSwitchApplication.Implementation.Order();
             }
+            if (typeof(T) == typeof(global::LightSwitchApplication.Product))
+            {
+                return new global::LightSwitchApplication.Implementation.Product();
+            }
             return null;
         }
     
@@ -286,6 +294,10 @@ namespace LightSwitchApplication.Implementation
             if (outerType == typeof(global::LightSwitchApplication.Implementation.Order))
             {
                 return typeof(global::CoreData.CoreDataService.Order);
+            }
+            if (outerType == typeof(global::LightSwitchApplication.Implementation.Product))
+            {
+                return typeof(global::CoreData.CoreDataService.Product);
             }
             return base.ConvertType(outerType);
         }
@@ -380,6 +392,8 @@ namespace LightSwitchApplication.Implementation
                 result.Modified = approval.Modified;
                 result.Status = approval.Status;
                 result.RowVersion = approval.RowVersion;
+                result.NotBefore = approval.NotBefore;
+                result.ExpiresAt = approval.ExpiresAt;
                 return result;
             }
             global::LightSwitchApplication.Implementation.CartItem cartItem = outerEntity as global::LightSwitchApplication.Implementation.CartItem;
@@ -420,7 +434,6 @@ namespace LightSwitchApplication.Implementation
             if (catalogueItem1 != null)
             {
                 global::CoreData.CoreDataService.CatalogueItem result = new global::CoreData.CoreDataService.CatalogueItem();
-                result.Version = catalogueItem1.Version;
                 result.Id = catalogueItem1.Id;
                 result.Tid = catalogueItem1.Tid;
                 result.Name = catalogueItem1.Name;
@@ -430,13 +443,13 @@ namespace LightSwitchApplication.Implementation
                 result.Created = catalogueItem1.Created;
                 result.Modified = catalogueItem1.Modified;
                 result.CatalogueId = catalogueItem1.CatalogueId;
-                result.Type = catalogueItem1.Type;
                 result.ValidFrom = catalogueItem1.ValidFrom;
                 result.ValidUntil = catalogueItem1.ValidUntil;
                 result.EndOfSale = catalogueItem1.EndOfSale;
                 result.EndOfLife = catalogueItem1.EndOfLife;
                 result.Parameters = catalogueItem1.Parameters;
                 result.RowVersion = catalogueItem1.RowVersion;
+                result.ProductId = catalogueItem1.ProductId;
                 return result;
             }
             global::LightSwitchApplication.Implementation.Catalogue catalogue = outerEntity as global::LightSwitchApplication.Implementation.Catalogue;
@@ -470,6 +483,7 @@ namespace LightSwitchApplication.Implementation
                 result.Created = entityType.Created;
                 result.Modified = entityType.Modified;
                 result.RowVersion = entityType.RowVersion;
+                result.Version = entityType.Version;
                 return result;
             }
             global::LightSwitchApplication.Implementation.Gate gate = outerEntity as global::LightSwitchApplication.Implementation.Gate;
@@ -640,6 +654,28 @@ namespace LightSwitchApplication.Implementation
                 result.RowVersion = order.RowVersion;
                 return result;
             }
+            global::LightSwitchApplication.Implementation.Product product = outerEntity as global::LightSwitchApplication.Implementation.Product;
+            if (product != null)
+            {
+                global::CoreData.CoreDataService.Product result = new global::CoreData.CoreDataService.Product();
+                result.Type = product.Type;
+                result.Version = product.Version;
+                result.ValidFrom = product.ValidFrom;
+                result.ValidUntil = product.ValidUntil;
+                result.EndOfSale = product.EndOfSale;
+                result.EndOfLife = product.EndOfLife;
+                result.Parameters = product.Parameters;
+                result.Id = product.Id;
+                result.Tid = product.Tid;
+                result.Name = product.Name;
+                result.Description = product.Description;
+                result.CreatedBy = product.CreatedBy;
+                result.ModifiedBy = product.ModifiedBy;
+                result.Created = product.Created;
+                result.Modified = product.Modified;
+                result.RowVersion = product.RowVersion;
+                return result;
+            }
             return null;
         }
     
@@ -719,6 +755,8 @@ namespace LightSwitchApplication.Implementation
                 outerApproval.Modified = innerApproval.Modified;
                 outerApproval.Status = innerApproval.Status;
                 outerApproval.RowVersion = innerApproval.RowVersion;
+                outerApproval.NotBefore = innerApproval.NotBefore;
+                outerApproval.ExpiresAt = innerApproval.ExpiresAt;
                 return;
             }
             global::LightSwitchApplication.Implementation.CartItem outerCartItem = outerEntity as global::LightSwitchApplication.Implementation.CartItem;
@@ -759,7 +797,6 @@ namespace LightSwitchApplication.Implementation
             global::CoreData.CoreDataService.CatalogueItem innerCatalogueItem1 = innerResult as global::CoreData.CoreDataService.CatalogueItem;
             if ((outerCatalogueItem1 != null) && (innerCatalogueItem1 != null))
             {
-                outerCatalogueItem1.Version = innerCatalogueItem1.Version;
                 outerCatalogueItem1.Id = innerCatalogueItem1.Id;
                 outerCatalogueItem1.Tid = innerCatalogueItem1.Tid;
                 outerCatalogueItem1.Name = innerCatalogueItem1.Name;
@@ -769,13 +806,13 @@ namespace LightSwitchApplication.Implementation
                 outerCatalogueItem1.Created = innerCatalogueItem1.Created;
                 outerCatalogueItem1.Modified = innerCatalogueItem1.Modified;
                 outerCatalogueItem1.CatalogueId = innerCatalogueItem1.CatalogueId;
-                outerCatalogueItem1.Type = innerCatalogueItem1.Type;
                 outerCatalogueItem1.ValidFrom = innerCatalogueItem1.ValidFrom;
                 outerCatalogueItem1.ValidUntil = innerCatalogueItem1.ValidUntil;
                 outerCatalogueItem1.EndOfSale = innerCatalogueItem1.EndOfSale;
                 outerCatalogueItem1.EndOfLife = innerCatalogueItem1.EndOfLife;
                 outerCatalogueItem1.Parameters = innerCatalogueItem1.Parameters;
                 outerCatalogueItem1.RowVersion = innerCatalogueItem1.RowVersion;
+                outerCatalogueItem1.ProductId = innerCatalogueItem1.ProductId;
                 return;
             }
             global::LightSwitchApplication.Implementation.Catalogue outerCatalogue = outerEntity as global::LightSwitchApplication.Implementation.Catalogue;
@@ -809,6 +846,7 @@ namespace LightSwitchApplication.Implementation
                 outerEntityType.Created = innerEntityType.Created;
                 outerEntityType.Modified = innerEntityType.Modified;
                 outerEntityType.RowVersion = innerEntityType.RowVersion;
+                outerEntityType.Version = innerEntityType.Version;
                 return;
             }
             global::LightSwitchApplication.Implementation.Gate outerGate = outerEntity as global::LightSwitchApplication.Implementation.Gate;
@@ -977,6 +1015,28 @@ namespace LightSwitchApplication.Implementation
                 outerOrder.Modified = innerOrder.Modified;
                 outerOrder.Requester = innerOrder.Requester;
                 outerOrder.RowVersion = innerOrder.RowVersion;
+                return;
+            }
+            global::LightSwitchApplication.Implementation.Product outerProduct = outerEntity as global::LightSwitchApplication.Implementation.Product;
+            global::CoreData.CoreDataService.Product innerProduct = innerResult as global::CoreData.CoreDataService.Product;
+            if ((outerProduct != null) && (innerProduct != null))
+            {
+                outerProduct.Type = innerProduct.Type;
+                outerProduct.Version = innerProduct.Version;
+                outerProduct.ValidFrom = innerProduct.ValidFrom;
+                outerProduct.ValidUntil = innerProduct.ValidUntil;
+                outerProduct.EndOfSale = innerProduct.EndOfSale;
+                outerProduct.EndOfLife = innerProduct.EndOfLife;
+                outerProduct.Parameters = innerProduct.Parameters;
+                outerProduct.Id = innerProduct.Id;
+                outerProduct.Tid = innerProduct.Tid;
+                outerProduct.Name = innerProduct.Name;
+                outerProduct.Description = innerProduct.Description;
+                outerProduct.CreatedBy = innerProduct.CreatedBy;
+                outerProduct.ModifiedBy = innerProduct.ModifiedBy;
+                outerProduct.Created = innerProduct.Created;
+                outerProduct.Modified = innerProduct.Modified;
+                outerProduct.RowVersion = innerProduct.RowVersion;
                 return;
             }
             base.UpdateResult(outerEntity, innerResult);
@@ -1233,6 +1293,10 @@ namespace LightSwitchApplication.Implementation
             if (typeof(global::LightSwitchApplication.Order) == definitionType)
             {
                 return typeof(global::LightSwitchApplication.Implementation.Order);
+            }
+            if (typeof(global::LightSwitchApplication.Product) == definitionType)
+            {
+                return typeof(global::LightSwitchApplication.Implementation.Product);
             }
             if (typeof(global::LightSwitchApplication.Endpoint) == definitionType)
             {
@@ -2121,6 +2185,61 @@ namespace LightSwitchApplication.Implementation
             get
             {
                 return this.OrderItems;
+            }
+        }
+        
+        #region IEntityImplementation Members
+        private global::Microsoft.LightSwitch.Internal.IEntityImplementationHost __host;
+        
+        global::Microsoft.LightSwitch.Internal.IEntityImplementationHost global::Microsoft.LightSwitch.Internal.IEntityImplementation.Host
+        {
+            get
+            {
+                return this.__host;
+            }
+        }
+        
+        void global::Microsoft.LightSwitch.Internal.IEntityImplementation.Initialize(global::Microsoft.LightSwitch.Internal.IEntityImplementationHost host)
+        {
+            this.__host = host;
+        }
+        
+        protected override void OnPropertyChanged(string propertyName)
+        {
+            base.OnPropertyChanged(propertyName);
+            if (this.__host != null)
+            {
+                this.__host.RaisePropertyChanged(propertyName);
+            }
+        }
+        #endregion
+    }
+    
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.1.0.0")]
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+    public partial class Product :
+        global::LightSwitchApplication.Product.DetailsClass.IImplementation,
+        global::Microsoft.LightSwitch.Internal.IAstoriaEntityImplementation
+    {
+    
+        [global::System.Runtime.Serialization.DataMember]
+        public string Microsoft_LightSwitch_ETag
+        {
+            get;
+            set;
+        }
+    
+        string global::Microsoft.LightSwitch.Internal.IAstoriaEntityImplementation.ETag
+        {
+            get { return this.Microsoft_LightSwitch_ETag; }
+            set { this.Microsoft_LightSwitch_ETag = value; }
+        }
+    
+        global::System.Collections.IEnumerable global::LightSwitchApplication.Product.DetailsClass.IImplementation.CatalogueItems
+        {
+            get
+            {
+                return this.CatalogueItems;
             }
         }
         

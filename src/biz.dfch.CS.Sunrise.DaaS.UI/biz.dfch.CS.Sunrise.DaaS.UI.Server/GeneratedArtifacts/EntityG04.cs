@@ -318,6 +318,54 @@ namespace LightSwitchApplication
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
         partial void RowVersion_Changed();
 
+        /// <summary>
+        /// No Modeled Description Available
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.1.0.0")]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public global::System.DateTimeOffset NotBefore
+        {
+            get
+            {
+                return global::LightSwitchApplication.Approval.DetailsClass.GetValue(this, global::LightSwitchApplication.Approval.DetailsClass.PropertySetProperties.NotBefore);
+            }
+            set
+            {
+                global::LightSwitchApplication.Approval.DetailsClass.SetValue(this, global::LightSwitchApplication.Approval.DetailsClass.PropertySetProperties.NotBefore, value);
+            }
+        }
+        
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void NotBefore_IsReadOnly(ref bool result);
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void NotBefore_Validate(global::Microsoft.LightSwitch.EntityValidationResultsBuilder results);
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void NotBefore_Changed();
+
+        /// <summary>
+        /// No Modeled Description Available
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.1.0.0")]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public global::System.DateTimeOffset ExpiresAt
+        {
+            get
+            {
+                return global::LightSwitchApplication.Approval.DetailsClass.GetValue(this, global::LightSwitchApplication.Approval.DetailsClass.PropertySetProperties.ExpiresAt);
+            }
+            set
+            {
+                global::LightSwitchApplication.Approval.DetailsClass.SetValue(this, global::LightSwitchApplication.Approval.DetailsClass.PropertySetProperties.ExpiresAt, value);
+            }
+        }
+        
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void ExpiresAt_IsReadOnly(ref bool result);
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void ExpiresAt_Validate(global::Microsoft.LightSwitch.EntityValidationResultsBuilder results);
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void ExpiresAt_Changed();
+
         #endregion
     
         #region Details Class
@@ -480,6 +528,22 @@ namespace LightSwitchApplication
                     }
                 }
                 
+                public global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Approval, global::LightSwitchApplication.Approval.DetailsClass, global::System.DateTimeOffset> NotBefore
+                {
+                    get
+                    {
+                        return base.GetItem(global::LightSwitchApplication.Approval.DetailsClass.PropertySetProperties.NotBefore) as global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Approval, global::LightSwitchApplication.Approval.DetailsClass, global::System.DateTimeOffset>;
+                    }
+                }
+                
+                public global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Approval, global::LightSwitchApplication.Approval.DetailsClass, global::System.DateTimeOffset> ExpiresAt
+                {
+                    get
+                    {
+                        return base.GetItem(global::LightSwitchApplication.Approval.DetailsClass.PropertySetProperties.ExpiresAt) as global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Approval, global::LightSwitchApplication.Approval.DetailsClass, global::System.DateTimeOffset>;
+                    }
+                }
+                
             }
     
             #pragma warning disable 109
@@ -496,6 +560,8 @@ namespace LightSwitchApplication
                 new global::System.DateTimeOffset Modified { get; set; }
                 new string Status { get; set; }
                 new byte[] RowVersion { get; set; }
+                new global::System.DateTimeOffset NotBefore { get; set; }
+                new global::System.DateTimeOffset ExpiresAt { get; set; }
             }
             #pragma warning restore 109
     
@@ -875,6 +941,80 @@ namespace LightSwitchApplication
                     e.RowVersion_Changed();
                 }
     
+                [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Approval, global::LightSwitchApplication.Approval.DetailsClass, global::System.DateTimeOffset>.Entry
+                    NotBefore = new global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Approval, global::LightSwitchApplication.Approval.DetailsClass, global::System.DateTimeOffset>.Entry(
+                        "NotBefore",
+                        global::LightSwitchApplication.Approval.DetailsClass.PropertySetProperties._NotBefore_Stub,
+                        global::LightSwitchApplication.Approval.DetailsClass.PropertySetProperties._NotBefore_ComputeIsReadOnly,
+                        global::LightSwitchApplication.Approval.DetailsClass.PropertySetProperties._NotBefore_Validate,
+                        global::LightSwitchApplication.Approval.DetailsClass.PropertySetProperties._NotBefore_GetImplementationValue,
+                        global::LightSwitchApplication.Approval.DetailsClass.PropertySetProperties._NotBefore_SetImplementationValue,
+                        global::LightSwitchApplication.Approval.DetailsClass.PropertySetProperties._NotBefore_OnValueChanged);
+                private static void _NotBefore_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.Approval.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Approval, global::LightSwitchApplication.Approval.DetailsClass, global::System.DateTimeOffset>.Data> c, global::LightSwitchApplication.Approval.DetailsClass d, object sf)
+                {
+                    c(d, ref d._NotBefore, sf);
+                }
+                private static bool _NotBefore_ComputeIsReadOnly(global::LightSwitchApplication.Approval e)
+                {
+                    bool result = false;
+                    e.NotBefore_IsReadOnly(ref result);
+                    return result;
+                }
+                private static void _NotBefore_Validate(global::LightSwitchApplication.Approval e, global::Microsoft.LightSwitch.EntityValidationResultsBuilder r)
+                {
+                    e.NotBefore_Validate(r);
+                }
+                private static global::System.DateTimeOffset _NotBefore_GetImplementationValue(global::LightSwitchApplication.Approval.DetailsClass d)
+                {
+                    return d.ImplementationEntity.NotBefore;
+                }
+                private static void _NotBefore_SetImplementationValue(global::LightSwitchApplication.Approval.DetailsClass d, global::System.DateTimeOffset v)
+                {
+                    d.ImplementationEntity.NotBefore = v;
+                }
+                private static void _NotBefore_OnValueChanged(global::LightSwitchApplication.Approval e)
+                {
+                    e.NotBefore_Changed();
+                }
+    
+                [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Approval, global::LightSwitchApplication.Approval.DetailsClass, global::System.DateTimeOffset>.Entry
+                    ExpiresAt = new global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Approval, global::LightSwitchApplication.Approval.DetailsClass, global::System.DateTimeOffset>.Entry(
+                        "ExpiresAt",
+                        global::LightSwitchApplication.Approval.DetailsClass.PropertySetProperties._ExpiresAt_Stub,
+                        global::LightSwitchApplication.Approval.DetailsClass.PropertySetProperties._ExpiresAt_ComputeIsReadOnly,
+                        global::LightSwitchApplication.Approval.DetailsClass.PropertySetProperties._ExpiresAt_Validate,
+                        global::LightSwitchApplication.Approval.DetailsClass.PropertySetProperties._ExpiresAt_GetImplementationValue,
+                        global::LightSwitchApplication.Approval.DetailsClass.PropertySetProperties._ExpiresAt_SetImplementationValue,
+                        global::LightSwitchApplication.Approval.DetailsClass.PropertySetProperties._ExpiresAt_OnValueChanged);
+                private static void _ExpiresAt_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.Approval.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Approval, global::LightSwitchApplication.Approval.DetailsClass, global::System.DateTimeOffset>.Data> c, global::LightSwitchApplication.Approval.DetailsClass d, object sf)
+                {
+                    c(d, ref d._ExpiresAt, sf);
+                }
+                private static bool _ExpiresAt_ComputeIsReadOnly(global::LightSwitchApplication.Approval e)
+                {
+                    bool result = false;
+                    e.ExpiresAt_IsReadOnly(ref result);
+                    return result;
+                }
+                private static void _ExpiresAt_Validate(global::LightSwitchApplication.Approval e, global::Microsoft.LightSwitch.EntityValidationResultsBuilder r)
+                {
+                    e.ExpiresAt_Validate(r);
+                }
+                private static global::System.DateTimeOffset _ExpiresAt_GetImplementationValue(global::LightSwitchApplication.Approval.DetailsClass d)
+                {
+                    return d.ImplementationEntity.ExpiresAt;
+                }
+                private static void _ExpiresAt_SetImplementationValue(global::LightSwitchApplication.Approval.DetailsClass d, global::System.DateTimeOffset v)
+                {
+                    d.ImplementationEntity.ExpiresAt = v;
+                }
+                private static void _ExpiresAt_OnValueChanged(global::LightSwitchApplication.Approval e)
+                {
+                    e.ExpiresAt_Changed();
+                }
+    
             }
     
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
@@ -906,6 +1046,12 @@ namespace LightSwitchApplication
             
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
             private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Approval, global::LightSwitchApplication.Approval.DetailsClass, byte[]>.Data _RowVersion;
+            
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Approval, global::LightSwitchApplication.Approval.DetailsClass, global::System.DateTimeOffset>.Data _NotBefore;
+            
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Approval, global::LightSwitchApplication.Approval.DetailsClass, global::System.DateTimeOffset>.Data _ExpiresAt;
             
         }
     

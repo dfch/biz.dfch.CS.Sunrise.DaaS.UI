@@ -318,6 +318,30 @@ namespace LightSwitchApplication
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
         partial void RowVersion_Changed();
 
+        /// <summary>
+        /// No Modeled Description Available
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.1.0.0")]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public string Version
+        {
+            get
+            {
+                return global::LightSwitchApplication.EntityType.DetailsClass.GetValue(this, global::LightSwitchApplication.EntityType.DetailsClass.PropertySetProperties.Version);
+            }
+            set
+            {
+                global::LightSwitchApplication.EntityType.DetailsClass.SetValue(this, global::LightSwitchApplication.EntityType.DetailsClass.PropertySetProperties.Version, value);
+            }
+        }
+        
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void Version_IsReadOnly(ref bool result);
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void Version_Validate(global::Microsoft.LightSwitch.EntityValidationResultsBuilder results);
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void Version_Changed();
+
         #endregion
     
         #region Details Class
@@ -480,6 +504,14 @@ namespace LightSwitchApplication
                     }
                 }
                 
+                public global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.EntityType, global::LightSwitchApplication.EntityType.DetailsClass, string> Version
+                {
+                    get
+                    {
+                        return base.GetItem(global::LightSwitchApplication.EntityType.DetailsClass.PropertySetProperties.Version) as global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.EntityType, global::LightSwitchApplication.EntityType.DetailsClass, string>;
+                    }
+                }
+                
             }
     
             #pragma warning disable 109
@@ -496,6 +528,7 @@ namespace LightSwitchApplication
                 new global::System.DateTimeOffset Created { get; set; }
                 new global::System.DateTimeOffset Modified { get; set; }
                 new byte[] RowVersion { get; set; }
+                new string Version { get; set; }
             }
             #pragma warning restore 109
     
@@ -875,6 +908,43 @@ namespace LightSwitchApplication
                     e.RowVersion_Changed();
                 }
     
+                [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.EntityType, global::LightSwitchApplication.EntityType.DetailsClass, string>.Entry
+                    Version = new global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.EntityType, global::LightSwitchApplication.EntityType.DetailsClass, string>.Entry(
+                        "Version",
+                        global::LightSwitchApplication.EntityType.DetailsClass.PropertySetProperties._Version_Stub,
+                        global::LightSwitchApplication.EntityType.DetailsClass.PropertySetProperties._Version_ComputeIsReadOnly,
+                        global::LightSwitchApplication.EntityType.DetailsClass.PropertySetProperties._Version_Validate,
+                        global::LightSwitchApplication.EntityType.DetailsClass.PropertySetProperties._Version_GetImplementationValue,
+                        global::LightSwitchApplication.EntityType.DetailsClass.PropertySetProperties._Version_SetImplementationValue,
+                        global::LightSwitchApplication.EntityType.DetailsClass.PropertySetProperties._Version_OnValueChanged);
+                private static void _Version_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.EntityType.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.EntityType, global::LightSwitchApplication.EntityType.DetailsClass, string>.Data> c, global::LightSwitchApplication.EntityType.DetailsClass d, object sf)
+                {
+                    c(d, ref d._Version, sf);
+                }
+                private static bool _Version_ComputeIsReadOnly(global::LightSwitchApplication.EntityType e)
+                {
+                    bool result = false;
+                    e.Version_IsReadOnly(ref result);
+                    return result;
+                }
+                private static void _Version_Validate(global::LightSwitchApplication.EntityType e, global::Microsoft.LightSwitch.EntityValidationResultsBuilder r)
+                {
+                    e.Version_Validate(r);
+                }
+                private static string _Version_GetImplementationValue(global::LightSwitchApplication.EntityType.DetailsClass d)
+                {
+                    return d.ImplementationEntity.Version;
+                }
+                private static void _Version_SetImplementationValue(global::LightSwitchApplication.EntityType.DetailsClass d, string v)
+                {
+                    d.ImplementationEntity.Version = v;
+                }
+                private static void _Version_OnValueChanged(global::LightSwitchApplication.EntityType e)
+                {
+                    e.Version_Changed();
+                }
+    
             }
     
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
@@ -906,6 +976,9 @@ namespace LightSwitchApplication
             
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
             private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.EntityType, global::LightSwitchApplication.EntityType.DetailsClass, byte[]>.Data _RowVersion;
+            
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.EntityType, global::LightSwitchApplication.EntityType.DetailsClass, string>.Data _Version;
             
         }
     

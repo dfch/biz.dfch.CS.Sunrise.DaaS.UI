@@ -43,6 +43,21 @@
               </ContentItem.DataSource>
             </ContentItem>
             <ContentItem
+              Name="EntityType_Version"
+              Kind="Value"
+              DataType=":String">
+              <ContentItem.DataSource>
+                <ScreenExpressionTree>
+                  <ChainExpression>
+                    <MemberExpression
+                      Member="EntityTypeEdit/Properties[EntityType]" />
+                    <MemberExpression
+                      Member="Version" />
+                  </ChainExpression>
+                </ScreenExpressionTree>
+              </ContentItem.DataSource>
+            </ContentItem>
+            <ContentItem
               Name="Description"
               Kind="Value"
               DataType=":String?"

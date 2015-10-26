@@ -83,6 +83,13 @@
           <NotSearchable />
         </EntityProperty.Attributes>
       </EntityProperty>
+      <EntityProperty
+        Name="Version"
+        PropertyType=":String">
+        <EntityProperty.Attributes>
+          <Required />
+        </EntityProperty.Attributes>
+      </EntityProperty>
     </EntityType.Properties>
   </EntityType>
   <EntityContainer
@@ -190,6 +197,9 @@
           EntityTypeNamespace="biz.dfch.CS.Appclusive.Core.OdataServices.Core"
           Name="EntityTypes"
           EntityType="EntityType" />
+        <CsdlProperty
+          Name="Version"
+          Property="EntityType/Properties[Version]" />
         <CsdlProperty
           Name="Parameters"
           Property="EntityType/Properties[Parameters]" />

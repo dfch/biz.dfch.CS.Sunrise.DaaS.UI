@@ -1450,22 +1450,6 @@
             data: lightSwitchApplication.CatalogueItem1,
             value: String
         },
-        Type: {
-            _$class: msls.ContentItem,
-            _$name: "Type",
-            _$parentName: "rows",
-            screen: lightSwitchApplication.CatalogueItemsList,
-            data: lightSwitchApplication.CatalogueItem1,
-            value: String
-        },
-        Version: {
-            _$class: msls.ContentItem,
-            _$name: "Version",
-            _$parentName: "rows",
-            screen: lightSwitchApplication.CatalogueItemsList,
-            data: lightSwitchApplication.CatalogueItem1,
-            value: String
-        },
         Popups: {
             _$class: msls.ContentItem,
             _$name: "Popups",
@@ -1504,17 +1488,7 @@
         /// Called after the Name content item has been rendered.
         /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
         /// </field>
-        Name_postRender: [$element, function () { return new lightSwitchApplication.CatalogueItemsList().findContentItem("Name"); }],
-        /// <field>
-        /// Called after the Type content item has been rendered.
-        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
-        /// </field>
-        Type_postRender: [$element, function () { return new lightSwitchApplication.CatalogueItemsList().findContentItem("Type"); }],
-        /// <field>
-        /// Called after the Version content item has been rendered.
-        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
-        /// </field>
-        Version_postRender: [$element, function () { return new lightSwitchApplication.CatalogueItemsList().findContentItem("Version"); }]
+        Name_postRender: [$element, function () { return new lightSwitchApplication.CatalogueItemsList().findContentItem("Name"); }]
     });
 
     lightSwitchApplication.CatalogueItemView.prototype._$contentItems = {
@@ -1535,22 +1509,6 @@
         Name: {
             _$class: msls.ContentItem,
             _$name: "Name",
-            _$parentName: "Details",
-            screen: lightSwitchApplication.CatalogueItemView,
-            data: lightSwitchApplication.CatalogueItemView,
-            value: String
-        },
-        CatalogueItem1_Type: {
-            _$class: msls.ContentItem,
-            _$name: "CatalogueItem1_Type",
-            _$parentName: "Details",
-            screen: lightSwitchApplication.CatalogueItemView,
-            data: lightSwitchApplication.CatalogueItemView,
-            value: String
-        },
-        Version: {
-            _$class: msls.ContentItem,
-            _$name: "Version",
             _$parentName: "Details",
             screen: lightSwitchApplication.CatalogueItemView,
             data: lightSwitchApplication.CatalogueItemView,
@@ -1709,16 +1667,6 @@
         /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
         /// </field>
         Name_postRender: [$element, function () { return new lightSwitchApplication.CatalogueItemView().findContentItem("Name"); }],
-        /// <field>
-        /// Called after the CatalogueItem1_Type content item has been rendered.
-        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
-        /// </field>
-        CatalogueItem1_Type_postRender: [$element, function () { return new lightSwitchApplication.CatalogueItemView().findContentItem("CatalogueItem1_Type"); }],
-        /// <field>
-        /// Called after the Version content item has been rendered.
-        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
-        /// </field>
-        Version_postRender: [$element, function () { return new lightSwitchApplication.CatalogueItemView().findContentItem("Version"); }],
         /// <field>
         /// Called after the CatalogueItem1_ValidFrom content item has been rendered.
         /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
@@ -2531,6 +2479,14 @@
             data: lightSwitchApplication.EntityTypeEdit,
             value: String
         },
+        EntityType_Version: {
+            _$class: msls.ContentItem,
+            _$name: "EntityType_Version",
+            _$parentName: "Details",
+            screen: lightSwitchApplication.EntityTypeEdit,
+            data: lightSwitchApplication.EntityTypeEdit,
+            value: String
+        },
         Description: {
             _$class: msls.ContentItem,
             _$name: "Description",
@@ -2633,6 +2589,11 @@
         /// </field>
         Name_postRender: [$element, function () { return new lightSwitchApplication.EntityTypeEdit().findContentItem("Name"); }],
         /// <field>
+        /// Called after the EntityType_Version content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        EntityType_Version_postRender: [$element, function () { return new lightSwitchApplication.EntityTypeEdit().findContentItem("EntityType_Version"); }],
+        /// <field>
         /// Called after the Description content item has been rendered.
         /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
         /// </field>
@@ -2724,6 +2685,14 @@
             data: lightSwitchApplication.EntityType,
             value: String
         },
+        Version: {
+            _$class: msls.ContentItem,
+            _$name: "Version",
+            _$parentName: "rows",
+            screen: lightSwitchApplication.EntityTypesList,
+            data: lightSwitchApplication.EntityType,
+            value: String
+        },
         Popups: {
             _$class: msls.ContentItem,
             _$name: "Popups",
@@ -2762,7 +2731,12 @@
         /// Called after the Name content item has been rendered.
         /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
         /// </field>
-        Name_postRender: [$element, function () { return new lightSwitchApplication.EntityTypesList().findContentItem("Name"); }]
+        Name_postRender: [$element, function () { return new lightSwitchApplication.EntityTypesList().findContentItem("Name"); }],
+        /// <field>
+        /// Called after the Version content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        Version_postRender: [$element, function () { return new lightSwitchApplication.EntityTypesList().findContentItem("Version"); }]
     });
 
     lightSwitchApplication.EntityTypeView.prototype._$contentItems = {
@@ -2783,6 +2757,14 @@
         Name: {
             _$class: msls.ContentItem,
             _$name: "Name",
+            _$parentName: "Details",
+            screen: lightSwitchApplication.EntityTypeView,
+            data: lightSwitchApplication.EntityTypeView,
+            value: String
+        },
+        EntityType_Version: {
+            _$class: msls.ContentItem,
+            _$name: "EntityType_Version",
             _$parentName: "Details",
             screen: lightSwitchApplication.EntityTypeView,
             data: lightSwitchApplication.EntityTypeView,
@@ -2899,6 +2881,11 @@
         /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
         /// </field>
         Name_postRender: [$element, function () { return new lightSwitchApplication.EntityTypeView().findContentItem("Name"); }],
+        /// <field>
+        /// Called after the EntityType_Version content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        EntityType_Version_postRender: [$element, function () { return new lightSwitchApplication.EntityTypeView().findContentItem("EntityType_Version"); }],
         /// <field>
         /// Called after the Parameters content item has been rendered.
         /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)

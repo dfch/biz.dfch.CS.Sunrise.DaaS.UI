@@ -55,36 +55,6 @@
               </ContentItem.PropertySources>
             </ContentItem>
             <ContentItem
-              Name="CatalogueItem1_Type"
-              Kind="Value"
-              DataType=":String">
-              <ContentItem.DataSource>
-                <ScreenExpressionTree>
-                  <ChainExpression>
-                    <MemberExpression
-                      Member="CatalogueItemView/Properties[CatalogueItem1]" />
-                    <MemberExpression
-                      Member="Type" />
-                  </ChainExpression>
-                </ScreenExpressionTree>
-              </ContentItem.DataSource>
-            </ContentItem>
-            <ContentItem
-              Name="Version"
-              Kind="Value"
-              DataType=":String">
-              <ContentItem.DataSource>
-                <ScreenExpressionTree>
-                  <ChainExpression>
-                    <MemberExpression
-                      Member="CatalogueItemView/Properties[CatalogueItem1]" />
-                    <MemberExpression
-                      Member="Version" />
-                  </ChainExpression>
-                </ScreenExpressionTree>
-              </ContentItem.DataSource>
-            </ContentItem>
-            <ContentItem
               Name="CatalogueItem1_ValidFrom"
               Kind="Value"
               DataType=":DateTimeOffset">
