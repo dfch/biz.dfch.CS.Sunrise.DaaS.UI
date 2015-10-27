@@ -305,6 +305,7 @@
     <Screen.Properties>
       <ScreenCollectionProperty
         Name="Approvals"
+        DisablePaging="True"
         DisableSearch="True"
         PageSize="45"
         PropertyType="CollectionView$Approval">

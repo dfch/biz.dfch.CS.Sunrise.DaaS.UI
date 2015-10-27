@@ -231,6 +231,7 @@
     <Screen.Properties>
       <ScreenCollectionProperty
         Name="Carts"
+        DisablePaging="True"
         DisableSearch="True"
         PageSize="45"
         PropertyType="CollectionView$Cart">

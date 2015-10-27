@@ -200,6 +200,8 @@
     <Property Name="Modified" Type="Edm.DateTimeOffset" Nullable="false" />
     <Property Name="Status" Type="Edm.String" Nullable="false" MaxLength="Max" />
     <Property Name="RowVersion" Type="Edm.Binary" MaxLength="Max" />
+    <Property Name="Condition" Type="Edm.String" MaxLength="Max" />
+    <Property Name="ConditionParameters" Type="Edm.String" MaxLength="Max" />
   </EntityType>
   <EntityType Name="KeyNameValue">
     <Key>

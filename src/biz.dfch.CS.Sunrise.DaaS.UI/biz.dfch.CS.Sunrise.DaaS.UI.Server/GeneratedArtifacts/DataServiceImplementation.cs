@@ -525,6 +525,8 @@ namespace LightSwitchApplication.Implementation
                 result.Modified = job.Modified;
                 result.Status = job.Status;
                 result.RowVersion = job.RowVersion;
+                result.Condition = job.Condition;
+                result.ConditionParameters = job.ConditionParameters;
                 return result;
             }
             global::LightSwitchApplication.Implementation.KeyNameValue keyNameValue = outerEntity as global::LightSwitchApplication.Implementation.KeyNameValue;
@@ -888,6 +890,8 @@ namespace LightSwitchApplication.Implementation
                 outerJob.Modified = innerJob.Modified;
                 outerJob.Status = innerJob.Status;
                 outerJob.RowVersion = innerJob.RowVersion;
+                outerJob.Condition = innerJob.Condition;
+                outerJob.ConditionParameters = innerJob.ConditionParameters;
                 return;
             }
             global::LightSwitchApplication.Implementation.KeyNameValue outerKeyNameValue = outerEntity as global::LightSwitchApplication.Implementation.KeyNameValue;

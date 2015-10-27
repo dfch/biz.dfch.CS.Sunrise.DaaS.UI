@@ -175,6 +175,12 @@ window.myapp = msls.application;
         /// <field name="RowVersion" type="String">
         /// Gets or sets the rowVersion for this job.
         /// </field>
+        /// <field name="Condition" type="String">
+        /// Gets or sets the condition for this job.
+        /// </field>
+        /// <field name="ConditionParameters" type="String">
+        /// Gets or sets the conditionParameters for this job.
+        /// </field>
         /// <field name="details" type="msls.application.Job.Details">
         /// Gets the details for this job.
         /// </field>
@@ -1229,7 +1235,9 @@ window.myapp = msls.application;
             { name: "Created", type: Date },
             { name: "Modified", type: Date },
             { name: "Status", type: String },
-            { name: "RowVersion", type: String }
+            { name: "RowVersion", type: String },
+            { name: "Condition", type: String },
+            { name: "ConditionParameters", type: String }
         ]),
 
         CatalogueItem1: $defineEntity(CatalogueItem1, [

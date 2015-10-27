@@ -4579,6 +4579,54 @@ namespace LightSwitchApplication.Implementation
         private global::System.Byte[] _RowVersion;
         partial void OnRowVersionChanging(global::System.Byte[] value);
         partial void OnRowVersionChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public global::System.String Condition
+        {
+            get
+            {
+                return _Condition;
+            }
+            set
+            {
+                OnConditionChanging(value);
+                ReportPropertyChanging("Condition");
+                _Condition = value;
+                ReportPropertyChanged("Condition");
+                OnConditionChanged();
+            }
+        }
+        private global::System.String _Condition;
+        partial void OnConditionChanging(global::System.String value);
+        partial void OnConditionChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public global::System.String ConditionParameters
+        {
+            get
+            {
+                return _ConditionParameters;
+            }
+            set
+            {
+                OnConditionParametersChanging(value);
+                ReportPropertyChanging("ConditionParameters");
+                _ConditionParameters = value;
+                ReportPropertyChanged("ConditionParameters");
+                OnConditionParametersChanged();
+            }
+        }
+        private global::System.String _ConditionParameters;
+        partial void OnConditionParametersChanging(global::System.String value);
+        partial void OnConditionParametersChanged();
 
         #endregion
 

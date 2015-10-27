@@ -8,6 +8,7 @@
     Name="Job">
     <EntityType.Attributes>
       <NotSearchable />
+      <NotPageable />
     </EntityType.Attributes>
     <EntityType.Methods>
       <EntityMethod
@@ -116,6 +117,12 @@
           <NotSearchable />
         </EntityProperty.Attributes>
       </EntityProperty>
+      <EntityProperty
+        Name="Condition"
+        PropertyType=":String?" />
+      <EntityProperty
+        Name="ConditionParameters"
+        PropertyType=":String?" />
     </EntityType.Properties>
   </EntityType>
   <EntityContainer
@@ -238,6 +245,12 @@
         <CsdlProperty
           Name="Parameters"
           Property="Job/Properties[Parameters]" />
+        <CsdlProperty
+          Name="Condition"
+          Property="Job/Properties[Condition]" />
+        <CsdlProperty
+          Name="ConditionParameters"
+          Property="Job/Properties[ConditionParameters]" />
         <CsdlProperty
           Name="Error"
           Property="Job/Properties[c_Error]" />

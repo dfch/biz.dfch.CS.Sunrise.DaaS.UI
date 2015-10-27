@@ -403,6 +403,7 @@
       </ScreenProperty>
       <ScreenCollectionProperty
         Name="Children"
+        DisablePaging="True"
         DisableSearch="True"
         PageSize="15"
         PropertyType="CollectionView$Node">
@@ -434,6 +435,7 @@
       </ScreenCollectionProperty>
       <ScreenCollectionProperty
         Name="IncomingLinks"
+        DisablePaging="True"
         DisableSearch="True"
         PageSize="15"
         PropertyType="CollectionView$Link">
@@ -465,6 +467,7 @@
       </ScreenCollectionProperty>
       <ScreenCollectionProperty
         Name="OutgoingLinks"
+        DisablePaging="True"
         DisableSearch="True"
         PageSize="15"
         PropertyType="CollectionView$Link">

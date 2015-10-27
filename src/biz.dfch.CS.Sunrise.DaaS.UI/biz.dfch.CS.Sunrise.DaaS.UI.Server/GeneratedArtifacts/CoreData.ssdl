@@ -254,6 +254,8 @@
     <Property Name="Modified" Type="datetimeoffset" Nullable="false" />
     <Property Name="Status" Type="nvarchar(max)" Nullable="false" />
     <Property Name="RowVersion" Type="varbinary(max)" />
+    <Property Name="Condition" Type="nvarchar(max)" />
+    <Property Name="ConditionParameters" Type="nvarchar(max)" />
   </EntityType>
   <EntityType Name="KeyNameValue">
     <Key>

@@ -251,6 +251,7 @@
     <Screen.Properties>
       <ScreenCollectionProperty
         Name="Jobs"
+        DisablePaging="True"
         DisableSearch="True"
         PageSize="45"
         PropertyType="CollectionView$Job">

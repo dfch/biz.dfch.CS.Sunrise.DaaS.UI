@@ -19,7 +19,6 @@
     EntityContainer="CoreData">
     <DataService.Attributes>
       <CsdlEntityContainer
-        Format="Json"
         Name="Core"
         Namespace="biz.dfch.CS.Appclusive.Core.OdataServices.Core" />
       <Partial
@@ -29,6 +28,9 @@
       <ConnectionProperty
         Name="ConnectionStringGuid"
         Value="0d96875e-4ee0-413c-b98e-0ab5da706d7e" />
+      <ConnectionProperty
+        Name="ProjectMetadata"
+        Value="BaseData" />
       <ConnectionProperty
         Name="ProjectMetadata"
         Value="BaseData" />

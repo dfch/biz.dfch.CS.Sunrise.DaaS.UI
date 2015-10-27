@@ -486,6 +486,54 @@ namespace LightSwitchApplication
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
         partial void RowVersion_Changed();
 
+        /// <summary>
+        /// No Modeled Description Available
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.1.0.0")]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public string Condition
+        {
+            get
+            {
+                return global::LightSwitchApplication.Job.DetailsClass.GetValue(this, global::LightSwitchApplication.Job.DetailsClass.PropertySetProperties.Condition);
+            }
+            set
+            {
+                global::LightSwitchApplication.Job.DetailsClass.SetValue(this, global::LightSwitchApplication.Job.DetailsClass.PropertySetProperties.Condition, value);
+            }
+        }
+        
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void Condition_IsReadOnly(ref bool result);
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void Condition_Validate(global::Microsoft.LightSwitch.EntityValidationResultsBuilder results);
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void Condition_Changed();
+
+        /// <summary>
+        /// No Modeled Description Available
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.1.0.0")]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public string ConditionParameters
+        {
+            get
+            {
+                return global::LightSwitchApplication.Job.DetailsClass.GetValue(this, global::LightSwitchApplication.Job.DetailsClass.PropertySetProperties.ConditionParameters);
+            }
+            set
+            {
+                global::LightSwitchApplication.Job.DetailsClass.SetValue(this, global::LightSwitchApplication.Job.DetailsClass.PropertySetProperties.ConditionParameters, value);
+            }
+        }
+        
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void ConditionParameters_IsReadOnly(ref bool result);
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void ConditionParameters_Validate(global::Microsoft.LightSwitch.EntityValidationResultsBuilder results);
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void ConditionParameters_Changed();
+
         #endregion
     
         #region Details Class
@@ -704,6 +752,22 @@ namespace LightSwitchApplication
                     }
                 }
                 
+                public global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Job, global::LightSwitchApplication.Job.DetailsClass, string> Condition
+                {
+                    get
+                    {
+                        return base.GetItem(global::LightSwitchApplication.Job.DetailsClass.PropertySetProperties.Condition) as global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Job, global::LightSwitchApplication.Job.DetailsClass, string>;
+                    }
+                }
+                
+                public global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Job, global::LightSwitchApplication.Job.DetailsClass, string> ConditionParameters
+                {
+                    get
+                    {
+                        return base.GetItem(global::LightSwitchApplication.Job.DetailsClass.PropertySetProperties.ConditionParameters) as global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Job, global::LightSwitchApplication.Job.DetailsClass, string>;
+                    }
+                }
+                
             }
     
             #pragma warning disable 109
@@ -727,6 +791,8 @@ namespace LightSwitchApplication
                 new global::System.DateTimeOffset Modified { get; set; }
                 new string Status { get; set; }
                 new byte[] RowVersion { get; set; }
+                new string Condition { get; set; }
+                new string ConditionParameters { get; set; }
             }
             #pragma warning restore 109
     
@@ -1365,6 +1431,80 @@ namespace LightSwitchApplication
                     e.RowVersion_Changed();
                 }
     
+                [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Job, global::LightSwitchApplication.Job.DetailsClass, string>.Entry
+                    Condition = new global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Job, global::LightSwitchApplication.Job.DetailsClass, string>.Entry(
+                        "Condition",
+                        global::LightSwitchApplication.Job.DetailsClass.PropertySetProperties._Condition_Stub,
+                        global::LightSwitchApplication.Job.DetailsClass.PropertySetProperties._Condition_ComputeIsReadOnly,
+                        global::LightSwitchApplication.Job.DetailsClass.PropertySetProperties._Condition_Validate,
+                        global::LightSwitchApplication.Job.DetailsClass.PropertySetProperties._Condition_GetImplementationValue,
+                        global::LightSwitchApplication.Job.DetailsClass.PropertySetProperties._Condition_SetImplementationValue,
+                        global::LightSwitchApplication.Job.DetailsClass.PropertySetProperties._Condition_OnValueChanged);
+                private static void _Condition_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.Job.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Job, global::LightSwitchApplication.Job.DetailsClass, string>.Data> c, global::LightSwitchApplication.Job.DetailsClass d, object sf)
+                {
+                    c(d, ref d._Condition, sf);
+                }
+                private static bool _Condition_ComputeIsReadOnly(global::LightSwitchApplication.Job e)
+                {
+                    bool result = false;
+                    e.Condition_IsReadOnly(ref result);
+                    return result;
+                }
+                private static void _Condition_Validate(global::LightSwitchApplication.Job e, global::Microsoft.LightSwitch.EntityValidationResultsBuilder r)
+                {
+                    e.Condition_Validate(r);
+                }
+                private static string _Condition_GetImplementationValue(global::LightSwitchApplication.Job.DetailsClass d)
+                {
+                    return d.ImplementationEntity.Condition;
+                }
+                private static void _Condition_SetImplementationValue(global::LightSwitchApplication.Job.DetailsClass d, string v)
+                {
+                    d.ImplementationEntity.Condition = v;
+                }
+                private static void _Condition_OnValueChanged(global::LightSwitchApplication.Job e)
+                {
+                    e.Condition_Changed();
+                }
+    
+                [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Job, global::LightSwitchApplication.Job.DetailsClass, string>.Entry
+                    ConditionParameters = new global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Job, global::LightSwitchApplication.Job.DetailsClass, string>.Entry(
+                        "ConditionParameters",
+                        global::LightSwitchApplication.Job.DetailsClass.PropertySetProperties._ConditionParameters_Stub,
+                        global::LightSwitchApplication.Job.DetailsClass.PropertySetProperties._ConditionParameters_ComputeIsReadOnly,
+                        global::LightSwitchApplication.Job.DetailsClass.PropertySetProperties._ConditionParameters_Validate,
+                        global::LightSwitchApplication.Job.DetailsClass.PropertySetProperties._ConditionParameters_GetImplementationValue,
+                        global::LightSwitchApplication.Job.DetailsClass.PropertySetProperties._ConditionParameters_SetImplementationValue,
+                        global::LightSwitchApplication.Job.DetailsClass.PropertySetProperties._ConditionParameters_OnValueChanged);
+                private static void _ConditionParameters_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.Job.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Job, global::LightSwitchApplication.Job.DetailsClass, string>.Data> c, global::LightSwitchApplication.Job.DetailsClass d, object sf)
+                {
+                    c(d, ref d._ConditionParameters, sf);
+                }
+                private static bool _ConditionParameters_ComputeIsReadOnly(global::LightSwitchApplication.Job e)
+                {
+                    bool result = false;
+                    e.ConditionParameters_IsReadOnly(ref result);
+                    return result;
+                }
+                private static void _ConditionParameters_Validate(global::LightSwitchApplication.Job e, global::Microsoft.LightSwitch.EntityValidationResultsBuilder r)
+                {
+                    e.ConditionParameters_Validate(r);
+                }
+                private static string _ConditionParameters_GetImplementationValue(global::LightSwitchApplication.Job.DetailsClass d)
+                {
+                    return d.ImplementationEntity.ConditionParameters;
+                }
+                private static void _ConditionParameters_SetImplementationValue(global::LightSwitchApplication.Job.DetailsClass d, string v)
+                {
+                    d.ImplementationEntity.ConditionParameters = v;
+                }
+                private static void _ConditionParameters_OnValueChanged(global::LightSwitchApplication.Job e)
+                {
+                    e.ConditionParameters_Changed();
+                }
+    
             }
     
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
@@ -1417,6 +1557,12 @@ namespace LightSwitchApplication
             
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
             private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Job, global::LightSwitchApplication.Job.DetailsClass, byte[]>.Data _RowVersion;
+            
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Job, global::LightSwitchApplication.Job.DetailsClass, string>.Data _Condition;
+            
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Job, global::LightSwitchApplication.Job.DetailsClass, string>.Data _ConditionParameters;
             
         }
     

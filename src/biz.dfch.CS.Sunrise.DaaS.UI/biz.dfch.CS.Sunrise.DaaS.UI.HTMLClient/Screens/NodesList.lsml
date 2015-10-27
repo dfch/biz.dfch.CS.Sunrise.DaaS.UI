@@ -252,6 +252,7 @@
     <Screen.Properties>
       <ScreenCollectionProperty
         Name="Nodes"
+        DisablePaging="True"
         DisableSearch="True"
         PageSize="45"
         PropertyType="CollectionView$Node">

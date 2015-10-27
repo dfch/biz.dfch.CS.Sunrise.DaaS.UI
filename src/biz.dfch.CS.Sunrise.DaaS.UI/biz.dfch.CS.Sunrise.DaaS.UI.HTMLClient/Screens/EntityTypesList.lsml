@@ -254,6 +254,7 @@
     <Screen.Properties>
       <ScreenCollectionProperty
         Name="EntityTypes"
+        DisablePaging="True"
         DisableSearch="True"
         PageSize="45"
         PropertyType="CollectionView$EntityType">

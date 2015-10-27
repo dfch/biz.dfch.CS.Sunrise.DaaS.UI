@@ -207,6 +207,8 @@
           <ScalarProperty Name="Modified" ColumnName="Modified" />
           <ScalarProperty Name="Status" ColumnName="Status" />
           <ScalarProperty Name="RowVersion" ColumnName="RowVersion" />
+          <ScalarProperty Name="Condition" ColumnName="Condition" />
+          <ScalarProperty Name="ConditionParameters" ColumnName="ConditionParameters" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
