@@ -16,7 +16,7 @@
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <LightSwitchVersion>v4.5</LightSwitchVersion>
     <DefaultLanguage>en-US</DefaultLanguage>
-    <SupportedCultures>en-US</SupportedCultures>
+    <SupportedCultures>en,en-US</SupportedCultures>
     <FileAlignment>512</FileAlignment>
     <IgnoreDeployManagedRuntimeVersion>True</IgnoreDeployManagedRuntimeVersion>
     <UseDeclareParametersXMLInMsDeploy>False</UseDeclareParametersXMLInMsDeploy>
@@ -57,8 +57,24 @@
     <NoWarn>1522</NoWarn>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="biz.dfch.CS.System.Utilities, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\biz.dfch.CS.System.Utilities.1.2.1\lib\biz.dfch.CS.System.Utilities.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="log4net, Version=1.2.13.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\log4net.2.0.3\lib\net40-full\log4net.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Data.Edm, Version=5.6.4.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Microsoft.Data.Edm.5.6.4\lib\net40\Microsoft.Data.Edm.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="Microsoft.LightSwitch.Extensions.Server">
       <HintPath>..\_Pvt_Extensions\Microsoft.LightSwitch.Extensions\Server\Reference\Microsoft.LightSwitch.Extensions.Server.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Newtonsoft.Json.6.0.8\lib\net45\Newtonsoft.Json.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="System">
       <ProjectCritical>True</ProjectCritical>
@@ -78,8 +94,22 @@
     <Reference Include="System.Data.Entity">
       <ProjectCritical>True</ProjectCritical>
     </Reference>
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Net.Http.Formatting, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Microsoft.AspNet.WebApi.Client.5.2.3\lib\net45\System.Net.Http.Formatting.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System.Runtime.Serialization">
       <ProjectCritical>True</ProjectCritical>
+    </Reference>
+    <Reference Include="System.Security" />
+    <Reference Include="System.Web.Http, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Microsoft.AspNet.WebApi.Core.5.2.3\lib\net45\System.Web.Http.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.Http.WebHost, Version=5.2.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\packages\Microsoft.AspNet.WebApi.WebHost.5.2.3\lib\net45\System.Web.Http.WebHost.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="System.Xml">
       <ProjectCritical>True</ProjectCritical>
@@ -139,11 +169,6 @@
       <HintPath>$(LightSwitchSDKPath)\Server\System.ServiceModel.PollingDuplex.dll</HintPath>
       <ProjectCritical>True</ProjectCritical>
     </Reference>
-    <Reference Include="Microsoft.Data.Edm">
-      <HintPath>$(LightSwitchSDKPath)\Server\Microsoft.Data.Edm.dll</HintPath>
-      <Private>True</Private>
-      <ProjectCritical>True</ProjectCritical>
-    </Reference>
     <Reference Include="Microsoft.Data.OData">
       <HintPath>$(LightSwitchSDKPath)\Server\Microsoft.Data.OData.dll</HintPath>
       <Private>True</Private>
@@ -191,7 +216,19 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DataSources\CoreData\_CoreDataService.lsml.cs" />
+    <Compile Include="DataSources\DiagnosticsData\_DiagnosticsDataService.lsml.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\BaseData.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>BaseData.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\DiagnosticsData.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>DiagnosticsData.edmx</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <LightSwitchModel Include="Properties\Service.lsml">
@@ -202,6 +239,38 @@
     <_ServerFile Include="LogIn.aspx" />
     <_ServerFile Include="LogOut.aspx" />
     <Content Include="Web.config" />
+    <LightSwitchModel Include="DataSources\DiagnosticsData\Endpoints.lsml" />
+    <LightSwitchModel Include="Properties\DataSources\DiagnosticsData.lsml" />
+    <LightSwitchExternalDataSource Include="Properties\DiagnosticsData.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>DiagnosticsData.Designer.cs</LastGenOutput>
+      <EntityContainer>DiagnosticsData</EntityContainer>
+    </LightSwitchExternalDataSource>
+    <LightSwitchModel Include="DataSources\CoreData\KeyNameValues.lsml" />
+    <LightSwitchModel Include="Properties\DataSources\CoreData.lsml" />
+    <LightSwitchExternalDataSource Include="Properties\BaseData.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>BaseData.Designer.cs</LastGenOutput>
+      <EntityContainer>BaseData</EntityContainer>
+    </LightSwitchExternalDataSource>
+    <LightSwitchModel Include="DataSources\CoreData\Jobs.lsml" />
+    <LightSwitchModel Include="DataSources\CoreData\CatalogueItems.lsml" />
+    <LightSwitchModel Include="DataSources\CoreData\Orders.lsml" />
+    <LightSwitchModel Include="DataSources\CoreData\OrderItems.lsml" />
+    <LightSwitchModel Include="DataSources\CoreData\Aces.lsml" />
+    <LightSwitchModel Include="DataSources\CoreData\Approvals.lsml" />
+    <LightSwitchModel Include="DataSources\CoreData\ActiveDirectoryUsers.lsml" />
+    <LightSwitchModel Include="DataSources\CoreData\ManagementCredentials.lsml" />
+    <LightSwitchModel Include="DataSources\CoreData\Gates.lsml" />
+    <LightSwitchModel Include="DataSources\CoreData\Acls.lsml" />
+    <LightSwitchModel Include="DataSources\CoreData\EntityTypes.lsml" />
+    <LightSwitchModel Include="DataSources\CoreData\Nodes.lsml" />
+    <LightSwitchModel Include="DataSources\CoreData\Links.lsml" />
+    <LightSwitchModel Include="DataSources\CoreData\ManagementUris.lsml" />
+    <LightSwitchModel Include="DataSources\CoreData\Catalogues.lsml" />
+    <LightSwitchModel Include="DataSources\CoreData\Carts.lsml" />
+    <LightSwitchModel Include="DataSources\CoreData\CartItems.lsml" />
+    <LightSwitchModel Include="DataSources\CoreData\Products.lsml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -218,9 +287,7 @@
       <DependentUpon>default.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="DataSources\" />
-  </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">12.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>

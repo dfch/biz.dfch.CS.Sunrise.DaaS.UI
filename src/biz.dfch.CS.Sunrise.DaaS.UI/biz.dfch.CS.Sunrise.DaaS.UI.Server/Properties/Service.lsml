@@ -21,6 +21,12 @@
           Value="Service that provides access to security-related data." />
       </EntityContainerGroupProperty.Attributes>
     </EntityContainerGroupProperty>
+    <EntityContainerGroupProperty
+      Name="DiagnosticsData"
+      EntityContainer="DiagnosticsData" />
+    <EntityContainerGroupProperty
+      Name="CoreData"
+      EntityContainer="CoreData" />
   </EntityContainerGroup>
   <GlobalAttributeGroup
     Name="LightSwitchServiceApplicationGroup">

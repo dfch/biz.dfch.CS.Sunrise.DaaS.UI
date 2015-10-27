@@ -1,5 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.Default.props" Condition="Exists('$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\TypeScript\Microsoft.TypeScript.Default.props')" />
   <ItemGroup Label="ProjectConfigurations">
     <ProjectConfiguration Include="Debug|AnyCPU">
       <Configuration>Debug</Configuration>
@@ -16,6 +17,7 @@
   <PropertyGroup Label="Globals">
     <ProjectGuid>{340d15d9-8973-4f3d-a378-0b1ea722ae7e}</ProjectGuid>
     <LightSwitchVersion>v4.5</LightSwitchVersion>
+    <TypeScriptToolsVersion>1.0</TypeScriptToolsVersion>
   </PropertyGroup>
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\LightSwitch\v4.5\MobileClient\Microsoft.LightSwitch.MobileClient.Default.props" />
@@ -27,7 +29,7 @@
     <LightSwitchProjectSubType>JScript</LightSwitchProjectSubType>
     <ProjectTypeGuids>{8BB0C5E8-0616-4F60-8E55-A43933E57E9C};{262852c6-cd72-467d-83fe-5eeb1973a190}</ProjectTypeGuids>
     <DefaultLanguage>en-US</DefaultLanguage>
-    <SupportedCultures>en-US</SupportedCultures>
+    <SupportedCultures>en,en-US</SupportedCultures>
     <DefaultPlatform>AnyCPU</DefaultPlatform>
     <ClientProjectName>HTMLClient</ClientProjectName>
     <ServerProjectReference>..\biz.dfch.CS.Sunrise.DaaS.UI.Server\biz.dfch.CS.Sunrise.DaaS.UI.Server.csproj</ServerProjectReference>
@@ -35,6 +37,20 @@
   </PropertyGroup>
   <ItemGroup>
     <Content Include="Content\dark-theme-2.5.1.css" />
+    <Content Include="Content\font-awesome.css" />
+    <Content Include="Content\font-awesome.min.css" />
+    <Content Include="Content\Icons\Add-To-Cart.png" />
+    <Content Include="Content\Icons\Audit.png" />
+    <Content Include="Content\Icons\Basket.png" />
+    <Content Include="Content\Icons\Document.png" />
+    <Content Include="Content\Icons\Folders.png" />
+    <Content Include="Content\Icons\Home.png" />
+    <Content Include="Content\Icons\I-Phone.png" />
+    <Content Include="Content\Icons\IPad.png" />
+    <Content Include="Content\Icons\Key.png" />
+    <Content Include="Content\Icons\RequestItem.png" />
+    <Content Include="Content\Icons\Uris.png" />
+    <Content Include="Content\Icons\Users.png" />
     <Content Include="Content\Images\ajax-loader.gif" />
     <Content Include="Content\Images\icons-18-black.png" />
     <Content Include="Content\Images\icons-18-white.png" />
@@ -58,6 +74,18 @@
     <Content Include="Content\msls-2.5.1.min.css" />
     <Content Include="Content\msls-dark-2.5.1.css" />
     <Content Include="Content\msls-light-2.5.1.css" />
+    <Content Include="Content\Resources\client.lang-en.resjson" />
+    <Content Include="Content\select2-dark.css" />
+    <Content Include="Content\select2-light.css" />
+    <Content Include="Content\select2-remove-arrow.css" />
+    <Content Include="Content\select2.css" />
+    <Content Include="Content\select2_locale_de.js" />
+    <Content Include="Content\sp.css" />
+    <Content Include="Content\sunrise.css" />
+    <Content Include="Content\toastr.css" />
+    <Content Include="Content\toastr.less" />
+    <Content Include="Content\toastr.min.css" />
+    <Content Include="Content\toastr.scss" />
     <Content Include="default.htm" />
     <Content Include="Content\user-customization.css" />
     <Content Include="Content\Images\user-logo.png" />
@@ -65,9 +93,86 @@
     <Content Include="Content\Images\user-logo-144.png" />
     <Content Include="Content\Images\user-splash-screen.png" />
     <Content Include="Content\Web.config" />
+    <Content Include="fonts\fontawesome-webfont.eot" />
+    <Content Include="fonts\fontawesome-webfont.svg" />
+    <Content Include="fonts\fontawesome-webfont.ttf" />
+    <Content Include="fonts\fontawesome-webfont.woff" />
+    <Content Include="fonts\fontawesome-webfont.woff2" />
+    <Content Include="fonts\FontAwesome.otf" />
     <Content Include="packages.config" />
+    <Content Include="Screens\ApprovalApprove.lsml.js">
+      <DependentUpon>ApprovalApprove.lsml</DependentUpon>
+    </Content>
+    <Content Include="Screens\ApprovalDecline.lsml.js">
+      <DependentUpon>ApprovalDecline.lsml</DependentUpon>
+    </Content>
+    <Content Include="Screens\ApprovalsList.lsml.js">
+      <DependentUpon>ApprovalsList.lsml</DependentUpon>
+    </Content>
+    <Content Include="Screens\ApprovalView.lsml.js">
+      <DependentUpon>ApprovalView.lsml</DependentUpon>
+    </Content>
+    <Content Include="Screens\CartItemPersonalAdd.lsml.js">
+      <DependentUpon>CartItemPersonalAdd.lsml</DependentUpon>
+    </Content>
+    <Content Include="Screens\CartItemTechnicalAdd.lsml.js">
+      <DependentUpon>CartItemTechnicalAdd.lsml</DependentUpon>
+    </Content>
+    <Content Include="Screens\CartItemView.lsml.js">
+      <DependentUpon>CartItemView.lsml</DependentUpon>
+    </Content>
+    <Content Include="Screens\CartView.lsml.js">
+      <DependentUpon>CartView.lsml</DependentUpon>
+    </Content>
+    <Content Include="Screens\CatalogueItemView.lsml.js">
+      <DependentUpon>CatalogueItemView.lsml</DependentUpon>
+    </Content>
+    <Content Include="Screens\CatalogueView.lsml.js">
+      <DependentUpon>CatalogueView.lsml</DependentUpon>
+    </Content>
+    <Content Include="Screens\EndpointView.lsml.js">
+      <DependentUpon>EndpointView.lsml</DependentUpon>
+    </Content>
+    <Content Include="Screens\EntityTypeView.lsml.js">
+      <DependentUpon>EntityTypeView.lsml</DependentUpon>
+    </Content>
+    <Content Include="Screens\GateAdd.lsml.js">
+      <DependentUpon>GateAdd.lsml</DependentUpon>
+    </Content>
+    <Content Include="Screens\GatesList.lsml.js">
+      <DependentUpon>GatesList.lsml</DependentUpon>
+    </Content>
+    <Content Include="Screens\GateView.lsml.js">
+      <DependentUpon>GateView.lsml</DependentUpon>
+    </Content>
+    <Content Include="Screens\Home.lsml.js">
+      <DependentUpon>Home.lsml</DependentUpon>
+    </Content>
+    <Content Include="Screens\JobView.lsml.js">
+      <DependentUpon>JobView.lsml</DependentUpon>
+    </Content>
+    <Content Include="Screens\KeyNameValueAdd.lsml.js">
+      <DependentUpon>KeyNameValueAdd.lsml</DependentUpon>
+    </Content>
+    <Content Include="Screens\KeyNameValueView.lsml.js">
+      <DependentUpon>KeyNameValueView.lsml</DependentUpon>
+    </Content>
+    <Content Include="Screens\OrderItemView.lsml.js">
+      <DependentUpon>OrderItemView.lsml</DependentUpon>
+    </Content>
+    <Content Include="Screens\OrderView.lsml.js">
+      <DependentUpon>OrderView.lsml</DependentUpon>
+    </Content>
+    <Content Include="Screens\OrderViewDetails.lsml.js">
+      <DependentUpon>OrderViewDetails.lsml</DependentUpon>
+    </Content>
+    <Content Include="Scripts\Common.js" />
     <Content Include="Scripts\datajs-1.1.1.js" />
     <Content Include="Scripts\datajs-1.1.1.min.js" />
+    <Content Include="Scripts\dfchls.js" />
+    <Content Include="Scripts\jaydata.min.js" />
+    <Content Include="Scripts\jaydataproviders\oDataProvider.js" />
+    <Content Include="Scripts\jaydataproviders\oDataProvider.min.js" />
     <Content Include="Scripts\jquery-1.9.1.intellisense.js" />
     <Content Include="Scripts\jquery-1.9.1.js" />
     <Content Include="Scripts\jquery-1.9.1.min.js" />
@@ -78,6 +183,13 @@
     <Content Include="Scripts\msls-2.5.1-vsdoc.js" />
     <Content Include="Scripts\msls-2.5.1.js" />
     <Content Include="Scripts\msls-2.5.1.min.js" />
+    <Content Include="Scripts\select2.min.js" />
+    <Content Include="Scripts\select2_locale_de.js" />
+    <Content Include="Scripts\select2_locale_en.js" />
+    <TypeScriptCompile Include="Scripts\UtilitiesData.d.ts" />
+    <Content Include="Scripts\toastr.js" />
+    <Content Include="Scripts\toastr.min.js" />
+    <Content Include="Scripts\UtilitiesData.js" />
     <Content Include="Scripts\winjs-1.0.js" />
     <Content Include="Scripts\winjs-1.0.min.js" />
   </ItemGroup>
@@ -87,11 +199,63 @@
     </ServiceMetadataReference>
   </ItemGroup>
   <ItemGroup>
+    <LightSwitchModel Include="Properties\CoreData\Approvals.lsml" />
+    <LightSwitchModel Include="Properties\CoreData\CartItems.lsml" />
+    <LightSwitchModel Include="Properties\CoreData\Carts.lsml" />
+    <LightSwitchModel Include="Properties\CoreData\CatalogueItems.lsml" />
+    <LightSwitchModel Include="Properties\CoreData\Catalogues.lsml" />
+    <LightSwitchModel Include="Properties\CoreData\EntityTypes.lsml" />
+    <LightSwitchModel Include="Properties\CoreData\Gates.lsml" />
+    <LightSwitchModel Include="Properties\CoreData\Jobs.lsml" />
+    <LightSwitchModel Include="Properties\CoreData\KeyNameValues.lsml" />
     <LightSwitchModel Include="Properties\Client.lsml">
       <ProjectCritical>true</ProjectCritical>
     </LightSwitchModel>
+    <LightSwitchModel Include="Properties\CoreData\Nodes.lsml" />
+    <LightSwitchModel Include="Properties\CoreData\OrderItems.lsml" />
+    <LightSwitchModel Include="Properties\CoreData\Orders.lsml" />
+    <LightSwitchModel Include="Properties\CoreData\Products.lsml" />
+    <LightSwitchModel Include="Properties\DiagnosticsData\Endpoints.lsml" />
     <LightSwitchModel Include="Properties\Proxies.lsml" />
+    <LightSwitchModel Include="Screens\ApprovalApprove.lsml" />
+    <LightSwitchModel Include="Screens\ApprovalDecline.lsml" />
+    <LightSwitchModel Include="Screens\ApprovalsList.lsml" />
+    <LightSwitchModel Include="Screens\ApprovalView.lsml" />
+    <LightSwitchModel Include="Screens\CartEdit.lsml" />
+    <LightSwitchModel Include="Screens\CartItemEdit.lsml" />
+    <LightSwitchModel Include="Screens\CartItemPersonalAdd.lsml" />
+    <LightSwitchModel Include="Screens\CartItemTechnicalAdd.lsml" />
+    <LightSwitchModel Include="Screens\CartItemView.lsml" />
+    <LightSwitchModel Include="Screens\CartsList.lsml" />
+    <LightSwitchModel Include="Screens\CartView.lsml" />
+    <LightSwitchModel Include="Screens\CatalogueItemsList.lsml" />
+    <LightSwitchModel Include="Screens\CatalogueItemView.lsml" />
+    <LightSwitchModel Include="Screens\CataloguesList.lsml" />
+    <LightSwitchModel Include="Screens\CatalogueView.lsml" />
+    <LightSwitchModel Include="Screens\EndpointsList.lsml" />
+    <LightSwitchModel Include="Screens\EndpointView.lsml" />
+    <LightSwitchModel Include="Screens\EntityTypeEdit.lsml" />
+    <LightSwitchModel Include="Screens\EntityTypesList.lsml" />
+    <LightSwitchModel Include="Screens\EntityTypeView.lsml" />
+    <LightSwitchModel Include="Screens\GateAdd.lsml" />
+    <LightSwitchModel Include="Screens\GateEdit.lsml" />
+    <LightSwitchModel Include="Screens\GatesList.lsml" />
+    <LightSwitchModel Include="Screens\GateView.lsml" />
     <LightSwitchModel Include="Screens\Home.lsml" />
+    <LightSwitchModel Include="Screens\JobsList.lsml" />
+    <LightSwitchModel Include="Screens\JobView.lsml" />
+    <LightSwitchModel Include="Screens\KeyNameValueAdd.lsml" />
+    <LightSwitchModel Include="Screens\KeyNameValueEdit.lsml" />
+    <LightSwitchModel Include="Screens\KeyNameValuesList.lsml" />
+    <LightSwitchModel Include="Screens\KeyNameValueView.lsml" />
+    <LightSwitchModel Include="Screens\NodesList.lsml" />
+    <LightSwitchModel Include="Screens\NodeView.lsml" />
+    <LightSwitchModel Include="Screens\OrderItemsList.lsml" />
+    <LightSwitchModel Include="Screens\OrderItemView.lsml" />
+    <LightSwitchModel Include="Screens\OrdersList.lsml" />
+    <LightSwitchModel Include="Screens\OrderView.lsml" />
+    <LightSwitchModel Include="Screens\OrderViewDetails.lsml" />
+    <LightSwitchModel Include="Screens\ProductView.lsml" />
   </ItemGroup>
   <ItemGroup>
     <_ClientBuildFile Include="GeneratedArtifacts\model.json">
@@ -109,6 +273,10 @@
     <_ClientBuildFile Include="GeneratedArtifacts\resources.js">
       <SubFolder>Scripts\Generated</SubFolder>
     </_ClientBuildFile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Properties\DiagnosticsData2\" />
+    <Folder Include="Properties\UtilitiesData\" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\LightSwitch\v4.5\MobileClient\Microsoft.LightSwitch.MobileClient.targets" />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\LightSwitch\v4.5\Microsoft.LightSwitch.Build.Tasks.targets" />

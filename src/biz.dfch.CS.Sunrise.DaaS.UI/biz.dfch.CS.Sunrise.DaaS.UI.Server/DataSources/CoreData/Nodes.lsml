@@ -1,0 +1,383 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ServiceApplication
+  Name="LightSwitchServiceApplication" xmlns="http://schemas.microsoft.com/LightSwitch/2010/xaml/model">
+  <ServiceApplication.Attributes>
+    <Partial />
+  </ServiceApplication.Attributes>
+  <EntityType
+    Name="Node">
+    <EntityType.Attributes>
+      <NotSearchable />
+    </EntityType.Attributes>
+    <EntityType.Methods>
+      <EntityMethod
+        Name="Delete">
+        <EntityMethod.Attributes>
+          <Generated />
+        </EntityMethod.Attributes>
+      </EntityMethod>
+    </EntityType.Methods>
+    <EntityType.Properties>
+      <EntityProperty
+        Name="Type"
+        PropertyType=":String">
+        <EntityProperty.Attributes>
+          <Required />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Parameters"
+        PropertyType=":String">
+        <EntityProperty.Attributes>
+          <Required />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="ParentId"
+        PropertyType=":Int64?">
+        <EntityProperty.Attributes>
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <KeyProperty
+        Name="Id"
+        PropertyType=":Int64">
+        <KeyProperty.Attributes>
+          <Required />
+          <NotSearchable />
+        </KeyProperty.Attributes>
+      </KeyProperty>
+      <EntityProperty
+        Name="Tid"
+        PropertyType=":String">
+        <EntityProperty.Attributes>
+          <Required />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Name"
+        PropertyType=":String">
+        <EntityProperty.Attributes>
+          <Required />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Description"
+        PropertyType=":String?" />
+      <EntityProperty
+        Name="CreatedBy"
+        PropertyType=":String">
+        <EntityProperty.Attributes>
+          <Required />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="ModifiedBy"
+        PropertyType=":String">
+        <EntityProperty.Attributes>
+          <Required />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Created"
+        PropertyType=":DateTimeOffset">
+        <EntityProperty.Attributes>
+          <Required />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="Modified"
+        PropertyType=":DateTimeOffset">
+        <EntityProperty.Attributes>
+          <Required />
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="RowVersion"
+        PropertyType=":Binary?">
+        <EntityProperty.Attributes>
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <NavigationProperty
+        Name="Children"
+        Association="biz_dfch_CS_Appclusive_Core_OdataServices_Core_Node_Children_biz"
+        FromEnd="ChildrenPartner"
+        ToEnd="Children" />
+      <NavigationProperty
+        Name="IncomingLinks"
+        Association="biz_dfch_CS_Appclusive_Core_OdataServices_Core_Node_IncomingLink"
+        FromEnd="IncomingLinksPartner"
+        ToEnd="IncomingLinks" />
+      <NavigationProperty
+        Name="OutgoingLinks"
+        Association="biz_dfch_CS_Appclusive_Core_OdataServices_Core_Node_OutgoingLink"
+        FromEnd="OutgoingLinksPartner"
+        ToEnd="OutgoingLinks" />
+    </EntityType.Properties>
+  </EntityType>
+  <Association
+    Name="biz_dfch_CS_Appclusive_Core_OdataServices_Core_Node_Children_biz">
+    <AssociationEnd
+      Name="ChildrenPartner"
+      EntityType="Node">
+      <AssociationEnd.Attributes>
+        <DeleteRule
+          Action="Restrict" />
+      </AssociationEnd.Attributes>
+    </AssociationEnd>
+    <AssociationEnd
+      Name="Children"
+      Multiplicity="Many"
+      EntityType="Node" />
+  </Association>
+  <Association
+    Name="biz_dfch_CS_Appclusive_Core_OdataServices_Core_Node_IncomingLink">
+    <AssociationEnd
+      Name="IncomingLinksPartner"
+      EntityType="Node">
+      <AssociationEnd.Attributes>
+        <DeleteRule />
+      </AssociationEnd.Attributes>
+    </AssociationEnd>
+    <AssociationEnd
+      Name="IncomingLinks"
+      Multiplicity="Many"
+      EntityType="Link" />
+  </Association>
+  <Association
+    Name="biz_dfch_CS_Appclusive_Core_OdataServices_Core_Node_OutgoingLink">
+    <AssociationEnd
+      Name="OutgoingLinksPartner"
+      EntityType="Node">
+      <AssociationEnd.Attributes>
+        <DeleteRule />
+      </AssociationEnd.Attributes>
+    </AssociationEnd>
+    <AssociationEnd
+      Name="OutgoingLinks"
+      Multiplicity="Many"
+      EntityType="Link" />
+  </Association>
+  <EntityContainer
+    Name="CoreData">
+    <EntityContainer.Attributes>
+      <Partial />
+    </EntityContainer.Attributes>
+    <EntitySet
+      Name="Nodes"
+      CanDelete="True"
+      CanInsert="True"
+      CanUpdate="True"
+      EntityType="Node" />
+    <AssociationSet
+      Name="biz_dfch_CS_Appclusive_Core_OdataServices_Core_Node_Children_biz"
+      Association="biz_dfch_CS_Appclusive_Core_OdataServices_Core_Node_Children_biz">
+      <AssociationSetEnd
+        Name="ChildrenPartner"
+        EntitySet="Nodes" />
+      <AssociationSetEnd
+        Name="Children"
+        EntitySet="Nodes" />
+    </AssociationSet>
+    <AssociationSet
+      Name="biz_dfch_CS_Appclusive_Core_OdataServices_Core_Node_IncomingLink"
+      Association="biz_dfch_CS_Appclusive_Core_OdataServices_Core_Node_IncomingLink">
+      <AssociationSetEnd
+        Name="IncomingLinksPartner"
+        EntitySet="Nodes" />
+      <AssociationSetEnd
+        Name="IncomingLinks"
+        EntitySet="Links" />
+    </AssociationSet>
+    <AssociationSet
+      Name="biz_dfch_CS_Appclusive_Core_OdataServices_Core_Node_OutgoingLink"
+      Association="biz_dfch_CS_Appclusive_Core_OdataServices_Core_Node_OutgoingLink">
+      <AssociationSetEnd
+        Name="OutgoingLinksPartner"
+        EntitySet="Nodes" />
+      <AssociationSetEnd
+        Name="OutgoingLinks"
+        EntitySet="Links" />
+    </AssociationSet>
+    <QueryOperation
+      Name="Nodes_Single"
+      ReturnType="Node">
+      <QueryOperation.Attributes>
+        <Generated />
+        <Description
+          Value="Returns the entity whose identity is specified by the parameter(s)." />
+      </QueryOperation.Attributes>
+      <QueryOperation.FilterExpression>
+        <QueryFilterExpressionTree>
+          <BinaryExpression
+            NodeType="Equal">
+            <BinaryExpression.Left>
+              <ChainExpression>
+                <MemberExpression
+                  Member="Id" />
+              </ChainExpression>
+            </BinaryExpression.Left>
+            <BinaryExpression.Right>
+              <ParameterExpression
+                Parameter="Id" />
+            </BinaryExpression.Right>
+          </BinaryExpression>
+        </QueryFilterExpressionTree>
+      </QueryOperation.FilterExpression>
+      <QueryOperation.Source>
+        <QuerySourceExpressionTree>
+          <MemberExpression
+            Member="Nodes" />
+        </QuerySourceExpressionTree>
+      </QueryOperation.Source>
+      <QueryOperationParameter
+        Name="Id"
+        ParameterType="Microsoft.LightSwitch:Int64?">
+        <QueryOperationParameter.Attributes>
+          <Description
+            Value="The value of the 'Id' key property of the entity to retrieve." />
+        </QueryOperationParameter.Attributes>
+      </QueryOperationParameter>
+    </QueryOperation>
+    <QueryOperation
+      Name="Nodes_SingleOrDefault"
+      ReturnType="Node">
+      <QueryOperation.Attributes>
+        <Generated />
+        <Description
+          Value="Returns the entity whose identity is specified by the parameter(s) or null if no such entity exists." />
+      </QueryOperation.Attributes>
+      <QueryOperation.FilterExpression>
+        <QueryFilterExpressionTree>
+          <BinaryExpression
+            NodeType="Equal">
+            <BinaryExpression.Left>
+              <ChainExpression>
+                <MemberExpression
+                  Member="Id" />
+              </ChainExpression>
+            </BinaryExpression.Left>
+            <BinaryExpression.Right>
+              <ParameterExpression
+                Parameter="Id" />
+            </BinaryExpression.Right>
+          </BinaryExpression>
+        </QueryFilterExpressionTree>
+      </QueryOperation.FilterExpression>
+      <QueryOperation.Source>
+        <QuerySourceExpressionTree>
+          <MemberExpression
+            Member="Nodes" />
+        </QuerySourceExpressionTree>
+      </QueryOperation.Source>
+      <QueryOperationParameter
+        Name="Id"
+        ParameterType="Microsoft.LightSwitch:Int64?">
+        <QueryOperationParameter.Attributes>
+          <Description
+            Value="The value of the 'Id' key property of the entity to retrieve." />
+        </QueryOperationParameter.Attributes>
+      </QueryOperationParameter>
+    </QueryOperation>
+  </EntityContainer>
+  <DataService
+    Name="CoreDataDataService">
+    <DataService.Attributes>
+      <Partial />
+    </DataService.Attributes>
+    <EntitySetMapping
+      EntitySet="Nodes">
+      <EntitySetMapping.Attributes>
+        <CsdlEntitySet
+          EntityTypeName="Node"
+          EntityTypeNamespace="biz.dfch.CS.Appclusive.Core.OdataServices.Core"
+          Name="Nodes"
+          EntityType="Node" />
+        <CsdlProperty
+          Name="Type"
+          Property="Node/Properties[Type]" />
+        <CsdlProperty
+          Name="Parameters"
+          Property="Node/Properties[Parameters]" />
+        <CsdlProperty
+          Name="ParentId"
+          Property="Node/Properties[ParentId]" />
+        <CsdlProperty
+          Name="Id"
+          Property="Node/Properties[Id]" />
+        <CsdlProperty
+          Name="Tid"
+          Property="Node/Properties[Tid]" />
+        <CsdlProperty
+          Name="Name"
+          Property="Node/Properties[Name]" />
+        <CsdlProperty
+          Name="Description"
+          Property="Node/Properties[Description]" />
+        <CsdlProperty
+          Name="CreatedBy"
+          Property="Node/Properties[CreatedBy]" />
+        <CsdlProperty
+          Name="ModifiedBy"
+          Property="Node/Properties[ModifiedBy]" />
+        <CsdlProperty
+          Name="Created"
+          Property="Node/Properties[Created]" />
+        <CsdlProperty
+          Name="Modified"
+          Property="Node/Properties[Modified]" />
+        <CsdlProperty
+          Name="RowVersion"
+          Property="Node/Properties[RowVersion]" />
+        <CsdlProperty
+          Name="Children"
+          Property="Node/Properties[Children]" />
+        <CsdlProperty
+          Name="IncomingLinks"
+          Property="Node/Properties[IncomingLinks]" />
+        <CsdlProperty
+          Name="OutgoingLinks"
+          Property="Node/Properties[OutgoingLinks]" />
+      </EntitySetMapping.Attributes>
+    </EntitySetMapping>
+    <AssociationSetMapping
+      AssociationSet="biz_dfch_CS_Appclusive_Core_OdataServices_Core_Node_Children_biz">
+      <AssociationSetMapping.Attributes>
+        <CsdlAssociation
+          Name="biz_dfch_CS_Appclusive_Core_OdataServices_Core_Node_Children_biz_dfch_CS_Appclusive_Core_OdataServices_Core_Node_ChildrenPartnerSet"
+          Association="biz_dfch_CS_Appclusive_Core_OdataServices_Core_Node_Children_biz" />
+        <CsdlAssociationSetEnd
+          End="CoreData/Members[biz_dfch_CS_Appclusive_Core_OdataServices_Core_Node_Children_biz]/Members[ChildrenPartner]" />
+        <CsdlAssociationSetEnd
+          End="CoreData/Members[biz_dfch_CS_Appclusive_Core_OdataServices_Core_Node_Children_biz]/Members[Children]" />
+      </AssociationSetMapping.Attributes>
+    </AssociationSetMapping>
+    <AssociationSetMapping
+      AssociationSet="biz_dfch_CS_Appclusive_Core_OdataServices_Core_Node_IncomingLink">
+      <AssociationSetMapping.Attributes>
+        <CsdlAssociation
+          Name="biz_dfch_CS_Appclusive_Core_OdataServices_Core_Node_IncomingLinks_biz_dfch_CS_Appclusive_Core_OdataServices_Core_Link_IncomingLinksPartnerSet"
+          Association="biz_dfch_CS_Appclusive_Core_OdataServices_Core_Node_IncomingLink" />
+        <CsdlAssociationSetEnd
+          End="CoreData/Members[biz_dfch_CS_Appclusive_Core_OdataServices_Core_Node_IncomingLink]/Members[IncomingLinksPartner]" />
+        <CsdlAssociationSetEnd
+          End="CoreData/Members[biz_dfch_CS_Appclusive_Core_OdataServices_Core_Node_IncomingLink]/Members[IncomingLinks]" />
+      </AssociationSetMapping.Attributes>
+    </AssociationSetMapping>
+    <AssociationSetMapping
+      AssociationSet="biz_dfch_CS_Appclusive_Core_OdataServices_Core_Node_OutgoingLink">
+      <AssociationSetMapping.Attributes>
+        <CsdlAssociation
+          Name="biz_dfch_CS_Appclusive_Core_OdataServices_Core_Node_OutgoingLinks_biz_dfch_CS_Appclusive_Core_OdataServices_Core_Link_OutgoingLinksPartnerSet"
+          Association="biz_dfch_CS_Appclusive_Core_OdataServices_Core_Node_OutgoingLink" />
+        <CsdlAssociationSetEnd
+          End="CoreData/Members[biz_dfch_CS_Appclusive_Core_OdataServices_Core_Node_OutgoingLink]/Members[OutgoingLinksPartner]" />
+        <CsdlAssociationSetEnd
+          End="CoreData/Members[biz_dfch_CS_Appclusive_Core_OdataServices_Core_Node_OutgoingLink]/Members[OutgoingLinks]" />
+      </AssociationSetMapping.Attributes>
+    </AssociationSetMapping>
+  </DataService>
+</ServiceApplication>

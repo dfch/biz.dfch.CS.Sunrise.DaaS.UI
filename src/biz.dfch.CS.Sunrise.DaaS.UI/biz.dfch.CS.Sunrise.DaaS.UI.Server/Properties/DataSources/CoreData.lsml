@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ServiceApplication
+  Name="LightSwitchServiceApplication" xmlns="http://schemas.microsoft.com/LightSwitch/2010/xaml/model">
+  <ServiceApplication.Attributes>
+    <Partial />
+  </ServiceApplication.Attributes>
+  <EntityContainer
+    Name="CoreData"
+    DataProvider="AstoriaDataProvider">
+    <EntityContainer.Attributes>
+      <Partial
+        IsPrimary="True" />
+    </EntityContainer.Attributes>
+    <SubmitOperation
+      Name="SaveChanges" />
+  </EntityContainer>
+  <DataService
+    Name="CoreDataDataService"
+    EntityContainer="CoreData">
+    <DataService.Attributes>
+      <CsdlEntityContainer
+        Format="Json"
+        Name="Core"
+        Namespace="biz.dfch.CS.Appclusive.Core.OdataServices.Core" />
+      <Partial
+        IsPrimary="True" />
+    </DataService.Attributes>
+    <DataService.ConnectionProperties>
+      <ConnectionProperty
+        Name="ConnectionStringGuid"
+        Value="0d96875e-4ee0-413c-b98e-0ab5da706d7e" />
+      <ConnectionProperty
+        Name="ProjectMetadata"
+        Value="BaseData" />
+    </DataService.ConnectionProperties>
+  </DataService>
+</ServiceApplication>
