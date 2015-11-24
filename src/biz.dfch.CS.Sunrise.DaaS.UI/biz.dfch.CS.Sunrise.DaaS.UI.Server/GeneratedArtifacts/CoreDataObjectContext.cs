@@ -24,10 +24,10 @@ using System.Xml.Serialization;
 [assembly: EdmRelationshipAttribute("LightSwitchApplication", "biz_dfch_CS_Appclusive_Core_OdataServices_Core_Catalogue_Catalog", "CatalogueItemsPartner", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(LightSwitchApplication.Implementation.Catalogue), "CatalogueItems", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(LightSwitchApplication.Implementation.CatalogueItem1))]
 [assembly: EdmRelationshipAttribute("LightSwitchApplication", "biz_dfch_CS_Appclusive_Core_OdataServices_Core_ManagementCredent", "ManagementUrisPartner", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(LightSwitchApplication.Implementation.ManagementCredential), "ManagementUris", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(LightSwitchApplication.Implementation.ManagementUri))]
 [assembly: EdmRelationshipAttribute("LightSwitchApplication", "biz_dfch_CS_Appclusive_Core_OdataServices_Core_Node_Children_biz", "ChildrenPartner", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(LightSwitchApplication.Implementation.Node), "Children", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(LightSwitchApplication.Implementation.Node))]
-[assembly: EdmRelationshipAttribute("LightSwitchApplication", "biz_dfch_CS_Appclusive_Core_OdataServices_Core_Node_IncomingLink", "IncomingLinksPartner", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(LightSwitchApplication.Implementation.Node), "IncomingLinks", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(LightSwitchApplication.Implementation.Link))]
-[assembly: EdmRelationshipAttribute("LightSwitchApplication", "biz_dfch_CS_Appclusive_Core_OdataServices_Core_Node_OutgoingLink", "OutgoingLinksPartner", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(LightSwitchApplication.Implementation.Node), "OutgoingLinks", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(LightSwitchApplication.Implementation.Link))]
 [assembly: EdmRelationshipAttribute("LightSwitchApplication", "biz_dfch_CS_Sunrise_DaaS_Endpoints_OdataServices_Core_Order_Orde", "OrderItemsPartner", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(LightSwitchApplication.Implementation.Order), "OrderItems", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(LightSwitchApplication.Implementation.OrderItem))]
 [assembly: EdmRelationshipAttribute("LightSwitchApplication", "biz_dfch_CS_Appclusive_Core_OdataServices_Core_Product_Catalogue", "CatalogueItemsPartner", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(LightSwitchApplication.Implementation.Product), "CatalogueItems", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(LightSwitchApplication.Implementation.CatalogueItem1))]
+[assembly: EdmRelationshipAttribute("LightSwitchApplication", "biz_dfch_CS_Appclusive_Core_OdataServices_Core_Node_IncomingAsso", "IncomingAssocsPartner", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(LightSwitchApplication.Implementation.Node), "IncomingAssocs", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(LightSwitchApplication.Implementation.Assoc))]
+[assembly: EdmRelationshipAttribute("LightSwitchApplication", "biz_dfch_CS_Appclusive_Core_OdataServices_Core_Node_OutgoingAsso", "OutgoingAssocsPartner", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(LightSwitchApplication.Implementation.Node), "OutgoingAssocs", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(LightSwitchApplication.Implementation.Assoc))]
 
 #endregion
 
@@ -271,22 +271,6 @@ namespace LightSwitchApplication.Implementation
         /// <summary>
         /// No Metadata Documentation available.
         /// </summary>
-        public ObjectSet<Link> Links
-        {
-            get
-            {
-                if ((_Links == null))
-                {
-                    _Links = base.CreateObjectSet<Link>("Links");
-                }
-                return _Links;
-            }
-        }
-        private ObjectSet<Link> _Links;
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
         public ObjectSet<ManagementCredential> ManagementCredentials
         {
             get
@@ -379,6 +363,38 @@ namespace LightSwitchApplication.Implementation
             }
         }
         private ObjectSet<Product> _Products;
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        public ObjectSet<Assoc> Assocs
+        {
+            get
+            {
+                if ((_Assocs == null))
+                {
+                    _Assocs = base.CreateObjectSet<Assoc>("Assocs");
+                }
+                return _Assocs;
+            }
+        }
+        private ObjectSet<Assoc> _Assocs;
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        public ObjectSet<CostCentre> CostCentres
+        {
+            get
+            {
+                if ((_CostCentres == null))
+                {
+                    _CostCentres = base.CreateObjectSet<CostCentre>("CostCentres");
+                }
+                return _CostCentres;
+            }
+        }
+        private ObjectSet<CostCentre> _CostCentres;
 
         #endregion
 
@@ -481,14 +497,6 @@ namespace LightSwitchApplication.Implementation
         }
     
         /// <summary>
-        /// Deprecated Method for adding a new object to the Links EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
-        /// </summary>
-        public void AddToLinks(Link link)
-        {
-            base.AddObject("Links", link);
-        }
-    
-        /// <summary>
         /// Deprecated Method for adding a new object to the ManagementCredentials EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
         /// </summary>
         public void AddToManagementCredentials(ManagementCredential managementCredential)
@@ -534,6 +542,22 @@ namespace LightSwitchApplication.Implementation
         public void AddToProducts(Product product)
         {
             base.AddObject("Products", product);
+        }
+    
+        /// <summary>
+        /// Deprecated Method for adding a new object to the Assocs EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
+        /// </summary>
+        public void AddToAssocs(Assoc assoc)
+        {
+            base.AddObject("Assocs", assoc);
+        }
+    
+        /// <summary>
+        /// Deprecated Method for adding a new object to the CostCentres EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
+        /// </summary>
+        public void AddToCostCentres(CostCentre costCentre)
+        {
+            base.AddObject("CostCentres", costCentre);
         }
 
         #endregion
@@ -2059,6 +2083,345 @@ namespace LightSwitchApplication.Implementation
     /// <summary>
     /// No Metadata Documentation available.
     /// </summary>
+    [EdmEntityTypeAttribute(NamespaceName="LightSwitchApplication", Name="Assoc")]
+    [Serializable()]
+    [DataContractAttribute(IsReference=true)]
+    public partial class Assoc : EntityObject
+    {
+        #region Factory Method
+    
+        /// <summary>
+        /// Create a new Assoc object.
+        /// </summary>
+        /// <param name="order">Initial value of the Order property.</param>
+        /// <param name="sourceId">Initial value of the SourceId property.</param>
+        /// <param name="destinationId">Initial value of the DestinationId property.</param>
+        /// <param name="id">Initial value of the Id property.</param>
+        /// <param name="tid">Initial value of the Tid property.</param>
+        /// <param name="name">Initial value of the Name property.</param>
+        /// <param name="createdBy">Initial value of the CreatedBy property.</param>
+        /// <param name="modifiedBy">Initial value of the ModifiedBy property.</param>
+        /// <param name="created">Initial value of the Created property.</param>
+        /// <param name="modified">Initial value of the Modified property.</param>
+        public static Assoc CreateAssoc(global::System.Int64 order, global::System.Int64 sourceId, global::System.Int64 destinationId, global::System.Int64 id, global::System.String tid, global::System.String name, global::System.String createdBy, global::System.String modifiedBy, global::System.DateTimeOffset created, global::System.DateTimeOffset modified)
+        {
+            Assoc assoc = new Assoc();
+            assoc.Order = order;
+            assoc.SourceId = sourceId;
+            assoc.DestinationId = destinationId;
+            assoc.Id = id;
+            assoc.Tid = tid;
+            assoc.Name = name;
+            assoc.CreatedBy = createdBy;
+            assoc.ModifiedBy = modifiedBy;
+            assoc.Created = created;
+            assoc.Modified = modified;
+            return assoc;
+        }
+
+        #endregion
+
+        #region Primitive Properties
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Int64 Order
+        {
+            get
+            {
+                return _Order;
+            }
+            set
+            {
+                OnOrderChanging(value);
+                ReportPropertyChanging("Order");
+                _Order = value;
+                ReportPropertyChanged("Order");
+                OnOrderChanged();
+            }
+        }
+        private global::System.Int64 _Order;
+        partial void OnOrderChanging(global::System.Int64 value);
+        partial void OnOrderChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Int64 SourceId
+        {
+            get
+            {
+                return _SourceId;
+            }
+            set
+            {
+                OnSourceIdChanging(value);
+                ReportPropertyChanging("SourceId");
+                _SourceId = value;
+                ReportPropertyChanged("SourceId");
+                OnSourceIdChanged();
+            }
+        }
+        private global::System.Int64 _SourceId;
+        partial void OnSourceIdChanging(global::System.Int64 value);
+        partial void OnSourceIdChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Int64 DestinationId
+        {
+            get
+            {
+                return _DestinationId;
+            }
+            set
+            {
+                OnDestinationIdChanging(value);
+                ReportPropertyChanging("DestinationId");
+                _DestinationId = value;
+                ReportPropertyChanged("DestinationId");
+                OnDestinationIdChanged();
+            }
+        }
+        private global::System.Int64 _DestinationId;
+        partial void OnDestinationIdChanging(global::System.Int64 value);
+        partial void OnDestinationIdChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Int64 Id
+        {
+            get
+            {
+                return _Id;
+            }
+            set
+            {
+                if (_Id != value)
+                {
+                    OnIdChanging(value);
+                    ReportPropertyChanging("Id");
+                    _Id = value;
+                    ReportPropertyChanged("Id");
+                    OnIdChanged();
+                }
+            }
+        }
+        private global::System.Int64 _Id;
+        partial void OnIdChanging(global::System.Int64 value);
+        partial void OnIdChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.String Tid
+        {
+            get
+            {
+                return _Tid;
+            }
+            set
+            {
+                OnTidChanging(value);
+                ReportPropertyChanging("Tid");
+                _Tid = value;
+                ReportPropertyChanged("Tid");
+                OnTidChanged();
+            }
+        }
+        private global::System.String _Tid;
+        partial void OnTidChanging(global::System.String value);
+        partial void OnTidChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.String Name
+        {
+            get
+            {
+                return _Name;
+            }
+            set
+            {
+                OnNameChanging(value);
+                ReportPropertyChanging("Name");
+                _Name = value;
+                ReportPropertyChanged("Name");
+                OnNameChanged();
+            }
+        }
+        private global::System.String _Name;
+        partial void OnNameChanging(global::System.String value);
+        partial void OnNameChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public global::System.String Description
+        {
+            get
+            {
+                return _Description;
+            }
+            set
+            {
+                OnDescriptionChanging(value);
+                ReportPropertyChanging("Description");
+                _Description = value;
+                ReportPropertyChanged("Description");
+                OnDescriptionChanged();
+            }
+        }
+        private global::System.String _Description;
+        partial void OnDescriptionChanging(global::System.String value);
+        partial void OnDescriptionChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.String CreatedBy
+        {
+            get
+            {
+                return _CreatedBy;
+            }
+            set
+            {
+                OnCreatedByChanging(value);
+                ReportPropertyChanging("CreatedBy");
+                _CreatedBy = value;
+                ReportPropertyChanged("CreatedBy");
+                OnCreatedByChanged();
+            }
+        }
+        private global::System.String _CreatedBy;
+        partial void OnCreatedByChanging(global::System.String value);
+        partial void OnCreatedByChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.String ModifiedBy
+        {
+            get
+            {
+                return _ModifiedBy;
+            }
+            set
+            {
+                OnModifiedByChanging(value);
+                ReportPropertyChanging("ModifiedBy");
+                _ModifiedBy = value;
+                ReportPropertyChanged("ModifiedBy");
+                OnModifiedByChanged();
+            }
+        }
+        private global::System.String _ModifiedBy;
+        partial void OnModifiedByChanging(global::System.String value);
+        partial void OnModifiedByChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.DateTimeOffset Created
+        {
+            get
+            {
+                return _Created;
+            }
+            set
+            {
+                OnCreatedChanging(value);
+                ReportPropertyChanging("Created");
+                _Created = value;
+                ReportPropertyChanged("Created");
+                OnCreatedChanged();
+            }
+        }
+        private global::System.DateTimeOffset _Created;
+        partial void OnCreatedChanging(global::System.DateTimeOffset value);
+        partial void OnCreatedChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.DateTimeOffset Modified
+        {
+            get
+            {
+                return _Modified;
+            }
+            set
+            {
+                OnModifiedChanging(value);
+                ReportPropertyChanging("Modified");
+                _Modified = value;
+                ReportPropertyChanged("Modified");
+                OnModifiedChanged();
+            }
+        }
+        private global::System.DateTimeOffset _Modified;
+        partial void OnModifiedChanging(global::System.DateTimeOffset value);
+        partial void OnModifiedChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public global::System.Byte[] RowVersion
+        {
+            get
+            {
+                return StructuralObject.GetValidValue(_RowVersion);
+            }
+            set
+            {
+                OnRowVersionChanging(value);
+                ReportPropertyChanging("RowVersion");
+                _RowVersion = value;
+                ReportPropertyChanged("RowVersion");
+                OnRowVersionChanged();
+            }
+        }
+        private global::System.Byte[] _RowVersion;
+        partial void OnRowVersionChanging(global::System.Byte[] value);
+        partial void OnRowVersionChanged();
+
+        #endregion
+
+    
+    }
+    
+    /// <summary>
+    /// No Metadata Documentation available.
+    /// </summary>
     [EdmEntityTypeAttribute(NamespaceName="LightSwitchApplication", Name="Cart")]
     [Serializable()]
     [DataContractAttribute(IsReference=true)]
@@ -3478,6 +3841,267 @@ namespace LightSwitchApplication.Implementation
         private global::System.Int64 _ProductId;
         partial void OnProductIdChanging(global::System.Int64 value);
         partial void OnProductIdChanged();
+
+        #endregion
+
+    
+    }
+    
+    /// <summary>
+    /// No Metadata Documentation available.
+    /// </summary>
+    [EdmEntityTypeAttribute(NamespaceName="LightSwitchApplication", Name="CostCentre")]
+    [Serializable()]
+    [DataContractAttribute(IsReference=true)]
+    public partial class CostCentre : EntityObject
+    {
+        #region Factory Method
+    
+        /// <summary>
+        /// Create a new CostCentre object.
+        /// </summary>
+        /// <param name="id">Initial value of the Id property.</param>
+        /// <param name="tid">Initial value of the Tid property.</param>
+        /// <param name="name">Initial value of the Name property.</param>
+        /// <param name="createdBy">Initial value of the CreatedBy property.</param>
+        /// <param name="modifiedBy">Initial value of the ModifiedBy property.</param>
+        /// <param name="created">Initial value of the Created property.</param>
+        /// <param name="modified">Initial value of the Modified property.</param>
+        public static CostCentre CreateCostCentre(global::System.Int64 id, global::System.String tid, global::System.String name, global::System.String createdBy, global::System.String modifiedBy, global::System.DateTimeOffset created, global::System.DateTimeOffset modified)
+        {
+            CostCentre costCentre = new CostCentre();
+            costCentre.Id = id;
+            costCentre.Tid = tid;
+            costCentre.Name = name;
+            costCentre.CreatedBy = createdBy;
+            costCentre.ModifiedBy = modifiedBy;
+            costCentre.Created = created;
+            costCentre.Modified = modified;
+            return costCentre;
+        }
+
+        #endregion
+
+        #region Primitive Properties
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.Int64 Id
+        {
+            get
+            {
+                return _Id;
+            }
+            set
+            {
+                if (_Id != value)
+                {
+                    OnIdChanging(value);
+                    ReportPropertyChanging("Id");
+                    _Id = value;
+                    ReportPropertyChanged("Id");
+                    OnIdChanged();
+                }
+            }
+        }
+        private global::System.Int64 _Id;
+        partial void OnIdChanging(global::System.Int64 value);
+        partial void OnIdChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.String Tid
+        {
+            get
+            {
+                return _Tid;
+            }
+            set
+            {
+                OnTidChanging(value);
+                ReportPropertyChanging("Tid");
+                _Tid = value;
+                ReportPropertyChanged("Tid");
+                OnTidChanged();
+            }
+        }
+        private global::System.String _Tid;
+        partial void OnTidChanging(global::System.String value);
+        partial void OnTidChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.String Name
+        {
+            get
+            {
+                return _Name;
+            }
+            set
+            {
+                OnNameChanging(value);
+                ReportPropertyChanging("Name");
+                _Name = value;
+                ReportPropertyChanged("Name");
+                OnNameChanged();
+            }
+        }
+        private global::System.String _Name;
+        partial void OnNameChanging(global::System.String value);
+        partial void OnNameChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public global::System.String Description
+        {
+            get
+            {
+                return _Description;
+            }
+            set
+            {
+                OnDescriptionChanging(value);
+                ReportPropertyChanging("Description");
+                _Description = value;
+                ReportPropertyChanged("Description");
+                OnDescriptionChanged();
+            }
+        }
+        private global::System.String _Description;
+        partial void OnDescriptionChanging(global::System.String value);
+        partial void OnDescriptionChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.String CreatedBy
+        {
+            get
+            {
+                return _CreatedBy;
+            }
+            set
+            {
+                OnCreatedByChanging(value);
+                ReportPropertyChanging("CreatedBy");
+                _CreatedBy = value;
+                ReportPropertyChanged("CreatedBy");
+                OnCreatedByChanged();
+            }
+        }
+        private global::System.String _CreatedBy;
+        partial void OnCreatedByChanging(global::System.String value);
+        partial void OnCreatedByChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.String ModifiedBy
+        {
+            get
+            {
+                return _ModifiedBy;
+            }
+            set
+            {
+                OnModifiedByChanging(value);
+                ReportPropertyChanging("ModifiedBy");
+                _ModifiedBy = value;
+                ReportPropertyChanged("ModifiedBy");
+                OnModifiedByChanged();
+            }
+        }
+        private global::System.String _ModifiedBy;
+        partial void OnModifiedByChanging(global::System.String value);
+        partial void OnModifiedByChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.DateTimeOffset Created
+        {
+            get
+            {
+                return _Created;
+            }
+            set
+            {
+                OnCreatedChanging(value);
+                ReportPropertyChanging("Created");
+                _Created = value;
+                ReportPropertyChanged("Created");
+                OnCreatedChanged();
+            }
+        }
+        private global::System.DateTimeOffset _Created;
+        partial void OnCreatedChanging(global::System.DateTimeOffset value);
+        partial void OnCreatedChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
+        [DataMemberAttribute()]
+        public global::System.DateTimeOffset Modified
+        {
+            get
+            {
+                return _Modified;
+            }
+            set
+            {
+                OnModifiedChanging(value);
+                ReportPropertyChanging("Modified");
+                _Modified = value;
+                ReportPropertyChanged("Modified");
+                OnModifiedChanged();
+            }
+        }
+        private global::System.DateTimeOffset _Modified;
+        partial void OnModifiedChanging(global::System.DateTimeOffset value);
+        partial void OnModifiedChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public global::System.Byte[] RowVersion
+        {
+            get
+            {
+                return StructuralObject.GetValidValue(_RowVersion);
+            }
+            set
+            {
+                OnRowVersionChanging(value);
+                ReportPropertyChanging("RowVersion");
+                _RowVersion = value;
+                ReportPropertyChanged("RowVersion");
+                OnRowVersionChanged();
+            }
+        }
+        private global::System.Byte[] _RowVersion;
+        partial void OnRowVersionChanging(global::System.Byte[] value);
+        partial void OnRowVersionChanged();
 
         #endregion
 
@@ -4949,345 +5573,6 @@ namespace LightSwitchApplication.Implementation
     /// <summary>
     /// No Metadata Documentation available.
     /// </summary>
-    [EdmEntityTypeAttribute(NamespaceName="LightSwitchApplication", Name="Link")]
-    [Serializable()]
-    [DataContractAttribute(IsReference=true)]
-    public partial class Link : EntityObject
-    {
-        #region Factory Method
-    
-        /// <summary>
-        /// Create a new Link object.
-        /// </summary>
-        /// <param name="order">Initial value of the Order property.</param>
-        /// <param name="sourceId">Initial value of the SourceId property.</param>
-        /// <param name="destinationId">Initial value of the DestinationId property.</param>
-        /// <param name="id">Initial value of the Id property.</param>
-        /// <param name="tid">Initial value of the Tid property.</param>
-        /// <param name="name">Initial value of the Name property.</param>
-        /// <param name="createdBy">Initial value of the CreatedBy property.</param>
-        /// <param name="modifiedBy">Initial value of the ModifiedBy property.</param>
-        /// <param name="created">Initial value of the Created property.</param>
-        /// <param name="modified">Initial value of the Modified property.</param>
-        public static Link CreateLink(global::System.Int64 order, global::System.Int64 sourceId, global::System.Int64 destinationId, global::System.Int64 id, global::System.String tid, global::System.String name, global::System.String createdBy, global::System.String modifiedBy, global::System.DateTimeOffset created, global::System.DateTimeOffset modified)
-        {
-            Link link = new Link();
-            link.Order = order;
-            link.SourceId = sourceId;
-            link.DestinationId = destinationId;
-            link.Id = id;
-            link.Tid = tid;
-            link.Name = name;
-            link.CreatedBy = createdBy;
-            link.ModifiedBy = modifiedBy;
-            link.Created = created;
-            link.Modified = modified;
-            return link;
-        }
-
-        #endregion
-
-        #region Primitive Properties
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
-        [DataMemberAttribute()]
-        public global::System.Int64 Order
-        {
-            get
-            {
-                return _Order;
-            }
-            set
-            {
-                OnOrderChanging(value);
-                ReportPropertyChanging("Order");
-                _Order = value;
-                ReportPropertyChanged("Order");
-                OnOrderChanged();
-            }
-        }
-        private global::System.Int64 _Order;
-        partial void OnOrderChanging(global::System.Int64 value);
-        partial void OnOrderChanged();
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
-        [DataMemberAttribute()]
-        public global::System.Int64 SourceId
-        {
-            get
-            {
-                return _SourceId;
-            }
-            set
-            {
-                OnSourceIdChanging(value);
-                ReportPropertyChanging("SourceId");
-                _SourceId = value;
-                ReportPropertyChanged("SourceId");
-                OnSourceIdChanged();
-            }
-        }
-        private global::System.Int64 _SourceId;
-        partial void OnSourceIdChanging(global::System.Int64 value);
-        partial void OnSourceIdChanged();
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
-        [DataMemberAttribute()]
-        public global::System.Int64 DestinationId
-        {
-            get
-            {
-                return _DestinationId;
-            }
-            set
-            {
-                OnDestinationIdChanging(value);
-                ReportPropertyChanging("DestinationId");
-                _DestinationId = value;
-                ReportPropertyChanged("DestinationId");
-                OnDestinationIdChanged();
-            }
-        }
-        private global::System.Int64 _DestinationId;
-        partial void OnDestinationIdChanging(global::System.Int64 value);
-        partial void OnDestinationIdChanged();
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=true, IsNullable=false)]
-        [DataMemberAttribute()]
-        public global::System.Int64 Id
-        {
-            get
-            {
-                return _Id;
-            }
-            set
-            {
-                if (_Id != value)
-                {
-                    OnIdChanging(value);
-                    ReportPropertyChanging("Id");
-                    _Id = value;
-                    ReportPropertyChanged("Id");
-                    OnIdChanged();
-                }
-            }
-        }
-        private global::System.Int64 _Id;
-        partial void OnIdChanging(global::System.Int64 value);
-        partial void OnIdChanged();
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
-        [DataMemberAttribute()]
-        public global::System.String Tid
-        {
-            get
-            {
-                return _Tid;
-            }
-            set
-            {
-                OnTidChanging(value);
-                ReportPropertyChanging("Tid");
-                _Tid = value;
-                ReportPropertyChanged("Tid");
-                OnTidChanged();
-            }
-        }
-        private global::System.String _Tid;
-        partial void OnTidChanging(global::System.String value);
-        partial void OnTidChanged();
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
-        [DataMemberAttribute()]
-        public global::System.String Name
-        {
-            get
-            {
-                return _Name;
-            }
-            set
-            {
-                OnNameChanging(value);
-                ReportPropertyChanging("Name");
-                _Name = value;
-                ReportPropertyChanged("Name");
-                OnNameChanged();
-            }
-        }
-        private global::System.String _Name;
-        partial void OnNameChanging(global::System.String value);
-        partial void OnNameChanged();
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
-        [DataMemberAttribute()]
-        public global::System.String Description
-        {
-            get
-            {
-                return _Description;
-            }
-            set
-            {
-                OnDescriptionChanging(value);
-                ReportPropertyChanging("Description");
-                _Description = value;
-                ReportPropertyChanged("Description");
-                OnDescriptionChanged();
-            }
-        }
-        private global::System.String _Description;
-        partial void OnDescriptionChanging(global::System.String value);
-        partial void OnDescriptionChanged();
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
-        [DataMemberAttribute()]
-        public global::System.String CreatedBy
-        {
-            get
-            {
-                return _CreatedBy;
-            }
-            set
-            {
-                OnCreatedByChanging(value);
-                ReportPropertyChanging("CreatedBy");
-                _CreatedBy = value;
-                ReportPropertyChanged("CreatedBy");
-                OnCreatedByChanged();
-            }
-        }
-        private global::System.String _CreatedBy;
-        partial void OnCreatedByChanging(global::System.String value);
-        partial void OnCreatedByChanged();
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
-        [DataMemberAttribute()]
-        public global::System.String ModifiedBy
-        {
-            get
-            {
-                return _ModifiedBy;
-            }
-            set
-            {
-                OnModifiedByChanging(value);
-                ReportPropertyChanging("ModifiedBy");
-                _ModifiedBy = value;
-                ReportPropertyChanged("ModifiedBy");
-                OnModifiedByChanged();
-            }
-        }
-        private global::System.String _ModifiedBy;
-        partial void OnModifiedByChanging(global::System.String value);
-        partial void OnModifiedByChanged();
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
-        [DataMemberAttribute()]
-        public global::System.DateTimeOffset Created
-        {
-            get
-            {
-                return _Created;
-            }
-            set
-            {
-                OnCreatedChanging(value);
-                ReportPropertyChanging("Created");
-                _Created = value;
-                ReportPropertyChanged("Created");
-                OnCreatedChanged();
-            }
-        }
-        private global::System.DateTimeOffset _Created;
-        partial void OnCreatedChanging(global::System.DateTimeOffset value);
-        partial void OnCreatedChanged();
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=false)]
-        [DataMemberAttribute()]
-        public global::System.DateTimeOffset Modified
-        {
-            get
-            {
-                return _Modified;
-            }
-            set
-            {
-                OnModifiedChanging(value);
-                ReportPropertyChanging("Modified");
-                _Modified = value;
-                ReportPropertyChanged("Modified");
-                OnModifiedChanged();
-            }
-        }
-        private global::System.DateTimeOffset _Modified;
-        partial void OnModifiedChanging(global::System.DateTimeOffset value);
-        partial void OnModifiedChanged();
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
-        [DataMemberAttribute()]
-        public global::System.Byte[] RowVersion
-        {
-            get
-            {
-                return StructuralObject.GetValidValue(_RowVersion);
-            }
-            set
-            {
-                OnRowVersionChanging(value);
-                ReportPropertyChanging("RowVersion");
-                _RowVersion = value;
-                ReportPropertyChanged("RowVersion");
-                OnRowVersionChanged();
-            }
-        }
-        private global::System.Byte[] _RowVersion;
-        partial void OnRowVersionChanging(global::System.Byte[] value);
-        partial void OnRowVersionChanged();
-
-        #endregion
-
-    
-    }
-    
-    /// <summary>
-    /// No Metadata Documentation available.
-    /// </summary>
     [EdmEntityTypeAttribute(NamespaceName="LightSwitchApplication", Name="ManagementCredential")]
     [Serializable()]
     [DataContractAttribute(IsReference=true)]
@@ -6348,18 +6633,18 @@ namespace LightSwitchApplication.Implementation
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("LightSwitchApplication", "biz_dfch_CS_Appclusive_Core_OdataServices_Core_Node_IncomingLink", "IncomingLinks")]
-        public EntityCollection<Link> IncomingLinks
+        [EdmRelationshipNavigationPropertyAttribute("LightSwitchApplication", "biz_dfch_CS_Appclusive_Core_OdataServices_Core_Node_IncomingAsso", "IncomingAssocs")]
+        public EntityCollection<Assoc> IncomingAssocs
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Link>("LightSwitchApplication.biz_dfch_CS_Appclusive_Core_OdataServices_Core_Node_IncomingLink", "IncomingLinks");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Assoc>("LightSwitchApplication.biz_dfch_CS_Appclusive_Core_OdataServices_Core_Node_IncomingAsso", "IncomingAssocs");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Link>("LightSwitchApplication.biz_dfch_CS_Appclusive_Core_OdataServices_Core_Node_IncomingLink", "IncomingLinks", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Assoc>("LightSwitchApplication.biz_dfch_CS_Appclusive_Core_OdataServices_Core_Node_IncomingAsso", "IncomingAssocs", value);
                 }
             }
         }
@@ -6370,18 +6655,18 @@ namespace LightSwitchApplication.Implementation
         [XmlIgnoreAttribute()]
         [SoapIgnoreAttribute()]
         [DataMemberAttribute()]
-        [EdmRelationshipNavigationPropertyAttribute("LightSwitchApplication", "biz_dfch_CS_Appclusive_Core_OdataServices_Core_Node_OutgoingLink", "OutgoingLinks")]
-        public EntityCollection<Link> OutgoingLinks
+        [EdmRelationshipNavigationPropertyAttribute("LightSwitchApplication", "biz_dfch_CS_Appclusive_Core_OdataServices_Core_Node_OutgoingAsso", "OutgoingAssocs")]
+        public EntityCollection<Assoc> OutgoingAssocs
         {
             get
             {
-                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Link>("LightSwitchApplication.biz_dfch_CS_Appclusive_Core_OdataServices_Core_Node_OutgoingLink", "OutgoingLinks");
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Assoc>("LightSwitchApplication.biz_dfch_CS_Appclusive_Core_OdataServices_Core_Node_OutgoingAsso", "OutgoingAssocs");
             }
             set
             {
                 if ((value != null))
                 {
-                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Link>("LightSwitchApplication.biz_dfch_CS_Appclusive_Core_OdataServices_Core_Node_OutgoingLink", "OutgoingLinks", value);
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Assoc>("LightSwitchApplication.biz_dfch_CS_Appclusive_Core_OdataServices_Core_Node_OutgoingAsso", "OutgoingAssocs", value);
                 }
             }
         }
@@ -6717,6 +7002,30 @@ namespace LightSwitchApplication.Implementation
         private global::System.Byte[] _RowVersion;
         partial void OnRowVersionChanging(global::System.Byte[] value);
         partial void OnRowVersionChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public Nullable<global::System.Int64> CostCentreId
+        {
+            get
+            {
+                return _CostCentreId;
+            }
+            set
+            {
+                OnCostCentreIdChanging(value);
+                ReportPropertyChanging("CostCentreId");
+                _CostCentreId = value;
+                ReportPropertyChanged("CostCentreId");
+                OnCostCentreIdChanged();
+            }
+        }
+        private Nullable<global::System.Int64> _CostCentreId;
+        partial void OnCostCentreIdChanging(Nullable<global::System.Int64> value);
+        partial void OnCostCentreIdChanged();
 
         #endregion
 
@@ -7134,6 +7443,30 @@ namespace LightSwitchApplication.Implementation
         private global::System.Byte[] _RowVersion;
         partial void OnRowVersionChanging(global::System.Byte[] value);
         partial void OnRowVersionChanged();
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [EdmScalarPropertyAttribute(EntityKeyProperty=false, IsNullable=true)]
+        [DataMemberAttribute()]
+        public Nullable<global::System.Int64> CostCentreId
+        {
+            get
+            {
+                return _CostCentreId;
+            }
+            set
+            {
+                OnCostCentreIdChanging(value);
+                ReportPropertyChanging("CostCentreId");
+                _CostCentreId = value;
+                ReportPropertyChanged("CostCentreId");
+                OnCostCentreIdChanged();
+            }
+        }
+        private Nullable<global::System.Int64> _CostCentreId;
+        partial void OnCostCentreIdChanging(Nullable<global::System.Int64> value);
+        partial void OnCostCentreIdChanged();
 
         #endregion
 

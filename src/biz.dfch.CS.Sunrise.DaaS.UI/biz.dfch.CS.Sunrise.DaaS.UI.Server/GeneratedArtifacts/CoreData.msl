@@ -229,24 +229,6 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="Links">
-      <EntityTypeMapping TypeName="IsTypeOf(LightSwitchApplication.Link)">
-        <MappingFragment StoreEntitySet="Links">
-          <ScalarProperty Name="Order" ColumnName="Order" />
-          <ScalarProperty Name="SourceId" ColumnName="SourceId" />
-          <ScalarProperty Name="DestinationId" ColumnName="DestinationId" />
-          <ScalarProperty Name="Id" ColumnName="Id" />
-          <ScalarProperty Name="Tid" ColumnName="Tid" />
-          <ScalarProperty Name="Name" ColumnName="Name" />
-          <ScalarProperty Name="Description" ColumnName="Description" />
-          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
-          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
-          <ScalarProperty Name="Created" ColumnName="Created" />
-          <ScalarProperty Name="Modified" ColumnName="Modified" />
-          <ScalarProperty Name="RowVersion" ColumnName="RowVersion" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
     <EntitySetMapping Name="ManagementCredentials">
       <EntityTypeMapping TypeName="IsTypeOf(LightSwitchApplication.ManagementCredential)">
         <MappingFragment StoreEntitySet="ManagementCredentials">
@@ -318,6 +300,7 @@
           <ScalarProperty Name="Created" ColumnName="Created" />
           <ScalarProperty Name="Modified" ColumnName="Modified" />
           <ScalarProperty Name="RowVersion" ColumnName="RowVersion" />
+          <ScalarProperty Name="CostCentreId" ColumnName="CostCentreId" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -336,6 +319,7 @@
           <ScalarProperty Name="Modified" ColumnName="Modified" />
           <ScalarProperty Name="Requester" ColumnName="Requester" />
           <ScalarProperty Name="RowVersion" ColumnName="RowVersion" />
+          <ScalarProperty Name="CostCentreId" ColumnName="CostCentreId" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
@@ -349,6 +333,39 @@
           <ScalarProperty Name="EndOfSale" ColumnName="EndOfSale" />
           <ScalarProperty Name="EndOfLife" ColumnName="EndOfLife" />
           <ScalarProperty Name="Parameters" ColumnName="Parameters" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Tid" ColumnName="Tid" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="Created" ColumnName="Created" />
+          <ScalarProperty Name="Modified" ColumnName="Modified" />
+          <ScalarProperty Name="RowVersion" ColumnName="RowVersion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Assocs">
+      <EntityTypeMapping TypeName="IsTypeOf(LightSwitchApplication.Assoc)">
+        <MappingFragment StoreEntitySet="Assocs">
+          <ScalarProperty Name="Order" ColumnName="Order" />
+          <ScalarProperty Name="SourceId" ColumnName="SourceId" />
+          <ScalarProperty Name="DestinationId" ColumnName="DestinationId" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Tid" ColumnName="Tid" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="ModifiedBy" ColumnName="ModifiedBy" />
+          <ScalarProperty Name="Created" ColumnName="Created" />
+          <ScalarProperty Name="Modified" ColumnName="Modified" />
+          <ScalarProperty Name="RowVersion" ColumnName="RowVersion" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CostCentres">
+      <EntityTypeMapping TypeName="IsTypeOf(LightSwitchApplication.CostCentre)">
+        <MappingFragment StoreEntitySet="CostCentres">
           <ScalarProperty Name="Id" ColumnName="Id" />
           <ScalarProperty Name="Tid" ColumnName="Tid" />
           <ScalarProperty Name="Name" ColumnName="Name" />

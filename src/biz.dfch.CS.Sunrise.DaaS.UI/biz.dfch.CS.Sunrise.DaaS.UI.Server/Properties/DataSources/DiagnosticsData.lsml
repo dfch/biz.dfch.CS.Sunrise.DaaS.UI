@@ -38,6 +38,12 @@
       <ConnectionProperty
         Name="ProjectMetadata"
         Value="DiagnosticsData" />
+      <ConnectionProperty
+        Name="ProjectMetadata"
+        Value="DiagnosticsData" />
+      <ConnectionProperty
+        Name="ProjectMetadata"
+        Value="DiagnosticsData" />
     </DataService.ConnectionProperties>
   </DataService>
 </ServiceApplication>

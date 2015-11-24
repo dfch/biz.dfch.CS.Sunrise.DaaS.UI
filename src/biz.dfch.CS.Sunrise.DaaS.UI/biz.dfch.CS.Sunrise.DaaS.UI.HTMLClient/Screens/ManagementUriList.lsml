@@ -265,7 +265,6 @@
     <Screen.Properties>
       <ScreenCollectionProperty
         Name="ManagementUris"
-        DisablePaging="True"
         DisableSearch="True"
         PageSize="45"
         PropertyType="CollectionView$ManagementUri">

@@ -5,7 +5,7 @@
     <Partial />
   </ServiceApplication.Attributes>
   <EntityType
-    Name="Catalogue">
+    Name="ConfigurationUpdate">
     <EntityType.Attributes>
       <NotSearchable />
     </EntityType.Attributes>
@@ -18,16 +18,6 @@
       </EntityMethod>
     </EntityType.Methods>
     <EntityType.Properties>
-      <EntityProperty
-        Name="Status"
-        PropertyType=":String?" />
-      <EntityProperty
-        Name="Version"
-        PropertyType=":String">
-        <EntityProperty.Attributes>
-          <Required />
-        </EntityProperty.Attributes>
-      </EntityProperty>
       <KeyProperty
         Name="Id"
         PropertyType=":Int64">
@@ -90,51 +80,22 @@
           <NotSearchable />
         </EntityProperty.Attributes>
       </EntityProperty>
-      <NavigationProperty
-        Name="CatalogueItems"
-        Association="biz_dfch_CS_Appclusive_Core_OdataServices_Core_Catalogue_Catalog"
-        FromEnd="CatalogueItemsPartner"
-        ToEnd="CatalogueItems" />
     </EntityType.Properties>
   </EntityType>
-  <Association
-    Name="biz_dfch_CS_Appclusive_Core_OdataServices_Core_Catalogue_Catalog">
-    <AssociationEnd
-      Name="CatalogueItemsPartner"
-      EntityType="Catalogue">
-      <AssociationEnd.Attributes>
-        <DeleteRule />
-      </AssociationEnd.Attributes>
-    </AssociationEnd>
-    <AssociationEnd
-      Name="CatalogueItems"
-      Multiplicity="Many"
-      EntityType="CatalogueItem1" />
-  </Association>
   <EntityContainer
-    Name="CoreData">
+    Name="DiagnosticsData">
     <EntityContainer.Attributes>
       <Partial />
     </EntityContainer.Attributes>
     <EntitySet
-      Name="Catalogues"
+      Name="ConfigurationUpdates"
       CanDelete="True"
       CanInsert="True"
       CanUpdate="True"
-      EntityType="Catalogue" />
-    <AssociationSet
-      Name="biz_dfch_CS_Appclusive_Core_OdataServices_Core_Catalogue_Catalog"
-      Association="biz_dfch_CS_Appclusive_Core_OdataServices_Core_Catalogue_Catalog">
-      <AssociationSetEnd
-        Name="CatalogueItemsPartner"
-        EntitySet="Catalogues" />
-      <AssociationSetEnd
-        Name="CatalogueItems"
-        EntitySet="CatalogueItems" />
-    </AssociationSet>
+      EntityType="ConfigurationUpdate" />
     <QueryOperation
-      Name="Catalogues_Single"
-      ReturnType="Catalogue">
+      Name="ConfigurationUpdates_Single"
+      ReturnType="ConfigurationUpdate">
       <QueryOperation.Attributes>
         <Generated />
         <Description
@@ -160,7 +121,7 @@
       <QueryOperation.Source>
         <QuerySourceExpressionTree>
           <MemberExpression
-            Member="Catalogues" />
+            Member="ConfigurationUpdates" />
         </QuerySourceExpressionTree>
       </QueryOperation.Source>
       <QueryOperationParameter
@@ -173,8 +134,8 @@
       </QueryOperationParameter>
     </QueryOperation>
     <QueryOperation
-      Name="Catalogues_SingleOrDefault"
-      ReturnType="Catalogue">
+      Name="ConfigurationUpdates_SingleOrDefault"
+      ReturnType="ConfigurationUpdate">
       <QueryOperation.Attributes>
         <Generated />
         <Description
@@ -200,7 +161,7 @@
       <QueryOperation.Source>
         <QuerySourceExpressionTree>
           <MemberExpression
-            Member="Catalogues" />
+            Member="ConfigurationUpdates" />
         </QuerySourceExpressionTree>
       </QueryOperation.Source>
       <QueryOperationParameter
@@ -214,67 +175,46 @@
     </QueryOperation>
   </EntityContainer>
   <DataService
-    Name="CoreDataDataService">
+    Name="DiagnosticsDataDataService">
     <DataService.Attributes>
       <Partial />
     </DataService.Attributes>
     <EntitySetMapping
-      EntitySet="Catalogues">
+      EntitySet="ConfigurationUpdates">
       <EntitySetMapping.Attributes>
         <CsdlEntitySet
-          EntityTypeName="Catalogue"
-          EntityTypeNamespace="biz.dfch.CS.Appclusive.Core.OdataServices.Core"
-          Name="Catalogues"
-          EntityType="Catalogue" />
-        <CsdlProperty
-          Name="Status"
-          Property="Catalogue/Properties[Status]" />
-        <CsdlProperty
-          Name="Version"
-          Property="Catalogue/Properties[Version]" />
+          EntityTypeName="ConfigurationUpdate"
+          EntityTypeNamespace="biz.dfch.CS.Appclusive.Core.OdataServices.Diagnostics"
+          Name="ConfigurationUpdates"
+          EntityType="ConfigurationUpdate" />
         <CsdlProperty
           Name="Id"
-          Property="Catalogue/Properties[Id]" />
+          Property="ConfigurationUpdate/Properties[Id]" />
         <CsdlProperty
           Name="Tid"
-          Property="Catalogue/Properties[Tid]" />
+          Property="ConfigurationUpdate/Properties[Tid]" />
         <CsdlProperty
           Name="Name"
-          Property="Catalogue/Properties[Name]" />
+          Property="ConfigurationUpdate/Properties[Name]" />
         <CsdlProperty
           Name="Description"
-          Property="Catalogue/Properties[Description]" />
+          Property="ConfigurationUpdate/Properties[Description]" />
         <CsdlProperty
           Name="CreatedBy"
-          Property="Catalogue/Properties[CreatedBy]" />
+          Property="ConfigurationUpdate/Properties[CreatedBy]" />
         <CsdlProperty
           Name="ModifiedBy"
-          Property="Catalogue/Properties[ModifiedBy]" />
+          Property="ConfigurationUpdate/Properties[ModifiedBy]" />
         <CsdlProperty
           Name="Created"
-          Property="Catalogue/Properties[Created]" />
+          Property="ConfigurationUpdate/Properties[Created]" />
         <CsdlProperty
           Name="Modified"
-          Property="Catalogue/Properties[Modified]" />
+          Property="ConfigurationUpdate/Properties[Modified]" />
         <CsdlProperty
           Name="RowVersion"
-          Property="Catalogue/Properties[RowVersion]" />
-        <CsdlProperty
-          Name="CatalogueItems"
-          Property="Catalogue/Properties[CatalogueItems]" />
+          Property="ConfigurationUpdate/Properties[RowVersion]" />
       </EntitySetMapping.Attributes>
     </EntitySetMapping>
-    <AssociationSetMapping
-      AssociationSet="biz_dfch_CS_Appclusive_Core_OdataServices_Core_Catalogue_Catalog">
-      <AssociationSetMapping.Attributes>
-        <CsdlAssociation
-          Name="biz_dfch_CS_Appclusive_Core_OdataServices_Core_Catalogue_CatalogueItems_biz_dfch_CS_Appclusive_Core_OdataServices_Core_CatalogueItem_CatalogueItemsPartnerSet"
-          Association="biz_dfch_CS_Appclusive_Core_OdataServices_Core_Catalogue_Catalog" />
-        <CsdlAssociationSetEnd
-          End="CoreData/Members[biz_dfch_CS_Appclusive_Core_OdataServices_Core_Catalogue_Catalog]/Members[CatalogueItemsPartner]" />
-        <CsdlAssociationSetEnd
-          End="CoreData/Members[biz_dfch_CS_Appclusive_Core_OdataServices_Core_Catalogue_Catalog]/Members[CatalogueItems]" />
-      </AssociationSetMapping.Attributes>
-    </AssociationSetMapping>
   </DataService>
 </ServiceApplication>

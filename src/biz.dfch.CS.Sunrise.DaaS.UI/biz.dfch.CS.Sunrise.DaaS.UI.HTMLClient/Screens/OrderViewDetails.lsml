@@ -403,7 +403,6 @@
       </ScreenProperty>
       <ScreenCollectionProperty
         Name="OrderItems"
-        DisablePaging="True"
         DisableSearch="True"
         PageSize="15"
         PropertyType="CollectionView$OrderItem">

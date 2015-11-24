@@ -5,10 +5,9 @@
     <Partial />
   </ServiceApplication.Attributes>
   <EntityType
-    Name="Link">
+    Name="Assoc">
     <EntityType.Attributes>
       <NotSearchable />
-      <NotPageable />
     </EntityType.Attributes>
     <EntityType.Methods>
       <EntityMethod
@@ -113,14 +112,14 @@
       <Partial />
     </EntityContainer.Attributes>
     <EntitySet
-      Name="Links"
+      Name="Assocs"
       CanDelete="True"
       CanInsert="True"
       CanUpdate="True"
-      EntityType="Link" />
+      EntityType="Assoc" />
     <QueryOperation
-      Name="Links_Single"
-      ReturnType="Link">
+      Name="Assocs_Single"
+      ReturnType="Assoc">
       <QueryOperation.Attributes>
         <Generated />
         <Description
@@ -146,7 +145,7 @@
       <QueryOperation.Source>
         <QuerySourceExpressionTree>
           <MemberExpression
-            Member="Links" />
+            Member="Assocs" />
         </QuerySourceExpressionTree>
       </QueryOperation.Source>
       <QueryOperationParameter
@@ -159,8 +158,8 @@
       </QueryOperationParameter>
     </QueryOperation>
     <QueryOperation
-      Name="Links_SingleOrDefault"
-      ReturnType="Link">
+      Name="Assocs_SingleOrDefault"
+      ReturnType="Assoc">
       <QueryOperation.Attributes>
         <Generated />
         <Description
@@ -186,7 +185,7 @@
       <QueryOperation.Source>
         <QuerySourceExpressionTree>
           <MemberExpression
-            Member="Links" />
+            Member="Assocs" />
         </QuerySourceExpressionTree>
       </QueryOperation.Source>
       <QueryOperationParameter
@@ -205,49 +204,49 @@
       <Partial />
     </DataService.Attributes>
     <EntitySetMapping
-      EntitySet="Links">
+      EntitySet="Assocs">
       <EntitySetMapping.Attributes>
         <CsdlEntitySet
-          EntityTypeName="Link"
+          EntityTypeName="Assoc"
           EntityTypeNamespace="biz.dfch.CS.Appclusive.Core.OdataServices.Core"
-          Name="Links"
-          EntityType="Link" />
+          Name="Assocs"
+          EntityType="Assoc" />
         <CsdlProperty
           Name="Order"
-          Property="Link/Properties[Order]" />
+          Property="Assoc/Properties[Order]" />
         <CsdlProperty
           Name="SourceId"
-          Property="Link/Properties[SourceId]" />
+          Property="Assoc/Properties[SourceId]" />
         <CsdlProperty
           Name="DestinationId"
-          Property="Link/Properties[DestinationId]" />
+          Property="Assoc/Properties[DestinationId]" />
         <CsdlProperty
           Name="Id"
-          Property="Link/Properties[Id]" />
+          Property="Assoc/Properties[Id]" />
         <CsdlProperty
           Name="Tid"
-          Property="Link/Properties[Tid]" />
+          Property="Assoc/Properties[Tid]" />
         <CsdlProperty
           Name="Name"
-          Property="Link/Properties[Name]" />
+          Property="Assoc/Properties[Name]" />
         <CsdlProperty
           Name="Description"
-          Property="Link/Properties[Description]" />
+          Property="Assoc/Properties[Description]" />
         <CsdlProperty
           Name="CreatedBy"
-          Property="Link/Properties[CreatedBy]" />
+          Property="Assoc/Properties[CreatedBy]" />
         <CsdlProperty
           Name="ModifiedBy"
-          Property="Link/Properties[ModifiedBy]" />
+          Property="Assoc/Properties[ModifiedBy]" />
         <CsdlProperty
           Name="Created"
-          Property="Link/Properties[Created]" />
+          Property="Assoc/Properties[Created]" />
         <CsdlProperty
           Name="Modified"
-          Property="Link/Properties[Modified]" />
+          Property="Assoc/Properties[Modified]" />
         <CsdlProperty
           Name="RowVersion"
-          Property="Link/Properties[RowVersion]" />
+          Property="Assoc/Properties[RowVersion]" />
       </EntitySetMapping.Attributes>
     </EntitySetMapping>
   </DataService>

@@ -265,12 +265,14 @@
     <LightSwitchModel Include="DataSources\CoreData\Acls.lsml" />
     <LightSwitchModel Include="DataSources\CoreData\EntityTypes.lsml" />
     <LightSwitchModel Include="DataSources\CoreData\Nodes.lsml" />
-    <LightSwitchModel Include="DataSources\CoreData\Links.lsml" />
     <LightSwitchModel Include="DataSources\CoreData\ManagementUris.lsml" />
     <LightSwitchModel Include="DataSources\CoreData\Catalogues.lsml" />
     <LightSwitchModel Include="DataSources\CoreData\Carts.lsml" />
     <LightSwitchModel Include="DataSources\CoreData\CartItems.lsml" />
     <LightSwitchModel Include="DataSources\CoreData\Products.lsml" />
+    <LightSwitchModel Include="DataSources\CoreData\Assocs.lsml" />
+    <LightSwitchModel Include="DataSources\CoreData\CostCentres.lsml" />
+    <LightSwitchModel Include="DataSources\DiagnosticsData\ConfigurationUpdates.lsml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

@@ -834,12 +834,6 @@
         /// <field name="Children" type="msls.VisualCollection" elementType="msls.application.Node">
         /// Gets the children for this screen.
         /// </field>
-        /// <field name="IncomingLinks" type="msls.VisualCollection" elementType="msls.application.Link">
-        /// Gets the incomingLinks for this screen.
-        /// </field>
-        /// <field name="OutgoingLinks" type="msls.VisualCollection" elementType="msls.application.Link">
-        /// Gets the outgoingLinks for this screen.
-        /// </field>
         /// <field name="details" type="msls.application.NodeView.Details">
         /// Gets the details for this screen.
         /// </field>
@@ -1294,30 +1288,6 @@
                 getNavigationProperty: function () {
                     if (this.owner.Node) {
                         return this.owner.Node.details.properties.Children;
-                    }
-                    return null;
-                },
-                appendQuery: function () {
-                    return this;
-                }
-            },
-            {
-                name: "IncomingLinks", kind: "collection", elementType: lightSwitchApplication.Link,
-                getNavigationProperty: function () {
-                    if (this.owner.Node) {
-                        return this.owner.Node.details.properties.IncomingLinks;
-                    }
-                    return null;
-                },
-                appendQuery: function () {
-                    return this;
-                }
-            },
-            {
-                name: "OutgoingLinks", kind: "collection", elementType: lightSwitchApplication.Link,
-                getNavigationProperty: function () {
-                    if (this.owner.Node) {
-                        return this.owner.Node.details.properties.OutgoingLinks;
                     }
                     return null;
                 },

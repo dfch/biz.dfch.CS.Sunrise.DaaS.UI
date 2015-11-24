@@ -403,7 +403,6 @@
       </ScreenProperty>
       <ScreenCollectionProperty
         Name="Children"
-        DisablePaging="True"
         DisableSearch="True"
         PageSize="15"
         PropertyType="CollectionView$Node">
@@ -430,70 +429,6 @@
           <ChainExpression>
             <CallExpression
               Target="NodeView/Properties[Children]/Query" />
-          </ChainExpression>
-        </ScreenExpressionTree>
-      </ScreenCollectionProperty>
-      <ScreenCollectionProperty
-        Name="IncomingLinks"
-        DisablePaging="True"
-        DisableSearch="True"
-        PageSize="15"
-        PropertyType="CollectionView$Link">
-        <ScreenCollectionProperty.Query>
-          <ScreenQueryDefinition
-            Name="IncomingLinksQuery"
-            ReturnType="Link*">
-            <ScreenQueryDefinition.FilterExpression>
-              <QueryFilterExpressionTree />
-            </ScreenQueryDefinition.FilterExpression>
-            <ScreenQueryDefinition.Source>
-              <QuerySourceExpressionTree>
-                <ChainExpression>
-                  <MemberExpression
-                    Member="NodeView/Properties[Node]" />
-                  <MemberExpression
-                    Member="IncomingLinks" />
-                </ChainExpression>
-              </QuerySourceExpressionTree>
-            </ScreenQueryDefinition.Source>
-          </ScreenQueryDefinition>
-        </ScreenCollectionProperty.Query>
-        <ScreenExpressionTree>
-          <ChainExpression>
-            <CallExpression
-              Target="NodeView/Properties[IncomingLinks]/Query" />
-          </ChainExpression>
-        </ScreenExpressionTree>
-      </ScreenCollectionProperty>
-      <ScreenCollectionProperty
-        Name="OutgoingLinks"
-        DisablePaging="True"
-        DisableSearch="True"
-        PageSize="15"
-        PropertyType="CollectionView$Link">
-        <ScreenCollectionProperty.Query>
-          <ScreenQueryDefinition
-            Name="OutgoingLinksQuery"
-            ReturnType="Link*">
-            <ScreenQueryDefinition.FilterExpression>
-              <QueryFilterExpressionTree />
-            </ScreenQueryDefinition.FilterExpression>
-            <ScreenQueryDefinition.Source>
-              <QuerySourceExpressionTree>
-                <ChainExpression>
-                  <MemberExpression
-                    Member="NodeView/Properties[Node]" />
-                  <MemberExpression
-                    Member="OutgoingLinks" />
-                </ChainExpression>
-              </QuerySourceExpressionTree>
-            </ScreenQueryDefinition.Source>
-          </ScreenQueryDefinition>
-        </ScreenCollectionProperty.Query>
-        <ScreenExpressionTree>
-          <ChainExpression>
-            <CallExpression
-              Target="NodeView/Properties[OutgoingLinks]/Query" />
           </ChainExpression>
         </ScreenExpressionTree>
       </ScreenCollectionProperty>

@@ -49,12 +49,6 @@
   <EntityType>
     <EntityType.Attributes>
       <Proxy
-        Target="ServiceInterface:Link" />
-    </EntityType.Attributes>
-  </EntityType>
-  <EntityType>
-    <EntityType.Attributes>
-      <Proxy
         Target="ServiceInterface:ManagementUri" />
     </EntityType.Attributes>
   </EntityType>
@@ -68,18 +62,6 @@
     <Association.Attributes>
       <Proxy
         Target="ServiceInterface:biz_dfch_CS_Appclusive_Core_OdataServices_Core_Node_Children_biz" />
-    </Association.Attributes>
-  </Association>
-  <Association>
-    <Association.Attributes>
-      <Proxy
-        Target="ServiceInterface:biz_dfch_CS_Appclusive_Core_OdataServices_Core_Node_IncomingLink" />
-    </Association.Attributes>
-  </Association>
-  <Association>
-    <Association.Attributes>
-      <Proxy
-        Target="ServiceInterface:biz_dfch_CS_Appclusive_Core_OdataServices_Core_Node_OutgoingLink" />
     </Association.Attributes>
   </Association>
   <Association>
@@ -106,4 +88,34 @@
         Target="ServiceInterface:biz_dfch_CS_Appclusive_Core_OdataServices_Core_Product_Catalogue" />
     </Association.Attributes>
   </Association>
+  <EntityType>
+    <EntityType.Attributes>
+      <Proxy
+        Target="ServiceInterface:Assoc" />
+    </EntityType.Attributes>
+  </EntityType>
+  <EntityType>
+    <EntityType.Attributes>
+      <Proxy
+        Target="ServiceInterface:CostCentre" />
+    </EntityType.Attributes>
+  </EntityType>
+  <Association>
+    <Association.Attributes>
+      <Proxy
+        Target="ServiceInterface:biz_dfch_CS_Appclusive_Core_OdataServices_Core_Node_IncomingAsso" />
+    </Association.Attributes>
+  </Association>
+  <Association>
+    <Association.Attributes>
+      <Proxy
+        Target="ServiceInterface:biz_dfch_CS_Appclusive_Core_OdataServices_Core_Node_OutgoingAsso" />
+    </Association.Attributes>
+  </Association>
+  <EntityType>
+    <EntityType.Attributes>
+      <Proxy
+        Target="ServiceInterface:ConfigurationUpdate" />
+    </EntityType.Attributes>
+  </EntityType>
 </Application>

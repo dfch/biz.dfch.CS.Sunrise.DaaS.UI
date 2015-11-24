@@ -487,7 +487,6 @@
       </ScreenProperty>
       <ScreenCollectionProperty
         Name="CatalogueItems"
-        DisablePaging="True"
         DisableSearch="True"
         PageSize="15"
         PropertyType="CollectionView$CatalogueItem1">

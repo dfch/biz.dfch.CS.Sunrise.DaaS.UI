@@ -219,23 +219,6 @@
     <Property Name="ModifiedBy" Type="Edm.String" Nullable="false" MaxLength="Max" />
     <Property Name="RowVersion" Type="Edm.Binary" MaxLength="Max" />
   </EntityType>
-  <EntityType Name="Link">
-    <Key>
-      <PropertyRef Name="Id" />
-    </Key>
-    <Property Name="Order" Type="Edm.Int64" Nullable="false" />
-    <Property Name="SourceId" Type="Edm.Int64" Nullable="false" />
-    <Property Name="DestinationId" Type="Edm.Int64" Nullable="false" />
-    <Property Name="Id" Type="Edm.Int64" Nullable="false" />
-    <Property Name="Tid" Type="Edm.String" Nullable="false" MaxLength="Max" />
-    <Property Name="Name" Type="Edm.String" Nullable="false" MaxLength="Max" />
-    <Property Name="Description" Type="Edm.String" MaxLength="Max" />
-    <Property Name="CreatedBy" Type="Edm.String" Nullable="false" MaxLength="Max" />
-    <Property Name="ModifiedBy" Type="Edm.String" Nullable="false" MaxLength="Max" />
-    <Property Name="Created" Type="Edm.DateTimeOffset" Nullable="false" />
-    <Property Name="Modified" Type="Edm.DateTimeOffset" Nullable="false" />
-    <Property Name="RowVersion" Type="Edm.Binary" MaxLength="Max" />
-  </EntityType>
   <EntityType Name="ManagementCredential">
     <Key>
       <PropertyRef Name="Id" />
@@ -288,8 +271,8 @@
     <Property Name="Modified" Type="Edm.DateTimeOffset" Nullable="false" />
     <Property Name="RowVersion" Type="Edm.Binary" MaxLength="Max" />
     <NavigationProperty Name="Children" Relationship="LightSwitchApplication.biz_dfch_CS_Appclusive_Core_OdataServices_Core_Node_Children_biz" ToRole="Children" FromRole="ChildrenPartner" />
-    <NavigationProperty Name="IncomingLinks" Relationship="LightSwitchApplication.biz_dfch_CS_Appclusive_Core_OdataServices_Core_Node_IncomingLink" ToRole="IncomingLinks" FromRole="IncomingLinksPartner" />
-    <NavigationProperty Name="OutgoingLinks" Relationship="LightSwitchApplication.biz_dfch_CS_Appclusive_Core_OdataServices_Core_Node_OutgoingLink" ToRole="OutgoingLinks" FromRole="OutgoingLinksPartner" />
+    <NavigationProperty Name="IncomingAssocs" Relationship="LightSwitchApplication.biz_dfch_CS_Appclusive_Core_OdataServices_Core_Node_IncomingAsso" ToRole="IncomingAssocs" FromRole="IncomingAssocsPartner" />
+    <NavigationProperty Name="OutgoingAssocs" Relationship="LightSwitchApplication.biz_dfch_CS_Appclusive_Core_OdataServices_Core_Node_OutgoingAsso" ToRole="OutgoingAssocs" FromRole="OutgoingAssocsPartner" />
   </EntityType>
   <EntityType Name="OrderItem">
     <Key>
@@ -309,6 +292,7 @@
     <Property Name="Created" Type="Edm.DateTimeOffset" Nullable="false" />
     <Property Name="Modified" Type="Edm.DateTimeOffset" Nullable="false" />
     <Property Name="RowVersion" Type="Edm.Binary" MaxLength="Max" />
+    <Property Name="CostCentreId" Type="Edm.Int64" />
   </EntityType>
   <EntityType Name="Order">
     <Key>
@@ -326,6 +310,7 @@
     <Property Name="Modified" Type="Edm.DateTimeOffset" Nullable="false" />
     <Property Name="Requester" Type="Edm.String" MaxLength="Max" />
     <Property Name="RowVersion" Type="Edm.Binary" MaxLength="Max" />
+    <Property Name="CostCentreId" Type="Edm.Int64" />
     <NavigationProperty Name="OrderItems" Relationship="LightSwitchApplication.biz_dfch_CS_Sunrise_DaaS_Endpoints_OdataServices_Core_Order_Orde" ToRole="OrderItems" FromRole="OrderItemsPartner" />
   </EntityType>
   <EntityType Name="Product">
@@ -350,6 +335,37 @@
     <Property Name="RowVersion" Type="Edm.Binary" MaxLength="Max" />
     <NavigationProperty Name="CatalogueItems" Relationship="LightSwitchApplication.biz_dfch_CS_Appclusive_Core_OdataServices_Core_Product_Catalogue" ToRole="CatalogueItems" FromRole="CatalogueItemsPartner" />
   </EntityType>
+  <EntityType Name="Assoc">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Order" Type="Edm.Int64" Nullable="false" />
+    <Property Name="SourceId" Type="Edm.Int64" Nullable="false" />
+    <Property Name="DestinationId" Type="Edm.Int64" Nullable="false" />
+    <Property Name="Id" Type="Edm.Int64" Nullable="false" />
+    <Property Name="Tid" Type="Edm.String" Nullable="false" MaxLength="Max" />
+    <Property Name="Name" Type="Edm.String" Nullable="false" MaxLength="Max" />
+    <Property Name="Description" Type="Edm.String" MaxLength="Max" />
+    <Property Name="CreatedBy" Type="Edm.String" Nullable="false" MaxLength="Max" />
+    <Property Name="ModifiedBy" Type="Edm.String" Nullable="false" MaxLength="Max" />
+    <Property Name="Created" Type="Edm.DateTimeOffset" Nullable="false" />
+    <Property Name="Modified" Type="Edm.DateTimeOffset" Nullable="false" />
+    <Property Name="RowVersion" Type="Edm.Binary" MaxLength="Max" />
+  </EntityType>
+  <EntityType Name="CostCentre">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Edm.Int64" Nullable="false" />
+    <Property Name="Tid" Type="Edm.String" Nullable="false" MaxLength="Max" />
+    <Property Name="Name" Type="Edm.String" Nullable="false" MaxLength="Max" />
+    <Property Name="Description" Type="Edm.String" MaxLength="Max" />
+    <Property Name="CreatedBy" Type="Edm.String" Nullable="false" MaxLength="Max" />
+    <Property Name="ModifiedBy" Type="Edm.String" Nullable="false" MaxLength="Max" />
+    <Property Name="Created" Type="Edm.DateTimeOffset" Nullable="false" />
+    <Property Name="Modified" Type="Edm.DateTimeOffset" Nullable="false" />
+    <Property Name="RowVersion" Type="Edm.Binary" MaxLength="Max" />
+  </EntityType>
   <Association Name="biz_dfch_CS_Appclusive_Core_OdataServices_Core_Acl_Aces_biz_dfch">
     <End Role="AcesPartner" Type="LightSwitchApplication.Acl" Multiplicity="0..1" />
     <End Role="Aces" Type="LightSwitchApplication.Ace" Multiplicity="*" />
@@ -370,14 +386,6 @@
     <End Role="ChildrenPartner" Type="LightSwitchApplication.Node" Multiplicity="0..1" />
     <End Role="Children" Type="LightSwitchApplication.Node" Multiplicity="*" />
   </Association>
-  <Association Name="biz_dfch_CS_Appclusive_Core_OdataServices_Core_Node_IncomingLink">
-    <End Role="IncomingLinksPartner" Type="LightSwitchApplication.Node" Multiplicity="0..1" />
-    <End Role="IncomingLinks" Type="LightSwitchApplication.Link" Multiplicity="*" />
-  </Association>
-  <Association Name="biz_dfch_CS_Appclusive_Core_OdataServices_Core_Node_OutgoingLink">
-    <End Role="OutgoingLinksPartner" Type="LightSwitchApplication.Node" Multiplicity="0..1" />
-    <End Role="OutgoingLinks" Type="LightSwitchApplication.Link" Multiplicity="*" />
-  </Association>
   <Association Name="biz_dfch_CS_Sunrise_DaaS_Endpoints_OdataServices_Core_Order_Orde">
     <End Role="OrderItemsPartner" Type="LightSwitchApplication.Order" Multiplicity="0..1" />
     <End Role="OrderItems" Type="LightSwitchApplication.OrderItem" Multiplicity="*" />
@@ -385,6 +393,14 @@
   <Association Name="biz_dfch_CS_Appclusive_Core_OdataServices_Core_Product_Catalogue">
     <End Role="CatalogueItemsPartner" Type="LightSwitchApplication.Product" Multiplicity="0..1" />
     <End Role="CatalogueItems" Type="LightSwitchApplication.CatalogueItem1" Multiplicity="*" />
+  </Association>
+  <Association Name="biz_dfch_CS_Appclusive_Core_OdataServices_Core_Node_IncomingAsso">
+    <End Role="IncomingAssocsPartner" Type="LightSwitchApplication.Node" Multiplicity="0..1" />
+    <End Role="IncomingAssocs" Type="LightSwitchApplication.Assoc" Multiplicity="*" />
+  </Association>
+  <Association Name="biz_dfch_CS_Appclusive_Core_OdataServices_Core_Node_OutgoingAsso">
+    <End Role="OutgoingAssocsPartner" Type="LightSwitchApplication.Node" Multiplicity="0..1" />
+    <End Role="OutgoingAssocs" Type="LightSwitchApplication.Assoc" Multiplicity="*" />
   </Association>
   <EntityContainer Name="CoreData" m:IsDefaultEntityContainer="true">
     <EntitySet Name="Aces" EntityType="LightSwitchApplication.Ace" />
@@ -399,13 +415,14 @@
     <EntitySet Name="Gates" EntityType="LightSwitchApplication.Gate" />
     <EntitySet Name="Jobs" EntityType="LightSwitchApplication.Job" />
     <EntitySet Name="KeyNameValues" EntityType="LightSwitchApplication.KeyNameValue" />
-    <EntitySet Name="Links" EntityType="LightSwitchApplication.Link" />
     <EntitySet Name="ManagementCredentials" EntityType="LightSwitchApplication.ManagementCredential" />
     <EntitySet Name="ManagementUris" EntityType="LightSwitchApplication.ManagementUri" />
     <EntitySet Name="Nodes" EntityType="LightSwitchApplication.Node" />
     <EntitySet Name="OrderItems" EntityType="LightSwitchApplication.OrderItem" />
     <EntitySet Name="Orders" EntityType="LightSwitchApplication.Order" />
     <EntitySet Name="Products" EntityType="LightSwitchApplication.Product" />
+    <EntitySet Name="Assocs" EntityType="LightSwitchApplication.Assoc" />
+    <EntitySet Name="CostCentres" EntityType="LightSwitchApplication.CostCentre" />
     <AssociationSet Name="biz_dfch_CS_Appclusive_Core_OdataServices_Core_Acl_Aces_biz_dfch" Association="LightSwitchApplication.biz_dfch_CS_Appclusive_Core_OdataServices_Core_Acl_Aces_biz_dfch">
       <End Role="AcesPartner" EntitySet="Acls" />
       <End Role="Aces" EntitySet="Aces" />
@@ -426,14 +443,6 @@
       <End Role="ChildrenPartner" EntitySet="Nodes" />
       <End Role="Children" EntitySet="Nodes" />
     </AssociationSet>
-    <AssociationSet Name="biz_dfch_CS_Appclusive_Core_OdataServices_Core_Node_IncomingLink" Association="LightSwitchApplication.biz_dfch_CS_Appclusive_Core_OdataServices_Core_Node_IncomingLink">
-      <End Role="IncomingLinksPartner" EntitySet="Nodes" />
-      <End Role="IncomingLinks" EntitySet="Links" />
-    </AssociationSet>
-    <AssociationSet Name="biz_dfch_CS_Appclusive_Core_OdataServices_Core_Node_OutgoingLink" Association="LightSwitchApplication.biz_dfch_CS_Appclusive_Core_OdataServices_Core_Node_OutgoingLink">
-      <End Role="OutgoingLinksPartner" EntitySet="Nodes" />
-      <End Role="OutgoingLinks" EntitySet="Links" />
-    </AssociationSet>
     <AssociationSet Name="biz_dfch_CS_Sunrise_DaaS_Endpoints_OdataServices_Core_Order_Orde" Association="LightSwitchApplication.biz_dfch_CS_Sunrise_DaaS_Endpoints_OdataServices_Core_Order_Orde">
       <End Role="OrderItemsPartner" EntitySet="Orders" />
       <End Role="OrderItems" EntitySet="OrderItems" />
@@ -441,6 +450,14 @@
     <AssociationSet Name="biz_dfch_CS_Appclusive_Core_OdataServices_Core_Product_Catalogue" Association="LightSwitchApplication.biz_dfch_CS_Appclusive_Core_OdataServices_Core_Product_Catalogue">
       <End Role="CatalogueItemsPartner" EntitySet="Products" />
       <End Role="CatalogueItems" EntitySet="CatalogueItems" />
+    </AssociationSet>
+    <AssociationSet Name="biz_dfch_CS_Appclusive_Core_OdataServices_Core_Node_IncomingAsso" Association="LightSwitchApplication.biz_dfch_CS_Appclusive_Core_OdataServices_Core_Node_IncomingAsso">
+      <End Role="IncomingAssocsPartner" EntitySet="Nodes" />
+      <End Role="IncomingAssocs" EntitySet="Assocs" />
+    </AssociationSet>
+    <AssociationSet Name="biz_dfch_CS_Appclusive_Core_OdataServices_Core_Node_OutgoingAsso" Association="LightSwitchApplication.biz_dfch_CS_Appclusive_Core_OdataServices_Core_Node_OutgoingAsso">
+      <End Role="OutgoingAssocsPartner" EntitySet="Nodes" />
+      <End Role="OutgoingAssocs" EntitySet="Assocs" />
     </AssociationSet>
   </EntityContainer>
 </Schema>

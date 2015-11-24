@@ -333,19 +333,6 @@ namespace LightSwitchApplication
         }
         
         /// <summary>
-        /// Gets the Links entity set.  The entity set provides members to access entities of a specific type.
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.1.0.0")]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        public global::Microsoft.LightSwitch.Framework.EntitySet<global::LightSwitchApplication.Link> Links
-        {
-            get
-            {
-                return global::LightSwitchApplication.CoreData.DetailsClass.GetValue(this, global::LightSwitchApplication.CoreData.DetailsClass.PropertySetProperties.Links);
-            }
-        }
-        
-        /// <summary>
         /// Gets the ManagementCredentials entity set.  The entity set provides members to access entities of a specific type.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.1.0.0")]
@@ -420,6 +407,32 @@ namespace LightSwitchApplication
             get
             {
                 return global::LightSwitchApplication.CoreData.DetailsClass.GetValue(this, global::LightSwitchApplication.CoreData.DetailsClass.PropertySetProperties.Products);
+            }
+        }
+        
+        /// <summary>
+        /// Gets the Assocs entity set.  The entity set provides members to access entities of a specific type.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.1.0.0")]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public global::Microsoft.LightSwitch.Framework.EntitySet<global::LightSwitchApplication.Assoc> Assocs
+        {
+            get
+            {
+                return global::LightSwitchApplication.CoreData.DetailsClass.GetValue(this, global::LightSwitchApplication.CoreData.DetailsClass.PropertySetProperties.Assocs);
+            }
+        }
+        
+        /// <summary>
+        /// Gets the CostCentres entity set.  The entity set provides members to access entities of a specific type.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.1.0.0")]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public global::Microsoft.LightSwitch.Framework.EntitySet<global::LightSwitchApplication.CostCentre> CostCentres
+        {
+            get
+            {
+                return global::LightSwitchApplication.CoreData.DetailsClass.GetValue(this, global::LightSwitchApplication.CoreData.DetailsClass.PropertySetProperties.CostCentres);
             }
         }
         
@@ -697,28 +710,6 @@ namespace LightSwitchApplication
         /// <param name="Id">
         /// The value of the 'Id' key property of the entity to retrieve.
         /// </param>
-        public global::LightSwitchApplication.Link Links_Single(global::System.Nullable<long> Id)
-        {
-            return this.Details.Methods.Links_Single.CreateInvocation(Id).Execute();
-        }
-        
-        /// <summary>
-        /// Returns the entity whose identity is specified by the parameter(s) or null if no such entity exists.
-        /// </summary>
-        /// <param name="Id">
-        /// The value of the 'Id' key property of the entity to retrieve.
-        /// </param>
-        public global::LightSwitchApplication.Link Links_SingleOrDefault(global::System.Nullable<long> Id)
-        {
-            return this.Details.Methods.Links_SingleOrDefault.CreateInvocation(Id).Execute();
-        }
-        
-        /// <summary>
-        /// Returns the entity whose identity is specified by the parameter(s).
-        /// </summary>
-        /// <param name="Id">
-        /// The value of the 'Id' key property of the entity to retrieve.
-        /// </param>
         public global::LightSwitchApplication.ManagementCredential ManagementCredentials_Single(global::System.Nullable<long> Id)
         {
             return this.Details.Methods.ManagementCredentials_Single.CreateInvocation(Id).Execute();
@@ -843,6 +834,50 @@ namespace LightSwitchApplication
         public global::LightSwitchApplication.Product Products_SingleOrDefault(global::System.Nullable<long> Id)
         {
             return this.Details.Methods.Products_SingleOrDefault.CreateInvocation(Id).Execute();
+        }
+        
+        /// <summary>
+        /// Returns the entity whose identity is specified by the parameter(s).
+        /// </summary>
+        /// <param name="Id">
+        /// The value of the 'Id' key property of the entity to retrieve.
+        /// </param>
+        public global::LightSwitchApplication.Assoc Assocs_Single(global::System.Nullable<long> Id)
+        {
+            return this.Details.Methods.Assocs_Single.CreateInvocation(Id).Execute();
+        }
+        
+        /// <summary>
+        /// Returns the entity whose identity is specified by the parameter(s) or null if no such entity exists.
+        /// </summary>
+        /// <param name="Id">
+        /// The value of the 'Id' key property of the entity to retrieve.
+        /// </param>
+        public global::LightSwitchApplication.Assoc Assocs_SingleOrDefault(global::System.Nullable<long> Id)
+        {
+            return this.Details.Methods.Assocs_SingleOrDefault.CreateInvocation(Id).Execute();
+        }
+        
+        /// <summary>
+        /// Returns the entity whose identity is specified by the parameter(s).
+        /// </summary>
+        /// <param name="Id">
+        /// The value of the 'Id' key property of the entity to retrieve.
+        /// </param>
+        public global::LightSwitchApplication.CostCentre CostCentres_Single(global::System.Nullable<long> Id)
+        {
+            return this.Details.Methods.CostCentres_Single.CreateInvocation(Id).Execute();
+        }
+        
+        /// <summary>
+        /// Returns the entity whose identity is specified by the parameter(s) or null if no such entity exists.
+        /// </summary>
+        /// <param name="Id">
+        /// The value of the 'Id' key property of the entity to retrieve.
+        /// </param>
+        public global::LightSwitchApplication.CostCentre CostCentres_SingleOrDefault(global::System.Nullable<long> Id)
+        {
+            return this.Details.Methods.CostCentres_SingleOrDefault.CreateInvocation(Id).Execute();
         }
         
         #endregion
@@ -1085,22 +1120,6 @@ namespace LightSwitchApplication
                     }
                 }
                 
-                public global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.CoreData, global::LightSwitchApplication.CoreData.DetailsClass, global::LightSwitchApplication.Link> Links_Single
-                {
-                    get
-                    {
-                        return base.GetItem(global::LightSwitchApplication.CoreData.DetailsClass.MethodSetProperties.Links_Single) as global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.CoreData, global::LightSwitchApplication.CoreData.DetailsClass, global::LightSwitchApplication.Link>;
-                    }
-                }
-                
-                public global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.CoreData, global::LightSwitchApplication.CoreData.DetailsClass, global::LightSwitchApplication.Link> Links_SingleOrDefault
-                {
-                    get
-                    {
-                        return base.GetItem(global::LightSwitchApplication.CoreData.DetailsClass.MethodSetProperties.Links_SingleOrDefault) as global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.CoreData, global::LightSwitchApplication.CoreData.DetailsClass, global::LightSwitchApplication.Link>;
-                    }
-                }
-                
                 public global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.CoreData, global::LightSwitchApplication.CoreData.DetailsClass, global::LightSwitchApplication.ManagementCredential> ManagementCredentials_Single
                 {
                     get
@@ -1194,6 +1213,38 @@ namespace LightSwitchApplication
                     get
                     {
                         return base.GetItem(global::LightSwitchApplication.CoreData.DetailsClass.MethodSetProperties.Products_SingleOrDefault) as global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.CoreData, global::LightSwitchApplication.CoreData.DetailsClass, global::LightSwitchApplication.Product>;
+                    }
+                }
+                
+                public global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.CoreData, global::LightSwitchApplication.CoreData.DetailsClass, global::LightSwitchApplication.Assoc> Assocs_Single
+                {
+                    get
+                    {
+                        return base.GetItem(global::LightSwitchApplication.CoreData.DetailsClass.MethodSetProperties.Assocs_Single) as global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.CoreData, global::LightSwitchApplication.CoreData.DetailsClass, global::LightSwitchApplication.Assoc>;
+                    }
+                }
+                
+                public global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.CoreData, global::LightSwitchApplication.CoreData.DetailsClass, global::LightSwitchApplication.Assoc> Assocs_SingleOrDefault
+                {
+                    get
+                    {
+                        return base.GetItem(global::LightSwitchApplication.CoreData.DetailsClass.MethodSetProperties.Assocs_SingleOrDefault) as global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.CoreData, global::LightSwitchApplication.CoreData.DetailsClass, global::LightSwitchApplication.Assoc>;
+                    }
+                }
+                
+                public global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.CoreData, global::LightSwitchApplication.CoreData.DetailsClass, global::LightSwitchApplication.CostCentre> CostCentres_Single
+                {
+                    get
+                    {
+                        return base.GetItem(global::LightSwitchApplication.CoreData.DetailsClass.MethodSetProperties.CostCentres_Single) as global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.CoreData, global::LightSwitchApplication.CoreData.DetailsClass, global::LightSwitchApplication.CostCentre>;
+                    }
+                }
+                
+                public global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.CoreData, global::LightSwitchApplication.CoreData.DetailsClass, global::LightSwitchApplication.CostCentre> CostCentres_SingleOrDefault
+                {
+                    get
+                    {
+                        return base.GetItem(global::LightSwitchApplication.CoreData.DetailsClass.MethodSetProperties.CostCentres_SingleOrDefault) as global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.CoreData, global::LightSwitchApplication.CoreData.DetailsClass, global::LightSwitchApplication.CostCentre>;
                     }
                 }
                 
@@ -1306,14 +1357,6 @@ namespace LightSwitchApplication
                     }
                 }
                 
-                public global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.CoreData, global::LightSwitchApplication.CoreData.DetailsClass, global::LightSwitchApplication.Link> Links
-                {
-                    get
-                    {
-                        return base.GetItem(global::LightSwitchApplication.CoreData.DetailsClass.PropertySetProperties.Links) as global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.CoreData, global::LightSwitchApplication.CoreData.DetailsClass, global::LightSwitchApplication.Link>;
-                    }
-                }
-                
                 public global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.CoreData, global::LightSwitchApplication.CoreData.DetailsClass, global::LightSwitchApplication.ManagementCredential> ManagementCredentials
                 {
                     get
@@ -1359,6 +1402,22 @@ namespace LightSwitchApplication
                     get
                     {
                         return base.GetItem(global::LightSwitchApplication.CoreData.DetailsClass.PropertySetProperties.Products) as global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.CoreData, global::LightSwitchApplication.CoreData.DetailsClass, global::LightSwitchApplication.Product>;
+                    }
+                }
+                
+                public global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.CoreData, global::LightSwitchApplication.CoreData.DetailsClass, global::LightSwitchApplication.Assoc> Assocs
+                {
+                    get
+                    {
+                        return base.GetItem(global::LightSwitchApplication.CoreData.DetailsClass.PropertySetProperties.Assocs) as global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.CoreData, global::LightSwitchApplication.CoreData.DetailsClass, global::LightSwitchApplication.Assoc>;
+                    }
+                }
+                
+                public global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.CoreData, global::LightSwitchApplication.CoreData.DetailsClass, global::LightSwitchApplication.CostCentre> CostCentres
+                {
+                    get
+                    {
+                        return base.GetItem(global::LightSwitchApplication.CoreData.DetailsClass.PropertySetProperties.CostCentres) as global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.CoreData, global::LightSwitchApplication.CoreData.DetailsClass, global::LightSwitchApplication.CostCentre>;
                     }
                 }
                 
@@ -1611,26 +1670,6 @@ namespace LightSwitchApplication
                 }
     
                 [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-                public static readonly global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.CoreData, global::LightSwitchApplication.CoreData.DetailsClass, global::LightSwitchApplication.Link>.Entry
-                    Links_Single = new global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.CoreData, global::LightSwitchApplication.CoreData.DetailsClass, global::LightSwitchApplication.Link>.Entry(
-                        "Links_Single",
-                        global::LightSwitchApplication.CoreData.DetailsClass.MethodSetProperties._Links_Single_Stub);
-                private static void _Links_Single_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.CoreData.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.CoreData, global::LightSwitchApplication.CoreData.DetailsClass, global::LightSwitchApplication.Link>.Data> c, global::LightSwitchApplication.CoreData.DetailsClass d, object sf)
-                {
-                    c(d, ref d._Links_Single, sf);
-                }
-    
-                [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-                public static readonly global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.CoreData, global::LightSwitchApplication.CoreData.DetailsClass, global::LightSwitchApplication.Link>.Entry
-                    Links_SingleOrDefault = new global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.CoreData, global::LightSwitchApplication.CoreData.DetailsClass, global::LightSwitchApplication.Link>.Entry(
-                        "Links_SingleOrDefault",
-                        global::LightSwitchApplication.CoreData.DetailsClass.MethodSetProperties._Links_SingleOrDefault_Stub);
-                private static void _Links_SingleOrDefault_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.CoreData.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.CoreData, global::LightSwitchApplication.CoreData.DetailsClass, global::LightSwitchApplication.Link>.Data> c, global::LightSwitchApplication.CoreData.DetailsClass d, object sf)
-                {
-                    c(d, ref d._Links_SingleOrDefault, sf);
-                }
-    
-                [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
                 public static readonly global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.CoreData, global::LightSwitchApplication.CoreData.DetailsClass, global::LightSwitchApplication.ManagementCredential>.Entry
                     ManagementCredentials_Single = new global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.CoreData, global::LightSwitchApplication.CoreData.DetailsClass, global::LightSwitchApplication.ManagementCredential>.Entry(
                         "ManagementCredentials_Single",
@@ -1748,6 +1787,46 @@ namespace LightSwitchApplication
                 private static void _Products_SingleOrDefault_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.CoreData.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.CoreData, global::LightSwitchApplication.CoreData.DetailsClass, global::LightSwitchApplication.Product>.Data> c, global::LightSwitchApplication.CoreData.DetailsClass d, object sf)
                 {
                     c(d, ref d._Products_SingleOrDefault, sf);
+                }
+    
+                [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.CoreData, global::LightSwitchApplication.CoreData.DetailsClass, global::LightSwitchApplication.Assoc>.Entry
+                    Assocs_Single = new global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.CoreData, global::LightSwitchApplication.CoreData.DetailsClass, global::LightSwitchApplication.Assoc>.Entry(
+                        "Assocs_Single",
+                        global::LightSwitchApplication.CoreData.DetailsClass.MethodSetProperties._Assocs_Single_Stub);
+                private static void _Assocs_Single_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.CoreData.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.CoreData, global::LightSwitchApplication.CoreData.DetailsClass, global::LightSwitchApplication.Assoc>.Data> c, global::LightSwitchApplication.CoreData.DetailsClass d, object sf)
+                {
+                    c(d, ref d._Assocs_Single, sf);
+                }
+    
+                [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.CoreData, global::LightSwitchApplication.CoreData.DetailsClass, global::LightSwitchApplication.Assoc>.Entry
+                    Assocs_SingleOrDefault = new global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.CoreData, global::LightSwitchApplication.CoreData.DetailsClass, global::LightSwitchApplication.Assoc>.Entry(
+                        "Assocs_SingleOrDefault",
+                        global::LightSwitchApplication.CoreData.DetailsClass.MethodSetProperties._Assocs_SingleOrDefault_Stub);
+                private static void _Assocs_SingleOrDefault_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.CoreData.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.CoreData, global::LightSwitchApplication.CoreData.DetailsClass, global::LightSwitchApplication.Assoc>.Data> c, global::LightSwitchApplication.CoreData.DetailsClass d, object sf)
+                {
+                    c(d, ref d._Assocs_SingleOrDefault, sf);
+                }
+    
+                [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.CoreData, global::LightSwitchApplication.CoreData.DetailsClass, global::LightSwitchApplication.CostCentre>.Entry
+                    CostCentres_Single = new global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.CoreData, global::LightSwitchApplication.CoreData.DetailsClass, global::LightSwitchApplication.CostCentre>.Entry(
+                        "CostCentres_Single",
+                        global::LightSwitchApplication.CoreData.DetailsClass.MethodSetProperties._CostCentres_Single_Stub);
+                private static void _CostCentres_Single_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.CoreData.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.CoreData, global::LightSwitchApplication.CoreData.DetailsClass, global::LightSwitchApplication.CostCentre>.Data> c, global::LightSwitchApplication.CoreData.DetailsClass d, object sf)
+                {
+                    c(d, ref d._CostCentres_Single, sf);
+                }
+    
+                [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.CoreData, global::LightSwitchApplication.CoreData.DetailsClass, global::LightSwitchApplication.CostCentre>.Entry
+                    CostCentres_SingleOrDefault = new global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.CoreData, global::LightSwitchApplication.CoreData.DetailsClass, global::LightSwitchApplication.CostCentre>.Entry(
+                        "CostCentres_SingleOrDefault",
+                        global::LightSwitchApplication.CoreData.DetailsClass.MethodSetProperties._CostCentres_SingleOrDefault_Stub);
+                private static void _CostCentres_SingleOrDefault_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.CoreData.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.CoreData, global::LightSwitchApplication.CoreData.DetailsClass, global::LightSwitchApplication.CostCentre>.Data> c, global::LightSwitchApplication.CoreData.DetailsClass d, object sf)
+                {
+                    c(d, ref d._CostCentres_SingleOrDefault, sf);
                 }
     
             }
@@ -1879,16 +1958,6 @@ namespace LightSwitchApplication
                 }
      
                 [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-                public static readonly global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.CoreData, global::LightSwitchApplication.CoreData.DetailsClass, global::LightSwitchApplication.Link>.Entry
-                    Links = new global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.CoreData, global::LightSwitchApplication.CoreData.DetailsClass, global::LightSwitchApplication.Link>.Entry(
-                        "Links",
-                        global::LightSwitchApplication.CoreData.DetailsClass.PropertySetProperties._Links_Stub);
-                private static void _Links_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.CoreData.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.CoreData, global::LightSwitchApplication.CoreData.DetailsClass, global::LightSwitchApplication.Link>.Data> c, global::LightSwitchApplication.CoreData.DetailsClass d, object sf)
-                {
-                    c(d, ref d._Links, sf);
-                }
-     
-                [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
                 public static readonly global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.CoreData, global::LightSwitchApplication.CoreData.DetailsClass, global::LightSwitchApplication.ManagementCredential>.Entry
                     ManagementCredentials = new global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.CoreData, global::LightSwitchApplication.CoreData.DetailsClass, global::LightSwitchApplication.ManagementCredential>.Entry(
                         "ManagementCredentials",
@@ -1948,6 +2017,26 @@ namespace LightSwitchApplication
                     c(d, ref d._Products, sf);
                 }
      
+                [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.CoreData, global::LightSwitchApplication.CoreData.DetailsClass, global::LightSwitchApplication.Assoc>.Entry
+                    Assocs = new global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.CoreData, global::LightSwitchApplication.CoreData.DetailsClass, global::LightSwitchApplication.Assoc>.Entry(
+                        "Assocs",
+                        global::LightSwitchApplication.CoreData.DetailsClass.PropertySetProperties._Assocs_Stub);
+                private static void _Assocs_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.CoreData.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.CoreData, global::LightSwitchApplication.CoreData.DetailsClass, global::LightSwitchApplication.Assoc>.Data> c, global::LightSwitchApplication.CoreData.DetailsClass d, object sf)
+                {
+                    c(d, ref d._Assocs, sf);
+                }
+     
+                [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.CoreData, global::LightSwitchApplication.CoreData.DetailsClass, global::LightSwitchApplication.CostCentre>.Entry
+                    CostCentres = new global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.CoreData, global::LightSwitchApplication.CoreData.DetailsClass, global::LightSwitchApplication.CostCentre>.Entry(
+                        "CostCentres",
+                        global::LightSwitchApplication.CoreData.DetailsClass.PropertySetProperties._CostCentres_Stub);
+                private static void _CostCentres_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.CoreData.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.CoreData, global::LightSwitchApplication.CoreData.DetailsClass, global::LightSwitchApplication.CostCentre>.Data> c, global::LightSwitchApplication.CoreData.DetailsClass d, object sf)
+                {
+                    c(d, ref d._CostCentres, sf);
+                }
+     
             }
     
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
@@ -1987,9 +2076,6 @@ namespace LightSwitchApplication
             private global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.CoreData, global::LightSwitchApplication.CoreData.DetailsClass, global::LightSwitchApplication.KeyNameValue>.Data _KeyNameValues;
             
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-            private global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.CoreData, global::LightSwitchApplication.CoreData.DetailsClass, global::LightSwitchApplication.Link>.Data _Links;
-            
-            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
             private global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.CoreData, global::LightSwitchApplication.CoreData.DetailsClass, global::LightSwitchApplication.ManagementCredential>.Data _ManagementCredentials;
             
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
@@ -2006,6 +2092,12 @@ namespace LightSwitchApplication
             
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
             private global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.CoreData, global::LightSwitchApplication.CoreData.DetailsClass, global::LightSwitchApplication.Product>.Data _Products;
+            
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.CoreData, global::LightSwitchApplication.CoreData.DetailsClass, global::LightSwitchApplication.Assoc>.Data _Assocs;
+            
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.CoreData, global::LightSwitchApplication.CoreData.DetailsClass, global::LightSwitchApplication.CostCentre>.Data _CostCentres;
             
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
             private global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.CoreData, global::LightSwitchApplication.CoreData.DetailsClass, global::LightSwitchApplication.Ace>.Data _Aces_Single;
@@ -2080,12 +2172,6 @@ namespace LightSwitchApplication
             private global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.CoreData, global::LightSwitchApplication.CoreData.DetailsClass, global::LightSwitchApplication.KeyNameValue>.Data _KeyNameValues_SingleOrDefault;
             
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-            private global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.CoreData, global::LightSwitchApplication.CoreData.DetailsClass, global::LightSwitchApplication.Link>.Data _Links_Single;
-            
-            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-            private global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.CoreData, global::LightSwitchApplication.CoreData.DetailsClass, global::LightSwitchApplication.Link>.Data _Links_SingleOrDefault;
-            
-            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
             private global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.CoreData, global::LightSwitchApplication.CoreData.DetailsClass, global::LightSwitchApplication.ManagementCredential>.Data _ManagementCredentials_Single;
             
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
@@ -2120,6 +2206,18 @@ namespace LightSwitchApplication
             
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
             private global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.CoreData, global::LightSwitchApplication.CoreData.DetailsClass, global::LightSwitchApplication.Product>.Data _Products_SingleOrDefault;
+            
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.CoreData, global::LightSwitchApplication.CoreData.DetailsClass, global::LightSwitchApplication.Assoc>.Data _Assocs_Single;
+            
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.CoreData, global::LightSwitchApplication.CoreData.DetailsClass, global::LightSwitchApplication.Assoc>.Data _Assocs_SingleOrDefault;
+            
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.CoreData, global::LightSwitchApplication.CoreData.DetailsClass, global::LightSwitchApplication.CostCentre>.Data _CostCentres_Single;
+            
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.CoreData, global::LightSwitchApplication.CoreData.DetailsClass, global::LightSwitchApplication.CostCentre>.Data _CostCentres_SingleOrDefault;
             
         }
     
@@ -2160,6 +2258,19 @@ namespace LightSwitchApplication
             }
         }
         
+        /// <summary>
+        /// Gets the ConfigurationUpdates entity set.  The entity set provides members to access entities of a specific type.
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.1.0.0")]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public global::Microsoft.LightSwitch.Framework.EntitySet<global::LightSwitchApplication.ConfigurationUpdate> ConfigurationUpdates
+        {
+            get
+            {
+                return global::LightSwitchApplication.DiagnosticsData.DetailsClass.GetValue(this, global::LightSwitchApplication.DiagnosticsData.DetailsClass.PropertySetProperties.ConfigurationUpdates);
+            }
+        }
+        
         #endregion
     
         #region Queries
@@ -2184,6 +2295,28 @@ namespace LightSwitchApplication
         public global::LightSwitchApplication.Endpoint Endpoints_SingleOrDefault(global::System.Nullable<long> Id)
         {
             return this.Details.Methods.Endpoints_SingleOrDefault.CreateInvocation(Id).Execute();
+        }
+        
+        /// <summary>
+        /// Returns the entity whose identity is specified by the parameter(s).
+        /// </summary>
+        /// <param name="Id">
+        /// The value of the 'Id' key property of the entity to retrieve.
+        /// </param>
+        public global::LightSwitchApplication.ConfigurationUpdate ConfigurationUpdates_Single(global::System.Nullable<long> Id)
+        {
+            return this.Details.Methods.ConfigurationUpdates_Single.CreateInvocation(Id).Execute();
+        }
+        
+        /// <summary>
+        /// Returns the entity whose identity is specified by the parameter(s) or null if no such entity exists.
+        /// </summary>
+        /// <param name="Id">
+        /// The value of the 'Id' key property of the entity to retrieve.
+        /// </param>
+        public global::LightSwitchApplication.ConfigurationUpdate ConfigurationUpdates_SingleOrDefault(global::System.Nullable<long> Id)
+        {
+            return this.Details.Methods.ConfigurationUpdates_SingleOrDefault.CreateInvocation(Id).Execute();
         }
         
         #endregion
@@ -2250,6 +2383,22 @@ namespace LightSwitchApplication
                     }
                 }
                 
+                public global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.DiagnosticsData, global::LightSwitchApplication.DiagnosticsData.DetailsClass, global::LightSwitchApplication.ConfigurationUpdate> ConfigurationUpdates_Single
+                {
+                    get
+                    {
+                        return base.GetItem(global::LightSwitchApplication.DiagnosticsData.DetailsClass.MethodSetProperties.ConfigurationUpdates_Single) as global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.DiagnosticsData, global::LightSwitchApplication.DiagnosticsData.DetailsClass, global::LightSwitchApplication.ConfigurationUpdate>;
+                    }
+                }
+                
+                public global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.DiagnosticsData, global::LightSwitchApplication.DiagnosticsData.DetailsClass, global::LightSwitchApplication.ConfigurationUpdate> ConfigurationUpdates_SingleOrDefault
+                {
+                    get
+                    {
+                        return base.GetItem(global::LightSwitchApplication.DiagnosticsData.DetailsClass.MethodSetProperties.ConfigurationUpdates_SingleOrDefault) as global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.DiagnosticsData, global::LightSwitchApplication.DiagnosticsData.DetailsClass, global::LightSwitchApplication.ConfigurationUpdate>;
+                    }
+                }
+                
             }
     
             [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
@@ -2268,6 +2417,14 @@ namespace LightSwitchApplication
                     get
                     {
                         return base.GetItem(global::LightSwitchApplication.DiagnosticsData.DetailsClass.PropertySetProperties.Endpoints) as global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.DiagnosticsData, global::LightSwitchApplication.DiagnosticsData.DetailsClass, global::LightSwitchApplication.Endpoint>;
+                    }
+                }
+                
+                public global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.DiagnosticsData, global::LightSwitchApplication.DiagnosticsData.DetailsClass, global::LightSwitchApplication.ConfigurationUpdate> ConfigurationUpdates
+                {
+                    get
+                    {
+                        return base.GetItem(global::LightSwitchApplication.DiagnosticsData.DetailsClass.PropertySetProperties.ConfigurationUpdates) as global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.DiagnosticsData, global::LightSwitchApplication.DiagnosticsData.DetailsClass, global::LightSwitchApplication.ConfigurationUpdate>;
                     }
                 }
                 
@@ -2299,6 +2456,26 @@ namespace LightSwitchApplication
                     c(d, ref d._Endpoints_SingleOrDefault, sf);
                 }
     
+                [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.DiagnosticsData, global::LightSwitchApplication.DiagnosticsData.DetailsClass, global::LightSwitchApplication.ConfigurationUpdate>.Entry
+                    ConfigurationUpdates_Single = new global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.DiagnosticsData, global::LightSwitchApplication.DiagnosticsData.DetailsClass, global::LightSwitchApplication.ConfigurationUpdate>.Entry(
+                        "ConfigurationUpdates_Single",
+                        global::LightSwitchApplication.DiagnosticsData.DetailsClass.MethodSetProperties._ConfigurationUpdates_Single_Stub);
+                private static void _ConfigurationUpdates_Single_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.DiagnosticsData.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.DiagnosticsData, global::LightSwitchApplication.DiagnosticsData.DetailsClass, global::LightSwitchApplication.ConfigurationUpdate>.Data> c, global::LightSwitchApplication.DiagnosticsData.DetailsClass d, object sf)
+                {
+                    c(d, ref d._ConfigurationUpdates_Single, sf);
+                }
+    
+                [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.DiagnosticsData, global::LightSwitchApplication.DiagnosticsData.DetailsClass, global::LightSwitchApplication.ConfigurationUpdate>.Entry
+                    ConfigurationUpdates_SingleOrDefault = new global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.DiagnosticsData, global::LightSwitchApplication.DiagnosticsData.DetailsClass, global::LightSwitchApplication.ConfigurationUpdate>.Entry(
+                        "ConfigurationUpdates_SingleOrDefault",
+                        global::LightSwitchApplication.DiagnosticsData.DetailsClass.MethodSetProperties._ConfigurationUpdates_SingleOrDefault_Stub);
+                private static void _ConfigurationUpdates_SingleOrDefault_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.DiagnosticsData.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.DiagnosticsData, global::LightSwitchApplication.DiagnosticsData.DetailsClass, global::LightSwitchApplication.ConfigurationUpdate>.Data> c, global::LightSwitchApplication.DiagnosticsData.DetailsClass d, object sf)
+                {
+                    c(d, ref d._ConfigurationUpdates_SingleOrDefault, sf);
+                }
+    
             }
     
             [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Never)]
@@ -2317,16 +2494,35 @@ namespace LightSwitchApplication
                     c(d, ref d._Endpoints, sf);
                 }
      
+                [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.DiagnosticsData, global::LightSwitchApplication.DiagnosticsData.DetailsClass, global::LightSwitchApplication.ConfigurationUpdate>.Entry
+                    ConfigurationUpdates = new global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.DiagnosticsData, global::LightSwitchApplication.DiagnosticsData.DetailsClass, global::LightSwitchApplication.ConfigurationUpdate>.Entry(
+                        "ConfigurationUpdates",
+                        global::LightSwitchApplication.DiagnosticsData.DetailsClass.PropertySetProperties._ConfigurationUpdates_Stub);
+                private static void _ConfigurationUpdates_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.DiagnosticsData.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.DiagnosticsData, global::LightSwitchApplication.DiagnosticsData.DetailsClass, global::LightSwitchApplication.ConfigurationUpdate>.Data> c, global::LightSwitchApplication.DiagnosticsData.DetailsClass d, object sf)
+                {
+                    c(d, ref d._ConfigurationUpdates, sf);
+                }
+     
             }
     
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
             private global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.DiagnosticsData, global::LightSwitchApplication.DiagnosticsData.DetailsClass, global::LightSwitchApplication.Endpoint>.Data _Endpoints;
             
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private global::Microsoft.LightSwitch.Details.Framework.DataServiceEntitySetProperty<global::LightSwitchApplication.DiagnosticsData, global::LightSwitchApplication.DiagnosticsData.DetailsClass, global::LightSwitchApplication.ConfigurationUpdate>.Data _ConfigurationUpdates;
+            
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
             private global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.DiagnosticsData, global::LightSwitchApplication.DiagnosticsData.DetailsClass, global::LightSwitchApplication.Endpoint>.Data _Endpoints_Single;
             
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
             private global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.DiagnosticsData, global::LightSwitchApplication.DiagnosticsData.DetailsClass, global::LightSwitchApplication.Endpoint>.Data _Endpoints_SingleOrDefault;
+            
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.DiagnosticsData, global::LightSwitchApplication.DiagnosticsData.DetailsClass, global::LightSwitchApplication.ConfigurationUpdate>.Data _ConfigurationUpdates_Single;
+            
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private global::Microsoft.LightSwitch.Details.Framework.CreateScalarQueryMethod<global::LightSwitchApplication.DiagnosticsData, global::LightSwitchApplication.DiagnosticsData.DetailsClass, global::LightSwitchApplication.ConfigurationUpdate>.Data _ConfigurationUpdates_SingleOrDefault;
             
         }
     

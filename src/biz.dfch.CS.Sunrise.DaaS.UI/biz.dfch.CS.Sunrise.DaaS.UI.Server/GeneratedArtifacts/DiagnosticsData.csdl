@@ -20,7 +20,22 @@
     <Property Name="Description" Type="Edm.String" MaxLength="Max" />
     <Property Name="RowVersion" Type="Edm.Binary" MaxLength="Max" />
   </EntityType>
+  <EntityType Name="ConfigurationUpdate">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Edm.Int64" Nullable="false" />
+    <Property Name="Tid" Type="Edm.String" Nullable="false" MaxLength="Max" />
+    <Property Name="Name" Type="Edm.String" Nullable="false" MaxLength="Max" />
+    <Property Name="Description" Type="Edm.String" MaxLength="Max" />
+    <Property Name="CreatedBy" Type="Edm.String" Nullable="false" MaxLength="Max" />
+    <Property Name="ModifiedBy" Type="Edm.String" Nullable="false" MaxLength="Max" />
+    <Property Name="Created" Type="Edm.DateTimeOffset" Nullable="false" />
+    <Property Name="Modified" Type="Edm.DateTimeOffset" Nullable="false" />
+    <Property Name="RowVersion" Type="Edm.Binary" MaxLength="Max" />
+  </EntityType>
   <EntityContainer Name="DiagnosticsData" m:IsDefaultEntityContainer="true">
     <EntitySet Name="Endpoints" EntityType="LightSwitchApplication.Endpoint" />
+    <EntitySet Name="ConfigurationUpdates" EntityType="LightSwitchApplication.ConfigurationUpdate" />
   </EntityContainer>
 </Schema>

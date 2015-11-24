@@ -126,10 +126,10 @@
         <Property Name="RowVersion" Type="Edm.Binary" />
         <NavigationProperty Name="Parent" Relationship="biz.dfch.CS.Appclusive.Core.OdataServices.Core.biz_dfch_CS_Appclusive_Core_OdataServices_Core_Node_Parent_biz_dfch_CS_Appclusive_Core_OdataServices_Core_Node_ParentPartner" ToRole="Parent" FromRole="ParentPartner" />
         <NavigationProperty Name="Children" Relationship="biz.dfch.CS.Appclusive.Core.OdataServices.Core.biz_dfch_CS_Appclusive_Core_OdataServices_Core_Node_Children_biz_dfch_CS_Appclusive_Core_OdataServices_Core_Node_ChildrenPartner" ToRole="Children" FromRole="ChildrenPartner" />
-        <NavigationProperty Name="IncomingLinks" Relationship="biz.dfch.CS.Appclusive.Core.OdataServices.Core.biz_dfch_CS_Appclusive_Core_OdataServices_Core_Node_IncomingLinks_biz_dfch_CS_Appclusive_Core_OdataServices_Core_Link_IncomingLinksPartner" ToRole="IncomingLinks" FromRole="IncomingLinksPartner" />
-        <NavigationProperty Name="OutgoingLinks" Relationship="biz.dfch.CS.Appclusive.Core.OdataServices.Core.biz_dfch_CS_Appclusive_Core_OdataServices_Core_Node_OutgoingLinks_biz_dfch_CS_Appclusive_Core_OdataServices_Core_Link_OutgoingLinksPartner" ToRole="OutgoingLinks" FromRole="OutgoingLinksPartner" />
+        <NavigationProperty Name="IncomingAssocs" Relationship="biz.dfch.CS.Appclusive.Core.OdataServices.Core.biz_dfch_CS_Appclusive_Core_OdataServices_Core_Node_IncomingAssocs_biz_dfch_CS_Appclusive_Core_OdataServices_Core_Assoc_IncomingAssocsPartner" ToRole="IncomingAssocs" FromRole="IncomingAssocsPartner" />
+        <NavigationProperty Name="OutgoingAssocs" Relationship="biz.dfch.CS.Appclusive.Core.OdataServices.Core.biz_dfch_CS_Appclusive_Core_OdataServices_Core_Node_OutgoingAssocs_biz_dfch_CS_Appclusive_Core_OdataServices_Core_Assoc_OutgoingAssocsPartner" ToRole="OutgoingAssocs" FromRole="OutgoingAssocsPartner" />
       </EntityType>
-      <EntityType Name="Link">
+      <EntityType Name="Assoc">
         <Key>
           <PropertyRef Name="Id" />
         </Key>
@@ -145,8 +145,8 @@
         <Property Name="Created" Type="Edm.DateTimeOffset" Nullable="false" />
         <Property Name="Modified" Type="Edm.DateTimeOffset" Nullable="false" />
         <Property Name="RowVersion" Type="Edm.Binary" />
-        <NavigationProperty Name="Source" Relationship="biz.dfch.CS.Appclusive.Core.OdataServices.Core.biz_dfch_CS_Appclusive_Core_OdataServices_Core_Link_Source_biz_dfch_CS_Appclusive_Core_OdataServices_Core_Node_SourcePartner" ToRole="Source" FromRole="SourcePartner" />
-        <NavigationProperty Name="Destination" Relationship="biz.dfch.CS.Appclusive.Core.OdataServices.Core.biz_dfch_CS_Appclusive_Core_OdataServices_Core_Link_Destination_biz_dfch_CS_Appclusive_Core_OdataServices_Core_Node_DestinationPartner" ToRole="Destination" FromRole="DestinationPartner" />
+        <NavigationProperty Name="Source" Relationship="biz.dfch.CS.Appclusive.Core.OdataServices.Core.biz_dfch_CS_Appclusive_Core_OdataServices_Core_Assoc_Source_biz_dfch_CS_Appclusive_Core_OdataServices_Core_Node_SourcePartner" ToRole="Source" FromRole="SourcePartner" />
+        <NavigationProperty Name="Destination" Relationship="biz.dfch.CS.Appclusive.Core.OdataServices.Core.biz_dfch_CS_Appclusive_Core_OdataServices_Core_Assoc_Destination_biz_dfch_CS_Appclusive_Core_OdataServices_Core_Node_DestinationPartner" ToRole="Destination" FromRole="DestinationPartner" />
       </EntityType>
       <EntityType Name="ManagementCredential">
         <Key>
@@ -292,6 +292,7 @@
         <Property Name="Requester" Type="Edm.String" />
         <Property Name="Status" Type="Edm.String" />
         <Property Name="Parameters" Type="Edm.String" />
+        <Property Name="CostCentreId" Type="Edm.Int64" />
         <Property Name="Id" Type="Edm.Int64" Nullable="false" />
         <Property Name="Tid" Type="Edm.String" Nullable="false" />
         <Property Name="Name" Type="Edm.String" Nullable="false" />
@@ -302,6 +303,7 @@
         <Property Name="Modified" Type="Edm.DateTimeOffset" Nullable="false" />
         <Property Name="RowVersion" Type="Edm.Binary" />
         <NavigationProperty Name="OrderItems" Relationship="biz.dfch.CS.Appclusive.Core.OdataServices.Core.biz_dfch_CS_Appclusive_Core_OdataServices_Core_Order_OrderItems_biz_dfch_CS_Appclusive_Core_OdataServices_Core_OrderItem_OrderItemsPartner" ToRole="OrderItems" FromRole="OrderItemsPartner" />
+        <NavigationProperty Name="CostCentre" Relationship="biz.dfch.CS.Appclusive.Core.OdataServices.Core.biz_dfch_CS_Appclusive_Core_OdataServices_Core_Order_CostCentre_biz_dfch_CS_Appclusive_Core_OdataServices_Core_CostCentre_CostCentrePartner" ToRole="CostCentre" FromRole="CostCentrePartner" />
       </EntityType>
       <EntityType Name="OrderItem">
         <Key>
@@ -312,6 +314,7 @@
         <Property Name="Version" Type="Edm.String" Nullable="false" />
         <Property Name="Type" Type="Edm.String" Nullable="false" />
         <Property Name="Parameters" Type="Edm.String" Nullable="false" />
+        <Property Name="CostCentreId" Type="Edm.Int64" />
         <Property Name="Id" Type="Edm.Int64" Nullable="false" />
         <Property Name="Tid" Type="Edm.String" Nullable="false" />
         <Property Name="Name" Type="Edm.String" Nullable="false" />
@@ -322,6 +325,7 @@
         <Property Name="Modified" Type="Edm.DateTimeOffset" Nullable="false" />
         <Property Name="RowVersion" Type="Edm.Binary" />
         <NavigationProperty Name="Order" Relationship="biz.dfch.CS.Appclusive.Core.OdataServices.Core.biz_dfch_CS_Appclusive_Core_OdataServices_Core_OrderItem_Order_biz_dfch_CS_Appclusive_Core_OdataServices_Core_Order_OrderPartner" ToRole="Order" FromRole="OrderPartner" />
+        <NavigationProperty Name="CostCentre" Relationship="biz.dfch.CS.Appclusive.Core.OdataServices.Core.biz_dfch_CS_Appclusive_Core_OdataServices_Core_OrderItem_CostCentre_biz_dfch_CS_Appclusive_Core_OdataServices_Core_CostCentre_CostCentrePartner" ToRole="CostCentre" FromRole="CostCentrePartner" />
       </EntityType>
       <EntityType Name="Approval">
         <Key>
@@ -362,6 +366,20 @@
         <Property Name="RowVersion" Type="Edm.Binary" />
         <NavigationProperty Name="CatalogueItems" Relationship="biz.dfch.CS.Appclusive.Core.OdataServices.Core.biz_dfch_CS_Appclusive_Core_OdataServices_Core_Product_CatalogueItems_biz_dfch_CS_Appclusive_Core_OdataServices_Core_CatalogueItem_CatalogueItemsPartner" ToRole="CatalogueItems" FromRole="CatalogueItemsPartner" />
       </EntityType>
+      <EntityType Name="CostCentre">
+        <Key>
+          <PropertyRef Name="Id" />
+        </Key>
+        <Property Name="Id" Type="Edm.Int64" Nullable="false" />
+        <Property Name="Tid" Type="Edm.String" Nullable="false" />
+        <Property Name="Name" Type="Edm.String" Nullable="false" />
+        <Property Name="Description" Type="Edm.String" />
+        <Property Name="CreatedBy" Type="Edm.String" Nullable="false" />
+        <Property Name="ModifiedBy" Type="Edm.String" Nullable="false" />
+        <Property Name="Created" Type="Edm.DateTimeOffset" Nullable="false" />
+        <Property Name="Modified" Type="Edm.DateTimeOffset" Nullable="false" />
+        <Property Name="RowVersion" Type="Edm.Binary" />
+      </EntityType>
       <Association Name="biz_dfch_CS_Appclusive_Core_OdataServices_Core_Job_Parent_biz_dfch_CS_Appclusive_Core_OdataServices_Core_Job_ParentPartner">
         <End Type="biz.dfch.CS.Appclusive.Core.OdataServices.Core.Job" Role="Parent" Multiplicity="0..1" />
         <End Type="biz.dfch.CS.Appclusive.Core.OdataServices.Core.Job" Role="ParentPartner" Multiplicity="0..1" />
@@ -382,21 +400,21 @@
         <End Type="biz.dfch.CS.Appclusive.Core.OdataServices.Core.Node" Role="Children" Multiplicity="*" />
         <End Type="biz.dfch.CS.Appclusive.Core.OdataServices.Core.Node" Role="ChildrenPartner" Multiplicity="0..1" />
       </Association>
-      <Association Name="biz_dfch_CS_Appclusive_Core_OdataServices_Core_Node_IncomingLinks_biz_dfch_CS_Appclusive_Core_OdataServices_Core_Link_IncomingLinksPartner">
-        <End Type="biz.dfch.CS.Appclusive.Core.OdataServices.Core.Link" Role="IncomingLinks" Multiplicity="*" />
-        <End Type="biz.dfch.CS.Appclusive.Core.OdataServices.Core.Node" Role="IncomingLinksPartner" Multiplicity="0..1" />
+      <Association Name="biz_dfch_CS_Appclusive_Core_OdataServices_Core_Node_IncomingAssocs_biz_dfch_CS_Appclusive_Core_OdataServices_Core_Assoc_IncomingAssocsPartner">
+        <End Type="biz.dfch.CS.Appclusive.Core.OdataServices.Core.Assoc" Role="IncomingAssocs" Multiplicity="*" />
+        <End Type="biz.dfch.CS.Appclusive.Core.OdataServices.Core.Node" Role="IncomingAssocsPartner" Multiplicity="0..1" />
       </Association>
-      <Association Name="biz_dfch_CS_Appclusive_Core_OdataServices_Core_Node_OutgoingLinks_biz_dfch_CS_Appclusive_Core_OdataServices_Core_Link_OutgoingLinksPartner">
-        <End Type="biz.dfch.CS.Appclusive.Core.OdataServices.Core.Link" Role="OutgoingLinks" Multiplicity="*" />
-        <End Type="biz.dfch.CS.Appclusive.Core.OdataServices.Core.Node" Role="OutgoingLinksPartner" Multiplicity="0..1" />
+      <Association Name="biz_dfch_CS_Appclusive_Core_OdataServices_Core_Node_OutgoingAssocs_biz_dfch_CS_Appclusive_Core_OdataServices_Core_Assoc_OutgoingAssocsPartner">
+        <End Type="biz.dfch.CS.Appclusive.Core.OdataServices.Core.Assoc" Role="OutgoingAssocs" Multiplicity="*" />
+        <End Type="biz.dfch.CS.Appclusive.Core.OdataServices.Core.Node" Role="OutgoingAssocsPartner" Multiplicity="0..1" />
       </Association>
-      <Association Name="biz_dfch_CS_Appclusive_Core_OdataServices_Core_Link_Source_biz_dfch_CS_Appclusive_Core_OdataServices_Core_Node_SourcePartner">
+      <Association Name="biz_dfch_CS_Appclusive_Core_OdataServices_Core_Assoc_Source_biz_dfch_CS_Appclusive_Core_OdataServices_Core_Node_SourcePartner">
         <End Type="biz.dfch.CS.Appclusive.Core.OdataServices.Core.Node" Role="Source" Multiplicity="0..1" />
-        <End Type="biz.dfch.CS.Appclusive.Core.OdataServices.Core.Link" Role="SourcePartner" Multiplicity="0..1" />
+        <End Type="biz.dfch.CS.Appclusive.Core.OdataServices.Core.Assoc" Role="SourcePartner" Multiplicity="0..1" />
       </Association>
-      <Association Name="biz_dfch_CS_Appclusive_Core_OdataServices_Core_Link_Destination_biz_dfch_CS_Appclusive_Core_OdataServices_Core_Node_DestinationPartner">
+      <Association Name="biz_dfch_CS_Appclusive_Core_OdataServices_Core_Assoc_Destination_biz_dfch_CS_Appclusive_Core_OdataServices_Core_Node_DestinationPartner">
         <End Type="biz.dfch.CS.Appclusive.Core.OdataServices.Core.Node" Role="Destination" Multiplicity="0..1" />
-        <End Type="biz.dfch.CS.Appclusive.Core.OdataServices.Core.Link" Role="DestinationPartner" Multiplicity="0..1" />
+        <End Type="biz.dfch.CS.Appclusive.Core.OdataServices.Core.Assoc" Role="DestinationPartner" Multiplicity="0..1" />
       </Association>
       <Association Name="biz_dfch_CS_Appclusive_Core_OdataServices_Core_ManagementCredential_ManagementUris_biz_dfch_CS_Appclusive_Core_OdataServices_Core_ManagementUri_ManagementUrisPartner">
         <End Type="biz.dfch.CS.Appclusive.Core.OdataServices.Core.ManagementUri" Role="ManagementUris" Multiplicity="*" />
@@ -434,9 +452,17 @@
         <End Type="biz.dfch.CS.Appclusive.Core.OdataServices.Core.OrderItem" Role="OrderItems" Multiplicity="*" />
         <End Type="biz.dfch.CS.Appclusive.Core.OdataServices.Core.Order" Role="OrderItemsPartner" Multiplicity="0..1" />
       </Association>
+      <Association Name="biz_dfch_CS_Appclusive_Core_OdataServices_Core_Order_CostCentre_biz_dfch_CS_Appclusive_Core_OdataServices_Core_CostCentre_CostCentrePartner">
+        <End Type="biz.dfch.CS.Appclusive.Core.OdataServices.Core.CostCentre" Role="CostCentre" Multiplicity="0..1" />
+        <End Type="biz.dfch.CS.Appclusive.Core.OdataServices.Core.Order" Role="CostCentrePartner" Multiplicity="0..1" />
+      </Association>
       <Association Name="biz_dfch_CS_Appclusive_Core_OdataServices_Core_OrderItem_Order_biz_dfch_CS_Appclusive_Core_OdataServices_Core_Order_OrderPartner">
         <End Type="biz.dfch.CS.Appclusive.Core.OdataServices.Core.Order" Role="Order" Multiplicity="0..1" />
         <End Type="biz.dfch.CS.Appclusive.Core.OdataServices.Core.OrderItem" Role="OrderPartner" Multiplicity="0..1" />
+      </Association>
+      <Association Name="biz_dfch_CS_Appclusive_Core_OdataServices_Core_OrderItem_CostCentre_biz_dfch_CS_Appclusive_Core_OdataServices_Core_CostCentre_CostCentrePartner">
+        <End Type="biz.dfch.CS.Appclusive.Core.OdataServices.Core.CostCentre" Role="CostCentre" Multiplicity="0..1" />
+        <End Type="biz.dfch.CS.Appclusive.Core.OdataServices.Core.OrderItem" Role="CostCentrePartner" Multiplicity="0..1" />
       </Association>
       <Association Name="biz_dfch_CS_Appclusive_Core_OdataServices_Core_Product_CatalogueItems_biz_dfch_CS_Appclusive_Core_OdataServices_Core_CatalogueItem_CatalogueItemsPartner">
         <End Type="biz.dfch.CS.Appclusive.Core.OdataServices.Core.CatalogueItem" Role="CatalogueItems" Multiplicity="*" />
@@ -452,7 +478,7 @@
         <EntitySet Name="Aces" EntityType="biz.dfch.CS.Appclusive.Core.OdataServices.Core.Ace" />
         <EntitySet Name="EntityTypes" EntityType="biz.dfch.CS.Appclusive.Core.OdataServices.Core.EntityType" />
         <EntitySet Name="Nodes" EntityType="biz.dfch.CS.Appclusive.Core.OdataServices.Core.Node" />
-        <EntitySet Name="Links" EntityType="biz.dfch.CS.Appclusive.Core.OdataServices.Core.Link" />
+        <EntitySet Name="Assocs" EntityType="biz.dfch.CS.Appclusive.Core.OdataServices.Core.Assoc" />
         <EntitySet Name="ManagementCredentials" EntityType="biz.dfch.CS.Appclusive.Core.OdataServices.Core.ManagementCredential" />
         <EntitySet Name="ManagementUris" EntityType="biz.dfch.CS.Appclusive.Core.OdataServices.Core.ManagementUri" />
         <EntitySet Name="ActiveDirectoryUsers" EntityType="biz.dfch.CS.Appclusive.Core.OdataServices.Core.ActiveDirectoryUser" />
@@ -464,6 +490,7 @@
         <EntitySet Name="OrderItems" EntityType="biz.dfch.CS.Appclusive.Core.OdataServices.Core.OrderItem" />
         <EntitySet Name="Approvals" EntityType="biz.dfch.CS.Appclusive.Core.OdataServices.Core.Approval" />
         <EntitySet Name="Products" EntityType="biz.dfch.CS.Appclusive.Core.OdataServices.Core.Product" />
+        <EntitySet Name="CostCentres" EntityType="biz.dfch.CS.Appclusive.Core.OdataServices.Core.CostCentre" />
         <AssociationSet Name="biz_dfch_CS_Appclusive_Core_OdataServices_Core_Job_Parent_biz_dfch_CS_Appclusive_Core_OdataServices_Core_Job_ParentPartnerSet" Association="biz.dfch.CS.Appclusive.Core.OdataServices.Core.biz_dfch_CS_Appclusive_Core_OdataServices_Core_Job_Parent_biz_dfch_CS_Appclusive_Core_OdataServices_Core_Job_ParentPartner">
           <End Role="ParentPartner" EntitySet="Jobs" />
           <End Role="Parent" EntitySet="Jobs" />
@@ -484,20 +511,20 @@
           <End Role="ChildrenPartner" EntitySet="Nodes" />
           <End Role="Children" EntitySet="Nodes" />
         </AssociationSet>
-        <AssociationSet Name="biz_dfch_CS_Appclusive_Core_OdataServices_Core_Node_IncomingLinks_biz_dfch_CS_Appclusive_Core_OdataServices_Core_Link_IncomingLinksPartnerSet" Association="biz.dfch.CS.Appclusive.Core.OdataServices.Core.biz_dfch_CS_Appclusive_Core_OdataServices_Core_Node_IncomingLinks_biz_dfch_CS_Appclusive_Core_OdataServices_Core_Link_IncomingLinksPartner">
-          <End Role="IncomingLinksPartner" EntitySet="Nodes" />
-          <End Role="IncomingLinks" EntitySet="Links" />
+        <AssociationSet Name="biz_dfch_CS_Appclusive_Core_OdataServices_Core_Node_IncomingAssocs_biz_dfch_CS_Appclusive_Core_OdataServices_Core_Assoc_IncomingAssocsPartnerSet" Association="biz.dfch.CS.Appclusive.Core.OdataServices.Core.biz_dfch_CS_Appclusive_Core_OdataServices_Core_Node_IncomingAssocs_biz_dfch_CS_Appclusive_Core_OdataServices_Core_Assoc_IncomingAssocsPartner">
+          <End Role="IncomingAssocsPartner" EntitySet="Nodes" />
+          <End Role="IncomingAssocs" EntitySet="Assocs" />
         </AssociationSet>
-        <AssociationSet Name="biz_dfch_CS_Appclusive_Core_OdataServices_Core_Node_OutgoingLinks_biz_dfch_CS_Appclusive_Core_OdataServices_Core_Link_OutgoingLinksPartnerSet" Association="biz.dfch.CS.Appclusive.Core.OdataServices.Core.biz_dfch_CS_Appclusive_Core_OdataServices_Core_Node_OutgoingLinks_biz_dfch_CS_Appclusive_Core_OdataServices_Core_Link_OutgoingLinksPartner">
-          <End Role="OutgoingLinksPartner" EntitySet="Nodes" />
-          <End Role="OutgoingLinks" EntitySet="Links" />
+        <AssociationSet Name="biz_dfch_CS_Appclusive_Core_OdataServices_Core_Node_OutgoingAssocs_biz_dfch_CS_Appclusive_Core_OdataServices_Core_Assoc_OutgoingAssocsPartnerSet" Association="biz.dfch.CS.Appclusive.Core.OdataServices.Core.biz_dfch_CS_Appclusive_Core_OdataServices_Core_Node_OutgoingAssocs_biz_dfch_CS_Appclusive_Core_OdataServices_Core_Assoc_OutgoingAssocsPartner">
+          <End Role="OutgoingAssocsPartner" EntitySet="Nodes" />
+          <End Role="OutgoingAssocs" EntitySet="Assocs" />
         </AssociationSet>
-        <AssociationSet Name="biz_dfch_CS_Appclusive_Core_OdataServices_Core_Link_Source_biz_dfch_CS_Appclusive_Core_OdataServices_Core_Node_SourcePartnerSet" Association="biz.dfch.CS.Appclusive.Core.OdataServices.Core.biz_dfch_CS_Appclusive_Core_OdataServices_Core_Link_Source_biz_dfch_CS_Appclusive_Core_OdataServices_Core_Node_SourcePartner">
-          <End Role="SourcePartner" EntitySet="Links" />
+        <AssociationSet Name="biz_dfch_CS_Appclusive_Core_OdataServices_Core_Assoc_Source_biz_dfch_CS_Appclusive_Core_OdataServices_Core_Node_SourcePartnerSet" Association="biz.dfch.CS.Appclusive.Core.OdataServices.Core.biz_dfch_CS_Appclusive_Core_OdataServices_Core_Assoc_Source_biz_dfch_CS_Appclusive_Core_OdataServices_Core_Node_SourcePartner">
+          <End Role="SourcePartner" EntitySet="Assocs" />
           <End Role="Source" EntitySet="Nodes" />
         </AssociationSet>
-        <AssociationSet Name="biz_dfch_CS_Appclusive_Core_OdataServices_Core_Link_Destination_biz_dfch_CS_Appclusive_Core_OdataServices_Core_Node_DestinationPartnerSet" Association="biz.dfch.CS.Appclusive.Core.OdataServices.Core.biz_dfch_CS_Appclusive_Core_OdataServices_Core_Link_Destination_biz_dfch_CS_Appclusive_Core_OdataServices_Core_Node_DestinationPartner">
-          <End Role="DestinationPartner" EntitySet="Links" />
+        <AssociationSet Name="biz_dfch_CS_Appclusive_Core_OdataServices_Core_Assoc_Destination_biz_dfch_CS_Appclusive_Core_OdataServices_Core_Node_DestinationPartnerSet" Association="biz.dfch.CS.Appclusive.Core.OdataServices.Core.biz_dfch_CS_Appclusive_Core_OdataServices_Core_Assoc_Destination_biz_dfch_CS_Appclusive_Core_OdataServices_Core_Node_DestinationPartner">
+          <End Role="DestinationPartner" EntitySet="Assocs" />
           <End Role="Destination" EntitySet="Nodes" />
         </AssociationSet>
         <AssociationSet Name="biz_dfch_CS_Appclusive_Core_OdataServices_Core_ManagementCredential_ManagementUris_biz_dfch_CS_Appclusive_Core_OdataServices_Core_ManagementUri_ManagementUrisPartnerSet" Association="biz.dfch.CS.Appclusive.Core.OdataServices.Core.biz_dfch_CS_Appclusive_Core_OdataServices_Core_ManagementCredential_ManagementUris_biz_dfch_CS_Appclusive_Core_OdataServices_Core_ManagementUri_ManagementUrisPartner">
@@ -536,9 +563,17 @@
           <End Role="OrderItemsPartner" EntitySet="Orders" />
           <End Role="OrderItems" EntitySet="OrderItems" />
         </AssociationSet>
+        <AssociationSet Name="biz_dfch_CS_Appclusive_Core_OdataServices_Core_Order_CostCentre_biz_dfch_CS_Appclusive_Core_OdataServices_Core_CostCentre_CostCentrePartnerSet" Association="biz.dfch.CS.Appclusive.Core.OdataServices.Core.biz_dfch_CS_Appclusive_Core_OdataServices_Core_Order_CostCentre_biz_dfch_CS_Appclusive_Core_OdataServices_Core_CostCentre_CostCentrePartner">
+          <End Role="CostCentrePartner" EntitySet="Orders" />
+          <End Role="CostCentre" EntitySet="CostCentres" />
+        </AssociationSet>
         <AssociationSet Name="biz_dfch_CS_Appclusive_Core_OdataServices_Core_OrderItem_Order_biz_dfch_CS_Appclusive_Core_OdataServices_Core_Order_OrderPartnerSet" Association="biz.dfch.CS.Appclusive.Core.OdataServices.Core.biz_dfch_CS_Appclusive_Core_OdataServices_Core_OrderItem_Order_biz_dfch_CS_Appclusive_Core_OdataServices_Core_Order_OrderPartner">
           <End Role="OrderPartner" EntitySet="OrderItems" />
           <End Role="Order" EntitySet="Orders" />
+        </AssociationSet>
+        <AssociationSet Name="biz_dfch_CS_Appclusive_Core_OdataServices_Core_OrderItem_CostCentre_biz_dfch_CS_Appclusive_Core_OdataServices_Core_CostCentre_CostCentrePartnerSet" Association="biz.dfch.CS.Appclusive.Core.OdataServices.Core.biz_dfch_CS_Appclusive_Core_OdataServices_Core_OrderItem_CostCentre_biz_dfch_CS_Appclusive_Core_OdataServices_Core_CostCentre_CostCentrePartner">
+          <End Role="CostCentrePartner" EntitySet="OrderItems" />
+          <End Role="CostCentre" EntitySet="CostCentres" />
         </AssociationSet>
         <AssociationSet Name="biz_dfch_CS_Appclusive_Core_OdataServices_Core_Product_CatalogueItems_biz_dfch_CS_Appclusive_Core_OdataServices_Core_CatalogueItem_CatalogueItemsPartnerSet" Association="biz.dfch.CS.Appclusive.Core.OdataServices.Core.biz_dfch_CS_Appclusive_Core_OdataServices_Core_Product_CatalogueItems_biz_dfch_CS_Appclusive_Core_OdataServices_Core_CatalogueItem_CatalogueItemsPartner">
           <End Role="CatalogueItemsPartner" EntitySet="Products" />

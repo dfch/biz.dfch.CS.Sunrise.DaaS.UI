@@ -8,7 +8,6 @@
     Name="OrderItem">
     <EntityType.Attributes>
       <NotSearchable />
-      <NotPageable />
     </EntityType.Attributes>
     <EntityType.Methods>
       <EntityMethod
@@ -114,6 +113,13 @@
       <EntityProperty
         Name="RowVersion"
         PropertyType=":Binary?">
+        <EntityProperty.Attributes>
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
+      <EntityProperty
+        Name="CostCentreId"
+        PropertyType=":Int64?">
         <EntityProperty.Attributes>
           <NotSearchable />
         </EntityProperty.Attributes>
@@ -240,6 +246,9 @@
         <CsdlProperty
           Name="Parameters"
           Property="OrderItem/Properties[Parameters]" />
+        <CsdlProperty
+          Name="CostCentreId"
+          Property="OrderItem/Properties[CostCentreId]" />
         <CsdlProperty
           Name="Id"
           Property="OrderItem/Properties[Id]" />
