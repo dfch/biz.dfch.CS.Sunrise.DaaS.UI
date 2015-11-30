@@ -272,7 +272,6 @@
     <LightSwitchModel Include="DataSources\CoreData\Products.lsml" />
     <LightSwitchModel Include="DataSources\CoreData\Assocs.lsml" />
     <LightSwitchModel Include="DataSources\CoreData\CostCentres.lsml" />
-    <LightSwitchModel Include="DataSources\DiagnosticsData\ConfigurationUpdates.lsml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

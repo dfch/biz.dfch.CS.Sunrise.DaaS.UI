@@ -65,22 +65,6 @@ namespace LightSwitchApplication.Implementation
         /// <summary>
         /// No Metadata Documentation available.
         /// </summary>
-        public ObjectSet<Endpoint> Endpoints
-        {
-            get
-            {
-                if ((_Endpoints == null))
-                {
-                    _Endpoints = base.CreateObjectSet<Endpoint>("Endpoints");
-                }
-                return _Endpoints;
-            }
-        }
-        private ObjectSet<Endpoint> _Endpoints;
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
         public ObjectSet<ConfigurationUpdate> ConfigurationUpdates
         {
             get
@@ -93,18 +77,26 @@ namespace LightSwitchApplication.Implementation
             }
         }
         private ObjectSet<ConfigurationUpdate> _ConfigurationUpdates;
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        public ObjectSet<Endpoint> Endpoints
+        {
+            get
+            {
+                if ((_Endpoints == null))
+                {
+                    _Endpoints = base.CreateObjectSet<Endpoint>("Endpoints");
+                }
+                return _Endpoints;
+            }
+        }
+        private ObjectSet<Endpoint> _Endpoints;
 
         #endregion
 
         #region AddTo Methods
-    
-        /// <summary>
-        /// Deprecated Method for adding a new object to the Endpoints EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
-        /// </summary>
-        public void AddToEndpoints(Endpoint endpoint)
-        {
-            base.AddObject("Endpoints", endpoint);
-        }
     
         /// <summary>
         /// Deprecated Method for adding a new object to the ConfigurationUpdates EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
@@ -112,6 +104,14 @@ namespace LightSwitchApplication.Implementation
         public void AddToConfigurationUpdates(ConfigurationUpdate configurationUpdate)
         {
             base.AddObject("ConfigurationUpdates", configurationUpdate);
+        }
+    
+        /// <summary>
+        /// Deprecated Method for adding a new object to the Endpoints EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
+        /// </summary>
+        public void AddToEndpoints(Endpoint endpoint)
+        {
+            base.AddObject("Endpoints", endpoint);
         }
 
         #endregion

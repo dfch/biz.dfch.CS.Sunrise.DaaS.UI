@@ -17,32 +17,32 @@ namespace LightSwitchApplication
     /// No Modeled Description Available
     /// </summary>
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.1.0.0")]
-    public sealed partial class CatalogueItem1 : global::Microsoft.LightSwitch.Framework.Base.EntityObject<global::LightSwitchApplication.CatalogueItem1, global::LightSwitchApplication.CatalogueItem1.DetailsClass>
+    public sealed partial class CartItem : global::Microsoft.LightSwitch.Framework.Base.EntityObject<global::LightSwitchApplication.CartItem, global::LightSwitchApplication.CartItem.DetailsClass>
     {
         #region Constructors
     
         /// <summary>
-        /// Initializes a new instance of the CatalogueItem1 entity.
+        /// Initializes a new instance of the CartItem entity.
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.1.0.0")]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        public CatalogueItem1()
+        public CartItem()
             : this(null)
         {
         }
     
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.1.0.0")]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        public CatalogueItem1(global::Microsoft.LightSwitch.Framework.EntitySet<global::LightSwitchApplication.CatalogueItem1> entitySet)
+        public CartItem(global::Microsoft.LightSwitch.Framework.EntitySet<global::LightSwitchApplication.CartItem> entitySet)
             : base(entitySet)
         {
-            global::LightSwitchApplication.CatalogueItem1.DetailsClass.Initialize(this);
+            global::LightSwitchApplication.CartItem.DetailsClass.Initialize(this);
         }
     
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void CatalogueItem1_Created();
+        partial void CartItem_Created();
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void CatalogueItem1_AllowSaveWithErrors(ref bool result);
+        partial void CartItem_AllowSaveWithErrors(ref bool result);
     
         #endregion
     
@@ -83,15 +83,87 @@ namespace LightSwitchApplication
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.1.0.0")]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public long CartId
+        {
+            get
+            {
+                return global::LightSwitchApplication.CartItem.DetailsClass.GetValue(this, global::LightSwitchApplication.CartItem.DetailsClass.PropertySetProperties.CartId);
+            }
+            set
+            {
+                global::LightSwitchApplication.CartItem.DetailsClass.SetValue(this, global::LightSwitchApplication.CartItem.DetailsClass.PropertySetProperties.CartId, value);
+            }
+        }
+        
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void CartId_IsReadOnly(ref bool result);
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void CartId_Validate(global::Microsoft.LightSwitch.EntityValidationResultsBuilder results);
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void CartId_Changed();
+
+        /// <summary>
+        /// No Modeled Description Available
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.1.0.0")]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public int Quantity
+        {
+            get
+            {
+                return global::LightSwitchApplication.CartItem.DetailsClass.GetValue(this, global::LightSwitchApplication.CartItem.DetailsClass.PropertySetProperties.Quantity);
+            }
+            set
+            {
+                global::LightSwitchApplication.CartItem.DetailsClass.SetValue(this, global::LightSwitchApplication.CartItem.DetailsClass.PropertySetProperties.Quantity, value);
+            }
+        }
+        
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void Quantity_IsReadOnly(ref bool result);
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void Quantity_Validate(global::Microsoft.LightSwitch.EntityValidationResultsBuilder results);
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void Quantity_Changed();
+
+        /// <summary>
+        /// No Modeled Description Available
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.1.0.0")]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public long CatalogueItemId
+        {
+            get
+            {
+                return global::LightSwitchApplication.CartItem.DetailsClass.GetValue(this, global::LightSwitchApplication.CartItem.DetailsClass.PropertySetProperties.CatalogueItemId);
+            }
+            set
+            {
+                global::LightSwitchApplication.CartItem.DetailsClass.SetValue(this, global::LightSwitchApplication.CartItem.DetailsClass.PropertySetProperties.CatalogueItemId, value);
+            }
+        }
+        
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void CatalogueItemId_IsReadOnly(ref bool result);
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void CatalogueItemId_Validate(global::Microsoft.LightSwitch.EntityValidationResultsBuilder results);
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void CatalogueItemId_Changed();
+
+        /// <summary>
+        /// No Modeled Description Available
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.1.0.0")]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         public long Id
         {
             get
             {
-                return global::LightSwitchApplication.CatalogueItem1.DetailsClass.GetValue(this, global::LightSwitchApplication.CatalogueItem1.DetailsClass.PropertySetProperties.Id);
+                return global::LightSwitchApplication.CartItem.DetailsClass.GetValue(this, global::LightSwitchApplication.CartItem.DetailsClass.PropertySetProperties.Id);
             }
             set
             {
-                global::LightSwitchApplication.CatalogueItem1.DetailsClass.SetValue(this, global::LightSwitchApplication.CatalogueItem1.DetailsClass.PropertySetProperties.Id, value);
+                global::LightSwitchApplication.CartItem.DetailsClass.SetValue(this, global::LightSwitchApplication.CartItem.DetailsClass.PropertySetProperties.Id, value);
             }
         }
         
@@ -111,11 +183,11 @@ namespace LightSwitchApplication
         {
             get
             {
-                return global::LightSwitchApplication.CatalogueItem1.DetailsClass.GetValue(this, global::LightSwitchApplication.CatalogueItem1.DetailsClass.PropertySetProperties.Tid);
+                return global::LightSwitchApplication.CartItem.DetailsClass.GetValue(this, global::LightSwitchApplication.CartItem.DetailsClass.PropertySetProperties.Tid);
             }
             set
             {
-                global::LightSwitchApplication.CatalogueItem1.DetailsClass.SetValue(this, global::LightSwitchApplication.CatalogueItem1.DetailsClass.PropertySetProperties.Tid, value);
+                global::LightSwitchApplication.CartItem.DetailsClass.SetValue(this, global::LightSwitchApplication.CartItem.DetailsClass.PropertySetProperties.Tid, value);
             }
         }
         
@@ -135,11 +207,11 @@ namespace LightSwitchApplication
         {
             get
             {
-                return global::LightSwitchApplication.CatalogueItem1.DetailsClass.GetValue(this, global::LightSwitchApplication.CatalogueItem1.DetailsClass.PropertySetProperties.Name);
+                return global::LightSwitchApplication.CartItem.DetailsClass.GetValue(this, global::LightSwitchApplication.CartItem.DetailsClass.PropertySetProperties.Name);
             }
             set
             {
-                global::LightSwitchApplication.CatalogueItem1.DetailsClass.SetValue(this, global::LightSwitchApplication.CatalogueItem1.DetailsClass.PropertySetProperties.Name, value);
+                global::LightSwitchApplication.CartItem.DetailsClass.SetValue(this, global::LightSwitchApplication.CartItem.DetailsClass.PropertySetProperties.Name, value);
             }
         }
         
@@ -159,11 +231,11 @@ namespace LightSwitchApplication
         {
             get
             {
-                return global::LightSwitchApplication.CatalogueItem1.DetailsClass.GetValue(this, global::LightSwitchApplication.CatalogueItem1.DetailsClass.PropertySetProperties.Description);
+                return global::LightSwitchApplication.CartItem.DetailsClass.GetValue(this, global::LightSwitchApplication.CartItem.DetailsClass.PropertySetProperties.Description);
             }
             set
             {
-                global::LightSwitchApplication.CatalogueItem1.DetailsClass.SetValue(this, global::LightSwitchApplication.CatalogueItem1.DetailsClass.PropertySetProperties.Description, value);
+                global::LightSwitchApplication.CartItem.DetailsClass.SetValue(this, global::LightSwitchApplication.CartItem.DetailsClass.PropertySetProperties.Description, value);
             }
         }
         
@@ -183,11 +255,11 @@ namespace LightSwitchApplication
         {
             get
             {
-                return global::LightSwitchApplication.CatalogueItem1.DetailsClass.GetValue(this, global::LightSwitchApplication.CatalogueItem1.DetailsClass.PropertySetProperties.CreatedBy);
+                return global::LightSwitchApplication.CartItem.DetailsClass.GetValue(this, global::LightSwitchApplication.CartItem.DetailsClass.PropertySetProperties.CreatedBy);
             }
             set
             {
-                global::LightSwitchApplication.CatalogueItem1.DetailsClass.SetValue(this, global::LightSwitchApplication.CatalogueItem1.DetailsClass.PropertySetProperties.CreatedBy, value);
+                global::LightSwitchApplication.CartItem.DetailsClass.SetValue(this, global::LightSwitchApplication.CartItem.DetailsClass.PropertySetProperties.CreatedBy, value);
             }
         }
         
@@ -207,11 +279,11 @@ namespace LightSwitchApplication
         {
             get
             {
-                return global::LightSwitchApplication.CatalogueItem1.DetailsClass.GetValue(this, global::LightSwitchApplication.CatalogueItem1.DetailsClass.PropertySetProperties.ModifiedBy);
+                return global::LightSwitchApplication.CartItem.DetailsClass.GetValue(this, global::LightSwitchApplication.CartItem.DetailsClass.PropertySetProperties.ModifiedBy);
             }
             set
             {
-                global::LightSwitchApplication.CatalogueItem1.DetailsClass.SetValue(this, global::LightSwitchApplication.CatalogueItem1.DetailsClass.PropertySetProperties.ModifiedBy, value);
+                global::LightSwitchApplication.CartItem.DetailsClass.SetValue(this, global::LightSwitchApplication.CartItem.DetailsClass.PropertySetProperties.ModifiedBy, value);
             }
         }
         
@@ -231,11 +303,11 @@ namespace LightSwitchApplication
         {
             get
             {
-                return global::LightSwitchApplication.CatalogueItem1.DetailsClass.GetValue(this, global::LightSwitchApplication.CatalogueItem1.DetailsClass.PropertySetProperties.Created);
+                return global::LightSwitchApplication.CartItem.DetailsClass.GetValue(this, global::LightSwitchApplication.CartItem.DetailsClass.PropertySetProperties.Created);
             }
             set
             {
-                global::LightSwitchApplication.CatalogueItem1.DetailsClass.SetValue(this, global::LightSwitchApplication.CatalogueItem1.DetailsClass.PropertySetProperties.Created, value);
+                global::LightSwitchApplication.CartItem.DetailsClass.SetValue(this, global::LightSwitchApplication.CartItem.DetailsClass.PropertySetProperties.Created, value);
             }
         }
         
@@ -255,11 +327,11 @@ namespace LightSwitchApplication
         {
             get
             {
-                return global::LightSwitchApplication.CatalogueItem1.DetailsClass.GetValue(this, global::LightSwitchApplication.CatalogueItem1.DetailsClass.PropertySetProperties.Modified);
+                return global::LightSwitchApplication.CartItem.DetailsClass.GetValue(this, global::LightSwitchApplication.CartItem.DetailsClass.PropertySetProperties.Modified);
             }
             set
             {
-                global::LightSwitchApplication.CatalogueItem1.DetailsClass.SetValue(this, global::LightSwitchApplication.CatalogueItem1.DetailsClass.PropertySetProperties.Modified, value);
+                global::LightSwitchApplication.CartItem.DetailsClass.SetValue(this, global::LightSwitchApplication.CartItem.DetailsClass.PropertySetProperties.Modified, value);
             }
         }
         
@@ -275,159 +347,15 @@ namespace LightSwitchApplication
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.1.0.0")]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        public long CatalogueId
-        {
-            get
-            {
-                return global::LightSwitchApplication.CatalogueItem1.DetailsClass.GetValue(this, global::LightSwitchApplication.CatalogueItem1.DetailsClass.PropertySetProperties.CatalogueId);
-            }
-            set
-            {
-                global::LightSwitchApplication.CatalogueItem1.DetailsClass.SetValue(this, global::LightSwitchApplication.CatalogueItem1.DetailsClass.PropertySetProperties.CatalogueId, value);
-            }
-        }
-        
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void CatalogueId_IsReadOnly(ref bool result);
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void CatalogueId_Validate(global::Microsoft.LightSwitch.EntityValidationResultsBuilder results);
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void CatalogueId_Changed();
-
-        /// <summary>
-        /// No Modeled Description Available
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.1.0.0")]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        public global::System.DateTimeOffset ValidFrom
-        {
-            get
-            {
-                return global::LightSwitchApplication.CatalogueItem1.DetailsClass.GetValue(this, global::LightSwitchApplication.CatalogueItem1.DetailsClass.PropertySetProperties.ValidFrom);
-            }
-            set
-            {
-                global::LightSwitchApplication.CatalogueItem1.DetailsClass.SetValue(this, global::LightSwitchApplication.CatalogueItem1.DetailsClass.PropertySetProperties.ValidFrom, value);
-            }
-        }
-        
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void ValidFrom_IsReadOnly(ref bool result);
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void ValidFrom_Validate(global::Microsoft.LightSwitch.EntityValidationResultsBuilder results);
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void ValidFrom_Changed();
-
-        /// <summary>
-        /// No Modeled Description Available
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.1.0.0")]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        public global::System.DateTimeOffset ValidUntil
-        {
-            get
-            {
-                return global::LightSwitchApplication.CatalogueItem1.DetailsClass.GetValue(this, global::LightSwitchApplication.CatalogueItem1.DetailsClass.PropertySetProperties.ValidUntil);
-            }
-            set
-            {
-                global::LightSwitchApplication.CatalogueItem1.DetailsClass.SetValue(this, global::LightSwitchApplication.CatalogueItem1.DetailsClass.PropertySetProperties.ValidUntil, value);
-            }
-        }
-        
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void ValidUntil_IsReadOnly(ref bool result);
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void ValidUntil_Validate(global::Microsoft.LightSwitch.EntityValidationResultsBuilder results);
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void ValidUntil_Changed();
-
-        /// <summary>
-        /// No Modeled Description Available
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.1.0.0")]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        public global::System.DateTimeOffset EndOfSale
-        {
-            get
-            {
-                return global::LightSwitchApplication.CatalogueItem1.DetailsClass.GetValue(this, global::LightSwitchApplication.CatalogueItem1.DetailsClass.PropertySetProperties.EndOfSale);
-            }
-            set
-            {
-                global::LightSwitchApplication.CatalogueItem1.DetailsClass.SetValue(this, global::LightSwitchApplication.CatalogueItem1.DetailsClass.PropertySetProperties.EndOfSale, value);
-            }
-        }
-        
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void EndOfSale_IsReadOnly(ref bool result);
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void EndOfSale_Validate(global::Microsoft.LightSwitch.EntityValidationResultsBuilder results);
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void EndOfSale_Changed();
-
-        /// <summary>
-        /// No Modeled Description Available
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.1.0.0")]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        public global::System.DateTimeOffset EndOfLife
-        {
-            get
-            {
-                return global::LightSwitchApplication.CatalogueItem1.DetailsClass.GetValue(this, global::LightSwitchApplication.CatalogueItem1.DetailsClass.PropertySetProperties.EndOfLife);
-            }
-            set
-            {
-                global::LightSwitchApplication.CatalogueItem1.DetailsClass.SetValue(this, global::LightSwitchApplication.CatalogueItem1.DetailsClass.PropertySetProperties.EndOfLife, value);
-            }
-        }
-        
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void EndOfLife_IsReadOnly(ref bool result);
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void EndOfLife_Validate(global::Microsoft.LightSwitch.EntityValidationResultsBuilder results);
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void EndOfLife_Changed();
-
-        /// <summary>
-        /// No Modeled Description Available
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.1.0.0")]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        public string Parameters
-        {
-            get
-            {
-                return global::LightSwitchApplication.CatalogueItem1.DetailsClass.GetValue(this, global::LightSwitchApplication.CatalogueItem1.DetailsClass.PropertySetProperties.Parameters);
-            }
-            set
-            {
-                global::LightSwitchApplication.CatalogueItem1.DetailsClass.SetValue(this, global::LightSwitchApplication.CatalogueItem1.DetailsClass.PropertySetProperties.Parameters, value);
-            }
-        }
-        
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void Parameters_IsReadOnly(ref bool result);
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void Parameters_Validate(global::Microsoft.LightSwitch.EntityValidationResultsBuilder results);
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void Parameters_Changed();
-
-        /// <summary>
-        /// No Modeled Description Available
-        /// </summary>
-        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.1.0.0")]
-        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         public byte[] RowVersion
         {
             get
             {
-                return global::LightSwitchApplication.CatalogueItem1.DetailsClass.GetValue(this, global::LightSwitchApplication.CatalogueItem1.DetailsClass.PropertySetProperties.RowVersion);
+                return global::LightSwitchApplication.CartItem.DetailsClass.GetValue(this, global::LightSwitchApplication.CartItem.DetailsClass.PropertySetProperties.RowVersion);
             }
             set
             {
-                global::LightSwitchApplication.CatalogueItem1.DetailsClass.SetValue(this, global::LightSwitchApplication.CatalogueItem1.DetailsClass.PropertySetProperties.RowVersion, value);
+                global::LightSwitchApplication.CartItem.DetailsClass.SetValue(this, global::LightSwitchApplication.CartItem.DetailsClass.PropertySetProperties.RowVersion, value);
             }
         }
         
@@ -443,24 +371,24 @@ namespace LightSwitchApplication
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.1.0.0")]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        public long ProductId
+        public string Parameters
         {
             get
             {
-                return global::LightSwitchApplication.CatalogueItem1.DetailsClass.GetValue(this, global::LightSwitchApplication.CatalogueItem1.DetailsClass.PropertySetProperties.ProductId);
+                return global::LightSwitchApplication.CartItem.DetailsClass.GetValue(this, global::LightSwitchApplication.CartItem.DetailsClass.PropertySetProperties.Parameters);
             }
             set
             {
-                global::LightSwitchApplication.CatalogueItem1.DetailsClass.SetValue(this, global::LightSwitchApplication.CatalogueItem1.DetailsClass.PropertySetProperties.ProductId, value);
+                global::LightSwitchApplication.CartItem.DetailsClass.SetValue(this, global::LightSwitchApplication.CartItem.DetailsClass.PropertySetProperties.Parameters, value);
             }
         }
         
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void ProductId_IsReadOnly(ref bool result);
+        partial void Parameters_IsReadOnly(ref bool result);
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void ProductId_Validate(global::Microsoft.LightSwitch.EntityValidationResultsBuilder results);
+        partial void Parameters_Validate(global::Microsoft.LightSwitch.EntityValidationResultsBuilder results);
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void ProductId_Changed();
+        partial void Parameters_Changed();
 
         #endregion
     
@@ -471,37 +399,37 @@ namespace LightSwitchApplication
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.1.0.0")]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         public sealed class DetailsClass : global::Microsoft.LightSwitch.Details.Framework.Base.EntityDetails<
-                global::LightSwitchApplication.CatalogueItem1,
-                global::LightSwitchApplication.CatalogueItem1.DetailsClass,
-                global::LightSwitchApplication.CatalogueItem1.DetailsClass.IImplementation,
-                global::LightSwitchApplication.CatalogueItem1.DetailsClass.PropertySet,
-                global::Microsoft.LightSwitch.Details.Framework.EntityCommandSet<global::LightSwitchApplication.CatalogueItem1, global::LightSwitchApplication.CatalogueItem1.DetailsClass>,
-                global::Microsoft.LightSwitch.Details.Framework.EntityMethodSet<global::LightSwitchApplication.CatalogueItem1, global::LightSwitchApplication.CatalogueItem1.DetailsClass>>
+                global::LightSwitchApplication.CartItem,
+                global::LightSwitchApplication.CartItem.DetailsClass,
+                global::LightSwitchApplication.CartItem.DetailsClass.IImplementation,
+                global::LightSwitchApplication.CartItem.DetailsClass.PropertySet,
+                global::Microsoft.LightSwitch.Details.Framework.EntityCommandSet<global::LightSwitchApplication.CartItem, global::LightSwitchApplication.CartItem.DetailsClass>,
+                global::Microsoft.LightSwitch.Details.Framework.EntityMethodSet<global::LightSwitchApplication.CartItem, global::LightSwitchApplication.CartItem.DetailsClass>>
         {
     
             static DetailsClass()
             {
-                var initializeEntry = global::LightSwitchApplication.CatalogueItem1.DetailsClass.PropertySetProperties.Id;
+                var initializeEntry = global::LightSwitchApplication.CartItem.DetailsClass.PropertySetProperties.CartId;
             }
     
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-            private static readonly global::Microsoft.LightSwitch.Details.Framework.Base.EntityDetails<global::LightSwitchApplication.CatalogueItem1, global::LightSwitchApplication.CatalogueItem1.DetailsClass>.Entry
-                __CatalogueItem1Entry = new global::Microsoft.LightSwitch.Details.Framework.Base.EntityDetails<global::LightSwitchApplication.CatalogueItem1, global::LightSwitchApplication.CatalogueItem1.DetailsClass>.Entry(
-                    global::LightSwitchApplication.CatalogueItem1.DetailsClass.__CatalogueItem1_CreateNew,
-                    global::LightSwitchApplication.CatalogueItem1.DetailsClass.__CatalogueItem1_Created,
-                    global::LightSwitchApplication.CatalogueItem1.DetailsClass.__CatalogueItem1_AllowSaveWithErrors);
-            private static global::LightSwitchApplication.CatalogueItem1 __CatalogueItem1_CreateNew(global::Microsoft.LightSwitch.Framework.EntitySet<global::LightSwitchApplication.CatalogueItem1> es)
+            private static readonly global::Microsoft.LightSwitch.Details.Framework.Base.EntityDetails<global::LightSwitchApplication.CartItem, global::LightSwitchApplication.CartItem.DetailsClass>.Entry
+                __CartItemEntry = new global::Microsoft.LightSwitch.Details.Framework.Base.EntityDetails<global::LightSwitchApplication.CartItem, global::LightSwitchApplication.CartItem.DetailsClass>.Entry(
+                    global::LightSwitchApplication.CartItem.DetailsClass.__CartItem_CreateNew,
+                    global::LightSwitchApplication.CartItem.DetailsClass.__CartItem_Created,
+                    global::LightSwitchApplication.CartItem.DetailsClass.__CartItem_AllowSaveWithErrors);
+            private static global::LightSwitchApplication.CartItem __CartItem_CreateNew(global::Microsoft.LightSwitch.Framework.EntitySet<global::LightSwitchApplication.CartItem> es)
             {
-                return new global::LightSwitchApplication.CatalogueItem1(es);
+                return new global::LightSwitchApplication.CartItem(es);
             }
-            private static void __CatalogueItem1_Created(global::LightSwitchApplication.CatalogueItem1 e)
+            private static void __CartItem_Created(global::LightSwitchApplication.CartItem e)
             {
-                e.CatalogueItem1_Created();
+                e.CartItem_Created();
             }
-            private static bool __CatalogueItem1_AllowSaveWithErrors(global::LightSwitchApplication.CatalogueItem1 e)
+            private static bool __CartItem_AllowSaveWithErrors(global::LightSwitchApplication.CartItem e)
             {
                 bool result = false;
-                e.CatalogueItem1_AllowSaveWithErrors(ref result);
+                e.CartItem_AllowSaveWithErrors(ref result);
                 return result;
             }
     
@@ -509,7 +437,7 @@ namespace LightSwitchApplication
             {
             }
     
-            public new global::Microsoft.LightSwitch.Details.Framework.EntityCommandSet<global::LightSwitchApplication.CatalogueItem1, global::LightSwitchApplication.CatalogueItem1.DetailsClass> Commands
+            public new global::Microsoft.LightSwitch.Details.Framework.EntityCommandSet<global::LightSwitchApplication.CartItem, global::LightSwitchApplication.CartItem.DetailsClass> Commands
             {
                 get
                 {
@@ -517,7 +445,7 @@ namespace LightSwitchApplication
                 }
             }
     
-            public new global::Microsoft.LightSwitch.Details.Framework.EntityMethodSet<global::LightSwitchApplication.CatalogueItem1, global::LightSwitchApplication.CatalogueItem1.DetailsClass> Methods
+            public new global::Microsoft.LightSwitch.Details.Framework.EntityMethodSet<global::LightSwitchApplication.CartItem, global::LightSwitchApplication.CartItem.DetailsClass> Methods
             {
                 get
                 {
@@ -525,7 +453,7 @@ namespace LightSwitchApplication
                 }
             }
     
-            public new global::LightSwitchApplication.CatalogueItem1.DetailsClass.PropertySet Properties
+            public new global::LightSwitchApplication.CartItem.DetailsClass.PropertySet Properties
             {
                 get
                 {
@@ -537,138 +465,114 @@ namespace LightSwitchApplication
             [global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1034:NestedTypesShouldNotBeVisible")]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.1.0.0")]
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-            public sealed class PropertySet : global::Microsoft.LightSwitch.Details.Framework.Base.EntityPropertySet<global::LightSwitchApplication.CatalogueItem1, global::LightSwitchApplication.CatalogueItem1.DetailsClass>
+            public sealed class PropertySet : global::Microsoft.LightSwitch.Details.Framework.Base.EntityPropertySet<global::LightSwitchApplication.CartItem, global::LightSwitchApplication.CartItem.DetailsClass>
             {
     
                 public PropertySet() : base()
                 {
                 }
     
-                public global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.CatalogueItem1, global::LightSwitchApplication.CatalogueItem1.DetailsClass, long> Id
+                public global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.CartItem, global::LightSwitchApplication.CartItem.DetailsClass, long> CartId
                 {
                     get
                     {
-                        return base.GetItem(global::LightSwitchApplication.CatalogueItem1.DetailsClass.PropertySetProperties.Id) as global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.CatalogueItem1, global::LightSwitchApplication.CatalogueItem1.DetailsClass, long>;
+                        return base.GetItem(global::LightSwitchApplication.CartItem.DetailsClass.PropertySetProperties.CartId) as global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.CartItem, global::LightSwitchApplication.CartItem.DetailsClass, long>;
                     }
                 }
                 
-                public global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.CatalogueItem1, global::LightSwitchApplication.CatalogueItem1.DetailsClass, string> Tid
+                public global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.CartItem, global::LightSwitchApplication.CartItem.DetailsClass, int> Quantity
                 {
                     get
                     {
-                        return base.GetItem(global::LightSwitchApplication.CatalogueItem1.DetailsClass.PropertySetProperties.Tid) as global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.CatalogueItem1, global::LightSwitchApplication.CatalogueItem1.DetailsClass, string>;
+                        return base.GetItem(global::LightSwitchApplication.CartItem.DetailsClass.PropertySetProperties.Quantity) as global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.CartItem, global::LightSwitchApplication.CartItem.DetailsClass, int>;
                     }
                 }
                 
-                public global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.CatalogueItem1, global::LightSwitchApplication.CatalogueItem1.DetailsClass, string> Name
+                public global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.CartItem, global::LightSwitchApplication.CartItem.DetailsClass, long> CatalogueItemId
                 {
                     get
                     {
-                        return base.GetItem(global::LightSwitchApplication.CatalogueItem1.DetailsClass.PropertySetProperties.Name) as global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.CatalogueItem1, global::LightSwitchApplication.CatalogueItem1.DetailsClass, string>;
+                        return base.GetItem(global::LightSwitchApplication.CartItem.DetailsClass.PropertySetProperties.CatalogueItemId) as global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.CartItem, global::LightSwitchApplication.CartItem.DetailsClass, long>;
                     }
                 }
                 
-                public global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.CatalogueItem1, global::LightSwitchApplication.CatalogueItem1.DetailsClass, string> Description
+                public global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.CartItem, global::LightSwitchApplication.CartItem.DetailsClass, long> Id
                 {
                     get
                     {
-                        return base.GetItem(global::LightSwitchApplication.CatalogueItem1.DetailsClass.PropertySetProperties.Description) as global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.CatalogueItem1, global::LightSwitchApplication.CatalogueItem1.DetailsClass, string>;
+                        return base.GetItem(global::LightSwitchApplication.CartItem.DetailsClass.PropertySetProperties.Id) as global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.CartItem, global::LightSwitchApplication.CartItem.DetailsClass, long>;
                     }
                 }
                 
-                public global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.CatalogueItem1, global::LightSwitchApplication.CatalogueItem1.DetailsClass, string> CreatedBy
+                public global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.CartItem, global::LightSwitchApplication.CartItem.DetailsClass, string> Tid
                 {
                     get
                     {
-                        return base.GetItem(global::LightSwitchApplication.CatalogueItem1.DetailsClass.PropertySetProperties.CreatedBy) as global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.CatalogueItem1, global::LightSwitchApplication.CatalogueItem1.DetailsClass, string>;
+                        return base.GetItem(global::LightSwitchApplication.CartItem.DetailsClass.PropertySetProperties.Tid) as global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.CartItem, global::LightSwitchApplication.CartItem.DetailsClass, string>;
                     }
                 }
                 
-                public global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.CatalogueItem1, global::LightSwitchApplication.CatalogueItem1.DetailsClass, string> ModifiedBy
+                public global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.CartItem, global::LightSwitchApplication.CartItem.DetailsClass, string> Name
                 {
                     get
                     {
-                        return base.GetItem(global::LightSwitchApplication.CatalogueItem1.DetailsClass.PropertySetProperties.ModifiedBy) as global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.CatalogueItem1, global::LightSwitchApplication.CatalogueItem1.DetailsClass, string>;
+                        return base.GetItem(global::LightSwitchApplication.CartItem.DetailsClass.PropertySetProperties.Name) as global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.CartItem, global::LightSwitchApplication.CartItem.DetailsClass, string>;
                     }
                 }
                 
-                public global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.CatalogueItem1, global::LightSwitchApplication.CatalogueItem1.DetailsClass, global::System.DateTimeOffset> Created
+                public global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.CartItem, global::LightSwitchApplication.CartItem.DetailsClass, string> Description
                 {
                     get
                     {
-                        return base.GetItem(global::LightSwitchApplication.CatalogueItem1.DetailsClass.PropertySetProperties.Created) as global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.CatalogueItem1, global::LightSwitchApplication.CatalogueItem1.DetailsClass, global::System.DateTimeOffset>;
+                        return base.GetItem(global::LightSwitchApplication.CartItem.DetailsClass.PropertySetProperties.Description) as global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.CartItem, global::LightSwitchApplication.CartItem.DetailsClass, string>;
                     }
                 }
                 
-                public global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.CatalogueItem1, global::LightSwitchApplication.CatalogueItem1.DetailsClass, global::System.DateTimeOffset> Modified
+                public global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.CartItem, global::LightSwitchApplication.CartItem.DetailsClass, string> CreatedBy
                 {
                     get
                     {
-                        return base.GetItem(global::LightSwitchApplication.CatalogueItem1.DetailsClass.PropertySetProperties.Modified) as global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.CatalogueItem1, global::LightSwitchApplication.CatalogueItem1.DetailsClass, global::System.DateTimeOffset>;
+                        return base.GetItem(global::LightSwitchApplication.CartItem.DetailsClass.PropertySetProperties.CreatedBy) as global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.CartItem, global::LightSwitchApplication.CartItem.DetailsClass, string>;
                     }
                 }
                 
-                public global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.CatalogueItem1, global::LightSwitchApplication.CatalogueItem1.DetailsClass, long> CatalogueId
+                public global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.CartItem, global::LightSwitchApplication.CartItem.DetailsClass, string> ModifiedBy
                 {
                     get
                     {
-                        return base.GetItem(global::LightSwitchApplication.CatalogueItem1.DetailsClass.PropertySetProperties.CatalogueId) as global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.CatalogueItem1, global::LightSwitchApplication.CatalogueItem1.DetailsClass, long>;
+                        return base.GetItem(global::LightSwitchApplication.CartItem.DetailsClass.PropertySetProperties.ModifiedBy) as global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.CartItem, global::LightSwitchApplication.CartItem.DetailsClass, string>;
                     }
                 }
                 
-                public global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.CatalogueItem1, global::LightSwitchApplication.CatalogueItem1.DetailsClass, global::System.DateTimeOffset> ValidFrom
+                public global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.CartItem, global::LightSwitchApplication.CartItem.DetailsClass, global::System.DateTimeOffset> Created
                 {
                     get
                     {
-                        return base.GetItem(global::LightSwitchApplication.CatalogueItem1.DetailsClass.PropertySetProperties.ValidFrom) as global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.CatalogueItem1, global::LightSwitchApplication.CatalogueItem1.DetailsClass, global::System.DateTimeOffset>;
+                        return base.GetItem(global::LightSwitchApplication.CartItem.DetailsClass.PropertySetProperties.Created) as global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.CartItem, global::LightSwitchApplication.CartItem.DetailsClass, global::System.DateTimeOffset>;
                     }
                 }
                 
-                public global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.CatalogueItem1, global::LightSwitchApplication.CatalogueItem1.DetailsClass, global::System.DateTimeOffset> ValidUntil
+                public global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.CartItem, global::LightSwitchApplication.CartItem.DetailsClass, global::System.DateTimeOffset> Modified
                 {
                     get
                     {
-                        return base.GetItem(global::LightSwitchApplication.CatalogueItem1.DetailsClass.PropertySetProperties.ValidUntil) as global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.CatalogueItem1, global::LightSwitchApplication.CatalogueItem1.DetailsClass, global::System.DateTimeOffset>;
+                        return base.GetItem(global::LightSwitchApplication.CartItem.DetailsClass.PropertySetProperties.Modified) as global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.CartItem, global::LightSwitchApplication.CartItem.DetailsClass, global::System.DateTimeOffset>;
                     }
                 }
                 
-                public global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.CatalogueItem1, global::LightSwitchApplication.CatalogueItem1.DetailsClass, global::System.DateTimeOffset> EndOfSale
+                public global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.CartItem, global::LightSwitchApplication.CartItem.DetailsClass, byte[]> RowVersion
                 {
                     get
                     {
-                        return base.GetItem(global::LightSwitchApplication.CatalogueItem1.DetailsClass.PropertySetProperties.EndOfSale) as global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.CatalogueItem1, global::LightSwitchApplication.CatalogueItem1.DetailsClass, global::System.DateTimeOffset>;
+                        return base.GetItem(global::LightSwitchApplication.CartItem.DetailsClass.PropertySetProperties.RowVersion) as global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.CartItem, global::LightSwitchApplication.CartItem.DetailsClass, byte[]>;
                     }
                 }
                 
-                public global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.CatalogueItem1, global::LightSwitchApplication.CatalogueItem1.DetailsClass, global::System.DateTimeOffset> EndOfLife
+                public global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.CartItem, global::LightSwitchApplication.CartItem.DetailsClass, string> Parameters
                 {
                     get
                     {
-                        return base.GetItem(global::LightSwitchApplication.CatalogueItem1.DetailsClass.PropertySetProperties.EndOfLife) as global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.CatalogueItem1, global::LightSwitchApplication.CatalogueItem1.DetailsClass, global::System.DateTimeOffset>;
-                    }
-                }
-                
-                public global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.CatalogueItem1, global::LightSwitchApplication.CatalogueItem1.DetailsClass, string> Parameters
-                {
-                    get
-                    {
-                        return base.GetItem(global::LightSwitchApplication.CatalogueItem1.DetailsClass.PropertySetProperties.Parameters) as global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.CatalogueItem1, global::LightSwitchApplication.CatalogueItem1.DetailsClass, string>;
-                    }
-                }
-                
-                public global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.CatalogueItem1, global::LightSwitchApplication.CatalogueItem1.DetailsClass, byte[]> RowVersion
-                {
-                    get
-                    {
-                        return base.GetItem(global::LightSwitchApplication.CatalogueItem1.DetailsClass.PropertySetProperties.RowVersion) as global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.CatalogueItem1, global::LightSwitchApplication.CatalogueItem1.DetailsClass, byte[]>;
-                    }
-                }
-                
-                public global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.CatalogueItem1, global::LightSwitchApplication.CatalogueItem1.DetailsClass, long> ProductId
-                {
-                    get
-                    {
-                        return base.GetItem(global::LightSwitchApplication.CatalogueItem1.DetailsClass.PropertySetProperties.ProductId) as global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.CatalogueItem1, global::LightSwitchApplication.CatalogueItem1.DetailsClass, long>;
+                        return base.GetItem(global::LightSwitchApplication.CartItem.DetailsClass.PropertySetProperties.Parameters) as global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.CartItem, global::LightSwitchApplication.CartItem.DetailsClass, string>;
                     }
                 }
                 
@@ -678,6 +582,9 @@ namespace LightSwitchApplication
             [global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Design", "CA1034:NestedTypesShouldNotBeVisible")]
             public interface IImplementation : global::Microsoft.LightSwitch.Internal.IEntityImplementation
             {
+                new long CartId { get; set; }
+                new int Quantity { get; set; }
+                new long CatalogueItemId { get; set; }
                 new long Id { get; set; }
                 new string Tid { get; set; }
                 new string Name { get; set; }
@@ -686,14 +593,8 @@ namespace LightSwitchApplication
                 new string ModifiedBy { get; set; }
                 new global::System.DateTimeOffset Created { get; set; }
                 new global::System.DateTimeOffset Modified { get; set; }
-                new long CatalogueId { get; set; }
-                new global::System.DateTimeOffset ValidFrom { get; set; }
-                new global::System.DateTimeOffset ValidUntil { get; set; }
-                new global::System.DateTimeOffset EndOfSale { get; set; }
-                new global::System.DateTimeOffset EndOfLife { get; set; }
-                new string Parameters { get; set; }
                 new byte[] RowVersion { get; set; }
-                new long ProductId { get; set; }
+                new string Parameters { get; set; }
             }
             #pragma warning restore 109
     
@@ -704,646 +605,526 @@ namespace LightSwitchApplication
             {
     
                 [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.CatalogueItem1, global::LightSwitchApplication.CatalogueItem1.DetailsClass, long>.Entry
-                    Id = new global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.CatalogueItem1, global::LightSwitchApplication.CatalogueItem1.DetailsClass, long>.Entry(
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.CartItem, global::LightSwitchApplication.CartItem.DetailsClass, long>.Entry
+                    CartId = new global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.CartItem, global::LightSwitchApplication.CartItem.DetailsClass, long>.Entry(
+                        "CartId",
+                        global::LightSwitchApplication.CartItem.DetailsClass.PropertySetProperties._CartId_Stub,
+                        global::LightSwitchApplication.CartItem.DetailsClass.PropertySetProperties._CartId_ComputeIsReadOnly,
+                        global::LightSwitchApplication.CartItem.DetailsClass.PropertySetProperties._CartId_Validate,
+                        global::LightSwitchApplication.CartItem.DetailsClass.PropertySetProperties._CartId_GetImplementationValue,
+                        global::LightSwitchApplication.CartItem.DetailsClass.PropertySetProperties._CartId_SetImplementationValue,
+                        global::LightSwitchApplication.CartItem.DetailsClass.PropertySetProperties._CartId_OnValueChanged);
+                private static void _CartId_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.CartItem.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.CartItem, global::LightSwitchApplication.CartItem.DetailsClass, long>.Data> c, global::LightSwitchApplication.CartItem.DetailsClass d, object sf)
+                {
+                    c(d, ref d._CartId, sf);
+                }
+                private static bool _CartId_ComputeIsReadOnly(global::LightSwitchApplication.CartItem e)
+                {
+                    bool result = false;
+                    e.CartId_IsReadOnly(ref result);
+                    return result;
+                }
+                private static void _CartId_Validate(global::LightSwitchApplication.CartItem e, global::Microsoft.LightSwitch.EntityValidationResultsBuilder r)
+                {
+                    e.CartId_Validate(r);
+                }
+                private static long _CartId_GetImplementationValue(global::LightSwitchApplication.CartItem.DetailsClass d)
+                {
+                    return d.ImplementationEntity.CartId;
+                }
+                private static void _CartId_SetImplementationValue(global::LightSwitchApplication.CartItem.DetailsClass d, long v)
+                {
+                    d.ImplementationEntity.CartId = v;
+                }
+                private static void _CartId_OnValueChanged(global::LightSwitchApplication.CartItem e)
+                {
+                    e.CartId_Changed();
+                }
+    
+                [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.CartItem, global::LightSwitchApplication.CartItem.DetailsClass, int>.Entry
+                    Quantity = new global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.CartItem, global::LightSwitchApplication.CartItem.DetailsClass, int>.Entry(
+                        "Quantity",
+                        global::LightSwitchApplication.CartItem.DetailsClass.PropertySetProperties._Quantity_Stub,
+                        global::LightSwitchApplication.CartItem.DetailsClass.PropertySetProperties._Quantity_ComputeIsReadOnly,
+                        global::LightSwitchApplication.CartItem.DetailsClass.PropertySetProperties._Quantity_Validate,
+                        global::LightSwitchApplication.CartItem.DetailsClass.PropertySetProperties._Quantity_GetImplementationValue,
+                        global::LightSwitchApplication.CartItem.DetailsClass.PropertySetProperties._Quantity_SetImplementationValue,
+                        global::LightSwitchApplication.CartItem.DetailsClass.PropertySetProperties._Quantity_OnValueChanged);
+                private static void _Quantity_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.CartItem.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.CartItem, global::LightSwitchApplication.CartItem.DetailsClass, int>.Data> c, global::LightSwitchApplication.CartItem.DetailsClass d, object sf)
+                {
+                    c(d, ref d._Quantity, sf);
+                }
+                private static bool _Quantity_ComputeIsReadOnly(global::LightSwitchApplication.CartItem e)
+                {
+                    bool result = false;
+                    e.Quantity_IsReadOnly(ref result);
+                    return result;
+                }
+                private static void _Quantity_Validate(global::LightSwitchApplication.CartItem e, global::Microsoft.LightSwitch.EntityValidationResultsBuilder r)
+                {
+                    e.Quantity_Validate(r);
+                }
+                private static int _Quantity_GetImplementationValue(global::LightSwitchApplication.CartItem.DetailsClass d)
+                {
+                    return d.ImplementationEntity.Quantity;
+                }
+                private static void _Quantity_SetImplementationValue(global::LightSwitchApplication.CartItem.DetailsClass d, int v)
+                {
+                    d.ImplementationEntity.Quantity = v;
+                }
+                private static void _Quantity_OnValueChanged(global::LightSwitchApplication.CartItem e)
+                {
+                    e.Quantity_Changed();
+                }
+    
+                [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.CartItem, global::LightSwitchApplication.CartItem.DetailsClass, long>.Entry
+                    CatalogueItemId = new global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.CartItem, global::LightSwitchApplication.CartItem.DetailsClass, long>.Entry(
+                        "CatalogueItemId",
+                        global::LightSwitchApplication.CartItem.DetailsClass.PropertySetProperties._CatalogueItemId_Stub,
+                        global::LightSwitchApplication.CartItem.DetailsClass.PropertySetProperties._CatalogueItemId_ComputeIsReadOnly,
+                        global::LightSwitchApplication.CartItem.DetailsClass.PropertySetProperties._CatalogueItemId_Validate,
+                        global::LightSwitchApplication.CartItem.DetailsClass.PropertySetProperties._CatalogueItemId_GetImplementationValue,
+                        global::LightSwitchApplication.CartItem.DetailsClass.PropertySetProperties._CatalogueItemId_SetImplementationValue,
+                        global::LightSwitchApplication.CartItem.DetailsClass.PropertySetProperties._CatalogueItemId_OnValueChanged);
+                private static void _CatalogueItemId_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.CartItem.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.CartItem, global::LightSwitchApplication.CartItem.DetailsClass, long>.Data> c, global::LightSwitchApplication.CartItem.DetailsClass d, object sf)
+                {
+                    c(d, ref d._CatalogueItemId, sf);
+                }
+                private static bool _CatalogueItemId_ComputeIsReadOnly(global::LightSwitchApplication.CartItem e)
+                {
+                    bool result = false;
+                    e.CatalogueItemId_IsReadOnly(ref result);
+                    return result;
+                }
+                private static void _CatalogueItemId_Validate(global::LightSwitchApplication.CartItem e, global::Microsoft.LightSwitch.EntityValidationResultsBuilder r)
+                {
+                    e.CatalogueItemId_Validate(r);
+                }
+                private static long _CatalogueItemId_GetImplementationValue(global::LightSwitchApplication.CartItem.DetailsClass d)
+                {
+                    return d.ImplementationEntity.CatalogueItemId;
+                }
+                private static void _CatalogueItemId_SetImplementationValue(global::LightSwitchApplication.CartItem.DetailsClass d, long v)
+                {
+                    d.ImplementationEntity.CatalogueItemId = v;
+                }
+                private static void _CatalogueItemId_OnValueChanged(global::LightSwitchApplication.CartItem e)
+                {
+                    e.CatalogueItemId_Changed();
+                }
+    
+                [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.CartItem, global::LightSwitchApplication.CartItem.DetailsClass, long>.Entry
+                    Id = new global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.CartItem, global::LightSwitchApplication.CartItem.DetailsClass, long>.Entry(
                         "Id",
-                        global::LightSwitchApplication.CatalogueItem1.DetailsClass.PropertySetProperties._Id_Stub,
-                        global::LightSwitchApplication.CatalogueItem1.DetailsClass.PropertySetProperties._Id_ComputeIsReadOnly,
-                        global::LightSwitchApplication.CatalogueItem1.DetailsClass.PropertySetProperties._Id_Validate,
-                        global::LightSwitchApplication.CatalogueItem1.DetailsClass.PropertySetProperties._Id_GetImplementationValue,
-                        global::LightSwitchApplication.CatalogueItem1.DetailsClass.PropertySetProperties._Id_SetImplementationValue,
-                        global::LightSwitchApplication.CatalogueItem1.DetailsClass.PropertySetProperties._Id_OnValueChanged);
-                private static void _Id_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.CatalogueItem1.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.CatalogueItem1, global::LightSwitchApplication.CatalogueItem1.DetailsClass, long>.Data> c, global::LightSwitchApplication.CatalogueItem1.DetailsClass d, object sf)
+                        global::LightSwitchApplication.CartItem.DetailsClass.PropertySetProperties._Id_Stub,
+                        global::LightSwitchApplication.CartItem.DetailsClass.PropertySetProperties._Id_ComputeIsReadOnly,
+                        global::LightSwitchApplication.CartItem.DetailsClass.PropertySetProperties._Id_Validate,
+                        global::LightSwitchApplication.CartItem.DetailsClass.PropertySetProperties._Id_GetImplementationValue,
+                        global::LightSwitchApplication.CartItem.DetailsClass.PropertySetProperties._Id_SetImplementationValue,
+                        global::LightSwitchApplication.CartItem.DetailsClass.PropertySetProperties._Id_OnValueChanged);
+                private static void _Id_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.CartItem.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.CartItem, global::LightSwitchApplication.CartItem.DetailsClass, long>.Data> c, global::LightSwitchApplication.CartItem.DetailsClass d, object sf)
                 {
                     c(d, ref d._Id, sf);
                 }
-                private static bool _Id_ComputeIsReadOnly(global::LightSwitchApplication.CatalogueItem1 e)
+                private static bool _Id_ComputeIsReadOnly(global::LightSwitchApplication.CartItem e)
                 {
                     bool result = false;
                     e.Id_IsReadOnly(ref result);
                     return result;
                 }
-                private static void _Id_Validate(global::LightSwitchApplication.CatalogueItem1 e, global::Microsoft.LightSwitch.EntityValidationResultsBuilder r)
+                private static void _Id_Validate(global::LightSwitchApplication.CartItem e, global::Microsoft.LightSwitch.EntityValidationResultsBuilder r)
                 {
                     e.Id_Validate(r);
                 }
-                private static long _Id_GetImplementationValue(global::LightSwitchApplication.CatalogueItem1.DetailsClass d)
+                private static long _Id_GetImplementationValue(global::LightSwitchApplication.CartItem.DetailsClass d)
                 {
                     return d.ImplementationEntity.Id;
                 }
-                private static void _Id_SetImplementationValue(global::LightSwitchApplication.CatalogueItem1.DetailsClass d, long v)
+                private static void _Id_SetImplementationValue(global::LightSwitchApplication.CartItem.DetailsClass d, long v)
                 {
                     d.ImplementationEntity.Id = v;
                 }
-                private static void _Id_OnValueChanged(global::LightSwitchApplication.CatalogueItem1 e)
+                private static void _Id_OnValueChanged(global::LightSwitchApplication.CartItem e)
                 {
                     e.Id_Changed();
                 }
     
                 [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.CatalogueItem1, global::LightSwitchApplication.CatalogueItem1.DetailsClass, string>.Entry
-                    Tid = new global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.CatalogueItem1, global::LightSwitchApplication.CatalogueItem1.DetailsClass, string>.Entry(
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.CartItem, global::LightSwitchApplication.CartItem.DetailsClass, string>.Entry
+                    Tid = new global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.CartItem, global::LightSwitchApplication.CartItem.DetailsClass, string>.Entry(
                         "Tid",
-                        global::LightSwitchApplication.CatalogueItem1.DetailsClass.PropertySetProperties._Tid_Stub,
-                        global::LightSwitchApplication.CatalogueItem1.DetailsClass.PropertySetProperties._Tid_ComputeIsReadOnly,
-                        global::LightSwitchApplication.CatalogueItem1.DetailsClass.PropertySetProperties._Tid_Validate,
-                        global::LightSwitchApplication.CatalogueItem1.DetailsClass.PropertySetProperties._Tid_GetImplementationValue,
-                        global::LightSwitchApplication.CatalogueItem1.DetailsClass.PropertySetProperties._Tid_SetImplementationValue,
-                        global::LightSwitchApplication.CatalogueItem1.DetailsClass.PropertySetProperties._Tid_OnValueChanged);
-                private static void _Tid_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.CatalogueItem1.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.CatalogueItem1, global::LightSwitchApplication.CatalogueItem1.DetailsClass, string>.Data> c, global::LightSwitchApplication.CatalogueItem1.DetailsClass d, object sf)
+                        global::LightSwitchApplication.CartItem.DetailsClass.PropertySetProperties._Tid_Stub,
+                        global::LightSwitchApplication.CartItem.DetailsClass.PropertySetProperties._Tid_ComputeIsReadOnly,
+                        global::LightSwitchApplication.CartItem.DetailsClass.PropertySetProperties._Tid_Validate,
+                        global::LightSwitchApplication.CartItem.DetailsClass.PropertySetProperties._Tid_GetImplementationValue,
+                        global::LightSwitchApplication.CartItem.DetailsClass.PropertySetProperties._Tid_SetImplementationValue,
+                        global::LightSwitchApplication.CartItem.DetailsClass.PropertySetProperties._Tid_OnValueChanged);
+                private static void _Tid_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.CartItem.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.CartItem, global::LightSwitchApplication.CartItem.DetailsClass, string>.Data> c, global::LightSwitchApplication.CartItem.DetailsClass d, object sf)
                 {
                     c(d, ref d._Tid, sf);
                 }
-                private static bool _Tid_ComputeIsReadOnly(global::LightSwitchApplication.CatalogueItem1 e)
+                private static bool _Tid_ComputeIsReadOnly(global::LightSwitchApplication.CartItem e)
                 {
                     bool result = false;
                     e.Tid_IsReadOnly(ref result);
                     return result;
                 }
-                private static void _Tid_Validate(global::LightSwitchApplication.CatalogueItem1 e, global::Microsoft.LightSwitch.EntityValidationResultsBuilder r)
+                private static void _Tid_Validate(global::LightSwitchApplication.CartItem e, global::Microsoft.LightSwitch.EntityValidationResultsBuilder r)
                 {
                     e.Tid_Validate(r);
                 }
-                private static string _Tid_GetImplementationValue(global::LightSwitchApplication.CatalogueItem1.DetailsClass d)
+                private static string _Tid_GetImplementationValue(global::LightSwitchApplication.CartItem.DetailsClass d)
                 {
                     return d.ImplementationEntity.Tid;
                 }
-                private static void _Tid_SetImplementationValue(global::LightSwitchApplication.CatalogueItem1.DetailsClass d, string v)
+                private static void _Tid_SetImplementationValue(global::LightSwitchApplication.CartItem.DetailsClass d, string v)
                 {
                     d.ImplementationEntity.Tid = v;
                 }
-                private static void _Tid_OnValueChanged(global::LightSwitchApplication.CatalogueItem1 e)
+                private static void _Tid_OnValueChanged(global::LightSwitchApplication.CartItem e)
                 {
                     e.Tid_Changed();
                 }
     
                 [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.CatalogueItem1, global::LightSwitchApplication.CatalogueItem1.DetailsClass, string>.Entry
-                    Name = new global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.CatalogueItem1, global::LightSwitchApplication.CatalogueItem1.DetailsClass, string>.Entry(
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.CartItem, global::LightSwitchApplication.CartItem.DetailsClass, string>.Entry
+                    Name = new global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.CartItem, global::LightSwitchApplication.CartItem.DetailsClass, string>.Entry(
                         "Name",
-                        global::LightSwitchApplication.CatalogueItem1.DetailsClass.PropertySetProperties._Name_Stub,
-                        global::LightSwitchApplication.CatalogueItem1.DetailsClass.PropertySetProperties._Name_ComputeIsReadOnly,
-                        global::LightSwitchApplication.CatalogueItem1.DetailsClass.PropertySetProperties._Name_Validate,
-                        global::LightSwitchApplication.CatalogueItem1.DetailsClass.PropertySetProperties._Name_GetImplementationValue,
-                        global::LightSwitchApplication.CatalogueItem1.DetailsClass.PropertySetProperties._Name_SetImplementationValue,
-                        global::LightSwitchApplication.CatalogueItem1.DetailsClass.PropertySetProperties._Name_OnValueChanged);
-                private static void _Name_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.CatalogueItem1.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.CatalogueItem1, global::LightSwitchApplication.CatalogueItem1.DetailsClass, string>.Data> c, global::LightSwitchApplication.CatalogueItem1.DetailsClass d, object sf)
+                        global::LightSwitchApplication.CartItem.DetailsClass.PropertySetProperties._Name_Stub,
+                        global::LightSwitchApplication.CartItem.DetailsClass.PropertySetProperties._Name_ComputeIsReadOnly,
+                        global::LightSwitchApplication.CartItem.DetailsClass.PropertySetProperties._Name_Validate,
+                        global::LightSwitchApplication.CartItem.DetailsClass.PropertySetProperties._Name_GetImplementationValue,
+                        global::LightSwitchApplication.CartItem.DetailsClass.PropertySetProperties._Name_SetImplementationValue,
+                        global::LightSwitchApplication.CartItem.DetailsClass.PropertySetProperties._Name_OnValueChanged);
+                private static void _Name_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.CartItem.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.CartItem, global::LightSwitchApplication.CartItem.DetailsClass, string>.Data> c, global::LightSwitchApplication.CartItem.DetailsClass d, object sf)
                 {
                     c(d, ref d._Name, sf);
                 }
-                private static bool _Name_ComputeIsReadOnly(global::LightSwitchApplication.CatalogueItem1 e)
+                private static bool _Name_ComputeIsReadOnly(global::LightSwitchApplication.CartItem e)
                 {
                     bool result = false;
                     e.Name_IsReadOnly(ref result);
                     return result;
                 }
-                private static void _Name_Validate(global::LightSwitchApplication.CatalogueItem1 e, global::Microsoft.LightSwitch.EntityValidationResultsBuilder r)
+                private static void _Name_Validate(global::LightSwitchApplication.CartItem e, global::Microsoft.LightSwitch.EntityValidationResultsBuilder r)
                 {
                     e.Name_Validate(r);
                 }
-                private static string _Name_GetImplementationValue(global::LightSwitchApplication.CatalogueItem1.DetailsClass d)
+                private static string _Name_GetImplementationValue(global::LightSwitchApplication.CartItem.DetailsClass d)
                 {
                     return d.ImplementationEntity.Name;
                 }
-                private static void _Name_SetImplementationValue(global::LightSwitchApplication.CatalogueItem1.DetailsClass d, string v)
+                private static void _Name_SetImplementationValue(global::LightSwitchApplication.CartItem.DetailsClass d, string v)
                 {
                     d.ImplementationEntity.Name = v;
                 }
-                private static void _Name_OnValueChanged(global::LightSwitchApplication.CatalogueItem1 e)
+                private static void _Name_OnValueChanged(global::LightSwitchApplication.CartItem e)
                 {
                     e.Name_Changed();
                 }
     
                 [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.CatalogueItem1, global::LightSwitchApplication.CatalogueItem1.DetailsClass, string>.Entry
-                    Description = new global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.CatalogueItem1, global::LightSwitchApplication.CatalogueItem1.DetailsClass, string>.Entry(
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.CartItem, global::LightSwitchApplication.CartItem.DetailsClass, string>.Entry
+                    Description = new global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.CartItem, global::LightSwitchApplication.CartItem.DetailsClass, string>.Entry(
                         "Description",
-                        global::LightSwitchApplication.CatalogueItem1.DetailsClass.PropertySetProperties._Description_Stub,
-                        global::LightSwitchApplication.CatalogueItem1.DetailsClass.PropertySetProperties._Description_ComputeIsReadOnly,
-                        global::LightSwitchApplication.CatalogueItem1.DetailsClass.PropertySetProperties._Description_Validate,
-                        global::LightSwitchApplication.CatalogueItem1.DetailsClass.PropertySetProperties._Description_GetImplementationValue,
-                        global::LightSwitchApplication.CatalogueItem1.DetailsClass.PropertySetProperties._Description_SetImplementationValue,
-                        global::LightSwitchApplication.CatalogueItem1.DetailsClass.PropertySetProperties._Description_OnValueChanged);
-                private static void _Description_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.CatalogueItem1.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.CatalogueItem1, global::LightSwitchApplication.CatalogueItem1.DetailsClass, string>.Data> c, global::LightSwitchApplication.CatalogueItem1.DetailsClass d, object sf)
+                        global::LightSwitchApplication.CartItem.DetailsClass.PropertySetProperties._Description_Stub,
+                        global::LightSwitchApplication.CartItem.DetailsClass.PropertySetProperties._Description_ComputeIsReadOnly,
+                        global::LightSwitchApplication.CartItem.DetailsClass.PropertySetProperties._Description_Validate,
+                        global::LightSwitchApplication.CartItem.DetailsClass.PropertySetProperties._Description_GetImplementationValue,
+                        global::LightSwitchApplication.CartItem.DetailsClass.PropertySetProperties._Description_SetImplementationValue,
+                        global::LightSwitchApplication.CartItem.DetailsClass.PropertySetProperties._Description_OnValueChanged);
+                private static void _Description_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.CartItem.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.CartItem, global::LightSwitchApplication.CartItem.DetailsClass, string>.Data> c, global::LightSwitchApplication.CartItem.DetailsClass d, object sf)
                 {
                     c(d, ref d._Description, sf);
                 }
-                private static bool _Description_ComputeIsReadOnly(global::LightSwitchApplication.CatalogueItem1 e)
+                private static bool _Description_ComputeIsReadOnly(global::LightSwitchApplication.CartItem e)
                 {
                     bool result = false;
                     e.Description_IsReadOnly(ref result);
                     return result;
                 }
-                private static void _Description_Validate(global::LightSwitchApplication.CatalogueItem1 e, global::Microsoft.LightSwitch.EntityValidationResultsBuilder r)
+                private static void _Description_Validate(global::LightSwitchApplication.CartItem e, global::Microsoft.LightSwitch.EntityValidationResultsBuilder r)
                 {
                     e.Description_Validate(r);
                 }
-                private static string _Description_GetImplementationValue(global::LightSwitchApplication.CatalogueItem1.DetailsClass d)
+                private static string _Description_GetImplementationValue(global::LightSwitchApplication.CartItem.DetailsClass d)
                 {
                     return d.ImplementationEntity.Description;
                 }
-                private static void _Description_SetImplementationValue(global::LightSwitchApplication.CatalogueItem1.DetailsClass d, string v)
+                private static void _Description_SetImplementationValue(global::LightSwitchApplication.CartItem.DetailsClass d, string v)
                 {
                     d.ImplementationEntity.Description = v;
                 }
-                private static void _Description_OnValueChanged(global::LightSwitchApplication.CatalogueItem1 e)
+                private static void _Description_OnValueChanged(global::LightSwitchApplication.CartItem e)
                 {
                     e.Description_Changed();
                 }
     
                 [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.CatalogueItem1, global::LightSwitchApplication.CatalogueItem1.DetailsClass, string>.Entry
-                    CreatedBy = new global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.CatalogueItem1, global::LightSwitchApplication.CatalogueItem1.DetailsClass, string>.Entry(
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.CartItem, global::LightSwitchApplication.CartItem.DetailsClass, string>.Entry
+                    CreatedBy = new global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.CartItem, global::LightSwitchApplication.CartItem.DetailsClass, string>.Entry(
                         "CreatedBy",
-                        global::LightSwitchApplication.CatalogueItem1.DetailsClass.PropertySetProperties._CreatedBy_Stub,
-                        global::LightSwitchApplication.CatalogueItem1.DetailsClass.PropertySetProperties._CreatedBy_ComputeIsReadOnly,
-                        global::LightSwitchApplication.CatalogueItem1.DetailsClass.PropertySetProperties._CreatedBy_Validate,
-                        global::LightSwitchApplication.CatalogueItem1.DetailsClass.PropertySetProperties._CreatedBy_GetImplementationValue,
-                        global::LightSwitchApplication.CatalogueItem1.DetailsClass.PropertySetProperties._CreatedBy_SetImplementationValue,
-                        global::LightSwitchApplication.CatalogueItem1.DetailsClass.PropertySetProperties._CreatedBy_OnValueChanged);
-                private static void _CreatedBy_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.CatalogueItem1.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.CatalogueItem1, global::LightSwitchApplication.CatalogueItem1.DetailsClass, string>.Data> c, global::LightSwitchApplication.CatalogueItem1.DetailsClass d, object sf)
+                        global::LightSwitchApplication.CartItem.DetailsClass.PropertySetProperties._CreatedBy_Stub,
+                        global::LightSwitchApplication.CartItem.DetailsClass.PropertySetProperties._CreatedBy_ComputeIsReadOnly,
+                        global::LightSwitchApplication.CartItem.DetailsClass.PropertySetProperties._CreatedBy_Validate,
+                        global::LightSwitchApplication.CartItem.DetailsClass.PropertySetProperties._CreatedBy_GetImplementationValue,
+                        global::LightSwitchApplication.CartItem.DetailsClass.PropertySetProperties._CreatedBy_SetImplementationValue,
+                        global::LightSwitchApplication.CartItem.DetailsClass.PropertySetProperties._CreatedBy_OnValueChanged);
+                private static void _CreatedBy_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.CartItem.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.CartItem, global::LightSwitchApplication.CartItem.DetailsClass, string>.Data> c, global::LightSwitchApplication.CartItem.DetailsClass d, object sf)
                 {
                     c(d, ref d._CreatedBy, sf);
                 }
-                private static bool _CreatedBy_ComputeIsReadOnly(global::LightSwitchApplication.CatalogueItem1 e)
+                private static bool _CreatedBy_ComputeIsReadOnly(global::LightSwitchApplication.CartItem e)
                 {
                     bool result = false;
                     e.CreatedBy_IsReadOnly(ref result);
                     return result;
                 }
-                private static void _CreatedBy_Validate(global::LightSwitchApplication.CatalogueItem1 e, global::Microsoft.LightSwitch.EntityValidationResultsBuilder r)
+                private static void _CreatedBy_Validate(global::LightSwitchApplication.CartItem e, global::Microsoft.LightSwitch.EntityValidationResultsBuilder r)
                 {
                     e.CreatedBy_Validate(r);
                 }
-                private static string _CreatedBy_GetImplementationValue(global::LightSwitchApplication.CatalogueItem1.DetailsClass d)
+                private static string _CreatedBy_GetImplementationValue(global::LightSwitchApplication.CartItem.DetailsClass d)
                 {
                     return d.ImplementationEntity.CreatedBy;
                 }
-                private static void _CreatedBy_SetImplementationValue(global::LightSwitchApplication.CatalogueItem1.DetailsClass d, string v)
+                private static void _CreatedBy_SetImplementationValue(global::LightSwitchApplication.CartItem.DetailsClass d, string v)
                 {
                     d.ImplementationEntity.CreatedBy = v;
                 }
-                private static void _CreatedBy_OnValueChanged(global::LightSwitchApplication.CatalogueItem1 e)
+                private static void _CreatedBy_OnValueChanged(global::LightSwitchApplication.CartItem e)
                 {
                     e.CreatedBy_Changed();
                 }
     
                 [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.CatalogueItem1, global::LightSwitchApplication.CatalogueItem1.DetailsClass, string>.Entry
-                    ModifiedBy = new global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.CatalogueItem1, global::LightSwitchApplication.CatalogueItem1.DetailsClass, string>.Entry(
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.CartItem, global::LightSwitchApplication.CartItem.DetailsClass, string>.Entry
+                    ModifiedBy = new global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.CartItem, global::LightSwitchApplication.CartItem.DetailsClass, string>.Entry(
                         "ModifiedBy",
-                        global::LightSwitchApplication.CatalogueItem1.DetailsClass.PropertySetProperties._ModifiedBy_Stub,
-                        global::LightSwitchApplication.CatalogueItem1.DetailsClass.PropertySetProperties._ModifiedBy_ComputeIsReadOnly,
-                        global::LightSwitchApplication.CatalogueItem1.DetailsClass.PropertySetProperties._ModifiedBy_Validate,
-                        global::LightSwitchApplication.CatalogueItem1.DetailsClass.PropertySetProperties._ModifiedBy_GetImplementationValue,
-                        global::LightSwitchApplication.CatalogueItem1.DetailsClass.PropertySetProperties._ModifiedBy_SetImplementationValue,
-                        global::LightSwitchApplication.CatalogueItem1.DetailsClass.PropertySetProperties._ModifiedBy_OnValueChanged);
-                private static void _ModifiedBy_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.CatalogueItem1.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.CatalogueItem1, global::LightSwitchApplication.CatalogueItem1.DetailsClass, string>.Data> c, global::LightSwitchApplication.CatalogueItem1.DetailsClass d, object sf)
+                        global::LightSwitchApplication.CartItem.DetailsClass.PropertySetProperties._ModifiedBy_Stub,
+                        global::LightSwitchApplication.CartItem.DetailsClass.PropertySetProperties._ModifiedBy_ComputeIsReadOnly,
+                        global::LightSwitchApplication.CartItem.DetailsClass.PropertySetProperties._ModifiedBy_Validate,
+                        global::LightSwitchApplication.CartItem.DetailsClass.PropertySetProperties._ModifiedBy_GetImplementationValue,
+                        global::LightSwitchApplication.CartItem.DetailsClass.PropertySetProperties._ModifiedBy_SetImplementationValue,
+                        global::LightSwitchApplication.CartItem.DetailsClass.PropertySetProperties._ModifiedBy_OnValueChanged);
+                private static void _ModifiedBy_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.CartItem.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.CartItem, global::LightSwitchApplication.CartItem.DetailsClass, string>.Data> c, global::LightSwitchApplication.CartItem.DetailsClass d, object sf)
                 {
                     c(d, ref d._ModifiedBy, sf);
                 }
-                private static bool _ModifiedBy_ComputeIsReadOnly(global::LightSwitchApplication.CatalogueItem1 e)
+                private static bool _ModifiedBy_ComputeIsReadOnly(global::LightSwitchApplication.CartItem e)
                 {
                     bool result = false;
                     e.ModifiedBy_IsReadOnly(ref result);
                     return result;
                 }
-                private static void _ModifiedBy_Validate(global::LightSwitchApplication.CatalogueItem1 e, global::Microsoft.LightSwitch.EntityValidationResultsBuilder r)
+                private static void _ModifiedBy_Validate(global::LightSwitchApplication.CartItem e, global::Microsoft.LightSwitch.EntityValidationResultsBuilder r)
                 {
                     e.ModifiedBy_Validate(r);
                 }
-                private static string _ModifiedBy_GetImplementationValue(global::LightSwitchApplication.CatalogueItem1.DetailsClass d)
+                private static string _ModifiedBy_GetImplementationValue(global::LightSwitchApplication.CartItem.DetailsClass d)
                 {
                     return d.ImplementationEntity.ModifiedBy;
                 }
-                private static void _ModifiedBy_SetImplementationValue(global::LightSwitchApplication.CatalogueItem1.DetailsClass d, string v)
+                private static void _ModifiedBy_SetImplementationValue(global::LightSwitchApplication.CartItem.DetailsClass d, string v)
                 {
                     d.ImplementationEntity.ModifiedBy = v;
                 }
-                private static void _ModifiedBy_OnValueChanged(global::LightSwitchApplication.CatalogueItem1 e)
+                private static void _ModifiedBy_OnValueChanged(global::LightSwitchApplication.CartItem e)
                 {
                     e.ModifiedBy_Changed();
                 }
     
                 [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.CatalogueItem1, global::LightSwitchApplication.CatalogueItem1.DetailsClass, global::System.DateTimeOffset>.Entry
-                    Created = new global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.CatalogueItem1, global::LightSwitchApplication.CatalogueItem1.DetailsClass, global::System.DateTimeOffset>.Entry(
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.CartItem, global::LightSwitchApplication.CartItem.DetailsClass, global::System.DateTimeOffset>.Entry
+                    Created = new global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.CartItem, global::LightSwitchApplication.CartItem.DetailsClass, global::System.DateTimeOffset>.Entry(
                         "Created",
-                        global::LightSwitchApplication.CatalogueItem1.DetailsClass.PropertySetProperties._Created_Stub,
-                        global::LightSwitchApplication.CatalogueItem1.DetailsClass.PropertySetProperties._Created_ComputeIsReadOnly,
-                        global::LightSwitchApplication.CatalogueItem1.DetailsClass.PropertySetProperties._Created_Validate,
-                        global::LightSwitchApplication.CatalogueItem1.DetailsClass.PropertySetProperties._Created_GetImplementationValue,
-                        global::LightSwitchApplication.CatalogueItem1.DetailsClass.PropertySetProperties._Created_SetImplementationValue,
-                        global::LightSwitchApplication.CatalogueItem1.DetailsClass.PropertySetProperties._Created_OnValueChanged);
-                private static void _Created_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.CatalogueItem1.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.CatalogueItem1, global::LightSwitchApplication.CatalogueItem1.DetailsClass, global::System.DateTimeOffset>.Data> c, global::LightSwitchApplication.CatalogueItem1.DetailsClass d, object sf)
+                        global::LightSwitchApplication.CartItem.DetailsClass.PropertySetProperties._Created_Stub,
+                        global::LightSwitchApplication.CartItem.DetailsClass.PropertySetProperties._Created_ComputeIsReadOnly,
+                        global::LightSwitchApplication.CartItem.DetailsClass.PropertySetProperties._Created_Validate,
+                        global::LightSwitchApplication.CartItem.DetailsClass.PropertySetProperties._Created_GetImplementationValue,
+                        global::LightSwitchApplication.CartItem.DetailsClass.PropertySetProperties._Created_SetImplementationValue,
+                        global::LightSwitchApplication.CartItem.DetailsClass.PropertySetProperties._Created_OnValueChanged);
+                private static void _Created_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.CartItem.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.CartItem, global::LightSwitchApplication.CartItem.DetailsClass, global::System.DateTimeOffset>.Data> c, global::LightSwitchApplication.CartItem.DetailsClass d, object sf)
                 {
                     c(d, ref d._Created, sf);
                 }
-                private static bool _Created_ComputeIsReadOnly(global::LightSwitchApplication.CatalogueItem1 e)
+                private static bool _Created_ComputeIsReadOnly(global::LightSwitchApplication.CartItem e)
                 {
                     bool result = false;
                     e.Created_IsReadOnly(ref result);
                     return result;
                 }
-                private static void _Created_Validate(global::LightSwitchApplication.CatalogueItem1 e, global::Microsoft.LightSwitch.EntityValidationResultsBuilder r)
+                private static void _Created_Validate(global::LightSwitchApplication.CartItem e, global::Microsoft.LightSwitch.EntityValidationResultsBuilder r)
                 {
                     e.Created_Validate(r);
                 }
-                private static global::System.DateTimeOffset _Created_GetImplementationValue(global::LightSwitchApplication.CatalogueItem1.DetailsClass d)
+                private static global::System.DateTimeOffset _Created_GetImplementationValue(global::LightSwitchApplication.CartItem.DetailsClass d)
                 {
                     return d.ImplementationEntity.Created;
                 }
-                private static void _Created_SetImplementationValue(global::LightSwitchApplication.CatalogueItem1.DetailsClass d, global::System.DateTimeOffset v)
+                private static void _Created_SetImplementationValue(global::LightSwitchApplication.CartItem.DetailsClass d, global::System.DateTimeOffset v)
                 {
                     d.ImplementationEntity.Created = v;
                 }
-                private static void _Created_OnValueChanged(global::LightSwitchApplication.CatalogueItem1 e)
+                private static void _Created_OnValueChanged(global::LightSwitchApplication.CartItem e)
                 {
                     e.Created_Changed();
                 }
     
                 [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.CatalogueItem1, global::LightSwitchApplication.CatalogueItem1.DetailsClass, global::System.DateTimeOffset>.Entry
-                    Modified = new global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.CatalogueItem1, global::LightSwitchApplication.CatalogueItem1.DetailsClass, global::System.DateTimeOffset>.Entry(
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.CartItem, global::LightSwitchApplication.CartItem.DetailsClass, global::System.DateTimeOffset>.Entry
+                    Modified = new global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.CartItem, global::LightSwitchApplication.CartItem.DetailsClass, global::System.DateTimeOffset>.Entry(
                         "Modified",
-                        global::LightSwitchApplication.CatalogueItem1.DetailsClass.PropertySetProperties._Modified_Stub,
-                        global::LightSwitchApplication.CatalogueItem1.DetailsClass.PropertySetProperties._Modified_ComputeIsReadOnly,
-                        global::LightSwitchApplication.CatalogueItem1.DetailsClass.PropertySetProperties._Modified_Validate,
-                        global::LightSwitchApplication.CatalogueItem1.DetailsClass.PropertySetProperties._Modified_GetImplementationValue,
-                        global::LightSwitchApplication.CatalogueItem1.DetailsClass.PropertySetProperties._Modified_SetImplementationValue,
-                        global::LightSwitchApplication.CatalogueItem1.DetailsClass.PropertySetProperties._Modified_OnValueChanged);
-                private static void _Modified_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.CatalogueItem1.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.CatalogueItem1, global::LightSwitchApplication.CatalogueItem1.DetailsClass, global::System.DateTimeOffset>.Data> c, global::LightSwitchApplication.CatalogueItem1.DetailsClass d, object sf)
+                        global::LightSwitchApplication.CartItem.DetailsClass.PropertySetProperties._Modified_Stub,
+                        global::LightSwitchApplication.CartItem.DetailsClass.PropertySetProperties._Modified_ComputeIsReadOnly,
+                        global::LightSwitchApplication.CartItem.DetailsClass.PropertySetProperties._Modified_Validate,
+                        global::LightSwitchApplication.CartItem.DetailsClass.PropertySetProperties._Modified_GetImplementationValue,
+                        global::LightSwitchApplication.CartItem.DetailsClass.PropertySetProperties._Modified_SetImplementationValue,
+                        global::LightSwitchApplication.CartItem.DetailsClass.PropertySetProperties._Modified_OnValueChanged);
+                private static void _Modified_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.CartItem.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.CartItem, global::LightSwitchApplication.CartItem.DetailsClass, global::System.DateTimeOffset>.Data> c, global::LightSwitchApplication.CartItem.DetailsClass d, object sf)
                 {
                     c(d, ref d._Modified, sf);
                 }
-                private static bool _Modified_ComputeIsReadOnly(global::LightSwitchApplication.CatalogueItem1 e)
+                private static bool _Modified_ComputeIsReadOnly(global::LightSwitchApplication.CartItem e)
                 {
                     bool result = false;
                     e.Modified_IsReadOnly(ref result);
                     return result;
                 }
-                private static void _Modified_Validate(global::LightSwitchApplication.CatalogueItem1 e, global::Microsoft.LightSwitch.EntityValidationResultsBuilder r)
+                private static void _Modified_Validate(global::LightSwitchApplication.CartItem e, global::Microsoft.LightSwitch.EntityValidationResultsBuilder r)
                 {
                     e.Modified_Validate(r);
                 }
-                private static global::System.DateTimeOffset _Modified_GetImplementationValue(global::LightSwitchApplication.CatalogueItem1.DetailsClass d)
+                private static global::System.DateTimeOffset _Modified_GetImplementationValue(global::LightSwitchApplication.CartItem.DetailsClass d)
                 {
                     return d.ImplementationEntity.Modified;
                 }
-                private static void _Modified_SetImplementationValue(global::LightSwitchApplication.CatalogueItem1.DetailsClass d, global::System.DateTimeOffset v)
+                private static void _Modified_SetImplementationValue(global::LightSwitchApplication.CartItem.DetailsClass d, global::System.DateTimeOffset v)
                 {
                     d.ImplementationEntity.Modified = v;
                 }
-                private static void _Modified_OnValueChanged(global::LightSwitchApplication.CatalogueItem1 e)
+                private static void _Modified_OnValueChanged(global::LightSwitchApplication.CartItem e)
                 {
                     e.Modified_Changed();
                 }
     
                 [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.CatalogueItem1, global::LightSwitchApplication.CatalogueItem1.DetailsClass, long>.Entry
-                    CatalogueId = new global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.CatalogueItem1, global::LightSwitchApplication.CatalogueItem1.DetailsClass, long>.Entry(
-                        "CatalogueId",
-                        global::LightSwitchApplication.CatalogueItem1.DetailsClass.PropertySetProperties._CatalogueId_Stub,
-                        global::LightSwitchApplication.CatalogueItem1.DetailsClass.PropertySetProperties._CatalogueId_ComputeIsReadOnly,
-                        global::LightSwitchApplication.CatalogueItem1.DetailsClass.PropertySetProperties._CatalogueId_Validate,
-                        global::LightSwitchApplication.CatalogueItem1.DetailsClass.PropertySetProperties._CatalogueId_GetImplementationValue,
-                        global::LightSwitchApplication.CatalogueItem1.DetailsClass.PropertySetProperties._CatalogueId_SetImplementationValue,
-                        global::LightSwitchApplication.CatalogueItem1.DetailsClass.PropertySetProperties._CatalogueId_OnValueChanged);
-                private static void _CatalogueId_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.CatalogueItem1.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.CatalogueItem1, global::LightSwitchApplication.CatalogueItem1.DetailsClass, long>.Data> c, global::LightSwitchApplication.CatalogueItem1.DetailsClass d, object sf)
-                {
-                    c(d, ref d._CatalogueId, sf);
-                }
-                private static bool _CatalogueId_ComputeIsReadOnly(global::LightSwitchApplication.CatalogueItem1 e)
-                {
-                    bool result = false;
-                    e.CatalogueId_IsReadOnly(ref result);
-                    return result;
-                }
-                private static void _CatalogueId_Validate(global::LightSwitchApplication.CatalogueItem1 e, global::Microsoft.LightSwitch.EntityValidationResultsBuilder r)
-                {
-                    e.CatalogueId_Validate(r);
-                }
-                private static long _CatalogueId_GetImplementationValue(global::LightSwitchApplication.CatalogueItem1.DetailsClass d)
-                {
-                    return d.ImplementationEntity.CatalogueId;
-                }
-                private static void _CatalogueId_SetImplementationValue(global::LightSwitchApplication.CatalogueItem1.DetailsClass d, long v)
-                {
-                    d.ImplementationEntity.CatalogueId = v;
-                }
-                private static void _CatalogueId_OnValueChanged(global::LightSwitchApplication.CatalogueItem1 e)
-                {
-                    e.CatalogueId_Changed();
-                }
-    
-                [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.CatalogueItem1, global::LightSwitchApplication.CatalogueItem1.DetailsClass, global::System.DateTimeOffset>.Entry
-                    ValidFrom = new global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.CatalogueItem1, global::LightSwitchApplication.CatalogueItem1.DetailsClass, global::System.DateTimeOffset>.Entry(
-                        "ValidFrom",
-                        global::LightSwitchApplication.CatalogueItem1.DetailsClass.PropertySetProperties._ValidFrom_Stub,
-                        global::LightSwitchApplication.CatalogueItem1.DetailsClass.PropertySetProperties._ValidFrom_ComputeIsReadOnly,
-                        global::LightSwitchApplication.CatalogueItem1.DetailsClass.PropertySetProperties._ValidFrom_Validate,
-                        global::LightSwitchApplication.CatalogueItem1.DetailsClass.PropertySetProperties._ValidFrom_GetImplementationValue,
-                        global::LightSwitchApplication.CatalogueItem1.DetailsClass.PropertySetProperties._ValidFrom_SetImplementationValue,
-                        global::LightSwitchApplication.CatalogueItem1.DetailsClass.PropertySetProperties._ValidFrom_OnValueChanged);
-                private static void _ValidFrom_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.CatalogueItem1.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.CatalogueItem1, global::LightSwitchApplication.CatalogueItem1.DetailsClass, global::System.DateTimeOffset>.Data> c, global::LightSwitchApplication.CatalogueItem1.DetailsClass d, object sf)
-                {
-                    c(d, ref d._ValidFrom, sf);
-                }
-                private static bool _ValidFrom_ComputeIsReadOnly(global::LightSwitchApplication.CatalogueItem1 e)
-                {
-                    bool result = false;
-                    e.ValidFrom_IsReadOnly(ref result);
-                    return result;
-                }
-                private static void _ValidFrom_Validate(global::LightSwitchApplication.CatalogueItem1 e, global::Microsoft.LightSwitch.EntityValidationResultsBuilder r)
-                {
-                    e.ValidFrom_Validate(r);
-                }
-                private static global::System.DateTimeOffset _ValidFrom_GetImplementationValue(global::LightSwitchApplication.CatalogueItem1.DetailsClass d)
-                {
-                    return d.ImplementationEntity.ValidFrom;
-                }
-                private static void _ValidFrom_SetImplementationValue(global::LightSwitchApplication.CatalogueItem1.DetailsClass d, global::System.DateTimeOffset v)
-                {
-                    d.ImplementationEntity.ValidFrom = v;
-                }
-                private static void _ValidFrom_OnValueChanged(global::LightSwitchApplication.CatalogueItem1 e)
-                {
-                    e.ValidFrom_Changed();
-                }
-    
-                [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.CatalogueItem1, global::LightSwitchApplication.CatalogueItem1.DetailsClass, global::System.DateTimeOffset>.Entry
-                    ValidUntil = new global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.CatalogueItem1, global::LightSwitchApplication.CatalogueItem1.DetailsClass, global::System.DateTimeOffset>.Entry(
-                        "ValidUntil",
-                        global::LightSwitchApplication.CatalogueItem1.DetailsClass.PropertySetProperties._ValidUntil_Stub,
-                        global::LightSwitchApplication.CatalogueItem1.DetailsClass.PropertySetProperties._ValidUntil_ComputeIsReadOnly,
-                        global::LightSwitchApplication.CatalogueItem1.DetailsClass.PropertySetProperties._ValidUntil_Validate,
-                        global::LightSwitchApplication.CatalogueItem1.DetailsClass.PropertySetProperties._ValidUntil_GetImplementationValue,
-                        global::LightSwitchApplication.CatalogueItem1.DetailsClass.PropertySetProperties._ValidUntil_SetImplementationValue,
-                        global::LightSwitchApplication.CatalogueItem1.DetailsClass.PropertySetProperties._ValidUntil_OnValueChanged);
-                private static void _ValidUntil_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.CatalogueItem1.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.CatalogueItem1, global::LightSwitchApplication.CatalogueItem1.DetailsClass, global::System.DateTimeOffset>.Data> c, global::LightSwitchApplication.CatalogueItem1.DetailsClass d, object sf)
-                {
-                    c(d, ref d._ValidUntil, sf);
-                }
-                private static bool _ValidUntil_ComputeIsReadOnly(global::LightSwitchApplication.CatalogueItem1 e)
-                {
-                    bool result = false;
-                    e.ValidUntil_IsReadOnly(ref result);
-                    return result;
-                }
-                private static void _ValidUntil_Validate(global::LightSwitchApplication.CatalogueItem1 e, global::Microsoft.LightSwitch.EntityValidationResultsBuilder r)
-                {
-                    e.ValidUntil_Validate(r);
-                }
-                private static global::System.DateTimeOffset _ValidUntil_GetImplementationValue(global::LightSwitchApplication.CatalogueItem1.DetailsClass d)
-                {
-                    return d.ImplementationEntity.ValidUntil;
-                }
-                private static void _ValidUntil_SetImplementationValue(global::LightSwitchApplication.CatalogueItem1.DetailsClass d, global::System.DateTimeOffset v)
-                {
-                    d.ImplementationEntity.ValidUntil = v;
-                }
-                private static void _ValidUntil_OnValueChanged(global::LightSwitchApplication.CatalogueItem1 e)
-                {
-                    e.ValidUntil_Changed();
-                }
-    
-                [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.CatalogueItem1, global::LightSwitchApplication.CatalogueItem1.DetailsClass, global::System.DateTimeOffset>.Entry
-                    EndOfSale = new global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.CatalogueItem1, global::LightSwitchApplication.CatalogueItem1.DetailsClass, global::System.DateTimeOffset>.Entry(
-                        "EndOfSale",
-                        global::LightSwitchApplication.CatalogueItem1.DetailsClass.PropertySetProperties._EndOfSale_Stub,
-                        global::LightSwitchApplication.CatalogueItem1.DetailsClass.PropertySetProperties._EndOfSale_ComputeIsReadOnly,
-                        global::LightSwitchApplication.CatalogueItem1.DetailsClass.PropertySetProperties._EndOfSale_Validate,
-                        global::LightSwitchApplication.CatalogueItem1.DetailsClass.PropertySetProperties._EndOfSale_GetImplementationValue,
-                        global::LightSwitchApplication.CatalogueItem1.DetailsClass.PropertySetProperties._EndOfSale_SetImplementationValue,
-                        global::LightSwitchApplication.CatalogueItem1.DetailsClass.PropertySetProperties._EndOfSale_OnValueChanged);
-                private static void _EndOfSale_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.CatalogueItem1.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.CatalogueItem1, global::LightSwitchApplication.CatalogueItem1.DetailsClass, global::System.DateTimeOffset>.Data> c, global::LightSwitchApplication.CatalogueItem1.DetailsClass d, object sf)
-                {
-                    c(d, ref d._EndOfSale, sf);
-                }
-                private static bool _EndOfSale_ComputeIsReadOnly(global::LightSwitchApplication.CatalogueItem1 e)
-                {
-                    bool result = false;
-                    e.EndOfSale_IsReadOnly(ref result);
-                    return result;
-                }
-                private static void _EndOfSale_Validate(global::LightSwitchApplication.CatalogueItem1 e, global::Microsoft.LightSwitch.EntityValidationResultsBuilder r)
-                {
-                    e.EndOfSale_Validate(r);
-                }
-                private static global::System.DateTimeOffset _EndOfSale_GetImplementationValue(global::LightSwitchApplication.CatalogueItem1.DetailsClass d)
-                {
-                    return d.ImplementationEntity.EndOfSale;
-                }
-                private static void _EndOfSale_SetImplementationValue(global::LightSwitchApplication.CatalogueItem1.DetailsClass d, global::System.DateTimeOffset v)
-                {
-                    d.ImplementationEntity.EndOfSale = v;
-                }
-                private static void _EndOfSale_OnValueChanged(global::LightSwitchApplication.CatalogueItem1 e)
-                {
-                    e.EndOfSale_Changed();
-                }
-    
-                [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.CatalogueItem1, global::LightSwitchApplication.CatalogueItem1.DetailsClass, global::System.DateTimeOffset>.Entry
-                    EndOfLife = new global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.CatalogueItem1, global::LightSwitchApplication.CatalogueItem1.DetailsClass, global::System.DateTimeOffset>.Entry(
-                        "EndOfLife",
-                        global::LightSwitchApplication.CatalogueItem1.DetailsClass.PropertySetProperties._EndOfLife_Stub,
-                        global::LightSwitchApplication.CatalogueItem1.DetailsClass.PropertySetProperties._EndOfLife_ComputeIsReadOnly,
-                        global::LightSwitchApplication.CatalogueItem1.DetailsClass.PropertySetProperties._EndOfLife_Validate,
-                        global::LightSwitchApplication.CatalogueItem1.DetailsClass.PropertySetProperties._EndOfLife_GetImplementationValue,
-                        global::LightSwitchApplication.CatalogueItem1.DetailsClass.PropertySetProperties._EndOfLife_SetImplementationValue,
-                        global::LightSwitchApplication.CatalogueItem1.DetailsClass.PropertySetProperties._EndOfLife_OnValueChanged);
-                private static void _EndOfLife_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.CatalogueItem1.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.CatalogueItem1, global::LightSwitchApplication.CatalogueItem1.DetailsClass, global::System.DateTimeOffset>.Data> c, global::LightSwitchApplication.CatalogueItem1.DetailsClass d, object sf)
-                {
-                    c(d, ref d._EndOfLife, sf);
-                }
-                private static bool _EndOfLife_ComputeIsReadOnly(global::LightSwitchApplication.CatalogueItem1 e)
-                {
-                    bool result = false;
-                    e.EndOfLife_IsReadOnly(ref result);
-                    return result;
-                }
-                private static void _EndOfLife_Validate(global::LightSwitchApplication.CatalogueItem1 e, global::Microsoft.LightSwitch.EntityValidationResultsBuilder r)
-                {
-                    e.EndOfLife_Validate(r);
-                }
-                private static global::System.DateTimeOffset _EndOfLife_GetImplementationValue(global::LightSwitchApplication.CatalogueItem1.DetailsClass d)
-                {
-                    return d.ImplementationEntity.EndOfLife;
-                }
-                private static void _EndOfLife_SetImplementationValue(global::LightSwitchApplication.CatalogueItem1.DetailsClass d, global::System.DateTimeOffset v)
-                {
-                    d.ImplementationEntity.EndOfLife = v;
-                }
-                private static void _EndOfLife_OnValueChanged(global::LightSwitchApplication.CatalogueItem1 e)
-                {
-                    e.EndOfLife_Changed();
-                }
-    
-                [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.CatalogueItem1, global::LightSwitchApplication.CatalogueItem1.DetailsClass, string>.Entry
-                    Parameters = new global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.CatalogueItem1, global::LightSwitchApplication.CatalogueItem1.DetailsClass, string>.Entry(
-                        "Parameters",
-                        global::LightSwitchApplication.CatalogueItem1.DetailsClass.PropertySetProperties._Parameters_Stub,
-                        global::LightSwitchApplication.CatalogueItem1.DetailsClass.PropertySetProperties._Parameters_ComputeIsReadOnly,
-                        global::LightSwitchApplication.CatalogueItem1.DetailsClass.PropertySetProperties._Parameters_Validate,
-                        global::LightSwitchApplication.CatalogueItem1.DetailsClass.PropertySetProperties._Parameters_GetImplementationValue,
-                        global::LightSwitchApplication.CatalogueItem1.DetailsClass.PropertySetProperties._Parameters_SetImplementationValue,
-                        global::LightSwitchApplication.CatalogueItem1.DetailsClass.PropertySetProperties._Parameters_OnValueChanged);
-                private static void _Parameters_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.CatalogueItem1.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.CatalogueItem1, global::LightSwitchApplication.CatalogueItem1.DetailsClass, string>.Data> c, global::LightSwitchApplication.CatalogueItem1.DetailsClass d, object sf)
-                {
-                    c(d, ref d._Parameters, sf);
-                }
-                private static bool _Parameters_ComputeIsReadOnly(global::LightSwitchApplication.CatalogueItem1 e)
-                {
-                    bool result = false;
-                    e.Parameters_IsReadOnly(ref result);
-                    return result;
-                }
-                private static void _Parameters_Validate(global::LightSwitchApplication.CatalogueItem1 e, global::Microsoft.LightSwitch.EntityValidationResultsBuilder r)
-                {
-                    e.Parameters_Validate(r);
-                }
-                private static string _Parameters_GetImplementationValue(global::LightSwitchApplication.CatalogueItem1.DetailsClass d)
-                {
-                    return d.ImplementationEntity.Parameters;
-                }
-                private static void _Parameters_SetImplementationValue(global::LightSwitchApplication.CatalogueItem1.DetailsClass d, string v)
-                {
-                    d.ImplementationEntity.Parameters = v;
-                }
-                private static void _Parameters_OnValueChanged(global::LightSwitchApplication.CatalogueItem1 e)
-                {
-                    e.Parameters_Changed();
-                }
-    
-                [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.CatalogueItem1, global::LightSwitchApplication.CatalogueItem1.DetailsClass, byte[]>.Entry
-                    RowVersion = new global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.CatalogueItem1, global::LightSwitchApplication.CatalogueItem1.DetailsClass, byte[]>.Entry(
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.CartItem, global::LightSwitchApplication.CartItem.DetailsClass, byte[]>.Entry
+                    RowVersion = new global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.CartItem, global::LightSwitchApplication.CartItem.DetailsClass, byte[]>.Entry(
                         "RowVersion",
-                        global::LightSwitchApplication.CatalogueItem1.DetailsClass.PropertySetProperties._RowVersion_Stub,
-                        global::LightSwitchApplication.CatalogueItem1.DetailsClass.PropertySetProperties._RowVersion_ComputeIsReadOnly,
-                        global::LightSwitchApplication.CatalogueItem1.DetailsClass.PropertySetProperties._RowVersion_Validate,
-                        global::LightSwitchApplication.CatalogueItem1.DetailsClass.PropertySetProperties._RowVersion_GetImplementationValue,
-                        global::LightSwitchApplication.CatalogueItem1.DetailsClass.PropertySetProperties._RowVersion_SetImplementationValue,
-                        global::LightSwitchApplication.CatalogueItem1.DetailsClass.PropertySetProperties._RowVersion_OnValueChanged);
-                private static void _RowVersion_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.CatalogueItem1.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.CatalogueItem1, global::LightSwitchApplication.CatalogueItem1.DetailsClass, byte[]>.Data> c, global::LightSwitchApplication.CatalogueItem1.DetailsClass d, object sf)
+                        global::LightSwitchApplication.CartItem.DetailsClass.PropertySetProperties._RowVersion_Stub,
+                        global::LightSwitchApplication.CartItem.DetailsClass.PropertySetProperties._RowVersion_ComputeIsReadOnly,
+                        global::LightSwitchApplication.CartItem.DetailsClass.PropertySetProperties._RowVersion_Validate,
+                        global::LightSwitchApplication.CartItem.DetailsClass.PropertySetProperties._RowVersion_GetImplementationValue,
+                        global::LightSwitchApplication.CartItem.DetailsClass.PropertySetProperties._RowVersion_SetImplementationValue,
+                        global::LightSwitchApplication.CartItem.DetailsClass.PropertySetProperties._RowVersion_OnValueChanged);
+                private static void _RowVersion_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.CartItem.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.CartItem, global::LightSwitchApplication.CartItem.DetailsClass, byte[]>.Data> c, global::LightSwitchApplication.CartItem.DetailsClass d, object sf)
                 {
                     c(d, ref d._RowVersion, sf);
                 }
-                private static bool _RowVersion_ComputeIsReadOnly(global::LightSwitchApplication.CatalogueItem1 e)
+                private static bool _RowVersion_ComputeIsReadOnly(global::LightSwitchApplication.CartItem e)
                 {
                     bool result = false;
                     e.RowVersion_IsReadOnly(ref result);
                     return result;
                 }
-                private static void _RowVersion_Validate(global::LightSwitchApplication.CatalogueItem1 e, global::Microsoft.LightSwitch.EntityValidationResultsBuilder r)
+                private static void _RowVersion_Validate(global::LightSwitchApplication.CartItem e, global::Microsoft.LightSwitch.EntityValidationResultsBuilder r)
                 {
                     e.RowVersion_Validate(r);
                 }
-                private static byte[] _RowVersion_GetImplementationValue(global::LightSwitchApplication.CatalogueItem1.DetailsClass d)
+                private static byte[] _RowVersion_GetImplementationValue(global::LightSwitchApplication.CartItem.DetailsClass d)
                 {
                     return d.ImplementationEntity.RowVersion;
                 }
-                private static void _RowVersion_SetImplementationValue(global::LightSwitchApplication.CatalogueItem1.DetailsClass d, byte[] v)
+                private static void _RowVersion_SetImplementationValue(global::LightSwitchApplication.CartItem.DetailsClass d, byte[] v)
                 {
                     d.ImplementationEntity.RowVersion = v;
                 }
-                private static void _RowVersion_OnValueChanged(global::LightSwitchApplication.CatalogueItem1 e)
+                private static void _RowVersion_OnValueChanged(global::LightSwitchApplication.CartItem e)
                 {
                     e.RowVersion_Changed();
                 }
     
                 [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.CatalogueItem1, global::LightSwitchApplication.CatalogueItem1.DetailsClass, long>.Entry
-                    ProductId = new global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.CatalogueItem1, global::LightSwitchApplication.CatalogueItem1.DetailsClass, long>.Entry(
-                        "ProductId",
-                        global::LightSwitchApplication.CatalogueItem1.DetailsClass.PropertySetProperties._ProductId_Stub,
-                        global::LightSwitchApplication.CatalogueItem1.DetailsClass.PropertySetProperties._ProductId_ComputeIsReadOnly,
-                        global::LightSwitchApplication.CatalogueItem1.DetailsClass.PropertySetProperties._ProductId_Validate,
-                        global::LightSwitchApplication.CatalogueItem1.DetailsClass.PropertySetProperties._ProductId_GetImplementationValue,
-                        global::LightSwitchApplication.CatalogueItem1.DetailsClass.PropertySetProperties._ProductId_SetImplementationValue,
-                        global::LightSwitchApplication.CatalogueItem1.DetailsClass.PropertySetProperties._ProductId_OnValueChanged);
-                private static void _ProductId_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.CatalogueItem1.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.CatalogueItem1, global::LightSwitchApplication.CatalogueItem1.DetailsClass, long>.Data> c, global::LightSwitchApplication.CatalogueItem1.DetailsClass d, object sf)
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.CartItem, global::LightSwitchApplication.CartItem.DetailsClass, string>.Entry
+                    Parameters = new global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.CartItem, global::LightSwitchApplication.CartItem.DetailsClass, string>.Entry(
+                        "Parameters",
+                        global::LightSwitchApplication.CartItem.DetailsClass.PropertySetProperties._Parameters_Stub,
+                        global::LightSwitchApplication.CartItem.DetailsClass.PropertySetProperties._Parameters_ComputeIsReadOnly,
+                        global::LightSwitchApplication.CartItem.DetailsClass.PropertySetProperties._Parameters_Validate,
+                        global::LightSwitchApplication.CartItem.DetailsClass.PropertySetProperties._Parameters_GetImplementationValue,
+                        global::LightSwitchApplication.CartItem.DetailsClass.PropertySetProperties._Parameters_SetImplementationValue,
+                        global::LightSwitchApplication.CartItem.DetailsClass.PropertySetProperties._Parameters_OnValueChanged);
+                private static void _Parameters_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.CartItem.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.CartItem, global::LightSwitchApplication.CartItem.DetailsClass, string>.Data> c, global::LightSwitchApplication.CartItem.DetailsClass d, object sf)
                 {
-                    c(d, ref d._ProductId, sf);
+                    c(d, ref d._Parameters, sf);
                 }
-                private static bool _ProductId_ComputeIsReadOnly(global::LightSwitchApplication.CatalogueItem1 e)
+                private static bool _Parameters_ComputeIsReadOnly(global::LightSwitchApplication.CartItem e)
                 {
                     bool result = false;
-                    e.ProductId_IsReadOnly(ref result);
+                    e.Parameters_IsReadOnly(ref result);
                     return result;
                 }
-                private static void _ProductId_Validate(global::LightSwitchApplication.CatalogueItem1 e, global::Microsoft.LightSwitch.EntityValidationResultsBuilder r)
+                private static void _Parameters_Validate(global::LightSwitchApplication.CartItem e, global::Microsoft.LightSwitch.EntityValidationResultsBuilder r)
                 {
-                    e.ProductId_Validate(r);
+                    e.Parameters_Validate(r);
                 }
-                private static long _ProductId_GetImplementationValue(global::LightSwitchApplication.CatalogueItem1.DetailsClass d)
+                private static string _Parameters_GetImplementationValue(global::LightSwitchApplication.CartItem.DetailsClass d)
                 {
-                    return d.ImplementationEntity.ProductId;
+                    return d.ImplementationEntity.Parameters;
                 }
-                private static void _ProductId_SetImplementationValue(global::LightSwitchApplication.CatalogueItem1.DetailsClass d, long v)
+                private static void _Parameters_SetImplementationValue(global::LightSwitchApplication.CartItem.DetailsClass d, string v)
                 {
-                    d.ImplementationEntity.ProductId = v;
+                    d.ImplementationEntity.Parameters = v;
                 }
-                private static void _ProductId_OnValueChanged(global::LightSwitchApplication.CatalogueItem1 e)
+                private static void _Parameters_OnValueChanged(global::LightSwitchApplication.CartItem e)
                 {
-                    e.ProductId_Changed();
+                    e.Parameters_Changed();
                 }
     
             }
     
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-            private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.CatalogueItem1, global::LightSwitchApplication.CatalogueItem1.DetailsClass, long>.Data _Id;
+            private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.CartItem, global::LightSwitchApplication.CartItem.DetailsClass, long>.Data _CartId;
             
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-            private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.CatalogueItem1, global::LightSwitchApplication.CatalogueItem1.DetailsClass, string>.Data _Tid;
+            private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.CartItem, global::LightSwitchApplication.CartItem.DetailsClass, int>.Data _Quantity;
             
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-            private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.CatalogueItem1, global::LightSwitchApplication.CatalogueItem1.DetailsClass, string>.Data _Name;
+            private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.CartItem, global::LightSwitchApplication.CartItem.DetailsClass, long>.Data _CatalogueItemId;
             
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-            private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.CatalogueItem1, global::LightSwitchApplication.CatalogueItem1.DetailsClass, string>.Data _Description;
+            private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.CartItem, global::LightSwitchApplication.CartItem.DetailsClass, long>.Data _Id;
             
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-            private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.CatalogueItem1, global::LightSwitchApplication.CatalogueItem1.DetailsClass, string>.Data _CreatedBy;
+            private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.CartItem, global::LightSwitchApplication.CartItem.DetailsClass, string>.Data _Tid;
             
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-            private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.CatalogueItem1, global::LightSwitchApplication.CatalogueItem1.DetailsClass, string>.Data _ModifiedBy;
+            private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.CartItem, global::LightSwitchApplication.CartItem.DetailsClass, string>.Data _Name;
             
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-            private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.CatalogueItem1, global::LightSwitchApplication.CatalogueItem1.DetailsClass, global::System.DateTimeOffset>.Data _Created;
+            private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.CartItem, global::LightSwitchApplication.CartItem.DetailsClass, string>.Data _Description;
             
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-            private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.CatalogueItem1, global::LightSwitchApplication.CatalogueItem1.DetailsClass, global::System.DateTimeOffset>.Data _Modified;
+            private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.CartItem, global::LightSwitchApplication.CartItem.DetailsClass, string>.Data _CreatedBy;
             
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-            private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.CatalogueItem1, global::LightSwitchApplication.CatalogueItem1.DetailsClass, long>.Data _CatalogueId;
+            private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.CartItem, global::LightSwitchApplication.CartItem.DetailsClass, string>.Data _ModifiedBy;
             
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-            private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.CatalogueItem1, global::LightSwitchApplication.CatalogueItem1.DetailsClass, global::System.DateTimeOffset>.Data _ValidFrom;
+            private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.CartItem, global::LightSwitchApplication.CartItem.DetailsClass, global::System.DateTimeOffset>.Data _Created;
             
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-            private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.CatalogueItem1, global::LightSwitchApplication.CatalogueItem1.DetailsClass, global::System.DateTimeOffset>.Data _ValidUntil;
+            private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.CartItem, global::LightSwitchApplication.CartItem.DetailsClass, global::System.DateTimeOffset>.Data _Modified;
             
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-            private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.CatalogueItem1, global::LightSwitchApplication.CatalogueItem1.DetailsClass, global::System.DateTimeOffset>.Data _EndOfSale;
+            private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.CartItem, global::LightSwitchApplication.CartItem.DetailsClass, byte[]>.Data _RowVersion;
             
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-            private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.CatalogueItem1, global::LightSwitchApplication.CatalogueItem1.DetailsClass, global::System.DateTimeOffset>.Data _EndOfLife;
-            
-            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-            private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.CatalogueItem1, global::LightSwitchApplication.CatalogueItem1.DetailsClass, string>.Data _Parameters;
-            
-            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-            private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.CatalogueItem1, global::LightSwitchApplication.CatalogueItem1.DetailsClass, byte[]>.Data _RowVersion;
-            
-            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-            private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.CatalogueItem1, global::LightSwitchApplication.CatalogueItem1.DetailsClass, long>.Data _ProductId;
+            private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.CartItem, global::LightSwitchApplication.CartItem.DetailsClass, string>.Data _Parameters;
             
         }
     

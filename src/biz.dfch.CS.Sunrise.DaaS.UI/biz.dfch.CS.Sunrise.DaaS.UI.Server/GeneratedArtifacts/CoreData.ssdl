@@ -5,10 +5,12 @@
     <EntitySet Name="Acls" EntityType="CoreDataStore.Acl" store:Type="Tables" Schema="dbo" Table="Acl" />
     <EntitySet Name="ActiveDirectoryUsers" EntityType="CoreDataStore.ActiveDirectoryUser" store:Type="Tables" Schema="dbo" Table="ActiveDirectoryUser" />
     <EntitySet Name="Approvals" EntityType="CoreDataStore.Approval" store:Type="Tables" Schema="dbo" Table="Approval" />
+    <EntitySet Name="Assocs" EntityType="CoreDataStore.Assoc" store:Type="Tables" Schema="dbo" Table="Assoc" />
     <EntitySet Name="CartItems" EntityType="CoreDataStore.CartItem" store:Type="Tables" Schema="dbo" Table="CartItem" />
     <EntitySet Name="Carts" EntityType="CoreDataStore.Cart" store:Type="Tables" Schema="dbo" Table="Cart" />
     <EntitySet Name="CatalogueItems" EntityType="CoreDataStore.CatalogueItem1" store:Type="Tables" Schema="dbo" Table="CatalogueItem" />
     <EntitySet Name="Catalogues" EntityType="CoreDataStore.Catalogue" store:Type="Tables" Schema="dbo" Table="Catalogue" />
+    <EntitySet Name="CostCentres" EntityType="CoreDataStore.CostCentre" store:Type="Tables" Schema="dbo" Table="CostCentre" />
     <EntitySet Name="EntityTypes" EntityType="CoreDataStore.EntityType" store:Type="Tables" Schema="dbo" Table="EntityType" />
     <EntitySet Name="Gates" EntityType="CoreDataStore.Gate" store:Type="Tables" Schema="dbo" Table="Gate" />
     <EntitySet Name="Jobs" EntityType="CoreDataStore.Job" store:Type="Tables" Schema="dbo" Table="Job" />
@@ -19,8 +21,6 @@
     <EntitySet Name="OrderItems" EntityType="CoreDataStore.OrderItem" store:Type="Tables" Schema="dbo" Table="OrderItem" />
     <EntitySet Name="Orders" EntityType="CoreDataStore.Order" store:Type="Tables" Schema="dbo" Table="Order" />
     <EntitySet Name="Products" EntityType="CoreDataStore.Product" store:Type="Tables" Schema="dbo" Table="Product" />
-    <EntitySet Name="Assocs" EntityType="CoreDataStore.Assoc" store:Type="Tables" Schema="dbo" Table="Assoc" />
-    <EntitySet Name="CostCentres" EntityType="CoreDataStore.CostCentre" store:Type="Tables" Schema="dbo" Table="CostCentre" />
     <AssociationSet Name="biz_dfch_CS_Appclusive_Core_OdataServices_Core_Acl_Aces_biz_dfch" Association="CoreDataStore.biz_dfch_CS_Appclusive_Core_OdataServices_Core_Acl_Aces_biz_dfch">
       <End Role="AcesPartner" EntitySet="Acls" />
       <End Role="Aces" EntitySet="Aces" />
@@ -41,14 +41,6 @@
       <End Role="ChildrenPartner" EntitySet="Nodes" />
       <End Role="Children" EntitySet="Nodes" />
     </AssociationSet>
-    <AssociationSet Name="biz_dfch_CS_Sunrise_DaaS_Endpoints_OdataServices_Core_Order_Orde" Association="CoreDataStore.biz_dfch_CS_Sunrise_DaaS_Endpoints_OdataServices_Core_Order_Orde">
-      <End Role="OrderItemsPartner" EntitySet="Orders" />
-      <End Role="OrderItems" EntitySet="OrderItems" />
-    </AssociationSet>
-    <AssociationSet Name="biz_dfch_CS_Appclusive_Core_OdataServices_Core_Product_Catalogue" Association="CoreDataStore.biz_dfch_CS_Appclusive_Core_OdataServices_Core_Product_Catalogue">
-      <End Role="CatalogueItemsPartner" EntitySet="Products" />
-      <End Role="CatalogueItems" EntitySet="CatalogueItems" />
-    </AssociationSet>
     <AssociationSet Name="biz_dfch_CS_Appclusive_Core_OdataServices_Core_Node_IncomingAsso" Association="CoreDataStore.biz_dfch_CS_Appclusive_Core_OdataServices_Core_Node_IncomingAsso">
       <End Role="IncomingAssocsPartner" EntitySet="Nodes" />
       <End Role="IncomingAssocs" EntitySet="Assocs" />
@@ -56,6 +48,14 @@
     <AssociationSet Name="biz_dfch_CS_Appclusive_Core_OdataServices_Core_Node_OutgoingAsso" Association="CoreDataStore.biz_dfch_CS_Appclusive_Core_OdataServices_Core_Node_OutgoingAsso">
       <End Role="OutgoingAssocsPartner" EntitySet="Nodes" />
       <End Role="OutgoingAssocs" EntitySet="Assocs" />
+    </AssociationSet>
+    <AssociationSet Name="biz_dfch_CS_Sunrise_DaaS_Endpoints_OdataServices_Core_Order_Orde" Association="CoreDataStore.biz_dfch_CS_Sunrise_DaaS_Endpoints_OdataServices_Core_Order_Orde">
+      <End Role="OrderItemsPartner" EntitySet="Orders" />
+      <End Role="OrderItems" EntitySet="OrderItems" />
+    </AssociationSet>
+    <AssociationSet Name="biz_dfch_CS_Appclusive_Core_OdataServices_Core_Product_Catalogue" Association="CoreDataStore.biz_dfch_CS_Appclusive_Core_OdataServices_Core_Product_Catalogue">
+      <End Role="CatalogueItemsPartner" EntitySet="Products" />
+      <End Role="CatalogueItems" EntitySet="CatalogueItems" />
     </AssociationSet>
   </EntityContainer>
   <EntityType Name="Ace">
@@ -132,6 +132,23 @@
     <Property Name="NotBefore" Type="datetimeoffset" Nullable="false" />
     <Property Name="ExpiresAt" Type="datetimeoffset" Nullable="false" />
   </EntityType>
+  <EntityType Name="Assoc">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Order" Type="bigint" Nullable="false" />
+    <Property Name="SourceId" Type="bigint" Nullable="false" />
+    <Property Name="DestinationId" Type="bigint" Nullable="false" />
+    <Property Name="Id" Type="bigint" Nullable="false" />
+    <Property Name="Tid" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Name" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Description" Type="nvarchar(max)" />
+    <Property Name="CreatedBy" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="ModifiedBy" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Created" Type="datetimeoffset" Nullable="false" />
+    <Property Name="Modified" Type="datetimeoffset" Nullable="false" />
+    <Property Name="RowVersion" Type="varbinary(max)" />
+  </EntityType>
   <EntityType Name="CartItem">
     <Key>
       <PropertyRef Name="Id" />
@@ -191,6 +208,20 @@
     </Key>
     <Property Name="Status" Type="nvarchar(max)" />
     <Property Name="Version" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Id" Type="bigint" Nullable="false" />
+    <Property Name="Tid" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Name" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Description" Type="nvarchar(max)" />
+    <Property Name="CreatedBy" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="ModifiedBy" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Created" Type="datetimeoffset" Nullable="false" />
+    <Property Name="Modified" Type="datetimeoffset" Nullable="false" />
+    <Property Name="RowVersion" Type="varbinary(max)" />
+  </EntityType>
+  <EntityType Name="CostCentre">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
     <Property Name="Id" Type="bigint" Nullable="false" />
     <Property Name="Tid" Type="nvarchar(max)" Nullable="false" />
     <Property Name="Name" Type="nvarchar(max)" Nullable="false" />
@@ -384,37 +415,6 @@
     <Property Name="Modified" Type="datetimeoffset" Nullable="false" />
     <Property Name="RowVersion" Type="varbinary(max)" />
   </EntityType>
-  <EntityType Name="Assoc">
-    <Key>
-      <PropertyRef Name="Id" />
-    </Key>
-    <Property Name="Order" Type="bigint" Nullable="false" />
-    <Property Name="SourceId" Type="bigint" Nullable="false" />
-    <Property Name="DestinationId" Type="bigint" Nullable="false" />
-    <Property Name="Id" Type="bigint" Nullable="false" />
-    <Property Name="Tid" Type="nvarchar(max)" Nullable="false" />
-    <Property Name="Name" Type="nvarchar(max)" Nullable="false" />
-    <Property Name="Description" Type="nvarchar(max)" />
-    <Property Name="CreatedBy" Type="nvarchar(max)" Nullable="false" />
-    <Property Name="ModifiedBy" Type="nvarchar(max)" Nullable="false" />
-    <Property Name="Created" Type="datetimeoffset" Nullable="false" />
-    <Property Name="Modified" Type="datetimeoffset" Nullable="false" />
-    <Property Name="RowVersion" Type="varbinary(max)" />
-  </EntityType>
-  <EntityType Name="CostCentre">
-    <Key>
-      <PropertyRef Name="Id" />
-    </Key>
-    <Property Name="Id" Type="bigint" Nullable="false" />
-    <Property Name="Tid" Type="nvarchar(max)" Nullable="false" />
-    <Property Name="Name" Type="nvarchar(max)" Nullable="false" />
-    <Property Name="Description" Type="nvarchar(max)" />
-    <Property Name="CreatedBy" Type="nvarchar(max)" Nullable="false" />
-    <Property Name="ModifiedBy" Type="nvarchar(max)" Nullable="false" />
-    <Property Name="Created" Type="datetimeoffset" Nullable="false" />
-    <Property Name="Modified" Type="datetimeoffset" Nullable="false" />
-    <Property Name="RowVersion" Type="varbinary(max)" />
-  </EntityType>
   <Association Name="biz_dfch_CS_Appclusive_Core_OdataServices_Core_Acl_Aces_biz_dfch">
     <End Role="AcesPartner" Type="CoreDataStore.Acl" Multiplicity="0..1">
       <OnDeleteAnnotation Action="Unset" xmlns="http://schemas.microsoft.com/LightSwitch/2013/edm/annotations" />
@@ -445,18 +445,6 @@
     </End>
     <End Role="Children" Type="CoreDataStore.Node" Multiplicity="*" />
   </Association>
-  <Association Name="biz_dfch_CS_Sunrise_DaaS_Endpoints_OdataServices_Core_Order_Orde">
-    <End Role="OrderItemsPartner" Type="CoreDataStore.Order" Multiplicity="0..1">
-      <OnDeleteAnnotation Action="Unset" xmlns="http://schemas.microsoft.com/LightSwitch/2013/edm/annotations" />
-    </End>
-    <End Role="OrderItems" Type="CoreDataStore.OrderItem" Multiplicity="*" />
-  </Association>
-  <Association Name="biz_dfch_CS_Appclusive_Core_OdataServices_Core_Product_Catalogue">
-    <End Role="CatalogueItemsPartner" Type="CoreDataStore.Product" Multiplicity="0..1">
-      <OnDeleteAnnotation Action="Unset" xmlns="http://schemas.microsoft.com/LightSwitch/2013/edm/annotations" />
-    </End>
-    <End Role="CatalogueItems" Type="CoreDataStore.CatalogueItem1" Multiplicity="*" />
-  </Association>
   <Association Name="biz_dfch_CS_Appclusive_Core_OdataServices_Core_Node_IncomingAsso">
     <End Role="IncomingAssocsPartner" Type="CoreDataStore.Node" Multiplicity="0..1">
       <OnDeleteAnnotation Action="Unset" xmlns="http://schemas.microsoft.com/LightSwitch/2013/edm/annotations" />
@@ -468,5 +456,17 @@
       <OnDeleteAnnotation Action="Unset" xmlns="http://schemas.microsoft.com/LightSwitch/2013/edm/annotations" />
     </End>
     <End Role="OutgoingAssocs" Type="CoreDataStore.Assoc" Multiplicity="*" />
+  </Association>
+  <Association Name="biz_dfch_CS_Sunrise_DaaS_Endpoints_OdataServices_Core_Order_Orde">
+    <End Role="OrderItemsPartner" Type="CoreDataStore.Order" Multiplicity="0..1">
+      <OnDeleteAnnotation Action="Unset" xmlns="http://schemas.microsoft.com/LightSwitch/2013/edm/annotations" />
+    </End>
+    <End Role="OrderItems" Type="CoreDataStore.OrderItem" Multiplicity="*" />
+  </Association>
+  <Association Name="biz_dfch_CS_Appclusive_Core_OdataServices_Core_Product_Catalogue">
+    <End Role="CatalogueItemsPartner" Type="CoreDataStore.Product" Multiplicity="0..1">
+      <OnDeleteAnnotation Action="Unset" xmlns="http://schemas.microsoft.com/LightSwitch/2013/edm/annotations" />
+    </End>
+    <End Role="CatalogueItems" Type="CoreDataStore.CatalogueItem1" Multiplicity="*" />
   </Association>
 </Schema>

@@ -71,46 +71,6 @@ window.myapp = msls.application;
         $Entity.call(this, entitySet);
     }
 
-    function ConfigurationUpdate(entitySet) {
-        /// <summary>
-        /// Represents the ConfigurationUpdate entity type.
-        /// </summary>
-        /// <param name="entitySet" type="msls.EntitySet" optional="true">
-        /// The entity set that should contain this configurationUpdate.
-        /// </param>
-        /// <field name="Id" type="String">
-        /// Gets or sets the id for this configurationUpdate.
-        /// </field>
-        /// <field name="Tid" type="String">
-        /// Gets or sets the tid for this configurationUpdate.
-        /// </field>
-        /// <field name="Name" type="String">
-        /// Gets or sets the name for this configurationUpdate.
-        /// </field>
-        /// <field name="Description" type="String">
-        /// Gets or sets the description for this configurationUpdate.
-        /// </field>
-        /// <field name="CreatedBy" type="String">
-        /// Gets or sets the createdBy for this configurationUpdate.
-        /// </field>
-        /// <field name="ModifiedBy" type="String">
-        /// Gets or sets the modifiedBy for this configurationUpdate.
-        /// </field>
-        /// <field name="Created" type="Date">
-        /// Gets or sets the created for this configurationUpdate.
-        /// </field>
-        /// <field name="Modified" type="Date">
-        /// Gets or sets the modified for this configurationUpdate.
-        /// </field>
-        /// <field name="RowVersion" type="String">
-        /// Gets or sets the rowVersion for this configurationUpdate.
-        /// </field>
-        /// <field name="details" type="msls.application.ConfigurationUpdate.Details">
-        /// Gets the details for this configurationUpdate.
-        /// </field>
-        $Entity.call(this, entitySet);
-    }
-
     function Ace(entitySet) {
         /// <summary>
         /// Represents the Ace entity type.
@@ -328,6 +288,55 @@ window.myapp = msls.application;
         $Entity.call(this, entitySet);
     }
 
+    function Assoc(entitySet) {
+        /// <summary>
+        /// Represents the Assoc entity type.
+        /// </summary>
+        /// <param name="entitySet" type="msls.EntitySet" optional="true">
+        /// The entity set that should contain this assoc.
+        /// </param>
+        /// <field name="Order" type="String">
+        /// Gets or sets the order for this assoc.
+        /// </field>
+        /// <field name="SourceId" type="String">
+        /// Gets or sets the sourceId for this assoc.
+        /// </field>
+        /// <field name="DestinationId" type="String">
+        /// Gets or sets the destinationId for this assoc.
+        /// </field>
+        /// <field name="Id" type="String">
+        /// Gets or sets the id for this assoc.
+        /// </field>
+        /// <field name="Tid" type="String">
+        /// Gets or sets the tid for this assoc.
+        /// </field>
+        /// <field name="Name" type="String">
+        /// Gets or sets the name for this assoc.
+        /// </field>
+        /// <field name="Description" type="String">
+        /// Gets or sets the description for this assoc.
+        /// </field>
+        /// <field name="CreatedBy" type="String">
+        /// Gets or sets the createdBy for this assoc.
+        /// </field>
+        /// <field name="ModifiedBy" type="String">
+        /// Gets or sets the modifiedBy for this assoc.
+        /// </field>
+        /// <field name="Created" type="Date">
+        /// Gets or sets the created for this assoc.
+        /// </field>
+        /// <field name="Modified" type="Date">
+        /// Gets or sets the modified for this assoc.
+        /// </field>
+        /// <field name="RowVersion" type="String">
+        /// Gets or sets the rowVersion for this assoc.
+        /// </field>
+        /// <field name="details" type="msls.application.Assoc.Details">
+        /// Gets the details for this assoc.
+        /// </field>
+        $Entity.call(this, entitySet);
+    }
+
     function CartItem(entitySet) {
         /// <summary>
         /// Represents the CartItem entity type.
@@ -529,6 +538,46 @@ window.myapp = msls.application;
         /// </field>
         /// <field name="details" type="msls.application.Catalogue.Details">
         /// Gets the details for this catalogue.
+        /// </field>
+        $Entity.call(this, entitySet);
+    }
+
+    function CostCentre(entitySet) {
+        /// <summary>
+        /// Represents the CostCentre entity type.
+        /// </summary>
+        /// <param name="entitySet" type="msls.EntitySet" optional="true">
+        /// The entity set that should contain this costCentre.
+        /// </param>
+        /// <field name="Id" type="String">
+        /// Gets or sets the id for this costCentre.
+        /// </field>
+        /// <field name="Tid" type="String">
+        /// Gets or sets the tid for this costCentre.
+        /// </field>
+        /// <field name="Name" type="String">
+        /// Gets or sets the name for this costCentre.
+        /// </field>
+        /// <field name="Description" type="String">
+        /// Gets or sets the description for this costCentre.
+        /// </field>
+        /// <field name="CreatedBy" type="String">
+        /// Gets or sets the createdBy for this costCentre.
+        /// </field>
+        /// <field name="ModifiedBy" type="String">
+        /// Gets or sets the modifiedBy for this costCentre.
+        /// </field>
+        /// <field name="Created" type="Date">
+        /// Gets or sets the created for this costCentre.
+        /// </field>
+        /// <field name="Modified" type="Date">
+        /// Gets or sets the modified for this costCentre.
+        /// </field>
+        /// <field name="RowVersion" type="String">
+        /// Gets or sets the rowVersion for this costCentre.
+        /// </field>
+        /// <field name="details" type="msls.application.CostCentre.Details">
+        /// Gets the details for this costCentre.
         /// </field>
         $Entity.call(this, entitySet);
     }
@@ -1080,95 +1129,6 @@ window.myapp = msls.application;
         $Entity.call(this, entitySet);
     }
 
-    function Assoc(entitySet) {
-        /// <summary>
-        /// Represents the Assoc entity type.
-        /// </summary>
-        /// <param name="entitySet" type="msls.EntitySet" optional="true">
-        /// The entity set that should contain this assoc.
-        /// </param>
-        /// <field name="Order" type="String">
-        /// Gets or sets the order for this assoc.
-        /// </field>
-        /// <field name="SourceId" type="String">
-        /// Gets or sets the sourceId for this assoc.
-        /// </field>
-        /// <field name="DestinationId" type="String">
-        /// Gets or sets the destinationId for this assoc.
-        /// </field>
-        /// <field name="Id" type="String">
-        /// Gets or sets the id for this assoc.
-        /// </field>
-        /// <field name="Tid" type="String">
-        /// Gets or sets the tid for this assoc.
-        /// </field>
-        /// <field name="Name" type="String">
-        /// Gets or sets the name for this assoc.
-        /// </field>
-        /// <field name="Description" type="String">
-        /// Gets or sets the description for this assoc.
-        /// </field>
-        /// <field name="CreatedBy" type="String">
-        /// Gets or sets the createdBy for this assoc.
-        /// </field>
-        /// <field name="ModifiedBy" type="String">
-        /// Gets or sets the modifiedBy for this assoc.
-        /// </field>
-        /// <field name="Created" type="Date">
-        /// Gets or sets the created for this assoc.
-        /// </field>
-        /// <field name="Modified" type="Date">
-        /// Gets or sets the modified for this assoc.
-        /// </field>
-        /// <field name="RowVersion" type="String">
-        /// Gets or sets the rowVersion for this assoc.
-        /// </field>
-        /// <field name="details" type="msls.application.Assoc.Details">
-        /// Gets the details for this assoc.
-        /// </field>
-        $Entity.call(this, entitySet);
-    }
-
-    function CostCentre(entitySet) {
-        /// <summary>
-        /// Represents the CostCentre entity type.
-        /// </summary>
-        /// <param name="entitySet" type="msls.EntitySet" optional="true">
-        /// The entity set that should contain this costCentre.
-        /// </param>
-        /// <field name="Id" type="String">
-        /// Gets or sets the id for this costCentre.
-        /// </field>
-        /// <field name="Tid" type="String">
-        /// Gets or sets the tid for this costCentre.
-        /// </field>
-        /// <field name="Name" type="String">
-        /// Gets or sets the name for this costCentre.
-        /// </field>
-        /// <field name="Description" type="String">
-        /// Gets or sets the description for this costCentre.
-        /// </field>
-        /// <field name="CreatedBy" type="String">
-        /// Gets or sets the createdBy for this costCentre.
-        /// </field>
-        /// <field name="ModifiedBy" type="String">
-        /// Gets or sets the modifiedBy for this costCentre.
-        /// </field>
-        /// <field name="Created" type="Date">
-        /// Gets or sets the created for this costCentre.
-        /// </field>
-        /// <field name="Modified" type="Date">
-        /// Gets or sets the modified for this costCentre.
-        /// </field>
-        /// <field name="RowVersion" type="String">
-        /// Gets or sets the rowVersion for this costCentre.
-        /// </field>
-        /// <field name="details" type="msls.application.CostCentre.Details">
-        /// Gets the details for this costCentre.
-        /// </field>
-        $Entity.call(this, entitySet);
-    }
-
     function DiagnosticsData(dataWorkspace) {
         /// <summary>
         /// Represents the DiagnosticsData data service.
@@ -1178,9 +1138,6 @@ window.myapp = msls.application;
         /// </param>
         /// <field name="Endpoints" type="msls.EntitySet">
         /// Gets the Endpoints entity set.
-        /// </field>
-        /// <field name="ConfigurationUpdates" type="msls.EntitySet">
-        /// Gets the ConfigurationUpdates entity set.
         /// </field>
         /// <field name="details" type="msls.application.DiagnosticsData.Details">
         /// Gets the details for this data service.
@@ -1207,6 +1164,9 @@ window.myapp = msls.application;
         /// <field name="Approvals" type="msls.EntitySet">
         /// Gets the Approvals entity set.
         /// </field>
+        /// <field name="Assocs" type="msls.EntitySet">
+        /// Gets the Assocs entity set.
+        /// </field>
         /// <field name="CartItems" type="msls.EntitySet">
         /// Gets the CartItems entity set.
         /// </field>
@@ -1218,6 +1178,9 @@ window.myapp = msls.application;
         /// </field>
         /// <field name="Catalogues" type="msls.EntitySet">
         /// Gets the Catalogues entity set.
+        /// </field>
+        /// <field name="CostCentres" type="msls.EntitySet">
+        /// Gets the CostCentres entity set.
         /// </field>
         /// <field name="EntityTypes" type="msls.EntitySet">
         /// Gets the EntityTypes entity set.
@@ -1248,12 +1211,6 @@ window.myapp = msls.application;
         /// </field>
         /// <field name="Products" type="msls.EntitySet">
         /// Gets the Products entity set.
-        /// </field>
-        /// <field name="Assocs" type="msls.EntitySet">
-        /// Gets the Assocs entity set.
-        /// </field>
-        /// <field name="CostCentres" type="msls.EntitySet">
-        /// Gets the CostCentres entity set.
         /// </field>
         /// <field name="details" type="msls.application.CoreData.Details">
         /// Gets the details for this data service.
@@ -1293,18 +1250,6 @@ window.myapp = msls.application;
             { name: "ModifiedBy", type: String },
             { name: "Address", type: String },
             { name: "Description", type: String },
-            { name: "RowVersion", type: String }
-        ]),
-
-        ConfigurationUpdate: $defineEntity(ConfigurationUpdate, [
-            { name: "Id", type: String },
-            { name: "Tid", type: String },
-            { name: "Name", type: String },
-            { name: "Description", type: String },
-            { name: "CreatedBy", type: String },
-            { name: "ModifiedBy", type: String },
-            { name: "Created", type: Date },
-            { name: "Modified", type: Date },
             { name: "RowVersion", type: String }
         ]),
 
@@ -1375,6 +1320,21 @@ window.myapp = msls.application;
             { name: "ExpiresAt", type: Date }
         ]),
 
+        Assoc: $defineEntity(Assoc, [
+            { name: "Order", type: String },
+            { name: "SourceId", type: String },
+            { name: "DestinationId", type: String },
+            { name: "Id", type: String },
+            { name: "Tid", type: String },
+            { name: "Name", type: String },
+            { name: "Description", type: String },
+            { name: "CreatedBy", type: String },
+            { name: "ModifiedBy", type: String },
+            { name: "Created", type: Date },
+            { name: "Modified", type: Date },
+            { name: "RowVersion", type: String }
+        ]),
+
         CartItem: $defineEntity(CartItem, [
             { name: "CartId", type: String },
             { name: "Quantity", type: Number },
@@ -1436,6 +1396,18 @@ window.myapp = msls.application;
             { name: "Modified", type: Date },
             { name: "RowVersion", type: String },
             { name: "CatalogueItems", kind: "collection", elementType: CatalogueItem1 }
+        ]),
+
+        CostCentre: $defineEntity(CostCentre, [
+            { name: "Id", type: String },
+            { name: "Tid", type: String },
+            { name: "Name", type: String },
+            { name: "Description", type: String },
+            { name: "CreatedBy", type: String },
+            { name: "ModifiedBy", type: String },
+            { name: "Created", type: Date },
+            { name: "Modified", type: Date },
+            { name: "RowVersion", type: String }
         ]),
 
         EntityType: $defineEntity(EntityType, [
@@ -1607,48 +1579,13 @@ window.myapp = msls.application;
             { name: "CatalogueItems", kind: "collection", elementType: CatalogueItem1 }
         ]),
 
-        Assoc: $defineEntity(Assoc, [
-            { name: "Order", type: String },
-            { name: "SourceId", type: String },
-            { name: "DestinationId", type: String },
-            { name: "Id", type: String },
-            { name: "Tid", type: String },
-            { name: "Name", type: String },
-            { name: "Description", type: String },
-            { name: "CreatedBy", type: String },
-            { name: "ModifiedBy", type: String },
-            { name: "Created", type: Date },
-            { name: "Modified", type: Date },
-            { name: "RowVersion", type: String }
-        ]),
-
-        CostCentre: $defineEntity(CostCentre, [
-            { name: "Id", type: String },
-            { name: "Tid", type: String },
-            { name: "Name", type: String },
-            { name: "Description", type: String },
-            { name: "CreatedBy", type: String },
-            { name: "ModifiedBy", type: String },
-            { name: "Created", type: Date },
-            { name: "Modified", type: Date },
-            { name: "RowVersion", type: String }
-        ]),
-
         DiagnosticsData: $defineDataService(DiagnosticsData, lightSwitchApplication.rootUri + "/DiagnosticsData.svc", [
-            { name: "Endpoints", elementType: Endpoint },
-            { name: "ConfigurationUpdates", elementType: ConfigurationUpdate }
+            { name: "Endpoints", elementType: Endpoint }
         ], [
             {
                 name: "Endpoints_SingleOrDefault", value: function (Id) {
                     return new $DataServiceQuery({ _entitySet: this.Endpoints },
                         lightSwitchApplication.rootUri + "/DiagnosticsData.svc" + "/Endpoints(" + "Id=" + $toODataString(Id, "Int64?") + ")"
-                    );
-                }
-            },
-            {
-                name: "ConfigurationUpdates_SingleOrDefault", value: function (Id) {
-                    return new $DataServiceQuery({ _entitySet: this.ConfigurationUpdates },
-                        lightSwitchApplication.rootUri + "/DiagnosticsData.svc" + "/ConfigurationUpdates(" + "Id=" + $toODataString(Id, "Int64?") + ")"
                     );
                 }
             }
@@ -1659,10 +1596,12 @@ window.myapp = msls.application;
             { name: "Acls", elementType: Acl },
             { name: "ActiveDirectoryUsers", elementType: ActiveDirectoryUser },
             { name: "Approvals", elementType: Approval },
+            { name: "Assocs", elementType: Assoc },
             { name: "CartItems", elementType: CartItem },
             { name: "Carts", elementType: Cart },
             { name: "CatalogueItems", elementType: CatalogueItem1 },
             { name: "Catalogues", elementType: Catalogue },
+            { name: "CostCentres", elementType: CostCentre },
             { name: "EntityTypes", elementType: EntityType },
             { name: "Gates", elementType: Gate },
             { name: "Jobs", elementType: Job },
@@ -1672,9 +1611,7 @@ window.myapp = msls.application;
             { name: "Nodes", elementType: Node },
             { name: "OrderItems", elementType: OrderItem },
             { name: "Orders", elementType: Order },
-            { name: "Products", elementType: Product },
-            { name: "Assocs", elementType: Assoc },
-            { name: "CostCentres", elementType: CostCentre }
+            { name: "Products", elementType: Product }
         ], [
             {
                 name: "Aces_SingleOrDefault", value: function (Id) {
@@ -1705,6 +1642,13 @@ window.myapp = msls.application;
                 }
             },
             {
+                name: "Assocs_SingleOrDefault", value: function (Id) {
+                    return new $DataServiceQuery({ _entitySet: this.Assocs },
+                        lightSwitchApplication.rootUri + "/CoreData.svc" + "/Assocs(" + "Id=" + $toODataString(Id, "Int64?") + ")"
+                    );
+                }
+            },
+            {
                 name: "CartItems_SingleOrDefault", value: function (Id) {
                     return new $DataServiceQuery({ _entitySet: this.CartItems },
                         lightSwitchApplication.rootUri + "/CoreData.svc" + "/CartItems(" + "Id=" + $toODataString(Id, "Int64?") + ")"
@@ -1729,6 +1673,13 @@ window.myapp = msls.application;
                 name: "Catalogues_SingleOrDefault", value: function (Id) {
                     return new $DataServiceQuery({ _entitySet: this.Catalogues },
                         lightSwitchApplication.rootUri + "/CoreData.svc" + "/Catalogues(" + "Id=" + $toODataString(Id, "Int64?") + ")"
+                    );
+                }
+            },
+            {
+                name: "CostCentres_SingleOrDefault", value: function (Id) {
+                    return new $DataServiceQuery({ _entitySet: this.CostCentres },
+                        lightSwitchApplication.rootUri + "/CoreData.svc" + "/CostCentres(" + "Id=" + $toODataString(Id, "Int64?") + ")"
                     );
                 }
             },
@@ -1799,20 +1750,6 @@ window.myapp = msls.application;
                 name: "Products_SingleOrDefault", value: function (Id) {
                     return new $DataServiceQuery({ _entitySet: this.Products },
                         lightSwitchApplication.rootUri + "/CoreData.svc" + "/Products(" + "Id=" + $toODataString(Id, "Int64?") + ")"
-                    );
-                }
-            },
-            {
-                name: "Assocs_SingleOrDefault", value: function (Id) {
-                    return new $DataServiceQuery({ _entitySet: this.Assocs },
-                        lightSwitchApplication.rootUri + "/CoreData.svc" + "/Assocs(" + "Id=" + $toODataString(Id, "Int64?") + ")"
-                    );
-                }
-            },
-            {
-                name: "CostCentres_SingleOrDefault", value: function (Id) {
-                    return new $DataServiceQuery({ _entitySet: this.CostCentres },
-                        lightSwitchApplication.rootUri + "/CoreData.svc" + "/CostCentres(" + "Id=" + $toODataString(Id, "Int64?") + ")"
                     );
                 }
             }

@@ -24,10 +24,10 @@ using System.Xml.Serialization;
 [assembly: EdmRelationshipAttribute("LightSwitchApplication", "biz_dfch_CS_Appclusive_Core_OdataServices_Core_Catalogue_Catalog", "CatalogueItemsPartner", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(LightSwitchApplication.Implementation.Catalogue), "CatalogueItems", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(LightSwitchApplication.Implementation.CatalogueItem1))]
 [assembly: EdmRelationshipAttribute("LightSwitchApplication", "biz_dfch_CS_Appclusive_Core_OdataServices_Core_ManagementCredent", "ManagementUrisPartner", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(LightSwitchApplication.Implementation.ManagementCredential), "ManagementUris", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(LightSwitchApplication.Implementation.ManagementUri))]
 [assembly: EdmRelationshipAttribute("LightSwitchApplication", "biz_dfch_CS_Appclusive_Core_OdataServices_Core_Node_Children_biz", "ChildrenPartner", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(LightSwitchApplication.Implementation.Node), "Children", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(LightSwitchApplication.Implementation.Node))]
-[assembly: EdmRelationshipAttribute("LightSwitchApplication", "biz_dfch_CS_Sunrise_DaaS_Endpoints_OdataServices_Core_Order_Orde", "OrderItemsPartner", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(LightSwitchApplication.Implementation.Order), "OrderItems", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(LightSwitchApplication.Implementation.OrderItem))]
-[assembly: EdmRelationshipAttribute("LightSwitchApplication", "biz_dfch_CS_Appclusive_Core_OdataServices_Core_Product_Catalogue", "CatalogueItemsPartner", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(LightSwitchApplication.Implementation.Product), "CatalogueItems", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(LightSwitchApplication.Implementation.CatalogueItem1))]
 [assembly: EdmRelationshipAttribute("LightSwitchApplication", "biz_dfch_CS_Appclusive_Core_OdataServices_Core_Node_IncomingAsso", "IncomingAssocsPartner", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(LightSwitchApplication.Implementation.Node), "IncomingAssocs", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(LightSwitchApplication.Implementation.Assoc))]
 [assembly: EdmRelationshipAttribute("LightSwitchApplication", "biz_dfch_CS_Appclusive_Core_OdataServices_Core_Node_OutgoingAsso", "OutgoingAssocsPartner", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(LightSwitchApplication.Implementation.Node), "OutgoingAssocs", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(LightSwitchApplication.Implementation.Assoc))]
+[assembly: EdmRelationshipAttribute("LightSwitchApplication", "biz_dfch_CS_Sunrise_DaaS_Endpoints_OdataServices_Core_Order_Orde", "OrderItemsPartner", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(LightSwitchApplication.Implementation.Order), "OrderItems", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(LightSwitchApplication.Implementation.OrderItem))]
+[assembly: EdmRelationshipAttribute("LightSwitchApplication", "biz_dfch_CS_Appclusive_Core_OdataServices_Core_Product_Catalogue", "CatalogueItemsPartner", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(LightSwitchApplication.Implementation.Product), "CatalogueItems", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(LightSwitchApplication.Implementation.CatalogueItem1))]
 
 #endregion
 
@@ -143,6 +143,22 @@ namespace LightSwitchApplication.Implementation
         /// <summary>
         /// No Metadata Documentation available.
         /// </summary>
+        public ObjectSet<Assoc> Assocs
+        {
+            get
+            {
+                if ((_Assocs == null))
+                {
+                    _Assocs = base.CreateObjectSet<Assoc>("Assocs");
+                }
+                return _Assocs;
+            }
+        }
+        private ObjectSet<Assoc> _Assocs;
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
         public ObjectSet<CartItem> CartItems
         {
             get
@@ -203,6 +219,22 @@ namespace LightSwitchApplication.Implementation
             }
         }
         private ObjectSet<Catalogue> _Catalogues;
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        public ObjectSet<CostCentre> CostCentres
+        {
+            get
+            {
+                if ((_CostCentres == null))
+                {
+                    _CostCentres = base.CreateObjectSet<CostCentre>("CostCentres");
+                }
+                return _CostCentres;
+            }
+        }
+        private ObjectSet<CostCentre> _CostCentres;
     
         /// <summary>
         /// No Metadata Documentation available.
@@ -363,38 +395,6 @@ namespace LightSwitchApplication.Implementation
             }
         }
         private ObjectSet<Product> _Products;
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        public ObjectSet<Assoc> Assocs
-        {
-            get
-            {
-                if ((_Assocs == null))
-                {
-                    _Assocs = base.CreateObjectSet<Assoc>("Assocs");
-                }
-                return _Assocs;
-            }
-        }
-        private ObjectSet<Assoc> _Assocs;
-    
-        /// <summary>
-        /// No Metadata Documentation available.
-        /// </summary>
-        public ObjectSet<CostCentre> CostCentres
-        {
-            get
-            {
-                if ((_CostCentres == null))
-                {
-                    _CostCentres = base.CreateObjectSet<CostCentre>("CostCentres");
-                }
-                return _CostCentres;
-            }
-        }
-        private ObjectSet<CostCentre> _CostCentres;
 
         #endregion
 
@@ -433,6 +433,14 @@ namespace LightSwitchApplication.Implementation
         }
     
         /// <summary>
+        /// Deprecated Method for adding a new object to the Assocs EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
+        /// </summary>
+        public void AddToAssocs(Assoc assoc)
+        {
+            base.AddObject("Assocs", assoc);
+        }
+    
+        /// <summary>
         /// Deprecated Method for adding a new object to the CartItems EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
         /// </summary>
         public void AddToCartItems(CartItem cartItem)
@@ -462,6 +470,14 @@ namespace LightSwitchApplication.Implementation
         public void AddToCatalogues(Catalogue catalogue)
         {
             base.AddObject("Catalogues", catalogue);
+        }
+    
+        /// <summary>
+        /// Deprecated Method for adding a new object to the CostCentres EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
+        /// </summary>
+        public void AddToCostCentres(CostCentre costCentre)
+        {
+            base.AddObject("CostCentres", costCentre);
         }
     
         /// <summary>
@@ -542,22 +558,6 @@ namespace LightSwitchApplication.Implementation
         public void AddToProducts(Product product)
         {
             base.AddObject("Products", product);
-        }
-    
-        /// <summary>
-        /// Deprecated Method for adding a new object to the Assocs EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
-        /// </summary>
-        public void AddToAssocs(Assoc assoc)
-        {
-            base.AddObject("Assocs", assoc);
-        }
-    
-        /// <summary>
-        /// Deprecated Method for adding a new object to the CostCentres EntitySet. Consider using the .Add method of the associated ObjectSet&lt;T&gt; property instead.
-        /// </summary>
-        public void AddToCostCentres(CostCentre costCentre)
-        {
-            base.AddObject("CostCentres", costCentre);
         }
 
         #endregion

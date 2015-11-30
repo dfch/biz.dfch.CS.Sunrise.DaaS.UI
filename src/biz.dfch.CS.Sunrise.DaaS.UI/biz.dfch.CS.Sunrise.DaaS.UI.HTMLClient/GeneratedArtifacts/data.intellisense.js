@@ -10,14 +10,6 @@
         created: [lightSwitchApplication.Endpoint]
     });
 
-    msls._addEntryPoints(lightSwitchApplication.ConfigurationUpdate, {
-        /// <field>
-        /// Called when a new configurationUpdate is created.
-        /// <br/>created(msls.application.ConfigurationUpdate entity)
-        /// </field>
-        created: [lightSwitchApplication.ConfigurationUpdate]
-    });
-
     msls._addEntryPoints(lightSwitchApplication.Ace, {
         /// <field>
         /// Called when a new ace is created.
@@ -50,6 +42,14 @@
         created: [lightSwitchApplication.Approval]
     });
 
+    msls._addEntryPoints(lightSwitchApplication.Assoc, {
+        /// <field>
+        /// Called when a new assoc is created.
+        /// <br/>created(msls.application.Assoc entity)
+        /// </field>
+        created: [lightSwitchApplication.Assoc]
+    });
+
     msls._addEntryPoints(lightSwitchApplication.CartItem, {
         /// <field>
         /// Called when a new cartItem is created.
@@ -80,6 +80,14 @@
         /// <br/>created(msls.application.Catalogue entity)
         /// </field>
         created: [lightSwitchApplication.Catalogue]
+    });
+
+    msls._addEntryPoints(lightSwitchApplication.CostCentre, {
+        /// <field>
+        /// Called when a new costCentre is created.
+        /// <br/>created(msls.application.CostCentre entity)
+        /// </field>
+        created: [lightSwitchApplication.CostCentre]
     });
 
     msls._addEntryPoints(lightSwitchApplication.EntityType, {
@@ -160,22 +168,6 @@
         /// <br/>created(msls.application.Product entity)
         /// </field>
         created: [lightSwitchApplication.Product]
-    });
-
-    msls._addEntryPoints(lightSwitchApplication.Assoc, {
-        /// <field>
-        /// Called when a new assoc is created.
-        /// <br/>created(msls.application.Assoc entity)
-        /// </field>
-        created: [lightSwitchApplication.Assoc]
-    });
-
-    msls._addEntryPoints(lightSwitchApplication.CostCentre, {
-        /// <field>
-        /// Called when a new costCentre is created.
-        /// <br/>created(msls.application.CostCentre entity)
-        /// </field>
-        created: [lightSwitchApplication.CostCentre]
     });
 
 }(msls.application));
