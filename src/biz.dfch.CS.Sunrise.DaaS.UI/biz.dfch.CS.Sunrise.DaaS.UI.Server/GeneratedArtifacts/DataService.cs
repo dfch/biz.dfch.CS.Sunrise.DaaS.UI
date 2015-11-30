@@ -2276,39 +2276,6 @@ namespace LightSwitchApplication
         #region Server Interceptions Points
     
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void ConfigurationUpdates_CanInsert(ref bool result);
-    
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void ConfigurationUpdates_CanUpdate(ref bool result);
-    
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void ConfigurationUpdates_CanDelete(ref bool result);
-    
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void ConfigurationUpdates_CanRead(ref bool result);
-    
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void ConfigurationUpdates_Inserting(global::LightSwitchApplication.ConfigurationUpdate entity);
-    
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void ConfigurationUpdates_Inserted(global::LightSwitchApplication.ConfigurationUpdate entity);
-    
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void ConfigurationUpdates_Updating(global::LightSwitchApplication.ConfigurationUpdate entity);
-    
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void ConfigurationUpdates_Updated(global::LightSwitchApplication.ConfigurationUpdate entity);
-    
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void ConfigurationUpdates_Deleting(global::LightSwitchApplication.ConfigurationUpdate entity);
-    
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void ConfigurationUpdates_Deleted(global::LightSwitchApplication.ConfigurationUpdate entity);
-    
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void ConfigurationUpdates_Validate(global::LightSwitchApplication.ConfigurationUpdate entity, global::Microsoft.LightSwitch.EntitySetValidationResultsBuilder results);
-    
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
         partial void Endpoints_CanInsert(ref bool result);
     
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -2381,76 +2348,6 @@ namespace LightSwitchApplication
             [global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance", "CA1810:InitializeReferenceTypeStaticFieldsInline")]
             static DetailsClass()
             {
-            }
-            
-            [global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
-            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-            private static readonly global::Microsoft.LightSwitch.Details.Framework.Server.EntitySetEntry<global::LightSwitchApplication.DiagnosticsDataService, global::LightSwitchApplication.ConfigurationUpdate>
-                __ConfigurationUpdatesEntry = new global::Microsoft.LightSwitch.Details.Framework.Server.EntitySetEntry<global::LightSwitchApplication.DiagnosticsDataService, global::LightSwitchApplication.ConfigurationUpdate>(
-                    "ConfigurationUpdates",
-                    global::LightSwitchApplication.DiagnosticsDataService.DetailsClass.__ConfigurationUpdates_CanInsert,
-                    global::LightSwitchApplication.DiagnosticsDataService.DetailsClass.__ConfigurationUpdates_CanUpdate,
-                    global::LightSwitchApplication.DiagnosticsDataService.DetailsClass.__ConfigurationUpdates_CanDelete,
-                    global::LightSwitchApplication.DiagnosticsDataService.DetailsClass.__ConfigurationUpdates_CanRead,
-                    global::LightSwitchApplication.DiagnosticsDataService.DetailsClass.__ConfigurationUpdates_Inserting,
-                    global::LightSwitchApplication.DiagnosticsDataService.DetailsClass.__ConfigurationUpdates_Inserted,
-                    global::LightSwitchApplication.DiagnosticsDataService.DetailsClass.__ConfigurationUpdates_Updating,
-                    global::LightSwitchApplication.DiagnosticsDataService.DetailsClass.__ConfigurationUpdates_Updated,
-                    global::LightSwitchApplication.DiagnosticsDataService.DetailsClass.__ConfigurationUpdates_Deleting,
-                    global::LightSwitchApplication.DiagnosticsDataService.DetailsClass.__ConfigurationUpdates_Deleted,
-                    global::LightSwitchApplication.DiagnosticsDataService.DetailsClass.__ConfigurationUpdates_Validate,
-                    null);
-            private static bool __ConfigurationUpdates_CanInsert(global::LightSwitchApplication.DiagnosticsDataService d)
-            {
-                bool result = true;
-                d.ConfigurationUpdates_CanInsert(ref result);
-                return result;
-            }
-            private static bool __ConfigurationUpdates_CanUpdate(global::LightSwitchApplication.DiagnosticsDataService d)
-            {
-                bool result = true;
-                d.ConfigurationUpdates_CanUpdate(ref result);
-                return result;
-            }
-            private static bool __ConfigurationUpdates_CanDelete(global::LightSwitchApplication.DiagnosticsDataService d)
-            {
-                bool result = true;
-                d.ConfigurationUpdates_CanDelete(ref result);
-                return result;
-            }
-            private static bool __ConfigurationUpdates_CanRead(global::LightSwitchApplication.DiagnosticsDataService d)
-            {
-                bool result = true;
-                d.ConfigurationUpdates_CanRead(ref result);
-                return result;
-            }
-            private static void __ConfigurationUpdates_Inserting(global::LightSwitchApplication.DiagnosticsDataService d, global::LightSwitchApplication.ConfigurationUpdate e)
-            {
-                d.ConfigurationUpdates_Inserting(e);
-            }
-            private static void __ConfigurationUpdates_Inserted(global::LightSwitchApplication.DiagnosticsDataService d, global::LightSwitchApplication.ConfigurationUpdate e)
-            {
-                d.ConfigurationUpdates_Inserted(e);
-            }
-            private static void __ConfigurationUpdates_Updating(global::LightSwitchApplication.DiagnosticsDataService d, global::LightSwitchApplication.ConfigurationUpdate e)
-            {
-                d.ConfigurationUpdates_Updating(e);
-            }
-            private static void __ConfigurationUpdates_Updated(global::LightSwitchApplication.DiagnosticsDataService d, global::LightSwitchApplication.ConfigurationUpdate e)
-            {
-                d.ConfigurationUpdates_Updated(e);
-            }
-            private static void __ConfigurationUpdates_Deleting(global::LightSwitchApplication.DiagnosticsDataService d, global::LightSwitchApplication.ConfigurationUpdate e)
-            {
-                d.ConfigurationUpdates_Deleting(e);
-            }
-            private static void __ConfigurationUpdates_Deleted(global::LightSwitchApplication.DiagnosticsDataService d, global::LightSwitchApplication.ConfigurationUpdate e)
-            {
-                d.ConfigurationUpdates_Deleted(e);
-            }
-            private static void __ConfigurationUpdates_Validate(global::LightSwitchApplication.DiagnosticsDataService d, global::LightSwitchApplication.ConfigurationUpdate e, global::Microsoft.LightSwitch.EntitySetValidationResultsBuilder r)
-            {
-                d.ConfigurationUpdates_Validate(e, r);
             }
             
             [global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
