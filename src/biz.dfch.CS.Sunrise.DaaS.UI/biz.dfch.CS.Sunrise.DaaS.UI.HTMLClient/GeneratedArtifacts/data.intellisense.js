@@ -114,14 +114,6 @@
         created: [lightSwitchApplication.Node]
     });
 
-    msls._addEntryPoints(lightSwitchApplication.Link, {
-        /// <field>
-        /// Called when a new link is created.
-        /// <br/>created(msls.application.Link entity)
-        /// </field>
-        created: [lightSwitchApplication.Link]
-    });
-
     msls._addEntryPoints(lightSwitchApplication.ManagementUri, {
         /// <field>
         /// Called when a new managementUri is created.
@@ -160,6 +152,22 @@
         /// <br/>created(msls.application.Product entity)
         /// </field>
         created: [lightSwitchApplication.Product]
+    });
+
+    msls._addEntryPoints(lightSwitchApplication.Assoc, {
+        /// <field>
+        /// Called when a new assoc is created.
+        /// <br/>created(msls.application.Assoc entity)
+        /// </field>
+        created: [lightSwitchApplication.Assoc]
+    });
+
+    msls._addEntryPoints(lightSwitchApplication.CostCentre, {
+        /// <field>
+        /// Called when a new costCentre is created.
+        /// <br/>created(msls.application.CostCentre entity)
+        /// </field>
+        created: [lightSwitchApplication.CostCentre]
     });
 
 }(msls.application));

@@ -107,15 +107,15 @@
         FromEnd="ChildrenPartner"
         ToEnd="Children" />
       <NavigationProperty
-        Name="IncomingLinks"
-        Association="biz_dfch_CS_Appclusive_Core_OdataServices_Core_Node_IncomingLink"
-        FromEnd="IncomingLinksPartner"
-        ToEnd="IncomingLinks" />
+        Name="IncomingAssocs"
+        Association="biz_dfch_CS_Appclusive_Core_OdataServices_Core_Node_IncomingAsso"
+        FromEnd="IncomingAssocsPartner"
+        ToEnd="IncomingAssocs" />
       <NavigationProperty
-        Name="OutgoingLinks"
-        Association="biz_dfch_CS_Appclusive_Core_OdataServices_Core_Node_OutgoingLink"
-        FromEnd="OutgoingLinksPartner"
-        ToEnd="OutgoingLinks" />
+        Name="OutgoingAssocs"
+        Association="biz_dfch_CS_Appclusive_Core_OdataServices_Core_Node_OutgoingAsso"
+        FromEnd="OutgoingAssocsPartner"
+        ToEnd="OutgoingAssocs" />
     </EntityType.Properties>
   </EntityType>
   <Association
@@ -132,34 +132,6 @@
       Name="Children"
       Multiplicity="Many"
       EntityType="Node" />
-  </Association>
-  <Association
-    Name="biz_dfch_CS_Appclusive_Core_OdataServices_Core_Node_IncomingLink">
-    <AssociationEnd
-      Name="IncomingLinksPartner"
-      EntityType="Node">
-      <AssociationEnd.Attributes>
-        <DeleteRule />
-      </AssociationEnd.Attributes>
-    </AssociationEnd>
-    <AssociationEnd
-      Name="IncomingLinks"
-      Multiplicity="Many"
-      EntityType="Link" />
-  </Association>
-  <Association
-    Name="biz_dfch_CS_Appclusive_Core_OdataServices_Core_Node_OutgoingLink">
-    <AssociationEnd
-      Name="OutgoingLinksPartner"
-      EntityType="Node">
-      <AssociationEnd.Attributes>
-        <DeleteRule />
-      </AssociationEnd.Attributes>
-    </AssociationEnd>
-    <AssociationEnd
-      Name="OutgoingLinks"
-      Multiplicity="Many"
-      EntityType="Link" />
   </Association>
   <EntityContainer
     Name="CoreData">
@@ -181,26 +153,6 @@
       <AssociationSetEnd
         Name="Children"
         EntitySet="Nodes" />
-    </AssociationSet>
-    <AssociationSet
-      Name="biz_dfch_CS_Appclusive_Core_OdataServices_Core_Node_IncomingLink"
-      Association="biz_dfch_CS_Appclusive_Core_OdataServices_Core_Node_IncomingLink">
-      <AssociationSetEnd
-        Name="IncomingLinksPartner"
-        EntitySet="Nodes" />
-      <AssociationSetEnd
-        Name="IncomingLinks"
-        EntitySet="Links" />
-    </AssociationSet>
-    <AssociationSet
-      Name="biz_dfch_CS_Appclusive_Core_OdataServices_Core_Node_OutgoingLink"
-      Association="biz_dfch_CS_Appclusive_Core_OdataServices_Core_Node_OutgoingLink">
-      <AssociationSetEnd
-        Name="OutgoingLinksPartner"
-        EntitySet="Nodes" />
-      <AssociationSetEnd
-        Name="OutgoingLinks"
-        EntitySet="Links" />
     </AssociationSet>
     <QueryOperation
       Name="Nodes_Single"
@@ -282,7 +234,55 @@
         </QueryOperationParameter.Attributes>
       </QueryOperationParameter>
     </QueryOperation>
+    <AssociationSet
+      Name="biz_dfch_CS_Appclusive_Core_OdataServices_Core_Node_IncomingAsso"
+      Association="biz_dfch_CS_Appclusive_Core_OdataServices_Core_Node_IncomingAsso">
+      <AssociationSetEnd
+        Name="IncomingAssocsPartner"
+        EntitySet="Nodes" />
+      <AssociationSetEnd
+        Name="IncomingAssocs"
+        EntitySet="Assocs" />
+    </AssociationSet>
+    <AssociationSet
+      Name="biz_dfch_CS_Appclusive_Core_OdataServices_Core_Node_OutgoingAsso"
+      Association="biz_dfch_CS_Appclusive_Core_OdataServices_Core_Node_OutgoingAsso">
+      <AssociationSetEnd
+        Name="OutgoingAssocsPartner"
+        EntitySet="Nodes" />
+      <AssociationSetEnd
+        Name="OutgoingAssocs"
+        EntitySet="Assocs" />
+    </AssociationSet>
   </EntityContainer>
+  <Association
+    Name="biz_dfch_CS_Appclusive_Core_OdataServices_Core_Node_IncomingAsso">
+    <AssociationEnd
+      Name="IncomingAssocsPartner"
+      EntityType="Node">
+      <AssociationEnd.Attributes>
+        <DeleteRule />
+      </AssociationEnd.Attributes>
+    </AssociationEnd>
+    <AssociationEnd
+      Name="IncomingAssocs"
+      Multiplicity="Many"
+      EntityType="Assoc" />
+  </Association>
+  <Association
+    Name="biz_dfch_CS_Appclusive_Core_OdataServices_Core_Node_OutgoingAsso">
+    <AssociationEnd
+      Name="OutgoingAssocsPartner"
+      EntityType="Node">
+      <AssociationEnd.Attributes>
+        <DeleteRule />
+      </AssociationEnd.Attributes>
+    </AssociationEnd>
+    <AssociationEnd
+      Name="OutgoingAssocs"
+      Multiplicity="Many"
+      EntityType="Assoc" />
+  </Association>
   <DataService
     Name="CoreDataDataService">
     <DataService.Attributes>
@@ -336,11 +336,11 @@
           Name="Children"
           Property="Node/Properties[Children]" />
         <CsdlProperty
-          Name="IncomingLinks"
-          Property="Node/Properties[IncomingLinks]" />
+          Name="IncomingAssocs"
+          Property="Node/Properties[IncomingAssocs]" />
         <CsdlProperty
-          Name="OutgoingLinks"
-          Property="Node/Properties[OutgoingLinks]" />
+          Name="OutgoingAssocs"
+          Property="Node/Properties[OutgoingAssocs]" />
       </EntitySetMapping.Attributes>
     </EntitySetMapping>
     <AssociationSetMapping
@@ -356,27 +356,27 @@
       </AssociationSetMapping.Attributes>
     </AssociationSetMapping>
     <AssociationSetMapping
-      AssociationSet="biz_dfch_CS_Appclusive_Core_OdataServices_Core_Node_IncomingLink">
+      AssociationSet="biz_dfch_CS_Appclusive_Core_OdataServices_Core_Node_IncomingAsso">
       <AssociationSetMapping.Attributes>
         <CsdlAssociation
-          Name="biz_dfch_CS_Appclusive_Core_OdataServices_Core_Node_IncomingLinks_biz_dfch_CS_Appclusive_Core_OdataServices_Core_Link_IncomingLinksPartnerSet"
-          Association="biz_dfch_CS_Appclusive_Core_OdataServices_Core_Node_IncomingLink" />
+          Name="biz_dfch_CS_Appclusive_Core_OdataServices_Core_Node_IncomingAssocs_biz_dfch_CS_Appclusive_Core_OdataServices_Core_Assoc_IncomingAssocsPartnerSet"
+          Association="biz_dfch_CS_Appclusive_Core_OdataServices_Core_Node_IncomingAsso" />
         <CsdlAssociationSetEnd
-          End="CoreData/Members[biz_dfch_CS_Appclusive_Core_OdataServices_Core_Node_IncomingLink]/Members[IncomingLinksPartner]" />
+          End="CoreData/Members[biz_dfch_CS_Appclusive_Core_OdataServices_Core_Node_IncomingAsso]/Members[IncomingAssocsPartner]" />
         <CsdlAssociationSetEnd
-          End="CoreData/Members[biz_dfch_CS_Appclusive_Core_OdataServices_Core_Node_IncomingLink]/Members[IncomingLinks]" />
+          End="CoreData/Members[biz_dfch_CS_Appclusive_Core_OdataServices_Core_Node_IncomingAsso]/Members[IncomingAssocs]" />
       </AssociationSetMapping.Attributes>
     </AssociationSetMapping>
     <AssociationSetMapping
-      AssociationSet="biz_dfch_CS_Appclusive_Core_OdataServices_Core_Node_OutgoingLink">
+      AssociationSet="biz_dfch_CS_Appclusive_Core_OdataServices_Core_Node_OutgoingAsso">
       <AssociationSetMapping.Attributes>
         <CsdlAssociation
-          Name="biz_dfch_CS_Appclusive_Core_OdataServices_Core_Node_OutgoingLinks_biz_dfch_CS_Appclusive_Core_OdataServices_Core_Link_OutgoingLinksPartnerSet"
-          Association="biz_dfch_CS_Appclusive_Core_OdataServices_Core_Node_OutgoingLink" />
+          Name="biz_dfch_CS_Appclusive_Core_OdataServices_Core_Node_OutgoingAssocs_biz_dfch_CS_Appclusive_Core_OdataServices_Core_Assoc_OutgoingAssocsPartnerSet"
+          Association="biz_dfch_CS_Appclusive_Core_OdataServices_Core_Node_OutgoingAsso" />
         <CsdlAssociationSetEnd
-          End="CoreData/Members[biz_dfch_CS_Appclusive_Core_OdataServices_Core_Node_OutgoingLink]/Members[OutgoingLinksPartner]" />
+          End="CoreData/Members[biz_dfch_CS_Appclusive_Core_OdataServices_Core_Node_OutgoingAsso]/Members[OutgoingAssocsPartner]" />
         <CsdlAssociationSetEnd
-          End="CoreData/Members[biz_dfch_CS_Appclusive_Core_OdataServices_Core_Node_OutgoingLink]/Members[OutgoingLinks]" />
+          End="CoreData/Members[biz_dfch_CS_Appclusive_Core_OdataServices_Core_Node_OutgoingAsso]/Members[OutgoingAssocs]" />
       </AssociationSetMapping.Attributes>
     </AssociationSetMapping>
   </DataService>

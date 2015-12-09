@@ -175,6 +175,15 @@ window.myapp = msls.application;
         /// <field name="RowVersion" type="String">
         /// Gets or sets the rowVersion for this job.
         /// </field>
+        /// <field name="Condition" type="String">
+        /// Gets or sets the condition for this job.
+        /// </field>
+        /// <field name="ConditionParameters" type="String">
+        /// Gets or sets the conditionParameters for this job.
+        /// </field>
+        /// <field name="Children" type="msls.EntityCollection" elementType="msls.application.Job">
+        /// Gets the children for this job.
+        /// </field>
         /// <field name="details" type="msls.application.Job.Details">
         /// Gets the details for this job.
         /// </field>
@@ -288,6 +297,9 @@ window.myapp = msls.application;
         /// <field name="RowVersion" type="String">
         /// Gets or sets the rowVersion for this order.
         /// </field>
+        /// <field name="CostCentreId" type="String">
+        /// Gets or sets the costCentreId for this order.
+        /// </field>
         /// <field name="details" type="msls.application.Order.Details">
         /// Gets the details for this order.
         /// </field>
@@ -342,6 +354,9 @@ window.myapp = msls.application;
         /// </field>
         /// <field name="RowVersion" type="String">
         /// Gets or sets the rowVersion for this orderItem.
+        /// </field>
+        /// <field name="CostCentreId" type="String">
+        /// Gets or sets the costCentreId for this orderItem.
         /// </field>
         /// <field name="details" type="msls.application.OrderItem.Details">
         /// Gets the details for this orderItem.
@@ -759,63 +774,14 @@ window.myapp = msls.application;
         /// <field name="Children" type="msls.EntityCollection" elementType="msls.application.Node">
         /// Gets the children for this node.
         /// </field>
-        /// <field name="IncomingLinks" type="msls.EntityCollection" elementType="msls.application.Link">
-        /// Gets the incomingLinks for this node.
+        /// <field name="IncomingAssocs" type="msls.EntityCollection" elementType="msls.application.Assoc">
+        /// Gets the incomingAssocs for this node.
         /// </field>
-        /// <field name="OutgoingLinks" type="msls.EntityCollection" elementType="msls.application.Link">
-        /// Gets the outgoingLinks for this node.
+        /// <field name="OutgoingAssocs" type="msls.EntityCollection" elementType="msls.application.Assoc">
+        /// Gets the outgoingAssocs for this node.
         /// </field>
         /// <field name="details" type="msls.application.Node.Details">
         /// Gets the details for this node.
-        /// </field>
-        $Entity.call(this, entitySet);
-    }
-
-    function Link(entitySet) {
-        /// <summary>
-        /// Represents the Link entity type.
-        /// </summary>
-        /// <param name="entitySet" type="msls.EntitySet" optional="true">
-        /// The entity set that should contain this link.
-        /// </param>
-        /// <field name="Order" type="String">
-        /// Gets or sets the order for this link.
-        /// </field>
-        /// <field name="SourceId" type="String">
-        /// Gets or sets the sourceId for this link.
-        /// </field>
-        /// <field name="DestinationId" type="String">
-        /// Gets or sets the destinationId for this link.
-        /// </field>
-        /// <field name="Id" type="String">
-        /// Gets or sets the id for this link.
-        /// </field>
-        /// <field name="Tid" type="String">
-        /// Gets or sets the tid for this link.
-        /// </field>
-        /// <field name="Name" type="String">
-        /// Gets or sets the name for this link.
-        /// </field>
-        /// <field name="Description" type="String">
-        /// Gets or sets the description for this link.
-        /// </field>
-        /// <field name="CreatedBy" type="String">
-        /// Gets or sets the createdBy for this link.
-        /// </field>
-        /// <field name="ModifiedBy" type="String">
-        /// Gets or sets the modifiedBy for this link.
-        /// </field>
-        /// <field name="Created" type="Date">
-        /// Gets or sets the created for this link.
-        /// </field>
-        /// <field name="Modified" type="Date">
-        /// Gets or sets the modified for this link.
-        /// </field>
-        /// <field name="RowVersion" type="String">
-        /// Gets or sets the rowVersion for this link.
-        /// </field>
-        /// <field name="details" type="msls.application.Link.Details">
-        /// Gets the details for this link.
         /// </field>
         $Entity.call(this, entitySet);
     }
@@ -1077,6 +1043,95 @@ window.myapp = msls.application;
         $Entity.call(this, entitySet);
     }
 
+    function Assoc(entitySet) {
+        /// <summary>
+        /// Represents the Assoc entity type.
+        /// </summary>
+        /// <param name="entitySet" type="msls.EntitySet" optional="true">
+        /// The entity set that should contain this assoc.
+        /// </param>
+        /// <field name="Order" type="String">
+        /// Gets or sets the order for this assoc.
+        /// </field>
+        /// <field name="SourceId" type="String">
+        /// Gets or sets the sourceId for this assoc.
+        /// </field>
+        /// <field name="DestinationId" type="String">
+        /// Gets or sets the destinationId for this assoc.
+        /// </field>
+        /// <field name="Id" type="String">
+        /// Gets or sets the id for this assoc.
+        /// </field>
+        /// <field name="Tid" type="String">
+        /// Gets or sets the tid for this assoc.
+        /// </field>
+        /// <field name="Name" type="String">
+        /// Gets or sets the name for this assoc.
+        /// </field>
+        /// <field name="Description" type="String">
+        /// Gets or sets the description for this assoc.
+        /// </field>
+        /// <field name="CreatedBy" type="String">
+        /// Gets or sets the createdBy for this assoc.
+        /// </field>
+        /// <field name="ModifiedBy" type="String">
+        /// Gets or sets the modifiedBy for this assoc.
+        /// </field>
+        /// <field name="Created" type="Date">
+        /// Gets or sets the created for this assoc.
+        /// </field>
+        /// <field name="Modified" type="Date">
+        /// Gets or sets the modified for this assoc.
+        /// </field>
+        /// <field name="RowVersion" type="String">
+        /// Gets or sets the rowVersion for this assoc.
+        /// </field>
+        /// <field name="details" type="msls.application.Assoc.Details">
+        /// Gets the details for this assoc.
+        /// </field>
+        $Entity.call(this, entitySet);
+    }
+
+    function CostCentre(entitySet) {
+        /// <summary>
+        /// Represents the CostCentre entity type.
+        /// </summary>
+        /// <param name="entitySet" type="msls.EntitySet" optional="true">
+        /// The entity set that should contain this costCentre.
+        /// </param>
+        /// <field name="Id" type="String">
+        /// Gets or sets the id for this costCentre.
+        /// </field>
+        /// <field name="Tid" type="String">
+        /// Gets or sets the tid for this costCentre.
+        /// </field>
+        /// <field name="Name" type="String">
+        /// Gets or sets the name for this costCentre.
+        /// </field>
+        /// <field name="Description" type="String">
+        /// Gets or sets the description for this costCentre.
+        /// </field>
+        /// <field name="CreatedBy" type="String">
+        /// Gets or sets the createdBy for this costCentre.
+        /// </field>
+        /// <field name="ModifiedBy" type="String">
+        /// Gets or sets the modifiedBy for this costCentre.
+        /// </field>
+        /// <field name="Created" type="Date">
+        /// Gets or sets the created for this costCentre.
+        /// </field>
+        /// <field name="Modified" type="Date">
+        /// Gets or sets the modified for this costCentre.
+        /// </field>
+        /// <field name="RowVersion" type="String">
+        /// Gets or sets the rowVersion for this costCentre.
+        /// </field>
+        /// <field name="details" type="msls.application.CostCentre.Details">
+        /// Gets the details for this costCentre.
+        /// </field>
+        $Entity.call(this, entitySet);
+    }
+
     function DiagnosticsData(dataWorkspace) {
         /// <summary>
         /// Represents the DiagnosticsData data service.
@@ -1139,9 +1194,6 @@ window.myapp = msls.application;
         /// <field name="Nodes" type="msls.EntitySet">
         /// Gets the Nodes entity set.
         /// </field>
-        /// <field name="Links" type="msls.EntitySet">
-        /// Gets the Links entity set.
-        /// </field>
         /// <field name="ManagementUris" type="msls.EntitySet">
         /// Gets the ManagementUris entity set.
         /// </field>
@@ -1156,6 +1208,12 @@ window.myapp = msls.application;
         /// </field>
         /// <field name="Products" type="msls.EntitySet">
         /// Gets the Products entity set.
+        /// </field>
+        /// <field name="Assocs" type="msls.EntitySet">
+        /// Gets the Assocs entity set.
+        /// </field>
+        /// <field name="CostCentres" type="msls.EntitySet">
+        /// Gets the CostCentres entity set.
         /// </field>
         /// <field name="details" type="msls.application.CoreData.Details">
         /// Gets the details for this data service.
@@ -1229,7 +1287,10 @@ window.myapp = msls.application;
             { name: "Created", type: Date },
             { name: "Modified", type: Date },
             { name: "Status", type: String },
-            { name: "RowVersion", type: String }
+            { name: "RowVersion", type: String },
+            { name: "Condition", type: String },
+            { name: "ConditionParameters", type: String },
+            { name: "Children", kind: "collection", elementType: Job }
         ]),
 
         CatalogueItem1: $defineEntity(CatalogueItem1, [
@@ -1264,7 +1325,8 @@ window.myapp = msls.application;
             { name: "Modified", type: Date },
             { name: "OrderItems", kind: "collection", elementType: OrderItem },
             { name: "Requester", type: String },
-            { name: "RowVersion", type: String }
+            { name: "RowVersion", type: String },
+            { name: "CostCentreId", type: String }
         ]),
 
         OrderItem: $defineEntity(OrderItem, [
@@ -1281,7 +1343,8 @@ window.myapp = msls.application;
             { name: "ModifiedBy", type: String },
             { name: "Created", type: Date },
             { name: "Modified", type: Date },
-            { name: "RowVersion", type: String }
+            { name: "RowVersion", type: String },
+            { name: "CostCentreId", type: String }
         ]),
 
         Ace: $defineEntity(Ace, [
@@ -1410,23 +1473,8 @@ window.myapp = msls.application;
             { name: "Modified", type: Date },
             { name: "RowVersion", type: String },
             { name: "Children", kind: "collection", elementType: Node },
-            { name: "IncomingLinks", kind: "collection", elementType: Link },
-            { name: "OutgoingLinks", kind: "collection", elementType: Link }
-        ]),
-
-        Link: $defineEntity(Link, [
-            { name: "Order", type: String },
-            { name: "SourceId", type: String },
-            { name: "DestinationId", type: String },
-            { name: "Id", type: String },
-            { name: "Tid", type: String },
-            { name: "Name", type: String },
-            { name: "Description", type: String },
-            { name: "CreatedBy", type: String },
-            { name: "ModifiedBy", type: String },
-            { name: "Created", type: Date },
-            { name: "Modified", type: Date },
-            { name: "RowVersion", type: String }
+            { name: "IncomingAssocs", kind: "collection", elementType: Assoc },
+            { name: "OutgoingAssocs", kind: "collection", elementType: Assoc }
         ]),
 
         ManagementUri: $defineEntity(ManagementUri, [
@@ -1508,6 +1556,33 @@ window.myapp = msls.application;
             { name: "CatalogueItems", kind: "collection", elementType: CatalogueItem1 }
         ]),
 
+        Assoc: $defineEntity(Assoc, [
+            { name: "Order", type: String },
+            { name: "SourceId", type: String },
+            { name: "DestinationId", type: String },
+            { name: "Id", type: String },
+            { name: "Tid", type: String },
+            { name: "Name", type: String },
+            { name: "Description", type: String },
+            { name: "CreatedBy", type: String },
+            { name: "ModifiedBy", type: String },
+            { name: "Created", type: Date },
+            { name: "Modified", type: Date },
+            { name: "RowVersion", type: String }
+        ]),
+
+        CostCentre: $defineEntity(CostCentre, [
+            { name: "Id", type: String },
+            { name: "Tid", type: String },
+            { name: "Name", type: String },
+            { name: "Description", type: String },
+            { name: "CreatedBy", type: String },
+            { name: "ModifiedBy", type: String },
+            { name: "Created", type: Date },
+            { name: "Modified", type: Date },
+            { name: "RowVersion", type: String }
+        ]),
+
         DiagnosticsData: $defineDataService(DiagnosticsData, lightSwitchApplication.rootUri + "/DiagnosticsData.svc", [
             { name: "Endpoints", elementType: Endpoint }
         ], [
@@ -1534,12 +1609,13 @@ window.myapp = msls.application;
             { name: "Acls", elementType: Acl },
             { name: "EntityTypes", elementType: EntityType },
             { name: "Nodes", elementType: Node },
-            { name: "Links", elementType: Link },
             { name: "ManagementUris", elementType: ManagementUri },
             { name: "Catalogues", elementType: Catalogue },
             { name: "Carts", elementType: Cart },
             { name: "CartItems", elementType: CartItem },
-            { name: "Products", elementType: Product }
+            { name: "Products", elementType: Product },
+            { name: "Assocs", elementType: Assoc },
+            { name: "CostCentres", elementType: CostCentre }
         ], [
             {
                 name: "KeyNameValues_SingleOrDefault", value: function (Id) {
@@ -1633,13 +1709,6 @@ window.myapp = msls.application;
                 }
             },
             {
-                name: "Links_SingleOrDefault", value: function (Id) {
-                    return new $DataServiceQuery({ _entitySet: this.Links },
-                        lightSwitchApplication.rootUri + "/CoreData.svc" + "/Links(" + "Id=" + $toODataString(Id, "Int64?") + ")"
-                    );
-                }
-            },
-            {
                 name: "ManagementUris_SingleOrDefault", value: function (Id) {
                     return new $DataServiceQuery({ _entitySet: this.ManagementUris },
                         lightSwitchApplication.rootUri + "/CoreData.svc" + "/ManagementUris(" + "Id=" + $toODataString(Id, "Int64?") + ")"
@@ -1671,6 +1740,20 @@ window.myapp = msls.application;
                 name: "Products_SingleOrDefault", value: function (Id) {
                     return new $DataServiceQuery({ _entitySet: this.Products },
                         lightSwitchApplication.rootUri + "/CoreData.svc" + "/Products(" + "Id=" + $toODataString(Id, "Int64?") + ")"
+                    );
+                }
+            },
+            {
+                name: "Assocs_SingleOrDefault", value: function (Id) {
+                    return new $DataServiceQuery({ _entitySet: this.Assocs },
+                        lightSwitchApplication.rootUri + "/CoreData.svc" + "/Assocs(" + "Id=" + $toODataString(Id, "Int64?") + ")"
+                    );
+                }
+            },
+            {
+                name: "CostCentres_SingleOrDefault", value: function (Id) {
+                    return new $DataServiceQuery({ _entitySet: this.CostCentres },
+                        lightSwitchApplication.rootUri + "/CoreData.svc" + "/CostCentres(" + "Id=" + $toODataString(Id, "Int64?") + ")"
                     );
                 }
             }

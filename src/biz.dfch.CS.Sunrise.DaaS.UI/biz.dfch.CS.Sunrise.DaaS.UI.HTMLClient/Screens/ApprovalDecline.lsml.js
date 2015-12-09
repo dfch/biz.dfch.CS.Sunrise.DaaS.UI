@@ -20,7 +20,7 @@ myapp.ApprovalDecline.Description_postRender = function (element, contentItem)
 
 myapp.ApprovalDecline.beforeApplyChanges = function (screen)
 {
-    screen.Approval.Status = "Declined";
+    screen.Approval.Status = "Cancel";
 };
 
 /**

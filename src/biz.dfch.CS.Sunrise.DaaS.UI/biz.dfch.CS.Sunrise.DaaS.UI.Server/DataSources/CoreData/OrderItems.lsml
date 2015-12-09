@@ -117,6 +117,13 @@
           <NotSearchable />
         </EntityProperty.Attributes>
       </EntityProperty>
+      <EntityProperty
+        Name="CostCentreId"
+        PropertyType=":Int64?">
+        <EntityProperty.Attributes>
+          <NotSearchable />
+        </EntityProperty.Attributes>
+      </EntityProperty>
     </EntityType.Properties>
   </EntityType>
   <EntityContainer
@@ -239,6 +246,9 @@
         <CsdlProperty
           Name="Parameters"
           Property="OrderItem/Properties[Parameters]" />
+        <CsdlProperty
+          Name="CostCentreId"
+          Property="OrderItem/Properties[CostCentreId]" />
         <CsdlProperty
           Name="Id"
           Property="OrderItem/Properties[Id]" />

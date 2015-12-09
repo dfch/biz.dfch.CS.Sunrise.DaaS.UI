@@ -5,7 +5,7 @@
     <Partial />
   </ServiceApplication.Attributes>
   <EntityType
-    Name="Order">
+    Name="CostCentre">
     <EntityType.Attributes>
       <NotSearchable />
     </EntityType.Attributes>
@@ -18,12 +18,6 @@
       </EntityMethod>
     </EntityType.Methods>
     <EntityType.Properties>
-      <EntityProperty
-        Name="Status"
-        PropertyType=":String?" />
-      <EntityProperty
-        Name="Parameters"
-        PropertyType=":String?" />
       <KeyProperty
         Name="Id"
         PropertyType=":Int64">
@@ -79,14 +73,6 @@
           <NotSearchable />
         </EntityProperty.Attributes>
       </EntityProperty>
-      <NavigationProperty
-        Name="OrderItems"
-        Association="biz_dfch_CS_Sunrise_DaaS_Endpoints_OdataServices_Core_Order_Orde"
-        FromEnd="OrderItemsPartner"
-        ToEnd="OrderItems" />
-      <EntityProperty
-        Name="Requester"
-        PropertyType=":String?" />
       <EntityProperty
         Name="RowVersion"
         PropertyType=":Binary?">
@@ -94,53 +80,22 @@
           <NotSearchable />
         </EntityProperty.Attributes>
       </EntityProperty>
-      <EntityProperty
-        Name="CostCentreId"
-        PropertyType=":Int64?">
-        <EntityProperty.Attributes>
-          <NotSearchable />
-        </EntityProperty.Attributes>
-      </EntityProperty>
     </EntityType.Properties>
   </EntityType>
-  <Association
-    Name="biz_dfch_CS_Sunrise_DaaS_Endpoints_OdataServices_Core_Order_Orde">
-    <AssociationEnd
-      Name="OrderItemsPartner"
-      EntityType="Order">
-      <AssociationEnd.Attributes>
-        <DeleteRule />
-      </AssociationEnd.Attributes>
-    </AssociationEnd>
-    <AssociationEnd
-      Name="OrderItems"
-      Multiplicity="Many"
-      EntityType="OrderItem" />
-  </Association>
   <EntityContainer
     Name="CoreData">
     <EntityContainer.Attributes>
       <Partial />
     </EntityContainer.Attributes>
     <EntitySet
-      Name="Orders"
+      Name="CostCentres"
       CanDelete="True"
       CanInsert="True"
       CanUpdate="True"
-      EntityType="Order" />
-    <AssociationSet
-      Name="biz_dfch_CS_Sunrise_DaaS_Endpoints_OdataServices_Core_Order_Orde"
-      Association="biz_dfch_CS_Sunrise_DaaS_Endpoints_OdataServices_Core_Order_Orde">
-      <AssociationSetEnd
-        Name="OrderItemsPartner"
-        EntitySet="Orders" />
-      <AssociationSetEnd
-        Name="OrderItems"
-        EntitySet="OrderItems" />
-    </AssociationSet>
+      EntityType="CostCentre" />
     <QueryOperation
-      Name="Orders_Single"
-      ReturnType="Order">
+      Name="CostCentres_Single"
+      ReturnType="CostCentre">
       <QueryOperation.Attributes>
         <Generated />
         <Description
@@ -166,12 +121,12 @@
       <QueryOperation.Source>
         <QuerySourceExpressionTree>
           <MemberExpression
-            Member="Orders" />
+            Member="CostCentres" />
         </QuerySourceExpressionTree>
       </QueryOperation.Source>
       <QueryOperationParameter
         Name="Id"
-        ParameterType=":Int64?">
+        ParameterType="Microsoft.LightSwitch:Int64?">
         <QueryOperationParameter.Attributes>
           <Description
             Value="The value of the 'Id' key property of the entity to retrieve." />
@@ -179,8 +134,8 @@
       </QueryOperationParameter>
     </QueryOperation>
     <QueryOperation
-      Name="Orders_SingleOrDefault"
-      ReturnType="Order">
+      Name="CostCentres_SingleOrDefault"
+      ReturnType="CostCentre">
       <QueryOperation.Attributes>
         <Generated />
         <Description
@@ -206,12 +161,12 @@
       <QueryOperation.Source>
         <QuerySourceExpressionTree>
           <MemberExpression
-            Member="Orders" />
+            Member="CostCentres" />
         </QuerySourceExpressionTree>
       </QueryOperation.Source>
       <QueryOperationParameter
         Name="Id"
-        ParameterType=":Int64?">
+        ParameterType="Microsoft.LightSwitch:Int64?">
         <QueryOperationParameter.Attributes>
           <Description
             Value="The value of the 'Id' key property of the entity to retrieve." />
@@ -225,68 +180,41 @@
       <Partial />
     </DataService.Attributes>
     <EntitySetMapping
-      EntitySet="Orders">
+      EntitySet="CostCentres">
       <EntitySetMapping.Attributes>
         <CsdlEntitySet
-          EntityTypeName="Order"
+          EntityTypeName="CostCentre"
           EntityTypeNamespace="biz.dfch.CS.Appclusive.Core.OdataServices.Core"
-          Name="Orders"
-          EntityType="Order" />
-        <CsdlProperty
-          Name="Requester"
-          Property="Order/Properties[Requester]" />
-        <CsdlProperty
-          Name="Status"
-          Property="Order/Properties[Status]" />
-        <CsdlProperty
-          Name="Parameters"
-          Property="Order/Properties[Parameters]" />
-        <CsdlProperty
-          Name="CostCentreId"
-          Property="Order/Properties[CostCentreId]" />
+          Name="CostCentres"
+          EntityType="CostCentre" />
         <CsdlProperty
           Name="Id"
-          Property="Order/Properties[Id]" />
+          Property="CostCentre/Properties[Id]" />
         <CsdlProperty
           Name="Tid"
-          Property="Order/Properties[Tid]" />
+          Property="CostCentre/Properties[Tid]" />
         <CsdlProperty
           Name="Name"
-          Property="Order/Properties[Name]" />
+          Property="CostCentre/Properties[Name]" />
         <CsdlProperty
           Name="Description"
-          Property="Order/Properties[Description]" />
+          Property="CostCentre/Properties[Description]" />
         <CsdlProperty
           Name="CreatedBy"
-          Property="Order/Properties[CreatedBy]" />
+          Property="CostCentre/Properties[CreatedBy]" />
         <CsdlProperty
           Name="ModifiedBy"
-          Property="Order/Properties[ModifiedBy]" />
+          Property="CostCentre/Properties[ModifiedBy]" />
         <CsdlProperty
           Name="Created"
-          Property="Order/Properties[Created]" />
+          Property="CostCentre/Properties[Created]" />
         <CsdlProperty
           Name="Modified"
-          Property="Order/Properties[Modified]" />
+          Property="CostCentre/Properties[Modified]" />
         <CsdlProperty
           Name="RowVersion"
-          Property="Order/Properties[RowVersion]" />
-        <CsdlProperty
-          Name="OrderItems"
-          Property="Order/Properties[OrderItems]" />
+          Property="CostCentre/Properties[RowVersion]" />
       </EntitySetMapping.Attributes>
     </EntitySetMapping>
-    <AssociationSetMapping
-      AssociationSet="biz_dfch_CS_Sunrise_DaaS_Endpoints_OdataServices_Core_Order_Orde">
-      <AssociationSetMapping.Attributes>
-        <CsdlAssociation
-          Name="biz_dfch_CS_Appclusive_Core_OdataServices_Core_Order_OrderItems_biz_dfch_CS_Appclusive_Core_OdataServices_Core_OrderItem_OrderItemsPartnerSet"
-          Association="biz_dfch_CS_Sunrise_DaaS_Endpoints_OdataServices_Core_Order_Orde" />
-        <CsdlAssociationSetEnd
-          End="CoreData/Members[biz_dfch_CS_Sunrise_DaaS_Endpoints_OdataServices_Core_Order_Orde]/Members[OrderItemsPartner]" />
-        <CsdlAssociationSetEnd
-          End="CoreData/Members[biz_dfch_CS_Sunrise_DaaS_Endpoints_OdataServices_Core_Order_Orde]/Members[OrderItems]" />
-      </AssociationSetMapping.Attributes>
-    </AssociationSetMapping>
   </DataService>
 </ServiceApplication>

@@ -180,6 +180,36 @@
               </ContentItem>
             </ContentItem>
             <ContentItem
+              Name="Job_Condition"
+              Kind="Value"
+              DataType=":String?">
+              <ContentItem.DataSource>
+                <ScreenExpressionTree>
+                  <ChainExpression>
+                    <MemberExpression
+                      Member="JobView/Properties[Job]" />
+                    <MemberExpression
+                      Member="Condition" />
+                  </ChainExpression>
+                </ScreenExpressionTree>
+              </ContentItem.DataSource>
+            </ContentItem>
+            <ContentItem
+              Name="Job_ConditionParameters"
+              Kind="Value"
+              DataType=":String?">
+              <ContentItem.DataSource>
+                <ScreenExpressionTree>
+                  <ChainExpression>
+                    <MemberExpression
+                      Member="JobView/Properties[Job]" />
+                    <MemberExpression
+                      Member="ConditionParameters" />
+                  </ChainExpression>
+                </ScreenExpressionTree>
+              </ContentItem.DataSource>
+            </ContentItem>
+            <ContentItem
               Name="Description1"
               Kind="Value"
               DataType=":String?"

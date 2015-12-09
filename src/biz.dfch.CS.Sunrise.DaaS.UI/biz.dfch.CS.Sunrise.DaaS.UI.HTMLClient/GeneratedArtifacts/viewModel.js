@@ -705,6 +705,97 @@
         $Screen.call(this, dataWorkspace, "KeyNameValueView", parameters);
     }
 
+    function ManagementCredentialList(parameters, dataWorkspace) {
+        /// <summary>
+        /// Represents the ManagementCredentialList screen.
+        /// </summary>
+        /// <param name="parameters" type="Array">
+        /// An array of screen parameter values.
+        /// </param>
+        /// <param name="dataWorkspace" type="msls.application.DataWorkspace" optional="true">
+        /// An existing data workspace for this screen to use. By default, a new data workspace is created.
+        /// </param>
+        /// <field name="ManagementCredentials" type="msls.VisualCollection" elementType="msls.application.ManagementCredential">
+        /// Gets the managementCredentials for this screen.
+        /// </field>
+        /// <field name="details" type="msls.application.ManagementCredentialList.Details">
+        /// Gets the details for this screen.
+        /// </field>
+        if (!dataWorkspace) {
+            dataWorkspace = new lightSwitchApplication.DataWorkspace();
+        }
+        $Screen.call(this, dataWorkspace, "ManagementCredentialList", parameters);
+    }
+
+    function ManagementCredentialView(parameters, dataWorkspace) {
+        /// <summary>
+        /// Represents the ManagementCredentialView screen.
+        /// </summary>
+        /// <param name="parameters" type="Array">
+        /// An array of screen parameter values.
+        /// </param>
+        /// <param name="dataWorkspace" type="msls.application.DataWorkspace" optional="true">
+        /// An existing data workspace for this screen to use. By default, a new data workspace is created.
+        /// </param>
+        /// <field name="ManagementCredential" type="msls.application.ManagementCredential">
+        /// Gets or sets the managementCredential for this screen.
+        /// </field>
+        /// <field name="ManagementUris" type="msls.VisualCollection" elementType="msls.application.ManagementUri">
+        /// Gets the managementUris for this screen.
+        /// </field>
+        /// <field name="details" type="msls.application.ManagementCredentialView.Details">
+        /// Gets the details for this screen.
+        /// </field>
+        if (!dataWorkspace) {
+            dataWorkspace = new lightSwitchApplication.DataWorkspace();
+        }
+        $Screen.call(this, dataWorkspace, "ManagementCredentialView", parameters);
+    }
+
+    function ManagementUriList(parameters, dataWorkspace) {
+        /// <summary>
+        /// Represents the ManagementUriList screen.
+        /// </summary>
+        /// <param name="parameters" type="Array">
+        /// An array of screen parameter values.
+        /// </param>
+        /// <param name="dataWorkspace" type="msls.application.DataWorkspace" optional="true">
+        /// An existing data workspace for this screen to use. By default, a new data workspace is created.
+        /// </param>
+        /// <field name="ManagementUris" type="msls.VisualCollection" elementType="msls.application.ManagementUri">
+        /// Gets the managementUris for this screen.
+        /// </field>
+        /// <field name="details" type="msls.application.ManagementUriList.Details">
+        /// Gets the details for this screen.
+        /// </field>
+        if (!dataWorkspace) {
+            dataWorkspace = new lightSwitchApplication.DataWorkspace();
+        }
+        $Screen.call(this, dataWorkspace, "ManagementUriList", parameters);
+    }
+
+    function ManagementUriView(parameters, dataWorkspace) {
+        /// <summary>
+        /// Represents the ManagementUriView screen.
+        /// </summary>
+        /// <param name="parameters" type="Array">
+        /// An array of screen parameter values.
+        /// </param>
+        /// <param name="dataWorkspace" type="msls.application.DataWorkspace" optional="true">
+        /// An existing data workspace for this screen to use. By default, a new data workspace is created.
+        /// </param>
+        /// <field name="ManagementUri" type="msls.application.ManagementUri">
+        /// Gets or sets the managementUri for this screen.
+        /// </field>
+        /// <field name="details" type="msls.application.ManagementUriView.Details">
+        /// Gets the details for this screen.
+        /// </field>
+        if (!dataWorkspace) {
+            dataWorkspace = new lightSwitchApplication.DataWorkspace();
+        }
+        $Screen.call(this, dataWorkspace, "ManagementUriView", parameters);
+    }
+
     function NodesList(parameters, dataWorkspace) {
         /// <summary>
         /// Represents the NodesList screen.
@@ -742,12 +833,6 @@
         /// </field>
         /// <field name="Children" type="msls.VisualCollection" elementType="msls.application.Node">
         /// Gets the children for this screen.
-        /// </field>
-        /// <field name="IncomingLinks" type="msls.VisualCollection" elementType="msls.application.Link">
-        /// Gets the incomingLinks for this screen.
-        /// </field>
-        /// <field name="OutgoingLinks" type="msls.VisualCollection" elementType="msls.application.Link">
-        /// Gets the outgoingLinks for this screen.
         /// </field>
         /// <field name="details" type="msls.application.NodeView.Details">
         /// Gets the details for this screen.
@@ -1144,6 +1229,48 @@
             { name: "deleteEntity" }
         ]),
 
+        ManagementCredentialList: $defineScreen(ManagementCredentialList, [
+            {
+                name: "ManagementCredentials", kind: "collection", elementType: lightSwitchApplication.ManagementCredential,
+                createQuery: function () {
+                    return this.dataWorkspace.CoreData.ManagementCredentials;
+                }
+            }
+        ], [
+        ]),
+
+        ManagementCredentialView: $defineScreen(ManagementCredentialView, [
+            { name: "ManagementCredential", kind: "local", type: lightSwitchApplication.ManagementCredential },
+            {
+                name: "ManagementUris", kind: "collection", elementType: lightSwitchApplication.ManagementUri,
+                getNavigationProperty: function () {
+                    if (this.owner.ManagementCredential) {
+                        return this.owner.ManagementCredential.details.properties.ManagementUris;
+                    }
+                    return null;
+                },
+                appendQuery: function () {
+                    return this;
+                }
+            }
+        ], [
+        ]),
+
+        ManagementUriList: $defineScreen(ManagementUriList, [
+            {
+                name: "ManagementUris", kind: "collection", elementType: lightSwitchApplication.ManagementUri,
+                createQuery: function () {
+                    return this.dataWorkspace.CoreData.ManagementUris;
+                }
+            }
+        ], [
+        ]),
+
+        ManagementUriView: $defineScreen(ManagementUriView, [
+            { name: "ManagementUri", kind: "local", type: lightSwitchApplication.ManagementUri }
+        ], [
+        ]),
+
         NodesList: $defineScreen(NodesList, [
             {
                 name: "Nodes", kind: "collection", elementType: lightSwitchApplication.Node,
@@ -1161,30 +1288,6 @@
                 getNavigationProperty: function () {
                     if (this.owner.Node) {
                         return this.owner.Node.details.properties.Children;
-                    }
-                    return null;
-                },
-                appendQuery: function () {
-                    return this;
-                }
-            },
-            {
-                name: "IncomingLinks", kind: "collection", elementType: lightSwitchApplication.Link,
-                getNavigationProperty: function () {
-                    if (this.owner.Node) {
-                        return this.owner.Node.details.properties.IncomingLinks;
-                    }
-                    return null;
-                },
-                appendQuery: function () {
-                    return this;
-                }
-            },
-            {
-                name: "OutgoingLinks", kind: "collection", elementType: lightSwitchApplication.Link,
-                getNavigationProperty: function () {
-                    if (this.owner.Node) {
-                        return this.owner.Node.details.properties.OutgoingLinks;
                     }
                     return null;
                 },
@@ -1632,6 +1735,54 @@
             /// <returns type="WinJS.Promise" />
             var parameters = Array.prototype.slice.call(arguments, 0, 1);
             return lightSwitchApplication.showScreen("KeyNameValueView", parameters, options);
+        }),
+
+        showManagementCredentialList: $defineShowScreen(function showManagementCredentialList(options) {
+            /// <summary>
+            /// Asynchronously navigates forward to the ManagementCredentialList screen.
+            /// </summary>
+            /// <param name="options" optional="true">
+            /// An object that provides one or more of the following options:<br/>- beforeShown: a function that is called after boundary behavior has been applied but before the screen is shown.<br/>+ Signature: beforeShown(screen)<br/>- afterClosed: a function that is called after boundary behavior has been applied and the screen has been closed.<br/>+ Signature: afterClosed(screen, action : msls.NavigateBackAction)
+            /// </param>
+            /// <returns type="WinJS.Promise" />
+            var parameters = Array.prototype.slice.call(arguments, 0, 0);
+            return lightSwitchApplication.showScreen("ManagementCredentialList", parameters, options);
+        }),
+
+        showManagementCredentialView: $defineShowScreen(function showManagementCredentialView(ManagementCredential, options) {
+            /// <summary>
+            /// Asynchronously navigates forward to the ManagementCredentialView screen.
+            /// </summary>
+            /// <param name="options" optional="true">
+            /// An object that provides one or more of the following options:<br/>- beforeShown: a function that is called after boundary behavior has been applied but before the screen is shown.<br/>+ Signature: beforeShown(screen)<br/>- afterClosed: a function that is called after boundary behavior has been applied and the screen has been closed.<br/>+ Signature: afterClosed(screen, action : msls.NavigateBackAction)
+            /// </param>
+            /// <returns type="WinJS.Promise" />
+            var parameters = Array.prototype.slice.call(arguments, 0, 1);
+            return lightSwitchApplication.showScreen("ManagementCredentialView", parameters, options);
+        }),
+
+        showManagementUriList: $defineShowScreen(function showManagementUriList(options) {
+            /// <summary>
+            /// Asynchronously navigates forward to the ManagementUriList screen.
+            /// </summary>
+            /// <param name="options" optional="true">
+            /// An object that provides one or more of the following options:<br/>- beforeShown: a function that is called after boundary behavior has been applied but before the screen is shown.<br/>+ Signature: beforeShown(screen)<br/>- afterClosed: a function that is called after boundary behavior has been applied and the screen has been closed.<br/>+ Signature: afterClosed(screen, action : msls.NavigateBackAction)
+            /// </param>
+            /// <returns type="WinJS.Promise" />
+            var parameters = Array.prototype.slice.call(arguments, 0, 0);
+            return lightSwitchApplication.showScreen("ManagementUriList", parameters, options);
+        }),
+
+        showManagementUriView: $defineShowScreen(function showManagementUriView(ManagementUri, options) {
+            /// <summary>
+            /// Asynchronously navigates forward to the ManagementUriView screen.
+            /// </summary>
+            /// <param name="options" optional="true">
+            /// An object that provides one or more of the following options:<br/>- beforeShown: a function that is called after boundary behavior has been applied but before the screen is shown.<br/>+ Signature: beforeShown(screen)<br/>- afterClosed: a function that is called after boundary behavior has been applied and the screen has been closed.<br/>+ Signature: afterClosed(screen, action : msls.NavigateBackAction)
+            /// </param>
+            /// <returns type="WinJS.Promise" />
+            var parameters = Array.prototype.slice.call(arguments, 0, 1);
+            return lightSwitchApplication.showScreen("ManagementUriView", parameters, options);
         }),
 
         showNodesList: $defineShowScreen(function showNodesList(options) {

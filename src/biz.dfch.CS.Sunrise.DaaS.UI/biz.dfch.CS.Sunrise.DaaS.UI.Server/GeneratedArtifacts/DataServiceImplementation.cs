@@ -58,6 +58,10 @@ namespace LightSwitchApplication.Implementation
             {
                 return new global::LightSwitchApplication.Implementation.Approval();
             }
+            if (type == typeof(global::LightSwitchApplication.Implementation.Assoc))
+            {
+                return new global::LightSwitchApplication.Implementation.Assoc();
+            }
             if (type == typeof(global::LightSwitchApplication.Implementation.CartItem))
             {
                 return new global::LightSwitchApplication.Implementation.CartItem();
@@ -74,6 +78,10 @@ namespace LightSwitchApplication.Implementation
             {
                 return new global::LightSwitchApplication.Implementation.Catalogue();
             }
+            if (type == typeof(global::LightSwitchApplication.Implementation.CostCentre))
+            {
+                return new global::LightSwitchApplication.Implementation.CostCentre();
+            }
             if (type == typeof(global::LightSwitchApplication.Implementation.EntityType))
             {
                 return new global::LightSwitchApplication.Implementation.EntityType();
@@ -89,10 +97,6 @@ namespace LightSwitchApplication.Implementation
             if (type == typeof(global::LightSwitchApplication.Implementation.KeyNameValue))
             {
                 return new global::LightSwitchApplication.Implementation.KeyNameValue();
-            }
-            if (type == typeof(global::LightSwitchApplication.Implementation.Link))
-            {
-                return new global::LightSwitchApplication.Implementation.Link();
             }
             if (type == typeof(global::LightSwitchApplication.Implementation.ManagementCredential))
             {
@@ -150,6 +154,10 @@ namespace LightSwitchApplication.Implementation
             {
                 return new global::LightSwitchApplication.Implementation.Approval();
             }
+            if (typeof(T) == typeof(global::LightSwitchApplication.Assoc))
+            {
+                return new global::LightSwitchApplication.Implementation.Assoc();
+            }
             if (typeof(T) == typeof(global::LightSwitchApplication.CartItem))
             {
                 return new global::LightSwitchApplication.Implementation.CartItem();
@@ -166,6 +174,10 @@ namespace LightSwitchApplication.Implementation
             {
                 return new global::LightSwitchApplication.Implementation.Catalogue();
             }
+            if (typeof(T) == typeof(global::LightSwitchApplication.CostCentre))
+            {
+                return new global::LightSwitchApplication.Implementation.CostCentre();
+            }
             if (typeof(T) == typeof(global::LightSwitchApplication.EntityType))
             {
                 return new global::LightSwitchApplication.Implementation.EntityType();
@@ -181,10 +193,6 @@ namespace LightSwitchApplication.Implementation
             if (typeof(T) == typeof(global::LightSwitchApplication.KeyNameValue))
             {
                 return new global::LightSwitchApplication.Implementation.KeyNameValue();
-            }
-            if (typeof(T) == typeof(global::LightSwitchApplication.Link))
-            {
-                return new global::LightSwitchApplication.Implementation.Link();
             }
             if (typeof(T) == typeof(global::LightSwitchApplication.ManagementCredential))
             {
@@ -239,6 +247,10 @@ namespace LightSwitchApplication.Implementation
             {
                 return typeof(global::CoreData.CoreDataService.Approval);
             }
+            if (outerType == typeof(global::LightSwitchApplication.Implementation.Assoc))
+            {
+                return typeof(global::CoreData.CoreDataService.Assoc);
+            }
             if (outerType == typeof(global::LightSwitchApplication.Implementation.CartItem))
             {
                 return typeof(global::CoreData.CoreDataService.CartItem);
@@ -255,6 +267,10 @@ namespace LightSwitchApplication.Implementation
             {
                 return typeof(global::CoreData.CoreDataService.Catalogue);
             }
+            if (outerType == typeof(global::LightSwitchApplication.Implementation.CostCentre))
+            {
+                return typeof(global::CoreData.CoreDataService.CostCentre);
+            }
             if (outerType == typeof(global::LightSwitchApplication.Implementation.EntityType))
             {
                 return typeof(global::CoreData.CoreDataService.EntityType);
@@ -270,10 +286,6 @@ namespace LightSwitchApplication.Implementation
             if (outerType == typeof(global::LightSwitchApplication.Implementation.KeyNameValue))
             {
                 return typeof(global::CoreData.CoreDataService.KeyNameValue);
-            }
-            if (outerType == typeof(global::LightSwitchApplication.Implementation.Link))
-            {
-                return typeof(global::CoreData.CoreDataService.Link);
             }
             if (outerType == typeof(global::LightSwitchApplication.Implementation.ManagementCredential))
             {
@@ -396,6 +408,24 @@ namespace LightSwitchApplication.Implementation
                 result.ExpiresAt = approval.ExpiresAt;
                 return result;
             }
+            global::LightSwitchApplication.Implementation.Assoc assoc = outerEntity as global::LightSwitchApplication.Implementation.Assoc;
+            if (assoc != null)
+            {
+                global::CoreData.CoreDataService.Assoc result = new global::CoreData.CoreDataService.Assoc();
+                result.Order = assoc.Order;
+                result.SourceId = assoc.SourceId;
+                result.DestinationId = assoc.DestinationId;
+                result.Id = assoc.Id;
+                result.Tid = assoc.Tid;
+                result.Name = assoc.Name;
+                result.Description = assoc.Description;
+                result.CreatedBy = assoc.CreatedBy;
+                result.ModifiedBy = assoc.ModifiedBy;
+                result.Created = assoc.Created;
+                result.Modified = assoc.Modified;
+                result.RowVersion = assoc.RowVersion;
+                return result;
+            }
             global::LightSwitchApplication.Implementation.CartItem cartItem = outerEntity as global::LightSwitchApplication.Implementation.CartItem;
             if (cartItem != null)
             {
@@ -469,6 +499,21 @@ namespace LightSwitchApplication.Implementation
                 result.RowVersion = catalogue.RowVersion;
                 return result;
             }
+            global::LightSwitchApplication.Implementation.CostCentre costCentre = outerEntity as global::LightSwitchApplication.Implementation.CostCentre;
+            if (costCentre != null)
+            {
+                global::CoreData.CoreDataService.CostCentre result = new global::CoreData.CoreDataService.CostCentre();
+                result.Id = costCentre.Id;
+                result.Tid = costCentre.Tid;
+                result.Name = costCentre.Name;
+                result.Description = costCentre.Description;
+                result.CreatedBy = costCentre.CreatedBy;
+                result.ModifiedBy = costCentre.ModifiedBy;
+                result.Created = costCentre.Created;
+                result.Modified = costCentre.Modified;
+                result.RowVersion = costCentre.RowVersion;
+                return result;
+            }
             global::LightSwitchApplication.Implementation.EntityType entityType = outerEntity as global::LightSwitchApplication.Implementation.EntityType;
             if (entityType != null)
             {
@@ -525,6 +570,8 @@ namespace LightSwitchApplication.Implementation
                 result.Modified = job.Modified;
                 result.Status = job.Status;
                 result.RowVersion = job.RowVersion;
+                result.Condition = job.Condition;
+                result.ConditionParameters = job.ConditionParameters;
                 return result;
             }
             global::LightSwitchApplication.Implementation.KeyNameValue keyNameValue = outerEntity as global::LightSwitchApplication.Implementation.KeyNameValue;
@@ -542,24 +589,6 @@ namespace LightSwitchApplication.Implementation
                 result.Modified = keyNameValue.Modified;
                 result.ModifiedBy = keyNameValue.ModifiedBy;
                 result.RowVersion = keyNameValue.RowVersion;
-                return result;
-            }
-            global::LightSwitchApplication.Implementation.Link link = outerEntity as global::LightSwitchApplication.Implementation.Link;
-            if (link != null)
-            {
-                global::CoreData.CoreDataService.Link result = new global::CoreData.CoreDataService.Link();
-                result.Order = link.Order;
-                result.SourceId = link.SourceId;
-                result.DestinationId = link.DestinationId;
-                result.Id = link.Id;
-                result.Tid = link.Tid;
-                result.Name = link.Name;
-                result.Description = link.Description;
-                result.CreatedBy = link.CreatedBy;
-                result.ModifiedBy = link.ModifiedBy;
-                result.Created = link.Created;
-                result.Modified = link.Modified;
-                result.RowVersion = link.RowVersion;
                 return result;
             }
             global::LightSwitchApplication.Implementation.ManagementCredential managementCredential = outerEntity as global::LightSwitchApplication.Implementation.ManagementCredential;
@@ -634,6 +663,7 @@ namespace LightSwitchApplication.Implementation
                 result.Created = orderItem.Created;
                 result.Modified = orderItem.Modified;
                 result.RowVersion = orderItem.RowVersion;
+                result.CostCentreId = orderItem.CostCentreId;
                 return result;
             }
             global::LightSwitchApplication.Implementation.Order order = outerEntity as global::LightSwitchApplication.Implementation.Order;
@@ -652,6 +682,7 @@ namespace LightSwitchApplication.Implementation
                 result.Modified = order.Modified;
                 result.Requester = order.Requester;
                 result.RowVersion = order.RowVersion;
+                result.CostCentreId = order.CostCentreId;
                 return result;
             }
             global::LightSwitchApplication.Implementation.Product product = outerEntity as global::LightSwitchApplication.Implementation.Product;
@@ -759,6 +790,24 @@ namespace LightSwitchApplication.Implementation
                 outerApproval.ExpiresAt = innerApproval.ExpiresAt;
                 return;
             }
+            global::LightSwitchApplication.Implementation.Assoc outerAssoc = outerEntity as global::LightSwitchApplication.Implementation.Assoc;
+            global::CoreData.CoreDataService.Assoc innerAssoc = innerResult as global::CoreData.CoreDataService.Assoc;
+            if ((outerAssoc != null) && (innerAssoc != null))
+            {
+                outerAssoc.Order = innerAssoc.Order;
+                outerAssoc.SourceId = innerAssoc.SourceId;
+                outerAssoc.DestinationId = innerAssoc.DestinationId;
+                outerAssoc.Id = innerAssoc.Id;
+                outerAssoc.Tid = innerAssoc.Tid;
+                outerAssoc.Name = innerAssoc.Name;
+                outerAssoc.Description = innerAssoc.Description;
+                outerAssoc.CreatedBy = innerAssoc.CreatedBy;
+                outerAssoc.ModifiedBy = innerAssoc.ModifiedBy;
+                outerAssoc.Created = innerAssoc.Created;
+                outerAssoc.Modified = innerAssoc.Modified;
+                outerAssoc.RowVersion = innerAssoc.RowVersion;
+                return;
+            }
             global::LightSwitchApplication.Implementation.CartItem outerCartItem = outerEntity as global::LightSwitchApplication.Implementation.CartItem;
             global::CoreData.CoreDataService.CartItem innerCartItem = innerResult as global::CoreData.CoreDataService.CartItem;
             if ((outerCartItem != null) && (innerCartItem != null))
@@ -832,6 +881,21 @@ namespace LightSwitchApplication.Implementation
                 outerCatalogue.RowVersion = innerCatalogue.RowVersion;
                 return;
             }
+            global::LightSwitchApplication.Implementation.CostCentre outerCostCentre = outerEntity as global::LightSwitchApplication.Implementation.CostCentre;
+            global::CoreData.CoreDataService.CostCentre innerCostCentre = innerResult as global::CoreData.CoreDataService.CostCentre;
+            if ((outerCostCentre != null) && (innerCostCentre != null))
+            {
+                outerCostCentre.Id = innerCostCentre.Id;
+                outerCostCentre.Tid = innerCostCentre.Tid;
+                outerCostCentre.Name = innerCostCentre.Name;
+                outerCostCentre.Description = innerCostCentre.Description;
+                outerCostCentre.CreatedBy = innerCostCentre.CreatedBy;
+                outerCostCentre.ModifiedBy = innerCostCentre.ModifiedBy;
+                outerCostCentre.Created = innerCostCentre.Created;
+                outerCostCentre.Modified = innerCostCentre.Modified;
+                outerCostCentre.RowVersion = innerCostCentre.RowVersion;
+                return;
+            }
             global::LightSwitchApplication.Implementation.EntityType outerEntityType = outerEntity as global::LightSwitchApplication.Implementation.EntityType;
             global::CoreData.CoreDataService.EntityType innerEntityType = innerResult as global::CoreData.CoreDataService.EntityType;
             if ((outerEntityType != null) && (innerEntityType != null))
@@ -888,6 +952,8 @@ namespace LightSwitchApplication.Implementation
                 outerJob.Modified = innerJob.Modified;
                 outerJob.Status = innerJob.Status;
                 outerJob.RowVersion = innerJob.RowVersion;
+                outerJob.Condition = innerJob.Condition;
+                outerJob.ConditionParameters = innerJob.ConditionParameters;
                 return;
             }
             global::LightSwitchApplication.Implementation.KeyNameValue outerKeyNameValue = outerEntity as global::LightSwitchApplication.Implementation.KeyNameValue;
@@ -905,24 +971,6 @@ namespace LightSwitchApplication.Implementation
                 outerKeyNameValue.Modified = innerKeyNameValue.Modified;
                 outerKeyNameValue.ModifiedBy = innerKeyNameValue.ModifiedBy;
                 outerKeyNameValue.RowVersion = innerKeyNameValue.RowVersion;
-                return;
-            }
-            global::LightSwitchApplication.Implementation.Link outerLink = outerEntity as global::LightSwitchApplication.Implementation.Link;
-            global::CoreData.CoreDataService.Link innerLink = innerResult as global::CoreData.CoreDataService.Link;
-            if ((outerLink != null) && (innerLink != null))
-            {
-                outerLink.Order = innerLink.Order;
-                outerLink.SourceId = innerLink.SourceId;
-                outerLink.DestinationId = innerLink.DestinationId;
-                outerLink.Id = innerLink.Id;
-                outerLink.Tid = innerLink.Tid;
-                outerLink.Name = innerLink.Name;
-                outerLink.Description = innerLink.Description;
-                outerLink.CreatedBy = innerLink.CreatedBy;
-                outerLink.ModifiedBy = innerLink.ModifiedBy;
-                outerLink.Created = innerLink.Created;
-                outerLink.Modified = innerLink.Modified;
-                outerLink.RowVersion = innerLink.RowVersion;
                 return;
             }
             global::LightSwitchApplication.Implementation.ManagementCredential outerManagementCredential = outerEntity as global::LightSwitchApplication.Implementation.ManagementCredential;
@@ -997,6 +1045,7 @@ namespace LightSwitchApplication.Implementation
                 outerOrderItem.Created = innerOrderItem.Created;
                 outerOrderItem.Modified = innerOrderItem.Modified;
                 outerOrderItem.RowVersion = innerOrderItem.RowVersion;
+                outerOrderItem.CostCentreId = innerOrderItem.CostCentreId;
                 return;
             }
             global::LightSwitchApplication.Implementation.Order outerOrder = outerEntity as global::LightSwitchApplication.Implementation.Order;
@@ -1015,6 +1064,7 @@ namespace LightSwitchApplication.Implementation
                 outerOrder.Modified = innerOrder.Modified;
                 outerOrder.Requester = innerOrder.Requester;
                 outerOrder.RowVersion = innerOrder.RowVersion;
+                outerOrder.CostCentreId = innerOrder.CostCentreId;
                 return;
             }
             global::LightSwitchApplication.Implementation.Product outerProduct = outerEntity as global::LightSwitchApplication.Implementation.Product;
@@ -1238,6 +1288,10 @@ namespace LightSwitchApplication.Implementation
             {
                 return typeof(global::LightSwitchApplication.Implementation.Approval);
             }
+            if (typeof(global::LightSwitchApplication.Assoc) == definitionType)
+            {
+                return typeof(global::LightSwitchApplication.Implementation.Assoc);
+            }
             if (typeof(global::LightSwitchApplication.CartItem) == definitionType)
             {
                 return typeof(global::LightSwitchApplication.Implementation.CartItem);
@@ -1254,6 +1308,10 @@ namespace LightSwitchApplication.Implementation
             {
                 return typeof(global::LightSwitchApplication.Implementation.Catalogue);
             }
+            if (typeof(global::LightSwitchApplication.CostCentre) == definitionType)
+            {
+                return typeof(global::LightSwitchApplication.Implementation.CostCentre);
+            }
             if (typeof(global::LightSwitchApplication.EntityType) == definitionType)
             {
                 return typeof(global::LightSwitchApplication.Implementation.EntityType);
@@ -1269,10 +1327,6 @@ namespace LightSwitchApplication.Implementation
             if (typeof(global::LightSwitchApplication.KeyNameValue) == definitionType)
             {
                 return typeof(global::LightSwitchApplication.Implementation.KeyNameValue);
-            }
-            if (typeof(global::LightSwitchApplication.Link) == definitionType)
-            {
-                return typeof(global::LightSwitchApplication.Implementation.Link);
             }
             if (typeof(global::LightSwitchApplication.ManagementCredential) == definitionType)
             {
@@ -1458,6 +1512,53 @@ namespace LightSwitchApplication.Implementation
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     public partial class Approval :
         global::LightSwitchApplication.Approval.DetailsClass.IImplementation,
+        global::Microsoft.LightSwitch.Internal.IAstoriaEntityImplementation
+    {
+    
+        [global::System.Runtime.Serialization.DataMember]
+        public string Microsoft_LightSwitch_ETag
+        {
+            get;
+            set;
+        }
+    
+        string global::Microsoft.LightSwitch.Internal.IAstoriaEntityImplementation.ETag
+        {
+            get { return this.Microsoft_LightSwitch_ETag; }
+            set { this.Microsoft_LightSwitch_ETag = value; }
+        }
+    
+        #region IEntityImplementation Members
+        private global::Microsoft.LightSwitch.Internal.IEntityImplementationHost __host;
+        
+        global::Microsoft.LightSwitch.Internal.IEntityImplementationHost global::Microsoft.LightSwitch.Internal.IEntityImplementation.Host
+        {
+            get
+            {
+                return this.__host;
+            }
+        }
+        
+        void global::Microsoft.LightSwitch.Internal.IEntityImplementation.Initialize(global::Microsoft.LightSwitch.Internal.IEntityImplementationHost host)
+        {
+            this.__host = host;
+        }
+        
+        protected override void OnPropertyChanged(string propertyName)
+        {
+            base.OnPropertyChanged(propertyName);
+            if (this.__host != null)
+            {
+                this.__host.RaisePropertyChanged(propertyName);
+            }
+        }
+        #endregion
+    }
+    
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.1.0.0")]
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+    public partial class Assoc :
+        global::LightSwitchApplication.Assoc.DetailsClass.IImplementation,
         global::Microsoft.LightSwitch.Internal.IAstoriaEntityImplementation
     {
     
@@ -1707,6 +1808,53 @@ namespace LightSwitchApplication.Implementation
     
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.1.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+    public partial class CostCentre :
+        global::LightSwitchApplication.CostCentre.DetailsClass.IImplementation,
+        global::Microsoft.LightSwitch.Internal.IAstoriaEntityImplementation
+    {
+    
+        [global::System.Runtime.Serialization.DataMember]
+        public string Microsoft_LightSwitch_ETag
+        {
+            get;
+            set;
+        }
+    
+        string global::Microsoft.LightSwitch.Internal.IAstoriaEntityImplementation.ETag
+        {
+            get { return this.Microsoft_LightSwitch_ETag; }
+            set { this.Microsoft_LightSwitch_ETag = value; }
+        }
+    
+        #region IEntityImplementation Members
+        private global::Microsoft.LightSwitch.Internal.IEntityImplementationHost __host;
+        
+        global::Microsoft.LightSwitch.Internal.IEntityImplementationHost global::Microsoft.LightSwitch.Internal.IEntityImplementation.Host
+        {
+            get
+            {
+                return this.__host;
+            }
+        }
+        
+        void global::Microsoft.LightSwitch.Internal.IEntityImplementation.Initialize(global::Microsoft.LightSwitch.Internal.IEntityImplementationHost host)
+        {
+            this.__host = host;
+        }
+        
+        protected override void OnPropertyChanged(string propertyName)
+        {
+            base.OnPropertyChanged(propertyName);
+            if (this.__host != null)
+            {
+                this.__host.RaisePropertyChanged(propertyName);
+            }
+        }
+        #endregion
+    }
+    
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.1.0.0")]
+    [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     public partial class EntityType :
         global::LightSwitchApplication.EntityType.DetailsClass.IImplementation,
         global::Microsoft.LightSwitch.Internal.IAstoriaEntityImplementation
@@ -1819,6 +1967,14 @@ namespace LightSwitchApplication.Implementation
             set { this.Microsoft_LightSwitch_ETag = value; }
         }
     
+        global::System.Collections.IEnumerable global::LightSwitchApplication.Job.DetailsClass.IImplementation.Children
+        {
+            get
+            {
+                return this.Children;
+            }
+        }
+        
         #region IEntityImplementation Members
         private global::Microsoft.LightSwitch.Internal.IEntityImplementationHost __host;
         
@@ -1850,53 +2006,6 @@ namespace LightSwitchApplication.Implementation
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     public partial class KeyNameValue :
         global::LightSwitchApplication.KeyNameValue.DetailsClass.IImplementation,
-        global::Microsoft.LightSwitch.Internal.IAstoriaEntityImplementation
-    {
-    
-        [global::System.Runtime.Serialization.DataMember]
-        public string Microsoft_LightSwitch_ETag
-        {
-            get;
-            set;
-        }
-    
-        string global::Microsoft.LightSwitch.Internal.IAstoriaEntityImplementation.ETag
-        {
-            get { return this.Microsoft_LightSwitch_ETag; }
-            set { this.Microsoft_LightSwitch_ETag = value; }
-        }
-    
-        #region IEntityImplementation Members
-        private global::Microsoft.LightSwitch.Internal.IEntityImplementationHost __host;
-        
-        global::Microsoft.LightSwitch.Internal.IEntityImplementationHost global::Microsoft.LightSwitch.Internal.IEntityImplementation.Host
-        {
-            get
-            {
-                return this.__host;
-            }
-        }
-        
-        void global::Microsoft.LightSwitch.Internal.IEntityImplementation.Initialize(global::Microsoft.LightSwitch.Internal.IEntityImplementationHost host)
-        {
-            this.__host = host;
-        }
-        
-        protected override void OnPropertyChanged(string propertyName)
-        {
-            base.OnPropertyChanged(propertyName);
-            if (this.__host != null)
-            {
-                this.__host.RaisePropertyChanged(propertyName);
-            }
-        }
-        #endregion
-    }
-    
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.1.0.0")]
-    [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-    public partial class Link :
-        global::LightSwitchApplication.Link.DetailsClass.IImplementation,
         global::Microsoft.LightSwitch.Internal.IAstoriaEntityImplementation
     {
     
@@ -2070,19 +2179,19 @@ namespace LightSwitchApplication.Implementation
             }
         }
         
-        global::System.Collections.IEnumerable global::LightSwitchApplication.Node.DetailsClass.IImplementation.IncomingLinks
+        global::System.Collections.IEnumerable global::LightSwitchApplication.Node.DetailsClass.IImplementation.IncomingAssocs
         {
             get
             {
-                return this.IncomingLinks;
+                return this.IncomingAssocs;
             }
         }
         
-        global::System.Collections.IEnumerable global::LightSwitchApplication.Node.DetailsClass.IImplementation.OutgoingLinks
+        global::System.Collections.IEnumerable global::LightSwitchApplication.Node.DetailsClass.IImplementation.OutgoingAssocs
         {
             get
             {
-                return this.OutgoingLinks;
+                return this.OutgoingAssocs;
             }
         }
         

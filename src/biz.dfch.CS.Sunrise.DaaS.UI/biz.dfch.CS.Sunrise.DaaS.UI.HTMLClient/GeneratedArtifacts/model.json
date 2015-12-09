@@ -945,6 +945,25 @@
               "name": "RowVersion",
               "propertyType": { "__id": ":Binary?" },
               ":@NotSearchable": { }
+            },
+            {
+              "id": "Job/Properties[Condition]",
+              "name": "Condition",
+              "propertyType": { "__id": ":String?" }
+            },
+            {
+              "id": "Job/Properties[ConditionParameters]",
+              "name": "ConditionParameters",
+              "propertyType": { "__id": ":String?" }
+            },
+            {
+              "id": "Job/Properties[Children]",
+              "name": "Children",
+              "association": { "__id": "biz_dfch_CS_Appclusive_Core_OdataServices_Core_Job_Children_biz_" },
+              "elementType": { "__id": "Job" },
+              "fromEnd": { "__id": "biz_dfch_CS_Appclusive_Core_OdataServices_Core_Job_Children_biz_/Ends[ChildrenPartner]" },
+              "propertyType": { "__id": "Job*" },
+              "toEnd": { "__id": "biz_dfch_CS_Appclusive_Core_OdataServices_Core_Job_Children_biz_/Ends[Children]" }
             }
           ]
         },
@@ -1166,22 +1185,22 @@
               "toEnd": { "__id": "biz_dfch_CS_Appclusive_Core_OdataServices_Core_Node_Children_biz/Ends[Children]" }
             },
             {
-              "id": "Node/Properties[IncomingLinks]",
-              "name": "IncomingLinks",
-              "association": { "__id": "biz_dfch_CS_Appclusive_Core_OdataServices_Core_Node_IncomingLink" },
-              "elementType": { "__id": "Link" },
-              "fromEnd": { "__id": "biz_dfch_CS_Appclusive_Core_OdataServices_Core_Node_IncomingLink/Ends[IncomingLinksPartner]" },
-              "propertyType": { "__id": "Link*" },
-              "toEnd": { "__id": "biz_dfch_CS_Appclusive_Core_OdataServices_Core_Node_IncomingLink/Ends[IncomingLinks]" }
+              "id": "Node/Properties[IncomingAssocs]",
+              "name": "IncomingAssocs",
+              "association": { "__id": "biz_dfch_CS_Appclusive_Core_OdataServices_Core_Node_IncomingAsso" },
+              "elementType": { "__id": "Assoc" },
+              "fromEnd": { "__id": "biz_dfch_CS_Appclusive_Core_OdataServices_Core_Node_IncomingAsso/Ends[IncomingAssocsPartner]" },
+              "propertyType": { "__id": "Assoc*" },
+              "toEnd": { "__id": "biz_dfch_CS_Appclusive_Core_OdataServices_Core_Node_IncomingAsso/Ends[IncomingAssocs]" }
             },
             {
-              "id": "Node/Properties[OutgoingLinks]",
-              "name": "OutgoingLinks",
-              "association": { "__id": "biz_dfch_CS_Appclusive_Core_OdataServices_Core_Node_OutgoingLink" },
-              "elementType": { "__id": "Link" },
-              "fromEnd": { "__id": "biz_dfch_CS_Appclusive_Core_OdataServices_Core_Node_OutgoingLink/Ends[OutgoingLinksPartner]" },
-              "propertyType": { "__id": "Link*" },
-              "toEnd": { "__id": "biz_dfch_CS_Appclusive_Core_OdataServices_Core_Node_OutgoingLink/Ends[OutgoingLinks]" }
+              "id": "Node/Properties[OutgoingAssocs]",
+              "name": "OutgoingAssocs",
+              "association": { "__id": "biz_dfch_CS_Appclusive_Core_OdataServices_Core_Node_OutgoingAsso" },
+              "elementType": { "__id": "Assoc" },
+              "fromEnd": { "__id": "biz_dfch_CS_Appclusive_Core_OdataServices_Core_Node_OutgoingAsso/Ends[OutgoingAssocsPartner]" },
+              "propertyType": { "__id": "Assoc*" },
+              "toEnd": { "__id": "biz_dfch_CS_Appclusive_Core_OdataServices_Core_Node_OutgoingAsso/Ends[OutgoingAssocs]" }
             }
           ]
         },
@@ -1304,6 +1323,12 @@
               "name": "RowVersion",
               "propertyType": { "__id": ":Binary?" },
               ":@NotSearchable": { }
+            },
+            {
+              "id": "OrderItem/Properties[CostCentreId]",
+              "name": "CostCentreId",
+              "propertyType": { "__id": ":Int64?" },
+              ":@NotSearchable": { }
             }
           ]
         },
@@ -1417,6 +1442,12 @@
               "id": "Order/Properties[RowVersion]",
               "name": "RowVersion",
               "propertyType": { "__id": ":Binary?" },
+              ":@NotSearchable": { }
+            },
+            {
+              "id": "Order/Properties[CostCentreId]",
+              "name": "CostCentreId",
+              "propertyType": { "__id": ":Int64?" },
               ":@NotSearchable": { }
             }
           ]
@@ -1759,6 +1790,24 @@
           "associationSets":
           [
             {
+              "id": "CoreData/Members[biz_dfch_CS_Appclusive_Core_OdataServices_Core_Job_Children_biz_]",
+              "name": "biz_dfch_CS_Appclusive_Core_OdataServices_Core_Job_Children_biz_",
+              "association": { "__id": "biz_dfch_CS_Appclusive_Core_OdataServices_Core_Job_Children_biz_" },
+              "ends":
+              [
+                {
+                  "id": "CoreData/Members[biz_dfch_CS_Appclusive_Core_OdataServices_Core_Job_Children_biz_]/Members[ChildrenPartner]",
+                  "name": "ChildrenPartner",
+                  "entitySet": { "__id": "CoreData/Members[Jobs]" }
+                },
+                {
+                  "id": "CoreData/Members[biz_dfch_CS_Appclusive_Core_OdataServices_Core_Job_Children_biz_]/Members[Children]",
+                  "name": "Children",
+                  "entitySet": { "__id": "CoreData/Members[Jobs]" }
+                }
+              ]
+            },
+            {
               "id": "CoreData/Members[biz_dfch_CS_Sunrise_DaaS_Endpoints_OdataServices_Core_Order_Orde]",
               "name": "biz_dfch_CS_Sunrise_DaaS_Endpoints_OdataServices_Core_Order_Orde",
               "association": { "__id": "biz_dfch_CS_Sunrise_DaaS_Endpoints_OdataServices_Core_Order_Orde" },
@@ -1831,38 +1880,38 @@
               ]
             },
             {
-              "id": "CoreData/Members[biz_dfch_CS_Appclusive_Core_OdataServices_Core_Node_IncomingLink]",
-              "name": "biz_dfch_CS_Appclusive_Core_OdataServices_Core_Node_IncomingLink",
-              "association": { "__id": "biz_dfch_CS_Appclusive_Core_OdataServices_Core_Node_IncomingLink" },
+              "id": "CoreData/Members[biz_dfch_CS_Appclusive_Core_OdataServices_Core_Node_IncomingAsso]",
+              "name": "biz_dfch_CS_Appclusive_Core_OdataServices_Core_Node_IncomingAsso",
+              "association": { "__id": "biz_dfch_CS_Appclusive_Core_OdataServices_Core_Node_IncomingAsso" },
               "ends":
               [
                 {
-                  "id": "CoreData/Members[biz_dfch_CS_Appclusive_Core_OdataServices_Core_Node_IncomingLink]/Members[IncomingLinksPartner]",
-                  "name": "IncomingLinksPartner",
+                  "id": "CoreData/Members[biz_dfch_CS_Appclusive_Core_OdataServices_Core_Node_IncomingAsso]/Members[IncomingAssocsPartner]",
+                  "name": "IncomingAssocsPartner",
                   "entitySet": { "__id": "CoreData/Members[Nodes]" }
                 },
                 {
-                  "id": "CoreData/Members[biz_dfch_CS_Appclusive_Core_OdataServices_Core_Node_IncomingLink]/Members[IncomingLinks]",
-                  "name": "IncomingLinks",
-                  "entitySet": { "__id": "CoreData/Members[Links]" }
+                  "id": "CoreData/Members[biz_dfch_CS_Appclusive_Core_OdataServices_Core_Node_IncomingAsso]/Members[IncomingAssocs]",
+                  "name": "IncomingAssocs",
+                  "entitySet": { "__id": "CoreData/Members[Assocs]" }
                 }
               ]
             },
             {
-              "id": "CoreData/Members[biz_dfch_CS_Appclusive_Core_OdataServices_Core_Node_OutgoingLink]",
-              "name": "biz_dfch_CS_Appclusive_Core_OdataServices_Core_Node_OutgoingLink",
-              "association": { "__id": "biz_dfch_CS_Appclusive_Core_OdataServices_Core_Node_OutgoingLink" },
+              "id": "CoreData/Members[biz_dfch_CS_Appclusive_Core_OdataServices_Core_Node_OutgoingAsso]",
+              "name": "biz_dfch_CS_Appclusive_Core_OdataServices_Core_Node_OutgoingAsso",
+              "association": { "__id": "biz_dfch_CS_Appclusive_Core_OdataServices_Core_Node_OutgoingAsso" },
               "ends":
               [
                 {
-                  "id": "CoreData/Members[biz_dfch_CS_Appclusive_Core_OdataServices_Core_Node_OutgoingLink]/Members[OutgoingLinksPartner]",
-                  "name": "OutgoingLinksPartner",
+                  "id": "CoreData/Members[biz_dfch_CS_Appclusive_Core_OdataServices_Core_Node_OutgoingAsso]/Members[OutgoingAssocsPartner]",
+                  "name": "OutgoingAssocsPartner",
                   "entitySet": { "__id": "CoreData/Members[Nodes]" }
                 },
                 {
-                  "id": "CoreData/Members[biz_dfch_CS_Appclusive_Core_OdataServices_Core_Node_OutgoingLink]/Members[OutgoingLinks]",
-                  "name": "OutgoingLinks",
-                  "entitySet": { "__id": "CoreData/Members[Links]" }
+                  "id": "CoreData/Members[biz_dfch_CS_Appclusive_Core_OdataServices_Core_Node_OutgoingAsso]/Members[OutgoingAssocs]",
+                  "name": "OutgoingAssocs",
+                  "entitySet": { "__id": "CoreData/Members[Assocs]" }
                 }
               ]
             },
@@ -2041,15 +2090,6 @@
               "entityType": { "__id": "Node" }
             },
             {
-              "id": "CoreData/Members[Links]",
-              "name": "Links",
-              "canDelete": true,
-              "canInsert": true,
-              "canUpdate": true,
-              "elementType": { "__id": "Link" },
-              "entityType": { "__id": "Link" }
-            },
-            {
               "id": "CoreData/Members[ManagementUris]",
               "name": "ManagementUris",
               "canDelete": true,
@@ -2093,6 +2133,24 @@
               "canUpdate": true,
               "elementType": { "__id": "Product" },
               "entityType": { "__id": "Product" }
+            },
+            {
+              "id": "CoreData/Members[Assocs]",
+              "name": "Assocs",
+              "canDelete": true,
+              "canInsert": true,
+              "canUpdate": true,
+              "elementType": { "__id": "Assoc" },
+              "entityType": { "__id": "Assoc" }
+            },
+            {
+              "id": "CoreData/Members[CostCentres]",
+              "name": "CostCentres",
+              "canDelete": true,
+              "canInsert": true,
+              "canUpdate": true,
+              "elementType": { "__id": "CostCentre" },
+              "entityType": { "__id": "CostCentre" }
             }
           ],
           "queryOperations":
@@ -2592,44 +2650,6 @@
               ]
             },
             {
-              "id": "CoreData/Members[Links_Single]",
-              "name": "Links_Single",
-              "elementType": { "__id": "Link" },
-              "query": { "__id": "CoreData/Members[Links_Single]" },
-              "returnType": { "__id": "Link" },
-              "source":
-              {
-                "member": { "__id": "CoreData/Members[Links]" }
-              },
-              "parameters":
-              [
-                {
-                  "id": "CoreData/Members[Links_Single]/Parameters[Id]",
-                  "name": "Id",
-                  "parameterType": { "__id": ":Int64?" }
-                }
-              ]
-            },
-            {
-              "id": "CoreData/Members[Links_SingleOrDefault]",
-              "name": "Links_SingleOrDefault",
-              "elementType": { "__id": "Link" },
-              "query": { "__id": "CoreData/Members[Links_SingleOrDefault]" },
-              "returnType": { "__id": "Link" },
-              "source":
-              {
-                "member": { "__id": "CoreData/Members[Links]" }
-              },
-              "parameters":
-              [
-                {
-                  "id": "CoreData/Members[Links_SingleOrDefault]/Parameters[Id]",
-                  "name": "Id",
-                  "parameterType": { "__id": ":Int64?" }
-                }
-              ]
-            },
-            {
               "id": "CoreData/Members[ManagementUris_Single]",
               "name": "ManagementUris_Single",
               "elementType": { "__id": "ManagementUri" },
@@ -2814,6 +2834,82 @@
               [
                 {
                   "id": "CoreData/Members[Products_SingleOrDefault]/Parameters[Id]",
+                  "name": "Id",
+                  "parameterType": { "__id": ":Int64?" }
+                }
+              ]
+            },
+            {
+              "id": "CoreData/Members[Assocs_Single]",
+              "name": "Assocs_Single",
+              "elementType": { "__id": "Assoc" },
+              "query": { "__id": "CoreData/Members[Assocs_Single]" },
+              "returnType": { "__id": "Assoc" },
+              "source":
+              {
+                "member": { "__id": "CoreData/Members[Assocs]" }
+              },
+              "parameters":
+              [
+                {
+                  "id": "CoreData/Members[Assocs_Single]/Parameters[Id]",
+                  "name": "Id",
+                  "parameterType": { "__id": ":Int64?" }
+                }
+              ]
+            },
+            {
+              "id": "CoreData/Members[Assocs_SingleOrDefault]",
+              "name": "Assocs_SingleOrDefault",
+              "elementType": { "__id": "Assoc" },
+              "query": { "__id": "CoreData/Members[Assocs_SingleOrDefault]" },
+              "returnType": { "__id": "Assoc" },
+              "source":
+              {
+                "member": { "__id": "CoreData/Members[Assocs]" }
+              },
+              "parameters":
+              [
+                {
+                  "id": "CoreData/Members[Assocs_SingleOrDefault]/Parameters[Id]",
+                  "name": "Id",
+                  "parameterType": { "__id": ":Int64?" }
+                }
+              ]
+            },
+            {
+              "id": "CoreData/Members[CostCentres_Single]",
+              "name": "CostCentres_Single",
+              "elementType": { "__id": "CostCentre" },
+              "query": { "__id": "CoreData/Members[CostCentres_Single]" },
+              "returnType": { "__id": "CostCentre" },
+              "source":
+              {
+                "member": { "__id": "CoreData/Members[CostCentres]" }
+              },
+              "parameters":
+              [
+                {
+                  "id": "CoreData/Members[CostCentres_Single]/Parameters[Id]",
+                  "name": "Id",
+                  "parameterType": { "__id": ":Int64?" }
+                }
+              ]
+            },
+            {
+              "id": "CoreData/Members[CostCentres_SingleOrDefault]",
+              "name": "CostCentres_SingleOrDefault",
+              "elementType": { "__id": "CostCentre" },
+              "query": { "__id": "CoreData/Members[CostCentres_SingleOrDefault]" },
+              "returnType": { "__id": "CostCentre" },
+              "source":
+              {
+                "member": { "__id": "CoreData/Members[CostCentres]" }
+              },
+              "parameters":
+              [
+                {
+                  "id": "CoreData/Members[CostCentres_SingleOrDefault]/Parameters[Id]",
                   "name": "Id",
                   "parameterType": { "__id": ":Int64?" }
                 }
@@ -3288,109 +3384,6 @@
         },
         {
           "__isEntityType": 1,
-          ":@SummaryProperty": { "property": { "__id": "Link/Properties[Tid]" } },
-          "id": "Link",
-          "name": "Link",
-          ":@NotSearchable": { },
-          "methods":
-          [
-            {
-              "id": "Link/Methods[deleteEntity]",
-              "name": "deleteEntity"
-            },
-            {
-              "id": "Link/Methods[edit]",
-              "name": "edit"
-            },
-            {
-              "id": "Link/Methods[view]",
-              "name": "view"
-            }
-          ],
-          "properties":
-          [
-            {
-              "id": "Link/Properties[Order]",
-              "name": "Order",
-              "propertyType": { "__id": ":Int64" },
-              ":@Required": { },
-              ":@NotSearchable": { }
-            },
-            {
-              "id": "Link/Properties[SourceId]",
-              "name": "SourceId",
-              "propertyType": { "__id": ":Int64" },
-              ":@Required": { },
-              ":@NotSearchable": { }
-            },
-            {
-              "id": "Link/Properties[DestinationId]",
-              "name": "DestinationId",
-              "propertyType": { "__id": ":Int64" },
-              ":@Required": { },
-              ":@NotSearchable": { }
-            },
-            {
-              "__isKeyProperty": 1,
-              "id": "Link/Properties[Id]",
-              "name": "Id",
-              "propertyType": { "__id": ":Int64" },
-              ":@Required": { },
-              ":@NotSearchable": { }
-            },
-            {
-              "id": "Link/Properties[Tid]",
-              "name": "Tid",
-              "propertyType": { "__id": ":String" },
-              ":@Required": { }
-            },
-            {
-              "id": "Link/Properties[Name]",
-              "name": "Name",
-              "propertyType": { "__id": ":String" },
-              ":@Required": { }
-            },
-            {
-              "id": "Link/Properties[Description]",
-              "name": "Description",
-              "propertyType": { "__id": ":String?" }
-            },
-            {
-              "id": "Link/Properties[CreatedBy]",
-              "name": "CreatedBy",
-              "propertyType": { "__id": ":String" },
-              ":@Required": { }
-            },
-            {
-              "id": "Link/Properties[ModifiedBy]",
-              "name": "ModifiedBy",
-              "propertyType": { "__id": ":String" },
-              ":@Required": { }
-            },
-            {
-              "id": "Link/Properties[Created]",
-              "name": "Created",
-              "propertyType": { "__id": ":DateTimeOffset" },
-              ":@Required": { },
-              ":@NotSearchable": { }
-            },
-            {
-              "id": "Link/Properties[Modified]",
-              "name": "Modified",
-              "propertyType": { "__id": ":DateTimeOffset" },
-              ":@Required": { },
-              ":@NotSearchable": { }
-            },
-            {
-              "id": "Link/Properties[RowVersion]",
-              "name": "RowVersion",
-              "propertyType": { "__id": ":Binary?" },
-              ":@NotSearchable": { }
-            }
-          ]
-        },
-        {
-          "__isEntityType": 1,
           ":@SummaryProperty": { "property": { "__id": "ManagementUri/Properties[Type]" } },
           "id": "ManagementUri",
           "name": "ManagementUri",
@@ -3528,46 +3521,6 @@
           ]
         },
         {
-          "id": "biz_dfch_CS_Appclusive_Core_OdataServices_Core_Node_IncomingLink",
-          "name": "biz_dfch_CS_Appclusive_Core_OdataServices_Core_Node_IncomingLink",
-          "ends":
-          [
-            {
-              "id": "biz_dfch_CS_Appclusive_Core_OdataServices_Core_Node_IncomingLink/Ends[IncomingLinksPartner]",
-              "name": "IncomingLinksPartner",
-              "multiplicity": "ZeroOrOne",
-              "entityType": { "__id": "Node" },
-              ":@DeleteRule": { "action": "Unset" }
-            },
-            {
-              "id": "biz_dfch_CS_Appclusive_Core_OdataServices_Core_Node_IncomingLink/Ends[IncomingLinks]",
-              "name": "IncomingLinks",
-              "multiplicity": "Many",
-              "entityType": { "__id": "Link" }
-            }
-          ]
-        },
-        {
-          "id": "biz_dfch_CS_Appclusive_Core_OdataServices_Core_Node_OutgoingLink",
-          "name": "biz_dfch_CS_Appclusive_Core_OdataServices_Core_Node_OutgoingLink",
-          "ends":
-          [
-            {
-              "id": "biz_dfch_CS_Appclusive_Core_OdataServices_Core_Node_OutgoingLink/Ends[OutgoingLinksPartner]",
-              "name": "OutgoingLinksPartner",
-              "multiplicity": "ZeroOrOne",
-              "entityType": { "__id": "Node" },
-              ":@DeleteRule": { "action": "Unset" }
-            },
-            {
-              "id": "biz_dfch_CS_Appclusive_Core_OdataServices_Core_Node_OutgoingLink/Ends[OutgoingLinks]",
-              "name": "OutgoingLinks",
-              "multiplicity": "Many",
-              "entityType": { "__id": "Link" }
-            }
-          ]
-        },
-        {
           "id": "biz_dfch_CS_Appclusive_Core_OdataServices_Core_ManagementCredent",
           "name": "biz_dfch_CS_Appclusive_Core_OdataServices_Core_ManagementCredent",
           "ends":
@@ -3648,6 +3601,251 @@
           ]
         },
         {
+          "__isEntityType": 1,
+          ":@SummaryProperty": { "property": { "__id": "Assoc/Properties[Tid]" } },
+          "id": "Assoc",
+          "name": "Assoc",
+          ":@NotSearchable": { },
+          "methods":
+          [
+            {
+              "id": "Assoc/Methods[deleteEntity]",
+              "name": "deleteEntity"
+            },
+            {
+              "id": "Assoc/Methods[edit]",
+              "name": "edit"
+            },
+            {
+              "id": "Assoc/Methods[view]",
+              "name": "view"
+            }
+          ],
+          "properties":
+          [
+            {
+              "id": "Assoc/Properties[Order]",
+              "name": "Order",
+              "propertyType": { "__id": ":Int64" },
+              ":@Required": { },
+              ":@NotSearchable": { }
+            },
+            {
+              "id": "Assoc/Properties[SourceId]",
+              "name": "SourceId",
+              "propertyType": { "__id": ":Int64" },
+              ":@Required": { },
+              ":@NotSearchable": { }
+            },
+            {
+              "id": "Assoc/Properties[DestinationId]",
+              "name": "DestinationId",
+              "propertyType": { "__id": ":Int64" },
+              ":@Required": { },
+              ":@NotSearchable": { }
+            },
+            {
+              "__isKeyProperty": 1,
+              "id": "Assoc/Properties[Id]",
+              "name": "Id",
+              "propertyType": { "__id": ":Int64" },
+              ":@Required": { },
+              ":@NotSearchable": { }
+            },
+            {
+              "id": "Assoc/Properties[Tid]",
+              "name": "Tid",
+              "propertyType": { "__id": ":String" },
+              ":@Required": { }
+            },
+            {
+              "id": "Assoc/Properties[Name]",
+              "name": "Name",
+              "propertyType": { "__id": ":String" },
+              ":@Required": { }
+            },
+            {
+              "id": "Assoc/Properties[Description]",
+              "name": "Description",
+              "propertyType": { "__id": ":String?" }
+            },
+            {
+              "id": "Assoc/Properties[CreatedBy]",
+              "name": "CreatedBy",
+              "propertyType": { "__id": ":String" },
+              ":@Required": { }
+            },
+            {
+              "id": "Assoc/Properties[ModifiedBy]",
+              "name": "ModifiedBy",
+              "propertyType": { "__id": ":String" },
+              ":@Required": { }
+            },
+            {
+              "id": "Assoc/Properties[Created]",
+              "name": "Created",
+              "propertyType": { "__id": ":DateTimeOffset" },
+              ":@Required": { },
+              ":@NotSearchable": { }
+            },
+            {
+              "id": "Assoc/Properties[Modified]",
+              "name": "Modified",
+              "propertyType": { "__id": ":DateTimeOffset" },
+              ":@Required": { },
+              ":@NotSearchable": { }
+            },
+            {
+              "id": "Assoc/Properties[RowVersion]",
+              "name": "RowVersion",
+              "propertyType": { "__id": ":Binary?" },
+              ":@NotSearchable": { }
+            }
+          ]
+        },
+        {
+          "__isEntityType": 1,
+          ":@SummaryProperty": { "property": { "__id": "CostCentre/Properties[Tid]" } },
+          "id": "CostCentre",
+          "name": "CostCentre",
+          ":@NotSearchable": { },
+          "methods":
+          [
+            {
+              "id": "CostCentre/Methods[deleteEntity]",
+              "name": "deleteEntity"
+            },
+            {
+              "id": "CostCentre/Methods[edit]",
+              "name": "edit"
+            },
+            {
+              "id": "CostCentre/Methods[view]",
+              "name": "view"
+            }
+          ],
+          "properties":
+          [
+            {
+              "__isKeyProperty": 1,
+              "id": "CostCentre/Properties[Id]",
+              "name": "Id",
+              "propertyType": { "__id": ":Int64" },
+              ":@Required": { },
+              ":@NotSearchable": { }
+            },
+            {
+              "id": "CostCentre/Properties[Tid]",
+              "name": "Tid",
+              "propertyType": { "__id": ":String" },
+              ":@Required": { }
+            },
+            {
+              "id": "CostCentre/Properties[Name]",
+              "name": "Name",
+              "propertyType": { "__id": ":String" },
+              ":@Required": { }
+            },
+            {
+              "id": "CostCentre/Properties[Description]",
+              "name": "Description",
+              "propertyType": { "__id": ":String?" }
+            },
+            {
+              "id": "CostCentre/Properties[CreatedBy]",
+              "name": "CreatedBy",
+              "propertyType": { "__id": ":String" },
+              ":@Required": { }
+            },
+            {
+              "id": "CostCentre/Properties[ModifiedBy]",
+              "name": "ModifiedBy",
+              "propertyType": { "__id": ":String" },
+              ":@Required": { }
+            },
+            {
+              "id": "CostCentre/Properties[Created]",
+              "name": "Created",
+              "propertyType": { "__id": ":DateTimeOffset" },
+              ":@Required": { },
+              ":@NotSearchable": { }
+            },
+            {
+              "id": "CostCentre/Properties[Modified]",
+              "name": "Modified",
+              "propertyType": { "__id": ":DateTimeOffset" },
+              ":@Required": { },
+              ":@NotSearchable": { }
+            },
+            {
+              "id": "CostCentre/Properties[RowVersion]",
+              "name": "RowVersion",
+              "propertyType": { "__id": ":Binary?" },
+              ":@NotSearchable": { }
+            }
+          ]
+        },
+        {
+          "id": "biz_dfch_CS_Appclusive_Core_OdataServices_Core_Node_IncomingAsso",
+          "name": "biz_dfch_CS_Appclusive_Core_OdataServices_Core_Node_IncomingAsso",
+          "ends":
+          [
+            {
+              "id": "biz_dfch_CS_Appclusive_Core_OdataServices_Core_Node_IncomingAsso/Ends[IncomingAssocsPartner]",
+              "name": "IncomingAssocsPartner",
+              "multiplicity": "ZeroOrOne",
+              "entityType": { "__id": "Node" },
+              ":@DeleteRule": { "action": "Unset" }
+            },
+            {
+              "id": "biz_dfch_CS_Appclusive_Core_OdataServices_Core_Node_IncomingAsso/Ends[IncomingAssocs]",
+              "name": "IncomingAssocs",
+              "multiplicity": "Many",
+              "entityType": { "__id": "Assoc" }
+            }
+          ]
+        },
+        {
+          "id": "biz_dfch_CS_Appclusive_Core_OdataServices_Core_Node_OutgoingAsso",
+          "name": "biz_dfch_CS_Appclusive_Core_OdataServices_Core_Node_OutgoingAsso",
+          "ends":
+          [
+            {
+              "id": "biz_dfch_CS_Appclusive_Core_OdataServices_Core_Node_OutgoingAsso/Ends[OutgoingAssocsPartner]",
+              "name": "OutgoingAssocsPartner",
+              "multiplicity": "ZeroOrOne",
+              "entityType": { "__id": "Node" },
+              ":@DeleteRule": { "action": "Unset" }
+            },
+            {
+              "id": "biz_dfch_CS_Appclusive_Core_OdataServices_Core_Node_OutgoingAsso/Ends[OutgoingAssocs]",
+              "name": "OutgoingAssocs",
+              "multiplicity": "Many",
+              "entityType": { "__id": "Assoc" }
+            }
+          ]
+        },
+        {
+          "id": "biz_dfch_CS_Appclusive_Core_OdataServices_Core_Job_Children_biz_",
+          "name": "biz_dfch_CS_Appclusive_Core_OdataServices_Core_Job_Children_biz_",
+          "ends":
+          [
+            {
+              "id": "biz_dfch_CS_Appclusive_Core_OdataServices_Core_Job_Children_biz_/Ends[ChildrenPartner]",
+              "name": "ChildrenPartner",
+              "multiplicity": "ZeroOrOne",
+              "entityType": { "__id": "Job" },
+              ":@DeleteRule": { "action": "Restrict" }
+            },
+            {
+              "id": "biz_dfch_CS_Appclusive_Core_OdataServices_Core_Job_Children_biz_/Ends[Children]",
+              "name": "Children",
+              "multiplicity": "Many",
+              "entityType": { "__id": "Job" }
+            }
+          ]
+        },
+        {
           "displayName": "Approve Request",
           "id": "ApprovalApprove",
           "name": "ApprovalApprove",
@@ -3692,42 +3890,6 @@
                             },
                             {
                               "member": { "__id": "Approval/Properties[Name]" }
-                            }
-                          ]
-                        }
-                      },
-                      {
-                        "displayName": "Not Before",
-                        "name": "Approval_NotBefore",
-                        "kind": "Value",
-                        "view": { "__id": ":DateTimePicker" },
-                        "dataSource":
-                        {
-                          "links":
-                          [
-                            {
-                              "member": { "__id": "ApprovalApprove/Properties[Approval]" }
-                            },
-                            {
-                              "member": { "__id": "Approval/Properties[NotBefore]" }
-                            }
-                          ]
-                        }
-                      },
-                      {
-                        "displayName": "Expires At",
-                        "name": "Approval_ExpiresAt",
-                        "kind": "Value",
-                        "view": { "__id": ":DateTimePicker" },
-                        "dataSource":
-                        {
-                          "links":
-                          [
-                            {
-                              "member": { "__id": "ApprovalApprove/Properties[Approval]" }
-                            },
-                            {
-                              "member": { "__id": "Approval/Properties[ExpiresAt]" }
                             }
                           ]
                         }
@@ -10614,6 +10776,40 @@
                                 }
                               }
                             ]
+                          },
+                          {
+                            "displayName": "Management Credentials",
+                            "description": "Show management credentials",
+                            "name": "ShowManagementCredentialList",
+                            "kind": "Command",
+                            "view": { "__id": ":Button" },
+                            "propertySources":
+                            [
+                              {
+                                "property": { "__id": ":RootControl/Properties[Tap]" },
+                                "source":
+                                {
+                                  "target": { "__id": "!module/Methods[showManagementCredentialList]" }
+                                }
+                              }
+                            ]
+                          },
+                          {
+                            "displayName": "Management Uris",
+                            "description": "Show management uris",
+                            "name": "ShowManagementUriList",
+                            "kind": "Command",
+                            "view": { "__id": ":Button" },
+                            "propertySources":
+                            [
+                              {
+                                "property": { "__id": ":RootControl/Properties[Tap]" },
+                                "source":
+                                {
+                                  "target": { "__id": "!module/Methods[showManagementUriList]" }
+                                }
+                              }
+                            ]
                           }
                         ]
                       }
@@ -11074,6 +11270,42 @@
                             ]
                           }
                         ]
+                      },
+                      {
+                        "displayName": "Condition",
+                        "name": "Job_Condition",
+                        "kind": "Value",
+                        "view": { "__id": ":Text" },
+                        "dataSource":
+                        {
+                          "links":
+                          [
+                            {
+                              "member": { "__id": "JobView/Properties[Job]" }
+                            },
+                            {
+                              "member": { "__id": "Job/Properties[Condition]" }
+                            }
+                          ]
+                        }
+                      },
+                      {
+                        "displayName": "Condition Parameters",
+                        "name": "Job_ConditionParameters",
+                        "kind": "Value",
+                        "view": { "__id": ":Text" },
+                        "dataSource":
+                        {
+                          "links":
+                          [
+                            {
+                              "member": { "__id": "JobView/Properties[Job]" }
+                            },
+                            {
+                              "member": { "__id": "Job/Properties[ConditionParameters]" }
+                            }
+                          ]
+                        }
                       },
                       {
                         "displayName": "Description",
@@ -12440,6 +12672,1291 @@
           ]
         },
         {
+          "displayName": "Management Credential List",
+          "id": "ManagementCredentialList",
+          "name": "ManagementCredentialList",
+          "launchMode": "Single",
+          ":@SaveChangesTo":
+          {
+            "property": { "__id": "DataWorkspace/Members[CoreData]" }
+          },
+          "rootContentItem":
+          {
+            "displayName": "Root Content Item",
+            "name": "RootContentItem",
+            "kind": "Screen",
+            "view": { "__id": ":Screen" },
+            "childContentItems":
+            [
+              {
+                "displayName": "Tabs",
+                "name": "Tabs",
+                "kind": "Group",
+                "view": { "__id": ":TabPages" },
+                "childContentItems":
+                [
+                  {
+                    "displayName": "Management Credential List",
+                    "name": "ManagementCredentialList",
+                    "kind": "Tab",
+                    "view": { "__id": ":RowsLayout" },
+                    "childContentItems":
+                    [
+                      {
+                        "displayName": "ManagementCredentials",
+                        "name": "ManagementCredentials",
+                        "kind": "Collection",
+                        "view": { "__id": ":Table" },
+                        "dataSource":
+                        {
+                          "member": { "__id": "ManagementCredentialList/Properties[ManagementCredentials]" }
+                        },
+                        "childContentItems":
+                        [
+                          {
+                            "displayName": "rows",
+                            "name": "rows",
+                            "kind": "Details",
+                            "view": { "__id": ":TableRowLayout" },
+                            "dataSource":
+                            {
+                              "links":
+                              [
+                              ]
+                            },
+                            "childContentItems":
+                            [
+                              {
+                                "displayName": "Id",
+                                "name": "Id",
+                                "kind": "Value",
+                                "view": { "__id": ":Text" },
+                                "dataSource":
+                                {
+                                  "member": { "__id": "ManagementCredential/Properties[Id]" }
+                                }
+                              },
+                              {
+                                "displayName": "Name",
+                                "name": "Name",
+                                "kind": "Value",
+                                "view": { "__id": ":Text" },
+                                "dataSource":
+                                {
+                                  "member": { "__id": "ManagementCredential/Properties[Name]" }
+                                }
+                              },
+                              {
+                                "displayName": "Description",
+                                "name": "Description",
+                                "kind": "Value",
+                                "view": { "__id": ":Text" },
+                                "dataSource":
+                                {
+                                  "member": { "__id": "ManagementCredential/Properties[Description]" }
+                                }
+                              }
+                            ],
+                            "propertySources":
+                            [
+                              {
+                                "property": { "__id": ":RootControl/Properties[WidthSizingMode]" },
+                                "value": "FitToContent"
+                              }
+                            ]
+                          }
+                        ],
+                        "propertySources":
+                        [
+                          {
+                            "property": { "__id": ":RootCollectionControl/Properties[ItemTap]" },
+                            "source":
+                            {
+                              "links":
+                              [
+                                {
+                                  "member": { "__id": "ManagementCredentialList/Properties[ManagementCredentials]" }
+                                },
+                                {
+                                  "target": { "__id": "CollectionView$ManagementCredential/Methods[viewSelected]" }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    ],
+                    "commandItems":
+                    [
+                      {
+                        "displayName": "Search",
+                        "name": "SearchManagementCredentials",
+                        "kind": "Command",
+                        "view": { "__id": ":CommandBarButton" },
+                        "propertySources":
+                        [
+                          {
+                            "property": { "__id": ":RootControl/Properties[Tap]" },
+                            "source":
+                            {
+                              "links":
+                              [
+                                {
+                                  "member": { "__id": "ManagementCredentialList/Properties[ManagementCredentials]" }
+                                },
+                                {
+                                  "target": { "__id": "CollectionView$ManagementCredential/Methods[showSearch]" }
+                                }
+                              ]
+                            }
+                          },
+                          {
+                            "property": { "__id": ":RootCommand/Properties[Icon]" },
+                            "value": "msls-search"
+                          }
+                        ]
+                      },
+                      {
+                        "displayName": "View",
+                        "name": "View",
+                        "kind": "Command",
+                        "view": { "__id": ":CommandBarButton" },
+                        "propertySources":
+                        [
+                          {
+                            "property": { "__id": ":RootControl/Properties[Tap]" },
+                            "source":
+                            {
+                              "target": { "__id": "!module/Methods[showManagementCredentialView]" },
+                              ":@AssociatedCollection": { "collection": { "__id": "ManagementCredentialList/Properties[ManagementCredentials]" } },
+                              "arguments":
+                              [
+                                {
+                                  "parameter": { "__id": "!module/Methods[showManagementCredentialView]/Parameters[ManagementCredential]" },
+                                  "value":
+                                  {
+                                    "links":
+                                    [
+                                      {
+                                        "member": { "__id": "ManagementCredentialList/Properties[ManagementCredentials]" }
+                                      },
+                                      {
+                                        "member": { "__id": "CollectionView$ManagementCredential/Properties[selectedItem]" }
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "propertySources":
+                [
+                  {
+                    "property": { "__id": ":RootControl/Properties[BrowseOnly]" },
+                    "value": true
+                  }
+                ]
+              },
+              {
+                "displayName": "Popups",
+                "name": "Popups",
+                "kind": "Group",
+                "view": { "__id": ":DialogPages" }
+              }
+            ]
+          },
+          "methods":
+          [
+            {
+              "id": "ManagementCredentialList/Methods[showTab]",
+              "name": "showTab",
+              "parameters":
+              [
+                {
+                  "id": "ManagementCredentialList/Methods[showTab]/Parameters[tabName]",
+                  "name": "tabName",
+                  "parameterType": { "__id": ":String" }
+                }
+              ]
+            },
+            {
+              "id": "ManagementCredentialList/Methods[showDialog]",
+              "name": "showDialog",
+              "parameters":
+              [
+                {
+                  "id": "ManagementCredentialList/Methods[showDialog]/Parameters[dialogName]",
+                  "name": "dialogName",
+                  "parameterType": { "__id": ":String" }
+                }
+              ]
+            }
+          ],
+          "properties":
+          [
+            {
+              "id": "ManagementCredentialList/Properties[ManagementCredentials]",
+              "name": "ManagementCredentials",
+              "disableSearch": true,
+              "pageSize": 45,
+              "elementType": { "__id": "ManagementCredential" },
+              "propertyType": { "__id": "CollectionView$ManagementCredential" },
+              "query":
+              {
+                "id": "ManagementCredentialList/Properties[ManagementCredentials]/Query",
+                "name": "ManagementCredentialsQuery",
+                "elementType": { "__id": "ManagementCredential" },
+                "returnType": { "__id": "ManagementCredential*" },
+                "source":
+                {
+                  "member": { "__id": "CoreData/Members[ManagementCredentials]" }
+                }
+              },
+              "source":
+              {
+                "target": { "__id": "ManagementCredentialList/Properties[ManagementCredentials]/Query" }
+              }
+            }
+          ]
+        },
+        {
+          "displayName": "Management Credential View",
+          "id": "ManagementCredentialView",
+          "name": "ManagementCredentialView",
+          "launchMode": "Single",
+          ":@SaveChangesTo":
+          {
+            "property": { "__id": "DataWorkspace/Members[CoreData]" }
+          },
+          "rootContentItem":
+          {
+            "displayName": "Root Content Item",
+            "name": "RootContentItem",
+            "kind": "Screen",
+            "view": { "__id": ":Screen" },
+            "childContentItems":
+            [
+              {
+                "displayName": "Tabs",
+                "name": "Tabs",
+                "kind": "Group",
+                "view": { "__id": ":TabPages" },
+                "childContentItems":
+                [
+                  {
+                    "displayName": "Details",
+                    "name": "Details",
+                    "kind": "Tab",
+                    "view": { "__id": ":RowsLayout" },
+                    "childContentItems":
+                    [
+                      {
+                        "displayName": "Id",
+                        "name": "ManagementCredential_Id1",
+                        "kind": "Value",
+                        "view": { "__id": ":Text" },
+                        "dataSource":
+                        {
+                          "links":
+                          [
+                            {
+                              "member": { "__id": "ManagementCredentialView/Properties[ManagementCredential]" }
+                            },
+                            {
+                              "member": { "__id": "ManagementCredential/Properties[Id]" }
+                            }
+                          ]
+                        }
+                      },
+                      {
+                        "displayName": "Name",
+                        "name": "Name",
+                        "kind": "Value",
+                        "view": { "__id": ":Text" },
+                        "dataSource":
+                        {
+                          "links":
+                          [
+                            {
+                              "member": { "__id": "ManagementCredentialView/Properties[ManagementCredential]" }
+                            },
+                            {
+                              "member": { "__id": "ManagementCredential/Properties[Name]" }
+                            }
+                          ]
+                        }
+                      },
+                      {
+                        "displayName": "Description",
+                        "name": "ManagementCredential_Description",
+                        "kind": "Value",
+                        "view": { "__id": ":Paragraph" },
+                        "dataSource":
+                        {
+                          "links":
+                          [
+                            {
+                              "member": { "__id": "ManagementCredentialView/Properties[ManagementCredential]" }
+                            },
+                            {
+                              "member": { "__id": "ManagementCredential/Properties[Description]" }
+                            }
+                          ]
+                        }
+                      },
+                      {
+                        "displayName": "Username",
+                        "name": "Username",
+                        "kind": "Value",
+                        "view": { "__id": ":Text" },
+                        "dataSource":
+                        {
+                          "links":
+                          [
+                            {
+                              "member": { "__id": "ManagementCredentialView/Properties[ManagementCredential]" }
+                            },
+                            {
+                              "member": { "__id": "ManagementCredential/Properties[Username]" }
+                            }
+                          ]
+                        }
+                      },
+                      {
+                        "displayName": "Password",
+                        "name": "ManagementCredential_Password",
+                        "kind": "Value",
+                        "view": { "__id": ":Text" },
+                        "dataSource":
+                        {
+                          "links":
+                          [
+                            {
+                              "member": { "__id": "ManagementCredentialView/Properties[ManagementCredential]" }
+                            },
+                            {
+                              "member": { "__id": "ManagementCredential/Properties[Password]" }
+                            }
+                          ]
+                        }
+                      },
+                      {
+                        "displayName": "Encrypted Password",
+                        "name": "ManagementCredential_EncryptedPassword",
+                        "kind": "Value",
+                        "view": { "__id": ":Text" },
+                        "dataSource":
+                        {
+                          "links":
+                          [
+                            {
+                              "member": { "__id": "ManagementCredentialView/Properties[ManagementCredential]" }
+                            },
+                            {
+                              "member": { "__id": "ManagementCredential/Properties[EncryptedPassword]" }
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "displayName": "General",
+                    "name": "General",
+                    "kind": "Tab",
+                    "view": { "__id": ":RowsLayout" },
+                    "childContentItems":
+                    [
+                      {
+                        "displayName": "Tid",
+                        "name": "ManagementCredential_Tid",
+                        "kind": "Value",
+                        "view": { "__id": ":Text" },
+                        "dataSource":
+                        {
+                          "links":
+                          [
+                            {
+                              "member": { "__id": "ManagementCredentialView/Properties[ManagementCredential]" }
+                            },
+                            {
+                              "member": { "__id": "ManagementCredential/Properties[Tid]" }
+                            }
+                          ]
+                        }
+                      },
+                      {
+                        "displayName": "Id",
+                        "name": "ManagementCredential_Id",
+                        "kind": "Value",
+                        "view": { "__id": ":Text" },
+                        "dataSource":
+                        {
+                          "links":
+                          [
+                            {
+                              "member": { "__id": "ManagementCredentialView/Properties[ManagementCredential]" }
+                            },
+                            {
+                              "member": { "__id": "ManagementCredential/Properties[Id]" }
+                            }
+                          ]
+                        }
+                      },
+                      {
+                        "displayName": "Created",
+                        "name": "ManagementCredential_Created",
+                        "kind": "Value",
+                        "view": { "__id": ":Text" },
+                        "dataSource":
+                        {
+                          "links":
+                          [
+                            {
+                              "member": { "__id": "ManagementCredentialView/Properties[ManagementCredential]" }
+                            },
+                            {
+                              "member": { "__id": "ManagementCredential/Properties[Created]" }
+                            }
+                          ]
+                        }
+                      },
+                      {
+                        "displayName": "Created By",
+                        "name": "ManagementCredential_CreatedBy",
+                        "kind": "Value",
+                        "view": { "__id": ":Text" },
+                        "dataSource":
+                        {
+                          "links":
+                          [
+                            {
+                              "member": { "__id": "ManagementCredentialView/Properties[ManagementCredential]" }
+                            },
+                            {
+                              "member": { "__id": "ManagementCredential/Properties[CreatedBy]" }
+                            }
+                          ]
+                        }
+                      },
+                      {
+                        "displayName": "Modified",
+                        "name": "ManagementCredential_Modified",
+                        "kind": "Value",
+                        "view": { "__id": ":Text" },
+                        "dataSource":
+                        {
+                          "links":
+                          [
+                            {
+                              "member": { "__id": "ManagementCredentialView/Properties[ManagementCredential]" }
+                            },
+                            {
+                              "member": { "__id": "ManagementCredential/Properties[Modified]" }
+                            }
+                          ]
+                        }
+                      },
+                      {
+                        "displayName": "Modified By",
+                        "name": "ManagementCredential_ModifiedBy",
+                        "kind": "Value",
+                        "view": { "__id": ":Text" },
+                        "dataSource":
+                        {
+                          "links":
+                          [
+                            {
+                              "member": { "__id": "ManagementCredentialView/Properties[ManagementCredential]" }
+                            },
+                            {
+                              "member": { "__id": "ManagementCredential/Properties[ModifiedBy]" }
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "displayName": "Management Uris",
+                    "name": "ManagementUris",
+                    "kind": "Tab",
+                    "view": { "__id": ":RowsLayout" },
+                    "childContentItems":
+                    [
+                      {
+                        "displayName": "ManagementUris",
+                        "name": "ManagementUris1",
+                        "kind": "Collection",
+                        "view": { "__id": ":Table" },
+                        "dataSource":
+                        {
+                          "member": { "__id": "ManagementCredentialView/Properties[ManagementUris]" }
+                        },
+                        "childContentItems":
+                        [
+                          {
+                            "displayName": "rows",
+                            "name": "rows",
+                            "kind": "Details",
+                            "view": { "__id": ":TableRowLayout" },
+                            "dataSource":
+                            {
+                              "links":
+                              [
+                              ]
+                            },
+                            "childContentItems":
+                            [
+                              {
+                                "displayName": "Name",
+                                "name": "Name1",
+                                "kind": "Value",
+                                "view": { "__id": ":Text" },
+                                "dataSource":
+                                {
+                                  "member": { "__id": "ManagementUri/Properties[Name]" }
+                                }
+                              },
+                              {
+                                "displayName": "Description",
+                                "name": "Description",
+                                "kind": "Value",
+                                "view": { "__id": ":Text" },
+                                "dataSource":
+                                {
+                                  "member": { "__id": "ManagementUri/Properties[Description]" }
+                                }
+                              },
+                              {
+                                "displayName": "Type",
+                                "name": "Type",
+                                "kind": "Value",
+                                "view": { "__id": ":Text" },
+                                "dataSource":
+                                {
+                                  "member": { "__id": "ManagementUri/Properties[Type]" }
+                                },
+                                "propertySources":
+                                [
+                                  {
+                                    "property": { "__id": ":RootControl/Properties[FontStyle]" },
+                                    "value": "Large"
+                                  }
+                                ]
+                              },
+                              {
+                                "displayName": "Value",
+                                "name": "Value",
+                                "kind": "Value",
+                                "view": { "__id": ":Text" },
+                                "dataSource":
+                                {
+                                  "member": { "__id": "ManagementUri/Properties[Value]" }
+                                },
+                                "propertySources":
+                                [
+                                  {
+                                    "property": { "__id": ":RootControl/Properties[FontStyle]" },
+                                    "value": "Small"
+                                  }
+                                ]
+                              }
+                            ],
+                            "propertySources":
+                            [
+                              {
+                                "property": { "__id": ":RootControl/Properties[WidthSizingMode]" },
+                                "value": "FitToContent"
+                              }
+                            ]
+                          }
+                        ],
+                        "propertySources":
+                        [
+                          {
+                            "property": { "__id": ":RootCollectionControl/Properties[ItemTap]" },
+                            "source":
+                            {
+                              "links":
+                              [
+                                {
+                                  "member": { "__id": "ManagementCredentialView/Properties[ManagementUris]" }
+                                },
+                                {
+                                  "target": { "__id": "CollectionView$ManagementUri/Methods[viewSelected]" }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "propertySources":
+                [
+                  {
+                    "property": { "__id": ":RootControl/Properties[BrowseOnly]" },
+                    "value": true
+                  }
+                ]
+              },
+              {
+                "displayName": "Popups",
+                "name": "Popups",
+                "kind": "Group",
+                "view": { "__id": ":DialogPages" }
+              }
+            ]
+          },
+          "methods":
+          [
+            {
+              "id": "ManagementCredentialView/Methods[showTab]",
+              "name": "showTab",
+              "parameters":
+              [
+                {
+                  "id": "ManagementCredentialView/Methods[showTab]/Parameters[tabName]",
+                  "name": "tabName",
+                  "parameterType": { "__id": ":String" }
+                }
+              ]
+            },
+            {
+              "id": "ManagementCredentialView/Methods[showDialog]",
+              "name": "showDialog",
+              "parameters":
+              [
+                {
+                  "id": "ManagementCredentialView/Methods[showDialog]/Parameters[dialogName]",
+                  "name": "dialogName",
+                  "parameterType": { "__id": ":String" }
+                }
+              ]
+            }
+          ],
+          "properties":
+          [
+            {
+              "id": "ManagementCredentialView/Properties[ManagementCredential]",
+              "name": "ManagementCredential",
+              "elementType": { "__id": "ManagementCredential" },
+              "propertyType": { "__id": "ManagementCredential" },
+              ":@IsParameter": { }
+            },
+            {
+              "id": "ManagementCredentialView/Properties[ManagementUris]",
+              "name": "ManagementUris",
+              "disableSearch": true,
+              "pageSize": 15,
+              "elementType": { "__id": "ManagementUri" },
+              "propertyType": { "__id": "CollectionView$ManagementUri" },
+              "query":
+              {
+                "id": "ManagementCredentialView/Properties[ManagementUris]/Query",
+                "name": "ManagementUrisQuery",
+                "elementType": { "__id": "ManagementUri" },
+                "returnType": { "__id": "ManagementUri*" },
+                "source":
+                {
+                  "links":
+                  [
+                    {
+                      "member": { "__id": "ManagementCredentialView/Properties[ManagementCredential]" }
+                    },
+                    {
+                      "member": { "__id": "ManagementCredential/Properties[ManagementUris]" }
+                    }
+                  ]
+                }
+              },
+              "source":
+              {
+                "target": { "__id": "ManagementCredentialView/Properties[ManagementUris]/Query" }
+              }
+            }
+          ]
+        },
+        {
+          "displayName": "Management Uri List",
+          "id": "ManagementUriList",
+          "name": "ManagementUriList",
+          "launchMode": "Single",
+          ":@SaveChangesTo":
+          {
+            "property": { "__id": "DataWorkspace/Members[CoreData]" }
+          },
+          "rootContentItem":
+          {
+            "displayName": "Root Content Item",
+            "name": "RootContentItem",
+            "kind": "Screen",
+            "view": { "__id": ":Screen" },
+            "childContentItems":
+            [
+              {
+                "displayName": "Tabs",
+                "name": "Tabs",
+                "kind": "Group",
+                "view": { "__id": ":TabPages" },
+                "childContentItems":
+                [
+                  {
+                    "displayName": "Management Uri List",
+                    "name": "ManagementUriList",
+                    "kind": "Tab",
+                    "view": { "__id": ":RowsLayout" },
+                    "childContentItems":
+                    [
+                      {
+                        "displayName": "ManagementUris",
+                        "name": "ManagementUris",
+                        "kind": "Collection",
+                        "view": { "__id": ":Table" },
+                        "dataSource":
+                        {
+                          "member": { "__id": "ManagementUriList/Properties[ManagementUris]" }
+                        },
+                        "childContentItems":
+                        [
+                          {
+                            "displayName": "rows",
+                            "name": "rows",
+                            "kind": "Details",
+                            "view": { "__id": ":TableRowLayout" },
+                            "dataSource":
+                            {
+                              "links":
+                              [
+                              ]
+                            },
+                            "childContentItems":
+                            [
+                              {
+                                "displayName": "Name",
+                                "name": "Name",
+                                "kind": "Value",
+                                "view": { "__id": ":Text" },
+                                "dataSource":
+                                {
+                                  "member": { "__id": "ManagementUri/Properties[Name]" }
+                                }
+                              },
+                              {
+                                "displayName": "Description",
+                                "name": "Description",
+                                "kind": "Value",
+                                "view": { "__id": ":Text" },
+                                "dataSource":
+                                {
+                                  "member": { "__id": "ManagementUri/Properties[Description]" }
+                                }
+                              },
+                              {
+                                "displayName": "Type",
+                                "name": "Type",
+                                "kind": "Value",
+                                "view": { "__id": ":Text" },
+                                "dataSource":
+                                {
+                                  "member": { "__id": "ManagementUri/Properties[Type]" }
+                                },
+                                "propertySources":
+                                [
+                                  {
+                                    "property": { "__id": ":RootControl/Properties[FontStyle]" },
+                                    "value": "Large"
+                                  }
+                                ]
+                              },
+                              {
+                                "displayName": "Value",
+                                "name": "Value",
+                                "kind": "Value",
+                                "view": { "__id": ":Text" },
+                                "dataSource":
+                                {
+                                  "member": { "__id": "ManagementUri/Properties[Value]" }
+                                },
+                                "propertySources":
+                                [
+                                  {
+                                    "property": { "__id": ":RootControl/Properties[FontStyle]" },
+                                    "value": "Small"
+                                  }
+                                ]
+                              }
+                            ],
+                            "propertySources":
+                            [
+                              {
+                                "property": { "__id": ":RootControl/Properties[WidthSizingMode]" },
+                                "value": "FitToContent"
+                              }
+                            ]
+                          }
+                        ],
+                        "propertySources":
+                        [
+                          {
+                            "property": { "__id": ":RootCollectionControl/Properties[ItemTap]" },
+                            "source":
+                            {
+                              "links":
+                              [
+                                {
+                                  "member": { "__id": "ManagementUriList/Properties[ManagementUris]" }
+                                },
+                                {
+                                  "target": { "__id": "CollectionView$ManagementUri/Methods[viewSelected]" }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    ],
+                    "commandItems":
+                    [
+                      {
+                        "displayName": "Search",
+                        "name": "SearchManagementUris",
+                        "kind": "Command",
+                        "view": { "__id": ":CommandBarButton" },
+                        "propertySources":
+                        [
+                          {
+                            "property": { "__id": ":RootControl/Properties[Tap]" },
+                            "source":
+                            {
+                              "links":
+                              [
+                                {
+                                  "member": { "__id": "ManagementUriList/Properties[ManagementUris]" }
+                                },
+                                {
+                                  "target": { "__id": "CollectionView$ManagementUri/Methods[showSearch]" }
+                                }
+                              ]
+                            }
+                          },
+                          {
+                            "property": { "__id": ":RootCommand/Properties[Icon]" },
+                            "value": "msls-search"
+                          }
+                        ]
+                      },
+                      {
+                        "displayName": "View",
+                        "name": "View",
+                        "kind": "Command",
+                        "view": { "__id": ":CommandBarButton" },
+                        "propertySources":
+                        [
+                          {
+                            "property": { "__id": ":RootControl/Properties[Tap]" },
+                            "source":
+                            {
+                              "target": { "__id": "!module/Methods[showManagementUriView]" },
+                              ":@AssociatedCollection": { "collection": { "__id": "ManagementUriList/Properties[ManagementUris]" } },
+                              "arguments":
+                              [
+                                {
+                                  "parameter": { "__id": "!module/Methods[showManagementUriView]/Parameters[ManagementUri]" },
+                                  "value":
+                                  {
+                                    "links":
+                                    [
+                                      {
+                                        "member": { "__id": "ManagementUriList/Properties[ManagementUris]" }
+                                      },
+                                      {
+                                        "member": { "__id": "CollectionView$ManagementUri/Properties[selectedItem]" }
+                                      }
+                                    ]
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ],
+                "propertySources":
+                [
+                  {
+                    "property": { "__id": ":RootControl/Properties[BrowseOnly]" },
+                    "value": true
+                  }
+                ]
+              },
+              {
+                "displayName": "Popups",
+                "name": "Popups",
+                "kind": "Group",
+                "view": { "__id": ":DialogPages" }
+              }
+            ]
+          },
+          "methods":
+          [
+            {
+              "id": "ManagementUriList/Methods[showTab]",
+              "name": "showTab",
+              "parameters":
+              [
+                {
+                  "id": "ManagementUriList/Methods[showTab]/Parameters[tabName]",
+                  "name": "tabName",
+                  "parameterType": { "__id": ":String" }
+                }
+              ]
+            },
+            {
+              "id": "ManagementUriList/Methods[showDialog]",
+              "name": "showDialog",
+              "parameters":
+              [
+                {
+                  "id": "ManagementUriList/Methods[showDialog]/Parameters[dialogName]",
+                  "name": "dialogName",
+                  "parameterType": { "__id": ":String" }
+                }
+              ]
+            }
+          ],
+          "properties":
+          [
+            {
+              "id": "ManagementUriList/Properties[ManagementUris]",
+              "name": "ManagementUris",
+              "disableSearch": true,
+              "pageSize": 45,
+              "elementType": { "__id": "ManagementUri" },
+              "propertyType": { "__id": "CollectionView$ManagementUri" },
+              "query":
+              {
+                "id": "ManagementUriList/Properties[ManagementUris]/Query",
+                "name": "ManagementUrisQuery",
+                "elementType": { "__id": "ManagementUri" },
+                "returnType": { "__id": "ManagementUri*" },
+                "source":
+                {
+                  "member": { "__id": "CoreData/Members[ManagementUris]" }
+                }
+              },
+              "source":
+              {
+                "target": { "__id": "ManagementUriList/Properties[ManagementUris]/Query" }
+              }
+            }
+          ]
+        },
+        {
+          "displayName": "Management Uri View",
+          "id": "ManagementUriView",
+          "name": "ManagementUriView",
+          "launchMode": "Single",
+          ":@SaveChangesTo":
+          {
+            "property": { "__id": "DataWorkspace/Members[CoreData]" }
+          },
+          "rootContentItem":
+          {
+            "displayName": "Root Content Item",
+            "name": "RootContentItem",
+            "kind": "Screen",
+            "view": { "__id": ":Screen" },
+            "childContentItems":
+            [
+              {
+                "displayName": "Tabs",
+                "name": "Tabs",
+                "kind": "Group",
+                "view": { "__id": ":TabPages" },
+                "childContentItems":
+                [
+                  {
+                    "displayName": "Details",
+                    "name": "Details",
+                    "kind": "Tab",
+                    "view": { "__id": ":RowsLayout" },
+                    "childContentItems":
+                    [
+                      {
+                        "displayName": "Id",
+                        "name": "ManagementUri_Id",
+                        "kind": "Value",
+                        "view": { "__id": ":Text" },
+                        "dataSource":
+                        {
+                          "links":
+                          [
+                            {
+                              "member": { "__id": "ManagementUriView/Properties[ManagementUri]" }
+                            },
+                            {
+                              "member": { "__id": "ManagementUri/Properties[Id]" }
+                            }
+                          ]
+                        }
+                      },
+                      {
+                        "displayName": "Name",
+                        "name": "Name",
+                        "kind": "Value",
+                        "view": { "__id": ":Text" },
+                        "dataSource":
+                        {
+                          "links":
+                          [
+                            {
+                              "member": { "__id": "ManagementUriView/Properties[ManagementUri]" }
+                            },
+                            {
+                              "member": { "__id": "ManagementUri/Properties[Name]" }
+                            }
+                          ]
+                        }
+                      },
+                      {
+                        "displayName": "Description",
+                        "name": "Description",
+                        "kind": "Value",
+                        "view": { "__id": ":Paragraph" },
+                        "dataSource":
+                        {
+                          "links":
+                          [
+                            {
+                              "member": { "__id": "ManagementUriView/Properties[ManagementUri]" }
+                            },
+                            {
+                              "member": { "__id": "ManagementUri/Properties[Description]" }
+                            }
+                          ]
+                        }
+                      },
+                      {
+                        "displayName": "Type",
+                        "name": "Type",
+                        "kind": "Value",
+                        "view": { "__id": ":Text" },
+                        "dataSource":
+                        {
+                          "links":
+                          [
+                            {
+                              "member": { "__id": "ManagementUriView/Properties[ManagementUri]" }
+                            },
+                            {
+                              "member": { "__id": "ManagementUri/Properties[Type]" }
+                            }
+                          ]
+                        }
+                      },
+                      {
+                        "displayName": "Value",
+                        "name": "Value",
+                        "kind": "Value",
+                        "view": { "__id": ":Text" },
+                        "dataSource":
+                        {
+                          "links":
+                          [
+                            {
+                              "member": { "__id": "ManagementUriView/Properties[ManagementUri]" }
+                            },
+                            {
+                              "member": { "__id": "ManagementUri/Properties[Value]" }
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "displayName": "General",
+                    "name": "General",
+                    "kind": "Tab",
+                    "view": { "__id": ":RowsLayout" },
+                    "childContentItems":
+                    [
+                      {
+                        "displayName": "Tid",
+                        "name": "Tid",
+                        "kind": "Value",
+                        "view": { "__id": ":Text" },
+                        "dataSource":
+                        {
+                          "links":
+                          [
+                            {
+                              "member": { "__id": "ManagementUriView/Properties[ManagementUri]" }
+                            },
+                            {
+                              "member": { "__id": "ManagementUri/Properties[Tid]" }
+                            }
+                          ]
+                        }
+                      },
+                      {
+                        "displayName": "Id",
+                        "name": "Id",
+                        "kind": "Value",
+                        "view": { "__id": ":Text" },
+                        "dataSource":
+                        {
+                          "links":
+                          [
+                            {
+                              "member": { "__id": "ManagementUriView/Properties[ManagementUri]" }
+                            },
+                            {
+                              "member": { "__id": "ManagementUri/Properties[Id]" }
+                            }
+                          ]
+                        }
+                      },
+                      {
+                        "displayName": "Created",
+                        "name": "Created",
+                        "kind": "Value",
+                        "view": { "__id": ":Text" },
+                        "dataSource":
+                        {
+                          "links":
+                          [
+                            {
+                              "member": { "__id": "ManagementUriView/Properties[ManagementUri]" }
+                            },
+                            {
+                              "member": { "__id": "ManagementUri/Properties[Created]" }
+                            }
+                          ]
+                        }
+                      },
+                      {
+                        "displayName": "Created By",
+                        "name": "CreatedBy",
+                        "kind": "Value",
+                        "view": { "__id": ":Text" },
+                        "dataSource":
+                        {
+                          "links":
+                          [
+                            {
+                              "member": { "__id": "ManagementUriView/Properties[ManagementUri]" }
+                            },
+                            {
+                              "member": { "__id": "ManagementUri/Properties[CreatedBy]" }
+                            }
+                          ]
+                        }
+                      },
+                      {
+                        "displayName": "Modified",
+                        "name": "Modified",
+                        "kind": "Value",
+                        "view": { "__id": ":Text" },
+                        "dataSource":
+                        {
+                          "links":
+                          [
+                            {
+                              "member": { "__id": "ManagementUriView/Properties[ManagementUri]" }
+                            },
+                            {
+                              "member": { "__id": "ManagementUri/Properties[Modified]" }
+                            }
+                          ]
+                        }
+                      },
+                      {
+                        "displayName": "Modified By",
+                        "name": "ModifiedBy",
+                        "kind": "Value",
+                        "view": { "__id": ":Text" },
+                        "dataSource":
+                        {
+                          "links":
+                          [
+                            {
+                              "member": { "__id": "ManagementUriView/Properties[ManagementUri]" }
+                            },
+                            {
+                              "member": { "__id": "ManagementUri/Properties[ModifiedBy]" }
+                            }
+                          ]
+                        }
+                      }
+                    ]
+                  }
+                ],
+                "propertySources":
+                [
+                  {
+                    "property": { "__id": ":RootControl/Properties[BrowseOnly]" },
+                    "value": true
+                  }
+                ]
+              },
+              {
+                "displayName": "Popups",
+                "name": "Popups",
+                "kind": "Group",
+                "view": { "__id": ":DialogPages" }
+              }
+            ]
+          },
+          "methods":
+          [
+            {
+              "id": "ManagementUriView/Methods[showTab]",
+              "name": "showTab",
+              "parameters":
+              [
+                {
+                  "id": "ManagementUriView/Methods[showTab]/Parameters[tabName]",
+                  "name": "tabName",
+                  "parameterType": { "__id": ":String" }
+                }
+              ]
+            },
+            {
+              "id": "ManagementUriView/Methods[showDialog]",
+              "name": "showDialog",
+              "parameters":
+              [
+                {
+                  "id": "ManagementUriView/Methods[showDialog]/Parameters[dialogName]",
+                  "name": "dialogName",
+                  "parameterType": { "__id": ":String" }
+                }
+              ]
+            }
+          ],
+          "properties":
+          [
+            {
+              "id": "ManagementUriView/Properties[ManagementUri]",
+              "name": "ManagementUri",
+              "elementType": { "__id": "ManagementUri" },
+              "propertyType": { "__id": "ManagementUri" },
+              ":@IsParameter": { }
+            }
+          ]
+        },
+        {
           "displayName": "Nodes List",
           "id": "NodesList",
           "name": "NodesList",
@@ -13168,68 +14685,6 @@
               "source":
               {
                 "target": { "__id": "NodeView/Properties[Children]/Query" }
-              }
-            },
-            {
-              "id": "NodeView/Properties[IncomingLinks]",
-              "name": "IncomingLinks",
-              "disableSearch": true,
-              "pageSize": 15,
-              "elementType": { "__id": "Link" },
-              "propertyType": { "__id": "CollectionView$Link" },
-              "query":
-              {
-                "id": "NodeView/Properties[IncomingLinks]/Query",
-                "name": "IncomingLinksQuery",
-                "elementType": { "__id": "Link" },
-                "returnType": { "__id": "Link*" },
-                "source":
-                {
-                  "links":
-                  [
-                    {
-                      "member": { "__id": "NodeView/Properties[Node]" }
-                    },
-                    {
-                      "member": { "__id": "Node/Properties[IncomingLinks]" }
-                    }
-                  ]
-                }
-              },
-              "source":
-              {
-                "target": { "__id": "NodeView/Properties[IncomingLinks]/Query" }
-              }
-            },
-            {
-              "id": "NodeView/Properties[OutgoingLinks]",
-              "name": "OutgoingLinks",
-              "disableSearch": true,
-              "pageSize": 15,
-              "elementType": { "__id": "Link" },
-              "propertyType": { "__id": "CollectionView$Link" },
-              "query":
-              {
-                "id": "NodeView/Properties[OutgoingLinks]/Query",
-                "name": "OutgoingLinksQuery",
-                "elementType": { "__id": "Link" },
-                "returnType": { "__id": "Link*" },
-                "source":
-                {
-                  "links":
-                  [
-                    {
-                      "member": { "__id": "NodeView/Properties[Node]" }
-                    },
-                    {
-                      "member": { "__id": "Node/Properties[OutgoingLinks]" }
-                    }
-                  ]
-                }
-              },
-              "source":
-              {
-                "target": { "__id": "NodeView/Properties[OutgoingLinks]/Query" }
               }
             }
           ]
@@ -16571,64 +18026,6 @@
           ]
         },
         {
-          "id": "Link*",
-          "name": "Link*",
-          "kind": "Enumerable",
-          "elementType": { "__id": "Link" }
-        },
-        {
-          "id": "CollectionView$Link",
-          "name": "CollectionView$Link",
-          "kind": "CollectionView",
-          "elementType": { "__id": "Link" },
-          "methods":
-          [
-            {
-              "id": "CollectionView$Link/Methods[addNew]",
-              "name": "addNew",
-              "returnType": { "__id": "Link" }
-            },
-            {
-              "id": "CollectionView$Link/Methods[addAndEditNew]",
-              "name": "addAndEditNew",
-              "returnType": { "__id": "Link" }
-            },
-            {
-              "id": "CollectionView$Link/Methods[showSearch]",
-              "name": "showSearch",
-              "returnType": { "__id": "Link" }
-            },
-            {
-              "id": "CollectionView$Link/Methods[editSelected]",
-              "name": "editSelected"
-            },
-            {
-              "id": "CollectionView$Link/Methods[deleteSelected]",
-              "name": "deleteSelected"
-            },
-            {
-              "id": "CollectionView$Link/Methods[removeSelected]",
-              "name": "removeSelected"
-            },
-            {
-              "id": "CollectionView$Link/Methods[refresh]",
-              "name": "refresh"
-            },
-            {
-              "id": "CollectionView$Link/Methods[viewSelected]",
-              "name": "viewSelected"
-            }
-          ],
-          "properties":
-          [
-            {
-              "id": "CollectionView$Link/Properties[selectedItem]",
-              "name": "selectedItem",
-              "propertyType": { "__id": "Link" }
-            }
-          ]
-        },
-        {
           "id": "ManagementUri*",
           "name": "ManagementUri*",
           "kind": "Enumerable",
@@ -16683,6 +18080,122 @@
               "id": "CollectionView$ManagementUri/Properties[selectedItem]",
               "name": "selectedItem",
               "propertyType": { "__id": "ManagementUri" }
+            }
+          ]
+        },
+        {
+          "id": "Assoc*",
+          "name": "Assoc*",
+          "kind": "Enumerable",
+          "elementType": { "__id": "Assoc" }
+        },
+        {
+          "id": "CollectionView$Assoc",
+          "name": "CollectionView$Assoc",
+          "kind": "CollectionView",
+          "elementType": { "__id": "Assoc" },
+          "methods":
+          [
+            {
+              "id": "CollectionView$Assoc/Methods[addNew]",
+              "name": "addNew",
+              "returnType": { "__id": "Assoc" }
+            },
+            {
+              "id": "CollectionView$Assoc/Methods[addAndEditNew]",
+              "name": "addAndEditNew",
+              "returnType": { "__id": "Assoc" }
+            },
+            {
+              "id": "CollectionView$Assoc/Methods[showSearch]",
+              "name": "showSearch",
+              "returnType": { "__id": "Assoc" }
+            },
+            {
+              "id": "CollectionView$Assoc/Methods[editSelected]",
+              "name": "editSelected"
+            },
+            {
+              "id": "CollectionView$Assoc/Methods[deleteSelected]",
+              "name": "deleteSelected"
+            },
+            {
+              "id": "CollectionView$Assoc/Methods[removeSelected]",
+              "name": "removeSelected"
+            },
+            {
+              "id": "CollectionView$Assoc/Methods[refresh]",
+              "name": "refresh"
+            },
+            {
+              "id": "CollectionView$Assoc/Methods[viewSelected]",
+              "name": "viewSelected"
+            }
+          ],
+          "properties":
+          [
+            {
+              "id": "CollectionView$Assoc/Properties[selectedItem]",
+              "name": "selectedItem",
+              "propertyType": { "__id": "Assoc" }
+            }
+          ]
+        },
+        {
+          "id": "CostCentre*",
+          "name": "CostCentre*",
+          "kind": "Enumerable",
+          "elementType": { "__id": "CostCentre" }
+        },
+        {
+          "id": "CollectionView$CostCentre",
+          "name": "CollectionView$CostCentre",
+          "kind": "CollectionView",
+          "elementType": { "__id": "CostCentre" },
+          "methods":
+          [
+            {
+              "id": "CollectionView$CostCentre/Methods[addNew]",
+              "name": "addNew",
+              "returnType": { "__id": "CostCentre" }
+            },
+            {
+              "id": "CollectionView$CostCentre/Methods[addAndEditNew]",
+              "name": "addAndEditNew",
+              "returnType": { "__id": "CostCentre" }
+            },
+            {
+              "id": "CollectionView$CostCentre/Methods[showSearch]",
+              "name": "showSearch",
+              "returnType": { "__id": "CostCentre" }
+            },
+            {
+              "id": "CollectionView$CostCentre/Methods[editSelected]",
+              "name": "editSelected"
+            },
+            {
+              "id": "CollectionView$CostCentre/Methods[deleteSelected]",
+              "name": "deleteSelected"
+            },
+            {
+              "id": "CollectionView$CostCentre/Methods[removeSelected]",
+              "name": "removeSelected"
+            },
+            {
+              "id": "CollectionView$CostCentre/Methods[refresh]",
+              "name": "refresh"
+            },
+            {
+              "id": "CollectionView$CostCentre/Methods[viewSelected]",
+              "name": "viewSelected"
+            }
+          ],
+          "properties":
+          [
+            {
+              "id": "CollectionView$CostCentre/Properties[selectedItem]",
+              "name": "selectedItem",
+              "propertyType": { "__id": "CostCentre" }
             }
           ]
         }
@@ -17013,6 +18526,42 @@
           ]
         },
         {
+          "id": "!module/Methods[showManagementCredentialList]",
+          "name": "showManagementCredentialList",
+          ":@ShowScreenMethod": { "targetScreen": { "__id": "ManagementCredentialList" } }
+        },
+        {
+          "id": "!module/Methods[showManagementCredentialView]",
+          "name": "showManagementCredentialView",
+          ":@ShowScreenMethod": { "targetScreen": { "__id": "ManagementCredentialView" } },
+          "parameters":
+          [
+            {
+              "id": "!module/Methods[showManagementCredentialView]/Parameters[ManagementCredential]",
+              "name": "ManagementCredential",
+              "parameterType": { "__id": "ManagementCredential" }
+            }
+          ]
+        },
+        {
+          "id": "!module/Methods[showManagementUriList]",
+          "name": "showManagementUriList",
+          ":@ShowScreenMethod": { "targetScreen": { "__id": "ManagementUriList" } }
+        },
+        {
+          "id": "!module/Methods[showManagementUriView]",
+          "name": "showManagementUriView",
+          ":@ShowScreenMethod": { "targetScreen": { "__id": "ManagementUriView" } },
+          "parameters":
+          [
+            {
+              "id": "!module/Methods[showManagementUriView]/Parameters[ManagementUri]",
+              "name": "ManagementUri",
+              "parameterType": { "__id": "ManagementUri" }
+            }
+          ]
+        },
+        {
           "id": "!module/Methods[showNodesList]",
           "name": "showNodesList",
           ":@ShowScreenMethod": { "targetScreen": { "__id": "NodesList" } }
@@ -17154,6 +18703,16 @@
           "id": "!module/NavigationItems[link8]",
           "name": "link8",
           "method": { "__id": "!module/Methods[showEntityTypesList]" }
+        },
+        {
+          "id": "!module/NavigationItems[link12]",
+          "name": "link12",
+          "method": { "__id": "!module/Methods[showManagementCredentialList]" }
+        },
+        {
+          "id": "!module/NavigationItems[link13]",
+          "name": "link13",
+          "method": { "__id": "!module/Methods[showManagementUriList]" }
         }
       ]
     },

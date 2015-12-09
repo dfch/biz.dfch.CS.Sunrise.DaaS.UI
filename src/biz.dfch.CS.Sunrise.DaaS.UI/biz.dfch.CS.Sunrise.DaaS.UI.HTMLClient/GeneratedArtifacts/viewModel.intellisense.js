@@ -27,22 +27,6 @@
             data: lightSwitchApplication.ApprovalApprove,
             value: String
         },
-        Approval_NotBefore: {
-            _$class: msls.ContentItem,
-            _$name: "Approval_NotBefore",
-            _$parentName: "Details",
-            screen: lightSwitchApplication.ApprovalApprove,
-            data: lightSwitchApplication.ApprovalApprove,
-            value: Date
-        },
-        Approval_ExpiresAt: {
-            _$class: msls.ContentItem,
-            _$name: "Approval_ExpiresAt",
-            _$parentName: "Details",
-            screen: lightSwitchApplication.ApprovalApprove,
-            data: lightSwitchApplication.ApprovalApprove,
-            value: Date
-        },
         Approval_Status: {
             _$class: msls.ContentItem,
             _$name: "Approval_Status",
@@ -96,16 +80,6 @@
         /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
         /// </field>
         Name_postRender: [$element, function () { return new lightSwitchApplication.ApprovalApprove().findContentItem("Name"); }],
-        /// <field>
-        /// Called after the Approval_NotBefore content item has been rendered.
-        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
-        /// </field>
-        Approval_NotBefore_postRender: [$element, function () { return new lightSwitchApplication.ApprovalApprove().findContentItem("Approval_NotBefore"); }],
-        /// <field>
-        /// Called after the Approval_ExpiresAt content item has been rendered.
-        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
-        /// </field>
-        Approval_ExpiresAt_postRender: [$element, function () { return new lightSwitchApplication.ApprovalApprove().findContentItem("Approval_ExpiresAt"); }],
         /// <field>
         /// Called after the Approval_Status content item has been rendered.
         /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
@@ -3637,6 +3611,18 @@
             _$parentName: "Group2",
             screen: lightSwitchApplication.Home
         },
+        ShowManagementCredentialList: {
+            _$class: msls.ContentItem,
+            _$name: "ShowManagementCredentialList",
+            _$parentName: "Group2",
+            screen: lightSwitchApplication.Home
+        },
+        ShowManagementUriList: {
+            _$class: msls.ContentItem,
+            _$name: "ShowManagementUriList",
+            _$parentName: "Group2",
+            screen: lightSwitchApplication.Home
+        },
         Popups: {
             _$class: msls.ContentItem,
             _$name: "Popups",
@@ -3735,7 +3721,17 @@
         /// Called after the EntityTypes content item has been rendered.
         /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
         /// </field>
-        EntityTypes_postRender: [$element, function () { return new lightSwitchApplication.Home().findContentItem("EntityTypes"); }]
+        EntityTypes_postRender: [$element, function () { return new lightSwitchApplication.Home().findContentItem("EntityTypes"); }],
+        /// <field>
+        /// Called after the ShowManagementCredentialList content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        ShowManagementCredentialList_postRender: [$element, function () { return new lightSwitchApplication.Home().findContentItem("ShowManagementCredentialList"); }],
+        /// <field>
+        /// Called after the ShowManagementUriList content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        ShowManagementUriList_postRender: [$element, function () { return new lightSwitchApplication.Home().findContentItem("ShowManagementUriList"); }]
     });
 
     lightSwitchApplication.JobsList.prototype._$contentItems = {
@@ -3950,6 +3946,22 @@
             data: lightSwitchApplication.Job,
             value: String
         },
+        Job_Condition: {
+            _$class: msls.ContentItem,
+            _$name: "Job_Condition",
+            _$parentName: "Details",
+            screen: lightSwitchApplication.JobView,
+            data: lightSwitchApplication.JobView,
+            value: String
+        },
+        Job_ConditionParameters: {
+            _$class: msls.ContentItem,
+            _$name: "Job_ConditionParameters",
+            _$parentName: "Details",
+            screen: lightSwitchApplication.JobView,
+            data: lightSwitchApplication.JobView,
+            value: String
+        },
         Description1: {
             _$class: msls.ContentItem,
             _$name: "Description1",
@@ -4109,6 +4121,16 @@
         /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
         /// </field>
         ParentId_postRender: [$element, function () { return new lightSwitchApplication.JobView().findContentItem("ParentId"); }],
+        /// <field>
+        /// Called after the Job_Condition content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        Job_Condition_postRender: [$element, function () { return new lightSwitchApplication.JobView().findContentItem("Job_Condition"); }],
+        /// <field>
+        /// Called after the Job_ConditionParameters content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        Job_ConditionParameters_postRender: [$element, function () { return new lightSwitchApplication.JobView().findContentItem("Job_ConditionParameters"); }],
         /// <field>
         /// Called after the Description1 content item has been rendered.
         /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
@@ -4768,6 +4790,747 @@
         /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
         /// </field>
         ModifiedBy_postRender: [$element, function () { return new lightSwitchApplication.KeyNameValueView().findContentItem("ModifiedBy"); }]
+    });
+
+    lightSwitchApplication.ManagementCredentialList.prototype._$contentItems = {
+        Tabs: {
+            _$class: msls.ContentItem,
+            _$name: "Tabs",
+            _$parentName: "RootContentItem",
+            screen: lightSwitchApplication.ManagementCredentialList
+        },
+        ManagementCredentialList: {
+            _$class: msls.ContentItem,
+            _$name: "ManagementCredentialList",
+            _$parentName: "Tabs",
+            screen: lightSwitchApplication.ManagementCredentialList,
+            data: lightSwitchApplication.ManagementCredentialList,
+            value: lightSwitchApplication.ManagementCredentialList
+        },
+        ManagementCredentials: {
+            _$class: msls.ContentItem,
+            _$name: "ManagementCredentials",
+            _$parentName: "ManagementCredentialList",
+            screen: lightSwitchApplication.ManagementCredentialList,
+            data: lightSwitchApplication.ManagementCredentialList,
+            value: {
+                _$class: msls.VisualCollection,
+                screen: lightSwitchApplication.ManagementCredentialList,
+                _$entry: {
+                    elementType: lightSwitchApplication.ManagementCredential
+                }
+            }
+        },
+        rows: {
+            _$class: msls.ContentItem,
+            _$name: "rows",
+            _$parentName: "ManagementCredentials",
+            screen: lightSwitchApplication.ManagementCredentialList,
+            data: lightSwitchApplication.ManagementCredential,
+            value: lightSwitchApplication.ManagementCredential
+        },
+        Id: {
+            _$class: msls.ContentItem,
+            _$name: "Id",
+            _$parentName: "rows",
+            screen: lightSwitchApplication.ManagementCredentialList,
+            data: lightSwitchApplication.ManagementCredential,
+            value: String
+        },
+        Name: {
+            _$class: msls.ContentItem,
+            _$name: "Name",
+            _$parentName: "rows",
+            screen: lightSwitchApplication.ManagementCredentialList,
+            data: lightSwitchApplication.ManagementCredential,
+            value: String
+        },
+        Description: {
+            _$class: msls.ContentItem,
+            _$name: "Description",
+            _$parentName: "rows",
+            screen: lightSwitchApplication.ManagementCredentialList,
+            data: lightSwitchApplication.ManagementCredential,
+            value: String
+        },
+        Popups: {
+            _$class: msls.ContentItem,
+            _$name: "Popups",
+            _$parentName: "RootContentItem",
+            screen: lightSwitchApplication.ManagementCredentialList
+        }
+    };
+
+    msls._addEntryPoints(lightSwitchApplication.ManagementCredentialList, {
+        /// <field>
+        /// Called when a new ManagementCredentialList screen is created.
+        /// <br/>created(msls.application.ManagementCredentialList screen)
+        /// </field>
+        created: [lightSwitchApplication.ManagementCredentialList],
+        /// <field>
+        /// Called before changes on an active ManagementCredentialList screen are applied.
+        /// <br/>beforeApplyChanges(msls.application.ManagementCredentialList screen)
+        /// </field>
+        beforeApplyChanges: [lightSwitchApplication.ManagementCredentialList],
+        /// <field>
+        /// Called after the ManagementCredentialList content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        ManagementCredentialList_postRender: [$element, function () { return new lightSwitchApplication.ManagementCredentialList().findContentItem("ManagementCredentialList"); }],
+        /// <field>
+        /// Called after the ManagementCredentials content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        ManagementCredentials_postRender: [$element, function () { return new lightSwitchApplication.ManagementCredentialList().findContentItem("ManagementCredentials"); }],
+        /// <field>
+        /// Called after the rows content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        rows_postRender: [$element, function () { return new lightSwitchApplication.ManagementCredentialList().findContentItem("rows"); }],
+        /// <field>
+        /// Called after the Id content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        Id_postRender: [$element, function () { return new lightSwitchApplication.ManagementCredentialList().findContentItem("Id"); }],
+        /// <field>
+        /// Called after the Name content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        Name_postRender: [$element, function () { return new lightSwitchApplication.ManagementCredentialList().findContentItem("Name"); }],
+        /// <field>
+        /// Called after the Description content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        Description_postRender: [$element, function () { return new lightSwitchApplication.ManagementCredentialList().findContentItem("Description"); }]
+    });
+
+    lightSwitchApplication.ManagementCredentialView.prototype._$contentItems = {
+        Tabs: {
+            _$class: msls.ContentItem,
+            _$name: "Tabs",
+            _$parentName: "RootContentItem",
+            screen: lightSwitchApplication.ManagementCredentialView
+        },
+        Details: {
+            _$class: msls.ContentItem,
+            _$name: "Details",
+            _$parentName: "Tabs",
+            screen: lightSwitchApplication.ManagementCredentialView,
+            data: lightSwitchApplication.ManagementCredentialView,
+            value: lightSwitchApplication.ManagementCredentialView
+        },
+        ManagementCredential_Id1: {
+            _$class: msls.ContentItem,
+            _$name: "ManagementCredential_Id1",
+            _$parentName: "Details",
+            screen: lightSwitchApplication.ManagementCredentialView,
+            data: lightSwitchApplication.ManagementCredentialView,
+            value: String
+        },
+        Name: {
+            _$class: msls.ContentItem,
+            _$name: "Name",
+            _$parentName: "Details",
+            screen: lightSwitchApplication.ManagementCredentialView,
+            data: lightSwitchApplication.ManagementCredentialView,
+            value: String
+        },
+        ManagementCredential_Description: {
+            _$class: msls.ContentItem,
+            _$name: "ManagementCredential_Description",
+            _$parentName: "Details",
+            screen: lightSwitchApplication.ManagementCredentialView,
+            data: lightSwitchApplication.ManagementCredentialView,
+            value: String
+        },
+        Username: {
+            _$class: msls.ContentItem,
+            _$name: "Username",
+            _$parentName: "Details",
+            screen: lightSwitchApplication.ManagementCredentialView,
+            data: lightSwitchApplication.ManagementCredentialView,
+            value: String
+        },
+        ManagementCredential_Password: {
+            _$class: msls.ContentItem,
+            _$name: "ManagementCredential_Password",
+            _$parentName: "Details",
+            screen: lightSwitchApplication.ManagementCredentialView,
+            data: lightSwitchApplication.ManagementCredentialView,
+            value: String
+        },
+        ManagementCredential_EncryptedPassword: {
+            _$class: msls.ContentItem,
+            _$name: "ManagementCredential_EncryptedPassword",
+            _$parentName: "Details",
+            screen: lightSwitchApplication.ManagementCredentialView,
+            data: lightSwitchApplication.ManagementCredentialView,
+            value: String
+        },
+        General: {
+            _$class: msls.ContentItem,
+            _$name: "General",
+            _$parentName: "Tabs",
+            screen: lightSwitchApplication.ManagementCredentialView,
+            data: lightSwitchApplication.ManagementCredentialView,
+            value: lightSwitchApplication.ManagementCredentialView
+        },
+        ManagementCredential_Tid: {
+            _$class: msls.ContentItem,
+            _$name: "ManagementCredential_Tid",
+            _$parentName: "General",
+            screen: lightSwitchApplication.ManagementCredentialView,
+            data: lightSwitchApplication.ManagementCredentialView,
+            value: String
+        },
+        ManagementCredential_Id: {
+            _$class: msls.ContentItem,
+            _$name: "ManagementCredential_Id",
+            _$parentName: "General",
+            screen: lightSwitchApplication.ManagementCredentialView,
+            data: lightSwitchApplication.ManagementCredentialView,
+            value: String
+        },
+        ManagementCredential_Created: {
+            _$class: msls.ContentItem,
+            _$name: "ManagementCredential_Created",
+            _$parentName: "General",
+            screen: lightSwitchApplication.ManagementCredentialView,
+            data: lightSwitchApplication.ManagementCredentialView,
+            value: Date
+        },
+        ManagementCredential_CreatedBy: {
+            _$class: msls.ContentItem,
+            _$name: "ManagementCredential_CreatedBy",
+            _$parentName: "General",
+            screen: lightSwitchApplication.ManagementCredentialView,
+            data: lightSwitchApplication.ManagementCredentialView,
+            value: String
+        },
+        ManagementCredential_Modified: {
+            _$class: msls.ContentItem,
+            _$name: "ManagementCredential_Modified",
+            _$parentName: "General",
+            screen: lightSwitchApplication.ManagementCredentialView,
+            data: lightSwitchApplication.ManagementCredentialView,
+            value: Date
+        },
+        ManagementCredential_ModifiedBy: {
+            _$class: msls.ContentItem,
+            _$name: "ManagementCredential_ModifiedBy",
+            _$parentName: "General",
+            screen: lightSwitchApplication.ManagementCredentialView,
+            data: lightSwitchApplication.ManagementCredentialView,
+            value: String
+        },
+        ManagementUris: {
+            _$class: msls.ContentItem,
+            _$name: "ManagementUris",
+            _$parentName: "Tabs",
+            screen: lightSwitchApplication.ManagementCredentialView,
+            data: lightSwitchApplication.ManagementCredentialView,
+            value: lightSwitchApplication.ManagementCredentialView
+        },
+        ManagementUris1: {
+            _$class: msls.ContentItem,
+            _$name: "ManagementUris1",
+            _$parentName: "ManagementUris",
+            screen: lightSwitchApplication.ManagementCredentialView,
+            data: lightSwitchApplication.ManagementCredentialView,
+            value: {
+                _$class: msls.VisualCollection,
+                screen: lightSwitchApplication.ManagementCredentialView,
+                _$entry: {
+                    elementType: lightSwitchApplication.ManagementUri
+                }
+            }
+        },
+        rows: {
+            _$class: msls.ContentItem,
+            _$name: "rows",
+            _$parentName: "ManagementUris1",
+            screen: lightSwitchApplication.ManagementCredentialView,
+            data: lightSwitchApplication.ManagementUri,
+            value: lightSwitchApplication.ManagementUri
+        },
+        Name1: {
+            _$class: msls.ContentItem,
+            _$name: "Name1",
+            _$parentName: "rows",
+            screen: lightSwitchApplication.ManagementCredentialView,
+            data: lightSwitchApplication.ManagementUri,
+            value: String
+        },
+        Description: {
+            _$class: msls.ContentItem,
+            _$name: "Description",
+            _$parentName: "rows",
+            screen: lightSwitchApplication.ManagementCredentialView,
+            data: lightSwitchApplication.ManagementUri,
+            value: String
+        },
+        Type: {
+            _$class: msls.ContentItem,
+            _$name: "Type",
+            _$parentName: "rows",
+            screen: lightSwitchApplication.ManagementCredentialView,
+            data: lightSwitchApplication.ManagementUri,
+            value: String
+        },
+        Value: {
+            _$class: msls.ContentItem,
+            _$name: "Value",
+            _$parentName: "rows",
+            screen: lightSwitchApplication.ManagementCredentialView,
+            data: lightSwitchApplication.ManagementUri,
+            value: String
+        },
+        Popups: {
+            _$class: msls.ContentItem,
+            _$name: "Popups",
+            _$parentName: "RootContentItem",
+            screen: lightSwitchApplication.ManagementCredentialView
+        }
+    };
+
+    msls._addEntryPoints(lightSwitchApplication.ManagementCredentialView, {
+        /// <field>
+        /// Called when a new ManagementCredentialView screen is created.
+        /// <br/>created(msls.application.ManagementCredentialView screen)
+        /// </field>
+        created: [lightSwitchApplication.ManagementCredentialView],
+        /// <field>
+        /// Called before changes on an active ManagementCredentialView screen are applied.
+        /// <br/>beforeApplyChanges(msls.application.ManagementCredentialView screen)
+        /// </field>
+        beforeApplyChanges: [lightSwitchApplication.ManagementCredentialView],
+        /// <field>
+        /// Called after the Details content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        Details_postRender: [$element, function () { return new lightSwitchApplication.ManagementCredentialView().findContentItem("Details"); }],
+        /// <field>
+        /// Called after the ManagementCredential_Id1 content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        ManagementCredential_Id1_postRender: [$element, function () { return new lightSwitchApplication.ManagementCredentialView().findContentItem("ManagementCredential_Id1"); }],
+        /// <field>
+        /// Called after the Name content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        Name_postRender: [$element, function () { return new lightSwitchApplication.ManagementCredentialView().findContentItem("Name"); }],
+        /// <field>
+        /// Called after the ManagementCredential_Description content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        ManagementCredential_Description_postRender: [$element, function () { return new lightSwitchApplication.ManagementCredentialView().findContentItem("ManagementCredential_Description"); }],
+        /// <field>
+        /// Called after the Username content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        Username_postRender: [$element, function () { return new lightSwitchApplication.ManagementCredentialView().findContentItem("Username"); }],
+        /// <field>
+        /// Called after the ManagementCredential_Password content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        ManagementCredential_Password_postRender: [$element, function () { return new lightSwitchApplication.ManagementCredentialView().findContentItem("ManagementCredential_Password"); }],
+        /// <field>
+        /// Called after the ManagementCredential_EncryptedPassword content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        ManagementCredential_EncryptedPassword_postRender: [$element, function () { return new lightSwitchApplication.ManagementCredentialView().findContentItem("ManagementCredential_EncryptedPassword"); }],
+        /// <field>
+        /// Called after the General content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        General_postRender: [$element, function () { return new lightSwitchApplication.ManagementCredentialView().findContentItem("General"); }],
+        /// <field>
+        /// Called after the ManagementCredential_Tid content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        ManagementCredential_Tid_postRender: [$element, function () { return new lightSwitchApplication.ManagementCredentialView().findContentItem("ManagementCredential_Tid"); }],
+        /// <field>
+        /// Called after the ManagementCredential_Id content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        ManagementCredential_Id_postRender: [$element, function () { return new lightSwitchApplication.ManagementCredentialView().findContentItem("ManagementCredential_Id"); }],
+        /// <field>
+        /// Called after the ManagementCredential_Created content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        ManagementCredential_Created_postRender: [$element, function () { return new lightSwitchApplication.ManagementCredentialView().findContentItem("ManagementCredential_Created"); }],
+        /// <field>
+        /// Called after the ManagementCredential_CreatedBy content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        ManagementCredential_CreatedBy_postRender: [$element, function () { return new lightSwitchApplication.ManagementCredentialView().findContentItem("ManagementCredential_CreatedBy"); }],
+        /// <field>
+        /// Called after the ManagementCredential_Modified content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        ManagementCredential_Modified_postRender: [$element, function () { return new lightSwitchApplication.ManagementCredentialView().findContentItem("ManagementCredential_Modified"); }],
+        /// <field>
+        /// Called after the ManagementCredential_ModifiedBy content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        ManagementCredential_ModifiedBy_postRender: [$element, function () { return new lightSwitchApplication.ManagementCredentialView().findContentItem("ManagementCredential_ModifiedBy"); }],
+        /// <field>
+        /// Called after the ManagementUris content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        ManagementUris_postRender: [$element, function () { return new lightSwitchApplication.ManagementCredentialView().findContentItem("ManagementUris"); }],
+        /// <field>
+        /// Called after the ManagementUris1 content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        ManagementUris1_postRender: [$element, function () { return new lightSwitchApplication.ManagementCredentialView().findContentItem("ManagementUris1"); }],
+        /// <field>
+        /// Called after the rows content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        rows_postRender: [$element, function () { return new lightSwitchApplication.ManagementCredentialView().findContentItem("rows"); }],
+        /// <field>
+        /// Called after the Name1 content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        Name1_postRender: [$element, function () { return new lightSwitchApplication.ManagementCredentialView().findContentItem("Name1"); }],
+        /// <field>
+        /// Called after the Description content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        Description_postRender: [$element, function () { return new lightSwitchApplication.ManagementCredentialView().findContentItem("Description"); }],
+        /// <field>
+        /// Called after the Type content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        Type_postRender: [$element, function () { return new lightSwitchApplication.ManagementCredentialView().findContentItem("Type"); }],
+        /// <field>
+        /// Called after the Value content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        Value_postRender: [$element, function () { return new lightSwitchApplication.ManagementCredentialView().findContentItem("Value"); }]
+    });
+
+    lightSwitchApplication.ManagementUriList.prototype._$contentItems = {
+        Tabs: {
+            _$class: msls.ContentItem,
+            _$name: "Tabs",
+            _$parentName: "RootContentItem",
+            screen: lightSwitchApplication.ManagementUriList
+        },
+        ManagementUriList: {
+            _$class: msls.ContentItem,
+            _$name: "ManagementUriList",
+            _$parentName: "Tabs",
+            screen: lightSwitchApplication.ManagementUriList,
+            data: lightSwitchApplication.ManagementUriList,
+            value: lightSwitchApplication.ManagementUriList
+        },
+        ManagementUris: {
+            _$class: msls.ContentItem,
+            _$name: "ManagementUris",
+            _$parentName: "ManagementUriList",
+            screen: lightSwitchApplication.ManagementUriList,
+            data: lightSwitchApplication.ManagementUriList,
+            value: {
+                _$class: msls.VisualCollection,
+                screen: lightSwitchApplication.ManagementUriList,
+                _$entry: {
+                    elementType: lightSwitchApplication.ManagementUri
+                }
+            }
+        },
+        rows: {
+            _$class: msls.ContentItem,
+            _$name: "rows",
+            _$parentName: "ManagementUris",
+            screen: lightSwitchApplication.ManagementUriList,
+            data: lightSwitchApplication.ManagementUri,
+            value: lightSwitchApplication.ManagementUri
+        },
+        Name: {
+            _$class: msls.ContentItem,
+            _$name: "Name",
+            _$parentName: "rows",
+            screen: lightSwitchApplication.ManagementUriList,
+            data: lightSwitchApplication.ManagementUri,
+            value: String
+        },
+        Description: {
+            _$class: msls.ContentItem,
+            _$name: "Description",
+            _$parentName: "rows",
+            screen: lightSwitchApplication.ManagementUriList,
+            data: lightSwitchApplication.ManagementUri,
+            value: String
+        },
+        Type: {
+            _$class: msls.ContentItem,
+            _$name: "Type",
+            _$parentName: "rows",
+            screen: lightSwitchApplication.ManagementUriList,
+            data: lightSwitchApplication.ManagementUri,
+            value: String
+        },
+        Value: {
+            _$class: msls.ContentItem,
+            _$name: "Value",
+            _$parentName: "rows",
+            screen: lightSwitchApplication.ManagementUriList,
+            data: lightSwitchApplication.ManagementUri,
+            value: String
+        },
+        Popups: {
+            _$class: msls.ContentItem,
+            _$name: "Popups",
+            _$parentName: "RootContentItem",
+            screen: lightSwitchApplication.ManagementUriList
+        }
+    };
+
+    msls._addEntryPoints(lightSwitchApplication.ManagementUriList, {
+        /// <field>
+        /// Called when a new ManagementUriList screen is created.
+        /// <br/>created(msls.application.ManagementUriList screen)
+        /// </field>
+        created: [lightSwitchApplication.ManagementUriList],
+        /// <field>
+        /// Called before changes on an active ManagementUriList screen are applied.
+        /// <br/>beforeApplyChanges(msls.application.ManagementUriList screen)
+        /// </field>
+        beforeApplyChanges: [lightSwitchApplication.ManagementUriList],
+        /// <field>
+        /// Called after the ManagementUriList content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        ManagementUriList_postRender: [$element, function () { return new lightSwitchApplication.ManagementUriList().findContentItem("ManagementUriList"); }],
+        /// <field>
+        /// Called after the ManagementUris content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        ManagementUris_postRender: [$element, function () { return new lightSwitchApplication.ManagementUriList().findContentItem("ManagementUris"); }],
+        /// <field>
+        /// Called after the rows content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        rows_postRender: [$element, function () { return new lightSwitchApplication.ManagementUriList().findContentItem("rows"); }],
+        /// <field>
+        /// Called after the Name content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        Name_postRender: [$element, function () { return new lightSwitchApplication.ManagementUriList().findContentItem("Name"); }],
+        /// <field>
+        /// Called after the Description content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        Description_postRender: [$element, function () { return new lightSwitchApplication.ManagementUriList().findContentItem("Description"); }],
+        /// <field>
+        /// Called after the Type content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        Type_postRender: [$element, function () { return new lightSwitchApplication.ManagementUriList().findContentItem("Type"); }],
+        /// <field>
+        /// Called after the Value content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        Value_postRender: [$element, function () { return new lightSwitchApplication.ManagementUriList().findContentItem("Value"); }]
+    });
+
+    lightSwitchApplication.ManagementUriView.prototype._$contentItems = {
+        Tabs: {
+            _$class: msls.ContentItem,
+            _$name: "Tabs",
+            _$parentName: "RootContentItem",
+            screen: lightSwitchApplication.ManagementUriView
+        },
+        Details: {
+            _$class: msls.ContentItem,
+            _$name: "Details",
+            _$parentName: "Tabs",
+            screen: lightSwitchApplication.ManagementUriView,
+            data: lightSwitchApplication.ManagementUriView,
+            value: lightSwitchApplication.ManagementUriView
+        },
+        ManagementUri_Id: {
+            _$class: msls.ContentItem,
+            _$name: "ManagementUri_Id",
+            _$parentName: "Details",
+            screen: lightSwitchApplication.ManagementUriView,
+            data: lightSwitchApplication.ManagementUriView,
+            value: String
+        },
+        Name: {
+            _$class: msls.ContentItem,
+            _$name: "Name",
+            _$parentName: "Details",
+            screen: lightSwitchApplication.ManagementUriView,
+            data: lightSwitchApplication.ManagementUriView,
+            value: String
+        },
+        Description: {
+            _$class: msls.ContentItem,
+            _$name: "Description",
+            _$parentName: "Details",
+            screen: lightSwitchApplication.ManagementUriView,
+            data: lightSwitchApplication.ManagementUriView,
+            value: String
+        },
+        Type: {
+            _$class: msls.ContentItem,
+            _$name: "Type",
+            _$parentName: "Details",
+            screen: lightSwitchApplication.ManagementUriView,
+            data: lightSwitchApplication.ManagementUriView,
+            value: String
+        },
+        Value: {
+            _$class: msls.ContentItem,
+            _$name: "Value",
+            _$parentName: "Details",
+            screen: lightSwitchApplication.ManagementUriView,
+            data: lightSwitchApplication.ManagementUriView,
+            value: String
+        },
+        General: {
+            _$class: msls.ContentItem,
+            _$name: "General",
+            _$parentName: "Tabs",
+            screen: lightSwitchApplication.ManagementUriView,
+            data: lightSwitchApplication.ManagementUriView,
+            value: lightSwitchApplication.ManagementUriView
+        },
+        Tid: {
+            _$class: msls.ContentItem,
+            _$name: "Tid",
+            _$parentName: "General",
+            screen: lightSwitchApplication.ManagementUriView,
+            data: lightSwitchApplication.ManagementUriView,
+            value: String
+        },
+        Id: {
+            _$class: msls.ContentItem,
+            _$name: "Id",
+            _$parentName: "General",
+            screen: lightSwitchApplication.ManagementUriView,
+            data: lightSwitchApplication.ManagementUriView,
+            value: String
+        },
+        Created: {
+            _$class: msls.ContentItem,
+            _$name: "Created",
+            _$parentName: "General",
+            screen: lightSwitchApplication.ManagementUriView,
+            data: lightSwitchApplication.ManagementUriView,
+            value: Date
+        },
+        CreatedBy: {
+            _$class: msls.ContentItem,
+            _$name: "CreatedBy",
+            _$parentName: "General",
+            screen: lightSwitchApplication.ManagementUriView,
+            data: lightSwitchApplication.ManagementUriView,
+            value: String
+        },
+        Modified: {
+            _$class: msls.ContentItem,
+            _$name: "Modified",
+            _$parentName: "General",
+            screen: lightSwitchApplication.ManagementUriView,
+            data: lightSwitchApplication.ManagementUriView,
+            value: Date
+        },
+        ModifiedBy: {
+            _$class: msls.ContentItem,
+            _$name: "ModifiedBy",
+            _$parentName: "General",
+            screen: lightSwitchApplication.ManagementUriView,
+            data: lightSwitchApplication.ManagementUriView,
+            value: String
+        },
+        Popups: {
+            _$class: msls.ContentItem,
+            _$name: "Popups",
+            _$parentName: "RootContentItem",
+            screen: lightSwitchApplication.ManagementUriView
+        }
+    };
+
+    msls._addEntryPoints(lightSwitchApplication.ManagementUriView, {
+        /// <field>
+        /// Called when a new ManagementUriView screen is created.
+        /// <br/>created(msls.application.ManagementUriView screen)
+        /// </field>
+        created: [lightSwitchApplication.ManagementUriView],
+        /// <field>
+        /// Called before changes on an active ManagementUriView screen are applied.
+        /// <br/>beforeApplyChanges(msls.application.ManagementUriView screen)
+        /// </field>
+        beforeApplyChanges: [lightSwitchApplication.ManagementUriView],
+        /// <field>
+        /// Called after the Details content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        Details_postRender: [$element, function () { return new lightSwitchApplication.ManagementUriView().findContentItem("Details"); }],
+        /// <field>
+        /// Called after the ManagementUri_Id content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        ManagementUri_Id_postRender: [$element, function () { return new lightSwitchApplication.ManagementUriView().findContentItem("ManagementUri_Id"); }],
+        /// <field>
+        /// Called after the Name content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        Name_postRender: [$element, function () { return new lightSwitchApplication.ManagementUriView().findContentItem("Name"); }],
+        /// <field>
+        /// Called after the Description content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        Description_postRender: [$element, function () { return new lightSwitchApplication.ManagementUriView().findContentItem("Description"); }],
+        /// <field>
+        /// Called after the Type content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        Type_postRender: [$element, function () { return new lightSwitchApplication.ManagementUriView().findContentItem("Type"); }],
+        /// <field>
+        /// Called after the Value content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        Value_postRender: [$element, function () { return new lightSwitchApplication.ManagementUriView().findContentItem("Value"); }],
+        /// <field>
+        /// Called after the General content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        General_postRender: [$element, function () { return new lightSwitchApplication.ManagementUriView().findContentItem("General"); }],
+        /// <field>
+        /// Called after the Tid content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        Tid_postRender: [$element, function () { return new lightSwitchApplication.ManagementUriView().findContentItem("Tid"); }],
+        /// <field>
+        /// Called after the Id content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        Id_postRender: [$element, function () { return new lightSwitchApplication.ManagementUriView().findContentItem("Id"); }],
+        /// <field>
+        /// Called after the Created content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        Created_postRender: [$element, function () { return new lightSwitchApplication.ManagementUriView().findContentItem("Created"); }],
+        /// <field>
+        /// Called after the CreatedBy content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        CreatedBy_postRender: [$element, function () { return new lightSwitchApplication.ManagementUriView().findContentItem("CreatedBy"); }],
+        /// <field>
+        /// Called after the Modified content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        Modified_postRender: [$element, function () { return new lightSwitchApplication.ManagementUriView().findContentItem("Modified"); }],
+        /// <field>
+        /// Called after the ModifiedBy content item has been rendered.
+        /// <br/>postRender(HTMLElement element, msls.ContentItem contentItem)
+        /// </field>
+        ModifiedBy_postRender: [$element, function () { return new lightSwitchApplication.ManagementUriView().findContentItem("ModifiedBy"); }]
     });
 
     lightSwitchApplication.NodesList.prototype._$contentItems = {

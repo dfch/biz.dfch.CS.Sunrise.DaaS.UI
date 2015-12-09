@@ -5,7 +5,7 @@
     <Partial />
   </Application.Attributes>
   <Screen
-    Name="NodeView">
+    Name="ManagementUriList">
     <Screen.Attributes>
       <SaveChangesTo
         EntityContainer="CoreData" />
@@ -20,116 +20,29 @@
           Kind="Group"
           View="Microsoft.LightSwitch.MobileWeb:TabPages">
           <ContentItem
-            Name="Details"
-            Kind="Group"
-            View="Microsoft.LightSwitch.MobileWeb:RowsLayout">
-            <ContentItem.Attributes>
-              <DisplayName
-                Value="Details" />
-            </ContentItem.Attributes>
+            Name="ManagementUriList"
+            Kind="Group">
             <ContentItem
-              Name="Name"
-              Kind="Value"
-              DataType=":String">
-              <ContentItem.DataSource>
-                <ScreenExpressionTree>
-                  <ChainExpression>
-                    <MemberExpression
-                      Member="NodeView/Properties[Node]" />
-                    <MemberExpression
-                      Member="Name" />
-                  </ChainExpression>
-                </ScreenExpressionTree>
-              </ContentItem.DataSource>
-            </ContentItem>
-            <ContentItem
-              Name="Type"
-              Kind="Value"
-              DataType=":String">
-              <ContentItem.DataSource>
-                <ScreenExpressionTree>
-                  <ChainExpression>
-                    <MemberExpression
-                      Member="NodeView/Properties[Node]" />
-                    <MemberExpression
-                      Member="Type" />
-                  </ChainExpression>
-                </ScreenExpressionTree>
-              </ContentItem.DataSource>
-            </ContentItem>
-            <ContentItem
-              Name="ParentId"
-              Kind="Value"
-              DataType=":Int64?">
-              <ContentItem.DataSource>
-                <ScreenExpressionTree>
-                  <ChainExpression>
-                    <MemberExpression
-                      Member="NodeView/Properties[Node]" />
-                    <MemberExpression
-                      Member="ParentId" />
-                  </ChainExpression>
-                </ScreenExpressionTree>
-              </ContentItem.DataSource>
-            </ContentItem>
-            <ContentItem
-              Name="Parameters"
-              Kind="Value"
-              DataType=":String"
-              View="Microsoft.LightSwitch.MobileWeb:Paragraph">
-              <ContentItem.DataSource>
-                <ScreenExpressionTree>
-                  <ChainExpression>
-                    <MemberExpression
-                      Member="NodeView/Properties[Node]" />
-                    <MemberExpression
-                      Member="Parameters" />
-                  </ChainExpression>
-                </ScreenExpressionTree>
-              </ContentItem.DataSource>
-            </ContentItem>
-            <ContentItem
-              Name="Description"
-              Kind="Value"
-              DataType=":String?"
-              View="Microsoft.LightSwitch.MobileWeb:Paragraph">
-              <ContentItem.DataSource>
-                <ScreenExpressionTree>
-                  <ChainExpression>
-                    <MemberExpression
-                      Member="NodeView/Properties[Node]" />
-                    <MemberExpression
-                      Member="Description" />
-                  </ChainExpression>
-                </ScreenExpressionTree>
-              </ContentItem.DataSource>
-            </ContentItem>
-          </ContentItem>
-          <ContentItem
-            Name="Children"
-            Kind="Group"
-            View="Microsoft.LightSwitch.MobileWeb:RowsLayout">
-            <ContentItem
-              Name="Children1"
+              Name="ManagementUris"
               Kind="Collection"
-              DataType="CollectionView$Node"
-              View="Microsoft.LightSwitch.MobileWeb:TileList">
+              DataType="CollectionView$ManagementUri"
+              View="Microsoft.LightSwitch.MobileWeb:Table">
               <ContentItem.Attributes>
                 <DisplayName
-                  Value="Children" />
+                  Value="ManagementUris" />
               </ContentItem.Attributes>
               <ContentItem.DataSource>
                 <ScreenExpressionTree>
                   <ChainExpression>
                     <MemberExpression
-                      Member="NodeView/Properties[Children]" />
+                      Member="ManagementUriList/Properties[ManagementUris]" />
                   </ChainExpression>
                 </ScreenExpressionTree>
               </ContentItem.DataSource>
               <ContentItem
                 Name="rows"
                 Kind="Details"
-                DataType="Node"
+                DataType="ManagementUri"
                 View="Microsoft.LightSwitch.MobileWeb:RowsLayout">
                 <ContentItem.Attributes>
                   <DisplayName
@@ -141,27 +54,40 @@
                   </ScreenExpressionTree>
                 </ContentItem.DataSource>
                 <ContentItem
-                  Name="Name1"
+                  Name="Name"
                   Kind="Value"
                   DataType=":String">
                   <ContentItem.DataSource>
                     <ScreenExpressionTree>
                       <ChainExpression>
                         <MemberExpression
-                          Member="Node/Properties[Name]" />
+                          Member="ManagementUri/Properties[Name]" />
                       </ChainExpression>
                     </ScreenExpressionTree>
                   </ContentItem.DataSource>
                 </ContentItem>
                 <ContentItem
-                  Name="Type1"
+                  Name="Description"
                   Kind="Value"
-                  DataType=":String">
+                  DataType=":String?">
                   <ContentItem.DataSource>
                     <ScreenExpressionTree>
                       <ChainExpression>
                         <MemberExpression
-                          Member="Node/Properties[Type]" />
+                          Member="ManagementUri/Properties[Description]" />
+                      </ChainExpression>
+                    </ScreenExpressionTree>
+                  </ContentItem.DataSource>
+                </ContentItem>
+                <ContentItem
+                  Name="Type"
+                  Kind="Value"
+                  DataType=":String?">
+                  <ContentItem.DataSource>
+                    <ScreenExpressionTree>
+                      <ChainExpression>
+                        <MemberExpression
+                          Member="ManagementUri/Properties[Type]" />
                       </ChainExpression>
                     </ScreenExpressionTree>
                   </ContentItem.DataSource>
@@ -179,14 +105,14 @@
                   </ContentItem.PropertySources>
                 </ContentItem>
                 <ContentItem
-                  Name="ParentId1"
+                  Name="Value"
                   Kind="Value"
-                  DataType=":Int64?">
+                  DataType=":String?">
                   <ContentItem.DataSource>
                     <ScreenExpressionTree>
                       <ChainExpression>
                         <MemberExpression
-                          Member="Node/Properties[ParentId]" />
+                          Member="ManagementUri/Properties[Value]" />
                       </ChainExpression>
                     </ScreenExpressionTree>
                   </ContentItem.DataSource>
@@ -222,7 +148,7 @@
                   <ScreenExpressionTree>
                     <ChainExpression>
                       <MemberExpression
-                        Member="NodeView/Properties[Children]" />
+                        Member="ManagementUriList/Properties[ManagementUris]" />
                       <CallExpression
                         Target="viewSelected" />
                     </ChainExpression>
@@ -232,7 +158,38 @@
             </ContentItem>
             <ContentItem.CommandItems>
               <ContentItem
-                Name="ViewNode"
+                Name="SearchManagementUris"
+                Kind="Command">
+                <ContentItem.Attributes>
+                  <DisplayName
+                    Value="Search" />
+                </ContentItem.Attributes>
+                <ContentItem.PropertySources>
+                  <ControlPropertySource
+                    Property="Microsoft.LightSwitch.MobileWeb:RootControl/Properties[Tap]">
+                    <ScreenExpressionTree>
+                      <ChainExpression>
+                        <MemberExpression
+                          Member="ManagementUriList/Properties[ManagementUris]" />
+                        <CallExpression
+                          Target="showSearch" />
+                      </ChainExpression>
+                    </ScreenExpressionTree>
+                  </ControlPropertySource>
+                  <ControlPropertySource
+                    Property="Microsoft.LightSwitch.MobileWeb:RootCommand/Properties[Icon]">
+                    <ScreenExpressionTree>
+                      <ChainExpression>
+                        <ConstantExpression
+                          Value="msls-search"
+                          ResultType="Microsoft.LightSwitch:String" />
+                      </ChainExpression>
+                    </ScreenExpressionTree>
+                  </ControlPropertySource>
+                </ContentItem.PropertySources>
+              </ContentItem>
+              <ContentItem
+                Name="View"
                 Kind="Command">
                 <ContentItem.PropertySources>
                   <ControlPropertySource
@@ -240,12 +197,18 @@
                     <ScreenExpressionTree>
                       <ChainExpression>
                         <CallExpression
-                          Target="!module/Methods[showNodeView]">
+                          Target="!module/Methods[showManagementUriView]">
+                          <CallExpression.Attributes>
+                            <AssociatedCollection
+                              Collection="ManagementUriList/Properties[ManagementUris]" />
+                          </CallExpression.Attributes>
                           <ArgumentExpression
-                            Parameter="Node">
+                            Parameter="ManagementUri">
                             <ChainExpression>
                               <MemberExpression
-                                Member="NodeView/Properties[Node]" />
+                                Member="ManagementUriList/Properties[ManagementUris]" />
+                              <MemberExpression
+                                Member="selectedItem" />
                             </ChainExpression>
                           </ArgumentExpression>
                         </CallExpression>
@@ -255,100 +218,6 @@
                 </ContentItem.PropertySources>
               </ContentItem>
             </ContentItem.CommandItems>
-          </ContentItem>
-          <ContentItem
-            Name="General"
-            Kind="Group">
-            <ContentItem
-              Name="Node_Tid"
-              Kind="Value"
-              DataType=":String">
-              <ContentItem.DataSource>
-                <ScreenExpressionTree>
-                  <ChainExpression>
-                    <MemberExpression
-                      Member="NodeView/Properties[Node]" />
-                    <MemberExpression
-                      Member="Tid" />
-                  </ChainExpression>
-                </ScreenExpressionTree>
-              </ContentItem.DataSource>
-            </ContentItem>
-            <ContentItem
-              Name="Node_Id"
-              Kind="Value"
-              DataType=":Int64">
-              <ContentItem.DataSource>
-                <ScreenExpressionTree>
-                  <ChainExpression>
-                    <MemberExpression
-                      Member="NodeView/Properties[Node]" />
-                    <MemberExpression
-                      Member="Id" />
-                  </ChainExpression>
-                </ScreenExpressionTree>
-              </ContentItem.DataSource>
-            </ContentItem>
-            <ContentItem
-              Name="Node_Created"
-              Kind="Value"
-              DataType=":DateTimeOffset">
-              <ContentItem.DataSource>
-                <ScreenExpressionTree>
-                  <ChainExpression>
-                    <MemberExpression
-                      Member="NodeView/Properties[Node]" />
-                    <MemberExpression
-                      Member="Created" />
-                  </ChainExpression>
-                </ScreenExpressionTree>
-              </ContentItem.DataSource>
-            </ContentItem>
-            <ContentItem
-              Name="Node_CreatedBy"
-              Kind="Value"
-              DataType=":String">
-              <ContentItem.DataSource>
-                <ScreenExpressionTree>
-                  <ChainExpression>
-                    <MemberExpression
-                      Member="NodeView/Properties[Node]" />
-                    <MemberExpression
-                      Member="CreatedBy" />
-                  </ChainExpression>
-                </ScreenExpressionTree>
-              </ContentItem.DataSource>
-            </ContentItem>
-            <ContentItem
-              Name="Node_Modified"
-              Kind="Value"
-              DataType=":DateTimeOffset">
-              <ContentItem.DataSource>
-                <ScreenExpressionTree>
-                  <ChainExpression>
-                    <MemberExpression
-                      Member="NodeView/Properties[Node]" />
-                    <MemberExpression
-                      Member="Modified" />
-                  </ChainExpression>
-                </ScreenExpressionTree>
-              </ContentItem.DataSource>
-            </ContentItem>
-            <ContentItem
-              Name="Node_ModifiedBy"
-              Kind="Value"
-              DataType=":String">
-              <ContentItem.DataSource>
-                <ScreenExpressionTree>
-                  <ChainExpression>
-                    <MemberExpression
-                      Member="NodeView/Properties[Node]" />
-                    <MemberExpression
-                      Member="ModifiedBy" />
-                  </ChainExpression>
-                </ScreenExpressionTree>
-              </ContentItem.DataSource>
-            </ContentItem>
           </ContentItem>
           <ContentItem.PropertySources>
             <ControlPropertySource
@@ -394,33 +263,22 @@
       </ScreenMethod>
     </Screen.Methods>
     <Screen.Properties>
-      <ScreenProperty
-        Name="Node"
-        PropertyType="Node">
-        <ScreenProperty.Attributes>
-          <IsParameter />
-        </ScreenProperty.Attributes>
-      </ScreenProperty>
       <ScreenCollectionProperty
-        Name="Children"
+        Name="ManagementUris"
         DisableSearch="True"
-        PageSize="15"
-        PropertyType="CollectionView$Node">
+        PageSize="45"
+        PropertyType="CollectionView$ManagementUri">
         <ScreenCollectionProperty.Query>
           <ScreenQueryDefinition
-            Name="ChildrenQuery"
-            ReturnType="Node*">
+            Name="ManagementUrisQuery"
+            ReturnType="ManagementUri*">
             <ScreenQueryDefinition.FilterExpression>
               <QueryFilterExpressionTree />
             </ScreenQueryDefinition.FilterExpression>
             <ScreenQueryDefinition.Source>
               <QuerySourceExpressionTree>
-                <ChainExpression>
-                  <MemberExpression
-                    Member="NodeView/Properties[Node]" />
-                  <MemberExpression
-                    Member="Children" />
-                </ChainExpression>
+                <MemberExpression
+                  Member="CoreData/Members[ManagementUris]" />
               </QuerySourceExpressionTree>
             </ScreenQueryDefinition.Source>
           </ScreenQueryDefinition>
@@ -428,7 +286,7 @@
         <ScreenExpressionTree>
           <ChainExpression>
             <CallExpression
-              Target="NodeView/Properties[Children]/Query" />
+              Target="ManagementUriList/Properties[ManagementUris]/Query" />
           </ChainExpression>
         </ScreenExpressionTree>
       </ScreenCollectionProperty>
@@ -436,14 +294,11 @@
   </Screen>
   <Application.Methods>
     <ApplicationMethod
-      Name="showNodeView">
+      Name="showManagementUriList">
       <ApplicationMethod.Attributes>
         <ShowScreenMethod
-          TargetScreen="NodeView" />
+          TargetScreen="ManagementUriList" />
       </ApplicationMethod.Attributes>
-      <ApplicationMethodParameter
-        Name="Node"
-        ParameterType="Node" />
     </ApplicationMethod>
   </Application.Methods>
 </Application>

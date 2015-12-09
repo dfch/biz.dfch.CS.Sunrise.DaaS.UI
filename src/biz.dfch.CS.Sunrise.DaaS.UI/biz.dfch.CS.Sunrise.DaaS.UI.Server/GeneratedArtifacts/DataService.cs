@@ -192,6 +192,39 @@ namespace LightSwitchApplication
         partial void Approvals_Validate(global::LightSwitchApplication.Approval entity, global::Microsoft.LightSwitch.EntitySetValidationResultsBuilder results);
     
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void Assocs_CanInsert(ref bool result);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void Assocs_CanUpdate(ref bool result);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void Assocs_CanDelete(ref bool result);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void Assocs_CanRead(ref bool result);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void Assocs_Inserting(global::LightSwitchApplication.Assoc entity);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void Assocs_Inserted(global::LightSwitchApplication.Assoc entity);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void Assocs_Updating(global::LightSwitchApplication.Assoc entity);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void Assocs_Updated(global::LightSwitchApplication.Assoc entity);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void Assocs_Deleting(global::LightSwitchApplication.Assoc entity);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void Assocs_Deleted(global::LightSwitchApplication.Assoc entity);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void Assocs_Validate(global::LightSwitchApplication.Assoc entity, global::Microsoft.LightSwitch.EntitySetValidationResultsBuilder results);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
         partial void CartItems_CanInsert(ref bool result);
     
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -324,6 +357,39 @@ namespace LightSwitchApplication
         partial void Catalogues_Validate(global::LightSwitchApplication.Catalogue entity, global::Microsoft.LightSwitch.EntitySetValidationResultsBuilder results);
     
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void CostCentres_CanInsert(ref bool result);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void CostCentres_CanUpdate(ref bool result);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void CostCentres_CanDelete(ref bool result);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void CostCentres_CanRead(ref bool result);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void CostCentres_Inserting(global::LightSwitchApplication.CostCentre entity);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void CostCentres_Inserted(global::LightSwitchApplication.CostCentre entity);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void CostCentres_Updating(global::LightSwitchApplication.CostCentre entity);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void CostCentres_Updated(global::LightSwitchApplication.CostCentre entity);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void CostCentres_Deleting(global::LightSwitchApplication.CostCentre entity);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void CostCentres_Deleted(global::LightSwitchApplication.CostCentre entity);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
+        partial void CostCentres_Validate(global::LightSwitchApplication.CostCentre entity, global::Microsoft.LightSwitch.EntitySetValidationResultsBuilder results);
+    
+        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
         partial void EntityTypes_CanInsert(ref bool result);
     
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
@@ -454,39 +520,6 @@ namespace LightSwitchApplication
     
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
         partial void KeyNameValues_Validate(global::LightSwitchApplication.KeyNameValue entity, global::Microsoft.LightSwitch.EntitySetValidationResultsBuilder results);
-    
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void Links_CanInsert(ref bool result);
-    
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void Links_CanUpdate(ref bool result);
-    
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void Links_CanDelete(ref bool result);
-    
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void Links_CanRead(ref bool result);
-    
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void Links_Inserting(global::LightSwitchApplication.Link entity);
-    
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void Links_Inserted(global::LightSwitchApplication.Link entity);
-    
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void Links_Updating(global::LightSwitchApplication.Link entity);
-    
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void Links_Updated(global::LightSwitchApplication.Link entity);
-    
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void Links_Deleting(global::LightSwitchApplication.Link entity);
-    
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void Links_Deleted(global::LightSwitchApplication.Link entity);
-    
-        [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        partial void Links_Validate(global::LightSwitchApplication.Link entity, global::Microsoft.LightSwitch.EntitySetValidationResultsBuilder results);
     
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
         partial void ManagementCredentials_CanInsert(ref bool result);
@@ -1010,6 +1043,76 @@ namespace LightSwitchApplication
             
             [global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private static readonly global::Microsoft.LightSwitch.Details.Framework.Server.EntitySetEntry<global::LightSwitchApplication.CoreDataService, global::LightSwitchApplication.Assoc>
+                __AssocsEntry = new global::Microsoft.LightSwitch.Details.Framework.Server.EntitySetEntry<global::LightSwitchApplication.CoreDataService, global::LightSwitchApplication.Assoc>(
+                    "Assocs",
+                    global::LightSwitchApplication.CoreDataService.DetailsClass.__Assocs_CanInsert,
+                    global::LightSwitchApplication.CoreDataService.DetailsClass.__Assocs_CanUpdate,
+                    global::LightSwitchApplication.CoreDataService.DetailsClass.__Assocs_CanDelete,
+                    global::LightSwitchApplication.CoreDataService.DetailsClass.__Assocs_CanRead,
+                    global::LightSwitchApplication.CoreDataService.DetailsClass.__Assocs_Inserting,
+                    global::LightSwitchApplication.CoreDataService.DetailsClass.__Assocs_Inserted,
+                    global::LightSwitchApplication.CoreDataService.DetailsClass.__Assocs_Updating,
+                    global::LightSwitchApplication.CoreDataService.DetailsClass.__Assocs_Updated,
+                    global::LightSwitchApplication.CoreDataService.DetailsClass.__Assocs_Deleting,
+                    global::LightSwitchApplication.CoreDataService.DetailsClass.__Assocs_Deleted,
+                    global::LightSwitchApplication.CoreDataService.DetailsClass.__Assocs_Validate,
+                    null);
+            private static bool __Assocs_CanInsert(global::LightSwitchApplication.CoreDataService d)
+            {
+                bool result = true;
+                d.Assocs_CanInsert(ref result);
+                return result;
+            }
+            private static bool __Assocs_CanUpdate(global::LightSwitchApplication.CoreDataService d)
+            {
+                bool result = true;
+                d.Assocs_CanUpdate(ref result);
+                return result;
+            }
+            private static bool __Assocs_CanDelete(global::LightSwitchApplication.CoreDataService d)
+            {
+                bool result = true;
+                d.Assocs_CanDelete(ref result);
+                return result;
+            }
+            private static bool __Assocs_CanRead(global::LightSwitchApplication.CoreDataService d)
+            {
+                bool result = true;
+                d.Assocs_CanRead(ref result);
+                return result;
+            }
+            private static void __Assocs_Inserting(global::LightSwitchApplication.CoreDataService d, global::LightSwitchApplication.Assoc e)
+            {
+                d.Assocs_Inserting(e);
+            }
+            private static void __Assocs_Inserted(global::LightSwitchApplication.CoreDataService d, global::LightSwitchApplication.Assoc e)
+            {
+                d.Assocs_Inserted(e);
+            }
+            private static void __Assocs_Updating(global::LightSwitchApplication.CoreDataService d, global::LightSwitchApplication.Assoc e)
+            {
+                d.Assocs_Updating(e);
+            }
+            private static void __Assocs_Updated(global::LightSwitchApplication.CoreDataService d, global::LightSwitchApplication.Assoc e)
+            {
+                d.Assocs_Updated(e);
+            }
+            private static void __Assocs_Deleting(global::LightSwitchApplication.CoreDataService d, global::LightSwitchApplication.Assoc e)
+            {
+                d.Assocs_Deleting(e);
+            }
+            private static void __Assocs_Deleted(global::LightSwitchApplication.CoreDataService d, global::LightSwitchApplication.Assoc e)
+            {
+                d.Assocs_Deleted(e);
+            }
+            private static void __Assocs_Validate(global::LightSwitchApplication.CoreDataService d, global::LightSwitchApplication.Assoc e, global::Microsoft.LightSwitch.EntitySetValidationResultsBuilder r)
+            {
+                d.Assocs_Validate(e, r);
+            }
+            
+            [global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
             private static readonly global::Microsoft.LightSwitch.Details.Framework.Server.EntitySetEntry<global::LightSwitchApplication.CoreDataService, global::LightSwitchApplication.CartItem>
                 __CartItemsEntry = new global::Microsoft.LightSwitch.Details.Framework.Server.EntitySetEntry<global::LightSwitchApplication.CoreDataService, global::LightSwitchApplication.CartItem>(
                     "CartItems",
@@ -1290,6 +1393,76 @@ namespace LightSwitchApplication
             
             [global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private static readonly global::Microsoft.LightSwitch.Details.Framework.Server.EntitySetEntry<global::LightSwitchApplication.CoreDataService, global::LightSwitchApplication.CostCentre>
+                __CostCentresEntry = new global::Microsoft.LightSwitch.Details.Framework.Server.EntitySetEntry<global::LightSwitchApplication.CoreDataService, global::LightSwitchApplication.CostCentre>(
+                    "CostCentres",
+                    global::LightSwitchApplication.CoreDataService.DetailsClass.__CostCentres_CanInsert,
+                    global::LightSwitchApplication.CoreDataService.DetailsClass.__CostCentres_CanUpdate,
+                    global::LightSwitchApplication.CoreDataService.DetailsClass.__CostCentres_CanDelete,
+                    global::LightSwitchApplication.CoreDataService.DetailsClass.__CostCentres_CanRead,
+                    global::LightSwitchApplication.CoreDataService.DetailsClass.__CostCentres_Inserting,
+                    global::LightSwitchApplication.CoreDataService.DetailsClass.__CostCentres_Inserted,
+                    global::LightSwitchApplication.CoreDataService.DetailsClass.__CostCentres_Updating,
+                    global::LightSwitchApplication.CoreDataService.DetailsClass.__CostCentres_Updated,
+                    global::LightSwitchApplication.CoreDataService.DetailsClass.__CostCentres_Deleting,
+                    global::LightSwitchApplication.CoreDataService.DetailsClass.__CostCentres_Deleted,
+                    global::LightSwitchApplication.CoreDataService.DetailsClass.__CostCentres_Validate,
+                    null);
+            private static bool __CostCentres_CanInsert(global::LightSwitchApplication.CoreDataService d)
+            {
+                bool result = true;
+                d.CostCentres_CanInsert(ref result);
+                return result;
+            }
+            private static bool __CostCentres_CanUpdate(global::LightSwitchApplication.CoreDataService d)
+            {
+                bool result = true;
+                d.CostCentres_CanUpdate(ref result);
+                return result;
+            }
+            private static bool __CostCentres_CanDelete(global::LightSwitchApplication.CoreDataService d)
+            {
+                bool result = true;
+                d.CostCentres_CanDelete(ref result);
+                return result;
+            }
+            private static bool __CostCentres_CanRead(global::LightSwitchApplication.CoreDataService d)
+            {
+                bool result = true;
+                d.CostCentres_CanRead(ref result);
+                return result;
+            }
+            private static void __CostCentres_Inserting(global::LightSwitchApplication.CoreDataService d, global::LightSwitchApplication.CostCentre e)
+            {
+                d.CostCentres_Inserting(e);
+            }
+            private static void __CostCentres_Inserted(global::LightSwitchApplication.CoreDataService d, global::LightSwitchApplication.CostCentre e)
+            {
+                d.CostCentres_Inserted(e);
+            }
+            private static void __CostCentres_Updating(global::LightSwitchApplication.CoreDataService d, global::LightSwitchApplication.CostCentre e)
+            {
+                d.CostCentres_Updating(e);
+            }
+            private static void __CostCentres_Updated(global::LightSwitchApplication.CoreDataService d, global::LightSwitchApplication.CostCentre e)
+            {
+                d.CostCentres_Updated(e);
+            }
+            private static void __CostCentres_Deleting(global::LightSwitchApplication.CoreDataService d, global::LightSwitchApplication.CostCentre e)
+            {
+                d.CostCentres_Deleting(e);
+            }
+            private static void __CostCentres_Deleted(global::LightSwitchApplication.CoreDataService d, global::LightSwitchApplication.CostCentre e)
+            {
+                d.CostCentres_Deleted(e);
+            }
+            private static void __CostCentres_Validate(global::LightSwitchApplication.CoreDataService d, global::LightSwitchApplication.CostCentre e, global::Microsoft.LightSwitch.EntitySetValidationResultsBuilder r)
+            {
+                d.CostCentres_Validate(e, r);
+            }
+            
+            [global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
             private static readonly global::Microsoft.LightSwitch.Details.Framework.Server.EntitySetEntry<global::LightSwitchApplication.CoreDataService, global::LightSwitchApplication.EntityType>
                 __EntityTypesEntry = new global::Microsoft.LightSwitch.Details.Framework.Server.EntitySetEntry<global::LightSwitchApplication.CoreDataService, global::LightSwitchApplication.EntityType>(
                     "EntityTypes",
@@ -1566,76 +1739,6 @@ namespace LightSwitchApplication
             private static void __KeyNameValues_Validate(global::LightSwitchApplication.CoreDataService d, global::LightSwitchApplication.KeyNameValue e, global::Microsoft.LightSwitch.EntitySetValidationResultsBuilder r)
             {
                 d.KeyNameValues_Validate(e, r);
-            }
-            
-            [global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]
-            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-            private static readonly global::Microsoft.LightSwitch.Details.Framework.Server.EntitySetEntry<global::LightSwitchApplication.CoreDataService, global::LightSwitchApplication.Link>
-                __LinksEntry = new global::Microsoft.LightSwitch.Details.Framework.Server.EntitySetEntry<global::LightSwitchApplication.CoreDataService, global::LightSwitchApplication.Link>(
-                    "Links",
-                    global::LightSwitchApplication.CoreDataService.DetailsClass.__Links_CanInsert,
-                    global::LightSwitchApplication.CoreDataService.DetailsClass.__Links_CanUpdate,
-                    global::LightSwitchApplication.CoreDataService.DetailsClass.__Links_CanDelete,
-                    global::LightSwitchApplication.CoreDataService.DetailsClass.__Links_CanRead,
-                    global::LightSwitchApplication.CoreDataService.DetailsClass.__Links_Inserting,
-                    global::LightSwitchApplication.CoreDataService.DetailsClass.__Links_Inserted,
-                    global::LightSwitchApplication.CoreDataService.DetailsClass.__Links_Updating,
-                    global::LightSwitchApplication.CoreDataService.DetailsClass.__Links_Updated,
-                    global::LightSwitchApplication.CoreDataService.DetailsClass.__Links_Deleting,
-                    global::LightSwitchApplication.CoreDataService.DetailsClass.__Links_Deleted,
-                    global::LightSwitchApplication.CoreDataService.DetailsClass.__Links_Validate,
-                    null);
-            private static bool __Links_CanInsert(global::LightSwitchApplication.CoreDataService d)
-            {
-                bool result = true;
-                d.Links_CanInsert(ref result);
-                return result;
-            }
-            private static bool __Links_CanUpdate(global::LightSwitchApplication.CoreDataService d)
-            {
-                bool result = true;
-                d.Links_CanUpdate(ref result);
-                return result;
-            }
-            private static bool __Links_CanDelete(global::LightSwitchApplication.CoreDataService d)
-            {
-                bool result = true;
-                d.Links_CanDelete(ref result);
-                return result;
-            }
-            private static bool __Links_CanRead(global::LightSwitchApplication.CoreDataService d)
-            {
-                bool result = true;
-                d.Links_CanRead(ref result);
-                return result;
-            }
-            private static void __Links_Inserting(global::LightSwitchApplication.CoreDataService d, global::LightSwitchApplication.Link e)
-            {
-                d.Links_Inserting(e);
-            }
-            private static void __Links_Inserted(global::LightSwitchApplication.CoreDataService d, global::LightSwitchApplication.Link e)
-            {
-                d.Links_Inserted(e);
-            }
-            private static void __Links_Updating(global::LightSwitchApplication.CoreDataService d, global::LightSwitchApplication.Link e)
-            {
-                d.Links_Updating(e);
-            }
-            private static void __Links_Updated(global::LightSwitchApplication.CoreDataService d, global::LightSwitchApplication.Link e)
-            {
-                d.Links_Updated(e);
-            }
-            private static void __Links_Deleting(global::LightSwitchApplication.CoreDataService d, global::LightSwitchApplication.Link e)
-            {
-                d.Links_Deleting(e);
-            }
-            private static void __Links_Deleted(global::LightSwitchApplication.CoreDataService d, global::LightSwitchApplication.Link e)
-            {
-                d.Links_Deleted(e);
-            }
-            private static void __Links_Validate(global::LightSwitchApplication.CoreDataService d, global::LightSwitchApplication.Link e, global::Microsoft.LightSwitch.EntitySetValidationResultsBuilder r)
-            {
-                d.Links_Validate(e, r);
             }
             
             [global::System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Performance", "CA1823:AvoidUnusedPrivateFields")]

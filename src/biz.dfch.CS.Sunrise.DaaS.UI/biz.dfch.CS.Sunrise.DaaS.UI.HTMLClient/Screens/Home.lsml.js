@@ -50,6 +50,14 @@ myapp.Home.EntityTypes_postRender = function (element, contentItem) {
     $(element).spOverlay(contentItem, 'fa-cubes', { height: height, width: width });
 };
 
+myapp.Home.ShowManagementCredentialList_postRender = function (element, contentItem) {
+    $(element).spOverlay(contentItem, 'fa-credit-card', { height: height, width: width });
+};
+
+myapp.Home.ShowManagementUriList_postRender = function (element, contentItem) {
+    $(element).spOverlay(contentItem, 'fa-internet-explorer', { height: height, width: width });
+};
+
 /**
  * Copyright 2015 d-fens GmbH
  *

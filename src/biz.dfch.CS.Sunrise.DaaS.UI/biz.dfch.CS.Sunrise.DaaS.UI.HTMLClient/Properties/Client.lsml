@@ -76,5 +76,11 @@
     <ApplicationNavigationMethodLink
       Name="link8"
       Method="!module/Methods[showEntityTypesList]" />
+    <ApplicationNavigationMethodLink
+      Name="link12"
+      Method="!module/Methods[showManagementCredentialList]" />
+    <ApplicationNavigationMethodLink
+      Name="link13"
+      Method="!module/Methods[showManagementUriList]" />
   </Application.NavigationItems>
 </Application>

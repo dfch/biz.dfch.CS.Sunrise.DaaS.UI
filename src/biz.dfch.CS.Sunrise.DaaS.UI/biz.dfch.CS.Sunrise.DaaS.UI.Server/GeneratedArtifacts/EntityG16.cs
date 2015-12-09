@@ -394,21 +394,21 @@ namespace LightSwitchApplication
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.1.0.0")]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        public global::Microsoft.LightSwitch.Framework.EntityCollection<global::LightSwitchApplication.Link> IncomingLinks
+        public global::Microsoft.LightSwitch.Framework.EntityCollection<global::LightSwitchApplication.Assoc> IncomingAssocs
         {
             get
             {
-                return global::LightSwitchApplication.Node.DetailsClass.GetValue(this, global::LightSwitchApplication.Node.DetailsClass.PropertySetProperties.IncomingLinks);
+                return global::LightSwitchApplication.Node.DetailsClass.GetValue(this, global::LightSwitchApplication.Node.DetailsClass.PropertySetProperties.IncomingAssocs);
             }
         }
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.1.0.0")]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        public Microsoft.LightSwitch.IDataServiceQueryable<global::LightSwitchApplication.Link> IncomingLinksQuery
+        public Microsoft.LightSwitch.IDataServiceQueryable<global::LightSwitchApplication.Assoc> IncomingAssocsQuery
         {
             get
             {
-                return global::LightSwitchApplication.Node.DetailsClass.GetQuery(this, global::LightSwitchApplication.Node.DetailsClass.PropertySetProperties.IncomingLinks);
+                return global::LightSwitchApplication.Node.DetailsClass.GetQuery(this, global::LightSwitchApplication.Node.DetailsClass.PropertySetProperties.IncomingAssocs);
             }
         }
 
@@ -417,21 +417,21 @@ namespace LightSwitchApplication
         /// </summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.1.0.0")]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        public global::Microsoft.LightSwitch.Framework.EntityCollection<global::LightSwitchApplication.Link> OutgoingLinks
+        public global::Microsoft.LightSwitch.Framework.EntityCollection<global::LightSwitchApplication.Assoc> OutgoingAssocs
         {
             get
             {
-                return global::LightSwitchApplication.Node.DetailsClass.GetValue(this, global::LightSwitchApplication.Node.DetailsClass.PropertySetProperties.OutgoingLinks);
+                return global::LightSwitchApplication.Node.DetailsClass.GetValue(this, global::LightSwitchApplication.Node.DetailsClass.PropertySetProperties.OutgoingAssocs);
             }
         }
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.1.0.0")]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        public Microsoft.LightSwitch.IDataServiceQueryable<global::LightSwitchApplication.Link> OutgoingLinksQuery
+        public Microsoft.LightSwitch.IDataServiceQueryable<global::LightSwitchApplication.Assoc> OutgoingAssocsQuery
         {
             get
             {
-                return global::LightSwitchApplication.Node.DetailsClass.GetQuery(this, global::LightSwitchApplication.Node.DetailsClass.PropertySetProperties.OutgoingLinks);
+                return global::LightSwitchApplication.Node.DetailsClass.GetQuery(this, global::LightSwitchApplication.Node.DetailsClass.PropertySetProperties.OutgoingAssocs);
             }
         }
 
@@ -621,19 +621,19 @@ namespace LightSwitchApplication
                     }
                 }
                 
-                public global::Microsoft.LightSwitch.Details.Framework.EntityCollectionProperty<global::LightSwitchApplication.Node, global::LightSwitchApplication.Node.DetailsClass, global::LightSwitchApplication.Link> IncomingLinks
+                public global::Microsoft.LightSwitch.Details.Framework.EntityCollectionProperty<global::LightSwitchApplication.Node, global::LightSwitchApplication.Node.DetailsClass, global::LightSwitchApplication.Assoc> IncomingAssocs
                 {
                     get
                     {
-                        return base.GetItem(global::LightSwitchApplication.Node.DetailsClass.PropertySetProperties.IncomingLinks) as global::Microsoft.LightSwitch.Details.Framework.EntityCollectionProperty<global::LightSwitchApplication.Node, global::LightSwitchApplication.Node.DetailsClass, global::LightSwitchApplication.Link>;
+                        return base.GetItem(global::LightSwitchApplication.Node.DetailsClass.PropertySetProperties.IncomingAssocs) as global::Microsoft.LightSwitch.Details.Framework.EntityCollectionProperty<global::LightSwitchApplication.Node, global::LightSwitchApplication.Node.DetailsClass, global::LightSwitchApplication.Assoc>;
                     }
                 }
                 
-                public global::Microsoft.LightSwitch.Details.Framework.EntityCollectionProperty<global::LightSwitchApplication.Node, global::LightSwitchApplication.Node.DetailsClass, global::LightSwitchApplication.Link> OutgoingLinks
+                public global::Microsoft.LightSwitch.Details.Framework.EntityCollectionProperty<global::LightSwitchApplication.Node, global::LightSwitchApplication.Node.DetailsClass, global::LightSwitchApplication.Assoc> OutgoingAssocs
                 {
                     get
                     {
-                        return base.GetItem(global::LightSwitchApplication.Node.DetailsClass.PropertySetProperties.OutgoingLinks) as global::Microsoft.LightSwitch.Details.Framework.EntityCollectionProperty<global::LightSwitchApplication.Node, global::LightSwitchApplication.Node.DetailsClass, global::LightSwitchApplication.Link>;
+                        return base.GetItem(global::LightSwitchApplication.Node.DetailsClass.PropertySetProperties.OutgoingAssocs) as global::Microsoft.LightSwitch.Details.Framework.EntityCollectionProperty<global::LightSwitchApplication.Node, global::LightSwitchApplication.Node.DetailsClass, global::LightSwitchApplication.Assoc>;
                     }
                 }
                 
@@ -656,8 +656,8 @@ namespace LightSwitchApplication
                 new global::System.DateTimeOffset Modified { get; set; }
                 new byte[] RowVersion { get; set; }
                 new global::System.Collections.IEnumerable Children { get; }
-                new global::System.Collections.IEnumerable IncomingLinks { get; }
-                new global::System.Collections.IEnumerable OutgoingLinks { get; }
+                new global::System.Collections.IEnumerable IncomingAssocs { get; }
+                new global::System.Collections.IEnumerable OutgoingAssocs { get; }
             }
             #pragma warning restore 109
     
@@ -1132,43 +1132,43 @@ namespace LightSwitchApplication
                 }
     
                 [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityCollectionProperty<global::LightSwitchApplication.Node, global::LightSwitchApplication.Node.DetailsClass, global::LightSwitchApplication.Link>.Entry
-                    IncomingLinks = new global::Microsoft.LightSwitch.Details.Framework.EntityCollectionProperty<global::LightSwitchApplication.Node, global::LightSwitchApplication.Node.DetailsClass, global::LightSwitchApplication.Link>.Entry(
-                        "IncomingLinks",
-                        global::LightSwitchApplication.Node.DetailsClass.PropertySetProperties._IncomingLinks_Stub,
-                        global::LightSwitchApplication.Node.DetailsClass.PropertySetProperties._IncomingLinks_GetReferencedEntities,
-                        global::LightSwitchApplication.Node.DetailsClass.PropertySetProperties._IncomingLinks_GetEntityCollection);
-                private static void _IncomingLinks_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.Node.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityCollectionProperty<global::LightSwitchApplication.Node, global::LightSwitchApplication.Node.DetailsClass, global::LightSwitchApplication.Link>.Data> c, global::LightSwitchApplication.Node.DetailsClass d, object sf)
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityCollectionProperty<global::LightSwitchApplication.Node, global::LightSwitchApplication.Node.DetailsClass, global::LightSwitchApplication.Assoc>.Entry
+                    IncomingAssocs = new global::Microsoft.LightSwitch.Details.Framework.EntityCollectionProperty<global::LightSwitchApplication.Node, global::LightSwitchApplication.Node.DetailsClass, global::LightSwitchApplication.Assoc>.Entry(
+                        "IncomingAssocs",
+                        global::LightSwitchApplication.Node.DetailsClass.PropertySetProperties._IncomingAssocs_Stub,
+                        global::LightSwitchApplication.Node.DetailsClass.PropertySetProperties._IncomingAssocs_GetReferencedEntities,
+                        global::LightSwitchApplication.Node.DetailsClass.PropertySetProperties._IncomingAssocs_GetEntityCollection);
+                private static void _IncomingAssocs_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.Node.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityCollectionProperty<global::LightSwitchApplication.Node, global::LightSwitchApplication.Node.DetailsClass, global::LightSwitchApplication.Assoc>.Data> c, global::LightSwitchApplication.Node.DetailsClass d, object sf)
                 {
-                    c(d, ref d._IncomingLinks, sf);
+                    c(d, ref d._IncomingAssocs, sf);
                 }
-                private static global::System.Collections.Generic.IEnumerable<global::LightSwitchApplication.Link> _IncomingLinks_GetReferencedEntities(global::LightSwitchApplication.Node.DetailsClass d)
+                private static global::System.Collections.Generic.IEnumerable<global::LightSwitchApplication.Assoc> _IncomingAssocs_GetReferencedEntities(global::LightSwitchApplication.Node.DetailsClass d)
                 {
-                    return d.GetReferencedEntities<global::LightSwitchApplication.Link, global::LightSwitchApplication.Link.DetailsClass>(global::LightSwitchApplication.Node.DetailsClass.PropertySetProperties.IncomingLinks, ref d._IncomingLinks);
+                    return d.GetReferencedEntities<global::LightSwitchApplication.Assoc, global::LightSwitchApplication.Assoc.DetailsClass>(global::LightSwitchApplication.Node.DetailsClass.PropertySetProperties.IncomingAssocs, ref d._IncomingAssocs);
                 }
-                private static global::System.Collections.IEnumerable _IncomingLinks_GetEntityCollection(global::LightSwitchApplication.Node.DetailsClass d)
+                private static global::System.Collections.IEnumerable _IncomingAssocs_GetEntityCollection(global::LightSwitchApplication.Node.DetailsClass d)
                 {
-                    return d.ImplementationEntity.IncomingLinks;
+                    return d.ImplementationEntity.IncomingAssocs;
                 }
     
                 [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityCollectionProperty<global::LightSwitchApplication.Node, global::LightSwitchApplication.Node.DetailsClass, global::LightSwitchApplication.Link>.Entry
-                    OutgoingLinks = new global::Microsoft.LightSwitch.Details.Framework.EntityCollectionProperty<global::LightSwitchApplication.Node, global::LightSwitchApplication.Node.DetailsClass, global::LightSwitchApplication.Link>.Entry(
-                        "OutgoingLinks",
-                        global::LightSwitchApplication.Node.DetailsClass.PropertySetProperties._OutgoingLinks_Stub,
-                        global::LightSwitchApplication.Node.DetailsClass.PropertySetProperties._OutgoingLinks_GetReferencedEntities,
-                        global::LightSwitchApplication.Node.DetailsClass.PropertySetProperties._OutgoingLinks_GetEntityCollection);
-                private static void _OutgoingLinks_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.Node.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityCollectionProperty<global::LightSwitchApplication.Node, global::LightSwitchApplication.Node.DetailsClass, global::LightSwitchApplication.Link>.Data> c, global::LightSwitchApplication.Node.DetailsClass d, object sf)
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityCollectionProperty<global::LightSwitchApplication.Node, global::LightSwitchApplication.Node.DetailsClass, global::LightSwitchApplication.Assoc>.Entry
+                    OutgoingAssocs = new global::Microsoft.LightSwitch.Details.Framework.EntityCollectionProperty<global::LightSwitchApplication.Node, global::LightSwitchApplication.Node.DetailsClass, global::LightSwitchApplication.Assoc>.Entry(
+                        "OutgoingAssocs",
+                        global::LightSwitchApplication.Node.DetailsClass.PropertySetProperties._OutgoingAssocs_Stub,
+                        global::LightSwitchApplication.Node.DetailsClass.PropertySetProperties._OutgoingAssocs_GetReferencedEntities,
+                        global::LightSwitchApplication.Node.DetailsClass.PropertySetProperties._OutgoingAssocs_GetEntityCollection);
+                private static void _OutgoingAssocs_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.Node.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityCollectionProperty<global::LightSwitchApplication.Node, global::LightSwitchApplication.Node.DetailsClass, global::LightSwitchApplication.Assoc>.Data> c, global::LightSwitchApplication.Node.DetailsClass d, object sf)
                 {
-                    c(d, ref d._OutgoingLinks, sf);
+                    c(d, ref d._OutgoingAssocs, sf);
                 }
-                private static global::System.Collections.Generic.IEnumerable<global::LightSwitchApplication.Link> _OutgoingLinks_GetReferencedEntities(global::LightSwitchApplication.Node.DetailsClass d)
+                private static global::System.Collections.Generic.IEnumerable<global::LightSwitchApplication.Assoc> _OutgoingAssocs_GetReferencedEntities(global::LightSwitchApplication.Node.DetailsClass d)
                 {
-                    return d.GetReferencedEntities<global::LightSwitchApplication.Link, global::LightSwitchApplication.Link.DetailsClass>(global::LightSwitchApplication.Node.DetailsClass.PropertySetProperties.OutgoingLinks, ref d._OutgoingLinks);
+                    return d.GetReferencedEntities<global::LightSwitchApplication.Assoc, global::LightSwitchApplication.Assoc.DetailsClass>(global::LightSwitchApplication.Node.DetailsClass.PropertySetProperties.OutgoingAssocs, ref d._OutgoingAssocs);
                 }
-                private static global::System.Collections.IEnumerable _OutgoingLinks_GetEntityCollection(global::LightSwitchApplication.Node.DetailsClass d)
+                private static global::System.Collections.IEnumerable _OutgoingAssocs_GetEntityCollection(global::LightSwitchApplication.Node.DetailsClass d)
                 {
-                    return d.ImplementationEntity.OutgoingLinks;
+                    return d.ImplementationEntity.OutgoingAssocs;
                 }
     
             }
@@ -1213,10 +1213,10 @@ namespace LightSwitchApplication
             private global::Microsoft.LightSwitch.Details.Framework.EntityCollectionProperty<global::LightSwitchApplication.Node, global::LightSwitchApplication.Node.DetailsClass, global::LightSwitchApplication.Node>.Data _Children;
             
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-            private global::Microsoft.LightSwitch.Details.Framework.EntityCollectionProperty<global::LightSwitchApplication.Node, global::LightSwitchApplication.Node.DetailsClass, global::LightSwitchApplication.Link>.Data _IncomingLinks;
+            private global::Microsoft.LightSwitch.Details.Framework.EntityCollectionProperty<global::LightSwitchApplication.Node, global::LightSwitchApplication.Node.DetailsClass, global::LightSwitchApplication.Assoc>.Data _IncomingAssocs;
             
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
-            private global::Microsoft.LightSwitch.Details.Framework.EntityCollectionProperty<global::LightSwitchApplication.Node, global::LightSwitchApplication.Node.DetailsClass, global::LightSwitchApplication.Link>.Data _OutgoingLinks;
+            private global::Microsoft.LightSwitch.Details.Framework.EntityCollectionProperty<global::LightSwitchApplication.Node, global::LightSwitchApplication.Node.DetailsClass, global::LightSwitchApplication.Assoc>.Data _OutgoingAssocs;
             
         }
     

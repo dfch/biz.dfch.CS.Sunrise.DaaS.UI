@@ -248,6 +248,10 @@
     <LightSwitchModel Include="Screens\KeyNameValueEdit.lsml" />
     <LightSwitchModel Include="Screens\KeyNameValuesList.lsml" />
     <LightSwitchModel Include="Screens\KeyNameValueView.lsml" />
+    <LightSwitchModel Include="Screens\ManagementCredentialList.lsml" />
+    <LightSwitchModel Include="Screens\ManagementCredentialView.lsml" />
+    <LightSwitchModel Include="Screens\ManagementUriList.lsml" />
+    <LightSwitchModel Include="Screens\ManagementUriView.lsml" />
     <LightSwitchModel Include="Screens\NodesList.lsml" />
     <LightSwitchModel Include="Screens\NodeView.lsml" />
     <LightSwitchModel Include="Screens\OrderItemsList.lsml" />
