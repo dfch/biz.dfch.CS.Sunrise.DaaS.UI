@@ -379,6 +379,10 @@
     <End Role="CatalogueItemsPartner" Type="LightSwitchApplication.Catalogue" Multiplicity="0..1" />
     <End Role="CatalogueItems" Type="LightSwitchApplication.CatalogueItem1" Multiplicity="*" />
   </Association>
+  <Association Name="biz_dfch_CS_Appclusive_Core_OdataServices_Core_Job_Children_biz_">
+    <End Role="ChildrenPartner" Type="LightSwitchApplication.Job" Multiplicity="0..1" />
+    <End Role="Children" Type="LightSwitchApplication.Job" Multiplicity="*" />
+  </Association>
   <Association Name="biz_dfch_CS_Appclusive_Core_OdataServices_Core_ManagementCredent">
     <End Role="ManagementUrisPartner" Type="LightSwitchApplication.ManagementCredential" Multiplicity="0..1" />
     <End Role="ManagementUris" Type="LightSwitchApplication.ManagementUri" Multiplicity="*" />
@@ -402,10 +406,6 @@
   <Association Name="biz_dfch_CS_Appclusive_Core_OdataServices_Core_Product_Catalogue">
     <End Role="CatalogueItemsPartner" Type="LightSwitchApplication.Product" Multiplicity="0..1" />
     <End Role="CatalogueItems" Type="LightSwitchApplication.CatalogueItem1" Multiplicity="*" />
-  </Association>
-  <Association Name="biz_dfch_CS_Appclusive_Core_OdataServices_Core_Job_Children_biz_">
-    <End Role="ChildrenPartner" Type="LightSwitchApplication.Job" Multiplicity="0..1" />
-    <End Role="Children" Type="LightSwitchApplication.Job" Multiplicity="*" />
   </Association>
   <EntityContainer Name="CoreData" m:IsDefaultEntityContainer="true">
     <EntitySet Name="Aces" EntityType="LightSwitchApplication.Ace" />
@@ -440,6 +440,10 @@
       <End Role="CatalogueItemsPartner" EntitySet="Catalogues" />
       <End Role="CatalogueItems" EntitySet="CatalogueItems" />
     </AssociationSet>
+    <AssociationSet Name="biz_dfch_CS_Appclusive_Core_OdataServices_Core_Job_Children_biz_" Association="LightSwitchApplication.biz_dfch_CS_Appclusive_Core_OdataServices_Core_Job_Children_biz_">
+      <End Role="ChildrenPartner" EntitySet="Jobs" />
+      <End Role="Children" EntitySet="Jobs" />
+    </AssociationSet>
     <AssociationSet Name="biz_dfch_CS_Appclusive_Core_OdataServices_Core_ManagementCredent" Association="LightSwitchApplication.biz_dfch_CS_Appclusive_Core_OdataServices_Core_ManagementCredent">
       <End Role="ManagementUrisPartner" EntitySet="ManagementCredentials" />
       <End Role="ManagementUris" EntitySet="ManagementUris" />
@@ -463,10 +467,6 @@
     <AssociationSet Name="biz_dfch_CS_Appclusive_Core_OdataServices_Core_Product_Catalogue" Association="LightSwitchApplication.biz_dfch_CS_Appclusive_Core_OdataServices_Core_Product_Catalogue">
       <End Role="CatalogueItemsPartner" EntitySet="Products" />
       <End Role="CatalogueItems" EntitySet="CatalogueItems" />
-    </AssociationSet>
-    <AssociationSet Name="biz_dfch_CS_Appclusive_Core_OdataServices_Core_Job_Children_biz_" Association="LightSwitchApplication.biz_dfch_CS_Appclusive_Core_OdataServices_Core_Job_Children_biz_">
-      <End Role="ChildrenPartner" EntitySet="Jobs" />
-      <End Role="Children" EntitySet="Jobs" />
     </AssociationSet>
   </EntityContainer>
 </Schema>

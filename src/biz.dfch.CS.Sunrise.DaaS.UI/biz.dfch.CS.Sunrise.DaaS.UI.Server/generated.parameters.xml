@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<parameters>
+  <parameter name="DatabaseServer" description="Name of the server that hosts the application database. Must match the server specified in the connection string." defaultValue="" tags="SQL" />
+  <parameter name="DatabaseName" description="Name of the application database. Must match the database specified in the connection string." defaultValue="biz.dfch.CS.Sunrise.DaaS.UI" tags="SQL" />
+  <parameter name="DatabaseUserName" description="User name that the application will use to connect to the application database." defaultValue="" tags="SQL" />
+  <parameter name="DatabaseUserPassword" description="Password for the database user name." defaultValue="" tags="SQL,Password,New" />
+  <parameter name="Update web.config connection string" description="" defaultValue="Data Source={DatabaseServer};Database={DatabaseName};uid={DatabaseUserName};Pwd={DatabaseUserPassword};" tags="Hidden">
+    <parameterEntry kind="XmlFile" scope="web.config" match="//connectionStrings/add[@name='_IntrinsicData']/@connectionString" />
+  </parameter>
+  <parameter name="biz.dfch.CS.Sunrise.DaaS.UI_IisWebApplication" description="IIS Web Application content location" defaultValue="Default Web Site/biz.dfch.CS.Sunrise.DaaS.UI" tags="IisApp">
+    <parameterEntry kind="ProviderPath" scope="IisApp" match="^C:\\development\\projects\\GitHub\\biz\.dfch\.CS\.Sunrise\.DaaS\.UI\\src\\biz\.dfch\.CS\.Sunrise\.DaaS\.UI\\bin\\Debug\\app\.publish\\$" />
+  </parameter>
+  <parameter name="CoreData" description="Configure the data source URL" defaultValue="service url=http://localhost:53422/api/Core;is windows authentication=True;allow invalid certificate=False" tags="None">
+    <parameterEntry kind="XmlFile" scope="web.config" match="/configuration/connectionStrings/add[@name='CoreData']/@connectionString" />
+  </parameter>
+  <parameter name="DiagnosticsData" description="Configure the data source URL" defaultValue="service url=http://localhost:53422/api/Diagnostics;is windows authentication=True;allow invalid certificate=False" tags="None">
+    <parameterEntry kind="XmlFile" scope="web.config" match="/configuration/connectionStrings/add[@name='DiagnosticsData']/@connectionString" />
+  </parameter>
+</parameters>
