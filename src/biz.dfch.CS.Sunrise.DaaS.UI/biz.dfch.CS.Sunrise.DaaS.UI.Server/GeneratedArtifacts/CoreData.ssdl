@@ -57,6 +57,10 @@
       <End Role="CatalogueItemsPartner" EntitySet="Products" />
       <End Role="CatalogueItems" EntitySet="CatalogueItems" />
     </AssociationSet>
+    <AssociationSet Name="biz_dfch_CS_Appclusive_Core_OdataServices_Core_Job_Children_biz_" Association="CoreDataStore.biz_dfch_CS_Appclusive_Core_OdataServices_Core_Job_Children_biz_">
+      <End Role="ChildrenPartner" EntitySet="Jobs" />
+      <End Role="Children" EntitySet="Jobs" />
+    </AssociationSet>
   </EntityContainer>
   <EntityType Name="Ace">
     <Key>
@@ -468,5 +472,11 @@
       <OnDeleteAnnotation Action="Unset" xmlns="http://schemas.microsoft.com/LightSwitch/2013/edm/annotations" />
     </End>
     <End Role="CatalogueItems" Type="CoreDataStore.CatalogueItem1" Multiplicity="*" />
+  </Association>
+  <Association Name="biz_dfch_CS_Appclusive_Core_OdataServices_Core_Job_Children_biz_">
+    <End Role="ChildrenPartner" Type="CoreDataStore.Job" Multiplicity="0..1">
+      <OnDeleteAnnotation Action="Restrict" xmlns="http://schemas.microsoft.com/LightSwitch/2013/edm/annotations" />
+    </End>
+    <End Role="Children" Type="CoreDataStore.Job" Multiplicity="*" />
   </Association>
 </Schema>

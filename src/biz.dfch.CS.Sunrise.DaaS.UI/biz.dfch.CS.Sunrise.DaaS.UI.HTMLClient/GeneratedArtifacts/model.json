@@ -955,6 +955,15 @@
               "id": "Job/Properties[ConditionParameters]",
               "name": "ConditionParameters",
               "propertyType": { "__id": ":String?" }
+            },
+            {
+              "id": "Job/Properties[Children]",
+              "name": "Children",
+              "association": { "__id": "biz_dfch_CS_Appclusive_Core_OdataServices_Core_Job_Children_biz_" },
+              "elementType": { "__id": "Job" },
+              "fromEnd": { "__id": "biz_dfch_CS_Appclusive_Core_OdataServices_Core_Job_Children_biz_/Ends[ChildrenPartner]" },
+              "propertyType": { "__id": "Job*" },
+              "toEnd": { "__id": "biz_dfch_CS_Appclusive_Core_OdataServices_Core_Job_Children_biz_/Ends[Children]" }
             }
           ]
         },
@@ -1729,15 +1738,6 @@
               "canUpdate": true,
               "elementType": { "__id": "Endpoint" },
               "entityType": { "__id": "Endpoint" }
-            },
-            {
-              "id": "DiagnosticsData/Members[ConfigurationUpdates]",
-              "name": "ConfigurationUpdates",
-              "canDelete": true,
-              "canInsert": true,
-              "canUpdate": true,
-              "elementType": { "__id": "ConfigurationUpdate" },
-              "entityType": { "__id": "ConfigurationUpdate" }
             }
           ],
           "queryOperations":
@@ -1779,44 +1779,6 @@
                   "parameterType": { "__id": ":Int64?" }
                 }
               ]
-            },
-            {
-              "id": "DiagnosticsData/Members[ConfigurationUpdates_Single]",
-              "name": "ConfigurationUpdates_Single",
-              "elementType": { "__id": "ConfigurationUpdate" },
-              "query": { "__id": "DiagnosticsData/Members[ConfigurationUpdates_Single]" },
-              "returnType": { "__id": "ConfigurationUpdate" },
-              "source":
-              {
-                "member": { "__id": "DiagnosticsData/Members[ConfigurationUpdates]" }
-              },
-              "parameters":
-              [
-                {
-                  "id": "DiagnosticsData/Members[ConfigurationUpdates_Single]/Parameters[Id]",
-                  "name": "Id",
-                  "parameterType": { "__id": ":Int64?" }
-                }
-              ]
-            },
-            {
-              "id": "DiagnosticsData/Members[ConfigurationUpdates_SingleOrDefault]",
-              "name": "ConfigurationUpdates_SingleOrDefault",
-              "elementType": { "__id": "ConfigurationUpdate" },
-              "query": { "__id": "DiagnosticsData/Members[ConfigurationUpdates_SingleOrDefault]" },
-              "returnType": { "__id": "ConfigurationUpdate" },
-              "source":
-              {
-                "member": { "__id": "DiagnosticsData/Members[ConfigurationUpdates]" }
-              },
-              "parameters":
-              [
-                {
-                  "id": "DiagnosticsData/Members[ConfigurationUpdates_SingleOrDefault]/Parameters[Id]",
-                  "name": "Id",
-                  "parameterType": { "__id": ":Int64?" }
-                }
-              ]
             }
           ]
         },
@@ -1827,6 +1789,24 @@
           ":@Partial": { "isPrimary": true },
           "associationSets":
           [
+            {
+              "id": "CoreData/Members[biz_dfch_CS_Appclusive_Core_OdataServices_Core_Job_Children_biz_]",
+              "name": "biz_dfch_CS_Appclusive_Core_OdataServices_Core_Job_Children_biz_",
+              "association": { "__id": "biz_dfch_CS_Appclusive_Core_OdataServices_Core_Job_Children_biz_" },
+              "ends":
+              [
+                {
+                  "id": "CoreData/Members[biz_dfch_CS_Appclusive_Core_OdataServices_Core_Job_Children_biz_]/Members[ChildrenPartner]",
+                  "name": "ChildrenPartner",
+                  "entitySet": { "__id": "CoreData/Members[Jobs]" }
+                },
+                {
+                  "id": "CoreData/Members[biz_dfch_CS_Appclusive_Core_OdataServices_Core_Job_Children_biz_]/Members[Children]",
+                  "name": "Children",
+                  "entitySet": { "__id": "CoreData/Members[Jobs]" }
+                }
+              ]
+            },
             {
               "id": "CoreData/Members[biz_dfch_CS_Sunrise_DaaS_Endpoints_OdataServices_Core_Order_Orde]",
               "name": "biz_dfch_CS_Sunrise_DaaS_Endpoints_OdataServices_Core_Order_Orde",
@@ -3846,84 +3826,22 @@
           ]
         },
         {
-          "__isEntityType": 1,
-          ":@SummaryProperty": { "property": { "__id": "ConfigurationUpdate/Properties[Tid]" } },
-          "id": "ConfigurationUpdate",
-          "name": "ConfigurationUpdate",
-          ":@NotSearchable": { },
-          "methods":
+          "id": "biz_dfch_CS_Appclusive_Core_OdataServices_Core_Job_Children_biz_",
+          "name": "biz_dfch_CS_Appclusive_Core_OdataServices_Core_Job_Children_biz_",
+          "ends":
           [
             {
-              "id": "ConfigurationUpdate/Methods[deleteEntity]",
-              "name": "deleteEntity"
+              "id": "biz_dfch_CS_Appclusive_Core_OdataServices_Core_Job_Children_biz_/Ends[ChildrenPartner]",
+              "name": "ChildrenPartner",
+              "multiplicity": "ZeroOrOne",
+              "entityType": { "__id": "Job" },
+              ":@DeleteRule": { "action": "Restrict" }
             },
             {
-              "id": "ConfigurationUpdate/Methods[edit]",
-              "name": "edit"
-            },
-            {
-              "id": "ConfigurationUpdate/Methods[view]",
-              "name": "view"
-            }
-          ],
-          "properties":
-          [
-            {
-              "__isKeyProperty": 1,
-              "id": "ConfigurationUpdate/Properties[Id]",
-              "name": "Id",
-              "propertyType": { "__id": ":Int64" },
-              ":@Required": { },
-              ":@NotSearchable": { }
-            },
-            {
-              "id": "ConfigurationUpdate/Properties[Tid]",
-              "name": "Tid",
-              "propertyType": { "__id": ":String" },
-              ":@Required": { }
-            },
-            {
-              "id": "ConfigurationUpdate/Properties[Name]",
-              "name": "Name",
-              "propertyType": { "__id": ":String" },
-              ":@Required": { }
-            },
-            {
-              "id": "ConfigurationUpdate/Properties[Description]",
-              "name": "Description",
-              "propertyType": { "__id": ":String?" }
-            },
-            {
-              "id": "ConfigurationUpdate/Properties[CreatedBy]",
-              "name": "CreatedBy",
-              "propertyType": { "__id": ":String" },
-              ":@Required": { }
-            },
-            {
-              "id": "ConfigurationUpdate/Properties[ModifiedBy]",
-              "name": "ModifiedBy",
-              "propertyType": { "__id": ":String" },
-              ":@Required": { }
-            },
-            {
-              "id": "ConfigurationUpdate/Properties[Created]",
-              "name": "Created",
-              "propertyType": { "__id": ":DateTimeOffset" },
-              ":@Required": { },
-              ":@NotSearchable": { }
-            },
-            {
-              "id": "ConfigurationUpdate/Properties[Modified]",
-              "name": "Modified",
-              "propertyType": { "__id": ":DateTimeOffset" },
-              ":@Required": { },
-              ":@NotSearchable": { }
-            },
-            {
-              "id": "ConfigurationUpdate/Properties[RowVersion]",
-              "name": "RowVersion",
-              "propertyType": { "__id": ":Binary?" },
-              ":@NotSearchable": { }
+              "id": "biz_dfch_CS_Appclusive_Core_OdataServices_Core_Job_Children_biz_/Ends[Children]",
+              "name": "Children",
+              "multiplicity": "Many",
+              "entityType": { "__id": "Job" }
             }
           ]
         },
@@ -18278,64 +18196,6 @@
               "id": "CollectionView$CostCentre/Properties[selectedItem]",
               "name": "selectedItem",
               "propertyType": { "__id": "CostCentre" }
-            }
-          ]
-        },
-        {
-          "id": "ConfigurationUpdate*",
-          "name": "ConfigurationUpdate*",
-          "kind": "Enumerable",
-          "elementType": { "__id": "ConfigurationUpdate" }
-        },
-        {
-          "id": "CollectionView$ConfigurationUpdate",
-          "name": "CollectionView$ConfigurationUpdate",
-          "kind": "CollectionView",
-          "elementType": { "__id": "ConfigurationUpdate" },
-          "methods":
-          [
-            {
-              "id": "CollectionView$ConfigurationUpdate/Methods[addNew]",
-              "name": "addNew",
-              "returnType": { "__id": "ConfigurationUpdate" }
-            },
-            {
-              "id": "CollectionView$ConfigurationUpdate/Methods[addAndEditNew]",
-              "name": "addAndEditNew",
-              "returnType": { "__id": "ConfigurationUpdate" }
-            },
-            {
-              "id": "CollectionView$ConfigurationUpdate/Methods[showSearch]",
-              "name": "showSearch",
-              "returnType": { "__id": "ConfigurationUpdate" }
-            },
-            {
-              "id": "CollectionView$ConfigurationUpdate/Methods[editSelected]",
-              "name": "editSelected"
-            },
-            {
-              "id": "CollectionView$ConfigurationUpdate/Methods[deleteSelected]",
-              "name": "deleteSelected"
-            },
-            {
-              "id": "CollectionView$ConfigurationUpdate/Methods[removeSelected]",
-              "name": "removeSelected"
-            },
-            {
-              "id": "CollectionView$ConfigurationUpdate/Methods[refresh]",
-              "name": "refresh"
-            },
-            {
-              "id": "CollectionView$ConfigurationUpdate/Methods[viewSelected]",
-              "name": "viewSelected"
-            }
-          ],
-          "properties":
-          [
-            {
-              "id": "CollectionView$ConfigurationUpdate/Properties[selectedItem]",
-              "name": "selectedItem",
-              "propertyType": { "__id": "ConfigurationUpdate" }
             }
           ]
         }

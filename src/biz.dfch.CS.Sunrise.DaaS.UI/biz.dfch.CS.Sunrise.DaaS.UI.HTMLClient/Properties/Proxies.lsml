@@ -112,4 +112,10 @@
         Target="ServiceInterface:biz_dfch_CS_Appclusive_Core_OdataServices_Core_Node_OutgoingAsso" />
     </Association.Attributes>
   </Association>
+  <Association>
+    <Association.Attributes>
+      <Proxy
+        Target="ServiceInterface:biz_dfch_CS_Appclusive_Core_OdataServices_Core_Job_Children_biz_" />
+    </Association.Attributes>
+  </Association>
 </Application>

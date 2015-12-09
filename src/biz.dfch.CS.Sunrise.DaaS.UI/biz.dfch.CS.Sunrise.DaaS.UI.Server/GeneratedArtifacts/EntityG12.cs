@@ -534,6 +534,29 @@ namespace LightSwitchApplication
         [global::System.ComponentModel.EditorBrowsable(global::System.ComponentModel.EditorBrowsableState.Advanced)]
         partial void ConditionParameters_Changed();
 
+        /// <summary>
+        /// No Modeled Description Available
+        /// </summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.1.0.0")]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public global::Microsoft.LightSwitch.Framework.EntityCollection<global::LightSwitchApplication.Job> Children
+        {
+            get
+            {
+                return global::LightSwitchApplication.Job.DetailsClass.GetValue(this, global::LightSwitchApplication.Job.DetailsClass.PropertySetProperties.Children);
+            }
+        }
+        
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Microsoft.LightSwitch.BuildTasks.CodeGen", "12.1.0.0")]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        public Microsoft.LightSwitch.IDataServiceQueryable<global::LightSwitchApplication.Job> ChildrenQuery
+        {
+            get
+            {
+                return global::LightSwitchApplication.Job.DetailsClass.GetQuery(this, global::LightSwitchApplication.Job.DetailsClass.PropertySetProperties.Children);
+            }
+        }
+
         #endregion
     
         #region Details Class
@@ -768,6 +791,14 @@ namespace LightSwitchApplication
                     }
                 }
                 
+                public global::Microsoft.LightSwitch.Details.Framework.EntityCollectionProperty<global::LightSwitchApplication.Job, global::LightSwitchApplication.Job.DetailsClass, global::LightSwitchApplication.Job> Children
+                {
+                    get
+                    {
+                        return base.GetItem(global::LightSwitchApplication.Job.DetailsClass.PropertySetProperties.Children) as global::Microsoft.LightSwitch.Details.Framework.EntityCollectionProperty<global::LightSwitchApplication.Job, global::LightSwitchApplication.Job.DetailsClass, global::LightSwitchApplication.Job>;
+                    }
+                }
+                
             }
     
             #pragma warning disable 109
@@ -793,6 +824,7 @@ namespace LightSwitchApplication
                 new byte[] RowVersion { get; set; }
                 new string Condition { get; set; }
                 new string ConditionParameters { get; set; }
+                new global::System.Collections.IEnumerable Children { get; }
             }
             #pragma warning restore 109
     
@@ -1505,6 +1537,26 @@ namespace LightSwitchApplication
                     e.ConditionParameters_Changed();
                 }
     
+                [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+                public static readonly global::Microsoft.LightSwitch.Details.Framework.EntityCollectionProperty<global::LightSwitchApplication.Job, global::LightSwitchApplication.Job.DetailsClass, global::LightSwitchApplication.Job>.Entry
+                    Children = new global::Microsoft.LightSwitch.Details.Framework.EntityCollectionProperty<global::LightSwitchApplication.Job, global::LightSwitchApplication.Job.DetailsClass, global::LightSwitchApplication.Job>.Entry(
+                        "Children",
+                        global::LightSwitchApplication.Job.DetailsClass.PropertySetProperties._Children_Stub,
+                        global::LightSwitchApplication.Job.DetailsClass.PropertySetProperties._Children_GetReferencedEntities,
+                        global::LightSwitchApplication.Job.DetailsClass.PropertySetProperties._Children_GetEntityCollection);
+                private static void _Children_Stub(global::Microsoft.LightSwitch.Details.Framework.Base.DetailsCallback<global::LightSwitchApplication.Job.DetailsClass, global::Microsoft.LightSwitch.Details.Framework.EntityCollectionProperty<global::LightSwitchApplication.Job, global::LightSwitchApplication.Job.DetailsClass, global::LightSwitchApplication.Job>.Data> c, global::LightSwitchApplication.Job.DetailsClass d, object sf)
+                {
+                    c(d, ref d._Children, sf);
+                }
+                private static global::System.Collections.Generic.IEnumerable<global::LightSwitchApplication.Job> _Children_GetReferencedEntities(global::LightSwitchApplication.Job.DetailsClass d)
+                {
+                    return d.GetReferencedEntities<global::LightSwitchApplication.Job, global::LightSwitchApplication.Job.DetailsClass>(global::LightSwitchApplication.Job.DetailsClass.PropertySetProperties.Children, ref d._Children);
+                }
+                private static global::System.Collections.IEnumerable _Children_GetEntityCollection(global::LightSwitchApplication.Job.DetailsClass d)
+                {
+                    return d.ImplementationEntity.Children;
+                }
+    
             }
     
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
@@ -1563,6 +1615,9 @@ namespace LightSwitchApplication
             
             [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
             private global::Microsoft.LightSwitch.Details.Framework.EntityStorageProperty<global::LightSwitchApplication.Job, global::LightSwitchApplication.Job.DetailsClass, string>.Data _ConditionParameters;
+            
+            [global::System.Diagnostics.DebuggerBrowsable(global::System.Diagnostics.DebuggerBrowsableState.Never)]
+            private global::Microsoft.LightSwitch.Details.Framework.EntityCollectionProperty<global::LightSwitchApplication.Job, global::LightSwitchApplication.Job.DetailsClass, global::LightSwitchApplication.Job>.Data _Children;
             
         }
     

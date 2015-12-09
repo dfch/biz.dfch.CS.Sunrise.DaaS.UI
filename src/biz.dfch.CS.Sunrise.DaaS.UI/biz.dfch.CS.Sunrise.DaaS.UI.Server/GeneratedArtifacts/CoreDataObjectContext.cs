@@ -28,6 +28,7 @@ using System.Xml.Serialization;
 [assembly: EdmRelationshipAttribute("LightSwitchApplication", "biz_dfch_CS_Appclusive_Core_OdataServices_Core_Node_OutgoingAsso", "OutgoingAssocsPartner", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(LightSwitchApplication.Implementation.Node), "OutgoingAssocs", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(LightSwitchApplication.Implementation.Assoc))]
 [assembly: EdmRelationshipAttribute("LightSwitchApplication", "biz_dfch_CS_Sunrise_DaaS_Endpoints_OdataServices_Core_Order_Orde", "OrderItemsPartner", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(LightSwitchApplication.Implementation.Order), "OrderItems", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(LightSwitchApplication.Implementation.OrderItem))]
 [assembly: EdmRelationshipAttribute("LightSwitchApplication", "biz_dfch_CS_Appclusive_Core_OdataServices_Core_Product_Catalogue", "CatalogueItemsPartner", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(LightSwitchApplication.Implementation.Product), "CatalogueItems", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(LightSwitchApplication.Implementation.CatalogueItem1))]
+[assembly: EdmRelationshipAttribute("LightSwitchApplication", "biz_dfch_CS_Appclusive_Core_OdataServices_Core_Job_Children_biz_", "ChildrenPartner", System.Data.Metadata.Edm.RelationshipMultiplicity.ZeroOrOne, typeof(LightSwitchApplication.Implementation.Job), "Children", System.Data.Metadata.Edm.RelationshipMultiplicity.Many, typeof(LightSwitchApplication.Implementation.Job))]
 
 #endregion
 
@@ -5255,6 +5256,32 @@ namespace LightSwitchApplication.Implementation
         #endregion
 
     
+        #region Navigation Properties
+    
+        /// <summary>
+        /// No Metadata Documentation available.
+        /// </summary>
+        [XmlIgnoreAttribute()]
+        [SoapIgnoreAttribute()]
+        [DataMemberAttribute()]
+        [EdmRelationshipNavigationPropertyAttribute("LightSwitchApplication", "biz_dfch_CS_Appclusive_Core_OdataServices_Core_Job_Children_biz_", "Children")]
+        public EntityCollection<Job> Children
+        {
+            get
+            {
+                return ((IEntityWithRelationships)this).RelationshipManager.GetRelatedCollection<Job>("LightSwitchApplication.biz_dfch_CS_Appclusive_Core_OdataServices_Core_Job_Children_biz_", "Children");
+            }
+            set
+            {
+                if ((value != null))
+                {
+                    ((IEntityWithRelationships)this).RelationshipManager.InitializeRelatedCollection<Job>("LightSwitchApplication.biz_dfch_CS_Appclusive_Core_OdataServices_Core_Job_Children_biz_", "Children", value);
+                }
+            }
+        }
+
+        #endregion
+
     }
     
     /// <summary>

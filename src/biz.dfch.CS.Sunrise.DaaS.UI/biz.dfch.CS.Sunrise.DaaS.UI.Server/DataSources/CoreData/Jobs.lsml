@@ -122,6 +122,11 @@
       <EntityProperty
         Name="ConditionParameters"
         PropertyType=":String?" />
+      <NavigationProperty
+        Name="Children"
+        Association="biz_dfch_CS_Appclusive_Core_OdataServices_Core_Job_Children_biz_"
+        FromEnd="ChildrenPartner"
+        ToEnd="Children" />
     </EntityType.Properties>
   </EntityType>
   <EntityContainer
@@ -215,7 +220,32 @@
         </QueryOperationParameter.Attributes>
       </QueryOperationParameter>
     </QueryOperation>
+    <AssociationSet
+      Name="biz_dfch_CS_Appclusive_Core_OdataServices_Core_Job_Children_biz_"
+      Association="biz_dfch_CS_Appclusive_Core_OdataServices_Core_Job_Children_biz_">
+      <AssociationSetEnd
+        Name="ChildrenPartner"
+        EntitySet="Jobs" />
+      <AssociationSetEnd
+        Name="Children"
+        EntitySet="Jobs" />
+    </AssociationSet>
   </EntityContainer>
+  <Association
+    Name="biz_dfch_CS_Appclusive_Core_OdataServices_Core_Job_Children_biz_">
+    <AssociationEnd
+      Name="ChildrenPartner"
+      EntityType="Job">
+      <AssociationEnd.Attributes>
+        <DeleteRule
+          Action="Restrict" />
+      </AssociationEnd.Attributes>
+    </AssociationEnd>
+    <AssociationEnd
+      Name="Children"
+      Multiplicity="Many"
+      EntityType="Job" />
+  </Association>
   <DataService
     Name="CoreDataDataService">
     <DataService.Attributes>
@@ -286,7 +316,22 @@
         <CsdlProperty
           Name="RowVersion"
           Property="Job/Properties[RowVersion]" />
+        <CsdlProperty
+          Name="Children"
+          Property="Job/Properties[Children]" />
       </EntitySetMapping.Attributes>
     </EntitySetMapping>
+    <AssociationSetMapping
+      AssociationSet="biz_dfch_CS_Appclusive_Core_OdataServices_Core_Job_Children_biz_">
+      <AssociationSetMapping.Attributes>
+        <CsdlAssociation
+          Name="biz_dfch_CS_Appclusive_Core_OdataServices_Core_Job_Children_biz_dfch_CS_Appclusive_Core_OdataServices_Core_Job_ChildrenPartnerSet"
+          Association="biz_dfch_CS_Appclusive_Core_OdataServices_Core_Job_Children_biz_" />
+        <CsdlAssociationSetEnd
+          End="CoreData/Members[biz_dfch_CS_Appclusive_Core_OdataServices_Core_Job_Children_biz_]/Members[ChildrenPartner]" />
+        <CsdlAssociationSetEnd
+          End="CoreData/Members[biz_dfch_CS_Appclusive_Core_OdataServices_Core_Job_Children_biz_]/Members[Children]" />
+      </AssociationSetMapping.Attributes>
+    </AssociationSetMapping>
   </DataService>
 </ServiceApplication>

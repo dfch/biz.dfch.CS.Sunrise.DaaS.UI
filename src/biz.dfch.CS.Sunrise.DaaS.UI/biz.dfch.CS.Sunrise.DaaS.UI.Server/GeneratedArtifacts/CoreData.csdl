@@ -233,6 +233,7 @@
     <Property Name="RowVersion" Type="Edm.Binary" MaxLength="Max" />
     <Property Name="Condition" Type="Edm.String" MaxLength="Max" />
     <Property Name="ConditionParameters" Type="Edm.String" MaxLength="Max" />
+    <NavigationProperty Name="Children" Relationship="LightSwitchApplication.biz_dfch_CS_Appclusive_Core_OdataServices_Core_Job_Children_biz_" ToRole="Children" FromRole="ChildrenPartner" />
   </EntityType>
   <EntityType Name="KeyNameValue">
     <Key>
@@ -402,6 +403,10 @@
     <End Role="CatalogueItemsPartner" Type="LightSwitchApplication.Product" Multiplicity="0..1" />
     <End Role="CatalogueItems" Type="LightSwitchApplication.CatalogueItem1" Multiplicity="*" />
   </Association>
+  <Association Name="biz_dfch_CS_Appclusive_Core_OdataServices_Core_Job_Children_biz_">
+    <End Role="ChildrenPartner" Type="LightSwitchApplication.Job" Multiplicity="0..1" />
+    <End Role="Children" Type="LightSwitchApplication.Job" Multiplicity="*" />
+  </Association>
   <EntityContainer Name="CoreData" m:IsDefaultEntityContainer="true">
     <EntitySet Name="Aces" EntityType="LightSwitchApplication.Ace" />
     <EntitySet Name="Acls" EntityType="LightSwitchApplication.Acl" />
@@ -458,6 +463,10 @@
     <AssociationSet Name="biz_dfch_CS_Appclusive_Core_OdataServices_Core_Product_Catalogue" Association="LightSwitchApplication.biz_dfch_CS_Appclusive_Core_OdataServices_Core_Product_Catalogue">
       <End Role="CatalogueItemsPartner" EntitySet="Products" />
       <End Role="CatalogueItems" EntitySet="CatalogueItems" />
+    </AssociationSet>
+    <AssociationSet Name="biz_dfch_CS_Appclusive_Core_OdataServices_Core_Job_Children_biz_" Association="LightSwitchApplication.biz_dfch_CS_Appclusive_Core_OdataServices_Core_Job_Children_biz_">
+      <End Role="ChildrenPartner" EntitySet="Jobs" />
+      <End Role="Children" EntitySet="Jobs" />
     </AssociationSet>
   </EntityContainer>
 </Schema>
